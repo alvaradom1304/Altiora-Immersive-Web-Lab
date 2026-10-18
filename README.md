@@ -36,8 +36,27 @@ La segunda orden descarga únicamente esa revisión en `.references/`. No ejecut
 
 ## Proyectos
 
-- [La Central del Queso](https://github.com/alvaradom1304/la-central-del-queso): la web existente vive en `src/web`. Mantener allí el catálogo, pedidos, WhatsApp y ubicaciones mientras los experimentos se validan en Altiora.
-- Primer experimento definido: [umbral de la finca → mesa](projects/la-central-del-queso/experiments/001-umbral-a-mesa.md), estado **diseñado, pendiente de implementación**.
+- [La Central del Queso](https://github.com/alvaradom1304/la-central-del-queso): la web existente vive en `src/web` (rama `hito2-exterior-realista`). Mantener allí el catálogo, pedidos, WhatsApp y ubicaciones mientras los experimentos se validan en Altiora.
+- Primer experimento definido: [umbral de la finca → mesa](projects/la-central-del-queso/experiments/001-umbral-a-mesa.md).
+
+## Equipo y Roles de Agentes (`team/`)
+
+El laboratorio define 12 roles operativos y directrices de orquestación en [team/registry.md](team/registry.md):
+- **Director de experiencia**: Integración de estrategia, dirección de arte y gates de calidad.
+- **Director creativo & Motion designer**: Concepto visual, narrativa de cámara, animaciones y fallbacks.
+- **Ingeniero web & Shader artist**: Implementación WebGL, Three.js, React Three Fiber y shaders GLSL.
+- **UX researcher & Diseñador UI**: Flujos de compra, accesibilidad WCAG y componentes táctiles.
+- **Estratega de negocio & Analista de conversión**: Unit economics, calculadoras de feria y pasaporte VIP.
+- **QA & Accessibility reviewer**: Control independiente de calidad, métricas de rendimiento y regresiones.
+
+## Catálogo de Skills Integradas (`skills/`)
+
+El repositorio cuenta con un catálogo de **237 skills especializadas** categorizadas en:
+1. **Brand & Creative Intelligence**: Art direction, brand architecture, storytelling, color system, typography direction.
+2. **Premium Web Experience**: Three.js, React Three Fiber, GSAP animation, motion design, responsive design, conversion UX.
+3. **Business & Financial Intelligence**: Unit economics, pricing strategy, margin analysis, cash flow, financial forecasting.
+4. **AI & Automation**: Agent design, orchestration, evaluation, n8n webhook architecture, RAG architecture.
+5. **Cybersecurity & QA**: OWASP review, frontend/backend security, API security, vulnerability triage.
 
 ## Fuentes y uso
 
