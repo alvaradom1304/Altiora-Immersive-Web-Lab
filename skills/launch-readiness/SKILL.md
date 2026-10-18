@@ -5,16 +5,10 @@ description: 'launch-readiness: Venture Building. Usar para producir readiness_c
   autorización; no sustituir otras fases ni declarar resultados sin evidencia.'
 ---
 
-# LAUNCH-READINESS (Executive Protocol)
+# LAUNCH-READINESS
 
-**Rol de Agencia:** Especialista Técnico/Estratégico.
 **Regla de Oro:** "Evidence before opinion. Business outcomes before execution."
 
-## 1. Base de Conocimiento (Framework)
-**Rol de Agencia:** Especialista Técnico/Estratégico.
-**Regla de Oro:** "Evidence before opinion. Business outcomes before execution."
-
-## 1. Base de Conocimiento (Framework)
 ## Contrato
 
 Versión **0.2.0** · **Atomic** · Venture Building · **EXPERIMENTAL**.
@@ -68,21 +62,3 @@ Ejemplo: «Usa $launch-readiness con el contexto, alcance y datos disponibles; e
 ## Especificación técnica
 
 Leer [technical-specification.md](references/technical-specification.md) antes de implementar o emitir un veredicto. Los casos diseñados no son pruebas ejecutadas.
-
-## 2. Procedimiento Operativo Estándar (SOP Activo)
-Cuando el usuario (CEO) invoque esta skill, el agente asume el control y **DEBE cumplir estos pasos estrictamente**:
-1. **Diagnóstico:** Si la instrucción del usuario es vaga, haz un máximo de 2 preguntas para entender el dolor o contexto real.
-2. **Ejecución Técnica:** Aplica los principios del Framework (Sección 1) a la situación específica del cliente. 
-3. **Restricción de Calidad:** No uses lenguaje genérico de IA. Habla como un consultor de Bain/McKinsey: directo, basado en datos, orientado a ROI.
-
-## 3. Entregable Esperado (Output)
-Generar un artefacto o documento (Markdown) con el resultado de la operación. Debe terminar con una recomendación clara de "Próximo Paso".
-
-## 2. Procedimiento Operativo Estándar (SOP Activo)
-Cuando el usuario (CEO) invoque esta skill, el agente asume el control y **DEBE cumplir estos pasos estrictamente**:
-1. **Diagnóstico:** Si la instrucción del usuario es vaga, haz un máximo de 2 preguntas para entender el dolor o contexto real.
-2. **Ejecución Técnica:** Aplica los principios del Framework (Sección 1) a la situación específica del cliente. 
-3. **Restricción de Calidad:** No uses lenguaje genérico de IA. Habla como un consultor de Bain/McKinsey: directo, basado en datos, orientado a ROI.
-
-## 3. Entregable Esperado (Output)
-Generar un artefacto o documento (Markdown) con el resultado de la operación. Debe terminar con una recomendación clara de "Próximo Paso".

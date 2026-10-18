@@ -7,7 +7,9 @@
     "node": ">=20"
   },
   "scripts": {
-    "check": "node scripts/verify-catalog.mjs",
+    "check": "node scripts/verify-catalog.mjs && node scripts/audit-skills.mjs",
+    "skills:audit": "node scripts/audit-skills.mjs",
+    "skills:baseline": "node scripts/audit-skills.mjs --write",
     "reference": "node scripts/fetch-reference.mjs"
   }
 }

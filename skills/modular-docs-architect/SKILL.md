@@ -1,6 +1,8 @@
 ---
 name: modular-docs-architect
-description: Estructuración y división de documentación Markdown (.md) monolítica en módulos ligeros mediante Progressive Disclosure. Optimiza el consumo de tokens de agentes de IA, previene el context rot y organiza el conocimiento en índices rápidos y referencias bajo demanda.
+description: Divide documentación Markdown monolítica en módulos ligeros con divulgación progresiva (índice, módulos y anexos bajo demanda) para reducir el consumo de tokens de agentes y evitar el context rot. Usar cuando un .md supere ~400 líneas, mezcle temas, cuando los agentes lean archivos enormes para una tarea pequeña o al ordenar docs/ y references/ de un proyecto.
+metadata:
+  version: 1.1.0
 ---
 
 # Modular Docs Architect & Token Optimizer
@@ -68,7 +70,7 @@ docs/
 ### Paso 3: Redacción del Índice Maestro (`INDEX.md` o `README.md`)
 Reemplazar el archivo monolítico por un **Índice Maestro Liviano** que contenga:
 1. Resumen en 1 párrafo.
-2. Enlaces clicables directos a cada módulo (`[01_arquitectura.md](file:///...)`).
+2. Enlaces relativos a cada módulo (por ejemplo, a `docs/01_arquitectura.md`). Nunca rutas absolutas `file:///`: se rompen al clonar el repositorio en otra máquina.
 3. Matriz de búsqueda rápida: *"Si necesitas modificar X, abre el módulo Y"*.
 
 ---
@@ -77,5 +79,16 @@ Reemplazar el archivo monolítico por un **Índice Maestro Liviano** que conteng
 
 Para evitar que herramientas de búsqueda de código (`grep`, `find`, `Get-ChildItem`) rastreen miles de archivos inútiles:
 - **Archivos de Respaldo**: Eliminar siempre `.blend1`, `.bak`, `.tmp`, `~*.tmp`.
+- **Confirmar antes de borrar**: listar lo que se eliminará y obtener aprobación si no es claramente generado o temporal.
 - **Duplicados**: Si existe `web/docs` y `docs/` raíz con el mismo contenido, mantener solo el canónico y eliminar el clon.
 - **Renders Intermedios**: Preservar solo los renders finales aprobados en `public/` y archivar o depurar los fotogramas de prueba desechados.
+
+---
+
+## 5. Entregable Esperado (Output)
+
+1. Mapa de secciones del documento original con el módulo de destino de cada una.
+2. Árbol de archivos propuesto (o creado) con líneas aproximadas por módulo.
+3. `INDEX.md`/`README.md` liviano con enlaces relativos y matriz «si necesitas X, abre Y».
+4. Verificación: ningún contenido perdido (comparar encabezados y bloques antes/después) y enlaces locales válidos (`npm run check` en este laboratorio).
+5. Lista de archivos de basura detectados y acción tomada o pendiente de aprobación.

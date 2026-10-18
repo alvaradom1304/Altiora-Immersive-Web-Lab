@@ -58,6 +58,8 @@ El repositorio cuenta con un catálogo de **237 skills especializadas** categori
 4. **AI & Automation**: Agent design, orchestration, evaluation, n8n webhook architecture, RAG architecture.
 5. **Cybersecurity & QA**: OWASP review, frontend/backend security, API security, vulnerability triage.
 
+Las skills mejoran por ciclos PDCA medidos: `npm run skills:audit` puntúa cada una y bloquea regresiones. Ver [mejora continua de skills](docs/workflows/skill-improvement.md), el [informe actual](quality/skills-report.md) y el [registro de ciclos](quality/skills-improvement-log.md).
+
 ## Fuentes y uso
 
 Las estrellas y fechas son una fotografía de investigación, no una garantía de calidad. La licencia de código no acredita automáticamente modelos, imágenes, sonidos o fuentes tipográficas. Registrar la procedencia de cada recurso utilizado y conservar avisos cuando se reutilice código.
