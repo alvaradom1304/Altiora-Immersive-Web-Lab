@@ -36,3 +36,9 @@ Seguir docs/workflows/immersive-project.md. Antes de ampliar una experiencia, co
 - Separar caja de horas recuperadas. No inventar pagos o porcentajes de ahorro.
 - Evaluar n8n y Activepieces como alternativas, no como dos ahorros que se suman.
 - Las funciones comerciales quedan sujetas a sus licencias; no presentar un repositorio mixto como completamente gratuito.
+
+## Agentes y skills del laboratorio
+- Para encargos que requieran coordinación, usar .agents/skills/altiora-agent-orchestrator/SKILL.md y las capacidades reales del entorno.
+- La investigación de repositorios puede usar .agents/skills/altiora-repository-research/SKILL.md; la revisión de entregas, .agents/skills/altiora-quality-review/SKILL.md.
+- Consultar references/agent-skills-repositories.json para descubrir fuentes sin cargar colecciones enteras.
+- No delegar cambios pequeños por defecto. Entregar a cada agente un resultado, contexto mínimo y archivos asignados.

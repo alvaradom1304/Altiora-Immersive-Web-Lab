@@ -15,6 +15,16 @@ Se incorporan **12 candidatos empresariales**, además de las 16 referencias inm
 
 Los repositorios están registrados con función, licencia, revisión y condiciones de uso. No se han instalado servicios ni medido ahorro real.
 
+## Agentes y skills para Antigravity
+
+Se añaden **6 fuentes seleccionadas**, tres skills originales y cuatro agentes especializados. El laboratorio reúne **34 repositorios** entre experiencias inmersivas, herramientas empresariales y agentes/skills.
+
+- [Selección de repositorios](docs/research/agent-skills-review.md).
+- [Uso en Antigravity](docs/workflows/antigravity-agents.md).
+- [Skill coordinadora](.agents/skills/altiora-agent-orchestrator/SKILL.md).
+
+Invocación: `/altiora-agent-orchestrator` en versiones compatibles, o pedir que lea el archivo de la skill. La ejecución en Antigravity está pendiente de comprobar en el cliente del usuario.
+
 ## Empezar
 
 1. Leer la [comparación de repositorios](docs/research/repository-review.md).

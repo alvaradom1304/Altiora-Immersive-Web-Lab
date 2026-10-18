@@ -4,7 +4,7 @@ import { dirname, resolve, relative, isAbsolute } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
-const catalogs = await Promise.all(['references/repositories.json', 'references/business-repositories.json']
+const catalogs = await Promise.all(['references/repositories.json', 'references/business-repositories.json', 'references/agent-skills-repositories.json']
   .map(async path => JSON.parse(await readFile(resolve(root, path), 'utf8'))));
 for (const catalog of catalogs) {
   assert.equal(catalog.schema_version, 1);

@@ -26,3 +26,16 @@ El experimento 001 permanece en estado diseñado.
 - Ejecutado el ejemplo ficticio del comparador y comprobada la sintaxis del descargador actualizado.
 
 No se han verificado gastos reales de Altiora ni desplegado los servicios candidatos. La adopción prioritaria significa selección para próximos proyectos; no una instalación completada. La descarga de referencias por Git sigue sin una prueba integral de red exitosa.
+
+## Agentes y skills — 18 de octubre de 2026
+
+- Añadidas seis fuentes canónicas de agentes/skills; el laboratorio reúne 34 repositorios.
+- Preparadas tres skills originales y cuatro agentes bajo .agents/.
+- Contrastadas rutas de descubrimiento y campos de agentes con documentación oficial de Antigravity.
+- Pasó npm run check: 34 entradas, enlaces locales, tres cabeceras de skills, cuatro definiciones de agentes y seis pruebas del comparador.
+- La sintaxis de las cabeceras utiliza un subconjunto de YAML con valores JSON; el verificador local valida ese formato, nombres y referencias.
+- Se intentó quick_validate.py de skill-creator; no pudo iniciarse por falta de PyYAML en el entorno. No se presenta ese validador como ejecutado con éxito.
+
+Una revisión independiente de solo lectura aplicó las instrucciones a dos encargos ficticios: un cambio de texto y una prueba de finca sin herramienta de subagentes. La aplicación resultó coherente: tarea pequeña directa, investigación antes de implementar y roles secuenciales cuando no hay delegación. No ejecutó esos encargos ni encontró una contradicción material que requiriera corregir la skill.
+
+No se ha probado descubrimiento, invocación o ejecución en Antigravity. Sus herramientas declaradas deben existir en la versión instalada; estas definiciones no añaden permisos ni un motor de ejecución. El experimento de la finca sigue diseñado, no implementado.
