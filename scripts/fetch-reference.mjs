@@ -4,9 +4,11 @@ import { fileURLToPath } from 'node:url';
 import { spawnSync } from 'node:child_process';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
-const catalog = JSON.parse(await readFile(resolve(root, 'references/repositories.json'), 'utf8'));
+const catalogs = await Promise.all(['references/repositories.json', 'references/business-repositories.json', 'references/agent-skills-repositories.json', 'references/ai-provider-repositories.json']
+  .map(async path => JSON.parse(await readFile(resolve(root, path), 'utf8'))));
+const matches = catalogs.flatMap(catalog => catalog.repositories.map(repo => ({ ...repo, reviewed_on: catalog.reviewed_on })));
 const id = process.argv[2];
-const repo = catalog.repositories.find(entry => entry.id === id);
+const repo = matches.find(entry => entry.id === id);
 if (!repo) {
   console.error('Indica un repositorio exacto del catálogo. Ejemplo: npm run reference -- codrops/OneElementScroll');
   process.exit(1);
@@ -38,7 +40,7 @@ git(['-c', 'core.hooksPath=/dev/null', 'checkout', '--detach', '--quiet', 'FETCH
 const actual = git(['rev-parse', 'HEAD'], destination);
 if (actual !== repo.revision) throw new Error('La revisión descargada no coincide.');
 await writeFile(resolve(destination, 'ALTIORA_REFERENCE.json'), JSON.stringify({
-  repository: repo.id, revision: actual, catalog_reviewed_on: catalog.reviewed_on,
+  repository: repo.id, revision: actual, catalog_reviewed_on: repo.reviewed_on,
   status: 'source-only; dependencies not installed; third-party scripts not executed'
 }, null, 2) + '\n', 'utf8');
 console.log('Referencia descargada en ' + destination);

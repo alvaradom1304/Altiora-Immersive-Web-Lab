@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "illustrative": false,
+  "label": "Completar con datos confirmados de una alternativa",
+  "currency": "USD",
+  "horizon_months": 12,
+  "hourly_cost": null,
+  "current": {
+    "monthly_cash": null,
+    "monthly_hours": null
+  },
+  "proposed": {
+    "monthly_cash": null,
+    "monthly_hours": null,
+    "setup_cash": null,
+    "setup_hours": null
+  }
+}

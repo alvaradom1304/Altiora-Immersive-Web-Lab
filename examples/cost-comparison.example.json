@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "illustrative": true,
+  "label": "Ejemplo ficticio: baja la factura pero aumenta el mantenimiento",
+  "currency": "USD",
+  "horizon_months": 12,
+  "hourly_cost": 20,
+  "current": {
+    "monthly_cash": 30,
+    "monthly_hours": 1
+  },
+  "proposed": {
+    "monthly_cash": 12,
+    "monthly_hours": 2,
+    "setup_cash": 40,
+    "setup_hours": 3
+  }
+}

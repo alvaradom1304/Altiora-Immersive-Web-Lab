@@ -1,13 +1,15 @@
 {
   "name": "altiora-immersive-web-lab",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "private": true,
-  "description": "Investigación y proceso reproducible para experiencias web inmersivas",
+  "description": "Experiencias inmersivas, reutilización y comparación de costes para Altiora",
   "engines": {
     "node": ">=20"
   },
   "scripts": {
-    "check": "node scripts/verify-catalog.mjs",
-    "reference": "node scripts/fetch-reference.mjs"
+    "check": "node scripts/verify-catalog.mjs && node scripts/verify-agent-package.mjs && node --test scripts/cost-model.test.mjs",
+    "reference": "node scripts/fetch-reference.mjs",
+    "costs": "node scripts/compare-costs.mjs",
+    "costs:example": "node scripts/compare-costs.mjs examples/cost-comparison.example.json"
   }
 }

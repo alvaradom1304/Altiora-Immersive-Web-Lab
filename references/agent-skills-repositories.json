@@ -1,0 +1,166 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-10-18",
+  "timezone": "America/Costa_Rica",
+  "scope": "Fuentes para skills y coordinación de agentes de Altiora; selección documental, sin importación masiva.",
+  "repositories": [
+    {
+      "id": "agentskills/agentskills",
+      "url": "https://github.com/agentskills/agentskills",
+      "default_branch": "main",
+      "stars": 26258,
+      "archived": false,
+      "license": "Apache-2.0",
+      "description": "Specification and documentation for Agent Skills",
+      "revision": "69ef37e9424c0a7ea9dd2293b559e43ec8176379",
+      "head_commit_at": "2026-08-09T20:36:04Z",
+      "tier": "format",
+      "decision": "adopt",
+      "purpose": "Usar el formato SKILL.md y la carga progresiva como base portable.",
+      "observed_license": "Código Apache-2.0; documentación CC-BY-4.0",
+      "caution": "La biblioteca skills-ref se presenta como demostración. El estándar no garantiza por sí solo que cada cliente pueda lanzar subagentes.",
+      "source_paths": [
+        "README.md",
+        "LICENSE",
+        "docs/specification.mdx"
+      ],
+      "sources": [
+        "https://api.github.com/repos/agentskills/agentskills",
+        "https://github.com/agentskills/agentskills/blob/69ef37e9424c0a7ea9dd2293b559e43ec8176379/README.md",
+        "https://github.com/agentskills/agentskills/blob/69ef37e9424c0a7ea9dd2293b559e43ec8176379/LICENSE",
+        "https://github.com/agentskills/agentskills/blob/69ef37e9424c0a7ea9dd2293b559e43ec8176379/docs/specification.mdx"
+      ]
+    },
+    {
+      "id": "anthropics/skills",
+      "url": "https://github.com/anthropics/skills",
+      "default_branch": "main",
+      "stars": 181880,
+      "archived": false,
+      "license": "unknown",
+      "description": "Public repository for Agent Skills",
+      "revision": "dbd4588f9e1033efb41dad4bef2f7947c8993d44",
+      "head_commit_at": "2026-10-09T18:45:49Z",
+      "tier": "selected-skills",
+      "decision": "evaluate",
+      "purpose": "Estudiar frontend-design, webapp-testing y patrones de empaquetado de skills.",
+      "observed_license": "Licencia por skill; frontend-design inspeccionada con LICENSE.txt Apache-2.0; algunas skills documentales son source-available",
+      "caution": "Importar una skill completa y sus recursos solo tras revisar su licencia y adaptación. Los comandos de plugins Claude no son comandos de Antigravity.",
+      "source_paths": [
+        "README.md",
+        "skills/frontend-design/SKILL.md",
+        "skills/frontend-design/LICENSE.txt",
+        "skills/webapp-testing/SKILL.md"
+      ],
+      "sources": [
+        "https://api.github.com/repos/anthropics/skills",
+        "https://github.com/anthropics/skills/blob/dbd4588f9e1033efb41dad4bef2f7947c8993d44/README.md",
+        "https://github.com/anthropics/skills/blob/dbd4588f9e1033efb41dad4bef2f7947c8993d44/skills/frontend-design/SKILL.md",
+        "https://github.com/anthropics/skills/blob/dbd4588f9e1033efb41dad4bef2f7947c8993d44/skills/frontend-design/LICENSE.txt",
+        "https://github.com/anthropics/skills/blob/dbd4588f9e1033efb41dad4bef2f7947c8993d44/skills/webapp-testing/SKILL.md"
+      ]
+    },
+    {
+      "id": "vercel-labs/agent-skills",
+      "url": "https://github.com/vercel-labs/agent-skills",
+      "default_branch": "main",
+      "stars": 32584,
+      "archived": false,
+      "license": "unknown",
+      "description": "Vercel's official collection of agent skills",
+      "revision": "063bee94c3f4df8453406c830b0a7df0f2860278",
+      "head_commit_at": "2026-08-28T13:36:07Z",
+      "tier": "selected-skills",
+      "decision": "evaluate",
+      "purpose": "Seleccionar criterios de React, Next.js y revisión de interfaces para las webs de Altiora.",
+      "observed_license": "MIT declarada en react-best-practices/SKILL.md; revisar cada skill seleccionada",
+      "caution": "No asumir licencia homogénea de toda la colección ni compatibilidad automática con el proyecto React 18 existente.",
+      "source_paths": [
+        "README.md",
+        "skills/react-best-practices/SKILL.md"
+      ],
+      "sources": [
+        "https://api.github.com/repos/vercel-labs/agent-skills",
+        "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/README.md",
+        "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/SKILL.md"
+      ]
+    },
+    {
+      "id": "obra/superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "default_branch": "main",
+      "stars": 301407,
+      "archived": false,
+      "license": "MIT",
+      "description": "An agentic skills framework & software development methodology that works.",
+      "revision": "bb92a77741419a4ab5f06e711a283343f1ada0c3",
+      "head_commit_at": "2026-10-10T00:28:04Z",
+      "tier": "orchestration-reference",
+      "decision": "reference_only",
+      "purpose": "Estudiar división de trabajo, contexto aislado, implementación y revisión por tareas.",
+      "observed_license": "MIT",
+      "caution": "Adaptar el patrón a la tarea. No instalar el proceso entero ni imponer múltiples rondas y agentes en cambios pequeños; no modifica permisos vigentes.",
+      "source_paths": [
+        "README.md",
+        "LICENSE",
+        "skills/subagent-driven-development/SKILL.md"
+      ],
+      "sources": [
+        "https://api.github.com/repos/obra/superpowers",
+        "https://github.com/obra/superpowers/blob/bb92a77741419a4ab5f06e711a283343f1ada0c3/README.md",
+        "https://github.com/obra/superpowers/blob/bb92a77741419a4ab5f06e711a283343f1ada0c3/LICENSE",
+        "https://github.com/obra/superpowers/blob/bb92a77741419a4ab5f06e711a283343f1ada0c3/skills/subagent-driven-development/SKILL.md"
+      ]
+    },
+    {
+      "id": "github/spec-kit",
+      "url": "https://github.com/github/spec-kit",
+      "default_branch": "main",
+      "stars": 141738,
+      "archived": false,
+      "license": "MIT",
+      "description": "💫 Toolkit to help you get started with SDD or any other process!",
+      "revision": "c6a4c18f1d01a8bec241c618eb6dfea952508744",
+      "head_commit_at": "2026-10-16T22:43:19Z",
+      "tier": "planning-reference",
+      "decision": "reference_only",
+      "purpose": "Estudiar especificaciones y criterios de aceptación para proyectos amplios.",
+      "observed_license": "MIT",
+      "caution": "Su proceso completo puede añadir coste a tareas pequeñas. Usar el brief existente y adaptar solo la planificación necesaria.",
+      "source_paths": [
+        "README.md",
+        "LICENSE"
+      ],
+      "sources": [
+        "https://api.github.com/repos/github/spec-kit",
+        "https://github.com/github/spec-kit/blob/c6a4c18f1d01a8bec241c618eb6dfea952508744/README.md",
+        "https://github.com/github/spec-kit/blob/c6a4c18f1d01a8bec241c618eb6dfea952508744/LICENSE"
+      ]
+    },
+    {
+      "id": "sickn33/agentic-awesome-skills",
+      "url": "https://github.com/sickn33/agentic-awesome-skills",
+      "default_branch": "main",
+      "stars": 47832,
+      "archived": false,
+      "license": "MIT",
+      "description": "AAS Core is the local, agent-first control plane for complete catalog discovery, agent-owned selection, stack validation, and planning, backed by 2,600+ agentic skills. Includes CLI, local MCP, catalog, plugins, and Workbench.",
+      "revision": "71b1c1a9e2e85e492bc647aeae0b86c21642c249",
+      "head_commit_at": "2026-10-18T09:29:52Z",
+      "tier": "discovery",
+      "decision": "evaluate",
+      "purpose": "Descubrir skills especializadas de 3D, animación y automatización para revisar por separado.",
+      "observed_license": "MIT en el repositorio raíz; revisar procedencia y condiciones de cada recurso importado",
+      "caution": "Proyecto comunitario independiente de Google; el antiguo antigravity-awesome-skills redirige aquí. No cargar todo el catálogo ni ejecutar instaladores masivos.",
+      "source_paths": [
+        "README.md",
+        "LICENSE"
+      ],
+      "sources": [
+        "https://api.github.com/repos/sickn33/agentic-awesome-skills",
+        "https://github.com/sickn33/agentic-awesome-skills/blob/71b1c1a9e2e85e492bc647aeae0b86c21642c249/README.md",
+        "https://github.com/sickn33/agentic-awesome-skills/blob/71b1c1a9e2e85e492bc647aeae0b86c21642c249/LICENSE"
+      ]
+    }
+  ]
+}
