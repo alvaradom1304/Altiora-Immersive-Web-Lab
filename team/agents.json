@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "note": "Fuente única de los agentes. Editar aquí y en team/roles/<id>.md; después ejecutar npm run agents:build.",
+  "agents": [
+    {
+      "id": "experience-director",
+      "when": "Usar para arrancar o coordinar un proyecto: dividir el trabajo entre roles e IAs, crear tareas en el tablero, resolver conflictos y decidir gates de milestone.",
+      "milestones": ["M0", "M1", "M2", "M3", "M4", "M5", "M6"],
+      "skills": ["altiora-agent-orchestrator", "elite-web-experience-os", "business-decision-gates", "launch-readiness", "quality-council", "human-in-the-loop"]
+    },
+    {
+      "id": "business-strategist",
+      "when": "Usar para definir problema, oferta, audiencia, KPIs e hipótesis de negocio, o revisar unit economics y precios.",
+      "milestones": ["M0"],
+      "skills": ["business-strategy", "value-proposition-design", "buyer-persona", "unit-economics", "pricing", "market-research", "financial-forecasting"]
+    },
+    {
+      "id": "brand-strategist",
+      "when": "Usar para traducir el posicionamiento a atributos, voz y reglas de marca.",
+      "milestones": ["M1"],
+      "skills": ["brand-strategy", "brand-positioning", "brand-voice", "brand-personality", "premium-branding", "brand-guidelines"]
+    },
+    {
+      "id": "creative-director",
+      "when": "Usar para proponer rutas creativas, moodboards y guion visual, o revisar coherencia artística.",
+      "milestones": ["M1"],
+      "skills": ["creative-direction", "art-direction", "cinematic-direction", "storyboarding", "photography-direction", "creative-quality-assurance"]
+    },
+    {
+      "id": "ux-researcher",
+      "when": "Usar para entender tareas del usuario, mapear flujos, diseñar pruebas de tareas y reducir fricción en compra o pedido.",
+      "milestones": ["M0", "M2", "M6"],
+      "skills": ["ux-research", "user-flow", "customer-journey", "information-architecture", "conversion-ux", "accessibility"]
+    },
+    {
+      "id": "ui-designer",
+      "when": "Usar para definir tokens, componentes, estados e interfaz responsive.",
+      "milestones": ["M2"],
+      "skills": ["ui-direction", "design-system", "color-system", "typography-direction", "responsive-design", "frontend-design"]
+    },
+    {
+      "id": "visual-producer",
+      "when": "Usar para producir o dirigir fotografía, imágenes, video e ilustración con manifiesto de derechos y optimización.",
+      "milestones": ["M3"],
+      "skills": ["product-photography-direction", "ai-image-direction", "ai-video-direction", "visual-identity", "web-performance"]
+    },
+    {
+      "id": "motion-designer",
+      "when": "Usar para guiones de movimiento, transiciones, scroll y alternativas con movimiento reducido.",
+      "milestones": ["M3"],
+      "skills": ["motion-design", "gsap-animation", "scroll-experience", "cinematic-direction", "threejs-experience"]
+    },
+    {
+      "id": "web-engineer",
+      "when": "Usar para implementar componentes, escenas WebGL, integración de pedidos y verificación técnica.",
+      "milestones": ["M3", "M4"],
+      "skills": ["nextjs-architecture", "react-three-fiber", "threejs-experience", "vercel-react-best-practices", "web-performance", "frontend-security", "secure-development"]
+    },
+    {
+      "id": "content-designer",
+      "when": "Usar para redactar copy por sección, CTA, mensajes de error y ayuda con hechos verificados.",
+      "milestones": ["M2"],
+      "skills": ["copywriting", "content-strategy", "brand-voice", "seo", "local-seo"]
+    },
+    {
+      "id": "qa-reviewer",
+      "when": "Usar para revisar de forma independiente una entrega: funcional, visual, accesibilidad, rendimiento y seguridad. Puede bloquear.",
+      "milestones": ["M4"],
+      "tools": "Read, Grep, Glob, Bash, WebFetch",
+      "skills": ["web-quality-assurance", "accessibility", "altiora-quality-review", "web-performance", "security-testing", "owasp-review"]
+    },
+    {
+      "id": "growth-analyst",
+      "when": "Usar para planes de medición, eventos, baseline de conversión y backlog de experimentos.",
+      "milestones": ["M6"],
+      "skills": ["marketing-analytics", "conversion-analysis", "conversion-rate-optimization", "growth-experimentation", "retention", "ltv-optimization"]
+    }
+  ]
+}

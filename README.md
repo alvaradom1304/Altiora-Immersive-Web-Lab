@@ -49,6 +49,8 @@ El laboratorio define 12 roles operativos y directrices de orquestación en [tea
 - **Estratega de negocio & Analista de conversión**: Unit economics, calculadoras de feria y pasaporte VIP.
 - **QA & Accessibility reviewer**: Control independiente de calidad, métricas de rendimiento y regresiones.
 
+Los roles funcionan como agentes reales: subagentes de Claude Code en `.claude/agents/` y prompts portables para Codex, Gemini o ChatGPT en `team/agents/`. Las IAs se reparten el trabajo en el [chat del equipo](team/chat/README.md) (`npm run chat -- board`).
+
 ## Catálogo de Skills Integradas (`skills/`)
 
 El repositorio cuenta con un catálogo de **237 skills especializadas** categorizadas en:
