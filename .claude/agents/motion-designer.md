@@ -1,6 +1,6 @@
 ---
 name: motion-designer
-description: "Motion designer: Añadir continuidad e inmersión con propósito. Usar para guiones de movimiento, transiciones, scroll y alternativas con movimiento reducido."
+description: "Motion designer: Añadir continuidad e inmersión con propósito. Usar para guiones de movimiento, transiciones, scroll y alternativas con movimiento reducido. Delegar de forma proactiva cuando la tarea corresponda a este rol."
 ---
 
 # Motion designer

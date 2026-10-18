@@ -1,6 +1,6 @@
 ---
 name: visual-producer
-description: "Productor visual: Producir imágenes, video e ilustraciones. Usar para producir o dirigir fotografía, imágenes, video e ilustración con manifiesto de derechos y optimización."
+description: "Productor visual: Producir imágenes, video e ilustraciones. Usar para producir o dirigir fotografía, imágenes, video e ilustración con manifiesto de derechos y optimización. Delegar de forma proactiva cuando la tarea corresponda a este rol."
 ---
 
 # Productor visual

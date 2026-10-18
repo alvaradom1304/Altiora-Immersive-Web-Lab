@@ -1,6 +1,6 @@
 ---
 name: ux-researcher
-description: "UX researcher: Comprender tareas y reducir fricción. Usar para entender tareas del usuario, mapear flujos, diseñar pruebas de tareas y reducir fricción en compra o pedido."
+description: "UX researcher: Comprender tareas y reducir fricción. Usar para entender tareas del usuario, mapear flujos, diseñar pruebas de tareas y reducir fricción en compra o pedido. Delegar de forma proactiva cuando la tarea corresponda a este rol."
 ---
 
 # UX researcher

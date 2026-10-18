@@ -70,7 +70,7 @@ for (const agent of agents) {
   for (const skill of agent.skills) {
     if (!(await read(resolve(root, 'skills', skill, 'SKILL.md')))) throw new Error(`${agent.id}: skill inexistente ${skill}`);
   }
-  const description = `${role.title}: ${role['Misión'].replace(/\.$/, '')}. ${agent.when}`;
+  const description = `${role.title}: ${role['Misión'].replace(/\.$/, '')}. ${agent.when} Delegar de forma proactiva cuando la tarea corresponda a este rol.`;
   const frontmatter = ['---', `name: ${agent.id}`, `description: ${JSON.stringify(description)}`];
   if (agent.tools) frontmatter.push(`tools: ${agent.tools}`);
   frontmatter.push('---', '');
@@ -245,6 +245,26 @@ ${skillRows.map(r => `| [${r.name}](skills/${r.folder}/SKILL.md) | ${r.agents.le
 | Repositorio | Decisión | Tipo | Para qué |
 |---|---|---|---|
 ${repoRows.join('\n')}
+`]);
+
+// --- Enrutamiento (cargado por CLAUDE.md en cada sesión) ----------------------------------
+outputs.push(['team/ROUTING.md', `# Enrutamiento de tareas
+
+${MARK}
+
+Claude elige el agente y las skills sin que la persona los seleccione. Antes de ejecutar una petición:
+
+1. **Clasificar** la petición con la tabla. Si toca varios roles, el Director de experiencia la divide (\`/equipo\`) o se trabaja por pasos, un rol cada vez.
+2. **Delegar** en el subagente del rol cuando la tarea es sustancial y de un solo rol. Para preguntas rápidas, responder directamente aplicando sus skills.
+3. **Cargar** las skills del rol que apliquen. Si ninguna encaja, buscar en [INDEX.md](../INDEX.md) por tema y leer \`skills/<nombre>/SKILL.md\`, aunque no esté en el listado automático.
+4. **Decir** en una línea qué agente y qué skills se usaron y por qué. Si no se usó ninguno, decirlo.
+5. **No forzar**: si ninguna skill aporta, trabajar directamente. No usar una skill solo por usarla.
+
+| Si la tarea trata de… | Agente | Skills principales |
+|---|---|---|
+${agents.map(a => `| ${esc(a.when.replace(/^Usar (para |cuando )?/, ''))} | \`${a.id}\` (\`/chat-${a.id}\`) | ${a.skills.slice(0, 6).map(s => '\`' + s + '\`').join(', ')}${a.skills.length > 6 ? ' …' : ''} |`).join('\n')}
+| Repositorios, librerías o dependencias de terceros | (directo) | \`/repos\`, \`altiora-repository-research\` |
+| Crear o mejorar skills | (directo) | \`skill-creator\`, \`aem-skill-factory\`, ciclo en docs/workflows/skill-improvement.md |
 `]);
 
 const expectedSkillDirs = new Set(outputs.filter(([p]) => p.startsWith('.claude/skills/')).map(([p]) => p.split('/')[2]));

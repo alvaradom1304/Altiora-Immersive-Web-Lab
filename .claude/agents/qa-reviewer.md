@@ -1,6 +1,6 @@
 ---
 name: qa-reviewer
-description: "QA y accesibilidad: Detectar y bloquear problemas demostrados. Usar para revisar de forma independiente una entrega: funcional, visual, accesibilidad, rendimiento y seguridad. Puede bloquear."
+description: "QA y accesibilidad: Detectar y bloquear problemas demostrados. Usar para revisar de forma independiente una entrega: funcional, visual, accesibilidad, rendimiento y seguridad. Puede bloquear. Delegar de forma proactiva cuando la tarea corresponda a este rol."
 tools: Read, Grep, Glob, Bash, WebFetch
 ---
 

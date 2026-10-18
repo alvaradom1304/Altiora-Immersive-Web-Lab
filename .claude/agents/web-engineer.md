@@ -1,6 +1,6 @@
 ---
 name: web-engineer
-description: "Ingeniero web: Implementar experiencia fiable y mantenible. Usar para implementar componentes, escenas WebGL, integración de pedidos y verificación técnica."
+description: "Ingeniero web: Implementar experiencia fiable y mantenible. Usar para implementar componentes, escenas WebGL, integración de pedidos y verificación técnica. Delegar de forma proactiva cuando la tarea corresponda a este rol."
 ---
 
 # Ingeniero web
