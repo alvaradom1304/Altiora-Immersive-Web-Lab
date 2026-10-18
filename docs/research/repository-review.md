@@ -234,3 +234,114 @@ Los README de las dos demos Codrops atribuyen imágenes a Midjourney. Se estudia
 | Versión móvil | Mejora progresiva | r3f-scroll-rig como referencia conceptual | HTML completo y póster; WebGL opcional según prueba de capacidad |
 
 **Próximo paso definido:** [experimento 001](../../projects/la-central-del-queso/experiments/001-umbral-a-mesa.md). Ningún resultado visual o comercial se da por validado todavía.
+
+
+## Ampliación: assets, calidad y medición (18 de octubre de 2026)
+
+La primera selección cubría la escena. Faltaban piezas para que llegue ligera al móvil, para probar el pedido y para medir resultados. Se añadieron 9 repositorios con los mismos criterios y con commit fijado en el [catálogo](../../references/repositories.json).
+
+| Repositorio | Necesidad | Estrellas observadas | Commit observado | Decisión |
+|---|---|---:|---|---|
+| [google/model-viewer](https://github.com/google/model-viewer) | Mostrar un queso o producto en 3D/AR dentro del catálogo con un componente accesible, sin escena completa. | 8,278 | 2026-10-09 | evaluate |
+| [zeux/meshoptimizer](https://github.com/zeux/meshoptimizer) | Comprimir geometría GLB (gltfpack / EXT_meshopt_compression) para que la finca cargue en móvil. | 8,581 | 2026-10-14 | adopt |
+| [KhronosGroup/KTX-Software](https://github.com/KhronosGroup/KTX-Software) | Convertir texturas a KTX2/Basis para reducir memoria de GPU en las escenas. | 1,385 | 2026-10-18 | evaluate |
+| [microsoft/playwright](https://github.com/microsoft/playwright) | Probar el flujo de catálogo → carrito → pedido por WhatsApp y capturar regresiones visuales en móvil y escritorio. | 98,009 | 2026-10-17 | adopt |
+| [dequelabs/axe-core](https://github.com/dequelabs/axe-core) | Auditoría automática de accesibilidad dentro de las pruebas de Playwright. | 7,666 | 2026-10-15 | adopt |
+| [GoogleChrome/lighthouse-ci](https://github.com/GoogleChrome/lighthouse-ci) | Aplicar en CI los presupuestos de quality/performance-budgets.md a cada vista previa. | 7,114 | 2026-10-17 | evaluate |
+| [GoogleChrome/web-vitals](https://github.com/GoogleChrome/web-vitals) | Medir LCP, INP y CLS reales de los visitantes para la fase M6 de aprendizaje. | 8,648 | 2026-10-16 | adopt |
+| [utsuboco/r3f-perf](https://github.com/utsuboco/r3f-perf) | Ver draw calls, memoria de GPU y FPS mientras se ajustan las escenas de Fiber. | 780 | 2024-11-08 | evaluate |
+| [theatre-js/theatre](https://github.com/theatre-js/theatre) | Coreografiar cámara y objetos con un editor de líneas de tiempo para el recorrido finca → mesa. | 12,777 | 2024-04-11 | hold |
+
+### google/model-viewer
+
+**Decisión:** evaluate. **Paquete:** `@google/model-viewer`. **Licencia observada:** Apache-2.0.
+
+**Límite o condición:** Web component independiente de Fiber: no mezclar con el canvas principal. Medir peso del GLB y del paquete antes de usarlo en tarjetas de catálogo.
+
+**Fuentes:** [README fijado](https://github.com/google/model-viewer/blob/adc877c66f97e1498d8b19a8850976aee3d0197f/README.md).
+
+### zeux/meshoptimizer
+
+**Decisión:** adopt. **Paquete:** `meshoptimizer`. **Licencia observada:** MIT.
+
+**Límite o condición:** Requiere decodificador en el cliente (MeshoptDecoder de three). Comparar calidad visual antes y después de cada compresión.
+
+**Fuentes:** [README fijado](https://github.com/zeux/meshoptimizer/blob/f0a684f11ead064e176775c9b796f82a55910e92/README.md).
+
+### KhronosGroup/KTX-Software
+
+**Decisión:** evaluate. **Paquete:** herramienta de línea de comandos. **Licencia observada:** Apache-2.0 principal con componentes de terceros (ver LICENSES/).
+
+**Límite o condición:** Herramienta de línea de comandos con varias licencias de terceros (Apache-2.0 principal, ver LICENSES/). Requiere KTX2Loader y transcoder en el cliente.
+
+**Fuentes:** [README fijado](https://github.com/KhronosGroup/KTX-Software/blob/cdc486626023185104cbda24aa2dcccc43044b8e/README.md).
+
+### microsoft/playwright
+
+**Decisión:** adopt. **Paquete:** `@playwright/test`. **Licencia observada:** Apache-2.0.
+
+**Límite o condición:** Las capturas de WebGL varían por GPU: comparar con tolerancia o probar la alternativa estática. Mantener las pruebas fuera del bundle.
+
+**Fuentes:** [README fijado](https://github.com/microsoft/playwright/blob/b335271cdc2b57cac2be8ad37c5dd283ac6b8938/README.md).
+
+### dequelabs/axe-core
+
+**Decisión:** adopt. **Paquete:** `@axe-core/playwright`. **Licencia observada:** MPL-2.0.
+
+**Límite o condición:** Detecta solo una parte de los problemas WCAG; no sustituye revisión con teclado y lector de pantalla. Licencia MPL-2.0 para modificaciones del propio motor.
+
+**Fuentes:** [README fijado](https://github.com/dequelabs/axe-core/blob/f01bf5ce56ffcf1411d14d14ed75d1fb86f8023c/README.md).
+
+### GoogleChrome/lighthouse-ci
+
+**Decisión:** evaluate. **Paquete:** `@lhci/cli`. **Licencia observada:** Apache-2.0.
+
+**Límite o condición:** Mediciones de laboratorio con variación entre ejecuciones: usar varias corridas y no tratarlas como datos de campo.
+
+**Fuentes:** [README fijado](https://github.com/GoogleChrome/lighthouse-ci/blob/a3d0ff8a49501c88ccec7a054f588c1ee1ff934f/README.md).
+
+### GoogleChrome/web-vitals
+
+**Decisión:** adopt. **Paquete:** `web-vitals`. **Licencia observada:** Apache-2.0.
+
+**Límite o condición:** Enviar métricas solo con consentimiento y sin datos personales. Son datos de campo, distintos de Lighthouse.
+
+**Fuentes:** [README fijado](https://github.com/GoogleChrome/web-vitals/blob/e773747b90f0e8763aed02ba5a74358d628a828c/README.md).
+
+### utsuboco/r3f-perf
+
+**Decisión:** evaluate. **Paquete:** `r3f-perf`. **Licencia observada:** MIT.
+
+**Límite o condición:** Solo en desarrollo. Última actividad en 2024: comprobar compatibilidad antes de migrar a Fiber 9.
+
+**Fuentes:** [README fijado](https://github.com/utsuboco/r3f-perf/blob/752adc19edbcabc43fc917519c5366718fa0b9d0/README.md).
+
+### theatre-js/theatre
+
+**Decisión:** hold. **Paquete:** `@theatre/core`. **Licencia observada:** Apache-2.0.
+
+**Límite o condición:** Sin cambios en la rama principal desde 2024 y versión 0.x: no adoptar sin revisar mantenimiento. GSAP ya cubre timeline y scroll.
+
+**Fuentes:** [README fijado](https://github.com/theatre-js/theatre/blob/6ea82b938ea49609489f6377ded693ccc6ee8f5b/README.md).
+
+## Hallazgos en la web actual
+
+Revisión de `package.json` de [la-central-del-queso](https://github.com/alvaradom1304/la-central-del-queso) (rama `hito2-exterior-realista`):
+
+- `@studio-freight/react-lenis` está marcado como obsoleto en npm: el paquete ahora es `lenis` (con `lenis/react`). Migrar en el mismo cambio que la evaluación de Lenis frente al scroll nativo.
+- `framer-motion` se publica ahora también como `motion` (misma versión, 14.3.0 al revisar). No urge migrar. Evitar tener ambos paquetes instalados.
+- Next 14.2.3 con React 18, Fiber 8 y Drei 9 forman una combinación coherente. Las versiones de master de Drei piden React 19 (ver arriba), así que no actualizar Drei aislado.
+- No hay pruebas automatizadas ni medición de Web Vitals: Playwright + axe-core y web-vitals son la primera incorporación propuesta.
+
+## Skills externas incorporadas
+
+Además de los repositorios, se copiaron 14 skills de terceros con licencia y procedencia (`SOURCE.md` en cada una; registro en [skill-sources.json](../../references/skill-sources.json)):
+
+| Origen | Skills | Para qué en Altiora |
+|---|---|---|
+| anthropics/skills (Apache-2.0) | webapp-testing, skill-creator | Probar la web local con Playwright; crear y evaluar skills dentro del ciclo PDCA |
+| vercel-labs/agent-skills (MIT) | web-design-guidelines, vercel-composition-patterns | Revisar UI contra reglas fijadas; componentes React mantenibles |
+| coreyhaines31/marketingskills (MIT) | events, referrals, offers, emails, schema, ab-testing, analytics | Ferias, referidos y reseñas, cajas de regalo, correos B2B, datos estructurados, experimentos y GA4 |
+| obra/superpowers (MIT) | writing-plans, systematic-debugging, verification-before-completion | Planificar, depurar por causa raíz y no declarar terminado sin evidencia |
+
+También se añadió la licencia y procedencia que faltaban a cro, free-tools, lead-magnets y marketing-psychology, importadas antes de marketingskills. Las skills nuevas están asignadas a los agentes en [team/agents.json](../../team/agents.json).

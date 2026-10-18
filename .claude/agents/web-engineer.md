@@ -28,6 +28,9 @@ Leer solo las pertinentes a la tarea antes de producir:
 - [web-performance](../../skills/web-performance/SKILL.md)
 - [frontend-security](../../skills/frontend-security/SKILL.md)
 - [secure-development](../../skills/secure-development/SKILL.md)
+- [vercel-composition-patterns](../../skills/vercel-composition-patterns/SKILL.md)
+- [systematic-debugging](../../skills/systematic-debugging/SKILL.md)
+- [webapp-testing](../../skills/webapp-testing/SKILL.md)
 
 ## Coordinación con otras IAs
 El trabajo se reparte en el [chat del equipo](../../team/chat/README.md). Identificarse como `<ia>/web-engineer` (por ejemplo `claude/web-engineer`).

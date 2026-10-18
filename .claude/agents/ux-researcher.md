@@ -27,6 +27,7 @@ Leer solo las pertinentes a la tarea antes de producir:
 - [information-architecture](../../skills/information-architecture/SKILL.md)
 - [conversion-ux](../../skills/conversion-ux/SKILL.md)
 - [accessibility](../../skills/accessibility/SKILL.md)
+- [web-design-guidelines](../../skills/web-design-guidelines/SKILL.md)
 
 ## Coordinación con otras IAs
 El trabajo se reparte en el [chat del equipo](../../team/chat/README.md). Identificarse como `<ia>/ux-researcher` (por ejemplo `claude/ux-researcher`).

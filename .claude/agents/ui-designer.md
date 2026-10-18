@@ -27,6 +27,7 @@ Leer solo las pertinentes a la tarea antes de producir:
 - [typography-direction](../../skills/typography-direction/SKILL.md)
 - [responsive-design](../../skills/responsive-design/SKILL.md)
 - [frontend-design](../../skills/frontend-design/SKILL.md)
+- [web-design-guidelines](../../skills/web-design-guidelines/SKILL.md)
 
 ## Coordinación con otras IAs
 El trabajo se reparte en el [chat del equipo](../../team/chat/README.md). Identificarse como `<ia>/ui-designer` (por ejemplo `claude/ui-designer`).

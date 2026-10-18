@@ -2,7 +2,7 @@
 
 Laboratorio de experiencias web inmersivas y comerciales. Primer caso: **La Central del Queso**, un recorrido de la finca a la mesa.
 
-La base de investigación reúne **16 repositorios** con una función, una decisión y una revisión concreta. La selección inicial favorece Three.js + React Three Fiber + Drei + GSAP; glTF Transform prepara los modelos. Lenis se evalúa después de comparar con el scroll nativo.
+La base de investigación reúne **25 repositorios** con una función, una decisión y una revisión concreta. La selección inicial favorece Three.js + React Three Fiber + Drei + GSAP; glTF Transform prepara los modelos. Lenis se evalúa después de comparar con el scroll nativo.
 
 ## Empezar
 
@@ -53,7 +53,7 @@ Los roles funcionan como agentes reales: subagentes de Claude Code en `.claude/a
 
 ## Catálogo de Skills Integradas (`skills/`)
 
-El repositorio cuenta con un catálogo de **237 skills especializadas** categorizadas en:
+El repositorio cuenta con un catálogo de **251 skills especializadas** (18 de ellas de terceros, con licencia y procedencia en [skill-sources.json](references/skill-sources.json)) categorizadas en:
 1. **Brand & Creative Intelligence**: Art direction, brand architecture, storytelling, color system, typography direction.
 2. **Premium Web Experience**: Three.js, React Three Fiber, GSAP animation, motion design, responsive design, conversion UX.
 3. **Business & Financial Intelligence**: Unit economics, pricing strategy, margin analysis, cash flow, financial forecasting.

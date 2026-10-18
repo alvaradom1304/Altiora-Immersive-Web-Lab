@@ -2,6 +2,12 @@
 
 Un bloque por ciclo, el más reciente arriba. Proceso: [mejora continua de skills](../docs/workflows/skill-improvement.md).
 
+## Incorporación de skills externas — 2026-10-18
+
+- 14 skills de terceros con licencia y procedencia: webapp-testing, skill-creator, web-design-guidelines, vercel-composition-patterns, events, referrals, offers, emails, schema, ab-testing, analytics, writing-plans, systematic-debugging, verification-before-completion. Atribución añadida a 4 importadas antes (cro, free-tools, lead-magnets, marketing-psychology).
+- Línea base recalculada con 251 skills; la media baja porque varias externas no declaran versión ni entregable con el formato de la rúbrica. No es una regresión de las existentes.
+- Backlog: casos de evaluación propios para las externas sin `evals/` (webapp-testing, skill-creator, web-design-guidelines, vercel-composition-patterns, writing-plans, systematic-debugging, verification-before-completion) y adaptar ejemplos de marketing a La Central del Queso en `evals/`, sin tocar su SKILL.md.
+
 ## Ciclo 1 — 2026-10-18
 
 **Planificar.** Primera auditoría con `scripts/audit-skills.mjs`: media **78.1/100**, solo 84 de 237 skills en 100. Causa principal: un envoltorio «Executive Protocol» insertado durante la integración del catálogo, duplicado en 132 skills (secciones y párrafos repetidos, encabezados vacíos) y que en 125 skills con contrato contradecía su protocolo: pedía hablar «como consultor de Bain/McKinsey», hacer preguntas antes de actuar y entregar Markdown libre, frente al contrato que exige `output-schema.json`, no pedir permiso para análisis autorizado y estado `SUCCESS/FAILED/BLOCKED/NEEDS_REVIEW`.

@@ -27,6 +27,8 @@ Leer solo las pertinentes a la tarea antes de producir:
 - [launch-readiness](../../skills/launch-readiness/SKILL.md)
 - [quality-council](../../skills/quality-council/SKILL.md)
 - [human-in-the-loop](../../skills/human-in-the-loop/SKILL.md)
+- [writing-plans](../../skills/writing-plans/SKILL.md)
+- [verification-before-completion](../../skills/verification-before-completion/SKILL.md)
 
 ## Coordinación con otras IAs
 El trabajo se reparte en el [chat del equipo](../../team/chat/README.md). Identificarse como `<ia>/experience-director` (por ejemplo `claude/experience-director`).

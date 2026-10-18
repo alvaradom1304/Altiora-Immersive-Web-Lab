@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-10-18",
+  "note": "Skills de terceros copiadas en skills/. Cada una conserva LICENSE.txt y SOURCE.md. Actualizar copiando desde una revisión nueva y revisando el diff; no ejecutar sus scripts sin leerlos.",
+  "sources": [
+    {
+      "repo": "anthropics/skills",
+      "revision": "dbd4588f9e1033efb41dad4bef2f7947c8993d44",
+      "license": "Apache-2.0 (LICENSE.txt por skill)",
+      "skills": [
+        "webapp-testing",
+        "skill-creator"
+      ],
+      "why": "Pruebas con Playwright de la web local y método oficial para crear y evaluar skills (complementa el ciclo PDCA).",
+      "caution": "skill-creator ejecuta `claude -p` y abre un servidor local para revisar evaluaciones; generate_review.py usa lsof (Unix). webapp-testing/with_server.py lanza con shell los comandos de servidor que se le pasen."
+    },
+    {
+      "repo": "vercel-labs/agent-skills",
+      "revision": "063bee94c3f4df8453406c830b0a7df0f2860278",
+      "license": "MIT (declarada en README)",
+      "skills": [
+        "web-design-guidelines",
+        "vercel-composition-patterns"
+      ],
+      "why": "Revisión de interfaz contra las Web Interface Guidelines y patrones de composición de componentes React.",
+      "caution": "web-design-guidelines se modificó para leer una copia fijada de las reglas en vez de descargarlas en cada uso."
+    },
+    {
+      "repo": "vercel-labs/web-interface-guidelines",
+      "revision": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "license": "MIT",
+      "skills": [],
+      "why": "Reglas usadas por web-design-guidelines (skills/web-design-guidelines/references/).",
+      "caution": "Copia fija; actualizar con revisión."
+    },
+    {
+      "repo": "coreyhaines31/marketingskills",
+      "revision": "365b412152b9542499ca1439426f7fc3cc92bb65",
+      "license": "MIT",
+      "skills": [
+        "events",
+        "referrals",
+        "offers",
+        "emails",
+        "schema",
+        "ab-testing",
+        "analytics"
+      ],
+      "previously_imported": [
+        "cro",
+        "free-tools",
+        "lead-magnets",
+        "marketing-psychology"
+      ],
+      "why": "Ferias y degustaciones, referidos y reseñas, ofertas y cajas de regalo, correos a restaurantes, datos estructurados de producto/negocio local, pruebas A/B y medición GA4.",
+      "caution": "Escritas para SaaS en inglés: adaptar ejemplos a venta de quesos en Costa Rica. Citan skills hermanas que no se importaron (launch, cold-email, onboarding, attribution, ai-seo)."
+    },
+    {
+      "repo": "obra/superpowers",
+      "revision": "bb92a77741419a4ab5f06e711a283343f1ada0c3",
+      "license": "MIT",
+      "skills": [
+        "writing-plans",
+        "systematic-debugging",
+        "verification-before-completion"
+      ],
+      "why": "Disciplina de ingeniería: planificar antes de tocar código, depurar por causa raíz y no declarar terminado sin evidencia (alineado con AGENTS.md).",
+      "caution": "writing-plans y systematic-debugging mencionan skills de superpowers no importadas (executing-plans, test-driven-development, using-git-worktrees); usar el flujo del laboratorio en su lugar."
+    }
+  ],
+  "considered_not_imported": [
+    {
+      "skill": "anthropics/skills · frontend-design",
+      "reason": "Ya existe una skill local frontend-design con el mismo nombre; comparar antes de sustituir."
+    },
+    {
+      "skill": "vercel-labs/agent-skills · react-best-practices",
+      "reason": "Cubierta por la skill local vercel-react-best-practices."
+    },
+    {
+      "skill": "obra/superpowers · test-driven-development",
+      "reason": "Se activa en cualquier funcionalidad; demasiado amplia para prototipos visuales WebGL. Revaluar cuando exista la app de producción."
+    },
+    {
+      "skill": "obra/superpowers · brainstorming",
+      "reason": "Incluye un servidor local y scripts; no aporta lo suficiente frente a high-value-deliberation."
+    }
+  ]
+}
