@@ -1,0 +1,13 @@
+{
+  "name": "altiora-immersive-web-lab",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Investigación y proceso reproducible para experiencias web inmersivas",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "check": "node scripts/verify-catalog.mjs",
+    "reference": "node scripts/fetch-reference.mjs"
+  }
+}
