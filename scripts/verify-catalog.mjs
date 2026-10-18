@@ -4,14 +4,18 @@ import { dirname, resolve, relative, isAbsolute } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
-const catalog = JSON.parse(await readFile(resolve(root, 'references/repositories.json'), 'utf8'));
-assert.equal(catalog.schema_version, 1);
-assert.match(catalog.reviewed_on, /^\d{4}-\d{2}-\d{2}$/);
-assert.equal(catalog.timezone, 'America/Costa_Rica');
-assert.ok(catalog.repositories.length > 0);
+const catalogs = await Promise.all(['references/repositories.json', 'references/business-repositories.json']
+  .map(async path => JSON.parse(await readFile(resolve(root, path), 'utf8'))));
+for (const catalog of catalogs) {
+  assert.equal(catalog.schema_version, 1);
+  assert.match(catalog.reviewed_on, /^\d{4}-\d{2}-\d{2}$/);
+  assert.equal(catalog.timezone, 'America/Costa_Rica');
+  assert.ok(catalog.repositories.length > 0);
+}
+const repositories = catalogs.flatMap(catalog => catalog.repositories);
 const ids = new Set();
 const decisions = new Set(['adopt', 'evaluate', 'hold', 'reference_only']);
-for (const repo of catalog.repositories) {
+for (const repo of repositories) {
   assert.match(repo.id, /^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/);
   assert.ok(!ids.has(repo.id), 'Duplicado: ' + repo.id);
   ids.add(repo.id);
@@ -25,7 +29,17 @@ for (const repo of catalog.repositories) {
   for (const source of repo.sources) assert.equal(new URL(source).protocol, 'https:');
   assert.ok(!repo.archived || repo.decision !== 'adopt', 'No adoptar un repositorio archivado sin revisar');
 }
-assert.equal(catalog.repositories.find(r => r.id === '14islands/r3f-scroll-rig')?.decision, 'hold');
+assert.equal(repositories.find(r => r.id === '14islands/r3f-scroll-rig')?.decision, 'hold');
+const business = catalogs[1].repositories;
+assert.equal(business.length, 12);
+for (const repo of business) {
+  assert.ok(['now', 'pilot', 'later'].includes(repo.priority));
+  assert.ok(['project-code', 'build-tool', 'development-tool', 'self-hosted-service'].includes(repo.deployment));
+  assert.equal(repo.savings_status, 'unmeasured');
+  assert.equal(repo.integration_status, 'catalogued');
+  assert.ok(repo.cost_driver?.length && repo.recurring_costs?.length);
+}
+assert.equal(business.filter(repo => repo.priority === 'now').length, 5);
 let documentCount = 0;
 async function walk(dir) {
   for (const entry of await readdir(dir, { withFileTypes: true })) {

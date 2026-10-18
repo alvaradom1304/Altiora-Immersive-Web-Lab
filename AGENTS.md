@@ -28,3 +28,11 @@ Seguir docs/workflows/immersive-project.md. Antes de ampliar una experiencia, co
 - Ejecutar npm run check después de cambiar el catálogo o los documentos.
 - En una app ejecutable, validar build, accesibilidad, móvil, fallback y el flujo de pedido afectado.
 - Indicar con claridad qué está diseñado, implementado, probado o pendiente.
+
+## Valor empresarial y costes
+- Para selección de herramientas empresariales, leer docs/operations/cost-reduction.md y docs/decisions/0002-reuse-before-new-services.md.
+- Consultar references/business-repositories.json además del catálogo inmersivo.
+- Reutilizar antes de desplegar servicios. Un nuevo servidor exige necesidad, responsable operativo y comparación de coste completo.
+- Separar caja de horas recuperadas. No inventar pagos o porcentajes de ahorro.
+- Evaluar n8n y Activepieces como alternativas, no como dos ahorros que se suman.
+- Las funciones comerciales quedan sujetas a sus licencias; no presentar un repositorio mixto como completamente gratuito.
