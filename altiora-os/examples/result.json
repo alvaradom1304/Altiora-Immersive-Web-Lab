@@ -1,0 +1,31 @@
+{
+  "task_id": "synthetic-contract-demo",
+  "agent": "altiora-os-research",
+  "status": "needs_review",
+  "summary": "Ejemplo sintético de contrato, no trabajo de cliente ejecutado",
+  "artifacts": [
+    "altiora-os/sources.yaml"
+  ],
+  "evidence": [
+    {
+      "id": "s1",
+      "kind": "source",
+      "location": "https://github.com/anthropics/skills/blob/dbd4588f9e1033efb41dad4bef2f7947c8993d44/README.md",
+      "observed_at": "2026-10-18",
+      "claim": "La licencia debe verificarse por skill; catálogo de ejemplo requiere revisión humana"
+    }
+  ],
+  "checks": [
+    {
+      "name": "Revisión humana de la selección",
+      "status": "NOT_RUN",
+      "evidence_ids": []
+    }
+  ],
+  "limitations": [
+    "Fixture sintético; no constituye resultado aceptado"
+  ],
+  "next_actions": [
+    "Abrir fuentes y contrastar la selección con el brief real"
+  ]
+}

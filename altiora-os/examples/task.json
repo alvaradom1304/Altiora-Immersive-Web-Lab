@@ -1,0 +1,14 @@
+{
+  "task_id": "demo-central-001",
+  "objective": "Diseñar un experimento del portón a la mesa con comercio accesible",
+  "project": "la-central-del-queso",
+  "workflow": "agency-delivery",
+  "allowed_paths": [
+    "projects/la-central-del-queso/experiments"
+  ],
+  "acceptance": [
+    "Comparar fuentes y distinguir hechos de hipótesis",
+    "Prototipo aislado, fallback HTML, teclado y movimiento reducido",
+    "No publicar ni cambiar catálogo o pedidos comerciales"
+  ]
+}

@@ -1,5 +1,9 @@
 # Altiora Immersive Web Lab
 
+## Altiora OS portable
+
+La [capa operativa Altiora OS](altiora-os/README.md) añade ocho agentes y ocho skills originales para Claude Code y Antigravity, con contratos de evidencia, planificación de dependencias, exportación que conserva archivos existentes y pruebas. Reutiliza el catálogo y los roles descritos abajo. No instala frameworks, activa servicios ni modifica la web comercial.
+
 Laboratorio de experiencias web inmersivas y comerciales. Primer caso: **La Central del Queso**, un recorrido de la finca a la mesa.
 
 La base de investigación reúne **16 repositorios** con una función, una decisión y una revisión concreta. La selección inicial favorece Three.js + React Three Fiber + Drei + GSAP; glTF Transform prepara los modelos. Lenis se evalúa después de comparar con el scroll nativo.
