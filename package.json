@@ -7,7 +7,9 @@
     "node": ">=20"
   },
   "scripts": {
-    "check": "node scripts/verify-catalog.mjs",
+    "check": "node scripts/verify-catalog.mjs && npm run os:check",
+    "os:check": "node altiora-os/scripts/cli.mjs check && node altiora-os/scripts/cli.mjs check-export && node --test altiora-os/tests/core.test.mjs",
+    "os:plan": "node altiora-os/scripts/cli.mjs plan altiora-os/examples/task.json claude",
     "reference": "node scripts/fetch-reference.mjs"
   }
 }

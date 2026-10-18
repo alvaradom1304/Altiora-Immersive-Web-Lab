@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-10-18",
+  "timezone": "America/Costa_Rica",
+  "method": "Official GitHub files at pinned commits; documentary assessment, not security certification",
+  "reuse": "Original implementation inspired by architecture patterns. No upstream source/skills vendored.",
+  "repositories": [
+    {
+      "repository": "anthropics/skills",
+      "url": "https://github.com/anthropics/skills",
+      "revision": "dbd4588f9e1033efb41dad4bef2f7947c8993d44",
+      "head_commit_at": "2026-10-09T18:45:49Z",
+      "license": "Mixed: Apache-2.0 examples; document skills source-available",
+      "decision": "adopt-pattern",
+      "adaptation": "Progressive disclosure and self-contained SKILL.md; no upstream files copied",
+      "security_limit": "Review each skill license; examples do not prove safe execution",
+      "sources": [
+        "https://github.com/anthropics/skills/blob/dbd4588f9e1033efb41dad4bef2f7947c8993d44/README.md",
+        "https://github.com/anthropics/skills/blob/dbd4588f9e1033efb41dad4bef2f7947c8993d44/README.md"
+      ]
+    },
+    {
+      "repository": "anthropics/claude-code",
+      "url": "https://github.com/anthropics/claude-code",
+      "revision": "dd6bee38458cc3e6dc5f2b16eca1f0f364619ad8",
+      "head_commit_at": "2026-10-17T23:14:49Z",
+      "license": "Commercial Terms; all rights reserved",
+      "decision": "compatibility-only",
+      "adaptation": "Project skills and subagent discovery conventions only",
+      "security_limit": "Public repository is not OSS; host permission settings enforce tool access",
+      "sources": [
+        "https://github.com/anthropics/claude-code/blob/dd6bee38458cc3e6dc5f2b16eca1f0f364619ad8/LICENSE.md",
+        "https://github.com/anthropics/claude-code/blob/dd6bee38458cc3e6dc5f2b16eca1f0f364619ad8/README.md"
+      ]
+    },
+    {
+      "repository": "openai/openai-agents-python",
+      "url": "https://github.com/openai/openai-agents-python",
+      "revision": "9abc9182d06dbd28330af888306031269d57a175",
+      "head_commit_at": "2026-10-17T00:49:49Z",
+      "license": "MIT",
+      "decision": "optional-pilot",
+      "adaptation": "Handoffs, tool contracts and explicit trace policy",
+      "security_limit": "Disable sensitive tracing before client data; sandbox tool execution separately",
+      "sources": [
+        "https://github.com/openai/openai-agents-python/blob/9abc9182d06dbd28330af888306031269d57a175/LICENSE",
+        "https://github.com/openai/openai-agents-python/blob/9abc9182d06dbd28330af888306031269d57a175/README.md"
+      ]
+    },
+    {
+      "repository": "langchain-ai/langgraph",
+      "url": "https://github.com/langchain-ai/langgraph",
+      "revision": "98043c37abc60374030f960a03a6e0d4c0112643",
+      "head_commit_at": "2026-10-18T19:18:50Z",
+      "license": "MIT",
+      "decision": "optional-durable-runtime",
+      "adaptation": "State transitions, checkpoints and human review concepts",
+      "security_limit": "Persistence needs tenant isolation, retention and idempotent side effects",
+      "sources": [
+        "https://github.com/langchain-ai/langgraph/blob/98043c37abc60374030f960a03a6e0d4c0112643/LICENSE",
+        "https://github.com/langchain-ai/langgraph/blob/98043c37abc60374030f960a03a6e0d4c0112643/README.md"
+      ]
+    },
+    {
+      "repository": "crewAIInc/crewAI",
+      "url": "https://github.com/crewAIInc/crewAI",
+      "revision": "911270929444ffc385e725e15976821ea503ddc2",
+      "head_commit_at": "2026-10-18T20:52:56Z",
+      "license": "MIT",
+      "decision": "reference-pattern",
+      "adaptation": "Explicit roles, tasks and acceptance boundaries",
+      "security_limit": "Do not execute generated code outside a dedicated sandbox",
+      "sources": [
+        "https://github.com/crewAIInc/crewAI/blob/911270929444ffc385e725e15976821ea503ddc2/LICENSE",
+        "https://github.com/crewAIInc/crewAI/blob/911270929444ffc385e725e15976821ea503ddc2/README.md"
+      ]
+    },
+    {
+      "repository": "microsoft/autogen",
+      "url": "https://github.com/microsoft/autogen",
+      "revision": "004749e6b7102c8fd317b9b1499ce5807223c278",
+      "head_commit_at": "2026-10-16T16:14:36Z",
+      "license": "MIT code; CC-BY-4.0 documentation; README says archived/unmaintained",
+      "decision": "exclude-new-runtime",
+      "adaptation": "Historical comparison only",
+      "security_limit": "No ongoing bug/security fixes according to pinned README",
+      "sources": [
+        "https://github.com/microsoft/autogen/blob/004749e6b7102c8fd317b9b1499ce5807223c278/README.md",
+        "https://github.com/microsoft/autogen/blob/004749e6b7102c8fd317b9b1499ce5807223c278/README.md"
+      ]
+    },
+    {
+      "repository": "n8n-io/n8n",
+      "url": "https://github.com/n8n-io/n8n",
+      "revision": "d2dc2f9ce50294df5c08799af437c56e3e04ab13",
+      "head_commit_at": "2026-10-18T08:18:22Z",
+      "license": "Sustainable Use License; Enterprise exceptions; third-party licenses",
+      "decision": "optional-external-integration",
+      "adaptation": "Idempotent webhook design and recoverable workflow boundaries",
+      "security_limit": "Review commercial hosting/embedding rights; do not expose unauthenticated webhooks",
+      "sources": [
+        "https://github.com/n8n-io/n8n/blob/d2dc2f9ce50294df5c08799af437c56e3e04ab13/LICENSE.md",
+        "https://github.com/n8n-io/n8n/blob/d2dc2f9ce50294df5c08799af437c56e3e04ab13/README.md"
+      ]
+    }
+  ]
+}

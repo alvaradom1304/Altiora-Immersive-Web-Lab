@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "name": "altiora-os",
+  "version": "1.0.0",
+  "execution": "host-assisted",
+  "license_scope": "Original files only; see provenance in sources.yaml",
+  "agents": [
+    {
+      "id": "altiora-os-coordinate",
+      "instruction": "agents/altiora-os-coordinate.md",
+      "skill": "skills/altiora-os-coordinate/SKILL.md"
+    },
+    {
+      "id": "altiora-os-research",
+      "instruction": "agents/altiora-os-research.md",
+      "skill": "skills/altiora-os-research/SKILL.md"
+    },
+    {
+      "id": "altiora-os-strategy",
+      "instruction": "agents/altiora-os-strategy.md",
+      "skill": "skills/altiora-os-strategy/SKILL.md"
+    },
+    {
+      "id": "altiora-os-creative",
+      "instruction": "agents/altiora-os-creative.md",
+      "skill": "skills/altiora-os-creative/SKILL.md"
+    },
+    {
+      "id": "altiora-os-media",
+      "instruction": "agents/altiora-os-media.md",
+      "skill": "skills/altiora-os-media/SKILL.md"
+    },
+    {
+      "id": "altiora-os-web-3d",
+      "instruction": "agents/altiora-os-web-3d.md",
+      "skill": "skills/altiora-os-web-3d/SKILL.md"
+    },
+    {
+      "id": "altiora-os-qa",
+      "instruction": "agents/altiora-os-qa.md",
+      "skill": "skills/altiora-os-qa/SKILL.md"
+    },
+    {
+      "id": "altiora-os-automation-growth",
+      "instruction": "agents/altiora-os-automation-growth.md",
+      "skill": "skills/altiora-os-automation-growth/SKILL.md"
+    }
+  ],
+  "workflows": {
+    "agency-delivery": [
+      {
+        "id": "research",
+        "agent": "altiora-os-research",
+        "depends_on": [],
+        "deliverable": "Comparación de fuentes y hechos verificables"
+      },
+      {
+        "id": "strategy",
+        "agent": "altiora-os-strategy",
+        "depends_on": [
+          "research"
+        ],
+        "deliverable": "Brief, audiencia, oferta, KPIs e hipótesis"
+      },
+      {
+        "id": "creative",
+        "agent": "altiora-os-creative",
+        "depends_on": [
+          "strategy"
+        ],
+        "deliverable": "Rutas visuales, storyboard y criterios de elección"
+      },
+      {
+        "id": "media",
+        "agent": "altiora-os-media",
+        "depends_on": [
+          "creative"
+        ],
+        "deliverable": "Assets con procedencia y variantes ligeras"
+      },
+      {
+        "id": "web-3d",
+        "agent": "altiora-os-web-3d",
+        "depends_on": [
+          "media"
+        ],
+        "deliverable": "Prototipo aislado con fallback y recorrido comercial"
+      },
+      {
+        "id": "qa",
+        "agent": "altiora-os-qa",
+        "depends_on": [
+          "web-3d"
+        ],
+        "deliverable": "Evidencias, hallazgos y decisión de aceptación"
+      },
+      {
+        "id": "automation-growth",
+        "agent": "altiora-os-automation-growth",
+        "depends_on": [
+          "qa"
+        ],
+        "deliverable": "Plan de medición y automatización inactiva verificable"
+      }
+    ],
+    "research": [
+      {
+        "id": "research",
+        "agent": "altiora-os-research",
+        "depends_on": [],
+        "deliverable": "Selección justificada y fuentes verificadas"
+      }
+    ],
+    "web-review": [
+      {
+        "id": "web-3d",
+        "agent": "altiora-os-web-3d",
+        "depends_on": [],
+        "deliverable": "Cambio aislado que satisface brief existente"
+      },
+      {
+        "id": "qa",
+        "agent": "altiora-os-qa",
+        "depends_on": [
+          "web-3d"
+        ],
+        "deliverable": "Revisión de regresiones y evidencia"
+      }
+    ]
+  }
+}
