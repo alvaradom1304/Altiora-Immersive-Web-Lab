@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url';
 import { spawnSync } from 'node:child_process';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
-const catalogs = await Promise.all(['references/repositories.json', 'references/business-repositories.json', 'references/agent-skills-repositories.json']
+const catalogs = await Promise.all(['references/repositories.json', 'references/business-repositories.json', 'references/agent-skills-repositories.json', 'references/ai-provider-repositories.json']
   .map(async path => JSON.parse(await readFile(resolve(root, path), 'utf8'))));
 const matches = catalogs.flatMap(catalog => catalog.repositories.map(repo => ({ ...repo, reviewed_on: catalog.reviewed_on })));
 const id = process.argv[2];

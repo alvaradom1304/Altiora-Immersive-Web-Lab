@@ -2,7 +2,7 @@
 
 ## Contenido
 
-- Tres skills en `.agents/skills/`.
+- Cuatro skills en `.agents/skills/`.
 - Cuatro agentes en `.agents/agents/`.
 - Seis repositorios evaluados en el [informe](../research/agent-skills-review.md).
 - Catálogos existentes de WebGL, motion y herramientas empresariales.
@@ -20,6 +20,8 @@ Elige skills y agentes según la tarea, reduce trabajo repetido y valida una esc
 ~~~
 
 Las versiones con invocación manual admiten `/altiora-agent-orchestrator`. Si la interfaz no muestra el comando, indicar la ruta `.agents/skills/altiora-agent-orchestrator/SKILL.md` para cargarla y comprobar la disponibilidad real del cliente.
+
+Para decidir qué trabajo puede realizar una IA auxiliar, cargar también altiora-ai-economy cuando corresponda. Esa skill no activa conexiones ni cambia el modelo del chat.
 
 ## Descubrimiento de agentes
 

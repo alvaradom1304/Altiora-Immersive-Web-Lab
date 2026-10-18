@@ -39,3 +39,11 @@ No se han verificado gastos reales de Altiora ni desplegado los servicios candid
 Una revisión independiente de solo lectura aplicó las instrucciones a dos encargos ficticios: un cambio de texto y una prueba de finca sin herramienta de subagentes. La aplicación resultó coherente: tarea pequeña directa, investigación antes de implementar y roles secuenciales cuando no hay delegación. No ejecutó esos encargos ni encontró una contradicción material que requiriera corregir la skill.
 
 No se ha probado descubrimiento, invocación o ejecución en Antigravity. Sus herramientas declaradas deben existir en la versión instalada; estas definiciones no añaden permisos ni un motor de ejecución. El experimento de la finca sigue diseñado, no implementado.
+
+## Proveedores de IA — 18 de octubre de 2026
+
+Se revisaron cuatro repositorios (Ollama, LiteLLM, Google Gen AI SDK y llama.cpp), sus README, licencias y revisiones. Se contrastaron condiciones de OpenRouter Free, Gemini y Ollama con fuentes oficiales.
+
+Se añadió una cuarta skill, altiora-ai-economy, y un plan de rutas inactivo que conserva la prioridad de calidad final. No se ejecutaron llamadas de inferencia ni se configuraron cuentas. La capacidad de hardware local no pudo comprobarse y los comandos de runtime no estaban disponibles.
+
+La búsqueda de plugins no devolvió coincidencias para los proveedores consultados en el directorio accesible. Esto no acredita inexistencia universal. Las conexiones y la medición de ahorro continúan pendientes.

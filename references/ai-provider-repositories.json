@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-10-18",
+  "timezone": "America/Costa_Rica",
+  "scope": "Selección para un flujo híbrido de calidad y coste; servicios y modelos no conectados.",
+  "repositories": [
+    {
+      "id": "ollama/ollama",
+      "url": "https://github.com/ollama/ollama",
+      "default_branch": "main",
+      "stars": 183694,
+      "archived": false,
+      "license": "MIT",
+      "description": "Get up and running with Kimi, GLM, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.",
+      "revision": "36a6e994d2f6c4ab94b3555185154d069e5dba87",
+      "head_commit_at": "2026-10-18T00:31:52Z",
+      "tier": "local-inference",
+      "decision": "evaluate",
+      "purpose": "Ejecutar modelos descargados en el equipo para tareas acotadas sin tarifa por token de una API.",
+      "observed_license": "MIT del runtime; cada modelo conserva su propia licencia",
+      "caution": "Requiere capacidad de RAM/GPU y electricidad. Ollama también ofrece nube; para una prueba local desactivar cloud. No se detectó su comando en el entorno y el hardware no se pudo consultar.",
+      "sources": [
+        "https://api.github.com/repos/ollama/ollama",
+        "https://github.com/ollama/ollama/blob/36a6e994d2f6c4ab94b3555185154d069e5dba87/README.md",
+        "https://github.com/ollama/ollama/blob/36a6e994d2f6c4ab94b3555185154d069e5dba87/LICENSE"
+      ]
+    },
+    {
+      "id": "BerriAI/litellm",
+      "url": "https://github.com/BerriAI/litellm",
+      "default_branch": "main",
+      "stars": 61477,
+      "archived": false,
+      "license": "NOASSERTION",
+      "description": "The fastest, litest AI Gateway. Rust core with Python SDK. Call 100+ LLM APIs in OpenAI (or native) format with cost tracking, guardrails, load balancing, and logging [Bedrock, Azure, OpenAI, Anthropic, OpenAI, VertexAI, vLLM, Nvidia NIM]",
+      "revision": "eb114e638d4557a9155d5eb21fd9cb332336c85f",
+      "head_commit_at": "2026-10-18T10:27:53Z",
+      "tier": "provider-routing",
+      "decision": "evaluate",
+      "purpose": "Unificar llamadas a proveedores y centralizar medición o selección cuando se necesiten varias APIs.",
+      "observed_license": "MIT fuera de enterprise/; Enterprise con licencia separada",
+      "caution": "El gateway no vuelve gratuitas las APIs. Añade operación si se despliega; no hace falta para conectar un único proveedor ni debe habilitar respaldo de pago automáticamente.",
+      "sources": [
+        "https://api.github.com/repos/BerriAI/litellm",
+        "https://github.com/BerriAI/litellm/blob/eb114e638d4557a9155d5eb21fd9cb332336c85f/README.md",
+        "https://github.com/BerriAI/litellm/blob/eb114e638d4557a9155d5eb21fd9cb332336c85f/LICENSE"
+      ]
+    },
+    {
+      "id": "googleapis/python-genai",
+      "url": "https://github.com/googleapis/python-genai",
+      "default_branch": "main",
+      "stars": 4028,
+      "archived": false,
+      "license": "Apache-2.0",
+      "description": "Google Gen AI Python SDK provides an interface for developers to integrate Google's generative models into their Python applications.",
+      "revision": "364889aafe40bfa8f3b9db847ba272d299f7d632",
+      "head_commit_at": "2026-10-16T22:11:01Z",
+      "tier": "provider-sdk",
+      "decision": "evaluate",
+      "purpose": "Conectar aplicaciones Python a Gemini con su SDK oficial.",
+      "observed_license": "Apache-2.0 del SDK; uso del servicio bajo condiciones del proveedor",
+      "caution": "El SDK gratuito no garantiza inferencia gratuita. Seleccionar modelo y proyecto con cuota gratuita vigente; comprobar condiciones de datos, límites y cuenta antes de usar material de clientes.",
+      "sources": [
+        "https://api.github.com/repos/googleapis/python-genai",
+        "https://github.com/googleapis/python-genai/blob/364889aafe40bfa8f3b9db847ba272d299f7d632/README.md",
+        "https://github.com/googleapis/python-genai/blob/364889aafe40bfa8f3b9db847ba272d299f7d632/LICENSE"
+      ]
+    },
+    {
+      "id": "ggml-org/llama.cpp",
+      "url": "https://github.com/ggml-org/llama.cpp",
+      "default_branch": "master",
+      "stars": 131571,
+      "archived": false,
+      "license": "MIT",
+      "description": "LLM inference in C/C++",
+      "revision": "5aeac37a35b44fde4bdffaec9159f2fcb253b622",
+      "head_commit_at": "2026-10-18T08:59:06Z",
+      "tier": "local-inference-alternative",
+      "decision": "reference_only",
+      "purpose": "Alternativa de ejecución local con control técnico de modelos y servidor.",
+      "observed_license": "MIT del runtime; licencia de los pesos independiente",
+      "caution": "Más configuración que un primer piloto con Ollama. No instalar ambos runtimes sin una necesidad medida; la capacidad del equipo sigue pendiente.",
+      "sources": [
+        "https://api.github.com/repos/ggml-org/llama.cpp",
+        "https://github.com/ggml-org/llama.cpp/blob/5aeac37a35b44fde4bdffaec9159f2fcb253b622/README.md",
+        "https://github.com/ggml-org/llama.cpp/blob/5aeac37a35b44fde4bdffaec9159f2fcb253b622/LICENSE"
+      ]
+    }
+  ]
+}

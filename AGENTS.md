@@ -42,3 +42,8 @@ Seguir docs/workflows/immersive-project.md. Antes de ampliar una experiencia, co
 - La investigación de repositorios puede usar .agents/skills/altiora-repository-research/SKILL.md; la revisión de entregas, .agents/skills/altiora-quality-review/SKILL.md.
 - Consultar references/agent-skills-repositories.json para descubrir fuentes sin cargar colecciones enteras.
 - No delegar cambios pequeños por defecto. Entregar a cada agente un resultado, contexto mínimo y archivos asignados.
+
+## Calidad y coste de IA
+- Para selección de proveedores o reparto entre modelos, consultar .agents/skills/altiora-ai-economy/SKILL.md.
+- Priorizar calidad final y coste completo por tarea aceptada. Utilizar herramientas deterministas antes de derivar trabajo a otra IA.
+- No confundir cuota gratuita, tokens procesados y consumo del coordinador. El plan de rutas es inactivo hasta una integración real.

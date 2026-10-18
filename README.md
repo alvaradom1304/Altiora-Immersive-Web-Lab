@@ -17,13 +17,19 @@ Los repositorios están registrados con función, licencia, revisión y condicio
 
 ## Agentes y skills para Antigravity
 
-Se añaden **6 fuentes seleccionadas**, tres skills originales y cuatro agentes especializados. El laboratorio reúne **34 repositorios** entre experiencias inmersivas, herramientas empresariales y agentes/skills.
+Se añaden **6 fuentes seleccionadas**, cuatro skills originales y cuatro agentes especializados. El laboratorio reúne **38 repositorios** entre experiencias inmersivas, herramientas empresariales y agentes/skills.
 
 - [Selección de repositorios](docs/research/agent-skills-review.md).
 - [Uso en Antigravity](docs/workflows/antigravity-agents.md).
 - [Skill coordinadora](.agents/skills/altiora-agent-orchestrator/SKILL.md).
 
 Invocación: `/altiora-agent-orchestrator` en versiones compatibles, o pedir que lea el archivo de la skill. La ejecución en Antigravity está pendiente de comprobar en el cliente del usuario.
+
+## IA con calidad y menor coste
+
+Se añade una [selección de proveedores y runtimes](docs/operations/ai-quality-and-cost.md) y la [skill altiora-ai-economy](.agents/skills/altiora-ai-economy/SKILL.md). Prioriza herramientas deterministas, auxiliares económicos para tareas acotadas y revisión final en el modelo principal.
+
+Las conexiones siguen pendientes: el [plan de rutas](config/ai-routing.plan.json) está inactivo y no contiene credenciales. No se han hecho llamadas a otras IAs ni medido ahorro.
 
 ## Empezar
 

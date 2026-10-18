@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "state": "planned-not-connected",
+  "priority": "final-quality",
+  "automatic_routing_enabled": false,
+  "automatic_paid_fallback": false,
+  "credential_values_stored": false,
+  "default_coordinator": "keep-current-provider",
+  "auxiliary_selection": "pending",
+  "routes": [
+    {
+      "task": "deterministic-transform",
+      "preferred": "existing-tools",
+      "status": "use-when-available"
+    },
+    {
+      "task": "bounded-draft-or-summary",
+      "preferred": "configured-economical-provider",
+      "status": "requires-pilot"
+    },
+    {
+      "task": "architecture-and-final-review",
+      "preferred": "current-coordinator",
+      "status": "preserve-current-setup"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "ollama-local",
+      "requires": "local-runtime-model-and-hardware-check",
+      "state": "not-connected"
+    },
+    {
+      "id": "openrouter-free",
+      "requires": "account-api-key-and-current-free-quota",
+      "state": "not-connected"
+    },
+    {
+      "id": "gemini-free-tier",
+      "requires": "eligible-project-key-model-and-quota",
+      "state": "not-connected"
+    }
+  ],
+  "note": "Documento de planificación; ningún cliente o gateway lo consume automáticamente."
+}
