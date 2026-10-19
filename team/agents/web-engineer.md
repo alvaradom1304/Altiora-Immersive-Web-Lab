@@ -22,6 +22,7 @@ QA. Milestones: M3, M4.
 ## Skills
 Leer solo las pertinentes a la tarea antes de producir:
 - [nextjs-architecture](../../skills/nextjs-architecture/SKILL.md)
+- [award-grade-web](../../skills/award-grade-web/SKILL.md)
 - [react-three-fiber](../../skills/react-three-fiber/SKILL.md)
 - [threejs-experience](../../skills/threejs-experience/SKILL.md)
 - [vercel-react-best-practices](../../skills/vercel-react-best-practices/SKILL.md)

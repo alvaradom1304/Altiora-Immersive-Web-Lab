@@ -1,6 +1,6 @@
 # Equipo y responsabilidades
 
-Roles operativos; no representan personal contratado ni agentes ya ejecutándose. Una persona o IA puede cubrir varios roles según presupuesto.
+Roles operativos (13); no representan personal contratado ni agentes ya ejecutándose. Una persona o IA puede cubrir varios roles según presupuesto.
 
 | Rol | Responsabilidad | Salida | Revisor |
 |---|---|---|---|
@@ -15,6 +15,7 @@ Roles operativos; no representan personal contratado ni agentes ya ejecutándose
 | Ingeniero web | Implementar experiencia fiable y mantenible | Componentes, integración y verificación técnica | QA |
 | Content designer | Hacer comprensible la oferta y las acciones | Copy por sección, CTA, errores y ayuda | Marca + UX |
 | QA y accesibilidad | Detectar y bloquear problemas demostrados | Hallazgos, evidencias y scorecard | Director de experiencia |
+| Jurado award-grade | Puntuar como Awwwards con evidencia y priorizar mejoras | Notas por criterio, bloqueos y backlog de mejoras | Director de experiencia |
 | Analista de conversión y fidelización | Medir utilidad, conversión y retorno | Plan de eventos, baseline y backlog | Estrategia + UX |
 
 Dirección coordina. QA revisa de forma independiente y puede bloquear el lanzamiento. El cliente decide sobre identidad y alcance mediante propuestas concretas. Las herramientas de IA, Figma, automatización o desarrollo son intercambiables.

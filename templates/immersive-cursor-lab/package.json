@@ -1,0 +1,25 @@
+{
+  "name": "immersive-cursor-lab",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Boilerplate Altiora: viewport 3D y tipografía que siguen al puntero con lerp, contenido en DOM y degradación accesible.",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "vite",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --port 4173 --strictPort"
+  },
+  "dependencies": {
+    "gsap": "3.15.0",
+    "three": "0.186.1"
+  },
+  "devDependencies": {
+    "@types/three": "0.186.0",
+    "typescript": "5.9.3",
+    "vite": "8.3.2"
+  }
+}

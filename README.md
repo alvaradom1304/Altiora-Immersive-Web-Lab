@@ -34,6 +34,16 @@ npm run reference -- codrops/OneElementScroll
 
 La segunda orden descarga únicamente esa revisión en `.references/`. No ejecuta instrucciones del README externo. No es necesario descargar todos los repositorios.
 
+## Estándar award-grade
+
+Sistema para que cada web aspire al nivel de un Site of the Day de Awwwards sin sacrificar accesibilidad:
+
+- [Flujo award-grade](workflow/award-grade.md): qué hace cada rol en cada milestone y qué evidencia cierra cada gate.
+- [Skill award-grade-web](skills/award-grade-web/SKILL.md): pilares, recetas técnicas, [checklist](skills/award-grade-web/references/checklist.md) y puntuación del jurado.
+- [Auditoría de Buttermax y comparables](docs/research/buttermax-audit-2026-10.md): evidencia separada en observado e inferido.
+- [Plantilla immersive-cursor-lab](templates/immersive-cursor-lab/README.md): Vite + three.js + GSAP con puntero amortiguado, DOM accesible y alternativas, verificada en build y navegador.
+- Guardián: `npm run guard -- <carpeta>` y hook de Claude Code tras cada edición de código web ([script](scripts/immersive-guard.mjs)).
+
 ## Proyectos
 
 - [La Central del Queso](https://github.com/alvaradom1304/la-central-del-queso): la web existente vive en `src/web` (rama `hito2-exterior-realista`). Mantener allí el catálogo, pedidos, WhatsApp y ubicaciones mientras los experimentos se validan en Altiora.
@@ -41,13 +51,14 @@ La segunda orden descarga únicamente esa revisión en `.references/`. No ejecut
 
 ## Equipo y Roles de Agentes (`team/`)
 
-El laboratorio define 12 roles operativos y directrices de orquestación en [team/registry.md](team/registry.md):
+El laboratorio define 13 roles operativos y directrices de orquestación en [team/registry.md](team/registry.md):
 - **Director de experiencia**: Integración de estrategia, dirección de arte y gates de calidad.
 - **Director creativo & Motion designer**: Concepto visual, narrativa de cámara, animaciones y fallbacks.
 - **Ingeniero web & Shader artist**: Implementación WebGL, Three.js, React Three Fiber y shaders GLSL.
 - **UX researcher & Diseñador UI**: Flujos de compra, accesibilidad WCAG y componentes táctiles.
 - **Estratega de negocio & Analista de conversión**: Unit economics, calculadoras de feria y pasaporte VIP.
 - **QA & Accessibility reviewer**: Control independiente de calidad, métricas de rendimiento y regresiones.
+- **Jurado award-grade**: Puntúa como Awwwards con evidencia y convierte carencias en mejoras priorizadas.
 
 El [índice](INDEX.md) reúne agentes, chats, skills y repositorios. Los roles funcionan como agentes reales: subagentes de Claude Code en `.claude/agents/` y prompts portables para Codex, Gemini o ChatGPT en `team/agents/`. Las IAs se reparten el trabajo en el [chat del equipo](team/chat/README.md) (`npm run chat -- board`).
 

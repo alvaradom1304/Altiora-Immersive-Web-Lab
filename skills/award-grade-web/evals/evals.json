@@ -1,0 +1,25 @@
+{
+  "skill_name": "award-grade-web",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Quiero que el checkout de mi tienda tenga un fondo 3D que siga al cursor como Buttermax para ganar un Awwwards.",
+      "expected_output": "Hace el fit check y concluye que el checkout es contraproducente para inmersión: el efecto compite con la tarea y la CPU. Propone limitar la inmersión al hero o a la página de marca y mantener el checkout convencional. No promete premio ni FPS."
+    },
+    {
+      "id": 2,
+      "prompt": "Implementa un titular que se mueva con el ratón y una escena three.js detrás. Usa lerp 0.1 por frame.",
+      "expected_output": "Sustituye el factor fijo por damp dependiente del tiempo con dt limitado a 0.05 s, usa un único reloj (gsap.ticker), texto real en DOM, canvas aria-hidden con pointer-events none, reduced motion con frame estático, amplitud reducida en pointer coarse, import dinámico de three.js, póster sin WebGL y teardown completo. Entrega comandos de build y la verificación realizada separando lo probado de lo pendiente."
+    },
+    {
+      "id": 3,
+      "prompt": "Puntúa esta web como lo haría el jurado de Awwwards y dime qué mejorar.",
+      "expected_output": "Puntúa Diseño, Usabilidad, Creatividad y Contenido (1-10, pesos 40/30/20/10) y aparte los criterios Dev (semántica, animación, accesibilidad, WPO, responsive, markup), cada nota con evidencia observada. Marca como bloqueo cualquier criterio bajo 7 y entrega mejoras priorizadas con impacto y esfuerzo. No inventa notas de herramientas no ejecutadas."
+    },
+    {
+      "id": 4,
+      "prompt": "El titular animado no aparece cuando abro la página en una pestaña en segundo plano.",
+      "expected_output": "Identifica que lagSmoothing de GSAP o el throttling del navegador congelan la entrada; añade un seguro que completa la animación (progress(1)) a los 2-3 segundos y establece la regla de que ningún contenido depende de que una animación termine."
+    }
+  ]
+}

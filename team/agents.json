@@ -16,6 +16,7 @@
       ],
       "skills": [
         "altiora-agent-orchestrator",
+        "award-grade-web",
         "elite-web-experience-os",
         "business-decision-gates",
         "launch-readiness",
@@ -65,6 +66,7 @@
       ],
       "skills": [
         "creative-direction",
+        "award-grade-web",
         "art-direction",
         "cinematic-direction",
         "storyboarding",
@@ -128,6 +130,7 @@
       ],
       "skills": [
         "motion-design",
+        "award-grade-web",
         "gsap-animation",
         "scroll-experience",
         "cinematic-direction",
@@ -143,6 +146,7 @@
       ],
       "skills": [
         "nextjs-architecture",
+        "award-grade-web",
         "react-three-fiber",
         "threejs-experience",
         "vercel-react-best-practices",
@@ -179,6 +183,7 @@
       "tools": "Read, Grep, Glob, Bash, WebFetch",
       "skills": [
         "web-quality-assurance",
+        "award-grade-web",
         "accessibility",
         "altiora-quality-review",
         "web-performance",
@@ -186,6 +191,21 @@
         "owasp-review",
         "webapp-testing",
         "web-design-guidelines",
+        "verification-before-completion"
+      ]
+    },
+    {
+      "id": "award-jury",
+      "when": "Usar para puntuar una web como el jurado de Awwwards (diseño, usabilidad, creatividad, contenido y criterios Dev) con evidencia observada y convertir carencias en mejoras priorizadas. No edita código.",
+      "milestones": [
+        "M1",
+        "M4"
+      ],
+      "skills": [
+        "award-grade-web",
+        "immersive-web-design",
+        "accessibility",
+        "web-performance",
         "verification-before-completion"
       ]
     },

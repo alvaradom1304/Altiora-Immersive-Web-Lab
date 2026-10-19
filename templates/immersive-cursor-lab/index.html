@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Immersive Cursor Lab</title>
+    <meta name="description" content="Boilerplate de Altiora: viewport 3D y tipografía que siguen al puntero con interpolación, contenido en DOM y degradación accesible." />
+    <script>
+      // Marca temprana para que el CSS distinga JS activo antes del primer pintado.
+      document.documentElement.classList.replace('no-js', 'js');
+    </script>
+  </head>
+  <body>
+    <a class="skip" href="#contenido">Saltar al contenido</a>
+
+    <header class="bar">
+      <a class="brand" href="/" aria-label="Inicio">Estudio&nbsp;—</a>
+      <nav aria-label="Principal">
+        <ul>
+          <li><a href="#trabajo">Trabajo</a></li>
+          <li><a href="#estudio">Estudio</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="contenido">
+      <section class="hero" data-stage aria-labelledby="hero-title">
+        <!-- Decorativo: nunca recibe foco ni eventos. El contenido vive en el DOM. -->
+        <canvas class="hero__gl" aria-hidden="true" tabindex="-1"></canvas>
+        <div class="hero__poster" aria-hidden="true"></div>
+
+        <div class="hero__copy">
+          <p class="eyebrow">Laboratorio de interacción</p>
+          <h1 id="hero-title" class="kinetic">
+            <span class="kinetic__line" data-depth="0.6"><span class="kinetic__inner">Forma</span></span>
+            <span class="kinetic__line" data-depth="1"><span class="kinetic__inner">que&nbsp;<em>responde</em></span></span>
+            <span class="kinetic__line" data-depth="0.35"><span class="kinetic__inner">al gesto.</span></span>
+          </h1>
+          <p class="lede">
+            Viewport 3D y tipografía que siguen al puntero con interpolación dependiente del tiempo. El texto,
+            los enlaces y el CTA son HTML: funcionan sin WebGL, con teclado y con movimiento reducido.
+          </p>
+          <p class="actions">
+            <a class="cta" href="#contacto" data-attract>Hablemos de tu lanzamiento</a>
+            <a class="link" href="#trabajo" data-attract>Ver trabajo</a>
+          </p>
+        </div>
+
+        <p class="status" data-status></p>
+      </section>
+
+      <section id="trabajo" class="block">
+        <h2>Trabajo</h2>
+        <p>Sección de ejemplo: aquí irían proyectos con imágenes AVIF/WebP y enlaces reales.</p>
+      </section>
+      <section id="estudio" class="block">
+        <h2>Estudio</h2>
+        <p>El canvas se pausa fuera de vista y con la pestaña oculta; el contenido sigue disponible.</p>
+      </section>
+      <section id="contacto" class="block">
+        <h2>Contacto</h2>
+        <p><a href="mailto:hola@example.com">hola@example.com</a></p>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

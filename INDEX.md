@@ -15,31 +15,32 @@ Mapa de agentes, chats, skills y repositorios disponibles en Claude Code y en el
 
 Otras IAs (Codex, Gemini, ChatGPT): prompts en [team/agents/](team/agents/experience-director.md) y el mismo chat (`npm run chat`), ver [team/chat/README.md](team/chat/README.md).
 
-## Agentes (12)
+## Agentes (13)
 
 | Agente | Chat | Milestones | Skills asignadas |
 |---|---|---|---|
-| [Director de experiencia](.claude/agents/experience-director.md) | `/chat-experience-director` | M0, M1, M2, M3, M4, M5, M6 | `altiora-agent-orchestrator`, `elite-web-experience-os`, `business-decision-gates`, `launch-readiness`, `quality-council`, `human-in-the-loop`, `writing-plans`, `verification-before-completion` |
+| [Director de experiencia](.claude/agents/experience-director.md) | `/chat-experience-director` | M0, M1, M2, M3, M4, M5, M6 | `altiora-agent-orchestrator`, `award-grade-web`, `elite-web-experience-os`, `business-decision-gates`, `launch-readiness`, `quality-council`, `human-in-the-loop`, `writing-plans`, `verification-before-completion` |
 | [Estratega de negocio](.claude/agents/business-strategist.md) | `/chat-business-strategist` | M0 | `business-strategy`, `value-proposition-design`, `buyer-persona`, `unit-economics`, `pricing`, `market-research`, `financial-forecasting`, `offers` |
 | [Estratega de marca](.claude/agents/brand-strategist.md) | `/chat-brand-strategist` | M1 | `brand-strategy`, `brand-positioning`, `brand-voice`, `brand-personality`, `premium-branding`, `brand-guidelines` |
-| [Director creativo](.claude/agents/creative-director.md) | `/chat-creative-director` | M1 | `creative-direction`, `art-direction`, `cinematic-direction`, `storyboarding`, `photography-direction`, `creative-quality-assurance` |
+| [Director creativo](.claude/agents/creative-director.md) | `/chat-creative-director` | M1 | `creative-direction`, `award-grade-web`, `art-direction`, `cinematic-direction`, `storyboarding`, `photography-direction`, `creative-quality-assurance` |
 | [UX researcher](.claude/agents/ux-researcher.md) | `/chat-ux-researcher` | M0, M2, M6 | `ux-research`, `user-flow`, `customer-journey`, `information-architecture`, `conversion-ux`, `accessibility`, `web-design-guidelines` |
 | [Diseñador UI](.claude/agents/ui-designer.md) | `/chat-ui-designer` | M2 | `ui-direction`, `design-system`, `color-system`, `typography-direction`, `responsive-design`, `frontend-design`, `web-design-guidelines` |
 | [Productor visual](.claude/agents/visual-producer.md) | `/chat-visual-producer` | M3 | `product-photography-direction`, `ai-image-direction`, `ai-video-direction`, `visual-identity`, `web-performance` |
-| [Motion designer](.claude/agents/motion-designer.md) | `/chat-motion-designer` | M3 | `motion-design`, `gsap-animation`, `scroll-experience`, `cinematic-direction`, `threejs-experience` |
-| [Ingeniero web](.claude/agents/web-engineer.md) | `/chat-web-engineer` | M3, M4 | `nextjs-architecture`, `react-three-fiber`, `threejs-experience`, `vercel-react-best-practices`, `web-performance`, `frontend-security`, `secure-development`, `vercel-composition-patterns`, `systematic-debugging`, `webapp-testing` |
+| [Motion designer](.claude/agents/motion-designer.md) | `/chat-motion-designer` | M3 | `motion-design`, `award-grade-web`, `gsap-animation`, `scroll-experience`, `cinematic-direction`, `threejs-experience` |
+| [Ingeniero web](.claude/agents/web-engineer.md) | `/chat-web-engineer` | M3, M4 | `nextjs-architecture`, `award-grade-web`, `react-three-fiber`, `threejs-experience`, `vercel-react-best-practices`, `web-performance`, `frontend-security`, `secure-development`, `vercel-composition-patterns`, `systematic-debugging`, `webapp-testing` |
 | [Content designer](.claude/agents/content-designer.md) | `/chat-content-designer` | M2 | `copywriting`, `content-strategy`, `brand-voice`, `seo`, `local-seo`, `emails`, `schema` |
-| [QA y accesibilidad](.claude/agents/qa-reviewer.md) | `/chat-qa-reviewer` | M4 | `web-quality-assurance`, `accessibility`, `altiora-quality-review`, `web-performance`, `security-testing`, `owasp-review`, `webapp-testing`, `web-design-guidelines`, `verification-before-completion` |
+| [QA y accesibilidad](.claude/agents/qa-reviewer.md) | `/chat-qa-reviewer` | M4 | `web-quality-assurance`, `award-grade-web`, `accessibility`, `altiora-quality-review`, `web-performance`, `security-testing`, `owasp-review`, `webapp-testing`, `web-design-guidelines`, `verification-before-completion` |
+| [Jurado award-grade](.claude/agents/award-jury.md) | `/chat-award-jury` | M1, M4 | `award-grade-web`, `immersive-web-design`, `accessibility`, `web-performance`, `verification-before-completion` |
 | [Analista de conversión y fidelización](.claude/agents/growth-analyst.md) | `/chat-growth-analyst` | M6 | `marketing-analytics`, `conversion-analysis`, `conversion-rate-optimization`, `growth-experimentation`, `retention`, `ltv-optimization`, `analytics`, `ab-testing`, `referrals`, `events` |
 
-## Skills (251)
+## Skills (252)
 
 **Auto** = Claude puede cargarla sola (está asignada a un agente). El resto se usa con `/nombre`. Origen vacío = skill propia de Altiora.
 
 | Skill | Auto | Agentes | Origen | Para qué |
 |---|---|---|---|---|
 | [ab-testing](skills/ab-testing/SKILL.md) | sí | growth-analyst | coreyhaines31/marketingskills | When the user wants to plan, design, or implement an A/B test or experiment, or build a growth experimentation program. Also use when the… |
-| [accessibility](skills/accessibility/SKILL.md) | sí | ux-researcher, qa-reviewer |  | accessibility: Premium Web Experience. Usar para producir a11y_findings, fixes, manual_checks a partir de UI/código, alcance, nivel objet… |
+| [accessibility](skills/accessibility/SKILL.md) | sí | ux-researcher, qa-reviewer, award-jury |  | accessibility: Premium Web Experience. Usar para producir a11y_findings, fixes, manual_checks a partir de UI/código, alcance, nivel objet… |
 | [advertising-concept](skills/advertising-concept/SKILL.md) | — | — |  | advertising-concept: Creative Intelligence. Usar para producir ad_routes, hooks, claim_checks a partir de problema, oferta, canal, eviden… |
 | [aem-autonomous-quality-loop](skills/aem-autonomous-quality-loop/SKILL.md) | — | — |  | aem-autonomous-quality-loop: Orchestration. Usar para producir status, cycles, evidence, defects, final_result a partir de task, acceptan… |
 | [aem-business-transformation](skills/aem-business-transformation/SKILL.md) | — | — |  | aem-business-transformation: Orchestration. Usar para producir current_target_state, root_causes, roadmap, kpis a partir de negocio exist… |
@@ -76,6 +77,7 @@ Otras IAs (Codex, Gemini, ChatGPT): prompts en [team/agents/](team/agents/experi
 | [authentication-security](skills/authentication-security/SKILL.md) | — | — |  | authentication-security: Cybersecurity. Usar para producir auth_findings, session_controls, fixes a partir de flujos login/sesión, roles,… |
 | [authorization-security](skills/authorization-security/SKILL.md) | — | — |  | authorization-security: Cybersecurity. Usar para producir access_matrix, negative_tests, fixes a partir de roles, recursos, reglas, owner… |
 | [automation-design](skills/automation-design/SKILL.md) | — | — |  | automation-design: AI & Automation. Usar para producir automation_case, workflow, human_exceptions a partir de proceso actual, volumen, c… |
+| [award-grade-web](skills/award-grade-web/SKILL.md) | sí | experience-director, creative-director, motion-designer, web-engineer, qa-reviewer, award-jury |  | Estándar Altiora para webs de nivel Awwwards (SOTD) con contenido accesible. Usar cuando se diseñe, construya, revise o puntúe una web in… |
 | [b2b-expansion](skills/b2b-expansion/SKILL.md) | — | — |  | b2b-expansion: Growth & Scaling. Usar para producir b2b_pilot, qualification, economics a partir de oferta, cuentas objetivo, capacidad, … |
 | [backend-security](skills/backend-security/SKILL.md) | — | — |  | backend-security: Cybersecurity. Usar para producir backend_controls, findings, validation a partir de servidor, datos, endpoints, roles,… |
 | [brand-architecture](skills/brand-architecture/SKILL.md) | — | — |  | brand-architecture: Brand Intelligence. Usar para producir architecture_options, naming_rules, migration a partir de portafolio, marcas, … |
@@ -160,7 +162,7 @@ Otras IAs (Codex, Gemini, ChatGPT): prompts en [team/agents/](team/agents/experi
 | [high-value-deliberation](skills/high-value-deliberation/SKILL.md) | — | — |  | Analizar preguntas, problemas y decisiones con perspectivas pertinentes, crítica concreta, evidencia verificable y una conclusión integra… |
 | [human-in-the-loop](skills/human-in-the-loop/SKILL.md) | sí | experience-director |  | human-in-the-loop: AI & Automation. Usar para producir review_gates, escalation, fallback a partir de acciones críticas, roles, tiempos, … |
 | [immersive-commerce](skills/immersive-commerce/SKILL.md) | — | — |  | Diseñar, implementar y optimizar experiencias web inmersivas orientadas a ventas, con branding premium, UX/UI, GSAP/WebGL/Three.js, rendi… |
-| [immersive-web-design](skills/immersive-web-design/SKILL.md) | — | — |  | immersive-web-design: Premium Web Experience. Usar para producir immersive_concept, interaction_map, fallback a partir de narrativa, marc… |
+| [immersive-web-design](skills/immersive-web-design/SKILL.md) | sí | award-jury |  | immersive-web-design: Premium Web Experience. Usar para producir immersive_concept, interaction_map, fallback a partir de narrativa, marc… |
 | [incident-response](skills/incident-response/SKILL.md) | — | — |  | incident-response: Cybersecurity. Usar para producir incident_timeline, containment_options, recovery_plan a partir de incidente, autorid… |
 | [industry-analysis](skills/industry-analysis/SKILL.md) | — | — |  | industry-analysis: Business Intelligence. Usar para producir industry_map, structural_forces, implications a partir de industria delimita… |
 | [information-architecture](skills/information-architecture/SKILL.md) | sí | ux-researcher |  | information-architecture: Premium Web Experience. Usar para producir sitemap, taxonomy, navigation_rules a partir de contenido, tareas, a… |
@@ -278,11 +280,11 @@ Otras IAs (Codex, Gemini, ChatGPT): prompts en [team/agents/](team/agents/experi
 | [venture-risk-assessment](skills/venture-risk-assessment/SKILL.md) | — | — |  | venture-risk-assessment: Venture Building. Usar para producir venture_risks, validation_order, stop_conditions a partir de hipótesis del … |
 | [vercel-composition-patterns](skills/vercel-composition-patterns/SKILL.md) | sí | web-engineer | vercel-labs/agent-skills | React composition patterns that scale. Use when refactoring components with boolean prop proliferation, building flexible component libra… |
 | [vercel-react-best-practices](skills/vercel-react-best-practices/SKILL.md) | sí | web-engineer |  | React and Next.js performance optimization and UI engineering guidelines from Vercel Engineering. Use when writing, reviewing, or refacto… |
-| [verification-before-completion](skills/verification-before-completion/SKILL.md) | sí | experience-director, qa-reviewer | obra/superpowers | Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands a… |
+| [verification-before-completion](skills/verification-before-completion/SKILL.md) | sí | experience-director, qa-reviewer, award-jury | obra/superpowers | Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands a… |
 | [visual-identity](skills/visual-identity/SKILL.md) | sí | visual-producer |  | visual-identity: Brand Intelligence. Usar para producir identity_system, tokens, applications a partir de plataforma, dirección, usos, re… |
 | [vulnerability-triage](skills/vulnerability-triage/SKILL.md) | — | — |  | vulnerability-triage: Cybersecurity. Usar para producir severity, impact, likelihood, priority, remediation a partir de hallazgo, evidenc… |
 | [web-design-guidelines](skills/web-design-guidelines/SKILL.md) | sí | ux-researcher, ui-designer, qa-reviewer | vercel-labs/agent-skills | Review UI code for Web Interface Guidelines compliance. Use when asked to "review my UI", "check accessibility", "audit design", "review … |
-| [web-performance](skills/web-performance/SKILL.md) | sí | visual-producer, web-engineer, qa-reviewer |  | web-performance: Premium Web Experience. Usar para producir performance_budget, measurements, fixes a partir de sitio, entorno, dispositi… |
+| [web-performance](skills/web-performance/SKILL.md) | sí | visual-producer, web-engineer, qa-reviewer, award-jury |  | web-performance: Premium Web Experience. Usar para producir performance_budget, measurements, fixes a partir de sitio, entorno, dispositi… |
 | [web-quality-assurance](skills/web-quality-assurance/SKILL.md) | sí | qa-reviewer |  | web-quality-assurance: Premium Web Experience. Usar para producir qa_evidence, defects, release_verdict a partir de criterios, app/versio… |
 | [web-strategy](skills/web-strategy/SKILL.md) | — | — |  | web-strategy: Premium Web Experience. Usar para producir web_role, journeys, scope, measurement a partir de negocio, audiencia, oferta, c… |
 | [webapp-testing](skills/webapp-testing/SKILL.md) | sí | web-engineer, qa-reviewer | anthropics/skills | Toolkit for interacting with and testing local web applications using Playwright. Supports verifying frontend functionality, debugging UI… |

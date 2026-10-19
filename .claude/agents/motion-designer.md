@@ -22,6 +22,7 @@ UX + Ingeniería. Milestones: M3.
 ## Skills
 Leer solo las pertinentes a la tarea antes de producir:
 - [motion-design](../../skills/motion-design/SKILL.md)
+- [award-grade-web](../../skills/award-grade-web/SKILL.md)
 - [gsap-animation](../../skills/gsap-animation/SKILL.md)
 - [scroll-experience](../../skills/scroll-experience/SKILL.md)
 - [cinematic-direction](../../skills/cinematic-direction/SKILL.md)

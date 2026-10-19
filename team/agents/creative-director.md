@@ -22,6 +22,7 @@ Branding + UX. Milestones: M1.
 ## Skills
 Leer solo las pertinentes a la tarea antes de producir:
 - [creative-direction](../../skills/creative-direction/SKILL.md)
+- [award-grade-web](../../skills/award-grade-web/SKILL.md)
 - [art-direction](../../skills/art-direction/SKILL.md)
 - [cinematic-direction](../../skills/cinematic-direction/SKILL.md)
 - [storyboarding](../../skills/storyboarding/SKILL.md)

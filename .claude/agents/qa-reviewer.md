@@ -23,6 +23,7 @@ Director de experiencia. Milestones: M4.
 ## Skills
 Leer solo las pertinentes a la tarea antes de producir:
 - [web-quality-assurance](../../skills/web-quality-assurance/SKILL.md)
+- [award-grade-web](../../skills/award-grade-web/SKILL.md)
 - [accessibility](../../skills/accessibility/SKILL.md)
 - [altiora-quality-review](../../skills/altiora-quality-review/SKILL.md)
 - [web-performance](../../skills/web-performance/SKILL.md)

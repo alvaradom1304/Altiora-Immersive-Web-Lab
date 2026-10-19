@@ -22,6 +22,7 @@ QA. Milestones: M0, M1, M2, M3, M4, M5, M6.
 ## Skills
 Leer solo las pertinentes a la tarea antes de producir:
 - [altiora-agent-orchestrator](../../skills/altiora-agent-orchestrator/SKILL.md)
+- [award-grade-web](../../skills/award-grade-web/SKILL.md)
 - [elite-web-experience-os](../../skills/elite-web-experience-os/SKILL.md)
 - [business-decision-gates](../../skills/business-decision-gates/SKILL.md)
 - [launch-readiness](../../skills/launch-readiness/SKILL.md)

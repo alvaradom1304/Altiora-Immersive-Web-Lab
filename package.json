@@ -12,6 +12,7 @@
     "chat": "node scripts/team-chat.mjs",
     "skills:audit": "node scripts/audit-skills.mjs",
     "skills:baseline": "node scripts/audit-skills.mjs --write",
-    "reference": "node scripts/fetch-reference.mjs"
+    "reference": "node scripts/fetch-reference.mjs",
+    "guard": "node scripts/immersive-guard.mjs"
   }
 }

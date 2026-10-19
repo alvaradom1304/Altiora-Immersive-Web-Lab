@@ -30,5 +30,5 @@ Seguir docs/workflows/immersive-project.md. Antes de ampliar una experiencia, co
 - Indicar con claridad qué está diseñado, implementado, probado o pendiente.
 
 ## Equipo multi-IA
-- Los 12 roles de team/registry.md tienen prompt en team/agents/<rol>.md (Claude Code los usa como subagentes en .claude/agents/). Se generan con npm run agents:build desde team/agents.json y team/roles/; no editarlos a mano.
+- Los 13 roles de team/registry.md tienen prompt en team/agents/<rol>.md (Claude Code los usa como subagentes en .claude/agents/). Se generan con npm run agents:build desde team/agents.json y team/roles/; no editarlos a mano.
 - Repartir y coordinar el trabajo en el chat del equipo (team/chat/README.md): firmar como <ia>/<rol>, reclamar la tarea antes de editar, tocar solo sus archivos y cerrar con evidencia.
