@@ -4,7 +4,7 @@ Fecha: 18 de octubre de 2026.
 
 ## Comprobaciones realizadas
 
-- Consultados metadatos y commit de rama predeterminada de los 16 repositorios mediante la conexión de GitHub.
+- Consultados metadatos y commit de rama predeterminada de los 16 repositorios iniciales y de los 9 añadidos en la ampliación mediante la conexión de GitHub.
 - Leídos README de los candidatos; revisados manifiestos en los casos que afectan React/Fiber o licencia.
 - Ejecutado el verificador local del catálogo: identidades únicas, revisiones completas, campos requeridos y enlaces locales.
 - Comprobada sintaxis del descargador de referencias con Node.js.
