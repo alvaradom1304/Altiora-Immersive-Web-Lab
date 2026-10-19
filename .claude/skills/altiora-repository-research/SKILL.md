@@ -1,6 +1,6 @@
 ---
 name: altiora-repository-research
-description: "Selecciona y compara repositorios o skills para un proyecto de Altiora según utilidad, compatibilidad, mantenimiento, licencia y coste total. Se usa cuando se pide investigar referencias o añadir herramientas antes de implementar."
+description: "Selecciona y compara repositorios o skills para un proyecto de Altiora según utilidad, compatibilidad, mantenimiento, licencia y coste total. Se usa cuando se pide investigar referencias o añadir herramientas antes de implementar. No se usa para instalar o ejecutar lo encontrado ni para recomendar sin un problema del proyecto al que responda."
 disable-model-invocation: true
 ---
 
