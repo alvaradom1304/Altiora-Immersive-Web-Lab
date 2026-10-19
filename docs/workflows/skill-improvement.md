@@ -33,6 +33,10 @@ La rúbrica está en [audit-skills.mjs](../../scripts/audit-skills.mjs): frontma
 - **Al usar una skill y notar un fallo:** añadirlo al backlog del registro con el ejemplo concreto.
 - **Trimestral:** revisar la rúbrica. Si casi todas las skills llegan a 100, endurecer reglas (p. ej. fuentes pertinentes al dominio, casos ejecutados) en lugar de declarar el trabajo terminado.
 
+## Skills de terceros
+
+Las skills con `SOURCE.md` vienen de otro repositorio (registro en `references/skill-sources.json`). No reescribirlas a mano: actualizar copiando una revisión nueva, revisar el diff y anotar cualquier cambio local en su `SOURCE.md`. Sus fallos de rúbrica se resuelven con casos de evaluación propios en `evals/` o proponiendo el cambio al proyecto original.
+
 ## Reglas
 
 - Nunca bajar la línea base para que pase la auditoría.

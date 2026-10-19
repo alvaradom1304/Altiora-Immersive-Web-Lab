@@ -26,6 +26,17 @@ for (const repo of catalog.repositories) {
   assert.ok(!repo.archived || repo.decision !== 'adopt', 'No adoptar un repositorio archivado sin revisar');
 }
 assert.equal(catalog.repositories.find(r => r.id === '14islands/r3f-scroll-rig')?.decision, 'hold');
+const skillSources = JSON.parse(await readFile(resolve(root, 'references/skill-sources.json'), 'utf8'));
+let externalSkills = 0;
+for (const source of skillSources.sources) {
+  assert.match(source.revision, /^[a-f0-9]{40}$/, 'Revisión no válida: ' + source.repo);
+  for (const skill of [...source.skills, ...(source.previously_imported ?? [])]) {
+    for (const file of ['SKILL.md', 'LICENSE.txt', 'SOURCE.md']) {
+      assert.ok((await stat(resolve(root, 'skills', skill, file))).isFile(), `Falta skills/${skill}/${file}`);
+    }
+    externalSkills++;
+  }
+}
 let documentCount = 0;
 async function walk(dir) {
   for (const entry of await readdir(dir, { withFileTypes: true })) {
@@ -47,5 +58,5 @@ async function walk(dir) {
   }
 }
 await walk(root);
-console.log('OK: ' + ids.size + ' repositorios y ' + documentCount + ' documentos; estructura, revisiones y enlaces locales válidos.');
+console.log('OK: ' + ids.size + ' repositorios, ' + externalSkills + ' skills externas con licencia y ' + documentCount + ' documentos; estructura, revisiones y enlaces locales válidos.');
 console.log('Esta comprobación no ejecuta demos ni certifica compatibilidad de runtime.');

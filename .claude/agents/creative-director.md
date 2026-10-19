@@ -1,6 +1,6 @@
 ---
 name: creative-director
-description: "Director creativo: Definir concepto y coherencia artística. Usar para proponer rutas creativas, moodboards y guion visual, o revisar coherencia artística."
+description: "Director creativo: Definir concepto y coherencia artística. Usar para proponer rutas creativas, moodboards y guion visual, o revisar coherencia artística. Delegar de forma proactiva cuando la tarea corresponda a este rol."
 ---
 
 # Director creativo

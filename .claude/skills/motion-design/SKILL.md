@@ -1,0 +1,10 @@
+---
+name: motion-design
+description: "motion-design: Premium Web Experience. Usar para producir motion_spec, states, alternatives a partir de tarea, UI/escena, ritmo, marca; no sustituir otras fases ni declarar resultados sin evidencia."
+---
+
+<!-- Generado con npm run agents:build. No editar a mano. -->
+
+Skill del catálogo Altiora. Leer completo y seguir [skills/motion-design/SKILL.md](../../../skills/motion-design/SKILL.md). Sus archivos de apoyo (references/, evals/, scripts/) están en esa misma carpeta: resolver las rutas relativas desde allí.
+
+Petición: $ARGUMENTS

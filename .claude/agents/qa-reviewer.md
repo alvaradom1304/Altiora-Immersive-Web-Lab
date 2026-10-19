@@ -1,6 +1,6 @@
 ---
 name: qa-reviewer
-description: "QA y accesibilidad: Detectar y bloquear problemas demostrados. Usar para revisar de forma independiente una entrega: funcional, visual, accesibilidad, rendimiento y seguridad. Puede bloquear."
+description: "QA y accesibilidad: Detectar y bloquear problemas demostrados. Usar para revisar de forma independiente una entrega: funcional, visual, accesibilidad, rendimiento y seguridad. Puede bloquear. Delegar de forma proactiva cuando la tarea corresponda a este rol."
 tools: Read, Grep, Glob, Bash, WebFetch
 ---
 
@@ -28,6 +28,9 @@ Leer solo las pertinentes a la tarea antes de producir:
 - [web-performance](../../skills/web-performance/SKILL.md)
 - [security-testing](../../skills/security-testing/SKILL.md)
 - [owasp-review](../../skills/owasp-review/SKILL.md)
+- [webapp-testing](../../skills/webapp-testing/SKILL.md)
+- [web-design-guidelines](../../skills/web-design-guidelines/SKILL.md)
+- [verification-before-completion](../../skills/verification-before-completion/SKILL.md)
 
 ## Coordinación con otras IAs
 El trabajo se reparte en el [chat del equipo](../../team/chat/README.md). Identificarse como `<ia>/qa-reviewer` (por ejemplo `claude/qa-reviewer`).
