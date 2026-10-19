@@ -78,3 +78,26 @@ En la plantilla Vite (sin StrictMode) también se observó una entrada incomplet
 ## Física
 
 Interpolación y muelles bastan para inclinación y parallax. Verlet o un motor físico sólo para tela, cuerdas, colisiones o lanzar objetos; integrar con paso fijo y subpasos.
+
+## Humo de fluido
+
+Fluido estable (Stam) en WebGL2: splat → vorticidad → divergencia → presión (Jacobi, 12–16 iteraciones) → resta del gradiente → advección de velocidad y densidad. Texturas RGBA16F con filtrado lineal; exige `EXT_color_buffer_float` (o `EXT_color_buffer_half_float`): si falta, devolver null y usar neblina CSS.
+
+- Simulación ~112 px en el lado corto, densidad 320–448; el humo es blando y no necesita DPR.
+- El cursor inyecta velocidad (pantallas/s, con tope) y densidad proporcional a la rapidez; emisores ambientales para que el humo exista también en táctil.
+- Disipación por escena (neblina se va antes, vapor permanece).
+- Mismo reloj único; pausa fuera de pantalla; `clear()` al activar movimiento reducido o pausa.
+- Sin `loseContext()` al desmontar si el mismo lienzo puede volver a montarse (StrictMode).
+
+Referencia de implementación: `components/award/smokeFluid.ts` y `FincaIntro.tsx` en La Central del Queso (rama feat/award-grade-home).
+
+## Secuencia de fotogramas con scroll
+
+Un «video» que avanza con el scroll: fotogramas WebP dibujados en un canvas 2D con ajuste cover.
+
+- Carga progresiva: primero cada 30, luego 10, 5, 2, 1; se dibuja el fotograma cargado más cercano. Con `saveData`, uno de cada tres.
+- Variante vertical u horizontal según el aspecto; al cambiar, recargar.
+- Progreso de ScrollTrigger sin tween propio, suavizado con `damp` en el reloj único; sólo se dibuja cuando cambia el índice.
+- Póster `<img>` debajo (sin JS se ve igual) y textos en DOM, en una lista ordenada.
+- Movimiento reducido: un fotograma fijo por tramo, sin interpolación.
+- Puertas o telones de entrada: decorativos (`aria-hidden`, `pointer-events: none`), con apertura automática, y abiertos al instante si la página carga ya desplazada.
