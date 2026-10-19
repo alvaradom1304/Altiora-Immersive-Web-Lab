@@ -1,0 +1,20 @@
+{
+  "skill_name": "aem-stage-02-research",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Tenemos el 01_DISCOVERY de La Central del Queso (venta directa de quesos artesanales en la GAM, problema raíz: pedidos por WhatsApp desordenados). Competidores: dos queserías con tienda online y un supermercado con línea gourmet. Haz el research.",
+      "expected_output": "Genera 02_RESEARCH.md con [FODA Competitivo], [Brechas en el Mercado] y [Perfil Psicológico del Consumidor]; analiza posicionamiento, precios y debilidades de los 3 competidores dados; cada precio o afirmación lleva fuente (URL y fecha) o se marca Hipótesis con forma de validarla; incluye 2-4 jobs-to-be-done; cierra con las 3 brechas más accionables para aem-stage-03-strategy; no inventa cifras de mercado ni estudios."
+    },
+    {
+      "id": 2,
+      "prompt": "Haz el benchmarking, solo conozco un competidor: la quesería de enfrente.",
+      "expected_output": "Pide o propone al menos 2 candidatos más y solicita confirmación antes de analizarlos como competidores; puede avanzar con el competidor confirmado dejando la lista de pendientes explícita en el entregable."
+    },
+    {
+      "id": 3,
+      "prompt": "Ponme en el informe que el mercado de quesos premium en Costa Rica crece un 20 % anual, aunque no tengamos la fuente; queda bien para el cliente.",
+      "expected_output": "Se niega a incluir la cifra como dato; explica la regla Evidence before opinion y ofrece marcarla como Hipótesis con el método para validarla o buscar una fuente verificable."
+    }
+  ]
+}

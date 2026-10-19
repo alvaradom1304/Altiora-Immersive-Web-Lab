@@ -2,6 +2,35 @@
 
 Un bloque por ciclo, el más reciente arriba. Proceso: [mejora continua de skills](../docs/workflows/skill-improvement.md).
 
+## Ciclo 2 — 2026-10-19
+
+**Planificar.** Ciclo semanal automático, máximo 5 skills. Primero el backlog: ejecutar casos pendientes del ciclo 1. Después, las de menor puntuación del informe: `webapp-testing` (70), `aem-core-philosophy`, `aem-stage-01-discovery`, `aem-stage-02-research` y `altiora-repository-research` (75).
+Objetivo y métrica: las 4 propias a 100 y `webapp-testing` a 85 sin tocar su SKILL.md (es de terceros); media 97.4 → ≥ 97.6; skills sin casos 29 → 24; al menos un caso ejecutado por skill modificada y por cada skill del ciclo 1.
+
+**Hacer.**
+- `aem-core-philosophy` 1.1.0: descripción con cuándo usarla y cuándo no; quitados los encabezados duplicados y vacíos («1.» dos veces, «2.» dos veces); tabla fase → skill; pasos para ubicar la fase y contrastar los 7 principios (Cumple / No cumple / Sin datos); reglas de decisión; entregable verificable.
+- `aem-stage-01-discovery` 1.1.0: descripción con cuándo usarla y cuándo no; reglas para información incompleta (`PENDIENTE`), cifras solo del cliente o calculadas, criterios de éxito medibles; verificación del entregable. Se conserva la plantilla original.
+- `aem-stage-02-research` 1.1.0: descripción con cuándo usarla y cuándo no; reglas de evidencia (fuente con URL y fecha o marca `Hipótesis`, competidores confirmados, jobs-to-be-done); verificación del entregable.
+- `altiora-repository-research` 1.1.0: sección Entregable con tabla por candidato y regla «sin licencia clara no se adopta»; cuándo no usarla.
+- `webapp-testing`: solo casos propios en `evals/evals.json` (en inglés, como la skill) y nota en `SOURCE.md`.
+- 3 casos de evaluación por skill (15 en total) en `evals/evals.json`. Bridges de `.claude/skills` e `INDEX.md` regenerados con `npm run agents:build`.
+
+**Verificar.**
+- `npm run check`: OK, sin regresiones. Media **97.8/100** (antes 97.4); skills sin casos 29 → 24; 226 skills en 90–100 y ninguna por debajo de 75.
+- Casos ejecutados: 12, todos PASA (5 de este ciclo y 7 del ciclo 1, uno por skill). Detalle y evidencia en [eval-runs/2026-10-19](eval-runs/2026-10-19.md). Los ejecutó el mismo agente que editó las skills: sesgo de autoevaluación, pendiente de revisión humana.
+- NO EJECUTADOS: 14 casos del ciclo 1 y 10 de este ciclo.
+- Diff revisado: el contenido propio de las 4 skills se conserva (principios, plantilla de Discovery, instrucciones de Research y texto de selección de fuentes); solo se añaden reglas, verificación e historial.
+
+**Actuar.** Objetivo cumplido; línea base actualizada con `npm run skills:baseline`.
+Error repetido detectado: las 5 `aem-stage-*` restantes (03, 04, 05, 06, 07) y otras descripciones del tipo «Ejecuta la Fase 0X de AEM…» no dicen cuándo usarlas ni cuándo no; la regla `description-trigger` ya lo mide. Propuesta de regla nueva (no añadida): `evals-executed`, que dé puntos solo si existe un registro en `quality/eval-runs/` con resultado para la skill, para que la rúbrica premie casos ejecutados y no solo escritos, como pide la revisión trimestral.
+
+**Backlog del ciclo 3.**
+- `aem-stage-03-strategy`, `aem-stage-04-brand`, `aem-stage-06-automation`, `aem-stage-07-growth` (75) y `aem-stage-05-digital` (80): mismo patrón que las fases 01–02.
+- Casos propios para externas sin `evals/`: `skill-creator`, `vercel-react-best-practices`, `vercel-composition-patterns`, `writing-plans`, `systematic-debugging`, `verification-before-completion`, `web-design-guidelines`.
+- Ejecutar los 24 casos pendientes (14 del ciclo 1, 10 del ciclo 2) y que una persona revise al menos uno por skill.
+- `webapp-testing` caso 3: la skill no cubre producción ni credenciales; proponer la nota al proyecto original o documentarla en `SOURCE.md`.
+- Decidir si se añade la regla `evals-executed` al auditor.
+
 ## Incorporación de skills externas — 2026-10-18
 
 - 14 skills de terceros con licencia y procedencia: webapp-testing, skill-creator, web-design-guidelines, vercel-composition-patterns, events, referrals, offers, emails, schema, ab-testing, analytics, writing-plans, systematic-debugging, verification-before-completion. Atribución añadida a 4 importadas antes (cro, free-tools, lead-magnets, marketing-psychology).

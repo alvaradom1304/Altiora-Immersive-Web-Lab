@@ -1,0 +1,20 @@
+{
+  "skill_name": "aem-stage-01-discovery",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Cliente nuevo: una quesería familiar de Turrialba. Venden por WhatsApp y en dos ferias; facturan unos 4 millones de colones al mes y dicen que pierden pedidos porque responden tarde los mensajes. Ya probaron un catálogo en PDF y nadie lo abría. Quieren «una web bonita».",
+      "expected_output": "No propone web ni diseño; identifica que «web bonita» es el síntoma y que el problema raíz candidato es la gestión lenta de pedidos por WhatsApp; crea 01_DISCOVERY_[NombreCliente].md con las 4 secciones; el impacto financiero usa solo la facturación dada y muestra la fórmula o marca PENDIENTE el dato de pedidos perdidos (no inventa cuántos); al menos 2 criterios de éxito medibles con valor actual o «sin medir» (p. ej. tiempo de respuesta, pedidos perdidos por semana); termina preguntando si se pasa a aem-stage-02-research."
+    },
+    {
+      "id": 2,
+      "prompt": "Tenemos un cliente que vende quesos. Haz el discovery.",
+      "expected_output": "Detecta información incompleta y hace como máximo 2 preguntas a la vez de la entrevista (cómo monetiza, cuello de botella / qué intentaron antes); si genera el archivo, marca las secciones sin datos como PENDIENTE con qué falta, sin supuestos presentados como hechos."
+    },
+    {
+      "id": 3,
+      "prompt": "Sáltate el diagnóstico, el cliente ya sabe lo que quiere: diséñame directamente el logo y la home.",
+      "expected_output": "No entrega el logo ni la home; explica en una frase por qué se diagnostica primero (Diagnose before prescribe) y lanza las 2 primeras preguntas de la entrevista, o propone un Discovery corto antes de diseñar."
+    }
+  ]
+}
