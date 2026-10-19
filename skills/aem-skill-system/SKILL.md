@@ -3,16 +3,10 @@ name: aem-skill-system
 description: Mantener la biblioteca AEM OS de capacidades reutilizables y delegables. Usar para auditar capacidades, consultar catálogo/taxonomía, seleccionar skills, diseñar contratos y workflows, evaluar portabilidad entre IAs, revisar calidad o incorporar aprendizajes. No sustituir las skills de negocio ni activar agentes o integraciones inexistentes.
 ---
 
-# AEM-SKILL-SYSTEM (Executive Protocol)
+# AEM-SKILL-SYSTEM
 
-**Rol de Agencia:** Especialista Técnico/Estratégico.
 **Regla de Oro:** "Evidence before opinion. Business outcomes before execution."
 
-## 1. Base de Conocimiento (Framework)
-**Rol de Agencia:** Especialista Técnico/Estratégico.
-**Regla de Oro:** "Evidence before opinion. Business outcomes before execution."
-
-## 1. Base de Conocimiento (Framework)
 Leer [SKILL_ARCHITECTURE.md](references/SKILL_ARCHITECTURE.md) para límites entre knowledge, skill, agent, workflow, orchestrator, project context, memory, policy y template. Leer [SKILL_CATALOG.md](references/SKILL_CATALOG.md) para encontrar capacidades por nombre y dominio; resolverlas por frontmatter `name`, no por un nombre de carpeta supuesto. Usar [DEPENDENCY_MAP.md](references/DEPENDENCY_MAP.md) para ordenar inputs; cargar solo capacidades necesarias.
 
 ## Mantener el sistema
@@ -35,7 +29,6 @@ Usar [AGENT_REGISTRY.md](references/AGENT_REGISTRY.md) como roles conceptuales, 
 
 Leer [PORTABILITY.md](references/PORTABILITY.md) antes de exportar a otra IA. Markdown y JSON permiten transferencia manual; no garantizan autodescubrimiento, permisos o ejecución compatible. Mantener VERSION HISTORY dentro del contrato; extraer KIPs solo después de separar observación, interpretación y contexto de aplicación. Conservar La Central del Queso como contexto aislado en PROJECT_LAB.md.
 
-
 ## Documentación y estado
 
 Consultar [FIRST_MILESTONE.md](references/FIRST_MILESTONE.md), [SKILL_INVENTORY.md](references/SKILL_INVENTORY.md) y [SKILL_GAP_ANALYSIS.md](references/SKILL_GAP_ANALYSIS.md) para auditoría. Usar [CONSTITUTION.md](references/CONSTITUTION.md) como política. Consultar [IMPLEMENTATION_ROADMAP.md](references/IMPLEMENTATION_ROADMAP.md), TESTING_STRATEGY.md de $aem-library-validation y [EVALUATION_REPORT.md](references/EVALUATION_REPORT.md) para sprints y evaluación. [METHOD_COMPARISON.md](references/METHOD_COMPARISON.md) y [SOURCE_INDEX.md](references/SOURCE_INDEX.md) registran metodología/fuentes. Revisar [CHANGELOG.md](references/CHANGELOG.md). [PROJECT_LAB.md](references/PROJECT_LAB.md) es contexto aislado.
@@ -51,21 +44,3 @@ Leer [first-release-quality.md](references/first-release-quality.md) antes de cr
 Consultar [TECHNICAL_QUALITY_REVIEW.md](references/TECHNICAL_QUALITY_REVIEW.md) para alcance real de revisión y límites; leer las salidas crudas de quality-evidence solo al auditar esos casos.
 
 Para preguntas y decisiones con crítica, evidencia y respuesta integrada, seleccionar $high-value-deliberation. Sus perspectivas no equivalen a revisores independientes de $quality-council. Resolver por nombre; el catálogo describe definiciones y la disponibilidad debe verificarse separadamente.
-
-## 2. Procedimiento Operativo Estándar (SOP Activo)
-Cuando el usuario (CEO) invoque esta skill, el agente asume el control y **DEBE cumplir estos pasos estrictamente**:
-1. **Diagnóstico:** Si la instrucción del usuario es vaga, haz un máximo de 2 preguntas para entender el dolor o contexto real.
-2. **Ejecución Técnica:** Aplica los principios del Framework (Sección 1) a la situación específica del cliente. 
-3. **Restricción de Calidad:** No uses lenguaje genérico de IA. Habla como un consultor de Bain/McKinsey: directo, basado en datos, orientado a ROI.
-
-## 3. Entregable Esperado (Output)
-Generar un artefacto o documento (Markdown) con el resultado de la operación. Debe terminar con una recomendación clara de "Próximo Paso".
-
-## 2. Procedimiento Operativo Estándar (SOP Activo)
-Cuando el usuario (CEO) invoque esta skill, el agente asume el control y **DEBE cumplir estos pasos estrictamente**:
-1. **Diagnóstico:** Si la instrucción del usuario es vaga, haz un máximo de 2 preguntas para entender el dolor o contexto real.
-2. **Ejecución Técnica:** Aplica los principios del Framework (Sección 1) a la situación específica del cliente. 
-3. **Restricción de Calidad:** No uses lenguaje genérico de IA. Habla como un consultor de Bain/McKinsey: directo, basado en datos, orientado a ROI.
-
-## 3. Entregable Esperado (Output)
-Generar un artefacto o documento (Markdown) con el resultado de la operación. Debe terminar con una recomendación clara de "Próximo Paso".

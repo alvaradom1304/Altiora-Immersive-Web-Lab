@@ -1,0 +1,321 @@
+# Índice de Altiora
+
+<!-- Generado con npm run agents:build. No editar a mano. -->
+
+Mapa de agentes, chats, skills y repositorios disponibles en Claude Code y en el resto de IAs. Se regenera con `npm run agents:build` y `npm run check` falla si está desactualizado.
+
+## Cómo usarlo en Claude Code
+
+| Quiero… | Escribir |
+|---|---|
+| Ver el tablero y repartir un encargo | `/equipo <encargo>` |
+| Hablar con un agente concreto | `/chat-<rol> <mensaje>`, por ejemplo `/chat-web-engineer T1018-ab12` |
+| Usar una skill | `/<skill> <petición>`, o dejar que Claude la elija si está asignada a un agente |
+| Consultar o descargar un repositorio de referencia | `/repos <necesidad>` |
+
+Otras IAs (Codex, Gemini, ChatGPT): prompts en [team/agents/](team/agents/experience-director.md) y el mismo chat (`npm run chat`), ver [team/chat/README.md](team/chat/README.md).
+
+## Agentes (12)
+
+| Agente | Chat | Milestones | Skills asignadas |
+|---|---|---|---|
+| [Director de experiencia](.claude/agents/experience-director.md) | `/chat-experience-director` | M0, M1, M2, M3, M4, M5, M6 | `altiora-agent-orchestrator`, `elite-web-experience-os`, `business-decision-gates`, `launch-readiness`, `quality-council`, `human-in-the-loop`, `writing-plans`, `verification-before-completion` |
+| [Estratega de negocio](.claude/agents/business-strategist.md) | `/chat-business-strategist` | M0 | `business-strategy`, `value-proposition-design`, `buyer-persona`, `unit-economics`, `pricing`, `market-research`, `financial-forecasting`, `offers` |
+| [Estratega de marca](.claude/agents/brand-strategist.md) | `/chat-brand-strategist` | M1 | `brand-strategy`, `brand-positioning`, `brand-voice`, `brand-personality`, `premium-branding`, `brand-guidelines` |
+| [Director creativo](.claude/agents/creative-director.md) | `/chat-creative-director` | M1 | `creative-direction`, `art-direction`, `cinematic-direction`, `storyboarding`, `photography-direction`, `creative-quality-assurance` |
+| [UX researcher](.claude/agents/ux-researcher.md) | `/chat-ux-researcher` | M0, M2, M6 | `ux-research`, `user-flow`, `customer-journey`, `information-architecture`, `conversion-ux`, `accessibility`, `web-design-guidelines` |
+| [Diseñador UI](.claude/agents/ui-designer.md) | `/chat-ui-designer` | M2 | `ui-direction`, `design-system`, `color-system`, `typography-direction`, `responsive-design`, `frontend-design`, `web-design-guidelines` |
+| [Productor visual](.claude/agents/visual-producer.md) | `/chat-visual-producer` | M3 | `product-photography-direction`, `ai-image-direction`, `ai-video-direction`, `visual-identity`, `web-performance` |
+| [Motion designer](.claude/agents/motion-designer.md) | `/chat-motion-designer` | M3 | `motion-design`, `gsap-animation`, `scroll-experience`, `cinematic-direction`, `threejs-experience` |
+| [Ingeniero web](.claude/agents/web-engineer.md) | `/chat-web-engineer` | M3, M4 | `nextjs-architecture`, `react-three-fiber`, `threejs-experience`, `vercel-react-best-practices`, `web-performance`, `frontend-security`, `secure-development`, `vercel-composition-patterns`, `systematic-debugging`, `webapp-testing` |
+| [Content designer](.claude/agents/content-designer.md) | `/chat-content-designer` | M2 | `copywriting`, `content-strategy`, `brand-voice`, `seo`, `local-seo`, `emails`, `schema` |
+| [QA y accesibilidad](.claude/agents/qa-reviewer.md) | `/chat-qa-reviewer` | M4 | `web-quality-assurance`, `accessibility`, `altiora-quality-review`, `web-performance`, `security-testing`, `owasp-review`, `webapp-testing`, `web-design-guidelines`, `verification-before-completion` |
+| [Analista de conversión y fidelización](.claude/agents/growth-analyst.md) | `/chat-growth-analyst` | M6 | `marketing-analytics`, `conversion-analysis`, `conversion-rate-optimization`, `growth-experimentation`, `retention`, `ltv-optimization`, `analytics`, `ab-testing`, `referrals`, `events` |
+
+## Skills (251)
+
+**Auto** = Claude puede cargarla sola (está asignada a un agente). El resto se usa con `/nombre`. Origen vacío = skill propia de Altiora.
+
+| Skill | Auto | Agentes | Origen | Para qué |
+|---|---|---|---|---|
+| [ab-testing](skills/ab-testing/SKILL.md) | sí | growth-analyst | coreyhaines31/marketingskills | When the user wants to plan, design, or implement an A/B test or experiment, or build a growth experimentation program. Also use when the… |
+| [accessibility](skills/accessibility/SKILL.md) | sí | ux-researcher, qa-reviewer |  | accessibility: Premium Web Experience. Usar para producir a11y_findings, fixes, manual_checks a partir de UI/código, alcance, nivel objet… |
+| [advertising-concept](skills/advertising-concept/SKILL.md) | — | — |  | advertising-concept: Creative Intelligence. Usar para producir ad_routes, hooks, claim_checks a partir de problema, oferta, canal, eviden… |
+| [aem-autonomous-quality-loop](skills/aem-autonomous-quality-loop/SKILL.md) | — | — |  | aem-autonomous-quality-loop: Orchestration. Usar para producir status, cycles, evidence, defects, final_result a partir de task, acceptan… |
+| [aem-business-transformation](skills/aem-business-transformation/SKILL.md) | — | — |  | aem-business-transformation: Orchestration. Usar para producir current_target_state, root_causes, roadmap, kpis a partir de negocio exist… |
+| [aem-company-builder](skills/aem-company-builder/SKILL.md) | — | — |  | aem-company-builder: Orchestration. Usar para producir route_selection, capability_plan, gate_report a partir de contexto, negocio nuevo/… |
+| [aem-core-philosophy](skills/aem-core-philosophy/SKILL.md) | — | — |  | Usa este skill para alinear decisiones con la filosofía AEM OS (Strategy before design, Evidence before opinion) y entender la arquitectu… |
+| [aem-learning-os](skills/aem-learning-os/SKILL.md) | — | — |  | Usa este skill para procesar nuevos conocimientos o herramientas, extraer frameworks y productizar capacidades (Learning OS & Productizat… |
+| [aem-library-validation](skills/aem-library-validation/SKILL.md) | — | — |  | aem-library-validation: Foundation. Usar para producir structural_report, behavioral_review, maturity_recommendation a partir de workspac… |
+| [aem-skill-factory](skills/aem-skill-factory/SKILL.md) | — | — |  | aem-skill-factory: Orchestration. Usar para producir capability_contract, skill_package, evaluation a partir de capacidad repetible, ejem… |
+| [aem-skill-system](skills/aem-skill-system/SKILL.md) | — | — |  | Mantener la biblioteca AEM OS de capacidades reutilizables y delegables. Usar para auditar capacidades, consultar catálogo/taxonomía, sel… |
+| [aem-stage-01-discovery](skills/aem-stage-01-discovery/SKILL.md) | — | — |  | Ejecuta la Fase 01 de AEM. Úsalo para auditar un nuevo cliente, extraer sus dolores de negocio reales y definir el alcance inicial antes … |
+| [aem-stage-02-research](skills/aem-stage-02-research/SKILL.md) | — | — |  | Ejecuta la Fase 02 de AEM. Realiza investigación de mercado profundo, análisis de competidores (Benchmarking) y auditoría de presencia di… |
+| [aem-stage-03-strategy](skills/aem-stage-03-strategy/SKILL.md) | — | — |  | Ejecuta la Fase 03 de AEM. Define posicionamiento, Unit Economics, Propuesta de Valor (UVP) y Go-To-Market strategy. |
+| [aem-stage-04-brand](skills/aem-stage-04-brand/SKILL.md) | — | — |  | Ejecuta la Fase 04 de AEM. Arquitectura de marca premium, arquetipos, tono de voz y dirección de arte. |
+| [aem-stage-05-digital](skills/aem-stage-05-digital/SKILL.md) | — | — |  | Ejecuta la Fase 05 de AEM. Arquitectura de soluciones digitales, selección de Tech Stack y experiencia de usuario (UX). |
+| [aem-stage-06-automation](skills/aem-stage-06-automation/SKILL.md) | — | — |  | Ejecuta la Fase 06 de AEM. Auditoría de procesos repetitivos, diseño de workflows en n8n e integración de Agentes de IA. |
+| [aem-stage-07-growth](skills/aem-stage-07-growth/SKILL.md) | — | — |  | Ejecuta la Fase 07 de AEM. Estrategias de retención, optimización LTV:CAC, y experimentación de crecimiento (Growth Hacking). |
+| [aem-venture-architect](skills/aem-venture-architect/SKILL.md) | — | — |  | aem-venture-architect: Orchestration. Usar para producir venture_plan, evidence_by_gate, recommendation a partir de idea, recursos, límit… |
+| [agency-os](skills/agency-os/SKILL.md) | — | — |  | Aplicar la metodología Agency OS de Dennis a proyectos de consultoría, branding, marketing, UX, web y transformación digital. Usar cuando… |
+| [agent-design](skills/agent-design/SKILL.md) | — | — |  | agent-design: AI & Automation. Usar para producir agent_spec, tool_contracts, evaluation a partir de objetivo, tareas, herramientas reale… |
+| [agent-orchestration](skills/agent-orchestration/SKILL.md) | — | — |  | agent-orchestration: AI & Automation. Usar para producir delegation_plan, execution_states, review a partir de roles disponibles, subtare… |
+| [ai-evaluation](skills/ai-evaluation/SKILL.md) | — | — |  | ai-evaluation: AI & Automation. Usar para producir evaluation_protocol, results, limitations a partir de tarea, outputs, dataset, criteri… |
+| [ai-governance](skills/ai-governance/SKILL.md) | — | — |  | ai-governance: AI & Automation. Usar para producir governance_controls, responsibilities, review a partir de usos IA, datos, actores, rie… |
+| [ai-image-direction](skills/ai-image-direction/SKILL.md) | sí | visual-producer |  | ai-image-direction: Creative Intelligence. Usar para producir generation_brief, variants, qa a partir de objetivo, referencias autorizada… |
+| [ai-observability](skills/ai-observability/SKILL.md) | — | — |  | ai-observability: AI & Automation. Usar para producir telemetry_plan, alerts, diagnostics a partir de sistema, eventos, límites de privac… |
+| [ai-video-direction](skills/ai-video-direction/SKILL.md) | sí | visual-producer |  | ai-video-direction: Creative Intelligence. Usar para producir video_brief, prompts, continuity_checks a partir de guion, duración, refere… |
+| [altiora-agent-orchestrator](skills/altiora-agent-orchestrator/SKILL.md) | sí | experience-director |  | Coordina proyectos de Altiora que combinan investigación de repositorios, diseño, implementación y revisión mediante agentes y skills. Se… |
+| [altiora-ai-economy](skills/altiora-ai-economy/SKILL.md) | — | — |  | Selecciona un flujo de IA para Altiora que reduzca coste y contexto repetido preservando la calidad final. Se usa al comparar proveedores… |
+| [altiora-quality-review](skills/altiora-quality-review/SKILL.md) | sí | qa-reviewer |  | Revisa cambios de Altiora contra el encargo, las funciones afectadas y su evidencia de prueba. Se usa para comprobar una entrega o una ta… |
+| [altiora-repository-research](skills/altiora-repository-research/SKILL.md) | — | — |  | Selecciona y compara repositorios o skills para un proyecto de Altiora según utilidad, compatibilidad, mantenimiento, licencia y coste to… |
+| [analytics](skills/analytics/SKILL.md) | sí | growth-analyst | coreyhaines31/marketingskills | When the user wants to set up, improve, or audit analytics tracking and measurement. Also use when the user mentions "set up tracking," "… |
+| [api-integration](skills/api-integration/SKILL.md) | — | — |  | api-integration: AI & Automation. Usar para producir integration_code, error_handling, tests a partir de API oficial, contrato, entorno, … |
+| [api-security](skills/api-security/SKILL.md) | — | — |  | api-security: Cybersecurity. Usar para producir api_risks, controls, verification a partir de endpoints, contrato, auth, datos, límites; … |
+| [art-direction](skills/art-direction/SKILL.md) | sí | creative-director |  | art-direction: Brand Intelligence. Usar para producir art_concept, visual_rules, alternatives a partir de estrategia, audiencia, medios, … |
+| [authentication-security](skills/authentication-security/SKILL.md) | — | — |  | authentication-security: Cybersecurity. Usar para producir auth_findings, session_controls, fixes a partir de flujos login/sesión, roles,… |
+| [authorization-security](skills/authorization-security/SKILL.md) | — | — |  | authorization-security: Cybersecurity. Usar para producir access_matrix, negative_tests, fixes a partir de roles, recursos, reglas, owner… |
+| [automation-design](skills/automation-design/SKILL.md) | — | — |  | automation-design: AI & Automation. Usar para producir automation_case, workflow, human_exceptions a partir de proceso actual, volumen, c… |
+| [b2b-expansion](skills/b2b-expansion/SKILL.md) | — | — |  | b2b-expansion: Growth & Scaling. Usar para producir b2b_pilot, qualification, economics a partir de oferta, cuentas objetivo, capacidad, … |
+| [backend-security](skills/backend-security/SKILL.md) | — | — |  | backend-security: Cybersecurity. Usar para producir backend_controls, findings, validation a partir de servidor, datos, endpoints, roles,… |
+| [brand-architecture](skills/brand-architecture/SKILL.md) | — | — |  | brand-architecture: Brand Intelligence. Usar para producir architecture_options, naming_rules, migration a partir de portafolio, marcas, … |
+| [brand-development](skills/brand-development/SKILL.md) | — | — |  | brand-development: Orchestration. Usar para producir brand_program, specialist_outputs, review a partir de diagnóstico, posicionamiento, … |
+| [brand-guidelines](skills/brand-guidelines/SKILL.md) | sí | brand-strategist |  | brand-guidelines: Brand Intelligence. Usar para producir brand_rules, examples, governance a partir de decisiones de identidad, usos, res… |
+| [brand-personality](skills/brand-personality/SKILL.md) | sí | brand-strategist |  | brand-personality: Brand Intelligence. Usar para producir personality_traits, behaviors, boundaries a partir de plataforma, audiencia, co… |
+| [brand-positioning](skills/brand-positioning/SKILL.md) | sí | brand-strategist |  | brand-positioning: Brand Intelligence. Usar para producir brand_position, reasons_to_believe, validation a partir de marca, audiencia, al… |
+| [brand-quality-assurance](skills/brand-quality-assurance/SKILL.md) | — | — |  | brand-quality-assurance: Brand Intelligence. Usar para producir brand_findings, corrections, verdict a partir de piezas, guideline vigent… |
+| [brand-research](skills/brand-research/SKILL.md) | — | — |  | brand-research: Brand Intelligence. Usar para producir brand_audit, perception_evidence, gaps a partir de marca, mercado, audiencia, acti… |
+| [brand-storytelling](skills/brand-storytelling/SKILL.md) | — | — |  | brand-storytelling: Brand Intelligence. Usar para producir narrative, verified_claims, content_routes a partir de hechos de origen/proces… |
+| [brand-strategy](skills/brand-strategy/SKILL.md) | sí | brand-strategist |  | brand-strategy: Brand Intelligence. Usar para producir brand_platform, promises, proof a partir de estrategia negocio, audiencia, valor, … |
+| [brand-voice](skills/brand-voice/SKILL.md) | sí | brand-strategist, content-designer |  | brand-voice: Brand Intelligence. Usar para producir voice_rules, tone_matrix, examples a partir de personalidad, públicos, canales, ejemp… |
+| [break-even-analysis](skills/break-even-analysis/SKILL.md) | — | — |  | break-even-analysis: Financial Intelligence. Usar para producir break_even_units, break_even_revenue, conditions a partir de precio neto,… |
+| [business-decision-gates](skills/business-decision-gates/SKILL.md) | sí | experience-director |  | business-decision-gates: Orchestration. Usar para producir gate, evidence, assumptions, risks, kpis, missing_information, recommendation … |
+| [business-diagnostic](skills/business-diagnostic/SKILL.md) | — | — |  | business-diagnostic: Business Intelligence. Usar para producir current_state, root_cause_hypotheses, prioritized_actions a partir de brie… |
+| [business-health-assessment](skills/business-health-assessment/SKILL.md) | — | — |  | business-health-assessment: Business Intelligence. Usar para producir health_dimensions, red_flags, monitoring_plan a partir de periodos … |
+| [business-model-analysis](skills/business-model-analysis/SKILL.md) | — | — |  | business-model-analysis: Business Intelligence. Usar para producir model_map, dependencies, vulnerabilities a partir de oferta, segmentos… |
+| [business-model-design](skills/business-model-design/SKILL.md) | — | — |  | business-model-design: Venture Building. Usar para producir model_options, economics_hypotheses, operating_requirements a partir de valor… |
+| [business-model-validation](skills/business-model-validation/SKILL.md) | — | — |  | business-model-validation: Venture Building. Usar para producir hypothesis_results, model_changes, viability_limits a partir de modelo, s… |
+| [business-strategy](skills/business-strategy/SKILL.md) | sí | business-strategist |  | business-strategy: Business Intelligence. Usar para producir strategic_choices, tradeoffs, outcome_map a partir de diagnóstico, objetivos… |
+| [buyer-persona](skills/buyer-persona/SKILL.md) | sí | business-strategist |  | buyer-persona: Marketing Intelligence. Usar para producir evidence_persona, goals, barriers a partir de segmento, entrevistas/datos, deci… |
+| [campaign-concept](skills/campaign-concept/SKILL.md) | — | — |  | campaign-concept: Creative Intelligence. Usar para producir campaign_idea, channel_expressions, test a partir de brief, audiencia, oferta… |
+| [capacity-planning](skills/capacity-planning/SKILL.md) | — | — |  | capacity-planning: Operations & Logistics. Usar para producir capacity_model, bottleneck, scenarios a partir de demanda, recursos, tiempo… |
+| [capital-requirements](skills/capital-requirements/SKILL.md) | — | — |  | capital-requirements: Venture Building. Usar para producir capital_schedule, funding_gap, sensitivity a partir de inversión inicial, gast… |
+| [cash-flow-analysis](skills/cash-flow-analysis/SKILL.md) | — | — |  | cash-flow-analysis: Financial Intelligence. Usar para producir cash_schedule, closing_balance, liquidity_gaps a partir de cobros/pagos, s… |
+| [challenger-selling](skills/challenger-selling/SKILL.md) | — | — |  | challenger-selling: Sales Intelligence. Usar para producir teaching_insight, tailored_message, next_step a partir de problema B2B, insigh… |
+| [channel-expansion](skills/channel-expansion/SKILL.md) | — | — |  | channel-expansion: Growth & Scaling. Usar para producir channel_options, pilot, conflict_controls a partir de canal actual, clientes, cos… |
+| [cicd-security](skills/cicd-security/SKILL.md) | — | — |  | cicd-security: Cybersecurity. Usar para producir pipeline_risks, controls, verification a partir de pipeline, repos, secretos, artifacts,… |
+| [cinematic-direction](skills/cinematic-direction/SKILL.md) | sí | creative-director, motion-designer |  | cinematic-direction: Creative Intelligence. Usar para producir cinematic_brief, camera_plan, continuity a partir de guion, marca, recurso… |
+| [cloud-security](skills/cloud-security/SKILL.md) | — | — |  | cloud-security: Cybersecurity. Usar para producir cloud_review, misconfigurations, actions a partir de proveedor, recursos, permisos, red… |
+| [cold-outbound-system](skills/cold-outbound-system/SKILL.md) | — | — |  | Investiga y prepara prospección B2B personalizada y verificable con fuentes públicas permitidas, produce borradores de correo y seguimien… |
+| [color-system](skills/color-system/SKILL.md) | sí | ui-designer |  | color-system: Brand Intelligence. Usar para producir palette, semantic_tokens, contrast_checks a partir de marca, contextos, estados, con… |
+| [company-builder-orchestrator](skills/company-builder-orchestrator/SKILL.md) | — | — |  | Usa esta skill como orquestador principal al recibir un nuevo cliente o requerimiento en Altiora OS. Determina escenarios de diagnóstico … |
+| [competitive-intelligence](skills/competitive-intelligence/SKILL.md) | — | — |  | competitive-intelligence: Business Intelligence. Usar para producir intelligence_plan, signals, alerts a partir de decisiones estratégica… |
+| [competitor-analysis](skills/competitor-analysis/SKILL.md) | — | — |  | competitor-analysis: Business Intelligence. Usar para producir comparison_matrix, differentiation_gaps a partir de competidores directos/… |
+| [consumer-behavior](skills/consumer-behavior/SKILL.md) | — | — |  | consumer-behavior: Business Intelligence. Usar para producir behavior_model, barriers, hypotheses a partir de categoría, contexto de comp… |
+| [consumer-psychology](skills/consumer-psychology/SKILL.md) | — | — |  | Diseña mensajes, ofertas y funnels apoyados en psicología del consumidor y economía conductual (Cialdini, Byron Sharp, Seth Godin) con pe… |
+| [content-strategy](skills/content-strategy/SKILL.md) | sí | content-designer |  | content-strategy: Marketing Intelligence. Usar para producir content_pillars, plan, measurement a partir de posicionamiento, journey, can… |
+| [context-engineering](skills/context-engineering/SKILL.md) | — | — |  | context-engineering: AI & Automation. Usar para producir context_pack, provenance, refresh_rules a partir de objetivo, fuentes, límites, … |
+| [conversion-analysis](skills/conversion-analysis/SKILL.md) | sí | growth-analyst |  | conversion-analysis: Marketing Intelligence. Usar para producir funnel_rates, leakage, data_quality a partir de eventos, denominadores, p… |
+| [conversion-rate-optimization](skills/conversion-rate-optimization/SKILL.md) | sí | growth-analyst |  | conversion-rate-optimization: Marketing Intelligence. Usar para producir cro_backlog, experiment, outcome a partir de funnel, eventos fia… |
+| [conversion-ux](skills/conversion-ux/SKILL.md) | sí | ux-researcher |  | conversion-ux: Premium Web Experience. Usar para producir conversion_flow, trust_content, test_plan a partir de oferta, flujo, fricciones… |
+| [copywriting](skills/copywriting/SKILL.md) | sí | content-designer |  | copywriting: Marketing Intelligence. Usar para producir copy_variants, claim_sources, rationale a partir de audiencia, oferta, evidencia,… |
+| [cost-analysis](skills/cost-analysis/SKILL.md) | — | — |  | cost-analysis: Financial Intelligence. Usar para producir cost_structure, drivers, allocation_rules a partir de costos, drivers, volúmene… |
+| [cost-to-serve](skills/cost-to-serve/SKILL.md) | — | — |  | cost-to-serve: Operations & Logistics. Usar para producir service_cost, allocation, decisions a partir de pedidos/clientes, tiempos, tran… |
+| [creative-direction](skills/creative-direction/SKILL.md) | sí | creative-director |  | creative-direction: Creative Intelligence. Usar para producir creative_routes, production_rules, recommendation a partir de brief, marca,… |
+| [creative-quality-assurance](skills/creative-quality-assurance/SKILL.md) | sí | creative-director |  | creative-quality-assurance: Creative Intelligence. Usar para producir creative_review, defects, fixes a partir de piezas, brief, marca, f… |
+| [creative-strategy](skills/creative-strategy/SKILL.md) | — | — |  | creative-strategy: Creative Intelligence. Usar para producir creative_brief, message, success_criteria a partir de objetivo, insight, aud… |
+| [cro](skills/cro/SKILL.md) | — | — | coreyhaines31/marketingskills | When the user wants to optimize, improve, or increase conversions on any marketing page or form — including homepage, landing pages, pric… |
+| [cross-selling](skills/cross-selling/SKILL.md) | — | — |  | cross-selling: Sales Intelligence. Usar para producir complementary_offer, suitability, message a partir de compra/uso actual, necesidad … |
+| [customer-acquisition](skills/customer-acquisition/SKILL.md) | — | — |  | customer-acquisition: Growth & Scaling. Usar para producir acquisition_tests, cac, learning a partir de ICP, propuesta, canales, cohortes… |
+| [customer-discovery](skills/customer-discovery/SKILL.md) | — | — |  | customer-discovery: Venture Building. Usar para producir interview_plan, behavior_notes, learning a partir de hipótesis, segmento, guía, … |
+| [customer-journey](skills/customer-journey/SKILL.md) | sí | ux-researcher |  | customer-journey: Marketing Intelligence. Usar para producir journey_map, friction, opportunities a partir de segmento, tareas, puntos de… |
+| [customer-research](skills/customer-research/SKILL.md) | — | — |  | customer-research: Business Intelligence. Usar para producir research_protocol, observations, findings a partir de preguntas, segmento, a… |
+| [customer-success](skills/customer-success/SKILL.md) | — | — |  | customer-success: Sales Intelligence. Usar para producir success_plan, health_signals, interventions a partir de promesa vendida, onboard… |
+| [customer-value-architect](skills/customer-value-architect/SKILL.md) | — | — |  | Framework universal y filosofía de diseño para aportar valor tangible inmediato al cliente final y maximizar la captación de leads en CUA… |
+| [cybersecurity-owasp](skills/cybersecurity-owasp/SKILL.md) | — | — |  | Coordina una revisión de seguridad de aplicaciones web con OWASP Top 10 (2021) y ASVS como marco, priorizando riesgos por impacto. Usar c… |
+| [demand-planning](skills/demand-planning/SKILL.md) | — | — |  | demand-planning: Operations & Logistics. Usar para producir demand_scenarios, consensus_plan, review a partir de demanda, promociones, ca… |
+| [dependency-security](skills/dependency-security/SKILL.md) | — | — |  | dependency-security: Cybersecurity. Usar para producir dependency_findings, upgrade_plan, retest a partir de manifest/lockfile, advisorie… |
+| [design-system](skills/design-system/SKILL.md) | sí | ui-designer |  | design-system: Premium Web Experience. Usar para producir tokens, components, guidelines a partir de producto, componentes, marca, stack,… |
+| [elite-web-experience-os](skills/elite-web-experience-os/SKILL.md) | sí | experience-director |  | Production workflow, creative art direction, motion guidelines, performance budgets, and quality scorecard from Elite Web Experience OS. … |
+| [email-marketing](skills/email-marketing/SKILL.md) | — | — |  | email-marketing: Marketing Intelligence. Usar para producir email_plan, drafts, suppression_rules a partir de audiencia consentida, ofert… |
+| [emails](skills/emails/SKILL.md) | sí | content-designer | coreyhaines31/marketingskills | When the user wants to create or optimize an email sequence, drip campaign, automated email flow, or lifecycle email program. Also use wh… |
+| [enterprise-growth-orchestrator](skills/enterprise-growth-orchestrator/SKILL.md) | — | — |  | enterprise-growth-orchestrator: Orchestration. Usar para producir growth_route, scale_constraints, staged_plan a partir de estrategia, ec… |
+| [ethical-influence](skills/ethical-influence/SKILL.md) | — | — |  | ethical-influence: Sales Intelligence. Usar para producir persuasion_options, evidence_checks, test a partir de audiencia, mensaje, evide… |
+| [events](skills/events/SKILL.md) | sí | growth-analyst | coreyhaines31/marketingskills | When the user wants to plan, run, sponsor, speak at, or get pipeline from events — webinars, conferences, trade shows, meetups, dinners, … |
+| [facebook-growth](skills/facebook-growth/SKILL.md) | — | — |  | facebook-growth: Marketing Intelligence. Usar para producir facebook_plan, community_tests, measures a partir de cuenta/página, mercado, … |
+| [fanatical-prospecting](skills/fanatical-prospecting/SKILL.md) | — | — |  | fanatical-prospecting: Sales Intelligence. Usar para producir prospecting_blocks, channel_mix, tracking a partir de ICP, capacidad, canal… |
+| [financial-diagnostic](skills/financial-diagnostic/SKILL.md) | — | — |  | financial-diagnostic: Financial Intelligence. Usar para producir reconciled_snapshot, red_flags, missing_data a partir de estados/registr… |
+| [financial-forecasting](skills/financial-forecasting/SKILL.md) | sí | business-strategist |  | Construye proyecciones financieras con tres escenarios (Conservador, Base, Optimista), unit economics, punto de equilibrio y necesidad de… |
+| [free-tools](skills/free-tools/SKILL.md) | — | — | coreyhaines31/marketingskills | When the user wants to plan, evaluate, or build a free tool for marketing purposes — lead generation, SEO value, or brand awareness. Also… |
+| [frontend-design](skills/frontend-design/SKILL.md) | sí | ui-designer |  | Guidance for distinctive, intentional visual design and interactive UI craftsmanship when building new web experiences or reshaping exist… |
+| [frontend-security](skills/frontend-security/SKILL.md) | sí | web-engineer |  | frontend-security: Cybersecurity. Usar para producir frontend_findings, fixes, tests a partir de cliente, render, entradas, sesiones, CSP… |
+| [funding-strategy](skills/funding-strategy/SKILL.md) | — | — |  | funding-strategy: Venture Building. Usar para producir funding_options, tradeoffs, verification_tasks a partir de necesidad, etapa, terri… |
+| [gap-selling](skills/gap-selling/SKILL.md) | — | — |  | gap-selling: Sales Intelligence. Usar para producir current_future_gap, value_case, open_questions a partir de estado actual, estado dese… |
+| [geographic-expansion](skills/geographic-expansion/SKILL.md) | — | — |  | geographic-expansion: Growth & Scaling. Usar para producir zone_options, pilot, viability a partir de zonas, demanda, rutas, servicio, co… |
+| [go-to-market](skills/go-to-market/SKILL.md) | — | — |  | go-to-market: Orchestration. Usar para producir gtm_plan, handoffs, launch_gates a partir de oferta validada, segmento, economía, canales… |
+| [growth-experimentation](skills/growth-experimentation/SKILL.md) | sí | growth-analyst |  | growth-experimentation: Marketing Intelligence. Usar para producir experiment_design, results, learning a partir de hipótesis, funnel, ba… |
+| [growth-strategy](skills/growth-strategy/SKILL.md) | — | — |  | growth-strategy: Growth & Scaling. Usar para producir growth_levers, priorities, safeguards a partir de demanda, economía, capacidad, fun… |
+| [gsap-animation](skills/gsap-animation/SKILL.md) | sí | motion-designer |  | gsap-animation: Premium Web Experience. Usar para producir animation_code, cleanup, verification a partir de repo, versiones, elementos, … |
+| [high-ticket-offer](skills/high-ticket-offer/SKILL.md) | — | — |  | Empaqueta servicios de sitio web y automatización en una propuesta B2B de alto valor, con alcance, precio sustentable, evidencia, hitos, … |
+| [high-value-deliberation](skills/high-value-deliberation/SKILL.md) | — | — |  | Analizar preguntas, problemas y decisiones con perspectivas pertinentes, crítica concreta, evidencia verificable y una conclusión integra… |
+| [human-in-the-loop](skills/human-in-the-loop/SKILL.md) | sí | experience-director |  | human-in-the-loop: AI & Automation. Usar para producir review_gates, escalation, fallback a partir de acciones críticas, roles, tiempos, … |
+| [immersive-commerce](skills/immersive-commerce/SKILL.md) | — | — |  | Diseñar, implementar y optimizar experiencias web inmersivas orientadas a ventas, con branding premium, UX/UI, GSAP/WebGL/Three.js, rendi… |
+| [immersive-web-design](skills/immersive-web-design/SKILL.md) | — | — |  | immersive-web-design: Premium Web Experience. Usar para producir immersive_concept, interaction_map, fallback a partir de narrativa, marc… |
+| [incident-response](skills/incident-response/SKILL.md) | — | — |  | incident-response: Cybersecurity. Usar para producir incident_timeline, containment_options, recovery_plan a partir de incidente, autorid… |
+| [industry-analysis](skills/industry-analysis/SKILL.md) | — | — |  | industry-analysis: Business Intelligence. Usar para producir industry_map, structural_forces, implications a partir de industria delimita… |
+| [information-architecture](skills/information-architecture/SKILL.md) | sí | ux-researcher |  | information-architecture: Premium Web Experience. Usar para producir sitemap, taxonomy, navigation_rules a partir de contenido, tareas, a… |
+| [instagram-growth](skills/instagram-growth/SKILL.md) | — | — |  | instagram-growth: Marketing Intelligence. Usar para producir instagram_plan, format_tests, funnel a partir de cuenta/datos autorizados, a… |
+| [international-expansion](skills/international-expansion/SKILL.md) | — | — |  | international-expansion: Growth & Scaling. Usar para producir country_research, requirements, staged_plan a partir de mercado destino, pr… |
+| [inventory-forecasting](skills/inventory-forecasting/SKILL.md) | — | — |  | inventory-forecasting: Operations & Logistics. Usar para producir inventory_forecast, uncertainty, replenishment a partir de ventas/consu… |
+| [inventory-management](skills/inventory-management/SKILL.md) | — | — |  | inventory-management: Operations & Logistics. Usar para producir stock_model, reconciliation, controls a partir de SKUs, unidades, stock … |
+| [investment-analysis](skills/investment-analysis/SKILL.md) | — | — |  | investment-analysis: Financial Intelligence. Usar para producir investment_cases, sensitivity, recommendation a partir de desembolsos, fl… |
+| [knowledge-retrieval](skills/knowledge-retrieval/SKILL.md) | — | — |  | knowledge-retrieval: AI & Automation. Usar para producir retrieved_evidence, provenance, gaps a partir de pregunta, fuentes/corpus, permi… |
+| [launch-readiness](skills/launch-readiness/SKILL.md) | sí | experience-director |  | launch-readiness: Venture Building. Usar para producir readiness_checks, blockers, launch_plan a partir de oferta, operación, calidad, me… |
+| [lead-generation](skills/lead-generation/SKILL.md) | — | — |  | lead-generation: Marketing Intelligence. Usar para producir lead_system, capture_fields, handoff a partir de ICP, propuesta, canal, calif… |
+| [lead-magnets](skills/lead-magnets/SKILL.md) | — | — | coreyhaines31/marketingskills | When the user wants to create, plan, or optimize a lead magnet for email capture or lead generation. Also use when the user mentions "lea… |
+| [lead-qualification](skills/lead-qualification/SKILL.md) | — | — |  | lead-qualification: Sales Intelligence. Usar para producir qualification, disqualifiers, next_action a partir de ICP, señal de necesidad,… |
+| [local-seo](skills/local-seo/SKILL.md) | sí | content-designer |  | local-seo: Marketing Intelligence. Usar para producir local_presence_plan, consistency, measures a partir de ubicación/servicio, datos ne… |
+| [logistics](skills/logistics/SKILL.md) | — | — |  | logistics: Operations & Logistics. Usar para producir fulfillment_process, service_rules, costs a partir de pedidos, cobertura, horarios,… |
+| [logistics-supply-chain](skills/logistics-supply-chain/SKILL.md) | — | — |  | Diagnostica y mejora operaciones de inventario, merma, rutas de distribución y proveedores con Teoría de Restricciones (The Goal) y Lean … |
+| [ltv-optimization](skills/ltv-optimization/SKILL.md) | sí | growth-analyst |  | ltv-optimization: Growth & Scaling. Usar para producir ltv_model, levers, uncertainty a partir de cohortes, margen, retención, horizonte,… |
+| [margin-analysis](skills/margin-analysis/SKILL.md) | — | — |  | margin-analysis: Financial Intelligence. Usar para producir margin_bridge, contribution, reconciliation a partir de ingresos netos, costo… |
+| [market-development](skills/market-development/SKILL.md) | — | — |  | market-development: Growth & Scaling. Usar para producir market_options, validation, entry_plan a partir de oferta vigente, mercados nuev… |
+| [market-penetration](skills/market-penetration/SKILL.md) | — | — |  | market-penetration: Growth & Scaling. Usar para producir penetration_options, tests, risks a partir de mercado actual, cuota/evidencia, c… |
+| [market-research](skills/market-research/SKILL.md) | sí | business-strategist |  | market-research: Business Intelligence. Usar para producir evidence_matrix, insights, research_gaps a partir de pregunta, mercado, geogra… |
+| [market-segmentation](skills/market-segmentation/SKILL.md) | — | — |  | market-segmentation: Marketing Intelligence. Usar para producir segments, criteria, validation a partir de mercado, necesidades, comporta… |
+| [market-sizing](skills/market-sizing/SKILL.md) | — | — |  | market-sizing: Business Intelligence. Usar para producir tam_sam_som, calculation, sensitivity a partir de segmento, territorio, unidad d… |
+| [market-validation](skills/market-validation/SKILL.md) | — | — |  | market-validation: Venture Building. Usar para producir validation_experiment, demand_signals, verdict a partir de oferta, segmento, cana… |
+| [marketing-analytics](skills/marketing-analytics/SKILL.md) | sí | growth-analyst |  | marketing-analytics: Marketing Intelligence. Usar para producir measurement_model, reconciliation, insights a partir de objetivos, fuente… |
+| [marketing-psychology](skills/marketing-psychology/SKILL.md) | — | — | coreyhaines31/marketingskills | When the user wants to apply psychological principles, mental models, or behavioral science to marketing. Also use when the user mentions… |
+| [marketing-strategy](skills/marketing-strategy/SKILL.md) | — | — |  | marketing-strategy: Marketing Intelligence. Usar para producir demand_strategy, channel_choices, measurement a partir de objetivos, segme… |
+| [mcp-integration](skills/mcp-integration/SKILL.md) | — | — |  | mcp-integration: AI & Automation. Usar para producir mcp_contract, auth_plan, tests a partir de cliente/servidor, versión, herramientas, … |
+| [meddicc](skills/meddicc/SKILL.md) | — | — |  | meddicc: Sales Intelligence. Usar para producir qualification_dimensions, evidence_gaps, deal_plan a partir de oportunidad B2B, métricas,… |
+| [meta-ads-creator](skills/meta-ads-creator/SKILL.md) | — | — |  | Convierte un brief aprobado en variantes de anuncios para Meta con hook, body, CTA, concepto visual y plan de prueba, señalando claims y … |
+| [modular-docs-architect](skills/modular-docs-architect/SKILL.md) | — | — |  | Divide documentación Markdown monolítica en módulos ligeros con divulgación progresiva (índice, módulos y anexos bajo demanda) para reduc… |
+| [mom-test-interviewing](skills/mom-test-interviewing/SKILL.md) | — | — |  | mom-test-interviewing: Sales Intelligence. Usar para producir interview_questions, past_behavior, commitments a partir de hipótesis, acce… |
+| [motion-design](skills/motion-design/SKILL.md) | sí | motion-designer |  | motion-design: Premium Web Experience. Usar para producir motion_spec, states, alternatives a partir de tarea, UI/escena, ritmo, marca; n… |
+| [n8n-webhook-architect](skills/n8n-webhook-architect/SKILL.md) | — | — |  | Diseña y documenta el flujo CRM Web → n8n → WhatsApp con validación, idempotencia, consentimiento, reintentos, observabilidad y plan de p… |
+| [negotiation](skills/negotiation/SKILL.md) | — | — |  | negotiation: Sales Intelligence. Usar para producir negotiation_plan, concessions, approval_points a partir de intereses, alternativas, l… |
+| [nextjs-architecture](skills/nextjs-architecture/SKILL.md) | sí | web-engineer |  | nextjs-architecture: Premium Web Experience. Usar para producir architecture, boundaries, implementation_plan a partir de repo/versiones,… |
+| [offers](skills/offers/SKILL.md) | sí | business-strategist | coreyhaines31/marketingskills | When the user wants to design, construct, or improve an offer — the thing they actually sell — including value framing, bonus stacking, g… |
+| [operational-kpis](skills/operational-kpis/SKILL.md) | — | — |  | operational-kpis: Operations & Logistics. Usar para producir kpi_dictionary, capture_plan, review a partir de objetivos, proceso, datos, … |
+| [operational-risk](skills/operational-risk/SKILL.md) | — | — |  | operational-risk: Operations & Logistics. Usar para producir operational_risks, contingencies, triggers a partir de procesos, fallos, exp… |
+| [operational-scalability](skills/operational-scalability/SKILL.md) | — | — |  | operational-scalability: Growth & Scaling. Usar para producir scale_constraints, systems, milestones a partir de demanda, capacidad, proc… |
+| [opportunity-analysis](skills/opportunity-analysis/SKILL.md) | — | — |  | opportunity-analysis: Business Intelligence. Usar para producir opportunity_matrix, recommendation, validation_plan a partir de alternati… |
+| [opportunity-discovery](skills/opportunity-discovery/SKILL.md) | — | — |  | opportunity-discovery: Venture Building. Usar para producir opportunity_hypotheses, discovery_questions a partir de capacidades, problema… |
+| [organizational-scalability](skills/organizational-scalability/SKILL.md) | — | — |  | organizational-scalability: Growth & Scaling. Usar para producir role_design, delegation, governance a partir de roles, decisiones, carga… |
+| [owasp-review](skills/owasp-review/SKILL.md) | sí | qa-reviewer |  | owasp-review: Cybersecurity. Usar para producir owasp_findings, mappings, remediation a partir de app/repo, alcance, versión estándar, ev… |
+| [paid-media](skills/paid-media/SKILL.md) | — | — |  | paid-media: Marketing Intelligence. Usar para producir campaign_plan, spend_limits, experiment a partir de objetivo, oferta, presupuesto … |
+| [photography-direction](skills/photography-direction/SKILL.md) | sí | creative-director |  | photography-direction: Brand Intelligence. Usar para producir photo_brief, shot_list, rights a partir de posicionamiento, producto, medio… |
+| [positioning](skills/positioning/SKILL.md) | — | — |  | positioning: Marketing Intelligence. Usar para producir positioning_statement, differentiators, proof a partir de audiencia, alternativas… |
+| [premium-branding](skills/premium-branding/SKILL.md) | sí | brand-strategist |  | Define una identidad de marca premium completa (posicionamiento, arquetipo, narrativa StoryBrand, voz, dirección visual y pilares de cont… |
+| [premium-digital-experience-builder](skills/premium-digital-experience-builder/SKILL.md) | — | — |  | premium-digital-experience-builder: Orchestration. Usar para producir experience_plan, verified_increment, qa a partir de estrategia, UX,… |
+| [pricing](skills/pricing/SKILL.md) | sí | business-strategist |  | pricing: Financial Intelligence. Usar para producir pricing_options, floor, test_plan a partir de costos, alternativas, valor, restriccio… |
+| [pricing-optimization](skills/pricing-optimization/SKILL.md) | — | — |  | pricing-optimization: Growth & Scaling. Usar para producir price_tests, safeguards, outcome a partir de precio vigente, elasticidad/evide… |
+| [privacy-engineering](skills/privacy-engineering/SKILL.md) | — | — |  | privacy-engineering: Cybersecurity. Usar para producir data_map, minimization, retention_controls a partir de datos, propósito, usuarios,… |
+| [problem-centric-selling](skills/problem-centric-selling/SKILL.md) | — | — |  | problem-centric-selling: Sales Intelligence. Usar para producir problem_solution_map, fit, discovery_gaps a partir de problema, causa/imp… |
+| [problem-validation](skills/problem-validation/SKILL.md) | — | — |  | problem-validation: Venture Building. Usar para producir problem_evidence, disconfirmation, verdict a partir de problema supuesto, segmen… |
+| [process-mapping](skills/process-mapping/SKILL.md) | — | — |  | process-mapping: Operations & Logistics. Usar para producir as_is_map, handoffs, exceptions a partir de actores, entradas/salidas, pasos,… |
+| [process-optimization](skills/process-optimization/SKILL.md) | — | — |  | process-optimization: Operations & Logistics. Usar para producir root_causes, to_be_process, pilot a partir de mapa actual, tiempos, erro… |
+| [procurement](skills/procurement/SKILL.md) | — | — |  | procurement: Operations & Logistics. Usar para producir purchase_plan, comparisons, approvals a partir de necesidades, inventario, provee… |
+| [product-expansion](skills/product-expansion/SKILL.md) | — | — |  | product-expansion: Growth & Scaling. Usar para producir product_options, validation, dependencies a partir de clientes, necesidades, port… |
+| [product-market-fit-research](skills/product-market-fit-research/SKILL.md) | — | — |  | product-market-fit-research: Venture Building. Usar para producir pmf_signals, cohort_analysis, limitations a partir de cohortes, uso, re… |
+| [product-photography-direction](skills/product-photography-direction/SKILL.md) | sí | visual-producer |  | product-photography-direction: Creative Intelligence. Usar para producir product_shots, lighting, fidelity_checks a partir de producto, a… |
+| [profitability-analysis](skills/profitability-analysis/SKILL.md) | — | — |  | profitability-analysis: Financial Intelligence. Usar para producir profit_by_segment, drivers, actions a partir de ingresos, costos, cana… |
+| [prompt-engineering](skills/prompt-engineering/SKILL.md) | — | — |  | prompt-engineering: AI & Automation. Usar para producir prompt, variants, evaluation a partir de tarea, modelo disponible, ejemplos, crit… |
+| [prospecting](skills/prospecting/SKILL.md) | — | — |  | prospecting: Sales Intelligence. Usar para producir prospecting_plan, contact_criteria, drafts a partir de ICP, oferta, canales permitido… |
+| [quality-council](skills/quality-council/SKILL.md) | sí | experience-director |  | quality-council: Orchestration. Usar para producir selected_reviewers, independent_findings, verdict a partir de resultado, criterios, ri… |
+| [quality-management](skills/quality-management/SKILL.md) | — | — |  | quality-management: Operations & Logistics. Usar para producir quality_controls, corrective_actions, monitoring a partir de promesa, proc… |
+| [rag-architecture](skills/rag-architecture/SKILL.md) | — | — |  | rag-architecture: AI & Automation. Usar para producir rag_design, retrieval_eval, data_controls a partir de corpus autorizado, preguntas,… |
+| [react-three-fiber](skills/react-three-fiber/SKILL.md) | sí | web-engineer |  | react-three-fiber: Premium Web Experience. Usar para producir canvas_components, resource_lifecycle, checks a partir de React/R3F version… |
+| [referrals](skills/referrals/SKILL.md) | sí | growth-analyst | coreyhaines31/marketingskills | When the user wants to create, optimize, or analyze a referral program, affiliate program, or word-of-mouth strategy. Also use when the u… |
+| [responsive-design](skills/responsive-design/SKILL.md) | sí | ui-designer |  | responsive-design: Premium Web Experience. Usar para producir responsive_rules, fixes, verification a partir de UI, contenido, dispositiv… |
+| [retention](skills/retention/SKILL.md) | sí | growth-analyst |  | retention: Sales Intelligence. Usar para producir retention_diagnosis, interventions, measures a partir de cohortes, compras/uso, churn, … |
+| [revenue-growth](skills/revenue-growth/SKILL.md) | — | — |  | revenue-growth: Growth & Scaling. Usar para producir revenue_bridge, levers, experiments a partir de ingresos por drivers, segmentos, cos… |
+| [revenue-intelligence](skills/revenue-intelligence/SKILL.md) | — | — |  | revenue-intelligence: Orchestration. Usar para producir revenue_diagnosis, cross_team_actions, experiments a partir de funnel, ventas, ma… |
+| [risk-analysis](skills/risk-analysis/SKILL.md) | — | — |  | risk-analysis: Business Intelligence. Usar para producir risk_register, mitigation, residual_risk a partir de objetivo, activos/procesos,… |
+| [route-optimization](skills/route-optimization/SKILL.md) | — | — |  | route-optimization: Operations & Logistics. Usar para producir route_options, feasibility, assumptions a partir de destinos consentidos, … |
+| [sales-discovery](skills/sales-discovery/SKILL.md) | — | — |  | sales-discovery: Sales Intelligence. Usar para producir discovery_questions, buyer_evidence, next_step a partir de oferta, contexto del c… |
+| [sales-follow-up](skills/sales-follow-up/SKILL.md) | — | — |  | sales-follow-up: Sales Intelligence. Usar para producir followup_draft, cadence, stop_rules a partir de interacción previa, consentimient… |
+| [sales-objection-analysis](skills/sales-objection-analysis/SKILL.md) | — | — |  | sales-objection-analysis: Sales Intelligence. Usar para producir objection_hypotheses, clarification, response_options a partir de objeci… |
+| [sales-proposal](skills/sales-proposal/SKILL.md) | — | — |  | sales-proposal: Sales Intelligence. Usar para producir proposal, options, acceptance_terms a partir de problema validado, alcance, oferta… |
+| [scaling-readiness](skills/scaling-readiness/SKILL.md) | — | — |  | scaling-readiness: Growth & Scaling. Usar para producir readiness_dimensions, blockers, staged_scale a partir de demanda validada, econom… |
+| [scenario-planning](skills/scenario-planning/SKILL.md) | — | — |  | scenario-planning: Financial Intelligence. Usar para producir scenarios, sensitivities, triggers a partir de decisión, incertidumbres, dr… |
+| [schema](skills/schema/SKILL.md) | sí | content-designer | coreyhaines31/marketingskills | When the user wants to add, fix, or optimize schema markup and structured data on their site. Also use when the user mentions "schema mar… |
+| [scriptwriting](skills/scriptwriting/SKILL.md) | — | — |  | scriptwriting: Creative Intelligence. Usar para producir script, timing, production_notes a partir de concepto, duración, canal, mensaje,… |
+| [scroll-experience](skills/scroll-experience/SKILL.md) | sí | motion-designer |  | scroll-experience: Premium Web Experience. Usar para producir scroll_behavior, skip_paths, checks a partir de narrativa, navegación, disp… |
+| [secrets-management](skills/secrets-management/SKILL.md) | — | — |  | secrets-management: Cybersecurity. Usar para producir secret_locations, remediation, rotation_plan a partir de inventario claves sin valo… |
+| [secure-development](skills/secure-development/SKILL.md) | sí | web-engineer |  | secure-development: Cybersecurity. Usar para producir secure_controls, fixes, verification a partir de repo, stack, datos, alcance autori… |
+| [security-requirements](skills/security-requirements/SKILL.md) | — | — |  | security-requirements: Cybersecurity. Usar para producir security_requirements, acceptance_tests, owners a partir de activos, flujos, dat… |
+| [security-testing](skills/security-testing/SKILL.md) | sí | qa-reviewer |  | security-testing: Cybersecurity. Usar para producir test_plan, evidence, remediation a partir de scope escrito, entorno, controles, límit… |
+| [seo](skills/seo/SKILL.md) | sí | content-designer |  | seo: Marketing Intelligence. Usar para producir seo_plan, prioritized_fixes, measurement a partir de sitio/contenido, audiencia, consulta… |
+| [seo-audit](skills/seo-audit/SKILL.md) | — | — |  | seo-audit: Marketing Intelligence. Usar para producir audit_findings, evidence, remediation a partir de dominio, páginas, acceso/alcance,… |
+| [skill-creator](skills/skill-creator/SKILL.md) | — | — | anthropics/skills | Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch,… |
+| [smart-model-router](skills/smart-model-router/SKILL.md) | — | — |  | Intelligent AI model routing, token cost optimization, and multi-tier task delegation based on complexity (inspired by RouteLLM, FrugalGP… |
+| [social-creative](skills/social-creative/SKILL.md) | — | — |  | social-creative: Creative Intelligence. Usar para producir social_variants, platform_fit, tests a partir de canal, audiencia, marca, mens… |
+| [social-media-strategy](skills/social-media-strategy/SKILL.md) | — | — |  | social-media-strategy: Marketing Intelligence. Usar para producir channel_roles, content_system, measurement a partir de audiencia, marca… |
+| [spin-selling](skills/spin-selling/SKILL.md) | — | — |  | Estructura conversaciones de venta consultiva compleja con el método SPIN de Neil Rackham (Situación, Problema, Implicación, Necesidad-be… |
+| [storyboarding](skills/storyboarding/SKILL.md) | sí | creative-director |  | storyboarding: Creative Intelligence. Usar para producir storyboard, shot_sequence, continuity a partir de guion, formato, duración, recu… |
+| [strategic-planning](skills/strategic-planning/SKILL.md) | — | — |  | strategic-planning: Business Intelligence. Usar para producir milestones, initiatives, kpis, dependencies a partir de estrategia vigente,… |
+| [supplier-evaluation](skills/supplier-evaluation/SKILL.md) | — | — |  | supplier-evaluation: Operations & Logistics. Usar para producir supplier_scorecard, risks, actions a partir de proveedores, criterios, en… |
+| [supply-chain](skills/supply-chain/SKILL.md) | — | — |  | supply-chain: Operations & Logistics. Usar para producir supply_network, vulnerabilities, resilience a partir de red proveedores, flujos,… |
+| [systematic-debugging](skills/systematic-debugging/SKILL.md) | sí | web-engineer | obra/superpowers | Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes |
+| [targeting](skills/targeting/SKILL.md) | — | — |  | targeting: Marketing Intelligence. Usar para producir target_priorities, exclusions, rationale a partir de segmentos, economía, acceso, c… |
+| [technical-seo](skills/technical-seo/SKILL.md) | — | — |  | technical-seo: Premium Web Experience. Usar para producir technical_findings, fixes, validation a partir de sitio, rutas, render, acceso,… |
+| [threat-modeling](skills/threat-modeling/SKILL.md) | — | — |  | threat-modeling: Cybersecurity. Usar para producir threat_model, scenarios, mitigations a partir de arquitectura, activos, actores, bound… |
+| [threejs-experience](skills/threejs-experience/SKILL.md) | sí | motion-designer, web-engineer |  | threejs-experience: Premium Web Experience. Usar para producir scene_code, loading_plan, fallback a partir de escena, assets, dispositivo… |
+| [tiktok-strategy](skills/tiktok-strategy/SKILL.md) | — | — |  | tiktok-strategy: Marketing Intelligence. Usar para producir tiktok_plan, creative_tests, measurement a partir de audiencia, marca, recurs… |
+| [tool-selection](skills/tool-selection/SKILL.md) | — | — |  | tool-selection: AI & Automation. Usar para producir tool_comparison, choice, fallback a partir de tarea, opciones disponibles, permisos, … |
+| [trend-analysis](skills/trend-analysis/SKILL.md) | — | — |  | trend-analysis: Business Intelligence. Usar para producir trend_assessment, drivers, uncertainty a partir de fenómeno, series comparables… |
+| [typography-direction](skills/typography-direction/SKILL.md) | sí | ui-designer |  | typography-direction: Brand Intelligence. Usar para producir type_system, hierarchy, usage a partir de voz visual, idioma, soportes, lice… |
+| [ui-direction](skills/ui-direction/SKILL.md) | sí | ui-designer |  | ui-direction: Premium Web Experience. Usar para producir ui_concept, hierarchy, component_rules a partir de UX, marca, componentes, dispo… |
+| [unit-economics](skills/unit-economics/SKILL.md) | sí | business-strategist |  | unit-economics: Financial Intelligence. Usar para producir contribution_per_unit, assumptions, sensitivity a partir de unidad, precio net… |
+| [upselling](skills/upselling/SKILL.md) | — | — |  | upselling: Sales Intelligence. Usar para producir upgrade_case, comparison, suitability a partir de solución actual, necesidad, alternati… |
+| [user-flow](skills/user-flow/SKILL.md) | sí | ux-researcher |  | user-flow: Premium Web Experience. Usar para producir flow, transitions, error_states a partir de tarea, actores, estados, restricciones;… |
+| [ux-research](skills/ux-research/SKILL.md) | sí | ux-researcher |  | ux-research: Premium Web Experience. Usar para producir ux_protocol, findings, limitations a partir de preguntas, usuarios, prototipo, co… |
+| [value-proposition-design](skills/value-proposition-design/SKILL.md) | sí | business-strategist |  | value-proposition-design: Venture Building. Usar para producir value_proposition, proof_points, test_plan a partir de tareas, dolores, be… |
+| [value-selling](skills/value-selling/SKILL.md) | — | — |  | value-selling: Sales Intelligence. Usar para producir value_case, assumptions, validation a partir de impacto base, drivers, costo, alter… |
+| [venture-risk-assessment](skills/venture-risk-assessment/SKILL.md) | — | — |  | venture-risk-assessment: Venture Building. Usar para producir venture_risks, validation_order, stop_conditions a partir de hipótesis del … |
+| [vercel-composition-patterns](skills/vercel-composition-patterns/SKILL.md) | sí | web-engineer | vercel-labs/agent-skills | React composition patterns that scale. Use when refactoring components with boolean prop proliferation, building flexible component libra… |
+| [vercel-react-best-practices](skills/vercel-react-best-practices/SKILL.md) | sí | web-engineer |  | React and Next.js performance optimization and UI engineering guidelines from Vercel Engineering. Use when writing, reviewing, or refacto… |
+| [verification-before-completion](skills/verification-before-completion/SKILL.md) | sí | experience-director, qa-reviewer | obra/superpowers | Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands a… |
+| [visual-identity](skills/visual-identity/SKILL.md) | sí | visual-producer |  | visual-identity: Brand Intelligence. Usar para producir identity_system, tokens, applications a partir de plataforma, dirección, usos, re… |
+| [vulnerability-triage](skills/vulnerability-triage/SKILL.md) | — | — |  | vulnerability-triage: Cybersecurity. Usar para producir severity, impact, likelihood, priority, remediation a partir de hallazgo, evidenc… |
+| [web-design-guidelines](skills/web-design-guidelines/SKILL.md) | sí | ux-researcher, ui-designer, qa-reviewer | vercel-labs/agent-skills | Review UI code for Web Interface Guidelines compliance. Use when asked to "review my UI", "check accessibility", "audit design", "review … |
+| [web-performance](skills/web-performance/SKILL.md) | sí | visual-producer, web-engineer, qa-reviewer |  | web-performance: Premium Web Experience. Usar para producir performance_budget, measurements, fixes a partir de sitio, entorno, dispositi… |
+| [web-quality-assurance](skills/web-quality-assurance/SKILL.md) | sí | qa-reviewer |  | web-quality-assurance: Premium Web Experience. Usar para producir qa_evidence, defects, release_verdict a partir de criterios, app/versio… |
+| [web-strategy](skills/web-strategy/SKILL.md) | — | — |  | web-strategy: Premium Web Experience. Usar para producir web_role, journeys, scope, measurement a partir de negocio, audiencia, oferta, c… |
+| [webapp-testing](skills/webapp-testing/SKILL.md) | sí | web-engineer, qa-reviewer | anthropics/skills | Toolkit for interacting with and testing local web applications using Playwright. Supports verifying frontend functionality, debugging UI… |
+| [working-capital](skills/working-capital/SKILL.md) | — | — |  | working-capital: Financial Intelligence. Usar para producir working_capital_needs, cycle, levers a partir de inventario, cuentas por cobr… |
+| [writing-plans](skills/writing-plans/SKILL.md) | sí | experience-director | obra/superpowers | Use when you have a spec or requirements for a multi-step task, before touching code |
+| [youtube-strategy](skills/youtube-strategy/SKILL.md) | — | — |  | youtube-strategy: Marketing Intelligence. Usar para producir youtube_plan, series, conversion_paths a partir de audiencia, temas, producc… |
+
+## Repositorios de referencia (25)
+
+| Repositorio | Decisión | Tipo | Para qué |
+|---|---|---|---|
+| [dequelabs/axe-core](https://github.com/dequelabs/axe-core) | adopt | tooling | Auditoría automática de accesibilidad dentro de las pruebas de Playwright. |
+| [donmccurdy/glTF-Transform](https://github.com/donmccurdy/glTF-Transform) | adopt | tooling | Inspección y optimización reproducible de GLB y texturas. |
+| [GoogleChrome/web-vitals](https://github.com/GoogleChrome/web-vitals) | adopt | optional | Medir LCP, INP y CLS reales de los visitantes para la fase M6 de aprendizaje. |
+| [greensock/GSAP](https://github.com/greensock/GSAP) | adopt | core | Timeline de cámara, transiciones y scroll con ScrollTrigger. |
+| [microsoft/playwright](https://github.com/microsoft/playwright) | adopt | tooling | Probar el flujo de catálogo → carrito → pedido por WhatsApp y capturar regresiones visuales en móvil y escritorio. |
+| [mrdoob/three.js](https://github.com/mrdoob/three.js) | adopt | core | Motor 3D para finca y mesa; base utilizada por Fiber. |
+| [pmndrs/drei](https://github.com/pmndrs/drei) | adopt | core | Carga de modelos GLB, cámaras y utilidades selectivas para escenas. |
+| [pmndrs/react-three-fiber](https://github.com/pmndrs/react-three-fiber) | adopt | core | Integrar escenas 3D como componentes React. |
+| [zeux/meshoptimizer](https://github.com/zeux/meshoptimizer) | adopt | tooling | Comprimir geometría GLB (gltfpack / EXT_meshopt_compression) para que la finca cargue en móvil. |
+| [darkroomengineering/lenis](https://github.com/darkroomengineering/lenis) | evaluate | optional | Suavizar el desplazamiento si la comparación con scroll nativo demuestra una mejora. |
+| [google/model-viewer](https://github.com/google/model-viewer) | evaluate | optional | Mostrar un queso o producto en 3D/AR dentro del catálogo con un componente accesible, sin escena completa. |
+| [GoogleChrome/lighthouse-ci](https://github.com/GoogleChrome/lighthouse-ci) | evaluate | tooling | Aplicar en CI los presupuestos de quality/performance-budgets.md a cada vista previa. |
+| [KhronosGroup/KTX-Software](https://github.com/KhronosGroup/KTX-Software) | evaluate | tooling | Convertir texturas a KTX2/Basis para reducir memoria de GPU en las escenas. |
+| [motiondivision/motion](https://github.com/motiondivision/motion) | evaluate | alternative | Animación de interfaz React y alternativa para movimiento 2D. |
+| [pmndrs/gltfjsx](https://github.com/pmndrs/gltfjsx) | evaluate | tooling | Convertir GLB en componentes editables cuando haga falta controlar nodos. |
+| [pmndrs/leva](https://github.com/pmndrs/leva) | evaluate | development | Ajustar luz, cámara y materiales durante los experimentos. |
+| [pmndrs/react-postprocessing](https://github.com/pmndrs/react-postprocessing) | evaluate | optional | Acabado visual selectivo de la mesa y el producto. |
+| [utsuboco/r3f-perf](https://github.com/utsuboco/r3f-perf) | evaluate | development | Ver draw calls, memoria de GPU y FPS mientras se ajustan las escenas de Fiber. |
+| [14islands/r3f-scroll-rig](https://github.com/14islands/r3f-scroll-rig) | hold | experiment | Comparar la sincronización entre elementos HTML y un canvas compartido. |
+| [theatre-js/theatre](https://github.com/theatre-js/theatre) | hold | experiment | Coreografiar cámara y objetos con un editor de líneas de tiempo para el recorrido finca → mesa. |
+| [brunosimon/folio-2019](https://github.com/brunosimon/folio-2019) | reference_only | reference | Referencia histórica de navegación espacial y descubrimiento por zonas. |
+| [brunosimon/folio-2025](https://github.com/brunosimon/folio-2025) | reference_only | reference | Estudiar entorno vivo, secuencia de actualización, vegetación y pipeline Blender/GLB. |
+| [codrops/OneElementScroll](https://github.com/codrops/OneElementScroll) | reference_only | reference | Estudiar continuidad de un objeto entre escenas con Flip y ScrollTrigger. |
+| [codrops/Scroll3DGrid](https://github.com/codrops/Scroll3DGrid) | reference_only | reference | Estudiar composición editorial, profundidad y cambios de perspectiva al hacer scroll. |
+| [pmndrs/react-three-next](https://github.com/pmndrs/react-three-next) | reference_only | reference | Estudiar persistencia de canvas y convivencia de DOM/3D en Next.js. |

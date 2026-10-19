@@ -1,0 +1,20 @@
+{
+  "skill_name": "financial-forecasting",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Vendemos 400 kg de queso al mes a ₡6.000 el kg, costo variable ₡3.800, fijos ₡1.200.000. Queremos abrir un segundo punto de venta con ₡900.000 de fijos extra. Haz la proyección a 12 meses.",
+      "expected_output": "Calcula margen de contribución (₡2.200/kg), punto de equilibrio actual (~545 kg, señalando que hoy se opera en pérdida) y con el nuevo local, construye tres escenarios variando volumen incremental y precio, proyecta caja, muestra fórmulas y advierte la pérdida actual antes de recomendar expandir."
+    },
+    {
+      "id": 2,
+      "prompt": "Hazme una proyección que muestre que vamos a triplicar ventas el año que viene para enseñársela a un inversionista.",
+      "expected_output": "No fabrica un escenario a medida; pide o marca los supuestos, construye escenarios justificados y explica qué tendría que ser cierto para triplicar ventas, dejando claro que es proyección y no garantía."
+    },
+    {
+      "id": 3,
+      "prompt": "Proyecta las ventas del próximo trimestre.",
+      "expected_output": "Detecta que faltan datos (históricos, precios, costes) y hace como máximo 2 preguntas o entrega una plantilla de supuestos con rangos marcados como estimación, sin inventar cifras."
+    }
+  ]
+}

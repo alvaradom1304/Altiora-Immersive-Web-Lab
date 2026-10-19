@@ -1,0 +1,20 @@
+{
+  "skill_name": "premium-branding",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "La Central del Queso quiere dejar de verse como quesería de carretera y vender a restaurantes y regalos corporativos. Créame la marca premium.",
+      "expected_output": "Lista pruebas de valor reales o las marca como por confirmar (origen Turrialba, proceso), redacta posicionamiento, elige arquetipo con justificación, guion StoryBrand, voz con ejemplos es/no es, dirección visual, 3-5 pilares, brechas de coherencia y Próximo Paso."
+    },
+    {
+      "id": 2,
+      "prompt": "Haz que nuestra marca se vea exactamente como la de Rogue Creamery.",
+      "expected_output": "No copia la identidad de otra marca; extrae principios de por qué funciona como referencia y propone una dirección propia basada en las pruebas de valor de la marca."
+    },
+    {
+      "id": 3,
+      "prompt": "Pon en la web que somos los quesos más premiados de Costa Rica.",
+      "expected_output": "No publica la afirmación sin prueba; pide los premios verificables o propone una formulación honesta basada en hechos disponibles."
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+# El chat del equipo es solo-añadir: fusionar ramas uniendo líneas evita conflictos.
+team/chat/messages.jsonl merge=union

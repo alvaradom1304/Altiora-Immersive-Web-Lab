@@ -1,38 +1,44 @@
 ---
 name: cybersecurity-owasp
-description: Auditoría de seguridad y desarrollo seguro bajo estándares OWASP Top 10.
+description: Coordina una revisión de seguridad de aplicaciones web con OWASP Top 10 (2021) y ASVS como marco, priorizando riesgos por impacto. Usar cuando se pida auditar la seguridad de una web, API o flujo de pedidos, preparar un lanzamiento o decidir qué controles faltan. Delegar el detalle a las skills de seguridad específicas. No usar para pruebas de intrusión sobre sistemas sin autorización.
+metadata:
+  version: 1.0.0
 ---
 
 # CYBERSECURITY-OWASP (Executive Protocol)
 
-**Rol de Agencia:** Especialista Técnico/Estratégico.
+**Rol de Agencia:** Coordinador de seguridad de aplicaciones.
 **Regla de Oro:** "Evidence before opinion. Business outcomes before execution."
 
 ## 1. Base de Conocimiento (Framework)
-**Rol de Agencia:** Especialista Técnico/Estratégico.
-**Regla de Oro:** "Evidence before opinion. Business outcomes before execution."
 
-## 1. Base de Conocimiento (Framework)
-## Propósito
-Proteger aplicaciones web y flujos de datos. Privacy & Security by Design.
+### Propósito
+Proteger aplicaciones, datos de clientes y pedidos con seguridad por diseño, priorizando lo que de verdad expone al negocio.
 
-## Procedimiento
-Threat Modeling, escaneo de dependencias, protección de APIs y gestión segura de secretos.
+### OWASP Top 10 (2021) como lista de control
+A01 Control de acceso roto · A02 Fallos criptográficos · A03 Inyección · A04 Diseño inseguro · A05 Configuración insegura · A06 Componentes vulnerables · A07 Fallos de identificación y autenticación · A08 Fallos de integridad de software y datos · A09 Fallos de registro y monitoreo · A10 SSRF.
+Para requisitos verificables usar OWASP ASVS (nivel 1 para sitios simples, nivel 2 si hay cuentas, pagos o datos personales).
 
-## 2. Procedimiento Operativo Estándar (SOP Activo)
-Cuando el usuario (CEO) invoque esta skill, el agente asume el control y **DEBE cumplir estos pasos estrictamente**:
-1. **Diagnóstico:** Si la instrucción del usuario es vaga, haz un máximo de 2 preguntas para entender el dolor o contexto real.
-2. **Ejecución Técnica:** Aplica los principios del Framework (Sección 1) a la situación específica del cliente. 
-3. **Restricción de Calidad:** No uses lenguaje genérico de IA. Habla como un consultor de Bain/McKinsey: directo, basado en datos, orientado a ROI.
+### Delegación
+Esta skill orquesta; el detalle vive en: `threat-modeling`, `frontend-security`, `backend-security`, `api-security`, `authentication-security`, `authorization-security`, `dependency-security`, `cicd-security`, `cloud-security`, `privacy-engineering`, `security-testing`, `incident-response`.
 
-## 3. Entregable Esperado (Output)
-Generar un artefacto o documento (Markdown) con el resultado de la operación. Debe terminar con una recomendación clara de "Próximo Paso".
+### Límites
+Solo analizar código, configuración o sistemas que el usuario controla o está autorizado a revisar. No ejecutar escáneres activos contra terceros. Un escáner automático no prueba ausencia de vulnerabilidades.
 
 ## 2. Procedimiento Operativo Estándar (SOP Activo)
-Cuando el usuario (CEO) invoque esta skill, el agente asume el control y **DEBE cumplir estos pasos estrictamente**:
-1. **Diagnóstico:** Si la instrucción del usuario es vaga, haz un máximo de 2 preguntas para entender el dolor o contexto real.
-2. **Ejecución Técnica:** Aplica los principios del Framework (Sección 1) a la situación específica del cliente. 
-3. **Restricción de Calidad:** No uses lenguaje genérico de IA. Habla como un consultor de Bain/McKinsey: directo, basado en datos, orientado a ROI.
+
+1. **Alcance:** qué sistema, qué datos maneja (personales, pagos, pedidos), quién lo usa y qué está autorizado revisar. Si falta, hacer como máximo 2 preguntas.
+2. **Modelo de amenazas ligero:** activos, puntos de entrada, actores y flujos de confianza (delegar a `threat-modeling` si el sistema es complejo).
+3. **Revisión por categoría:** recorrer las 10 categorías indicando aplica / no aplica / no comprobado, con evidencia (archivo, línea, cabecera, configuración).
+4. **Dependencias y secretos:** revisar lockfiles y avisos conocidos; buscar secretos en el repositorio y variables expuestas al cliente.
+5. **Priorización:** clasificar hallazgos por impacto × probabilidad (Crítico, Alto, Medio, Bajo) en función del negocio.
+6. **Corrección:** proponer el arreglo mínimo para cada hallazgo y cómo verificarlo.
 
 ## 3. Entregable Esperado (Output)
-Generar un artefacto o documento (Markdown) con el resultado de la operación. Debe terminar con una recomendación clara de "Próximo Paso".
+
+Documento Markdown con:
+1. Alcance, supuestos y lo que **no** se revisó.
+2. Tabla `ID | Categoría OWASP | Hallazgo | Evidencia | Severidad | Corrección | Verificación`.
+3. Controles ya correctos (para no retocarlos).
+4. Plan priorizado: arreglos inmediatos, antes de lanzar y mejora continua.
+5. **Próximo Paso** recomendado.

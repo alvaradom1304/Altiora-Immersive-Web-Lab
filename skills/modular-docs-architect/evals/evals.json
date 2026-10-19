@@ -1,0 +1,20 @@
+{
+  "skill_name": "modular-docs-architect",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Nuestro README tiene 1.400 líneas con arquitectura, catálogo de quesos, estrategia de marketing y changelog. Los agentes tardan mucho. Ordénalo.",
+      "expected_output": "Mapea secciones a módulos temáticos numerados, crea un índice de menos de 250 líneas con enlaces relativos y matriz de búsqueda, mueve el changelog a nivel 3, verifica que no se pierde contenido y que los enlaces funcionan."
+    },
+    {
+      "id": 2,
+      "prompt": "Divide este archivo de 120 líneas sobre un solo tema en módulos.",
+      "expected_output": "Indica que no cumple los criterios de división (menos de 400 líneas, un solo tema) y recomienda no dividirlo o solo mejorar su estructura interna."
+    },
+    {
+      "id": 3,
+      "prompt": "Limpia la carpeta del proyecto de archivos innecesarios.",
+      "expected_output": "Lista candidatos (.bak, .tmp, .blend1, duplicados) con motivo, elimina solo lo claramente temporal o pide aprobación para el resto, y no borra renders aprobados ni fuentes."
+    }
+  ]
+}

@@ -3,16 +3,10 @@ name: high-value-deliberation
 description: Analizar preguntas, problemas y decisiones con perspectivas pertinentes, crítica concreta, evidencia verificable y una conclusión integrada. Usar al pedir deliberación de alto valor, contraste de alternativas, revisión escéptica o una recomendación fundamentada; completar también el entregable solicitado. Evitar debates artificiales, acuerdo automático y certeza sin sustento.
 ---
 
-# HIGH-VALUE-DELIBERATION (Executive Protocol)
+# HIGH-VALUE-DELIBERATION
 
-**Rol de Agencia:** Especialista Técnico/Estratégico.
 **Regla de Oro:** "Evidence before opinion. Business outcomes before execution."
 
-## 1. Base de Conocimiento (Framework)
-**Rol de Agencia:** Especialista Técnico/Estratégico.
-**Regla de Oro:** "Evidence before opinion. Business outcomes before execution."
-
-## 1. Base de Conocimiento (Framework)
 Aplicar el protocolo de Dennis. Priorizar utilidad, claridad y fundamento sobre extensión o acuerdo. Versión 0.1.0; no atribuir el método a estudios ni confundir perspectivas conceptuales con revisión independiente.
 
 ## Aclarar y calibrar
@@ -77,21 +71,3 @@ Ejemplo: «Usa $high-value-deliberation para decidir si incorporar una experienc
 Tras usos significativos, registrar fallos observados y cambios mínimos con evidencia; comparar regresiones antes de conservar una revisión. No prolongar deliberación ni reabrir decisiones validadas sin información material nueva.
 
 Para auditar evaluación, consultar [evaluation-review.json](references/evaluation-review.json) y las salidas crudas [caso inmersivo](references/evaluation-immersive-response.md) y [caso de formato y entregable](references/evaluation-format-response.md). Son casos documentales, no resultados de clientes.
-
-## 2. Procedimiento Operativo Estándar (SOP Activo)
-Cuando el usuario (CEO) invoque esta skill, el agente asume el control y **DEBE cumplir estos pasos estrictamente**:
-1. **Diagnóstico:** Si la instrucción del usuario es vaga, haz un máximo de 2 preguntas para entender el dolor o contexto real.
-2. **Ejecución Técnica:** Aplica los principios del Framework (Sección 1) a la situación específica del cliente. 
-3. **Restricción de Calidad:** No uses lenguaje genérico de IA. Habla como un consultor de Bain/McKinsey: directo, basado en datos, orientado a ROI.
-
-## 3. Entregable Esperado (Output)
-Generar un artefacto o documento (Markdown) con el resultado de la operación. Debe terminar con una recomendación clara de "Próximo Paso".
-
-## 2. Procedimiento Operativo Estándar (SOP Activo)
-Cuando el usuario (CEO) invoque esta skill, el agente asume el control y **DEBE cumplir estos pasos estrictamente**:
-1. **Diagnóstico:** Si la instrucción del usuario es vaga, haz un máximo de 2 preguntas para entender el dolor o contexto real.
-2. **Ejecución Técnica:** Aplica los principios del Framework (Sección 1) a la situación específica del cliente. 
-3. **Restricción de Calidad:** No uses lenguaje genérico de IA. Habla como un consultor de Bain/McKinsey: directo, basado en datos, orientado a ROI.
-
-## 3. Entregable Esperado (Output)
-Generar un artefacto o documento (Markdown) con el resultado de la operación. Debe terminar con una recomendación clara de "Próximo Paso".

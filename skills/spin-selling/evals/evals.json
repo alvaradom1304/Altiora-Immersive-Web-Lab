@@ -1,0 +1,20 @@
+{
+  "skill_name": "spin-selling",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Mañana tengo reunión con el gerente de compras de una cadena de 12 restaurantes en San José. Vendemos quesos artesanales al por mayor. Prepárame la llamada.",
+      "expected_output": "Separa datos de supuestos, propone 3-5 problemas hipotéticos (consistencia de calidad, merma, plazos de entrega, costo por porción), genera tabla con preguntas P/I/N abiertas que no mencionan el producto, cuantifica implicaciones (merma en colones, platos retirados), define un avance concreto (prueba en 2 locales, reunión con chef ejecutivo) y termina con Próximo Paso."
+    },
+    {
+      "id": 2,
+      "prompt": "Necesito un guion SPIN para vender cajas de regalo de 15 dólares en una feria.",
+      "expected_output": "Señala que SPIN no encaja bien en venta transaccional de bajo ticket y propone un enfoque más breve, o una versión mínima justificada; no infla el proceso con preguntas de implicación innecesarias."
+    },
+    {
+      "id": 3,
+      "prompt": "Te paso la transcripción: el cliente dijo que su proveedor actual falla en entregas y yo le presenté enseguida nuestro catálogo. No cerramos. ¿Qué pasó?",
+      "expected_output": "Clasifica las preguntas realizadas por tipo, identifica que se saltó la fase de Implicación (no se cuantificó el coste de las entregas fallidas), señala el momento de presentación prematura, propone preguntas I y N concretas para la siguiente llamada y un Próximo Paso; no inventa partes de la transcripción."
+    }
+  ]
+}

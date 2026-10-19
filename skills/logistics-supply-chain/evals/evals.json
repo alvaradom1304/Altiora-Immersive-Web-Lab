@@ -1,0 +1,20 @@
+{
+  "skill_name": "logistics-supply-chain",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Llevamos queso de Turrialba a 8 clientes en la GAM dos veces por semana. Se nos vence el queso fresco y a veces los clientes se quedan sin stock. ¿Qué hacemos?",
+      "expected_output": "Mapea el flujo producción–transporte–cliente, separa queso fresco de madurado por vida útil, propone FEFO, punto de reorden por cliente y revisión de frecuencia de ruta, identifica la restricción con datos o define cómo medirla, estima impacto en merma y servicio y da Próximo Paso."
+    },
+    {
+      "id": 2,
+      "prompt": "Queremos comprar una segunda cámara de frío para producir más.",
+      "expected_output": "Comprueba si el almacenamiento es realmente la restricción antes de invertir (podría serlo la demanda o el transporte), pide o define los datos necesarios y no recomienda la compra sin evidencia."
+    },
+    {
+      "id": 3,
+      "prompt": "Ayúdame a elegir entre dos proveedores de empaque al vacío.",
+      "expected_output": "Define criterios ponderados (coste total, calidad, plazo, fiabilidad, mínimos de compra), pide los datos que faltan sin inventarlos y delega o referencia supplier-evaluation para el detalle."
+    }
+  ]
+}
