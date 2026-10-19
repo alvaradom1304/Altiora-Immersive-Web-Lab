@@ -25,7 +25,7 @@ Regla de oro: **una tarea, un dueño, sus archivos**. Dos IAs nunca editan los m
 
 | IA | Cómo se conecta | Fortalezas habituales para repartir |
 |---|---|---|
-| Claude Code | Lee `CLAUDE.md`; los 12 roles son subagentes (`.claude/agents/`). Pedir «usa el subagente web-engineer para T1018-ab12». | Orquestación, código con muchos archivos, revisión, redacción en español |
+| Claude Code | Lee `CLAUDE.md`; los 12 roles son subagentes (`.claude/agents/`). `/chat-<rol> <mensaje>` abre el chat de un agente con su bandeja ya cargada; `/equipo` muestra el tablero. Ver [INDEX.md](../../INDEX.md). | Orquestación, código con muchos archivos, revisión, redacción en español |
 | Codex (CLI/IDE) | Lee `AGENTS.md`. Indicarle: «Actúa como el rol de `team/agents/<rol>.md`». | Implementación y pruebas acotadas |
 | Gemini CLI | Lee `GEMINI.md`. Mismo uso que Codex. | Investigación con contexto largo, análisis de documentos |
 | ChatGPT, Gemini web u otra IA sin terminal | Pegar `team/agents/<rol>.md` y la salida de `npm run chat -- show <id>`. Una persona registra la respuesta con `post` y `done`. | Ideación, copy, imágenes |

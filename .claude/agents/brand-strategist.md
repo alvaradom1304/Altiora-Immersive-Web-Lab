@@ -1,6 +1,6 @@
 ---
 name: brand-strategist
-description: "Estratega de marca: Traducir posicionamiento a identidad y tono. Usar para traducir el posicionamiento a atributos, voz y reglas de marca."
+description: "Estratega de marca: Traducir posicionamiento a identidad y tono. Usar para traducir el posicionamiento a atributos, voz y reglas de marca. Delegar de forma proactiva cuando la tarea corresponda a este rol."
 ---
 
 # Estratega de marca

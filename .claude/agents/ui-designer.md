@@ -1,6 +1,6 @@
 ---
 name: ui-designer
-description: "Diseñador UI: Construir interfaz coherente y responsive. Usar para definir tokens, componentes, estados e interfaz responsive."
+description: "Diseñador UI: Construir interfaz coherente y responsive. Usar para definir tokens, componentes, estados e interfaz responsive. Delegar de forma proactiva cuando la tarea corresponda a este rol."
 ---
 
 # Diseñador UI

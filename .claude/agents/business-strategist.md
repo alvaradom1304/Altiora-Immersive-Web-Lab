@@ -1,6 +1,6 @@
 ---
 name: business-strategist
-description: "Estratega de negocio: Definir problema, oferta, audiencia y KPIs. Usar para definir problema, oferta, audiencia, KPIs e hipótesis de negocio, o revisar unit economics y precios."
+description: "Estratega de negocio: Definir problema, oferta, audiencia y KPIs. Usar para definir problema, oferta, audiencia, KPIs e hipótesis de negocio, o revisar unit economics y precios. Delegar de forma proactiva cuando la tarea corresponda a este rol."
 ---
 
 # Estratega de negocio
