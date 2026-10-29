@@ -39,3 +39,9 @@ Agente de coordinación propuesto en `creative-ads-os/agents/creative-ads-direct
 
 ## Quality bar
 Objetivo estético: acabado publicitario premium; no prometer costo equivalente a un presupuesto específico. No inventar especificaciones ni precios, no presentar comparaciones no verificadas, proteger derechos de autor y privacidad de personas filmadas.
+
+## Extensión 2026-10-29: inteligencia comercial y redes
+- [Commerce Growth OS](COMMERCE_GROWTH_OS.md) — auditoría de negocios, selección de productos, investigación de videos, distribución orgánica y medición.
+- [Commerce Growth Director](agents/commerce-growth-director.md) — superagente comercial propuesto, aún no desplegado.
+- [Market Intelligence Director](agents/market-intelligence-director.md) — protocolo Top 10 videos y score de oportunidades.
+- [Auditoría de fotografías de El Tilichero](../projects/tilicheros/ads/AUDITORIA_VISUAL_2026-10-29.md) — hallazgos iniciales y grabaciones propuestas.
