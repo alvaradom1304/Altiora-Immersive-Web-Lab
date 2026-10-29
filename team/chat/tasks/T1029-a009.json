@@ -1,0 +1,26 @@
+{
+  "id": "T1029-a009",
+  "title": "Proponer motion comercial con alternativa ligera",
+  "role": "motion-designer",
+  "ai": "claude",
+  "reviewer": "qa-reviewer",
+  "depends": [
+    "T1029-a007",
+    "T1029-a008"
+  ],
+  "files": [
+    "projects/tilicheros/motion/MOTION_SPEC.md"
+  ],
+  "acceptance": "Animaciones justificadas, presupuesto de rendimiento y prefers-reduced-motion.",
+  "status": "pendiente",
+  "owner": null,
+  "created": "2026-10-29T18:54:00Z",
+  "created_by": "chatgpt/experience-director",
+  "history": [
+    {
+      "at": "2026-10-29T18:54:00Z",
+      "by": "chatgpt/experience-director",
+      "status": "pendiente"
+    }
+  ]
+}

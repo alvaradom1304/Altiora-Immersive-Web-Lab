@@ -1,0 +1,26 @@
+{
+  "id": "T1029-a008",
+  "title": "Planificar fotografía y activos visuales con trazabilidad",
+  "role": "visual-producer",
+  "ai": "claude",
+  "reviewer": "creative-director",
+  "depends": [
+    "T1029-a005",
+    "T1029-a006"
+  ],
+  "files": [
+    "projects/tilicheros/assets/ASSET_MANIFEST.md"
+  ],
+  "acceptance": "Shot list y manifiesto de derechos, sin inventar productos ni usar IP ajena sin licencia.",
+  "status": "pendiente",
+  "owner": null,
+  "created": "2026-10-29T18:54:00Z",
+  "created_by": "chatgpt/experience-director",
+  "history": [
+    {
+      "at": "2026-10-29T18:54:00Z",
+      "by": "chatgpt/experience-director",
+      "status": "pendiente"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "T1029-a00a",
+  "title": "Definir e implementar solución e-commerce solo tras validar requisitos",
+  "role": "web-engineer",
+  "ai": "claude",
+  "reviewer": "qa-reviewer",
+  "depends": [
+    "T1029-a002",
+    "T1029-a006",
+    "T1029-a007"
+  ],
+  "files": [
+    "projects/tilicheros/web/IMPLEMENTATION_PLAN.md"
+  ],
+  "acceptance": "Comparar plataforma existente vs Next.js; precisar pagos, stock, integraciones y pruebas; no desplegar sin autorización.",
+  "status": "pendiente",
+  "owner": null,
+  "created": "2026-10-29T18:54:00Z",
+  "created_by": "chatgpt/experience-director",
+  "history": [
+    {
+      "at": "2026-10-29T18:54:00Z",
+      "by": "chatgpt/experience-director",
+      "status": "pendiente"
+    }
+  ]
+}

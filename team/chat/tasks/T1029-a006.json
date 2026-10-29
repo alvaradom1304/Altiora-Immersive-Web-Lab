@@ -1,0 +1,26 @@
+{
+  "id": "T1029-a006",
+  "title": "Diseñar taxonomía y estructura verificable de fichas de producto",
+  "role": "content-designer",
+  "ai": "claude",
+  "reviewer": "ux-researcher",
+  "depends": [
+    "T1029-a002",
+    "T1029-a003"
+  ],
+  "files": [
+    "projects/tilicheros/content/PRODUCT_TAXONOMY.md"
+  ],
+  "acceptance": "Categorías, atributos bebés/gaming/anime, campos de inventario y textos sin claims inventados.",
+  "status": "pendiente",
+  "owner": null,
+  "created": "2026-10-29T18:54:00Z",
+  "created_by": "chatgpt/experience-director",
+  "history": [
+    {
+      "at": "2026-10-29T18:54:00Z",
+      "by": "chatgpt/experience-director",
+      "status": "pendiente"
+    }
+  ]
+}

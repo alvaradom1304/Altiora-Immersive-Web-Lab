@@ -1,0 +1,23 @@
+{
+  "id": "T1029-a001",
+  "title": "Coordinar kickoff, gates y decisiones de Tilicheros",
+  "role": "experience-director",
+  "ai": "claude",
+  "reviewer": "qa-reviewer",
+  "depends": [],
+  "files": [
+    "projects/tilicheros/DECISIONS.md"
+  ],
+  "acceptance": "Registrar alcance, supuestos, decisiones pendientes y criterios G0-G1; no inventar resultados.",
+  "status": "pendiente",
+  "owner": null,
+  "created": "2026-10-29T18:54:00Z",
+  "created_by": "chatgpt/experience-director",
+  "history": [
+    {
+      "at": "2026-10-29T18:54:00Z",
+      "by": "chatgpt/experience-director",
+      "status": "pendiente"
+    }
+  ]
+}

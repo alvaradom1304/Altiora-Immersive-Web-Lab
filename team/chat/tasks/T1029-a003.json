@@ -1,0 +1,23 @@
+{
+  "id": "T1029-a003",
+  "title": "Mapear audiencias, búsquedas y journeys de bebés, gaming y anime",
+  "role": "ux-researcher",
+  "ai": "claude",
+  "reviewer": "experience-director",
+  "depends": [],
+  "files": [
+    "projects/tilicheros/ux/RESEARCH.md"
+  ],
+  "acceptance": "Tres journeys contrastados y navegación propuesta; documentar hipótesis vs evidencia.",
+  "status": "pendiente",
+  "owner": null,
+  "created": "2026-10-29T18:54:00Z",
+  "created_by": "chatgpt/experience-director",
+  "history": [
+    {
+      "at": "2026-10-29T18:54:00Z",
+      "by": "chatgpt/experience-director",
+      "status": "pendiente"
+    }
+  ]
+}

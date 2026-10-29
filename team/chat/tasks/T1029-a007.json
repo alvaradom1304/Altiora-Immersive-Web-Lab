@@ -1,0 +1,27 @@
+{
+  "id": "T1029-a007",
+  "title": "Crear especificación de sistema UI y compra responsive",
+  "role": "ui-designer",
+  "ai": "claude",
+  "reviewer": "qa-reviewer",
+  "depends": [
+    "T1029-a003",
+    "T1029-a004",
+    "T1029-a005"
+  ],
+  "files": [
+    "projects/tilicheros/ux/DESIGN_SYSTEM.md"
+  ],
+  "acceptance": "Componentes, estados, accesibilidad, filtros, carrito y mobile-first.",
+  "status": "pendiente",
+  "owner": null,
+  "created": "2026-10-29T18:54:00Z",
+  "created_by": "chatgpt/experience-director",
+  "history": [
+    {
+      "at": "2026-10-29T18:54:00Z",
+      "by": "chatgpt/experience-director",
+      "status": "pendiente"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "id": "T1029-a002",
+  "title": "Diagnosticar el negocio, catálogo, rentabilidad y problema raíz",
+  "role": "business-strategist",
+  "ai": "claude",
+  "reviewer": "experience-director",
+  "depends": [],
+  "files": [
+    "projects/tilicheros/01_DISCOVERY_TILICHEROS.md"
+  ],
+  "acceptance": "Documentar evidencia, productos reales, economía unitaria y objetivos; marcar faltantes sin completar ficticiamente.",
+  "status": "pendiente",
+  "owner": null,
+  "created": "2026-10-29T18:54:00Z",
+  "created_by": "chatgpt/experience-director",
+  "history": [
+    {
+      "at": "2026-10-29T18:54:00Z",
+      "by": "chatgpt/experience-director",
+      "status": "pendiente"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "T1029-a005",
+  "title": "Desarrollar rutas artísticas diferenciadas y coherentes",
+  "role": "creative-director",
+  "ai": "claude",
+  "reviewer": "brand-strategist",
+  "depends": [
+    "T1029-a004"
+  ],
+  "files": [
+    "projects/tilicheros/creative/ART_DIRECTION.md"
+  ],
+  "acceptance": "Dos rutas visuales y criterios de coherencia comercial, legibilidad y originalidad.",
+  "status": "pendiente",
+  "owner": null,
+  "created": "2026-10-29T18:54:00Z",
+  "created_by": "chatgpt/experience-director",
+  "history": [
+    {
+      "at": "2026-10-29T18:54:00Z",
+      "by": "chatgpt/experience-director",
+      "status": "pendiente"
+    }
+  ]
+}

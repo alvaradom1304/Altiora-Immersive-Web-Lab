@@ -1,0 +1,26 @@
+{
+  "id": "T1029-a00c",
+  "title": "Diseñar medición de conversión, retención y experimentación",
+  "role": "growth-analyst",
+  "ai": "claude",
+  "reviewer": "experience-director",
+  "depends": [
+    "T1029-a002",
+    "T1029-a003"
+  ],
+  "files": [
+    "projects/tilicheros/growth/MEASUREMENT_PLAN.md"
+  ],
+  "acceptance": "Definir eventos, métricas por universo y roadmap de pruebas sin atribuir cifras imaginarias.",
+  "status": "pendiente",
+  "owner": null,
+  "created": "2026-10-29T18:54:00Z",
+  "created_by": "chatgpt/experience-director",
+  "history": [
+    {
+      "at": "2026-10-29T18:54:00Z",
+      "by": "chatgpt/experience-director",
+      "status": "pendiente"
+    }
+  ]
+}

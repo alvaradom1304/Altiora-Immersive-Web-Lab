@@ -1,0 +1,27 @@
+{
+  "id": "T1029-a00b",
+  "title": "Revisar de forma independiente calidad y criterios de lanzamiento",
+  "role": "qa-reviewer",
+  "ai": "claude",
+  "reviewer": "experience-director",
+  "depends": [
+    "T1029-a007",
+    "T1029-a009",
+    "T1029-a00a"
+  ],
+  "files": [
+    "projects/tilicheros/qa/REVIEW.md"
+  ],
+  "acceptance": "Evidencias de usabilidad, a11y, performance, seguridad, compras y contenidos de bebés/IP.",
+  "status": "pendiente",
+  "owner": null,
+  "created": "2026-10-29T18:54:00Z",
+  "created_by": "chatgpt/experience-director",
+  "history": [
+    {
+      "at": "2026-10-29T18:54:00Z",
+      "by": "chatgpt/experience-director",
+      "status": "pendiente"
+    }
+  ]
+}
