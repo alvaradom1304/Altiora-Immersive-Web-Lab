@@ -72,3 +72,19 @@ No copiar anuncios literalmente; no reutilizar música, escenas, rostros, marca 
 - Meta Ad Library: https://www.facebook.com/ads/library/
 - Meta originalidad 2026: https://about.fb.com/news/2026/03/rewarding-original-creators-on-facebook/
 - WhatsApp Ads: https://whatsappbusiness.com/es-la/products/create-ads-that-click-to-whatsapp/
+
+
+## Implementación de skills · 2026-10-29
+**Las siete skills comerciales planeadas ya tienen un SKILL.md operativo en `skills/`, más una octava de branding emocional.** Son instrucciones reutilizables para un agente que las lea, no procesos autónomos en ejecución.
+1. [`business-social-audit`](../skills/business-social-audit/SKILL.md)
+2. [`top10-video-research`](../skills/top10-video-research/SKILL.md)
+3. [`product-winner-scorecard`](../skills/product-winner-scorecard/SKILL.md)
+4. [`creative-deconstruction-originality`](../skills/creative-deconstruction-originality/SKILL.md)
+5. [`organic-social-distribution`](../skills/organic-social-distribution/SKILL.md)
+6. [`whatsapp-lead-to-sale`](../skills/whatsapp-lead-to-sale/SKILL.md)
+7. [`growth-experiment-analysis`](../skills/growth-experiment-analysis/SKILL.md)
+8. [`emotional-branding`](../skills/emotional-branding/SKILL.md)
+
+- Método de emoción → asociación de marca → acción de compra: [Playbook de branding emocional](EMOTIONAL_BRANDING_PLAYBOOK.md).
+- Reutilización explícita: `consumer-psychology`, `marketing-psychology`, `ethical-influence`, `brand-storytelling`, `advertising-concept`, `growth-experimentation`.
+- Antes de declararlas listas en cualquier runtime, verificar que su descubridor lea `skills/*/SKILL.md`; no se ha probado invocación automática ni integración con cuentas de redes.
