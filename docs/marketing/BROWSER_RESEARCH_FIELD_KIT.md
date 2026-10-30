@@ -12,6 +12,13 @@ Dar a Discovery First capacidad de **visitar e inspeccionar páginas y anuncios 
 5. Comparar al menos dos tratamientos (incluir uno sin efectos si aplica). Crear reporte privado `05_QA/discovery-report.json`, validar `npm run marketing:discovery -- --report <ruta>` y solo después activar Creative Variation Director.
 6. Revisar derechos, licencias, cuenta y términos del sitio antes de cualquier captura/reutilización. No copiar videos de terceros.
 
+## Comprobación local sin instalar terceros
+Desde la raíz del repositorio actualizado:
+```bash
+npm run research:preflight -- --client el-tilichero --campaign earbuds --json
+```
+Comprueba Node, `ffmpeg`, `ffprobe` y existencia segura de la carpeta de crudos, sin red, instalaciones ni lectura del material. `media_tools: READY` **no** significa navegador conectado ni visionado. El navegador mantiene `browser_mcp: NOT_VERIFIED_IN_THIS_PREFLIGHT` hasta probarlo en cada app; si falta el entorno o el workspace el comando finaliza con error. Las pruebas del chequeo forman parte de `npm run check`.
+
 ## Instalación local **optativa**, después de security review
 Playwright MCP es un servidor externo con acceso a navegador, no una skill Markdown de bajo riesgo. Antes de habilitarlo, aplicar `docs/security/third-party-skill-gate.md` y revisar el servidor, su paquete npm, dependencias, permisos y la versión exacta. Fijar la versión auditada (sustituir `<VERSION_REVISADA>` por una versión concreta). No utilizar `@latest` en automatizaciones reproducibles. Los siguientes son **comandos para el operador**; NO son ejecutados por el repositorio.
 
