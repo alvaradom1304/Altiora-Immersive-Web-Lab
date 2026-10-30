@@ -69,3 +69,13 @@ Extensión de postproducción — 2026-10-30: montaje real, animación, exportac
 
 ## Campañas y workspaces locales para los tres agentes
 Para material real, **crear o reusar** `media-workspaces/<cliente>/<campaña>/` mediante `npm run video:project -- init --client <slug> --campaign <slug>` y leer `docs/video/VIDEO_WORKSPACES.md`. El comando de inventario produce hashes de crudos sin modificarlos. Las carpetas de referencias y resultados son deliberadamente distintas. El `01_CRUDOS/` es inmutable; `03_RESULTADOS/` solo contiene exports verificables. Codex, Claude Code y Antigravity deben trabajar sobre el mismo proyecto local, sin importar el editor. No subir videos, identidades ni audios privados a GitHub.
+
+## Especialización activa: Creative Variation Director
+
+Ante «todos mis edits se ven iguales», «creá un edit diferente», «adaptá el video a su esencia», «evitá repetir templates» o **cualquier encargo donde se solicite diversidad editorial**, leer y ejecutar [Creative Variation Director](references/creative-variation-playbook.md) **antes** de decidir el estilo. Esta especialización es parte de la skill audiovisual ya distribuida a Claude Code, Antigravity y Codex; `creative-ads-director` es el dueño editorial.
+
+- Analizar **primero** las tomas y el brief, no imponer por defecto un anuncio de humor y otro premium. Diseñar tres **rutas conceptuales** divergentes y elegir la mejor por ajuste al video. Tres rutas no obligan a tres renders.
+- Comparar los ocho rasgos `hook/narrative/pacing/camera/motion/sound/typography/ending` con los últimos anuncios reales del mismo cliente. Registrar huella solo tras QA y aprobación de un video auténtico.
+- Completar `04_EDITABLES/creative-proposal.json`, ejecutar `npm run video:variation -- --proposal <ruta> --history <ruta-local-historial>` y no pasar a render si hay FAIL. El auditor valida diferencias **declaradas**; el revisor comprueba diferencia efectiva entre videos.
+- Guía y esquema: `docs/video/CREATIVE_VARIATION.md`. El historial se guarda fuera de Git en `media-workspaces/<cliente>/_creative-history.json`.
+- Si repetir una forma es intencional (serie o experimento A/B), justificarla y solicitar revisión editorial; no forzar diferencias que debiliten la marca o la historia.
