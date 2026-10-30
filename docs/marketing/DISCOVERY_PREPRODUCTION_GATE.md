@@ -81,3 +81,6 @@ Ejemplo **ficticio** de formato (reemplazar todos los datos por evidencia real):
 
 ## Límites de implementación
 Se implementan reglas, motor de comprobación documental y extracción local de fotogramas. NO se ha conectado Playwright MCP, un VLM, NVIDIA VSS ni se han ejecutado anuncios reales. No sustituir herramientas reales por declaraciones de capacidad.
+
+## Storyboard de muestras para revisión visual
+El comando `npm run video:observe -- --client el-tilichero --campaign earbuds` crea por defecto un storyboard denso (`04_EDITABLES/discovery-frames/storyboard.md`) con hasta 18 muestras uniformes por clip, más `manifest.json` con timecodes. Se puede usar `--mode quick` para tres muestras, o `--max-frames 12` para limitar procesamiento. Los nombres de JPG llevan un hash estable, evitando colisiones. El storyboard prepara imágenes para revisión humana o una IA con capacidad visual; **no garantiza que el modelo haya observado ni interpretado el contenido**, ni sustituye escuchar el audio. Para videos con cambios muy rápidos, valorar detección de escenas con [PySceneDetect](https://github.com/Breakthrough/PySceneDetect), sujeto al gate de seguridad. Playwright MCP y [agent-browser](https://github.com/vercel-labs/agent-browser) son alternativas para investigación web; no se instalaron.
