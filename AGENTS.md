@@ -39,6 +39,11 @@ Seguir docs/workflows/immersive-project.md. Antes de ampliar una experiencia, co
 - Esta regla aplica a todos los clientes de Altiora. No sustituir la evaluación de seguridad, derechos, pruebas comerciales ni autorizaciones para publicar o gastar. Los roles descritos en Markdown no son agentes independientes desplegados.
 - El espejo de `.claude/skills/` y el índice son generados; después de agregar skills fuente ejecutar `npm run agents:build` y `npm run check` antes de integrar la rama.
 
+## Edición de videos reales y motion graphics
+- Cuando el usuario diga «editá el video», «uní las tomas», «Reel», «postproducción» o «motion graphics», activar `creative-ads-director`, consultar `creative-ads-os/WORK_ROUTER.md` y el módulo `skills/ai-video-direction/references/postproduction-playbook.md`.
+- Operar sobre archivos locales autorizados: FFmpeg/ffprobe para inventario, montaje y QA; Remotion o editor disponible para animaciones. Preservar videos originales. Producir MP4 y archivos editables si el material y entorno lo permiten, verificando el render.
+- El catálogo existente ya contiene `ai-video-direction`; esta ampliación reutiliza sus wrappers de Claude Code y Antigravity. No editar derivados ni afirmar que existen MP4 sin acceso a los videos.
+
 ## Claude Code ↔ Antigravity: sincronización permanente por repositorio
 - Los archivos de `skills/` y `team/` son fuentes únicas; `team/local-sources/` conserva originales importados. Editar solo esos originales; `.claude/` y `.agents/` son derivados.
 - Después de agregar o cambiar agentes, skills o reglas de negocio, ejecutar `npm run agents:build` y `npm run check`; los dos entornos deben pasar el mismo gate.
