@@ -29,6 +29,13 @@ Seguir docs/workflows/immersive-project.md. Antes de ampliar una experiencia, co
 - En una app ejecutable, validar build, accesibilidad, móvil, fallback y el flujo de pedido afectado.
 - Indicar con claridad qué está diseñado, implementado, probado o pendiente.
 
+## Capacidades universales: regla permanente para Claude Code, Antigravity y Codex
+- Cuando se solicite **cualquier** skill, agente, subagente o superagente para Altiora, asumir sin preguntar que debe estar disponible en **las tres plataformas** (Claude Code, Google Antigravity y Codex). Aplica también a futuras conversaciones dentro de este proyecto; el usuario no debe repetirlo.
+- Seguir [la política de capacidades universales](docs/operations/UNIVERSAL_CAPABILITIES.md). Antes de crear, revisar equivalentes y preferir ampliar skills o agentes existentes. `skills/`, `team/agents.json`, `team/local-agents.json` y `team/roles/` son las fuentes canónicas; no editar manualmente los adaptadores derivados.
+- Para cada capacidad nueva o modificada, **en la misma tarea** ejecutar `npm run capability:sync` (regenera Claude/Antigravity/Codex y valida con `npm run check`). No declarar completa la entrega si no se ejecutó o falla. CI debe detectar wrappers desactualizados.
+- Exigir evidencia de adaptadores: Claude `.claude/skills/` y `.claude/agents/`; Antigravity `.agents/skills/` y `.agents/agents/`; Codex `.agents/skills/` y `.codex/agents/`. Un superagente es una función de orquestación sobre agentes, no una nueva ejecución autónoma garantizada.
+- Para fuentes externas aplicar primero el gate de seguridad; nunca instalar o ejecutar algo por el mero hecho de estar en GitHub. No afirmar detección efectiva en los IDE hasta verificar sus instalaciones. La sincronización rige **este repositorio y la rama actualizada**, no todos los proyectos fuera de él.
+
 ## Equipo multi-IA
 - Los roles canónicos de team/registry.md y los siete adaptadores de team/local-agents.json tienen prompt en team/agents/<rol>.md (Claude Code los usa como subagentes en .claude/agents/). Se generan con npm run agents:build desde team/agents.json, team/local-agents.json y team/roles/; no editarlos a mano.
 - Repartir y coordinar el trabajo en el chat del equipo (team/chat/README.md): firmar como <ia>/<rol>, reclamar la tarea antes de editar, tocar solo sus archivos y cerrar con evidencia.
