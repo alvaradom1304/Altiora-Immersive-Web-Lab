@@ -29,7 +29,7 @@ Las skills existentes `ai-video-direction`, `cinematic-direction`, `motion-desig
 ## Guía de primera prueba audiovisual
 - Transferir originales del iPhone sin comprimir a `01_CRUDOS/` fuera de Git.
 - Ejecutar `ffprobe` antes de editar; revisar audio real y hacer selects.
-- Producir dos narrativas para El Tilichero: humor y producto premium.
+- Proponer tres rutas creativas diferentes después de Discovery y seleccionar por evidencia del metraje; no imponer humor/producto premium como fórmula fija.
 - Usar FFmpeg para montaje; Remotion para tipografía, packshot, animaciones, música con licencia y CTA. Auto-Editor puede preparar cortes en voz, Whisper preparar SRT.
 - Conservar fuentes editables y renders 1080x1920; QA visual, audio, técnico y claims. No atribuir AirPods de Apple a earbuds genéricos.
 - Sin archivos locales, herramientas validadas y revisión humana: `NOT_RUN`, no `SUCCESS`.
