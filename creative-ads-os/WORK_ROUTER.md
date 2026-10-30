@@ -5,7 +5,7 @@
 | Intención | Responsable | Skills |
 |---|---|---|
 | «Marketing para [negocio]», crecimiento comercial | `commerce-growth-director` + `business-strategist` + `growth-analyst` | `business-social-audit`, `product-winner-scorecard`, `organic-social-distribution`, `whatsapp-lead-to-sale`, `growth-experiment-analysis` |
-| «Branding», «emocionar», identidad y compra | `brand-strategist` + `creative-ads-director` | `emotional-brand-activation`, `brand-storytelling`, `consumer-psychology`, `ethical-influence` |
+| «Branding», «emocionar», identidad y compra | `brand-strategist` + `creative-ads-director` | `emotional-branding`, `brand-storytelling`, `consumer-psychology`, `ethical-influence` |
 | «Anuncio», «video», «Reel», «cinemático» | `creative-ads-director` + `visual-producer` + `motion-designer` + `qa-reviewer` | `advertising-concept`, `creative-deconstruction-originality`, `emotional-brand-activation` si el concepto lo requiere, `storyboarding`, `ai-video-direction`, `organic-social-distribution` |
 | «Buscá los 10 videos», tendencias, competencia | `market-intelligence-director` + `growth-analyst` | `top10-video-research`, `creative-deconstruction-originality` |
 | «Qué producto vender», «producto ganador» | `commerce-growth-director` + `market-intelligence-director` | `product-winner-scorecard`, `top10-video-research` si aporta información |

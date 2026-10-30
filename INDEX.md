@@ -36,7 +36,7 @@ Otras IAs (Codex, Gemini, ChatGPT): prompts en [team/agents/](team/agents/experi
 | [Director de inteligencia de mercado](.claude/agents/market-intelligence-director.md) | `/chat-market-intelligence-director` | M0, M1 | `top10-video-research`, `product-winner-scorecard`, `creative-deconstruction-originality`, `marketing-psychology`, `market-research` |
 | [Director de anuncios audiovisuales](.claude/agents/creative-ads-director.md) | `/chat-creative-ads-director` | M1, M3, M6 | `emotional-brand-activation`, `creative-deconstruction-originality`, `organic-social-distribution`, `advertising-concept`, `storyboarding`, `ai-video-direction`, `creative-quality-assurance` |
 
-## Skills (259)
+## Skills (260)
 
 **Auto** = Claude puede cargarla sola (está asignada a un agente). El resto se usa con `/nombre`. Origen vacío = skill propia de Altiora.
 
@@ -146,6 +146,7 @@ Otras IAs (Codex, Gemini, ChatGPT): prompts en [team/agents/](team/agents/experi
 | [email-marketing](skills/email-marketing/SKILL.md) | — | — |  | email-marketing: Marketing Intelligence. Usar para producir email_plan, drafts, suppression_rules a partir de audiencia consentida, ofert… |
 | [emails](skills/emails/SKILL.md) | sí | content-designer | coreyhaines31/marketingskills | When the user wants to create or optimize an email sequence, drip campaign, automated email flow, or lifecycle email program. Also use wh… |
 | [emotional-brand-activation](skills/emotional-brand-activation/SKILL.md) | sí | creative-ads-director |  | Usar cuando se quiera relacionar branding, humor, nostalgia, sorpresa, orgullo, pertenencia o tranquilidad con decisiones de compra en ca… |
+| [emotional-branding](skills/emotional-branding/SKILL.md) | — | — |  | Diseñar campañas de branding emocional que conecten motivaciones reales con recuerdos de marca y acciones de compra medibles, de manera é… |
 | [enterprise-growth-orchestrator](skills/enterprise-growth-orchestrator/SKILL.md) | — | — |  | enterprise-growth-orchestrator: Orchestration. Usar para producir growth_route, scale_constraints, staged_plan a partir de estrategia, ec… |
 | [ethical-influence](skills/ethical-influence/SKILL.md) | — | — |  | ethical-influence: Sales Intelligence. Usar para producir persuasion_options, evidence_checks, test a partir de audiencia, mensaje, evide… |
 | [events](skills/events/SKILL.md) | sí | growth-analyst | coreyhaines31/marketingskills | When the user wants to plan, run, sponsor, speak at, or get pipeline from events — webinars, conferences, trade shows, meetups, dinners, … |

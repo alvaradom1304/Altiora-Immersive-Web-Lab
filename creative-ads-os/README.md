@@ -35,13 +35,19 @@ El repositorio incluye carpetas de ejemplo en `projects/tilicheros/ads/`, ademá
 
 Skills existentes: `skills/advertising-concept`, `skills/storyboarding`, `skills/ai-video-direction`, `skills/cinematic-direction`, `skills/creative-quality-assurance`, `skills/motion-design`.
 
-Agente de coordinación propuesto en `creative-ads-os/agents/creative-ads-director.md`. Es una definición de rol, no un servicio autónomo desplegado.
+Creative Ads Director está registrado como subagente en `team/agents.json` y `.claude/agents/creative-ads-director.md`. Su especificación ampliada está en `creative-ads-os/agents/creative-ads-director.md`; no constituye un servicio autónomo en ejecución.
 
 ## Quality bar
 Objetivo estético: acabado publicitario premium; no prometer costo equivalente a un presupuesto específico. No inventar especificaciones ni precios, no presentar comparaciones no verificadas, proteger derechos de autor y privacidad de personas filmadas.
 
 ## Extensión 2026-10-29: inteligencia comercial y redes
 - [Commerce Growth OS](COMMERCE_GROWTH_OS.md) — auditoría de negocios, selección de productos, investigación de videos, distribución orgánica y medición.
-- [Commerce Growth Director](agents/commerce-growth-director.md) — superagente comercial propuesto, aún no desplegado.
+- [Commerce Growth Director](agents/commerce-growth-director.md) — superagente registrado para Claude Code; no es servicio autónomo ejecutándose.
 - [Market Intelligence Director](agents/market-intelligence-director.md) — protocolo Top 10 videos y score de oportunidades.
 - [Auditoría de fotografías de El Tilichero](../projects/tilicheros/ads/AUDITORIA_VISUAL_2026-10-29.md) — hallazgos iniciales y grabaciones propuestas.
+
+## Activación por intención y emoción
+- [Enrutador de trabajo](WORK_ROUTER.md) — selecciona especialistas según marketing, anuncios, redes, ventas y marca.
+- [Branding emocional estratégico](EMOTIONAL_BRANDING_PLAYBOOK.md) — motivaciones, memoria de marca y decisión informada.
+- `skills/emotional-branding`: estrategia emocional y posicionamiento; `skills/emotional-brand-activation`: ejecución en anuncios originales.
+- Registrar los subagentes no equivale a realizar campañas, gastar presupuesto, o ejecutarlos permanentemente.

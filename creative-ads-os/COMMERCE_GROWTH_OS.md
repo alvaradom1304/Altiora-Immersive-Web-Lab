@@ -7,8 +7,8 @@ Diagnosticar un negocio -> investigar mercado y contenido -> seleccionar product
 
 ## Gobierno: reutilizar antes de crear
 **Superagente existente:** Creative Ads Director (`creative-ads-os/agents/creative-ads-director.md`). Coordina conceptos, guion, audiovisual y QA.
-**Nuevo rol/especificación:** Commerce Growth Director. Responsable de convertir el diagnóstico y los hallazgos en un sprint comercial con objetivos, pruebas, prioridades y medición. No confundir con un agente ya ejecutándose.
-**Nuevo rol/especificación:** Market Intelligence Director (`creative-ads-os/agents/market-intelligence-director.md`). Responsable de benchmark verificable y selección de oportunidades.
+**Subagente registrado:** Commerce Growth Director. Responsable de convertir el diagnóstico y los hallazgos en un sprint comercial con objetivos, pruebas, prioridades y medición. No confundir con un agente ya ejecutándose.
+**Subagente registrado:** Market Intelligence Director (`creative-ads-os/agents/market-intelligence-director.md`). Responsable de benchmark verificable y selección de oportunidades.
 
 **Agentes existentes reutilizados:** `business-strategist`, `growth-analyst`, `creative-director`, `visual-producer`, `motion-designer`, `qa-reviewer`.
 **Roles que falta especificar/integrar como agentes o subprocesos:**
@@ -75,7 +75,7 @@ No copiar anuncios literalmente; no reutilizar música, escenas, rostros, marca 
 
 
 ## Implementación de skills · 2026-10-29
-**Las siete skills comerciales planeadas ya tienen un SKILL.md operativo en `skills/`, más una octava de branding emocional.** Son instrucciones reutilizables para un agente que las lea, no procesos autónomos en ejecución.
+**Las siete skills comerciales planeadas tienen un SKILL.md operativo en `skills/`, más dos componentes emocionales complementarios: estrategia de marca y activación audiovisual.** Son instrucciones reutilizables para un agente que las lea, no procesos autónomos en ejecución.
 1. [`business-social-audit`](../skills/business-social-audit/SKILL.md)
 2. [`top10-video-research`](../skills/top10-video-research/SKILL.md)
 3. [`product-winner-scorecard`](../skills/product-winner-scorecard/SKILL.md)
@@ -83,7 +83,8 @@ No copiar anuncios literalmente; no reutilizar música, escenas, rostros, marca 
 5. [`organic-social-distribution`](../skills/organic-social-distribution/SKILL.md)
 6. [`whatsapp-lead-to-sale`](../skills/whatsapp-lead-to-sale/SKILL.md)
 7. [`growth-experiment-analysis`](../skills/growth-experiment-analysis/SKILL.md)
-8. [`emotional-branding`](../skills/emotional-branding/SKILL.md)
+8. [`emotional-branding`](../skills/emotional-branding/SKILL.md) — estrategia de asociaciones, identidad y situación de compra.
+9. [`emotional-brand-activation`](../skills/emotional-brand-activation/SKILL.md) — ejecución emocional/humorística en anuncios de producto.
 
 - Método de emoción → asociación de marca → acción de compra: [Playbook de branding emocional](EMOTIONAL_BRANDING_PLAYBOOK.md).
 - Reutilización explícita: `consumer-psychology`, `marketing-psychology`, `ethical-influence`, `brand-storytelling`, `advertising-concept`, `growth-experimentation`.
