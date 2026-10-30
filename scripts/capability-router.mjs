@@ -9,7 +9,7 @@ const ROOT = fileURLToPath(new URL('../', import.meta.url));
 export const ROUTES = [
   {
     id: 'video-postproduction',
-    triggers: [/edit(ar|a|ing)?\s+(el\s+|mis\s+|my\s+)?(video|clips?|reels?)/, /postproducc/, /mont(a|á)je/, /motion graphics/, /un(i|í|e)r (las )?(tomas|clips)/, /export(ar|a).*(mp4|video)/],
+    triggers: [/edit(ar|a|ing)?\s+(el\s+|mis\s+|my\s+|un\s+|una\s+)?(video|clips?|reels?)/, /postproducc/, /mont(a|á)je/, /motion graphics/, /un(i|í|e)r (las )?(tomas|clips)/, /export(ar|a).*(mp4|video)/],
     lead: 'creative-ads-director',
     collaborators: ['motion-designer','visual-producer'],
     reviewer: 'qa-reviewer',
