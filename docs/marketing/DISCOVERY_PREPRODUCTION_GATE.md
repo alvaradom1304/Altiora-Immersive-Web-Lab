@@ -37,7 +37,7 @@ Con medios autorizados en `media-workspaces/<cliente>/<campaña>/01_CRUDOS/`, ej
 ```bash
 npm run video:observe -- --client el-tilichero --campaign earbuds
 ```
-Produce `04_EDITABLES/discovery-frames/` con 3 imágenes representativas de cada clip y manifest.json con timecodes. Esto es **extracción**: ni el script ni FFmpeg entienden la trama. El agente debe realmente inspeccionar imágenes y audio (con capacidades visuales reales) o registrar `NOT_VIEWED`. Para referencias en plataformas, navegar con medios autorizados o recopilar datos públicos; si el sitio bloquea reproducción, registrar falta de observación.
+Produce `04_EDITABLES/discovery-frames/` con un muestreo de hasta 18 imágenes por clip (o 3 con `--mode quick`), `storyboard.md` y `manifest.json` con timecodes. Esto es **extracción**: ni el script ni FFmpeg entienden la trama. El agente debe realmente inspeccionar imágenes y audio (con capacidades visuales reales) o registrar `NOT_VIEWED`. Para referencias en plataformas, navegar con medios autorizados o recopilar datos públicos; si el sitio bloquea reproducción, registrar falta de observación.
 
 ## Reporte obligatorio y gate de decisión
 Guardar `05_QA/discovery-report.json`, privado, siguiendo el esquema mostrado debajo. Validar con:
