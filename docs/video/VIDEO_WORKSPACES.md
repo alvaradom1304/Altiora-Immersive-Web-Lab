@@ -55,3 +55,6 @@ En `02_REFERENCIAS/REFERENCIAS.md` pegar URLs de anuncios y anotar qué estructu
 
 ## Protección
 `media-workspaces/` está excluido de Git por completo. El material puede seguir estando expuesto al sistema de archivos local o a otras aplicaciones con acceso: usar permisos mínimos, discos seguros y respaldos del cliente. Revisar derechos, licencia de música y consentimientos.
+
+## Memoria editorial por cliente (evitar el mismo edit)
+Cada empresa puede mantener `media-workspaces/<cliente>/_creative-history.json`, excluido de Git, con huellas de **videos aprobados** (no crudos). Antes de la edición activar [Creative Variation Director](../../skills/ai-video-direction/references/creative-variation-playbook.md). Requiere analizar clips, crear tres rutas y comparar con las cinco campañas previas. El ejemplo JSON y la orden de Claude Code están en [CREATIVE_VARIATION.md](CREATIVE_VARIATION.md); validar con `npm run video:variation` y después verificar diferencia real mediante visionado.
