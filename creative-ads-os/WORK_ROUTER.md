@@ -16,7 +16,7 @@
 1. Leer `AGENTS.md`, este archivo y el brief específico del cliente. Confirmar marca vs proveedor.
 2. Clasificar el encargo: diagnóstico, investigación, estrategia, concepto, producción, distribución, conversión, medición o mixto.
 3. Elegir un director responsable y 1–3 skills principales; añadir especialistas de edición/motion/QA si corresponde. No convocar decenas de roles por tareas pequeñas.
-4. Reusar los 12 agentes existentes en `.claude/agents`; los directores de `creative-ads-os/agents` son especificaciones para coordinar, no promesas de agentes activos autónomos. Si el entorno no permite subagentes, ejecutar roles secuencialmente.
+4. Reusar los 15 agentes registrados en `team/agents.json` en `.claude/agents`; los directores de `creative-ads-os/agents` son especificaciones para coordinar, no promesas de agentes activos autónomos. Si el entorno no permite subagentes, ejecutar roles secuencialmente.
 5. Para campaña nueva: revisar hasta diez ejemplos VERIFICABLES, identificar mecanismo de decisión del cliente, proponer tres rutas (humor, emoción/narrativa, demo/oferta), construir guion y decisión. No forzar emoción para todo producto.
 6. Para audiovisual: `01_CRUDOS` → `02_REFERENCIAS` → `03_FINALISTAS` (medios privados fuera de GitHub), QA en producto, derechos, sonido y continuidad.
 7. Medir chats, clientes, contribución y aprendizaje; nunca equiparar vistas con ventas. Registrar resultados y actualizar patrones reutilizables.

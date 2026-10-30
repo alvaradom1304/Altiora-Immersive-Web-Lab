@@ -207,6 +207,57 @@
         "referrals",
         "events"
       ]
+    },
+    {
+      "id": "commerce-growth-director",
+      "when": "Usar cuando el usuario pida marketing, captación, crecimiento, campañas comerciales, ventas, WhatsApp, productos ganadores o adquisición de clientes.",
+      "milestones": [
+        "M0",
+        "M1",
+        "M6"
+      ],
+      "skills": [
+        "business-social-audit",
+        "product-winner-scorecard",
+        "organic-social-distribution",
+        "whatsapp-lead-to-sale",
+        "growth-experiment-analysis",
+        "consumer-psychology",
+        "marketing-analytics"
+      ]
+    },
+    {
+      "id": "market-intelligence-director",
+      "when": "Usar cuando el usuario solicite buscar los diez mejores videos de un producto, estudiar publicidad de competidores, investigar tendencias y escoger producto ganador.",
+      "milestones": [
+        "M0",
+        "M1"
+      ],
+      "skills": [
+        "top10-video-research",
+        "product-winner-scorecard",
+        "creative-deconstruction-originality",
+        "marketing-psychology",
+        "market-research"
+      ]
+    },
+    {
+      "id": "creative-ads-director",
+      "when": "Usar cuando el usuario solicite crear anuncios, videos cortos, campañas de branding emocional, humor, guiones cinematográficos o motion graphics.",
+      "milestones": [
+        "M1",
+        "M3",
+        "M6"
+      ],
+      "skills": [
+        "emotional-brand-activation",
+        "creative-deconstruction-originality",
+        "organic-social-distribution",
+        "advertising-concept",
+        "storyboarding",
+        "ai-video-direction",
+        "creative-quality-assurance"
+      ]
     }
   ]
 }

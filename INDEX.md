@@ -15,7 +15,7 @@ Mapa de agentes, chats, skills y repositorios disponibles en Claude Code y en el
 
 Otras IAs (Codex, Gemini, ChatGPT): prompts en [team/agents/](team/agents/experience-director.md) y el mismo chat (`npm run chat`), ver [team/chat/README.md](team/chat/README.md).
 
-## Agentes (12)
+## Agentes (15)
 
 | Agente | Chat | Milestones | Skills asignadas |
 |---|---|---|---|
@@ -32,6 +32,10 @@ Otras IAs (Codex, Gemini, ChatGPT): prompts en [team/agents/](team/agents/experi
 | [QA y accesibilidad](.claude/agents/qa-reviewer.md) | `/chat-qa-reviewer` | M4 | `web-quality-assurance`, `accessibility`, `altiora-quality-review`, `web-performance`, `security-testing`, `owasp-review`, `webapp-testing`, `web-design-guidelines`, `verification-before-completion` |
 | [Analista de conversión y fidelización](.claude/agents/growth-analyst.md) | `/chat-growth-analyst` | M6 | `marketing-analytics`, `conversion-analysis`, `conversion-rate-optimization`, `growth-experimentation`, `retention`, `ltv-optimization`, `analytics`, `ab-testing`, `referrals`, `events` |
 
+| [Director de crecimiento comercial](.claude/agents/commerce-growth-director.md) | `/chat-commerce-growth-director` | M0, M1, M6 | `business-social-audit`, `product-winner-scorecard`, `organic-social-distribution`, `whatsapp-lead-to-sale`, `growth-experiment-analysis`, `consumer-psychology`, `marketing-analytics` |
+| [Director de inteligencia de mercado](.claude/agents/market-intelligence-director.md) | `/chat-market-intelligence-director` | M0, M1 | `top10-video-research`, `product-winner-scorecard`, `creative-deconstruction-originality`, `marketing-psychology`, `market-research` |
+| [Director de anuncios audiovisuales](.claude/agents/creative-ads-director.md) | `/chat-creative-ads-director` | M1, M3, M6 | `emotional-brand-activation`, `creative-deconstruction-originality`, `organic-social-distribution`, `advertising-concept`, `storyboarding`, `ai-video-direction`, `creative-quality-assurance` |
+
 ## Skills (259)
 
 **Auto** = Claude puede cargarla sola (está asignada a un agente). El resto se usa con `/nombre`. Origen vacío = skill propia de Altiora.
@@ -40,7 +44,7 @@ Otras IAs (Codex, Gemini, ChatGPT): prompts en [team/agents/](team/agents/experi
 |---|---|---|---|---|
 | [ab-testing](skills/ab-testing/SKILL.md) | sí | growth-analyst | coreyhaines31/marketingskills | When the user wants to plan, design, or implement an A/B test or experiment, or build a growth experimentation program. Also use when the… |
 | [accessibility](skills/accessibility/SKILL.md) | sí | ux-researcher, qa-reviewer |  | accessibility: Premium Web Experience. Usar para producir a11y_findings, fixes, manual_checks a partir de UI/código, alcance, nivel objet… |
-| [advertising-concept](skills/advertising-concept/SKILL.md) | — | — |  | advertising-concept: Creative Intelligence. Usar para producir ad_routes, hooks, claim_checks a partir de problema, oferta, canal, eviden… |
+| [advertising-concept](skills/advertising-concept/SKILL.md) | sí | creative-ads-director |  | advertising-concept: Creative Intelligence. Usar para producir ad_routes, hooks, claim_checks a partir de problema, oferta, canal, eviden… |
 | [aem-autonomous-quality-loop](skills/aem-autonomous-quality-loop/SKILL.md) | — | — |  | aem-autonomous-quality-loop: Orchestration. Usar para producir status, cycles, evidence, defects, final_result a partir de task, acceptan… |
 | [aem-business-transformation](skills/aem-business-transformation/SKILL.md) | — | — |  | aem-business-transformation: Orchestration. Usar para producir current_target_state, root_causes, roadmap, kpis a partir de negocio exist… |
 | [aem-company-builder](skills/aem-company-builder/SKILL.md) | — | — |  | aem-company-builder: Orchestration. Usar para producir route_selection, capability_plan, gate_report a partir de contexto, negocio nuevo/… |
@@ -64,7 +68,7 @@ Otras IAs (Codex, Gemini, ChatGPT): prompts en [team/agents/](team/agents/experi
 | [ai-governance](skills/ai-governance/SKILL.md) | — | — |  | ai-governance: AI & Automation. Usar para producir governance_controls, responsibilities, review a partir de usos IA, datos, actores, rie… |
 | [ai-image-direction](skills/ai-image-direction/SKILL.md) | sí | visual-producer |  | ai-image-direction: Creative Intelligence. Usar para producir generation_brief, variants, qa a partir de objetivo, referencias autorizada… |
 | [ai-observability](skills/ai-observability/SKILL.md) | — | — |  | ai-observability: AI & Automation. Usar para producir telemetry_plan, alerts, diagnostics a partir de sistema, eventos, límites de privac… |
-| [ai-video-direction](skills/ai-video-direction/SKILL.md) | sí | visual-producer |  | ai-video-direction: Creative Intelligence. Usar para producir video_brief, prompts, continuity_checks a partir de guion, duración, refere… |
+| [ai-video-direction](skills/ai-video-direction/SKILL.md) | sí | visual-producer, creative-ads-director |  | ai-video-direction: Creative Intelligence. Usar para producir video_brief, prompts, continuity_checks a partir de guion, duración, refere… |
 | [altiora-agent-orchestrator](skills/altiora-agent-orchestrator/SKILL.md) | sí | experience-director |  | Coordina proyectos de Altiora que combinan investigación de repositorios, diseño, implementación y revisión mediante agentes y skills. Se… |
 | [altiora-ai-economy](skills/altiora-ai-economy/SKILL.md) | — | — |  | Selecciona un flujo de IA para Altiora que reduzca coste y contexto repetido preservando la calidad final. Se usa al comparar proveedores… |
 | [altiora-quality-review](skills/altiora-quality-review/SKILL.md) | sí | qa-reviewer |  | Revisa cambios de Altiora contra el encargo, las funciones afectadas y su evidencia de prueba. Se usa para comprobar una entrega o una ta… |
@@ -95,7 +99,7 @@ Otras IAs (Codex, Gemini, ChatGPT): prompts en [team/agents/](team/agents/experi
 | [business-model-analysis](skills/business-model-analysis/SKILL.md) | — | — |  | business-model-analysis: Business Intelligence. Usar para producir model_map, dependencies, vulnerabilities a partir de oferta, segmentos… |
 | [business-model-design](skills/business-model-design/SKILL.md) | — | — |  | business-model-design: Venture Building. Usar para producir model_options, economics_hypotheses, operating_requirements a partir de valor… |
 | [business-model-validation](skills/business-model-validation/SKILL.md) | — | — |  | business-model-validation: Venture Building. Usar para producir hypothesis_results, model_changes, viability_limits a partir de modelo, s… |
-| [business-social-audit](skills/business-social-audit/SKILL.md) | — | — |  | Usar cuando el usuario pida auditar Instagram, Facebook, TikTok o WhatsApp Business de un negocio, identificar fallas de captación y prio… |
+| [business-social-audit](skills/business-social-audit/SKILL.md) | sí | commerce-growth-director |  | Usar cuando el usuario pida auditar Instagram, Facebook, TikTok o WhatsApp Business de un negocio, identificar fallas de captación y prio… |
 | [business-strategy](skills/business-strategy/SKILL.md) | sí | business-strategist |  | business-strategy: Business Intelligence. Usar para producir strategic_choices, tradeoffs, outcome_map a partir de diagnóstico, objetivos… |
 | [buyer-persona](skills/buyer-persona/SKILL.md) | sí | business-strategist |  | buyer-persona: Marketing Intelligence. Usar para producir evidence_persona, goals, barriers a partir de segmento, entrevistas/datos, deci… |
 | [campaign-concept](skills/campaign-concept/SKILL.md) | — | — |  | campaign-concept: Creative Intelligence. Usar para producir campaign_idea, channel_expressions, test a partir de brief, audiencia, oferta… |
@@ -113,7 +117,7 @@ Otras IAs (Codex, Gemini, ChatGPT): prompts en [team/agents/](team/agents/experi
 | [competitive-intelligence](skills/competitive-intelligence/SKILL.md) | — | — |  | competitive-intelligence: Business Intelligence. Usar para producir intelligence_plan, signals, alerts a partir de decisiones estratégica… |
 | [competitor-analysis](skills/competitor-analysis/SKILL.md) | — | — |  | competitor-analysis: Business Intelligence. Usar para producir comparison_matrix, differentiation_gaps a partir de competidores directos/… |
 | [consumer-behavior](skills/consumer-behavior/SKILL.md) | — | — |  | consumer-behavior: Business Intelligence. Usar para producir behavior_model, barriers, hypotheses a partir de categoría, contexto de comp… |
-| [consumer-psychology](skills/consumer-psychology/SKILL.md) | — | — |  | Diseña mensajes, ofertas y funnels apoyados en psicología del consumidor y economía conductual (Cialdini, Byron Sharp, Seth Godin) con pe… |
+| [consumer-psychology](skills/consumer-psychology/SKILL.md) | sí | commerce-growth-director |  | Diseña mensajes, ofertas y funnels apoyados en psicología del consumidor y economía conductual (Cialdini, Byron Sharp, Seth Godin) con pe… |
 | [content-strategy](skills/content-strategy/SKILL.md) | sí | content-designer |  | content-strategy: Marketing Intelligence. Usar para producir content_pillars, plan, measurement a partir de posicionamiento, journey, can… |
 | [context-engineering](skills/context-engineering/SKILL.md) | — | — |  | context-engineering: AI & Automation. Usar para producir context_pack, provenance, refresh_rules a partir de objetivo, fuentes, límites, … |
 | [conversion-analysis](skills/conversion-analysis/SKILL.md) | sí | growth-analyst |  | conversion-analysis: Marketing Intelligence. Usar para producir funnel_rates, leakage, data_quality a partir de eventos, denominadores, p… |
@@ -122,9 +126,9 @@ Otras IAs (Codex, Gemini, ChatGPT): prompts en [team/agents/](team/agents/experi
 | [copywriting](skills/copywriting/SKILL.md) | sí | content-designer |  | copywriting: Marketing Intelligence. Usar para producir copy_variants, claim_sources, rationale a partir de audiencia, oferta, evidencia,… |
 | [cost-analysis](skills/cost-analysis/SKILL.md) | — | — |  | cost-analysis: Financial Intelligence. Usar para producir cost_structure, drivers, allocation_rules a partir de costos, drivers, volúmene… |
 | [cost-to-serve](skills/cost-to-serve/SKILL.md) | — | — |  | cost-to-serve: Operations & Logistics. Usar para producir service_cost, allocation, decisions a partir de pedidos/clientes, tiempos, tran… |
-| [creative-deconstruction-originality](skills/creative-deconstruction-originality/SKILL.md) | — | — |  | Usar cuando el usuario comparta anuncios de referencia y quiera inspirarse en ritmo, emoción, humor, sonido, iluminación o montaje sin co… |
+| [creative-deconstruction-originality](skills/creative-deconstruction-originality/SKILL.md) | sí | market-intelligence-director, creative-ads-director |  | Usar cuando el usuario comparta anuncios de referencia y quiera inspirarse en ritmo, emoción, humor, sonido, iluminación o montaje sin co… |
 | [creative-direction](skills/creative-direction/SKILL.md) | sí | creative-director |  | creative-direction: Creative Intelligence. Usar para producir creative_routes, production_rules, recommendation a partir de brief, marca,… |
-| [creative-quality-assurance](skills/creative-quality-assurance/SKILL.md) | sí | creative-director |  | creative-quality-assurance: Creative Intelligence. Usar para producir creative_review, defects, fixes a partir de piezas, brief, marca, f… |
+| [creative-quality-assurance](skills/creative-quality-assurance/SKILL.md) | sí | creative-director, creative-ads-director |  | creative-quality-assurance: Creative Intelligence. Usar para producir creative_review, defects, fixes a partir de piezas, brief, marca, f… |
 | [creative-strategy](skills/creative-strategy/SKILL.md) | — | — |  | creative-strategy: Creative Intelligence. Usar para producir creative_brief, message, success_criteria a partir de objetivo, insight, aud… |
 | [cro](skills/cro/SKILL.md) | — | — | coreyhaines31/marketingskills | When the user wants to optimize, improve, or increase conversions on any marketing page or form — including homepage, landing pages, pric… |
 | [cross-selling](skills/cross-selling/SKILL.md) | — | — |  | cross-selling: Sales Intelligence. Usar para producir complementary_offer, suitability, message a partir de compra/uso actual, necesidad … |
@@ -141,7 +145,7 @@ Otras IAs (Codex, Gemini, ChatGPT): prompts en [team/agents/](team/agents/experi
 | [elite-web-experience-os](skills/elite-web-experience-os/SKILL.md) | sí | experience-director |  | Production workflow, creative art direction, motion guidelines, performance budgets, and quality scorecard from Elite Web Experience OS. … |
 | [email-marketing](skills/email-marketing/SKILL.md) | — | — |  | email-marketing: Marketing Intelligence. Usar para producir email_plan, drafts, suppression_rules a partir de audiencia consentida, ofert… |
 | [emails](skills/emails/SKILL.md) | sí | content-designer | coreyhaines31/marketingskills | When the user wants to create or optimize an email sequence, drip campaign, automated email flow, or lifecycle email program. Also use wh… |
-| [emotional-brand-activation](skills/emotional-brand-activation/SKILL.md) | — | — |  | Usar cuando se quiera relacionar branding, humor, nostalgia, sorpresa, orgullo, pertenencia o tranquilidad con decisiones de compra en ca… |
+| [emotional-brand-activation](skills/emotional-brand-activation/SKILL.md) | sí | creative-ads-director |  | Usar cuando se quiera relacionar branding, humor, nostalgia, sorpresa, orgullo, pertenencia o tranquilidad con decisiones de compra en ca… |
 | [enterprise-growth-orchestrator](skills/enterprise-growth-orchestrator/SKILL.md) | — | — |  | enterprise-growth-orchestrator: Orchestration. Usar para producir growth_route, scale_constraints, staged_plan a partir de estrategia, ec… |
 | [ethical-influence](skills/ethical-influence/SKILL.md) | — | — |  | ethical-influence: Sales Intelligence. Usar para producir persuasion_options, evidence_checks, test a partir de audiencia, mensaje, evide… |
 | [events](skills/events/SKILL.md) | sí | growth-analyst | coreyhaines31/marketingskills | When the user wants to plan, run, sponsor, speak at, or get pipeline from events — webinars, conferences, trade shows, meetups, dinners, … |
@@ -156,7 +160,7 @@ Otras IAs (Codex, Gemini, ChatGPT): prompts en [team/agents/](team/agents/experi
 | [gap-selling](skills/gap-selling/SKILL.md) | — | — |  | gap-selling: Sales Intelligence. Usar para producir current_future_gap, value_case, open_questions a partir de estado actual, estado dese… |
 | [geographic-expansion](skills/geographic-expansion/SKILL.md) | — | — |  | geographic-expansion: Growth & Scaling. Usar para producir zone_options, pilot, viability a partir de zonas, demanda, rutas, servicio, co… |
 | [go-to-market](skills/go-to-market/SKILL.md) | — | — |  | go-to-market: Orchestration. Usar para producir gtm_plan, handoffs, launch_gates a partir de oferta validada, segmento, economía, canales… |
-| [growth-experiment-analysis](skills/growth-experiment-analysis/SKILL.md) | — | — |  | Usar al evaluar si campañas de branding, videos orgánicos, anuncios o embudos a WhatsApp generan mejores consultas y ventas con pruebas m… |
+| [growth-experiment-analysis](skills/growth-experiment-analysis/SKILL.md) | sí | commerce-growth-director |  | Usar al evaluar si campañas de branding, videos orgánicos, anuncios o embudos a WhatsApp generan mejores consultas y ventas con pruebas m… |
 | [growth-experimentation](skills/growth-experimentation/SKILL.md) | sí | growth-analyst |  | growth-experimentation: Marketing Intelligence. Usar para producir experiment_design, results, learning a partir de hipótesis, funnel, ba… |
 | [growth-strategy](skills/growth-strategy/SKILL.md) | — | — |  | growth-strategy: Growth & Scaling. Usar para producir growth_levers, priorities, safeguards a partir de demanda, economía, capacidad, fun… |
 | [gsap-animation](skills/gsap-animation/SKILL.md) | sí | motion-designer |  | gsap-animation: Premium Web Experience. Usar para producir animation_code, cleanup, verification a partir de repo, versiones, elementos, … |
@@ -185,12 +189,12 @@ Otras IAs (Codex, Gemini, ChatGPT): prompts en [team/agents/](team/agents/experi
 | [margin-analysis](skills/margin-analysis/SKILL.md) | — | — |  | margin-analysis: Financial Intelligence. Usar para producir margin_bridge, contribution, reconciliation a partir de ingresos netos, costo… |
 | [market-development](skills/market-development/SKILL.md) | — | — |  | market-development: Growth & Scaling. Usar para producir market_options, validation, entry_plan a partir de oferta vigente, mercados nuev… |
 | [market-penetration](skills/market-penetration/SKILL.md) | — | — |  | market-penetration: Growth & Scaling. Usar para producir penetration_options, tests, risks a partir de mercado actual, cuota/evidencia, c… |
-| [market-research](skills/market-research/SKILL.md) | sí | business-strategist |  | market-research: Business Intelligence. Usar para producir evidence_matrix, insights, research_gaps a partir de pregunta, mercado, geogra… |
+| [market-research](skills/market-research/SKILL.md) | sí | business-strategist, market-intelligence-director |  | market-research: Business Intelligence. Usar para producir evidence_matrix, insights, research_gaps a partir de pregunta, mercado, geogra… |
 | [market-segmentation](skills/market-segmentation/SKILL.md) | — | — |  | market-segmentation: Marketing Intelligence. Usar para producir segments, criteria, validation a partir de mercado, necesidades, comporta… |
 | [market-sizing](skills/market-sizing/SKILL.md) | — | — |  | market-sizing: Business Intelligence. Usar para producir tam_sam_som, calculation, sensitivity a partir de segmento, territorio, unidad d… |
 | [market-validation](skills/market-validation/SKILL.md) | — | — |  | market-validation: Venture Building. Usar para producir validation_experiment, demand_signals, verdict a partir de oferta, segmento, cana… |
-| [marketing-analytics](skills/marketing-analytics/SKILL.md) | sí | growth-analyst |  | marketing-analytics: Marketing Intelligence. Usar para producir measurement_model, reconciliation, insights a partir de objetivos, fuente… |
-| [marketing-psychology](skills/marketing-psychology/SKILL.md) | — | — | coreyhaines31/marketingskills | When the user wants to apply psychological principles, mental models, or behavioral science to marketing. Also use when the user mentions… |
+| [marketing-analytics](skills/marketing-analytics/SKILL.md) | sí | growth-analyst, commerce-growth-director |  | marketing-analytics: Marketing Intelligence. Usar para producir measurement_model, reconciliation, insights a partir de objetivos, fuente… |
+| [marketing-psychology](skills/marketing-psychology/SKILL.md) | sí | market-intelligence-director | coreyhaines31/marketingskills | When the user wants to apply psychological principles, mental models, or behavioral science to marketing. Also use when the user mentions… |
 | [marketing-strategy](skills/marketing-strategy/SKILL.md) | — | — |  | marketing-strategy: Marketing Intelligence. Usar para producir demand_strategy, channel_choices, measurement a partir de objetivos, segme… |
 | [mcp-integration](skills/mcp-integration/SKILL.md) | — | — |  | mcp-integration: AI & Automation. Usar para producir mcp_contract, auth_plan, tests a partir de cliente/servidor, versión, herramientas, … |
 | [meddicc](skills/meddicc/SKILL.md) | — | — |  | meddicc: Sales Intelligence. Usar para producir qualification_dimensions, evidence_gaps, deal_plan a partir de oportunidad B2B, métricas,… |
@@ -207,7 +211,7 @@ Otras IAs (Codex, Gemini, ChatGPT): prompts en [team/agents/](team/agents/experi
 | [operational-scalability](skills/operational-scalability/SKILL.md) | — | — |  | operational-scalability: Growth & Scaling. Usar para producir scale_constraints, systems, milestones a partir de demanda, capacidad, proc… |
 | [opportunity-analysis](skills/opportunity-analysis/SKILL.md) | — | — |  | opportunity-analysis: Business Intelligence. Usar para producir opportunity_matrix, recommendation, validation_plan a partir de alternati… |
 | [opportunity-discovery](skills/opportunity-discovery/SKILL.md) | — | — |  | opportunity-discovery: Venture Building. Usar para producir opportunity_hypotheses, discovery_questions a partir de capacidades, problema… |
-| [organic-social-distribution](skills/organic-social-distribution/SKILL.md) | — | — |  | Usar cuando se soliciten calendarios y tácticas para publicar orgánicamente en Instagram, Facebook o TikTok buscando clientes y conversac… |
+| [organic-social-distribution](skills/organic-social-distribution/SKILL.md) | sí | commerce-growth-director, creative-ads-director |  | Usar cuando se soliciten calendarios y tácticas para publicar orgánicamente en Instagram, Facebook o TikTok buscando clientes y conversac… |
 | [organizational-scalability](skills/organizational-scalability/SKILL.md) | — | — |  | organizational-scalability: Growth & Scaling. Usar para producir role_design, delegation, governance a partir de roles, decisiones, carga… |
 | [owasp-review](skills/owasp-review/SKILL.md) | sí | qa-reviewer |  | owasp-review: Cybersecurity. Usar para producir owasp_findings, mappings, remediation a partir de app/repo, alcance, versión estándar, ev… |
 | [paid-media](skills/paid-media/SKILL.md) | — | — |  | paid-media: Marketing Intelligence. Usar para producir campaign_plan, spend_limits, experiment a partir de objetivo, oferta, presupuesto … |
@@ -226,7 +230,7 @@ Otras IAs (Codex, Gemini, ChatGPT): prompts en [team/agents/](team/agents/experi
 | [product-expansion](skills/product-expansion/SKILL.md) | — | — |  | product-expansion: Growth & Scaling. Usar para producir product_options, validation, dependencies a partir de clientes, necesidades, port… |
 | [product-market-fit-research](skills/product-market-fit-research/SKILL.md) | — | — |  | product-market-fit-research: Venture Building. Usar para producir pmf_signals, cohort_analysis, limitations a partir de cohortes, uso, re… |
 | [product-photography-direction](skills/product-photography-direction/SKILL.md) | sí | visual-producer |  | product-photography-direction: Creative Intelligence. Usar para producir product_shots, lighting, fidelity_checks a partir de producto, a… |
-| [product-winner-scorecard](skills/product-winner-scorecard/SKILL.md) | — | — |  | Usar cuando el usuario quiera elegir qué producto anunciar, identificar un producto ganador o priorizar el catálogo según demanda, margen… |
+| [product-winner-scorecard](skills/product-winner-scorecard/SKILL.md) | sí | commerce-growth-director, market-intelligence-director |  | Usar cuando el usuario quiera elegir qué producto anunciar, identificar un producto ganador o priorizar el catálogo según demanda, margen… |
 | [profitability-analysis](skills/profitability-analysis/SKILL.md) | — | — |  | profitability-analysis: Financial Intelligence. Usar para producir profit_by_segment, drivers, actions a partir de ingresos, costos, cana… |
 | [prompt-engineering](skills/prompt-engineering/SKILL.md) | — | — |  | prompt-engineering: AI & Automation. Usar para producir prompt, variants, evaluation a partir de tarea, modelo disponible, ejemplos, crit… |
 | [prospecting](skills/prospecting/SKILL.md) | — | — |  | prospecting: Sales Intelligence. Usar para producir prospecting_plan, contact_criteria, drafts a partir de ICP, oferta, canales permitido… |
@@ -261,7 +265,7 @@ Otras IAs (Codex, Gemini, ChatGPT): prompts en [team/agents/](team/agents/experi
 | [social-creative](skills/social-creative/SKILL.md) | — | — |  | social-creative: Creative Intelligence. Usar para producir social_variants, platform_fit, tests a partir de canal, audiencia, marca, mens… |
 | [social-media-strategy](skills/social-media-strategy/SKILL.md) | — | — |  | social-media-strategy: Marketing Intelligence. Usar para producir channel_roles, content_system, measurement a partir de audiencia, marca… |
 | [spin-selling](skills/spin-selling/SKILL.md) | — | — |  | Estructura conversaciones de venta consultiva compleja con el método SPIN de Neil Rackham (Situación, Problema, Implicación, Necesidad-be… |
-| [storyboarding](skills/storyboarding/SKILL.md) | sí | creative-director |  | storyboarding: Creative Intelligence. Usar para producir storyboard, shot_sequence, continuity a partir de guion, formato, duración, recu… |
+| [storyboarding](skills/storyboarding/SKILL.md) | sí | creative-director, creative-ads-director |  | storyboarding: Creative Intelligence. Usar para producir storyboard, shot_sequence, continuity a partir de guion, formato, duración, recu… |
 | [strategic-planning](skills/strategic-planning/SKILL.md) | — | — |  | strategic-planning: Business Intelligence. Usar para producir milestones, initiatives, kpis, dependencies a partir de estrategia vigente,… |
 | [supplier-evaluation](skills/supplier-evaluation/SKILL.md) | — | — |  | supplier-evaluation: Operations & Logistics. Usar para producir supplier_scorecard, risks, actions a partir de proveedores, criterios, en… |
 | [supply-chain](skills/supply-chain/SKILL.md) | — | — |  | supply-chain: Operations & Logistics. Usar para producir supply_network, vulnerabilities, resilience a partir de red proveedores, flujos,… |
@@ -272,7 +276,7 @@ Otras IAs (Codex, Gemini, ChatGPT): prompts en [team/agents/](team/agents/experi
 | [threejs-experience](skills/threejs-experience/SKILL.md) | sí | motion-designer, web-engineer |  | threejs-experience: Premium Web Experience. Usar para producir scene_code, loading_plan, fallback a partir de escena, assets, dispositivo… |
 | [tiktok-strategy](skills/tiktok-strategy/SKILL.md) | — | — |  | tiktok-strategy: Marketing Intelligence. Usar para producir tiktok_plan, creative_tests, measurement a partir de audiencia, marca, recurs… |
 | [tool-selection](skills/tool-selection/SKILL.md) | — | — |  | tool-selection: AI & Automation. Usar para producir tool_comparison, choice, fallback a partir de tarea, opciones disponibles, permisos, … |
-| [top10-video-research](skills/top10-video-research/SKILL.md) | — | — |  | Usar cuando el usuario pida encontrar o estudiar los diez mejores videos, anuncios o Reels de un producto en TikTok, Facebook, Instagram … |
+| [top10-video-research](skills/top10-video-research/SKILL.md) | sí | market-intelligence-director |  | Usar cuando el usuario pida encontrar o estudiar los diez mejores videos, anuncios o Reels de un producto en TikTok, Facebook, Instagram … |
 | [trend-analysis](skills/trend-analysis/SKILL.md) | — | — |  | trend-analysis: Business Intelligence. Usar para producir trend_assessment, drivers, uncertainty a partir de fenómeno, series comparables… |
 | [typography-direction](skills/typography-direction/SKILL.md) | sí | ui-designer |  | typography-direction: Brand Intelligence. Usar para producir type_system, hierarchy, usage a partir de voz visual, idioma, soportes, lice… |
 | [ui-direction](skills/ui-direction/SKILL.md) | sí | ui-designer |  | ui-direction: Premium Web Experience. Usar para producir ui_concept, hierarchy, component_rules a partir de UX, marca, componentes, dispo… |
@@ -293,7 +297,7 @@ Otras IAs (Codex, Gemini, ChatGPT): prompts en [team/agents/](team/agents/experi
 | [web-quality-assurance](skills/web-quality-assurance/SKILL.md) | sí | qa-reviewer |  | web-quality-assurance: Premium Web Experience. Usar para producir qa_evidence, defects, release_verdict a partir de criterios, app/versio… |
 | [web-strategy](skills/web-strategy/SKILL.md) | — | — |  | web-strategy: Premium Web Experience. Usar para producir web_role, journeys, scope, measurement a partir de negocio, audiencia, oferta, c… |
 | [webapp-testing](skills/webapp-testing/SKILL.md) | sí | web-engineer, qa-reviewer | anthropics/skills | Toolkit for interacting with and testing local web applications using Playwright. Supports verifying frontend functionality, debugging UI… |
-| [whatsapp-lead-to-sale](skills/whatsapp-lead-to-sale/SKILL.md) | — | — |  | Usar cuando un negocio quiera convertir consultas de Instagram, Facebook, TikTok o anuncios en ventas mediante WhatsApp Business y seguim… |
+| [whatsapp-lead-to-sale](skills/whatsapp-lead-to-sale/SKILL.md) | sí | commerce-growth-director |  | Usar cuando un negocio quiera convertir consultas de Instagram, Facebook, TikTok o anuncios en ventas mediante WhatsApp Business y seguim… |
 | [working-capital](skills/working-capital/SKILL.md) | — | — |  | working-capital: Financial Intelligence. Usar para producir working_capital_needs, cycle, levers a partir de inventario, cuentas por cobr… |
 | [writing-plans](skills/writing-plans/SKILL.md) | sí | experience-director | obra/superpowers | Use when you have a spec or requirements for a multi-step task, before touching code |
 | [youtube-strategy](skills/youtube-strategy/SKILL.md) | — | — |  | youtube-strategy: Marketing Intelligence. Usar para producir youtube_plan, series, conversion_paths a partir de audiencia, temas, producc… |
