@@ -26,3 +26,10 @@ jobs:
 
       # Sin dependencias: no hace falta npm ci.
       - run: npm run check
+
+      - name: Generate and show drift on failure
+        if: failure()
+        run: |
+          npm run agents:build
+          git diff -- INDEX.md | head -n 350
+          git status --short | head -n 70
