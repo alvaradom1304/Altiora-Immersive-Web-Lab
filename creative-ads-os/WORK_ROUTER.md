@@ -44,3 +44,10 @@ Ante «me entrega siempre el mismo edit», «estilo diferente», «adaptar a ese
 - Para un render terminado, QA visual debe comprobar que el cambio es **real**. Una salida JSON PASS no acredita creatividad profesional.
 - Mantener invariantes de marca, seguridad, licencias y honestidad; tres conceptos no implican tres MP4.
 - Instrucciones delegables en `docs/video/CREATIVE_VARIATION.md`.
+
+## Gate previo de investigación: First Step Is Discovery
+Para `anuncio`, `campaña creativa`, `video publicitario`, `marketing visual`, `motion graphics`, `referencias de video`, `landing visual` o nuevas decisiones de técnicas de edición, consultar `docs/marketing/DISCOVERY_PREPRODUCTION_GATE.md` **antes** de `creative-variation-playbook.md` y del montaje.
+- `market-intelligence-director` investiga con `top10-video-research` + `creative-deconstruction-originality`; `creative-ads-director` revisa hipótesis, evidencia, alternativas y experimentos. No utilizar motion graphics por defecto ni afirmar resultados de ventas sin datos.
+- Registrar referencias accesibles e inaccesibles, métodos de observación, derechos y riesgos; crear `05_QA/discovery-report.json` privado y ejecutar `npm run marketing:discovery -- --report <ruta>`. Con PASS continuar a dirección creativa; con NEEDS_REVIEW consultar decisiones faltantes; con BLOCKED no afirmar investigación completa.
+- Para observar material local con acceso autorizado, `npm run video:observe -- --client el-tilichero --campaign earbuds` genera fotogramas, inventario y timecodes para inspección humana o modelo visual. No ve el significado automáticamente. Herramientas opcionales Playwright (web) o VSS NVIDIA (video) requieren instalación/credenciales/hardware/autorizaciones y pasar el gate de terceros.
+- Si es una modificación mecánica menor de un anuncio ya aprobado, reutilizar el Discovery vigente y no forzar pesquisa nueva.
