@@ -53,6 +53,16 @@ Devolver SUCCESS, FAILED, BLOCKED o NEEDS_REVIEW según protocolo. Otro ejecutan
 
 Ejemplo: «Usa $ai-video-direction con guion, duración, referencias, herramienta, créditos para obtener video_brief, prompts, continuity_checks». Ante datos insuficientes, devolver preguntas/plan y límites; no simular resultado de campo.
 
+## Extensión operacional: edición real y postproducción de anuncios
+
+Si el usuario pide **editar videos ya grabados, unir clips, hacer montaje, motion graphics, corregir audio/color o renderizar un Reel en MP4**, activar el [protocolo de postproducción](references/postproduction-playbook.md) junto con este contrato. La capacidad original de planear/generar tomas con IA no debe confundirse con la ejecución del montaje real. El procedimiento de postproducción prioriza FFmpeg y Remotion **solo cuando están disponibles** y se ha inspeccionado el material.
+
+- Coordinar con `creative-ads-director`; usar `motion-designer`, `visual-producer` y `qa-reviewer` si la tarea lo requiere. No duplicar agentes ni prometer procesos autónomos.
+- Conservar masters en `01_CRUDOS` y no subirlos a GitHub; inventariar crudos, extraer selects y construir dos timelines comerciales distintos cuando sea pertinente.
+- Renderizar, comprobar técnicamente y **visionar** el resultado antes de declarar `SUCCESS`; si faltan videos, herramientas o autorización indispensable, comunicar `BLOCKED` o `NEEDS_REVIEW` con artefactos parciales verificables.
+- Mapear la entrega al esquema existente: `video_brief` = brief/inventario/timeline, `prompts` = recetas de edición/motion y rutas de proyecto, `continuity_checks` = informe QA, pruebas y archivos exportados. Mantener evidencia y restricciones sin alterar el schema.
+- Para El Tilichero, presentar earbuds sin atribuir marca Apple o funcionalidades no demostradas y usar CTA de WhatsApp con disponibilidad no supuesta.
+
 ## Historial
 
-0.1.0 — 2026-10-10: core delegable, contratos y casos iniciales. EXPERIMENTAL hasta revisión de comportamiento documentada.
+Extensión de postproducción — 2026-10-30: montaje real, animación, exportación y QA según playbook, conservando contrato 0.1.0.\n\n0.1.0 — 2026-10-10: core delegable, contratos y casos iniciales. EXPERIMENTAL hasta revisión de comportamiento documentada.
