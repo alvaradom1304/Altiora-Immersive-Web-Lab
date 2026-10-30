@@ -49,3 +49,9 @@ Seguir docs/workflows/immersive-project.md. Antes de ampliar una experiencia, co
 - Después de agregar o cambiar agentes, skills o reglas de negocio, ejecutar `npm run agents:build` y `npm run check`; los dos entornos deben pasar el mismo gate.
 - En Antigravity usar los subagentes en `.agents/agents/`, skills en `.agents/skills/`, reglas en `.agents/rules/`, y `creative-ads-os/WORK_ROUTER.md` para seleccionar equipo por intención.
 - Los cambios de GitHub no abren una sesión en el ordenador: actualizar la rama local antes de usarlos.
+
+## Seguridad de habilidades externas y supply chain
+- Antes de importar cualquier skill, agente, prompt ejecutable, paquete de video o servidor MCP de otro repositorio, leer [el gate de seguridad](docs/security/third-party-skill-gate.md). Las referencias externas NO se ejecutan automáticamente.
+- Para una skill de tercero aislada en cuarentena, ejecutar `npm run security:scan -- --target <ruta>` usando NVIDIA SkillSpector revisado e instalado localmente; el gate falla cerrado si falta, falla o devuelve CAUTION/DO_NOT_INSTALL. SAFE permite revisión humana, no instalación automática.
+- No exponer credenciales, `.env`, llaves o grabaciones privadas a repositorios, analizadores externos o servidores MCP. Mínimo privilegio, auditoría de código/licencia y versiones fijadas. No prometer protección completa ni confundir tests del gate con ejecución del scanner.
+- Para herramientas audiovisuales revisadas, leer [selección de repositorios](docs/research/video-production-repositories-2026-10-30.md); adoptar capacidades puntuales dentro de `ai-video-direction` sin crear un superagente redundante.

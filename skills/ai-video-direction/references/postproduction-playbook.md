@@ -67,3 +67,13 @@ Transferir originales con AirDrop, cable o transferencia de archivos **sin** com
 ## Integración con el contrato actual
 
 Esta extensión **no reemplaza** `references/contract.json`, `output-schema.json` ni `protocol.md` del skill. `video_brief` incorpora el inventario y montaje, `prompts` documenta acciones/recetas reproducibles de postproducción y `continuity_checks` incluye resultados de QA/renders con sus rutas y estados reales. Se mantienen `SUCCESS/FAILED/BLOCKED/NEEDS_REVIEW` según el contrato. Las capacidades profesionales requieren pruebas con material y entorno reales.
+
+## Herramientas externas revisadas y control de seguridad (2026-10-30)
+
+Consultar [la comparación de repositorios](../../../docs/research/video-production-repositories-2026-10-30.md) y [el gate NVIDIA](../../../docs/security/third-party-skill-gate.md) antes de importar una skill, ejecutar un instalador o incorporar nuevo código. La investigación NO significa que esas herramientas estén instaladas.
+
+- Remotion + guías oficiales `remotion-render`, `remotion-captions`, `remotion-markup`: opción preferida para composición y motion graphics cuando licencia, versiones y runtime se han verificado.
+- Auto-Editor: utilizar únicamente como cortes candidatos por silencio/movimiento, nunca reemplazar el criterio narrativo ni cortar pausas cómicas de El Tilichero sin revisión.
+- Whisper o faster-whisper: transcripción local opcional de audio autorizado; revisar texto/timing manualmente antes de subtitular. No inventar diálogo.
+- Editly y ffmpeg.wasm: mantener como alternativas en evaluación, no sumar dependencias redundantes.
+- SkillSpector protege el proceso de importación de skills/código, no edita video y no es garantía contra malware. `npm run security:scan -- --target <ruta>` debe preceder toda incorporación de terceros (scanner instalado previamente). Nunca enviar los clips privados para escaneo de repositorios.

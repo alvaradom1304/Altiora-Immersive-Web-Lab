@@ -30,3 +30,6 @@
 
 ## Integración con Claude Code
 Las skills fuente están en `skills/<nombre>/SKILL.md`. El proyecto genera el espejo de `.claude/skills` y el índice con `npm run agents:build` (no editar esos derivados manualmente); validar con `npm run check`. Otros asistentes deben leer este router por iniciativa explícita o instrucciones en `AGENTS.md`. No existe ejecución autónoma o carga automática en ChatGPT por solo subir Markdown.
+
+## Gate de repositorios externos
+Para nuevas skills, agentes, scripts, plugins y dependencias audiovisuales, leer `docs/security/third-party-skill-gate.md`, examinar procedencia y licencia, y ejecutar `npm run security:scan -- --target <ruta-en-cuarentena>` antes de una importación. SAFE no implica aprobación automática; la revisión humana y las pruebas de funcionalidad siguen siendo obligatorias. Las herramientas recomendadas están catalogadas en `docs/research/video-production-repositories-2026-10-30.md`.
