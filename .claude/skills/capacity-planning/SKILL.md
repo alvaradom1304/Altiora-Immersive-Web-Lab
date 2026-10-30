@@ -1,7 +1,6 @@
 ---
 name: capacity-planning
 description: "capacity-planning: Operations & Logistics. Usar para producir capacity_model, bottleneck, scenarios a partir de demanda, recursos, tiempos, rendimiento, restricciones; no sustituir otras fases ni declarar resultados sin evidencia."
-disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

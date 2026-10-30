@@ -1,7 +1,6 @@
 ---
 name: operational-scalability
 description: "operational-scalability: Growth & Scaling. Usar para producir scale_constraints, systems, milestones a partir de demanda, capacidad, procesos, costo unitario, calidad; no sustituir otras fases ni declarar resultados sin evidencia."
-disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

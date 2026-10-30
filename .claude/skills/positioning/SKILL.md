@@ -1,7 +1,6 @@
 ---
 name: positioning
 description: "positioning: Marketing Intelligence. Usar para producir positioning_statement, differentiators, proof a partir de audiencia, alternativas, valor, prueba, contexto; no sustituir otras fases ni declarar resultados sin evidencia."
-disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

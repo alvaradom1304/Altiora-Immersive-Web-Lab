@@ -1,0 +1,13 @@
+import test from "node:test";
+import assert from "node:assert/strict";
+import {evaluate} from "./third-party-skill-gate.mjs";
+const base={source:"https://github.com/owner/repo",revision:"a".repeat(40),acknowledge:true};
+const report={risk_score:0,recommendation:"SAFE",severity:"LOW",findings:[],incomplete:false};
+test("SAFE, completo y revisión humana: solo permite pasar gate",()=>{assert.equal(evaluate({...base,report}).status,"REVIEW_PASSED_NOT_INSTALLED")});
+test("sin evidencia de cobertura: bloquea",()=>{assert.throws(()=>evaluate({...base,report:{...report,incomplete:undefined}}),/incompleta/)});
+test("sin confirmación: bloquea",()=>{assert.throws(()=>evaluate({...base,acknowledge:false,report}),/confirmación/)});
+test("riesgo alto: bloquea",()=>{assert.throws(()=>evaluate({...base,report:{...report,risk_score:75,recommendation:"DO_NOT_INSTALL",severity:"HIGH"}}),/riesgo/)});
+test("hallazgo HIGH aun con puntuación baja: bloquea",()=>{assert.throws(()=>evaluate({...base,report:{...report,findings:[{severity:"HIGH"}]}}),/riesgo/)});
+test("revisión no fijada: bloquea",()=>{assert.throws(()=>evaluate({...base,revision:"main",report}),/commit/)});
+test("formato desconocido: bloquea",()=>{assert.throws(()=>evaluate({...base,report:{foo:1}}),/risk_score/)});
+test("CAUTION: bloquea",()=>{assert.throws(()=>evaluate({...base,report:{...report,risk_score:25,recommendation:"CAUTION",severity:"MEDIUM"}}),/riesgo/)});

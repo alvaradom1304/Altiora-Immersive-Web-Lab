@@ -7,11 +7,26 @@
     "node": ">=20"
   },
   "scripts": {
-    "check": "node scripts/verify-catalog.mjs && node scripts/audit-skills.mjs && node scripts/build-agents.mjs --check",
-    "agents:build": "node scripts/build-agents.mjs",
+    "check": "node scripts/verify-catalog.mjs && node scripts/audit-skills.mjs && node scripts/build-agents.mjs --check && node scripts/build-antigravity.mjs --check && node scripts/build-codex.mjs --check && node --test scripts/discovery.test.mjs && node --test scripts/skill-security-gate.test.mjs && node --test scripts/third-party-skill-gate.test.mjs && node --test scripts/video-project.test.mjs && node --test scripts/video-variation-audit.test.mjs && node --test scripts/marketing-discovery-gate.test.mjs && node --test scripts/video-observe.test.mjs && npm run research:preflight:test",
+    "agents:build": "node scripts/build-agents.mjs && node scripts/build-antigravity.mjs && node scripts/build-codex.mjs",
+    "capability:sync": "npm run agents:build && npm run check",
     "chat": "node scripts/team-chat.mjs",
     "skills:audit": "node scripts/audit-skills.mjs",
     "skills:baseline": "node scripts/audit-skills.mjs --write",
-    "reference": "node scripts/fetch-reference.mjs"
+    "reference": "node scripts/fetch-reference.mjs",
+    "antigravity:build": "node scripts/build-antigravity.mjs",
+    "security:scan": "node scripts/skill-security-gate.mjs",
+    "security:gate": "node scripts/third-party-skill-gate.mjs",
+    "security:test": "node --test scripts/third-party-skill-gate.test.mjs",
+    "video:project": "node scripts/video-project.mjs",
+    "video:test": "node --test scripts/video-project.test.mjs",
+    "video:variation": "node scripts/video-variation-audit.mjs",
+    "video:variation:test": "node --test scripts/video-variation-audit.test.mjs",
+    "marketing:discovery": "node scripts/marketing-discovery-gate.mjs",
+    "marketing:discovery:test": "node --test scripts/marketing-discovery-gate.test.mjs",
+    "video:observe": "node scripts/video-observe.mjs",
+    "video:observe:test": "node --test scripts/video-observe.test.mjs",
+    "research:preflight": "node scripts/research-preflight.mjs",
+    "research:preflight:test": "node --test scripts/research-preflight.test.mjs"
   }
 }

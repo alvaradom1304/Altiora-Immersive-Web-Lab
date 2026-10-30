@@ -1,7 +1,6 @@
 ---
 name: customer-research
 description: "customer-research: Business Intelligence. Usar para producir research_protocol, observations, findings a partir de preguntas, segmento, acceso consentido, datos de clientes; no sustituir otras fases ni declarar resultados sin evidencia."
-disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

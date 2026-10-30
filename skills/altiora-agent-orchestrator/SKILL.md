@@ -25,6 +25,14 @@ Para trabajo con áreas independientes, usar las definiciones de `.agents/agents
 
 Si el cliente no ofrece delegación, ejecutar los mismos roles de forma secuencial e indicar que no hubo agentes concurrentes. No inventar herramientas, sesiones, resultados ni nombres de modelos.
 
+## Crear o actualizar capacidades para las tres IAs
+
+Cuando el encargo pida una skill, agente, subagente o superagente de Altiora, **usar por defecto las tres plataformas**: Claude Code, Antigravity y Codex; no preguntar si se necesita en cada una. Seguir [política universal](../../docs/operations/UNIVERSAL_CAPABILITIES.md), comprobar si ya hay una capacidad equivalente y mejorarla antes de duplicar roles.
+
+Crear o modificar solo fuentes en `skills/` o `team/`. Ejecutar `npm run capability:sync` en la misma tarea para generar y verificar los adaptadores de las tres IAs. Un superagente es una responsabilidad de coordinación con delegación condicional; el nombre no garantiza autonomía técnica. Si no se ejecutaron pruebas o no existe soporte en un entorno local, informar el límite sin afirmar que funciona.
+
+La integración de terceros exige pasar antes el gate de seguridad y revisión de permisos. Los archivos generados no se editan a mano.
+
 ## Delegar un resultado concreto
 
 Antes de lanzar un agente, leer [el contrato de delegación](references/delegation.md). Entregarle contexto mínimo, entradas, responsabilidad sobre archivos, salida esperada y condición de cierre. No asumir que recibe el historial del coordinador.

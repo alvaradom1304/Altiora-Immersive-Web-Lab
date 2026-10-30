@@ -1,0 +1,23 @@
+{
+  "version": "1.0.0",
+  "cases": [
+    {
+      "id": "product-winner-scorecard-1",
+      "scenario": "SKU sin costo real no puede ser catalogado como ganador.",
+      "expected_behavior": "SKU sin costo real no puede ser catalogado como ganador.",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "product-winner-scorecard-2",
+      "scenario": "Producto con muchas vistas pero sin inventario queda descartado para pauta inmediata.",
+      "expected_behavior": "Producto con muchas vistas pero sin inventario queda descartado para pauta inmediata.",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "product-winner-scorecard-3",
+      "scenario": "Precio menor que costo variable genera alerta de contribución negativa.",
+      "expected_behavior": "Precio menor que costo variable genera alerta de contribución negativa.",
+      "status": "NOT_RUN"
+    }
+  ]
+}

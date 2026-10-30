@@ -1,0 +1,13 @@
+{
+  "base_commit": "573b56b93bd8b8836c3cce9aafb02ccf02cd3f9b",
+  "method": "Git diff of every tracked original source against base, using Git text normalization; untracked additions counted separately",
+  "original_source_files_compared": 1876,
+  "changed_original_sources": [],
+  "original_skills_tree": "419821bb5c25d03dc0b0043a568e53c2c64b8e76",
+  "runtime_claude_smoke_test": "NOT_RUN: executable unavailable in PATH",
+  "original_check": "FAIL: Antigravity INDEX parser rejects CRLF; 260 source skills, 89 automatic, 171 manual",
+  "initial_regression_test": "2 FAIL / 1 PASS before fix",
+  "baseline_not_regenerated": true,
+  "final_regression_tests": "7 PASS / 0 FAIL",
+  "generation_idempotence": "PASS: 617 generated files unchanged on second build"
+}

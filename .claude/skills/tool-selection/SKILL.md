@@ -1,7 +1,6 @@
 ---
 name: tool-selection
 description: "tool-selection: AI & Automation. Usar para producir tool_comparison, choice, fallback a partir de tarea, opciones disponibles, permisos, costo; no sustituir otras fases ni declarar resultados sin evidencia."
-disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

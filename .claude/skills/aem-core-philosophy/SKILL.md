@@ -1,7 +1,6 @@
 ---
 name: aem-core-philosophy
 description: "Usa este skill para alinear decisiones con la filosofía AEM OS (Strategy before design, Evidence before opinion) y entender la arquitectura central del sistema."
-disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

@@ -17,4 +17,8 @@ Roles operativos; no representan personal contratado ni agentes ya ejecutándose
 | QA y accesibilidad | Detectar y bloquear problemas demostrados | Hallazgos, evidencias y scorecard | Director de experiencia |
 | Analista de conversión y fidelización | Medir utilidad, conversión y retorno | Plan de eventos, baseline y backlog | Estrategia + UX |
 
+| Director de crecimiento comercial | Coordinar captación, ventas y rendimiento | Diagnóstico, campaña y KPIs comerciales | Estrategia + QA |
+| Director de inteligencia de mercado | Investigar videos, demanda y competidores | Top 10 verificado y score de productos | Comercial + QA |
+| Director de anuncios audiovisuales | Dirigir originalidad, rodaje y postproducción | Guion, video y QA audiovisual | Marca + QA |
+
 Dirección coordina. QA revisa de forma independiente y puede bloquear el lanzamiento. El cliente decide sobre identidad y alcance mediante propuestas concretas. Las herramientas de IA, Figma, automatización o desarrollo son intercambiables.

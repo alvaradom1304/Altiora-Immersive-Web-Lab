@@ -1,7 +1,6 @@
 ---
 name: targeting
 description: "targeting: Marketing Intelligence. Usar para producir target_priorities, exclusions, rationale a partir de segmentos, economía, acceso, capacidades; no sustituir otras fases ni declarar resultados sin evidencia."
-disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-29",
+  "note": "Read-only snapshots; local variants retained. No credentials or settings copied.",
+  "files": [
+    {
+      "source": "~/.codex/agents/altiora-engineering.toml",
+      "snapshot": "team/local-sources/codex/altiora-engineering.toml",
+      "sha256": "99ae0abbecbb721b661cbbf039774278af7e2cc48b32d0085c765c07b6653ab0"
+    },
+    {
+      "source": "~/.codex/agents/altiora-experience.toml",
+      "snapshot": "team/local-sources/codex/altiora-experience.toml",
+      "sha256": "075245a475b69a9aa70c8bb47bf5b937ce957fa7c9e46c0c84853bec3bf420d1"
+    },
+    {
+      "source": "~/.codex/agents/altiora-research.toml",
+      "snapshot": "team/local-sources/codex/altiora-research.toml",
+      "sha256": "19455d4ba28fa4beac311567071579f8352bc6568a0de7fc02e6dc6ad00285dc"
+    },
+    {
+      "source": "~/.codex/agents/altiora-review.toml",
+      "snapshot": "team/local-sources/codex/altiora-review.toml",
+      "sha256": "e9270e6037dc70e2de96e371c6776e7b7b7a8b35e11520210a1d55ad08e147a9"
+    },
+    {
+      "source": "~/.codex/agents/immersive-director.toml",
+      "snapshot": "team/local-sources/codex/immersive-director.toml",
+      "sha256": "fafa5720dbca72f97d727603fcca19f397c66a06e7c51eb3d8d02cfbac2f995b"
+    },
+    {
+      "source": "~/.codex/agents/immersive-motion-engineer.toml",
+      "snapshot": "team/local-sources/codex/immersive-motion-engineer.toml",
+      "sha256": "d6f38ebfa4d440c3c6f75d66bfcff12211326189151725f4ce4d6f20d27f9fdc"
+    },
+    {
+      "source": "~/.codex/agents/immersive-reviewer.toml",
+      "snapshot": "team/local-sources/codex/immersive-reviewer.toml",
+      "sha256": "b5263ac1eee1d3eb16cdcf37d1fe7137ea8be9cb00fc7bd82f0d173bb927dfa0"
+    },
+    {
+      "source": "~/.claude/agents/immersive-director.md",
+      "snapshot": "team/local-sources/claude/immersive-director.md",
+      "sha256": "0c5719f9dcfb732a8b03edbc01972c5f893b4219cbe25563b9a0d4267d0313ac"
+    },
+    {
+      "source": "~/.claude/agents/immersive-motion-engineer.md",
+      "snapshot": "team/local-sources/claude/immersive-motion-engineer.md",
+      "sha256": "e7c798fa9acd2c80080a6ab53ef57db8ba2698fba319e9d002906ff9ddbb932c"
+    },
+    {
+      "source": "~/.claude/agents/immersive-reviewer.md",
+      "snapshot": "team/local-sources/claude/immersive-reviewer.md",
+      "sha256": "08629a5bcc384ec71a1c935762afb7178e514e4b49e25b8dac263841bad71fec"
+    },
+    {
+      "source": "~/.codex/skills/immersive-interaction-lab/SKILL.md",
+      "snapshot": "skills/immersive-interaction-lab/SKILL.md",
+      "sha256": "088e0e9a41eaad21406d8a5683dc4a60c0d61d51ab4fe21d97bcb78426caaed8"
+    }
+  ]
+}

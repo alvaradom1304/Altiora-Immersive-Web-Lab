@@ -1,7 +1,6 @@
 ---
 name: working-capital
 description: "working-capital: Financial Intelligence. Usar para producir working_capital_needs, cycle, levers a partir de inventario, cuentas por cobrar/pagar, plazos; no sustituir otras fases ni declarar resultados sin evidencia."
-disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

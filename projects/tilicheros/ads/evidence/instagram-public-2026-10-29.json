@@ -1,0 +1,81 @@
+{
+  "observed_on": "2026-10-29",
+  "timezone": "America/Costa_Rica",
+  "method": "Unauthenticated in-app browser; accessibility tree plus visual screenshot inspection",
+  "profile": "https://www.instagram.com/el.tilichero.cr/",
+  "followers": 168,
+  "following": 4,
+  "whatsapp_public_destination": "https://wa.me/message/YRECKFV2SXKNL1",
+  "whatsapp_page_identity": "El Tilichero",
+  "whatsapp_conversation_opened": false,
+  "sample": [
+    {
+      "url": "https://www.instagram.com/el.tilichero.cr/p/DfFXJiMDmck/",
+      "date_in_accessibility_tree": "2026-10-29",
+      "type": "photo"
+    },
+    {
+      "url": "https://www.instagram.com/el.tilichero.cr/p/DfFWUS1DoD5/",
+      "date_in_accessibility_tree": "2026-10-29",
+      "type": "photo"
+    },
+    {
+      "url": "https://www.instagram.com/el.tilichero.cr/p/DfFV7-djirr/",
+      "date_in_accessibility_tree": "2026-10-29",
+      "type": "photo"
+    },
+    {
+      "url": "https://www.instagram.com/el.tilichero.cr/p/DfFVcHrDqts/",
+      "date_in_accessibility_tree": "2026-10-29",
+      "type": "photo"
+    },
+    {
+      "url": "https://www.instagram.com/el.tilichero.cr/p/DfFTFmIjm-Q/",
+      "date_in_accessibility_tree": "2026-10-29",
+      "type": "photo"
+    },
+    {
+      "url": "https://www.instagram.com/el.tilichero.cr/p/DfFSdtOjidZ/",
+      "date_in_accessibility_tree": "2026-10-29",
+      "type": "photo"
+    },
+    {
+      "url": "https://www.instagram.com/el.tilichero.cr/p/DfFR4XjDmYP/",
+      "date_in_accessibility_tree": "2026-10-29",
+      "type": "photo"
+    },
+    {
+      "url": "https://www.instagram.com/el.tilichero.cr/p/DfFQ-mWjvVX/",
+      "date_in_accessibility_tree": "2026-10-29",
+      "type": "photo"
+    },
+    {
+      "url": "https://www.instagram.com/el.tilichero.cr/reel/DfEzRePgXYi/",
+      "date_in_accessibility_tree": "2026-10-29",
+      "type": "video_thumbnail"
+    },
+    {
+      "url": "https://www.instagram.com/el.tilichero.cr/p/Dehu2crienm/",
+      "date_in_accessibility_tree": "2026-10-15",
+      "type": "photo"
+    },
+    {
+      "url": "https://www.instagram.com/el.tilichero.cr/p/DehuH9UiVhV/",
+      "date_in_accessibility_tree": "2026-10-15",
+      "type": "photo"
+    },
+    {
+      "url": "https://www.instagram.com/el.tilichero.cr/p/DehtfSVCax2/",
+      "date_in_accessibility_tree": "2026-10-15",
+      "type": "photo"
+    }
+  ],
+  "limitations": [
+    "Sample of 12, not full history",
+    "Post detail and Reel playback require sign-in",
+    "No Insights, captions, comments, retention, private messages or orders",
+    "Generated alt descriptions can misidentify products; visual inspection preferred",
+    "Bio was initially truncated; full CTA became visible after dismissing second sign-up dialog"
+  ],
+  "source_revision_of_existing_project_brief": "573b56b93bd8b8836c3cce9aafb02ccf02cd3f9b"
+}

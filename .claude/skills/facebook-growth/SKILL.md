@@ -1,7 +1,6 @@
 ---
 name: facebook-growth
 description: "facebook-growth: Marketing Intelligence. Usar para producir facebook_plan, community_tests, measures a partir de cuenta/página, mercado, audiencia, oferta; no sustituir otras fases ni declarar resultados sin evidencia."
-disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

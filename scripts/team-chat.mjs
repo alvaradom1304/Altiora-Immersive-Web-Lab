@@ -6,12 +6,13 @@ import { appendFile, mkdir, readFile, readdir, writeFile } from 'node:fs/promise
 import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { randomBytes } from 'node:crypto';
+import { loadAgents } from './skill-catalog.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const dir = resolve(root, process.env.ALTIORA_CHAT_DIR || 'team/chat');
 const tasksDir = resolve(dir, 'tasks');
 const messagesPath = resolve(dir, 'messages.jsonl');
-const roles = JSON.parse(await readFile(resolve(root, 'team/agents.json'), 'utf8')).agents.map(a => a.id);
+const roles = (await loadAgents(root)).map(a => a.id);
 const STATUS = { pendiente: '○', en_curso: '◐', bloqueada: '■', hecha: '●' };
 
 const [command, ...rest] = process.argv.slice(2);

@@ -1,7 +1,6 @@
 ---
 name: aem-stage-05-digital
 description: "Ejecuta la Fase 05 de AEM. Arquitectura de soluciones digitales, selección de Tech Stack y experiencia de usuario (UX)."
-disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->
