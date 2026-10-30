@@ -58,3 +58,5 @@ En `02_REFERENCIAS/REFERENCIAS.md` pegar URLs de anuncios y anotar qué estructu
 
 ## Sistema antirrepetición de Altiora
 Consultar `skills/creative-deconstruction-originality/references/video-editorial-variation.md`. El comando `npm run video:variation -- plan` produce tratamientos conceptuales distintos basados en tomas observadas y el historial **compartido por cliente** en `media-workspaces/<cliente>/editorial-history.json` (fuera de Git). Los planes van en `04_EDITABLES/`; las comparaciones y la revisión humana del video final se documentan en `05_QA/`. No registrar propuestas no renderizadas como historial ni confundir diversidad estructural con originalidad visual comprobada.
+
+Una vez aprobado el MP4, registrar el patrón real con \`npm run video:variation -- record\` y archivos \`proposal.json\`, \`qa-final.json\`, \`editorial-history.json\` (ejemplo completo en la guía de la skill). Esto habilita la comparación con la siguiente campaña de la misma empresa; no registrar planes sin render ni QA.

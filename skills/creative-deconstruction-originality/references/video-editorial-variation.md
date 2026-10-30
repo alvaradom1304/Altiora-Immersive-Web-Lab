@@ -56,3 +56,14 @@ Un video de earbuds con diálogos y reacción puede funcionar como humor natural
 
 ## Límites de verificación
 El script compara descripciones estructuradas **aportadas por el editor**; no analiza automáticamente similitud de fotogramas ni calidad de actuaciones. Un agente podría rellenar campos distintos sin alterar el video; por eso el QA visual contra material real es condición de aprobación. Estado sin videos/renders: NOT_RUN. Las técnicas y el formato son guías originales de Altiora; Remotion/FFmpeg son posibles implementadores, no la fuente de estos criterios.
+
+## Guardar aprendizaje real entre campañas
+Al terminar el MP4 y aprobarlo, el editor debe preparar en \`05_QA/qa-final.json\`:
+\`\`\`json
+{"status":"APPROVED","human_reviewed":true,"visual_reviewed":true,"technical_qa_passed":true}
+\`\`\`
+Marcar estos campos **solo tras ejecución real**. El motor comprobará existencia y tamaño del MP4, no certifica por sí mismo la revisión visual. Guardar un \`proposal.json\` con al menos \`{brand,campaign,route,style}\` del tratamiento elegido y ejecutar:
+\`\`\`bash
+npm run video:variation -- record --proposal media-workspaces/el-tilichero/earbuds/04_EDITABLES/proposal.json --history media-workspaces/el-tilichero/editorial-history.json --render media-workspaces/el-tilichero/earbuds/03_RESULTADOS/earbuds-humor-v01.mp4 --qa media-workspaces/el-tilichero/earbuds/05_QA/qa-final.json
+\`\`\`
+El siguiente proyecto del mismo cliente debe apuntar al mismo archivo de historial. Con \`history_count=0\` el sistema desconoce estilos de otras conversaciones y no puede prometer originalidad respecto a trabajos fuera del registro.
