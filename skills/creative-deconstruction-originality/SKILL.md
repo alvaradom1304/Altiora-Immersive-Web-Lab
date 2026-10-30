@@ -35,3 +35,7 @@ Leer `AGENTS.md` y `creative-ads-os/WORK_ROUTER.md` desde la raíz del repositor
 
 ## Versión
 1.0.0 — 2026-10-29: primera implementación de skill operativa reutilizable.
+
+## Especialización: evitar que todos los edits parezcan la misma plantilla
+
+Ante «Claude Code siempre edita igual» o tareas reiteradas, activar [Altiora Editorial Variance Engine](references/video-editorial-variation.md), seleccionar tres tratamientos que realmente respondan al contenido y someter la propuesta al gate estructural `npm run video:variation` más QA humano de los MP4. Conservar identidad de marca; variar la gramática audiovisual (gancho, historia, cámara, ritmo, sonido y tipografía), no solo filtros. Mantener historial por cliente fuera de Git. Si no se ven crudos ni trabajos anteriores, declarar lo desconocido; no simular diversidad verificada.

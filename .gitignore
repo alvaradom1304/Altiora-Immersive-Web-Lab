@@ -6,3 +6,7 @@ node_modules/
 .next/
 dist/
 .DS_Store
+/media-workspaces/
+**/01_CRUDOS/
+**/03_RESULTADOS/
+**/04_EDITABLES/

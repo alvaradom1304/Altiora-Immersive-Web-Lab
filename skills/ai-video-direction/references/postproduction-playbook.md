@@ -77,3 +77,6 @@ Consultar [la comparación de repositorios](../../../docs/research/video-product
 - Whisper o faster-whisper: transcripción local opcional de audio autorizado; revisar texto/timing manualmente antes de subtitular. No inventar diálogo.
 - Editly y ffmpeg.wasm: mantener como alternativas en evaluación, no sumar dependencias redundantes.
 - SkillSpector protege el proceso de importación de skills/código, no edita video y no es garantía contra malware. `npm run security:scan -- --target <ruta>` debe preceder toda incorporación de terceros (scanner instalado previamente). Nunca enviar los clips privados para escaneo de repositorios.
+
+## Árbol multiempresa creado por CLI
+El nombre `campaign/` mostrado arriba representa **cada campaña** dentro de `media-workspaces/<cliente>/<campaña>/`. Preferir siempre `docs/video/VIDEO_WORKSPACES.md` y `npm run video:project -- init --client <slug> --campaign <slug>` para evitar variaciones manuales. Añadir `04_EDITABLES/` y `05_QA/`; `03_RESULTADOS/` recibe SOLO MP4 y variantes finales, no inputs. Referencias audiovisuales se registran en `02_REFERENCIAS/REFERENCIAS.md` con enlace, permiso y objetivo de adaptación, nunca se copian anuncios protegidos sin licencia. Conservar evidencia de salida en `05_QA/`. Los tres asistentes usan el mismo esquema.

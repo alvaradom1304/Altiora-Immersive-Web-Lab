@@ -33,3 +33,10 @@ Las skills fuente están en `skills/<nombre>/SKILL.md`. El proyecto genera el es
 
 ## Gate de repositorios externos
 Para nuevas skills, agentes, scripts, plugins y dependencias audiovisuales, leer `docs/security/third-party-skill-gate.md`, examinar procedencia y licencia, y ejecutar `npm run security:scan -- --target <ruta-en-cuarentena>` antes de una importación. SAFE no implica aprobación automática; la revisión humana y las pruebas de funcionalidad siguen siendo obligatorias. Las herramientas recomendadas están catalogadas en `docs/research/video-production-repositories-2026-10-30.md`.
+
+## Workspace por empresa y campaña
+En cualquier tarea de edición real, leer `docs/video/VIDEO_WORKSPACES.md`; generar `media-workspaces/<cliente>/<campaña>/` con `npm run video:project -- init --client <cliente> --campaign <campaña>`. Hay tres carpetas comerciales obligatorias: `01_CRUDOS` (material del cliente), `02_REFERENCIAS` (ejemplos autorizados/links) y `03_RESULTADOS` (MP4 exportados). Sumar `04_EDITABLES` (proyecto Remotion/edición) y `05_QA` (verificación). Claude Code usa `.claude/`, Antigravity `.agents/`, Codex `AGENTS.md` + `.agents/skills/` + `.codex/agents/`. No publicar sin autorización.
+
+## Ruta antirrepetición audiovisual
+
+Ante «todos los videos son iguales», «no repitas los edits», «hazlo con otra esencia» o campañas repetidas, asignar a `creative-ads-director` la especialidad `creative-deconstruction-originality` mediante `references/video-editorial-variation.md`, con `motion-designer` y `qa-reviewer` según complejidad. Antes de renderizar, generar tres tratamientos factibles con `npm run video:variation -- plan`, comparar la opción elegida contra el historial con `-- check`, y revisar visualmente el render contra proyectos anteriores. No aceptar una simple variación de música, tipografía, color o transiciones como pieza nueva.

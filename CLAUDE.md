@@ -7,3 +7,6 @@ Los roles canónicos de `team/registry.md` y los adaptadores locales de `team/lo
 
 ## Descubrimiento verificable
 Consultar `references/discovery-manifest.json` para reconciliar fuentes, agentes y comandos auxiliares. No contar `/chat-*`, `/equipo` o `/repos` como skills del catálogo. Los roles y subagentes son las mismas identidades; no sumarlos dos veces. Si falta una capacidad, leer `docs/operations/claude-discovery.md`. Abrir esta raíz y la rama actualizada; no confundir el catálogo con una sesión activa.
+
+## Videos de clientes
+Para montaje, motion graphics y exportación final, leer `docs/video/VIDEO_WORKSPACES.md`. Crear la campaña local con `npm run video:project -- init --client el-tilichero --campaign earbuds` y seguir `ai-video-direction` y su protocolo de postproducción. Registrar video final solo después de QA.

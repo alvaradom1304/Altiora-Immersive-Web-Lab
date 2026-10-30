@@ -66,3 +66,10 @@ Si el usuario pide **editar videos ya grabados, unir clips, hacer montaje, motio
 ## Historial
 
 Extensión de postproducción — 2026-10-30: montaje real, animación, exportación y QA según playbook, conservando contrato 0.1.0.\n\n0.1.0 — 2026-10-10: core delegable, contratos y casos iniciales. EXPERIMENTAL hasta revisión de comportamiento documentada.
+
+## Campañas y workspaces locales para los tres agentes
+Para material real, **crear o reusar** `media-workspaces/<cliente>/<campaña>/` mediante `npm run video:project -- init --client <slug> --campaign <slug>` y leer `docs/video/VIDEO_WORKSPACES.md`. El comando de inventario produce hashes de crudos sin modificarlos. Las carpetas de referencias y resultados son deliberadamente distintas. El `01_CRUDOS/` es inmutable; `03_RESULTADOS/` solo contiene exports verificables. Codex, Claude Code y Antigravity deben trabajar sobre el mismo proyecto local, sin importar el editor. No subir videos, identidades ni audios privados a GitHub.
+
+## Control previo de variedad editorial
+
+Cuando un usuario haya recibido edits repetitivos, o solicite un video diferente, pasar primero por `skills/creative-deconstruction-originality/references/video-editorial-variation.md` y `npm run video:variation`. La elección debe depender de las tomas observadas, el objetivo y la emoción, no del mismo preset de Remotion. El montaje solo se aprueba después de comparar el MP4 final con trabajos previos, además de los controles técnicos. No confundir propuesta `READY_FOR_CREATIVE_REVIEW` con video terminado.
