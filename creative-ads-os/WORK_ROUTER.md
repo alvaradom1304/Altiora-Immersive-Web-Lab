@@ -17,7 +17,7 @@
 2. Clasificar el encargo: diagnóstico, investigación, estrategia, concepto, producción, distribución, conversión, medición o mixto.
 3. Elegir un director responsable y 1–3 skills principales; añadir especialistas de edición/motion/QA si corresponde. No convocar decenas de roles por tareas pequeñas.
 4. Reusar los 15 agentes registrados en `team/agents.json` en `.claude/agents`; los directores de `creative-ads-os/agents` son especificaciones para coordinar, no promesas de agentes activos autónomos. Si el entorno no permite subagentes, ejecutar roles secuencialmente.
-5. Para campaña nueva: revisar hasta diez ejemplos VERIFICABLES, identificar mecanismo de decisión del cliente, proponer tres rutas (humor, emoción/narrativa, demo/oferta), construir guion y decisión. No forzar emoción para todo producto.
+5. Para campaña nueva: revisar ejemplos VERIFICABLES pertinentes, identificar la esencia del metraje, proponer tres rutas creativas DIFERENTES basadas en clips reales, comparar con historial de estilos y elegir por ajuste de marca/contenido. Humor, emoción y demo son alternativas, NUNCA tres plantillas obligatorias.
 6. Para audiovisual: `01_CRUDOS` → `02_REFERENCIAS` → `03_FINALISTAS` (medios privados fuera de GitHub). Para material ya filmado, invocar el módulo de postproducción de `skills/ai-video-direction/references/postproduction-playbook.md`: inspección ffprobe, selects reales, montaje FFmpeg, motion Remotion si disponible, exportación MP4, QA técnico + visual, fuentes editables y manifiesto de derechos. No declarar render hecho sin archivo real y verificación.
 7. Medir chats, clientes, contribución y aprendizaje; nunca equiparar vistas con ventas. Registrar resultados y actualizar patrones reutilizables.
 8. Informar estado de cada acción: DISEÑADO / IMPLEMENTADO / PROBADO / APROBADO / PUBLICADO. No afirmar que se ejecutó un agente cuando solo se leyó su archivo.
@@ -36,3 +36,11 @@ Para nuevas skills, agentes, scripts, plugins y dependencias audiovisuales, leer
 
 ## Workspace por empresa y campaña
 En cualquier tarea de edición real, leer `docs/video/VIDEO_WORKSPACES.md`; generar `media-workspaces/<cliente>/<campaña>/` con `npm run video:project -- init --client <cliente> --campaign <campaña>`. Hay tres carpetas comerciales obligatorias: `01_CRUDOS` (material del cliente), `02_REFERENCIAS` (ejemplos autorizados/links) y `03_RESULTADOS` (MP4 exportados). Sumar `04_EDITABLES` (proyecto Remotion/edición) y `05_QA` (verificación). Claude Code usa `.claude/`, Antigravity `.agents/`, Codex `AGENTS.md` + `.agents/skills/` + `.codex/agents/`. No publicar sin autorización.
+
+## Antirrepetición editorial — activación obligatoria
+Ante «me entrega siempre el mismo edit», «estilo diferente», «adaptar a esencia», «creatividad original», «no uses el mismo motion», o al montar una nueva campaña para cliente con historial, el `creative-ads-director` activa **primero** `skills/ai-video-direction/references/creative-variation-playbook.md`, **después** `postproduction-playbook.md`.
+- Visionar material, describir personalidad, construir tres rutas distintas (8 ejes) y auditar con `npm run video:variation`.
+- Comparar con `media-workspaces/<cliente>/_creative-history.json` (solo local). No asignar escenas o técnicas sin soporte en metraje.
+- Para un render terminado, QA visual debe comprobar que el cambio es **real**. Una salida JSON PASS no acredita creatividad profesional.
+- Mantener invariantes de marca, seguridad, licencias y honestidad; tres conceptos no implican tres MP4.
+- Instrucciones delegables en `docs/video/CREATIVE_VARIATION.md`.
