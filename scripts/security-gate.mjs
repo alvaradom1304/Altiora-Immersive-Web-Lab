@@ -2,14 +2,15 @@
 import {realpath,lstat,readdir} from 'node:fs/promises';
 import {resolve,relative,isAbsolute,sep} from 'node:path';
 import {spawnSync} from 'node:child_process';
+import {fileURLToPath} from 'node:url';
 import {assessScan} from './security-policy.mjs';
 const input=process.argv[2];
 if (!input || input.startsWith('-') || process.argv.length!==3) {console.error('Uso: npm run security:scan -- skills/<nombre> (o .references/<repo>)');process.exit(2);}
-const root=await realpath(resolve(new URL('../',import.meta.url).pathname)).catch(()=>null);
+const root=await realpath(fileURLToPath(new URL('../',import.meta.url))).catch(()=>null);
 if(!root){console.error('No se pudo resolver el repo');process.exit(2);}
 const candidate=resolve(process.cwd(),input);
 let path;
-try {path=await realpath(candidate);} catch {console.error('El objetivo no existe');process.exit(2);}
+try {if ((await lstat(candidate)).isSymbolicLink()) throw new Error('symlink'); path=await realpath(candidate);} catch {console.error('El objetivo no existe');process.exit(2);}
 const rel=relative(root,path);
 if(rel===''||rel.startsWith('..'+sep)||isAbsolute(rel)||!(/^(skills|\.references|third-party)\//.test(rel.replaceAll(sep,'/')))){console.error('Objetivo fuera de carpeta permitida: skills/, .references/ o third-party/');process.exit(2);}
 let count=0,bytes=0;
@@ -31,6 +32,6 @@ if(scan.error||scan.status!==0){console.error('BLOCKED: SkillSpector falló o co
 let parsed;
 try{parsed=JSON.parse(scan.stdout)}catch{console.error('BLOCKED: informe JSON de scanner inválido');process.exit(4);}
 const v=assessScan(parsed);
-console.log(JSON.stringify({tool:'NVIDIA SkillSpector',version:'2.12.0',mode:'static/no-llm',source:rel,files:count,bytes,scan_result:v,not_installed:true},null,2));
+console.log(JSON.stringify({tool:'NVIDIA SkillSpector',version:'2.12.0',mode:'static/no-llm',source:rel,files:count,bytes,scan_result:v,third_party_source_not_automatically_installed:true},null,2));
 if(!v.allowed)process.exit(5);
 console.log('SAFE (scanner) no sustituye revisión humana, licencias, análisis de dependencias ni sandbox.');
