@@ -7,13 +7,15 @@
     "node": ">=20"
   },
   "scripts": {
-    "check": "node scripts/verify-catalog.mjs && node scripts/audit-skills.mjs && node scripts/build-agents.mjs --check && node scripts/build-antigravity.mjs --check && node --test scripts/discovery.test.mjs && node --test scripts/skill-security-gate.test.mjs",
+    "check": "node scripts/verify-catalog.mjs && node scripts/audit-skills.mjs && node scripts/build-agents.mjs --check && node scripts/build-antigravity.mjs --check && node --test scripts/discovery.test.mjs && node --test scripts/skill-security-gate.test.mjs && node --test scripts/third-party-skill-gate.test.mjs",
     "agents:build": "node scripts/build-agents.mjs && node scripts/build-antigravity.mjs",
     "chat": "node scripts/team-chat.mjs",
     "skills:audit": "node scripts/audit-skills.mjs",
     "skills:baseline": "node scripts/audit-skills.mjs --write",
     "reference": "node scripts/fetch-reference.mjs",
     "antigravity:build": "node scripts/build-antigravity.mjs",
-    "security:scan": "node scripts/skill-security-gate.mjs"
+    "security:scan": "node scripts/skill-security-gate.mjs",
+    "security:gate": "node scripts/third-party-skill-gate.mjs",
+    "security:test": "node --test scripts/third-party-skill-gate.test.mjs"
   }
 }
