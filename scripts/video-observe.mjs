@@ -7,7 +7,7 @@ import {fileURLToPath} from 'node:url';
 const ROOT=resolve(fileURLToPath(new URL('../',import.meta.url)),'media-workspaces');
 export const RATIOS=[0.1,0.5,0.9];
 export function slug(x){if(typeof x!=='string'||!/^[a-z0-9](?:[a-z0-9-]{0,46}[a-z0-9])?$/.test(x))throw Error('Nombre de campaña inseguro');return x}
-export function timestamps(duration){if(!Number.isFinite(duration)||duration<=0)throw Error('Duración de video inválida');return RATIOS.map(r=>Math.round(Math.min(duration-0.02,Math.max(0,duration*r))*1000)/1000)}
+export function timestamps(duration){if(!Number.isFinite(duration)||duration<=0)throw Error('Duración de video inválida');return RATIOS.map(r=>Math.round(Math.max(0,Math.min(Math.max(0,duration-0.02),duration*r))*1000)/1000)}
 export function mediaFiles(items){return items.filter(x=>x.isFile()&&/\.(mov|mp4|m4v|webm|mkv)$/i.test(x.name)).map(x=>x.name).sort()}
 async function cmd(name,args){
  return new Promise((ok,fail)=>{
