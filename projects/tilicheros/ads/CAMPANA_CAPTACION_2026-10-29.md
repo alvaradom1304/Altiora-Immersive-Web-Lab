@@ -1,3 +1,5 @@
+> **Reemplazado en guiones, códigos y duraciones por [`PRODUCCION_CANONICA.md`](PRODUCCION_CANONICA.md).** Este documento se conserva como historial; si lo contradice, manda el canónico.
+
 # El Tilichero · Captación Gaming + Tecnología
 **Fecha:** 2026-10-29
 **Agencia:** Altiora

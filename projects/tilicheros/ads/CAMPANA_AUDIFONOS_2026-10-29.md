@@ -1,3 +1,5 @@
+> **Reemplazado en guiones, códigos y duraciones por [`PRODUCCION_CANONICA.md`](PRODUCCION_CANONICA.md).** Este documento se conserva como historial; si lo contradice, manda el canónico.
+
 # Altiora × El Tilichero | Campaña de audífonos
 **Fecha:** 29 de octubre de 2026 · **Estado:** propuesta y preproducción, no publicada.
 **Producto exclusivo de esta activación:** audífonos (modelo exacto pendiente).

@@ -1,0 +1,34 @@
+{
+  "id": "T1029-47f2",
+  "title": "Tilichero: kit del cliente (fichas y registro)",
+  "role": "growth-analyst",
+  "ai": "claude",
+  "reviewer": "qa-reviewer",
+  "depends": [],
+  "files": [
+    "projects/tilicheros/ads/kit-cliente/"
+  ],
+  "acceptance": "Ficha por producto llenable, registro semanal sin datos personales, resumen con NO CALCULABLE si denominador es 0, instrucciones en espanol simple",
+  "status": "hecha",
+  "owner": "claude/growth-analyst",
+  "created": "2026-10-30T01:09:18Z",
+  "created_by": "claude/experience-director",
+  "history": [
+    {
+      "at": "2026-10-30T01:09:18Z",
+      "by": "claude/experience-director",
+      "status": "pendiente"
+    },
+    {
+      "at": "2026-10-30T01:10:09Z",
+      "by": "claude/growth-analyst",
+      "status": "en_curso"
+    },
+    {
+      "at": "2026-10-30T01:49:37Z",
+      "by": "claude/growth-analyst",
+      "status": "hecha",
+      "note": "DISEÑADO. kit-cliente/: README (voseo, que no registrar, definiciones), ficha-producto.md (16 campos con valor/fuente/fecha/verificado) y registro-tilichero.xlsx (Instrucciones, Fichas, Consultas con 300 filas, Resumen con NO CALCULABLE y SIN PAUTA, bloque Prueba A). Sin datos personales ni de ejemplo; metadatos 'Altiora'. Formulas recalculadas con Excel 16 por COM (LibreOffice no instalado): 4 escenarios, 652 comprobaciones, 0 errores; revisado de nuevo con openpyxl: 0 celdas con error y la plantilla vacia. Sin probar en Google Sheets ni en el celular. npm run check PASS."
+    }
+  ]
+}

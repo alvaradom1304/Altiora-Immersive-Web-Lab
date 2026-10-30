@@ -1,0 +1,39 @@
+{
+  "id": "T1029-fd3e",
+  "title": "Tilichero: documento de produccion canonico",
+  "role": "creative-ads-director",
+  "ai": "claude",
+  "reviewer": "qa-reviewer",
+  "depends": [],
+  "files": [
+    "projects/tilicheros/ads/PRODUCCION_CANONICA.md",
+    "projects/tilicheros/ads/CAMPANA_CAPTACION_2026-10-29.md",
+    "projects/tilicheros/ads/CAMPANA_AUDIFONOS_2026-10-29.md",
+    "projects/tilicheros/ads/PRODUCCION_LISTA_PARA_GRABAR_2026-10-29.md",
+    "projects/tilicheros/ads/consola-retro/BRIEF.md",
+    "projects/tilicheros/ads/audifonos-precio-humor/BRIEF.md"
+  ],
+  "acceptance": "Un guion por producto, marca El Tilichero sin 'Tilicheros', codigos GAME/RETRO/RGB unificados, duraciones coherentes, pendientes marcados, documentos anteriores apuntan al canonico",
+  "status": "hecha",
+  "owner": "claude/creative-ads-director",
+  "created": "2026-10-30T01:09:13Z",
+  "created_by": "claude/experience-director",
+  "history": [
+    {
+      "at": "2026-10-30T01:09:13Z",
+      "by": "claude/experience-director",
+      "status": "pendiente"
+    },
+    {
+      "at": "2026-10-30T01:10:03Z",
+      "by": "claude/creative-ads-director",
+      "status": "en_curso"
+    },
+    {
+      "at": "2026-10-30T01:49:35Z",
+      "by": "claude/creative-ads-director",
+      "status": "hecha",
+      "note": "DISEÑADO. PRODUCCION_CANONICA.md es la unica fuente de guiones, codigos (GAME1, GAME2, RETRO1, RGB1, OTRO, SIN CODIGO) y duraciones. GAME1 humor 15 s con 'Llevo dias buscando'; los otros 3 guiones de humor se descartaron con motivo. Prueba A: GAME1 empaque (control) frente a GAME2 demo; unica variable el bloque 07-12 s. RETRO1 20 s, RGB1 15 s. 'Tilicheros' corregido a 'El Tilichero' en los dos BRIEF. Los 3 documentos anteriores y los README de medios apuntan al canonico. npm run check PASS (7/7). Sin grabar, publicar ni pautar."
+    }
+  ]
+}

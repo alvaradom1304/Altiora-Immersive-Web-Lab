@@ -1,3 +1,5 @@
+> **Reemplazado en guiones, códigos y duraciones por [`PRODUCCION_CANONICA.md`](PRODUCCION_CANONICA.md).** Este documento se conserva como historial; si lo contradice, manda el canónico.
+
 # El Tilichero | Paquete de rodaje y captación
 **Altiora · 29/10/2026 · Estado: diseñado, sin anuncios publicados, sin pauta autorizada.**
 

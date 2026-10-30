@@ -1,2 +1,2 @@
-# Finalistas — Audífonos humor/precio
-Pendiente de rodaje, edición y QA. Entrega deseada: 15 s vertical con subtítulos, 6 s cutdown si funciona, CTA, música licenciada y prueba de claims.
+# Finalistas — Audífonos humor (GAME1 y GAME2)
+Pendiente de rodaje, edición y QA. Entrega prevista: GAME1 y GAME2 de 15 s cada una en 9:16, con subtítulos, CTA con su código, música licenciada y prueba de claims. Guion vigente en `PRODUCCION_CANONICA.md`.
