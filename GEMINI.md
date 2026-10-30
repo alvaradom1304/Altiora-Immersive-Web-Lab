@@ -10,3 +10,6 @@ Seguir [AGENTS.md](AGENTS.md). Para trabajar como un rol del equipo, cargar su p
 
 ## Postproducción de clientes
 Para editar desde Antigravity leer `docs/video/VIDEO_WORKSPACES.md`, iniciar campaña mediante `npm run video:project` y consultar la skill `.agents/skills/ai-video-direction/SKILL.md`. No inventar renders ni exponer crudos.
+
+## Regla universal de creación
+Toda nueva skill, agente, subagente o superagente solicitado para Altiora debe implementarse para **Antigravity, Claude Code y Codex** sin que el usuario tenga que repetirlo. Leer `docs/operations/UNIVERSAL_CAPABILITIES.md`; trabajar en fuentes canónicas y ejecutar `npm run capability:sync` en el mismo encargo. No confundir adaptadores creados con carga efectiva en un IDE.
