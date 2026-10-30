@@ -7,6 +7,7 @@ import {fileURLToPath} from 'node:url';
 export const AXES=Object.freeze(['hook','narrative','pacing','camera','motion','sound','typography','ending']);
 const fields=['footage_fit','brand_fit','feasibility','clarity'];
 const goodText=s=>typeof s==='string'&&s.trim().length>=8;
+const goodId=s=>typeof s==='string'&&/^[a-z0-9][a-z0-9-_]{1,79}$/i.test(s);
 const norm=s=>typeof s==='string'?s.trim().toLocaleLowerCase('es').replace(/\s+/g,' '):'';
 export function distance(a,b){
  return AXES.reduce((n,axis)=>n+(norm(a?.[axis])!==norm(b?.[axis])?1:0),0);
@@ -15,7 +16,7 @@ export function audit(proposal,history={executions:[]}){
  const errors=[],reviews=[],notes=[];
  if(!proposal||typeof proposal!=='object'||Array.isArray(proposal))return {status:'FAIL',errors:['Propuesta JSON inválida'],reviews,notes};
  if(proposal.schema_version!==1)errors.push('schema_version debe ser 1');
- if(!goodText(proposal.client)||!goodText(proposal.campaign))errors.push('client y campaign deben ser descriptivos (mínimo 8 caracteres)');
+ if(!goodId(proposal.client)||!goodId(proposal.campaign))errors.push('client y campaign deben ser identificadores seguros (2–80 caracteres)');
  if(proposal.footage_reviewed!==true)errors.push('Falta visionado real de los clips; ffprobe no sustituye verlo');
  if(!goodText(proposal.objective))errors.push('Definir objetivo de comunicación verificable');
  if(!Array.isArray(proposal.brand_invariants)||proposal.brand_invariants.length===0)errors.push('Faltan invariantes de marca');
@@ -23,7 +24,7 @@ export function audit(proposal,history={executions:[]}){
  if(evidence.length===0)errors.push('Registrar evidencia real de metraje y timecodes');
  const evidenceIds=new Set();
  for(const x of evidence){
-  if(!goodText(x?.id)||!goodText(x?.file)||!goodText(x?.observation)||
+  if(!goodId(x?.id)||!goodText(x?.file)||!goodText(x?.observation)||
      !Number.isFinite(x?.in_seconds)||!Number.isFinite(x?.out_seconds)||
      x.in_seconds<0||x.out_seconds<=x.in_seconds)errors.push('Evidencia de metraje incompleta: id, archivo, observación, in/out segundos');
   if(evidenceIds.has(x?.id))errors.push('ID de evidencia duplicado: '+String(x?.id));
@@ -34,7 +35,7 @@ export function audit(proposal,history={executions:[]}){
  if(candidates.length>8)errors.push('Máximo ocho conceptos por auditoría');
  const byId=new Map();
  for(const c of candidates){
-  if(!goodText(c?.id)||byId.has(c?.id))errors.push('ID de concepto inválido o duplicado');
+  if(!goodId(c?.id)||byId.has(c?.id))errors.push('ID de concepto inválido o duplicado');
   if(typeof c?.id==='string')byId.set(c.id,c);
   if(!goodText(c?.concept)||!goodText(c?.why_this))errors.push('Concepto o justificación demasiado genéricos: '+String(c?.id));
   if(!Array.isArray(c?.footage_ids)||!c.footage_ids.length||c.footage_ids.some(id=>!evidenceIds.has(id)))errors.push('Cada concepto debe citar evidencia de metraje: '+String(c?.id));
