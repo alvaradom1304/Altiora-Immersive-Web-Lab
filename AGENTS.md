@@ -38,3 +38,9 @@ Seguir docs/workflows/immersive-project.md. Antes de ampliar una experiencia, co
 - Seleccionar solo el director y las 1–3 skills necesarias, reutilizando `skills/` y los agentes existentes. Para trabajo de campaña, integrar diagnóstico, investigación, creatividad, producción real, WhatsApp, medición y QA según alcance.
 - Esta regla aplica a todos los clientes de Altiora. No sustituir la evaluación de seguridad, derechos, pruebas comerciales ni autorizaciones para publicar o gastar. Los roles descritos en Markdown no son agentes independientes desplegados.
 - El espejo de `.claude/skills/` y el índice son generados; después de agregar skills fuente ejecutar `npm run agents:build` y `npm run check` antes de integrar la rama.
+
+## Claude Code ↔ Antigravity: sincronización permanente por repositorio
+- Los archivos de `skills/` y `team/` son fuentes únicas. Editar solo esos originales; `.claude/` y `.agents/` son derivados.
+- Después de agregar o cambiar agentes, skills o reglas de negocio, ejecutar `npm run agents:build` y `npm run check`; los dos entornos deben pasar el mismo gate.
+- En Antigravity usar los subagentes en `.agents/agents/`, skills en `.agents/skills/`, reglas en `.agents/rules/`, y `creative-ads-os/WORK_ROUTER.md` para seleccionar equipo por intención.
+- Los cambios de GitHub no abren una sesión en el ordenador: actualizar la rama local antes de usarlos.
