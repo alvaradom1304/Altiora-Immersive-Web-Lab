@@ -69,3 +69,9 @@ Seguir docs/workflows/immersive-project.md. Antes de ampliar una experiencia, co
 - Nunca modificar grabaciones originales ni subir media-workspaces a Git. El `.gitignore` los protege del seguimiento casual, pero la protección depende también de permisos y procedimientos del operador. Si no hay clips, no declarar MP4 producido.
 - Codex lee `AGENTS.md`, descubre skills en `.agents/skills/` y sus subagentes se generan desde `team/agents.json` en `.codex/agents/`; Claude usa `.claude/`; Antigravity usa `.agents/`. Los tres se sincronizan con `npm run agents:build` y se revisan con `npm run check`. No editar adaptadores derivados manualmente.
 - Usar `creative-ads-director` como responsable; delegar guion y montaje a `visual-producer`/`motion-designer`, revisión independiente a `qa-reviewer`, solo si aporta valor. Archivo MP4 exportado ≠ campaña que vende: medir después.
+
+## Creative Variation Director — evitar anuncios repetitivos
+- Para cualquier edición audiovisual nueva, especialmente si el usuario rechaza el edit repetido, leer `skills/ai-video-direction/references/creative-variation-playbook.md` antes de diseñar el montaje.
+- `creative-ads-director` coordina y puede delegar a visual-producer / motion-designer / qa-reviewer. Analizar el video primero; tres rutas distintas, auditar `npm run video:variation`, elegir la que mejor refleje su esencia.
+- Contrastar con historial local y privado de cinco campañas aprobadas; no subir `media-workspaces/`, no reutilizar un preset por defecto ni copiar obras de referencia.
+- Ver `docs/video/CREATIVE_VARIATION.md`. Confirmar diversidad también visualmente después del render: el auditor solo comprueba la descripción estructurada del plan.
