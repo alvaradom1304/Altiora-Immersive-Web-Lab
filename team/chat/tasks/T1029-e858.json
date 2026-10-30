@@ -1,0 +1,35 @@
+{
+  "id": "T1029-e858",
+  "title": "Dirigir El Tilichero: plan operativo, calidad y herramientas",
+  "role": "experience-director",
+  "ai": null,
+  "reviewer": null,
+  "depends": [],
+  "files": [
+    "projects/tilicheros/DIRECCION_DEL_PROYECTO.md",
+    "projects/tilicheros/DIRECCION_CREATIVA.md"
+  ],
+  "acceptance": "Estado real; ownership sin solapes; sprint y criterios; herramientas y bloqueos verificados; evidencia de revisión",
+  "status": "hecha",
+  "owner": "codex/experience-director",
+  "created": "2026-10-30T01:25:17Z",
+  "created_by": "codex/experience-director",
+  "history": [
+    {
+      "at": "2026-10-30T01:25:17Z",
+      "by": "codex/experience-director",
+      "status": "pendiente"
+    },
+    {
+      "at": "2026-10-30T01:27:44Z",
+      "by": "codex/experience-director",
+      "status": "en_curso"
+    },
+    {
+      "at": "2026-10-30T01:34:09Z",
+      "by": "codex/experience-director",
+      "status": "hecha",
+      "note": "Primera entrega de dirección terminada: plan operativo y dirección creativa; dos subagentes reales entregaron revisión de 7 hallazgos y tres rutas. Selección inicial GAME1/GAME2 y QA enviados a propietarios Claude. Higgsfield verificado; Metricool sugerido, no conectado. npm run check y 7 regresiones PASS; enlaces/códigos de dos documentos PASS. Producción y kit siguen en curso; datos comerciales y crudos pendientes."
+    }
+  ]
+}
