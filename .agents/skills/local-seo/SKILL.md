@@ -1,6 +1,6 @@
 ---
 name: local-seo
-description: "local-seo: Marketing Intelligence. Usar para producir local_presence_plan, consistency, measures a partir de ubicación/servicio, datos ne…"
+description: "local-seo: Marketing Intelligence. Usar para producir local_presence_plan, consistency, measures a partir de ubicación/servicio, datos negocio, acceso, mercado; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

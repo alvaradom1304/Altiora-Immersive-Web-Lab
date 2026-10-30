@@ -1,6 +1,6 @@
 ---
 name: conversion-ux
-description: "conversion-ux: Premium Web Experience. Usar para producir conversion_flow, trust_content, test_plan a partir de oferta, flujo, fricciones…"
+description: "conversion-ux: Premium Web Experience. Usar para producir conversion_flow, trust_content, test_plan a partir de oferta, flujo, fricciones, datos; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

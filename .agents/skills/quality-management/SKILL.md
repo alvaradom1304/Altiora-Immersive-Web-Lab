@@ -1,6 +1,6 @@
 ---
 name: quality-management
-description: "quality-management: Operations & Logistics. Usar para producir quality_controls, corrective_actions, monitoring a partir de promesa, proc…"
+description: "quality-management: Operations & Logistics. Usar para producir quality_controls, corrective_actions, monitoring a partir de promesa, proceso, defectos, controles, responsable; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

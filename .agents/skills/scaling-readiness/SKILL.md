@@ -1,6 +1,6 @@
 ---
 name: scaling-readiness
-description: "scaling-readiness: Growth & Scaling. Usar para producir readiness_dimensions, blockers, staged_scale a partir de demanda validada, econom…"
+description: "scaling-readiness: Growth & Scaling. Usar para producir readiness_dimensions, blockers, staged_scale a partir de demanda validada, economía, caja, calidad, capacidad; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

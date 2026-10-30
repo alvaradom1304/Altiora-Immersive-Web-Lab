@@ -1,6 +1,6 @@
 ---
 name: automation-design
-description: "automation-design: AI & Automation. Usar para producir automation_case, workflow, human_exceptions a partir de proceso actual, volumen, c…"
+description: "automation-design: AI & Automation. Usar para producir automation_case, workflow, human_exceptions a partir de proceso actual, volumen, costos, errores, autoridad; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

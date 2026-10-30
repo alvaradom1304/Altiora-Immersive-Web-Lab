@@ -1,6 +1,6 @@
 ---
 name: customer-journey
-description: "customer-journey: Marketing Intelligence. Usar para producir journey_map, friction, opportunities a partir de segmento, tareas, puntos de…"
+description: "customer-journey: Marketing Intelligence. Usar para producir journey_map, friction, opportunities a partir de segmento, tareas, puntos de contacto, evidencias; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

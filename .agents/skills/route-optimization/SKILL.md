@@ -1,6 +1,6 @@
 ---
 name: route-optimization
-description: "route-optimization: Operations & Logistics. Usar para producir route_options, feasibility, assumptions a partir de destinos consentidos, …"
+description: "route-optimization: Operations & Logistics. Usar para producir route_options, feasibility, assumptions a partir de destinos consentidos, ventanas, vehículo, capacidad; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

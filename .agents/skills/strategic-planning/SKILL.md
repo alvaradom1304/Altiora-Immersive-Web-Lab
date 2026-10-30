@@ -1,6 +1,6 @@
 ---
 name: strategic-planning
-description: "strategic-planning: Business Intelligence. Usar para producir milestones, initiatives, kpis, dependencies a partir de estrategia vigente,…"
+description: "strategic-planning: Business Intelligence. Usar para producir milestones, initiatives, kpis, dependencies a partir de estrategia vigente, horizonte, recursos, responsables; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

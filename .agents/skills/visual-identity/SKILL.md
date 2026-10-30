@@ -1,6 +1,6 @@
 ---
 name: visual-identity
-description: "visual-identity: Brand Intelligence. Usar para producir identity_system, tokens, applications a partir de plataforma, dirección, usos, re…"
+description: "visual-identity: Brand Intelligence. Usar para producir identity_system, tokens, applications a partir de plataforma, dirección, usos, restricciones, activos; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

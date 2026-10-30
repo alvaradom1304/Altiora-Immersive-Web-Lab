@@ -1,6 +1,6 @@
 ---
 name: whatsapp-lead-to-sale
-description: "Usar cuando un negocio quiera convertir consultas de Instagram, Facebook, TikTok o anuncios en ventas mediante WhatsApp Business y seguim…"
+description: "Usar cuando un negocio quiera convertir consultas de Instagram, Facebook, TikTok o anuncios en ventas mediante WhatsApp Business y seguimiento responsable."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

@@ -1,6 +1,6 @@
 ---
 name: immersive-web-design
-description: "immersive-web-design: Premium Web Experience. Usar para producir immersive_concept, interaction_map, fallback a partir de narrativa, marc…"
+description: "immersive-web-design: Premium Web Experience. Usar para producir immersive_concept, interaction_map, fallback a partir de narrativa, marca, tareas, recursos, dispositivos; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

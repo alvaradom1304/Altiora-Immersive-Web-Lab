@@ -1,6 +1,6 @@
 ---
 name: security-requirements
-description: "security-requirements: Cybersecurity. Usar para producir security_requirements, acceptance_tests, owners a partir de activos, flujos, dat…"
+description: "security-requirements: Cybersecurity. Usar para producir security_requirements, acceptance_tests, owners a partir de activos, flujos, datos, roles, riesgo; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

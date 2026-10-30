@@ -1,6 +1,6 @@
 ---
 name: growth-experiment-analysis
-description: "Usar al evaluar si campañas de branding, videos orgánicos, anuncios o embudos a WhatsApp generan mejores consultas y ventas con pruebas m…"
+description: "Usar al evaluar si campañas de branding, videos orgánicos, anuncios o embudos a WhatsApp generan mejores consultas y ventas con pruebas medibles."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

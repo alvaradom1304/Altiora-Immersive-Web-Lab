@@ -1,6 +1,6 @@
 ---
 name: tiktok-strategy
-description: "tiktok-strategy: Marketing Intelligence. Usar para producir tiktok_plan, creative_tests, measurement a partir de audiencia, marca, recurs…"
+description: "tiktok-strategy: Marketing Intelligence. Usar para producir tiktok_plan, creative_tests, measurement a partir de audiencia, marca, recursos video, objetivo; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

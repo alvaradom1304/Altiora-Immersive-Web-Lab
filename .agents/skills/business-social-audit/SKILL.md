@@ -1,6 +1,6 @@
 ---
 name: business-social-audit
-description: "Usar cuando el usuario pida auditar Instagram, Facebook, TikTok o WhatsApp Business de un negocio, identificar fallas de captación y prio…"
+description: "Usar cuando el usuario pida auditar Instagram, Facebook, TikTok o WhatsApp Business de un negocio, identificar fallas de captación y priorizar correcciones."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

@@ -1,0 +1,15 @@
+✔ every canonical skill is model-discoverable in Claude and has a resolvable source (3712.8236ms)
+✔ Antigravity receives full descriptions from source, independently of INDEX line endings (7882.841ms)
+✔ registered subagents and fork commands resolve without duplicate identities (5059.3121ms)
+✔ imported originals match their recorded hashes (288.0524ms)
+✔ project listing budget covers canonical names and descriptions (9419.5084ms)
+✔ source metadata works with LF, CRLF and explicit invocation restrictions (0.7724ms)
+✔ Antigravity builds without INDEX and checks a CRLF checkout (1271.9154ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 28173.674

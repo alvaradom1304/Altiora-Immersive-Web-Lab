@@ -1,7 +1,6 @@
 ---
 name: cloud-security
 description: "cloud-security: Cybersecurity. Usar para producir cloud_review, misconfigurations, actions a partir de proveedor, recursos, permisos, redes, alcance; no sustituir otras fases ni declarar resultados sin evidencia."
-disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

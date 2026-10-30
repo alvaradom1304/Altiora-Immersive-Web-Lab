@@ -1,6 +1,6 @@
 ---
 name: positioning
-description: "positioning: Marketing Intelligence. Usar para producir positioning_statement, differentiators, proof a partir de audiencia, alternativas…"
+description: "positioning: Marketing Intelligence. Usar para producir positioning_statement, differentiators, proof a partir de audiencia, alternativas, valor, prueba, contexto; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

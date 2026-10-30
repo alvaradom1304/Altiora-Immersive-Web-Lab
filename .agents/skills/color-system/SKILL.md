@@ -1,6 +1,6 @@
 ---
 name: color-system
-description: "color-system: Brand Intelligence. Usar para producir palette, semantic_tokens, contrast_checks a partir de marca, contextos, estados, con…"
+description: "color-system: Brand Intelligence. Usar para producir palette, semantic_tokens, contrast_checks a partir de marca, contextos, estados, contraste; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

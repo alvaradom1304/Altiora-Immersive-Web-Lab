@@ -1,6 +1,6 @@
 ---
 name: ai-observability
-description: "ai-observability: AI & Automation. Usar para producir telemetry_plan, alerts, diagnostics a partir de sistema, eventos, límites de privac…"
+description: "ai-observability: AI & Automation. Usar para producir telemetry_plan, alerts, diagnostics a partir de sistema, eventos, límites de privacidad, KPIs; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

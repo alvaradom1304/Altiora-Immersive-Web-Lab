@@ -1,6 +1,6 @@
 ---
 name: consumer-behavior
-description: "consumer-behavior: Business Intelligence. Usar para producir behavior_model, barriers, hypotheses a partir de categoría, contexto de comp…"
+description: "consumer-behavior: Business Intelligence. Usar para producir behavior_model, barriers, hypotheses a partir de categoría, contexto de compra, observaciones, segmento; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

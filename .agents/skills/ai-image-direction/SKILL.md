@@ -1,6 +1,6 @@
 ---
 name: ai-image-direction
-description: "ai-image-direction: Creative Intelligence. Usar para producir generation_brief, variants, qa a partir de objetivo, referencias autorizada…"
+description: "ai-image-direction: Creative Intelligence. Usar para producir generation_brief, variants, qa a partir de objetivo, referencias autorizadas, marca, generador; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

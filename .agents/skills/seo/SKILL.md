@@ -1,6 +1,6 @@
 ---
 name: seo
-description: "seo: Marketing Intelligence. Usar para producir seo_plan, prioritized_fixes, measurement a partir de sitio/contenido, audiencia, consulta…"
+description: "seo: Marketing Intelligence. Usar para producir seo_plan, prioritized_fixes, measurement a partir de sitio/contenido, audiencia, consultas, acceso; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

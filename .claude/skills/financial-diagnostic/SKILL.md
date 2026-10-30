@@ -1,7 +1,6 @@
 ---
 name: financial-diagnostic
 description: "financial-diagnostic: Financial Intelligence. Usar para producir reconciled_snapshot, red_flags, missing_data a partir de estados/registros, periodos, moneda, políticas contables; no sustituir otras fases ni declarar resultados sin evidencia."
-disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

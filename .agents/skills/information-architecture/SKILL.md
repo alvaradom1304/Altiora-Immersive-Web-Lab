@@ -1,6 +1,6 @@
 ---
 name: information-architecture
-description: "information-architecture: Premium Web Experience. Usar para producir sitemap, taxonomy, navigation_rules a partir de contenido, tareas, a…"
+description: "information-architecture: Premium Web Experience. Usar para producir sitemap, taxonomy, navigation_rules a partir de contenido, tareas, audiencias, navegación; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

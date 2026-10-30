@@ -1,6 +1,6 @@
 ---
 name: seo-audit
-description: "seo-audit: Marketing Intelligence. Usar para producir audit_findings, evidence, remediation a partir de dominio, páginas, acceso/alcance,…"
+description: "seo-audit: Marketing Intelligence. Usar para producir audit_findings, evidence, remediation a partir de dominio, páginas, acceso/alcance, datos search; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

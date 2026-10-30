@@ -1,6 +1,6 @@
 ---
 name: ux-research
-description: "ux-research: Premium Web Experience. Usar para producir ux_protocol, findings, limitations a partir de preguntas, usuarios, prototipo, co…"
+description: "ux-research: Premium Web Experience. Usar para producir ux_protocol, findings, limitations a partir de preguntas, usuarios, prototipo, consentimiento; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

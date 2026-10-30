@@ -1,6 +1,6 @@
 ---
 name: scenario-planning
-description: "scenario-planning: Financial Intelligence. Usar para producir scenarios, sensitivities, triggers a partir de decisión, incertidumbres, dr…"
+description: "scenario-planning: Financial Intelligence. Usar para producir scenarios, sensitivities, triggers a partir de decisión, incertidumbres, drivers, límites; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

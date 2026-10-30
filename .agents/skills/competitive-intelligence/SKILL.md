@@ -1,6 +1,6 @@
 ---
 name: competitive-intelligence
-description: "competitive-intelligence: Business Intelligence. Usar para producir intelligence_plan, signals, alerts a partir de decisiones estratégica…"
+description: "competitive-intelligence: Business Intelligence. Usar para producir intelligence_plan, signals, alerts a partir de decisiones estratégicas, competidores, fuentes públicas, frecuencia; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

@@ -1,6 +1,6 @@
 ---
 name: product-market-fit-research
-description: "product-market-fit-research: Venture Building. Usar para producir pmf_signals, cohort_analysis, limitations a partir de cohortes, uso, re…"
+description: "product-market-fit-research: Venture Building. Usar para producir pmf_signals, cohort_analysis, limitations a partir de cohortes, uso, recompra, feedback, segmento; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

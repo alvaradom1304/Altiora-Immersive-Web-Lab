@@ -1,6 +1,6 @@
 ---
 name: ai-video-direction
-description: "ai-video-direction: Creative Intelligence. Usar para producir video_brief, prompts, continuity_checks a partir de guion, duración, refere…"
+description: "ai-video-direction: Creative Intelligence. Usar para producir video_brief, prompts, continuity_checks a partir de guion, duración, referencias, herramienta, créditos; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

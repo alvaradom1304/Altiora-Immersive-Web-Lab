@@ -1,6 +1,6 @@
 ---
 name: user-flow
-description: "user-flow: Premium Web Experience. Usar para producir flow, transitions, error_states a partir de tarea, actores, estados, restricciones;…"
+description: "user-flow: Premium Web Experience. Usar para producir flow, transitions, error_states a partir de tarea, actores, estados, restricciones; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

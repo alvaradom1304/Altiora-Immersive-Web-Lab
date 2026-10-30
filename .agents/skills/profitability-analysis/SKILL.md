@@ -1,6 +1,6 @@
 ---
 name: profitability-analysis
-description: "profitability-analysis: Financial Intelligence. Usar para producir profit_by_segment, drivers, actions a partir de ingresos, costos, cana…"
+description: "profitability-analysis: Financial Intelligence. Usar para producir profit_by_segment, drivers, actions a partir de ingresos, costos, canales/clientes, criterio de asignación; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

@@ -1,6 +1,6 @@
 ---
 name: cost-analysis
-description: "cost-analysis: Financial Intelligence. Usar para producir cost_structure, drivers, allocation_rules a partir de costos, drivers, volúmene…"
+description: "cost-analysis: Financial Intelligence. Usar para producir cost_structure, drivers, allocation_rules a partir de costos, drivers, volúmenes, periodos; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

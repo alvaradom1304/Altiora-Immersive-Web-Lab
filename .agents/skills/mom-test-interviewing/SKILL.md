@@ -1,6 +1,6 @@
 ---
 name: mom-test-interviewing
-description: "mom-test-interviewing: Sales Intelligence. Usar para producir interview_questions, past_behavior, commitments a partir de hipótesis, acce…"
+description: "mom-test-interviewing: Sales Intelligence. Usar para producir interview_questions, past_behavior, commitments a partir de hipótesis, acceso a usuarios, guía y consentimiento; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

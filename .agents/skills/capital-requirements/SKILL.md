@@ -1,6 +1,6 @@
 ---
 name: capital-requirements
-description: "capital-requirements: Venture Building. Usar para producir capital_schedule, funding_gap, sensitivity a partir de inversión inicial, gast…"
+description: "capital-requirements: Venture Building. Usar para producir capital_schedule, funding_gap, sensitivity a partir de inversión inicial, gastos, cobros, calendario, reserva; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

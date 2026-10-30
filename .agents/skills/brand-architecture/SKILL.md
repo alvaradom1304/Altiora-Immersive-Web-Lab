@@ -1,6 +1,6 @@
 ---
 name: brand-architecture
-description: "brand-architecture: Brand Intelligence. Usar para producir architecture_options, naming_rules, migration a partir de portafolio, marcas, …"
+description: "brand-architecture: Brand Intelligence. Usar para producir architecture_options, naming_rules, migration a partir de portafolio, marcas, públicos, costos, relaciones; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

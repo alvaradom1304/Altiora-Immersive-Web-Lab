@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "note": "Seven distinct local roles adapted; existing team/agents.json remains unchanged. Source snapshots in local-sources.",
+  "agents": [
+    {
+      "id": "altiora-engineering",
+      "when": "Implementa una tarea técnica delimitada con las versiones y archivos acordados.",
+      "milestones": [],
+      "skills": [],
+      "source": "team/local-sources/codex/altiora-engineering.toml"
+    },
+    {
+      "id": "altiora-experience",
+      "when": "Define composición, storyboard y relación entre experiencia visual y conversión en webs de Altiora.",
+      "milestones": [],
+      "skills": [],
+      "source": "team/local-sources/codex/altiora-experience.toml"
+    },
+    {
+      "id": "altiora-research",
+      "when": "Investiga repositorios, skills y compatibilidad para una tarea concreta de Altiora.",
+      "milestones": [],
+      "skills": [
+        "altiora-repository-research"
+      ],
+      "source": "team/local-sources/codex/altiora-research.toml"
+    },
+    {
+      "id": "altiora-review",
+      "when": "Revisa una entrega contra el brief y verifica su evidencia sin rehacer el trabajo.",
+      "milestones": [],
+      "skills": [
+        "altiora-quality-review"
+      ],
+      "source": "team/local-sources/codex/altiora-review.toml"
+    },
+    {
+      "id": "immersive-director",
+      "when": "Coordina dirección de arte e investigación de webs experimentales y delega implementación/revisión cuando la tarea lo merece.",
+      "milestones": [],
+      "skills": [
+        "immersive-interaction-lab"
+      ],
+      "source": "team/local-sources/claude/immersive-director.md"
+    },
+    {
+      "id": "immersive-motion-engineer",
+      "when": "Implementa cursor 3D, tipografía cinética y motion WebGL con lifecycle y fallback en los archivos asignados.",
+      "milestones": [],
+      "skills": [
+        "immersive-interaction-lab"
+      ],
+      "source": "team/local-sources/claude/immersive-motion-engineer.md"
+    },
+    {
+      "id": "immersive-reviewer",
+      "when": "Revisa fit check, accesibilidad, animación y rendimiento de experiencias WebGL con evidencia reproducible.",
+      "milestones": [],
+      "skills": [
+        "immersive-interaction-lab"
+      ],
+      "source": "team/local-sources/claude/immersive-reviewer.md",
+      "tools": "Read, Glob, Grep"
+    }
+  ]
+}

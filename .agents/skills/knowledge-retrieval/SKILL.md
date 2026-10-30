@@ -1,6 +1,6 @@
 ---
 name: knowledge-retrieval
-description: "knowledge-retrieval: AI & Automation. Usar para producir retrieved_evidence, provenance, gaps a partir de pregunta, fuentes/corpus, permi…"
+description: "knowledge-retrieval: AI & Automation. Usar para producir retrieved_evidence, provenance, gaps a partir de pregunta, fuentes/corpus, permisos, actualidad; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

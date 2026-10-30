@@ -1,6 +1,6 @@
 ---
 name: inventory-forecasting
-description: "inventory-forecasting: Operations & Logistics. Usar para producir inventory_forecast, uncertainty, replenishment a partir de ventas/consu…"
+description: "inventory-forecasting: Operations & Logistics. Usar para producir inventory_forecast, uncertainty, replenishment a partir de ventas/consumo histórico, stockouts, leadtime, temporada; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

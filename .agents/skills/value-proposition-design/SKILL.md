@@ -1,6 +1,6 @@
 ---
 name: value-proposition-design
-description: "value-proposition-design: Venture Building. Usar para producir value_proposition, proof_points, test_plan a partir de tareas, dolores, be…"
+description: "value-proposition-design: Venture Building. Usar para producir value_proposition, proof_points, test_plan a partir de tareas, dolores, beneficios, alternativas, capacidades; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

@@ -1,6 +1,6 @@
 ---
 name: business-strategy
-description: "business-strategy: Business Intelligence. Usar para producir strategic_choices, tradeoffs, outcome_map a partir de diagnóstico, objetivos…"
+description: "business-strategy: Business Intelligence. Usar para producir strategic_choices, tradeoffs, outcome_map a partir de diagnóstico, objetivos, recursos, evidencia, restricciones; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

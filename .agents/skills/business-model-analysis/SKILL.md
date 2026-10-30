@@ -1,6 +1,6 @@
 ---
 name: business-model-analysis
-description: "business-model-analysis: Business Intelligence. Usar para producir model_map, dependencies, vulnerabilities a partir de oferta, segmentos…"
+description: "business-model-analysis: Business Intelligence. Usar para producir model_map, dependencies, vulnerabilities a partir de oferta, segmentos, canales, ingresos, costos, procesos; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

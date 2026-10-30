@@ -1,6 +1,6 @@
 ---
 name: go-to-market
-description: "go-to-market: Orchestration. Usar para producir gtm_plan, handoffs, launch_gates a partir de oferta validada, segmento, economía, canales…"
+description: "go-to-market: Orchestration. Usar para producir gtm_plan, handoffs, launch_gates a partir de oferta validada, segmento, economía, canales, operación; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

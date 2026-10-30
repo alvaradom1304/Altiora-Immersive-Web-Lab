@@ -1,7 +1,6 @@
 ---
 name: brand-storytelling
 description: "brand-storytelling: Brand Intelligence. Usar para producir narrative, verified_claims, content_routes a partir de hechos de origen/proceso, propósito, audiencia; no sustituir otras fases ni declarar resultados sin evidencia."
-disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

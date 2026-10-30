@@ -1,6 +1,6 @@
 ---
 name: business-decision-gates
-description: "business-decision-gates: Orchestration. Usar para producir gate, evidence, assumptions, risks, kpis, missing_information, recommendation …"
+description: "business-decision-gates: Orchestration. Usar para producir gate, evidence, assumptions, risks, kpis, missing_information, recommendation a partir de gate, evidencia, supuestos, riesgos, KPIs, autoridad; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

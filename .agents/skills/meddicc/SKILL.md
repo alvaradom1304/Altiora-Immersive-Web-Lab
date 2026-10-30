@@ -1,6 +1,6 @@
 ---
 name: meddicc
-description: "meddicc: Sales Intelligence. Usar para producir qualification_dimensions, evidence_gaps, deal_plan a partir de oportunidad B2B, métricas,…"
+description: "meddicc: Sales Intelligence. Usar para producir qualification_dimensions, evidence_gaps, deal_plan a partir de oportunidad B2B, métricas, actores, proceso, competencia; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

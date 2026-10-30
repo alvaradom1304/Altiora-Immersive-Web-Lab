@@ -1,6 +1,6 @@
 ---
 name: api-integration
-description: "api-integration: AI & Automation. Usar para producir integration_code, error_handling, tests a partir de API oficial, contrato, entorno, …"
+description: "api-integration: AI & Automation. Usar para producir integration_code, error_handling, tests a partir de API oficial, contrato, entorno, auth, objetivo; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

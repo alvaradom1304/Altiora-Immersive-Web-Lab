@@ -1,6 +1,6 @@
 ---
 name: aem-skill-factory
-description: "aem-skill-factory: Orchestration. Usar para producir capability_contract, skill_package, evaluation a partir de capacidad repetible, ejem…"
+description: "aem-skill-factory: Orchestration. Usar para producir capability_contract, skill_package, evaluation a partir de capacidad repetible, ejemplos, alcance, fuentes, skills existentes; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

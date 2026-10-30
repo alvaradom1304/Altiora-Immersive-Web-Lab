@@ -1,6 +1,6 @@
 ---
 name: responsive-design
-description: "responsive-design: Premium Web Experience. Usar para producir responsive_rules, fixes, verification a partir de UI, contenido, dispositiv…"
+description: "responsive-design: Premium Web Experience. Usar para producir responsive_rules, fixes, verification a partir de UI, contenido, dispositivos, input modes; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

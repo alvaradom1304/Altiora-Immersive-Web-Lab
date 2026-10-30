@@ -1,7 +1,6 @@
 ---
 name: problem-validation
 description: "problem-validation: Venture Building. Usar para producir problem_evidence, disconfirmation, verdict a partir de problema supuesto, segmento, episodios reales, criterios; no sustituir otras fases ni declarar resultados sin evidencia."
-disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

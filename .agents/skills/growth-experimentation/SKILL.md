@@ -1,6 +1,6 @@
 ---
 name: growth-experimentation
-description: "growth-experimentation: Marketing Intelligence. Usar para producir experiment_design, results, learning a partir de hipótesis, funnel, ba…"
+description: "growth-experimentation: Marketing Intelligence. Usar para producir experiment_design, results, learning a partir de hipótesis, funnel, baseline, recursos, riesgo; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

@@ -1,6 +1,6 @@
 ---
 name: upselling
-description: "upselling: Sales Intelligence. Usar para producir upgrade_case, comparison, suitability a partir de solución actual, necesidad, alternati…"
+description: "upselling: Sales Intelligence. Usar para producir upgrade_case, comparison, suitability a partir de solución actual, necesidad, alternativa superior, costo; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

@@ -1,7 +1,6 @@
 ---
 name: fanatical-prospecting
 description: "fanatical-prospecting: Sales Intelligence. Usar para producir prospecting_blocks, channel_mix, tracking a partir de ICP, capacidad, canales consentidos, objetivos; no sustituir otras fases ni declarar resultados sin evidencia."
-disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

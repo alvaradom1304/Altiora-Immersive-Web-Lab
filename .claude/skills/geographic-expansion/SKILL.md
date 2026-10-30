@@ -1,7 +1,6 @@
 ---
 name: geographic-expansion
 description: "geographic-expansion: Growth & Scaling. Usar para producir zone_options, pilot, viability a partir de zonas, demanda, rutas, servicio, costos; no sustituir otras fases ni declarar resultados sin evidencia."
-disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

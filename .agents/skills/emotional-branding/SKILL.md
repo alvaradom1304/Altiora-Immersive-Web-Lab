@@ -1,6 +1,6 @@
 ---
 name: emotional-branding
-description: "Diseñar campañas de branding emocional que conecten motivaciones reales con recuerdos de marca y acciones de compra medibles, de manera é…"
+description: "Diseñar campañas de branding emocional que conecten motivaciones reales con recuerdos de marca y acciones de compra medibles, de manera ética."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

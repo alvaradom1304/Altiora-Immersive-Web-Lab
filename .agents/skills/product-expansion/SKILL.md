@@ -1,6 +1,6 @@
 ---
 name: product-expansion
-description: "product-expansion: Growth & Scaling. Usar para producir product_options, validation, dependencies a partir de clientes, necesidades, port…"
+description: "product-expansion: Growth & Scaling. Usar para producir product_options, validation, dependencies a partir de clientes, necesidades, portfolio, economía; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

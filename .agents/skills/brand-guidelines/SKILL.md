@@ -1,6 +1,6 @@
 ---
 name: brand-guidelines
-description: "brand-guidelines: Brand Intelligence. Usar para producir brand_rules, examples, governance a partir de decisiones de identidad, usos, res…"
+description: "brand-guidelines: Brand Intelligence. Usar para producir brand_rules, examples, governance a partir de decisiones de identidad, usos, responsables; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

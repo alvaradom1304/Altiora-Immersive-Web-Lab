@@ -1,6 +1,6 @@
 ---
 name: brand-voice
-description: "brand-voice: Brand Intelligence. Usar para producir voice_rules, tone_matrix, examples a partir de personalidad, públicos, canales, ejemp…"
+description: "brand-voice: Brand Intelligence. Usar para producir voice_rules, tone_matrix, examples a partir de personalidad, públicos, canales, ejemplos; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

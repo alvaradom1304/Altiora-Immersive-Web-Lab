@@ -1,6 +1,6 @@
 ---
 name: ui-direction
-description: "ui-direction: Premium Web Experience. Usar para producir ui_concept, hierarchy, component_rules a partir de UX, marca, componentes, dispo…"
+description: "ui-direction: Premium Web Experience. Usar para producir ui_concept, hierarchy, component_rules a partir de UX, marca, componentes, dispositivos; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

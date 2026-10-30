@@ -1,6 +1,6 @@
 ---
 name: market-development
-description: "market-development: Growth & Scaling. Usar para producir market_options, validation, entry_plan a partir de oferta vigente, mercados nuev…"
+description: "market-development: Growth & Scaling. Usar para producir market_options, validation, entry_plan a partir de oferta vigente, mercados nuevos, acceso, recursos; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

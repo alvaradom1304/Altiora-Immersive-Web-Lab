@@ -1,4 +1,4 @@
-<!-- Generado con npm run agents:build desde team/agents.json y team/roles/ux-researcher.md. No editar a mano. -->
+<!-- Generado con npm run agents:build desde team/agents.json, team/local-agents.json y team/roles/ux-researcher.md. No editar a mano. -->
 
 # UX researcher
 

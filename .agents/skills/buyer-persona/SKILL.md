@@ -1,6 +1,6 @@
 ---
 name: buyer-persona
-description: "buyer-persona: Marketing Intelligence. Usar para producir evidence_persona, goals, barriers a partir de segmento, entrevistas/datos, deci…"
+description: "buyer-persona: Marketing Intelligence. Usar para producir evidence_persona, goals, barriers a partir de segmento, entrevistas/datos, decisiones de compra; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

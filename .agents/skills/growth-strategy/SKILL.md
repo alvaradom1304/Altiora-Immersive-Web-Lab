@@ -1,6 +1,6 @@
 ---
 name: growth-strategy
-description: "growth-strategy: Growth & Scaling. Usar para producir growth_levers, priorities, safeguards a partir de demanda, economía, capacidad, fun…"
+description: "growth-strategy: Growth & Scaling. Usar para producir growth_levers, priorities, safeguards a partir de demanda, economía, capacidad, funnel, objetivos; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

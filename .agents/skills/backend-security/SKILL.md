@@ -1,6 +1,6 @@
 ---
 name: backend-security
-description: "backend-security: Cybersecurity. Usar para producir backend_controls, findings, validation a partir de servidor, datos, endpoints, roles,…"
+description: "backend-security: Cybersecurity. Usar para producir backend_controls, findings, validation a partir de servidor, datos, endpoints, roles, deployment; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

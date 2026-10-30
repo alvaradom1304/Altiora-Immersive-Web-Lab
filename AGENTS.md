@@ -30,7 +30,7 @@ Seguir docs/workflows/immersive-project.md. Antes de ampliar una experiencia, co
 - Indicar con claridad qué está diseñado, implementado, probado o pendiente.
 
 ## Equipo multi-IA
-- Los 15 roles de team/registry.md tienen prompt en team/agents/<rol>.md (Claude Code los usa como subagentes en .claude/agents/). Se generan con npm run agents:build desde team/agents.json y team/roles/; no editarlos a mano.
+- Los roles canónicos de team/registry.md y los siete adaptadores de team/local-agents.json tienen prompt en team/agents/<rol>.md (Claude Code los usa como subagentes en .claude/agents/). Se generan con npm run agents:build desde team/agents.json, team/local-agents.json y team/roles/; no editarlos a mano.
 - Repartir y coordinar el trabajo en el chat del equipo (team/chat/README.md): firmar como <ia>/<rol>, reclamar la tarea antes de editar, tocar solo sus archivos y cerrar con evidencia.
 
 ## Enrutamiento por intención para marketing / anuncios / branding
@@ -40,7 +40,7 @@ Seguir docs/workflows/immersive-project.md. Antes de ampliar una experiencia, co
 - El espejo de `.claude/skills/` y el índice son generados; después de agregar skills fuente ejecutar `npm run agents:build` y `npm run check` antes de integrar la rama.
 
 ## Claude Code ↔ Antigravity: sincronización permanente por repositorio
-- Los archivos de `skills/` y `team/` son fuentes únicas. Editar solo esos originales; `.claude/` y `.agents/` son derivados.
+- Los archivos de `skills/` y `team/` son fuentes únicas; `team/local-sources/` conserva originales importados. Editar solo esos originales; `.claude/` y `.agents/` son derivados.
 - Después de agregar o cambiar agentes, skills o reglas de negocio, ejecutar `npm run agents:build` y `npm run check`; los dos entornos deben pasar el mismo gate.
 - En Antigravity usar los subagentes en `.agents/agents/`, skills en `.agents/skills/`, reglas en `.agents/rules/`, y `creative-ads-os/WORK_ROUTER.md` para seleccionar equipo por intención.
 - Los cambios de GitHub no abren una sesión en el ordenador: actualizar la rama local antes de usarlos.

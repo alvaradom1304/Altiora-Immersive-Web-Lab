@@ -1,6 +1,6 @@
 ---
 name: aem-skill-system
-description: "Mantener la biblioteca AEM OS de capacidades reutilizables y delegables. Usar para auditar capacidades, consultar catálogo/taxonomía, sel…"
+description: "Mantener la biblioteca AEM OS de capacidades reutilizables y delegables. Usar para auditar capacidades, consultar catálogo/taxonomía, seleccionar skills, diseñar contratos y workflows, evaluar portabilidad entre IAs, revisar calidad o incorporar aprendizajes. No sustituir las skills de negocio ni activar agentes o integraciones inexistentes."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

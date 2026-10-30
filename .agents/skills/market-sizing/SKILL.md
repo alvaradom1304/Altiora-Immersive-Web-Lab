@@ -1,6 +1,6 @@
 ---
 name: market-sizing
-description: "market-sizing: Business Intelligence. Usar para producir tam_sam_som, calculation, sensitivity a partir de segmento, territorio, unidad d…"
+description: "market-sizing: Business Intelligence. Usar para producir tam_sam_som, calculation, sensitivity a partir de segmento, territorio, unidad de demanda, precios, fuentes; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

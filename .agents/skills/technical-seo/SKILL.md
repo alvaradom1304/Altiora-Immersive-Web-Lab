@@ -1,6 +1,6 @@
 ---
 name: technical-seo
-description: "technical-seo: Premium Web Experience. Usar para producir technical_findings, fixes, validation a partir de sitio, rutas, render, acceso,…"
+description: "technical-seo: Premium Web Experience. Usar para producir technical_findings, fixes, validation a partir de sitio, rutas, render, acceso, contenido; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

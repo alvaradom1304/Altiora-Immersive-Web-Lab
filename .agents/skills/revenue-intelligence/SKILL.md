@@ -1,6 +1,6 @@
 ---
 name: revenue-intelligence
-description: "revenue-intelligence: Orchestration. Usar para producir revenue_diagnosis, cross_team_actions, experiments a partir de funnel, ventas, ma…"
+description: "revenue-intelligence: Orchestration. Usar para producir revenue_diagnosis, cross_team_actions, experiments a partir de funnel, ventas, marketing, margen, cohortes, operación; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

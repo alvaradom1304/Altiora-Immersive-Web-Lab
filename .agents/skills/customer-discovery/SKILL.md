@@ -1,6 +1,6 @@
 ---
 name: customer-discovery
-description: "customer-discovery: Venture Building. Usar para producir interview_plan, behavior_notes, learning a partir de hipótesis, segmento, guía, …"
+description: "customer-discovery: Venture Building. Usar para producir interview_plan, behavior_notes, learning a partir de hipótesis, segmento, guía, acceso consentido; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

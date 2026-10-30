@@ -1,7 +1,6 @@
 ---
 name: emotional-branding
 description: "Diseñar campañas de branding emocional que conecten motivaciones reales con recuerdos de marca y acciones de compra medibles, de manera ética."
-disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

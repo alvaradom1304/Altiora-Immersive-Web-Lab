@@ -1,6 +1,6 @@
 ---
 name: high-value-deliberation
-description: "Analizar preguntas, problemas y decisiones con perspectivas pertinentes, crítica concreta, evidencia verificable y una conclusión integra…"
+description: "Analizar preguntas, problemas y decisiones con perspectivas pertinentes, crítica concreta, evidencia verificable y una conclusión integrada. Usar al pedir deliberación de alto valor, contraste de alternativas, revisión escéptica o una recomendación fundamentada; completar también el entregable solicitado. Evitar debates artificiales, acuerdo automático y certeza sin sustento."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

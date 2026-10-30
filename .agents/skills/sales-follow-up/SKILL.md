@@ -1,6 +1,6 @@
 ---
 name: sales-follow-up
-description: "sales-follow-up: Sales Intelligence. Usar para producir followup_draft, cadence, stop_rules a partir de interacción previa, consentimient…"
+description: "sales-follow-up: Sales Intelligence. Usar para producir followup_draft, cadence, stop_rules a partir de interacción previa, consentimiento, siguiente paso, fecha; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

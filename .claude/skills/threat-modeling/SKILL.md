@@ -1,7 +1,6 @@
 ---
 name: threat-modeling
 description: "threat-modeling: Cybersecurity. Usar para producir threat_model, scenarios, mitigations a partir de arquitectura, activos, actores, boundaries, permisos; no sustituir otras fases ni declarar resultados sin evidencia."
-disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

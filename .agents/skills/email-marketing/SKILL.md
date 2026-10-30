@@ -1,6 +1,6 @@
 ---
 name: email-marketing
-description: "email-marketing: Marketing Intelligence. Usar para producir email_plan, drafts, suppression_rules a partir de audiencia consentida, ofert…"
+description: "email-marketing: Marketing Intelligence. Usar para producir email_plan, drafts, suppression_rules a partir de audiencia consentida, oferta, lifecycle, plataforma; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

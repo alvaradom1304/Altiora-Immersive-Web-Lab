@@ -1,6 +1,6 @@
 ---
 name: supply-chain
-description: "supply-chain: Operations & Logistics. Usar para producir supply_network, vulnerabilities, resilience a partir de red proveedores, flujos,…"
+description: "supply-chain: Operations & Logistics. Usar para producir supply_network, vulnerabilities, resilience a partir de red proveedores, flujos, inventario, servicio; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

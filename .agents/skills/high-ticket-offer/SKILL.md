@@ -1,6 +1,6 @@
 ---
 name: high-ticket-offer
-description: "Empaqueta servicios de sitio web y automatización en una propuesta B2B de alto valor, con alcance, precio sustentable, evidencia, hitos, …"
+description: "Empaqueta servicios de sitio web y automatización en una propuesta B2B de alto valor, con alcance, precio sustentable, evidencia, hitos, exclusiones y aceptación explícita. No inventa ROI, urgencia ni garantías."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

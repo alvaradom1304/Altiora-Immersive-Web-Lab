@@ -1,6 +1,6 @@
 ---
 name: inventory-management
-description: "inventory-management: Operations & Logistics. Usar para producir stock_model, reconciliation, controls a partir de SKUs, unidades, stock …"
+description: "inventory-management: Operations & Logistics. Usar para producir stock_model, reconciliation, controls a partir de SKUs, unidades, stock inicial, movimientos, responsable; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

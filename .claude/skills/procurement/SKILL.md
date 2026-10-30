@@ -1,7 +1,6 @@
 ---
 name: procurement
 description: "procurement: Operations & Logistics. Usar para producir purchase_plan, comparisons, approvals a partir de necesidades, inventario, proveedor, condiciones, autoridad; no sustituir otras fases ni declarar resultados sin evidencia."
-disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

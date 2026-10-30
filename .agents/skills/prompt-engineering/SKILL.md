@@ -1,6 +1,6 @@
 ---
 name: prompt-engineering
-description: "prompt-engineering: AI & Automation. Usar para producir prompt, variants, evaluation a partir de tarea, modelo disponible, ejemplos, crit…"
+description: "prompt-engineering: AI & Automation. Usar para producir prompt, variants, evaluation a partir de tarea, modelo disponible, ejemplos, criterios; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

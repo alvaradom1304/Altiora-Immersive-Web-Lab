@@ -1,6 +1,6 @@
 ---
 name: operational-risk
-description: "operational-risk: Operations & Logistics. Usar para producir operational_risks, contingencies, triggers a partir de procesos, fallos, exp…"
+description: "operational-risk: Operations & Logistics. Usar para producir operational_risks, contingencies, triggers a partir de procesos, fallos, exposición, controles; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

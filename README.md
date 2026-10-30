@@ -67,3 +67,7 @@ Las skills mejoran por ciclos PDCA medidos: `npm run skills:audit` puntúa cada 
 Las estrellas y fechas son una fotografía de investigación, no una garantía de calidad. La licencia de código no acredita automáticamente modelos, imágenes, sonidos o fuentes tipográficas. Registrar la procedencia de cada recurso utilizado y conservar avisos cuando se reutilice código.
 
 GSAP usa su licencia propia Standard No Charge. El catálogo señala una discrepancia MIT/ISC en r3f-scroll-rig; ese candidato queda en espera.
+
+## Descubrimiento Claude Code y auditoría pública
+
+Corrección e inventario reconciliado: [diagnóstico de Claude](docs/operations/claude-discovery.md). Auditoría pública con límites y pruebas propuestas: [Instagram de El Tilichero](projects/tilicheros/ads/AUDITORIA_INSTAGRAM_PUBLICO_2026-10-29.md). Los 260 originales se conservan; la incorporación local comprobada lleva el catálogo a 261. Los 15 roles canónicos y siete adaptadores suman 22 identidades. Los comandos auxiliares se cuentan aparte.

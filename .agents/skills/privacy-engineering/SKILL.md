@@ -1,6 +1,6 @@
 ---
 name: privacy-engineering
-description: "privacy-engineering: Cybersecurity. Usar para producir data_map, minimization, retention_controls a partir de datos, propósito, usuarios,…"
+description: "privacy-engineering: Cybersecurity. Usar para producir data_map, minimization, retention_controls a partir de datos, propósito, usuarios, flujos, territorio; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

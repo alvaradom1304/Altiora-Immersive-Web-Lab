@@ -1,6 +1,6 @@
 ---
 name: secure-development
-description: "secure-development: Cybersecurity. Usar para producir secure_controls, fixes, verification a partir de repo, stack, datos, alcance autori…"
+description: "secure-development: Cybersecurity. Usar para producir secure_controls, fixes, verification a partir de repo, stack, datos, alcance autorizado, amenazas; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

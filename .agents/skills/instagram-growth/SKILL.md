@@ -1,6 +1,6 @@
 ---
 name: instagram-growth
-description: "instagram-growth: Marketing Intelligence. Usar para producir instagram_plan, format_tests, funnel a partir de cuenta/datos autorizados, a…"
+description: "instagram-growth: Marketing Intelligence. Usar para producir instagram_plan, format_tests, funnel a partir de cuenta/datos autorizados, audiencia, marca, oferta; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

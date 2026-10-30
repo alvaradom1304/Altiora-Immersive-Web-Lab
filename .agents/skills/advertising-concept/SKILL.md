@@ -1,6 +1,6 @@
 ---
 name: advertising-concept
-description: "advertising-concept: Creative Intelligence. Usar para producir ad_routes, hooks, claim_checks a partir de problema, oferta, canal, eviden…"
+description: "advertising-concept: Creative Intelligence. Usar para producir ad_routes, hooks, claim_checks a partir de problema, oferta, canal, evidencia, restricciones; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

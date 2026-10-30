@@ -1,6 +1,6 @@
 ---
 name: aem-learning-os
-description: "Usa este skill para procesar nuevos conocimientos o herramientas, extraer frameworks y productizar capacidades (Learning OS & Productizat…"
+description: "Usa este skill para procesar nuevos conocimientos o herramientas, extraer frameworks y productizar capacidades (Learning OS & Productization)."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

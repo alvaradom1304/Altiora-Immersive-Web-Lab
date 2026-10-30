@@ -1,7 +1,6 @@
 ---
 name: secrets-management
 description: "secrets-management: Cybersecurity. Usar para producir secret_locations, remediation, rotation_plan a partir de inventario claves sin valores, entornos, acceso; no sustituir otras fases ni declarar resultados sin evidencia."
-disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

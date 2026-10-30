@@ -1,6 +1,6 @@
 ---
 name: agent-design
-description: "agent-design: AI & Automation. Usar para producir agent_spec, tool_contracts, evaluation a partir de objetivo, tareas, herramientas reale…"
+description: "agent-design: AI & Automation. Usar para producir agent_spec, tool_contracts, evaluation a partir de objetivo, tareas, herramientas reales, riesgo, límites; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

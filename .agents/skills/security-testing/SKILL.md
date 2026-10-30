@@ -1,6 +1,6 @@
 ---
 name: security-testing
-description: "security-testing: Cybersecurity. Usar para producir test_plan, evidence, remediation a partir de scope escrito, entorno, controles, límit…"
+description: "security-testing: Cybersecurity. Usar para producir test_plan, evidence, remediation a partir de scope escrito, entorno, controles, límites; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

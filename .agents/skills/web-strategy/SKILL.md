@@ -1,6 +1,6 @@
 ---
 name: web-strategy
-description: "web-strategy: Premium Web Experience. Usar para producir web_role, journeys, scope, measurement a partir de negocio, audiencia, oferta, c…"
+description: "web-strategy: Premium Web Experience. Usar para producir web_role, journeys, scope, measurement a partir de negocio, audiencia, oferta, canales, operación; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

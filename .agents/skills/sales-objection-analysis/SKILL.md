@@ -1,6 +1,6 @@
 ---
 name: sales-objection-analysis
-description: "sales-objection-analysis: Sales Intelligence. Usar para producir objection_hypotheses, clarification, response_options a partir de objeci…"
+description: "sales-objection-analysis: Sales Intelligence. Usar para producir objection_hypotheses, clarification, response_options a partir de objeción textual, etapa, contexto, políticas; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

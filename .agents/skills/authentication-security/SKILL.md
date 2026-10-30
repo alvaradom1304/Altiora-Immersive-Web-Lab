@@ -1,6 +1,6 @@
 ---
 name: authentication-security
-description: "authentication-security: Cybersecurity. Usar para producir auth_findings, session_controls, fixes a partir de flujos login/sesión, roles,…"
+description: "authentication-security: Cybersecurity. Usar para producir auth_findings, session_controls, fixes a partir de flujos login/sesión, roles, proveedor, amenazas; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

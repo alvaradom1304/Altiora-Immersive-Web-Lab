@@ -1,7 +1,6 @@
 ---
 name: lead-generation
 description: "lead-generation: Marketing Intelligence. Usar para producir lead_system, capture_fields, handoff a partir de ICP, propuesta, canal, calificación, capacidad; no sustituir otras fases ni declarar resultados sin evidencia."
-disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

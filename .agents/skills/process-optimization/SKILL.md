@@ -1,6 +1,6 @@
 ---
 name: process-optimization
-description: "process-optimization: Operations & Logistics. Usar para producir root_causes, to_be_process, pilot a partir de mapa actual, tiempos, erro…"
+description: "process-optimization: Operations & Logistics. Usar para producir root_causes, to_be_process, pilot a partir de mapa actual, tiempos, errores, restricciones; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

@@ -1,6 +1,6 @@
 ---
 name: competitor-analysis
-description: "competitor-analysis: Business Intelligence. Usar para producir comparison_matrix, differentiation_gaps a partir de competidores directos/…"
+description: "competitor-analysis: Business Intelligence. Usar para producir comparison_matrix, differentiation_gaps a partir de competidores directos/indirectos, criterios, mercado, fecha; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

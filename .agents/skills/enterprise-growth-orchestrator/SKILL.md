@@ -1,6 +1,6 @@
 ---
 name: enterprise-growth-orchestrator
-description: "enterprise-growth-orchestrator: Orchestration. Usar para producir growth_route, scale_constraints, staged_plan a partir de estrategia, ec…"
+description: "enterprise-growth-orchestrator: Orchestration. Usar para producir growth_route, scale_constraints, staged_plan a partir de estrategia, economía, demanda, capacidad, riesgos; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

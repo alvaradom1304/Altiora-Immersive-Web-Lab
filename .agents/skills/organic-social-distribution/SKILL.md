@@ -1,6 +1,6 @@
 ---
 name: organic-social-distribution
-description: "Usar cuando se soliciten calendarios y tácticas para publicar orgánicamente en Instagram, Facebook o TikTok buscando clientes y conversac…"
+description: "Usar cuando se soliciten calendarios y tácticas para publicar orgánicamente en Instagram, Facebook o TikTok buscando clientes y conversaciones comerciales."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

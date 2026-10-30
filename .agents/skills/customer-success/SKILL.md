@@ -1,6 +1,6 @@
 ---
 name: customer-success
-description: "customer-success: Sales Intelligence. Usar para producir success_plan, health_signals, interventions a partir de promesa vendida, onboard…"
+description: "customer-success: Sales Intelligence. Usar para producir success_plan, health_signals, interventions a partir de promesa vendida, onboarding, uso, resultado, soporte; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

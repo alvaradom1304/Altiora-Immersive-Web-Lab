@@ -1,6 +1,6 @@
 ---
 name: campaign-concept
-description: "campaign-concept: Creative Intelligence. Usar para producir campaign_idea, channel_expressions, test a partir de brief, audiencia, oferta…"
+description: "campaign-concept: Creative Intelligence. Usar para producir campaign_idea, channel_expressions, test a partir de brief, audiencia, oferta, canales; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

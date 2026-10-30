@@ -1,7 +1,6 @@
 ---
 name: capital-requirements
 description: "capital-requirements: Venture Building. Usar para producir capital_schedule, funding_gap, sensitivity a partir de inversión inicial, gastos, cobros, calendario, reserva; no sustituir otras fases ni declarar resultados sin evidencia."
-disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

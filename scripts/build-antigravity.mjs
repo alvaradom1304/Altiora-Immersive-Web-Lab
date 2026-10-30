@@ -3,18 +3,17 @@
 import {readFile,writeFile,mkdir,readdir,rm} from 'node:fs/promises';
 import {resolve} from 'node:path';
 import {fileURLToPath} from 'node:url';
+import {loadSkills,loadAgents} from './skill-catalog.mjs';
 const root=fileURLToPath(new URL('../',import.meta.url));
 const check=process.argv.includes('--check');
 const MARK="<!-- Generado con npm run antigravity:build. No editar manualmente. -->";
 const RULE_SYNC="---\ntrigger: always_on\ndescription: \"Mantener sincronizados agentes, skills y reglas de Altiora entre Claude Code y Google Antigravity.\"\n---\n\n# Sincronización de Altiora\n- Las fuentes originales son `team/agents.json`, `team/roles/` y `skills/`; nunca editar los archivos generados en `.claude/` y `.agents/` como fuente.\n- Cuando cambien las fuentes, ejecutar `npm run agents:build` y `npm run check`. Cualquier diferencia debe corregirse antes de integrar a main.\n- Leer AGENTS.md, GEMINI.md y el brief. Los roles son configuraciones; no equivalen a sesiones autónomas abiertas.\n- Solicitar aprobación específica antes de gastar, publicar, contactar clientes, cambiar cuentas o permisos.\n";
 const RULE_MARKETING="---\ntrigger: model_decision\ndescription: \"Activar para marketing, branding, anuncios, Reels, TikTok, Instagram, Facebook, investigación de videos, producto ganador, captación, publicidad o ventas.\"\n---\n\n# Selección de equipo Altiora\n1. Leer `creative-ads-os/WORK_ROUTER.md` y el brief del cliente.\n2. Elegir director, especialistas y skills pertinentes: no cargar todo el catálogo indiscriminadamente.\n3. Para anuncios explorar humor, emoción, demostración y valor, según el producto y el público.\n4. Estudiar referencias sin copiarlas; priorizar actuaciones, videos de producto real, sonido y motion graphics originales.\n5. Separar hipótesis, métricas verificadas y entregables. Conversiones y margen importan más que la viralidad sola.\n6. Sin autorización no publicar anuncios, no gastar ni enviar mensajes a terceros.\n";
-const index=await readFile(resolve(root,'INDEX.md'),'utf8');
-const agents=JSON.parse(await readFile(resolve(root,'team/agents.json'),'utf8')).agents;
-const rows=index.split('\n').map(l=>l.match(/^\| \[([^\]]+)\]\(skills\/([^)]+)\/SKILL\.md\) \| ([^|]*) \| ([^|]*) \| ([^|]*) \| (.*) \|$/)).filter(Boolean);
-if(!rows.length)throw Error('No hay skills en INDEX.md; generar Claude Code primero.');
+const agents=await loadAgents(root);
+const rows=await loadSkills(root);
 const outputs=new Map();
 for(const r of rows){
- const name=r[1],folder=r[2],description=r[6].replace(/\\\|/g,'|');
+ const {name,folder,description}=r;
  outputs.set(`.agents/skills/${name}/SKILL.md`,`---
 name: ${name}
 description: ${JSON.stringify(description)}
@@ -51,7 +50,7 @@ outputs.set('.agents/rules/altiora-marketing.md',RULE_MARKETING);
 let errors=0;
 for(const [path,content] of outputs){
  const file=resolve(root,path);
- if(check){let current=null;try{current=await readFile(file,'utf8')}catch{}if(current!==content){console.error('Desactualizado: '+path);errors++;}}
+ if(check){let current=null;try{current=(await readFile(file,'utf8')).replace(/\r\n/g,'\n')}catch{}if(current!==content){console.error('Desactualizado: '+path);errors++;}}
  else {await mkdir(resolve(file,'..'),{recursive:true});await writeFile(file,content);}
 }
 for(const [dir,ext] of [['.agents/skills','SKILL.md'],['.agents/agents',null]]){

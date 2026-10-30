@@ -1,6 +1,6 @@
 ---
 name: retention
-description: "retention: Sales Intelligence. Usar para producir retention_diagnosis, interventions, measures a partir de cohortes, compras/uso, churn, …"
+description: "retention: Sales Intelligence. Usar para producir retention_diagnosis, interventions, measures a partir de cohortes, compras/uso, churn, feedback, costos; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

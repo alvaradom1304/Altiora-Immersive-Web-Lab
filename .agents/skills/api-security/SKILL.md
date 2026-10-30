@@ -1,6 +1,6 @@
 ---
 name: api-security
-description: "api-security: Cybersecurity. Usar para producir api_risks, controls, verification a partir de endpoints, contrato, auth, datos, límites; …"
+description: "api-security: Cybersecurity. Usar para producir api_risks, controls, verification a partir de endpoints, contrato, auth, datos, límites; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

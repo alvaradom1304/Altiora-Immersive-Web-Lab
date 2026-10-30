@@ -1,7 +1,6 @@
 ---
 name: logistics
 description: "logistics: Operations & Logistics. Usar para producir fulfillment_process, service_rules, costs a partir de pedidos, cobertura, horarios, capacidad, restricciones; no sustituir otras fases ni declarar resultados sin evidencia."
-disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

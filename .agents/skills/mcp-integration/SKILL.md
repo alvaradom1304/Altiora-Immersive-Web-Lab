@@ -1,6 +1,6 @@
 ---
 name: mcp-integration
-description: "mcp-integration: AI & Automation. Usar para producir mcp_contract, auth_plan, tests a partir de cliente/servidor, versión, herramientas, …"
+description: "mcp-integration: AI & Automation. Usar para producir mcp_contract, auth_plan, tests a partir de cliente/servidor, versión, herramientas, scope; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

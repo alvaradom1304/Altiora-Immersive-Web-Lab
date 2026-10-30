@@ -1,6 +1,6 @@
 ---
 name: ltv-optimization
-description: "ltv-optimization: Growth & Scaling. Usar para producir ltv_model, levers, uncertainty a partir de cohortes, margen, retención, horizonte,…"
+description: "ltv-optimization: Growth & Scaling. Usar para producir ltv_model, levers, uncertainty a partir de cohortes, margen, retención, horizonte, costo; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

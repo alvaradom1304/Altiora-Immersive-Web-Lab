@@ -1,6 +1,6 @@
 ---
 name: accessibility
-description: "accessibility: Premium Web Experience. Usar para producir a11y_findings, fixes, manual_checks a partir de UI/código, alcance, nivel objet…"
+description: "accessibility: Premium Web Experience. Usar para producir a11y_findings, fixes, manual_checks a partir de UI/código, alcance, nivel objetivo, usuarios; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

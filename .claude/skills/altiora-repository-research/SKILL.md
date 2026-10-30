@@ -1,7 +1,6 @@
 ---
 name: altiora-repository-research
 description: "Selecciona y compara repositorios o skills para un proyecto de Altiora según utilidad, compatibilidad, mantenimiento, licencia y coste total. Se usa cuando se pide investigar referencias o añadir herramientas antes de implementar."
-disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

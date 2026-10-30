@@ -1,6 +1,6 @@
 ---
 name: sales-proposal
-description: "sales-proposal: Sales Intelligence. Usar para producir proposal, options, acceptance_terms a partir de problema validado, alcance, oferta…"
+description: "sales-proposal: Sales Intelligence. Usar para producir proposal, options, acceptance_terms a partir de problema validado, alcance, oferta, precio, condiciones; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

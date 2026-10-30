@@ -1,6 +1,6 @@
 ---
 name: customer-research
-description: "customer-research: Business Intelligence. Usar para producir research_protocol, observations, findings a partir de preguntas, segmento, a…"
+description: "customer-research: Business Intelligence. Usar para producir research_protocol, observations, findings a partir de preguntas, segmento, acceso consentido, datos de clientes; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

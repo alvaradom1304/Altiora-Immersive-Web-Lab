@@ -1,7 +1,6 @@
 ---
 name: process-mapping
 description: "process-mapping: Operations & Logistics. Usar para producir as_is_map, handoffs, exceptions a partir de actores, entradas/salidas, pasos, evidencias; no sustituir otras fases ni declarar resultados sin evidencia."
-disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

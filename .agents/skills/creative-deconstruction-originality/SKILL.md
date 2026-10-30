@@ -1,6 +1,6 @@
 ---
 name: creative-deconstruction-originality
-description: "Usar cuando el usuario comparta anuncios de referencia y quiera inspirarse en ritmo, emoción, humor, sonido, iluminación o montaje sin co…"
+description: "Usar cuando el usuario comparta anuncios de referencia y quiera inspirarse en ritmo, emoción, humor, sonido, iluminación o montaje sin copiar obras ajenas."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

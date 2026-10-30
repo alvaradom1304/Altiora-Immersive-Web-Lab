@@ -1,6 +1,6 @@
 ---
 name: channel-expansion
-description: "channel-expansion: Growth & Scaling. Usar para producir channel_options, pilot, conflict_controls a partir de canal actual, clientes, cos…"
+description: "channel-expansion: Growth & Scaling. Usar para producir channel_options, pilot, conflict_controls a partir de canal actual, clientes, costos, inventario; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

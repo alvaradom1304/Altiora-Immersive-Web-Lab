@@ -1,6 +1,6 @@
 ---
 name: opportunity-discovery
-description: "opportunity-discovery: Venture Building. Usar para producir opportunity_hypotheses, discovery_questions a partir de capacidades, problema…"
+description: "opportunity-discovery: Venture Building. Usar para producir opportunity_hypotheses, discovery_questions a partir de capacidades, problemas observados, mercados accesibles; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

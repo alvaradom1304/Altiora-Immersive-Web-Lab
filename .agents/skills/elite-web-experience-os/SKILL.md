@@ -1,6 +1,6 @@
 ---
 name: elite-web-experience-os
-description: "Production workflow, creative art direction, motion guidelines, performance budgets, and quality scorecard from Elite Web Experience OS. …"
+description: "Production workflow, creative art direction, motion guidelines, performance budgets, and quality scorecard from Elite Web Experience OS. Use when designing, building, or auditing high-converting interactive web experiences."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

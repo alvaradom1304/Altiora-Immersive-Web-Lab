@@ -1,6 +1,6 @@
 ---
 name: photography-direction
-description: "photography-direction: Brand Intelligence. Usar para producir photo_brief, shot_list, rights a partir de posicionamiento, producto, medio…"
+description: "photography-direction: Brand Intelligence. Usar para producir photo_brief, shot_list, rights a partir de posicionamiento, producto, medios, presupuesto; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

@@ -1,6 +1,6 @@
 ---
 name: problem-centric-selling
-description: "problem-centric-selling: Sales Intelligence. Usar para producir problem_solution_map, fit, discovery_gaps a partir de problema, causa/imp…"
+description: "problem-centric-selling: Sales Intelligence. Usar para producir problem_solution_map, fit, discovery_gaps a partir de problema, causa/impacto, solución, límites; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

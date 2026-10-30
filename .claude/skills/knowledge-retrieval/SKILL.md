@@ -1,7 +1,6 @@
 ---
 name: knowledge-retrieval
 description: "knowledge-retrieval: AI & Automation. Usar para producir retrieved_evidence, provenance, gaps a partir de pregunta, fuentes/corpus, permisos, actualidad; no sustituir otras fases ni declarar resultados sin evidencia."
-disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

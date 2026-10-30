@@ -1,6 +1,6 @@
 ---
 name: problem-validation
-description: "problem-validation: Venture Building. Usar para producir problem_evidence, disconfirmation, verdict a partir de problema supuesto, segmen…"
+description: "problem-validation: Venture Building. Usar para producir problem_evidence, disconfirmation, verdict a partir de problema supuesto, segmento, episodios reales, criterios; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

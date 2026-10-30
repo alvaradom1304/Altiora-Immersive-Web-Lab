@@ -1,6 +1,6 @@
 ---
 name: top10-video-research
-description: "Usar cuando el usuario pida encontrar o estudiar los diez mejores videos, anuncios o Reels de un producto en TikTok, Facebook, Instagram …"
+description: "Usar cuando el usuario pida encontrar o estudiar los diez mejores videos, anuncios o Reels de un producto en TikTok, Facebook, Instagram o plataformas públicas."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

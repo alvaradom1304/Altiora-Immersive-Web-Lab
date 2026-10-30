@@ -1,6 +1,6 @@
 ---
 name: market-segmentation
-description: "market-segmentation: Marketing Intelligence. Usar para producir segments, criteria, validation a partir de mercado, necesidades, comporta…"
+description: "market-segmentation: Marketing Intelligence. Usar para producir segments, criteria, validation a partir de mercado, necesidades, comportamiento, datos, alcance; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

@@ -1,6 +1,6 @@
 ---
 name: aem-stage-01-discovery
-description: "Ejecuta la Fase 01 de AEM. Úsalo para auditar un nuevo cliente, extraer sus dolores de negocio reales y definir el alcance inicial antes …"
+description: "Ejecuta la Fase 01 de AEM. Úsalo para auditar un nuevo cliente, extraer sus dolores de negocio reales y definir el alcance inicial antes de proponer soluciones."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

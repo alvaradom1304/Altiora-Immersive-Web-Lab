@@ -1,6 +1,6 @@
 ---
 name: international-expansion
-description: "international-expansion: Growth & Scaling. Usar para producir country_research, requirements, staged_plan a partir de mercado destino, pr…"
+description: "international-expansion: Growth & Scaling. Usar para producir country_research, requirements, staged_plan a partir de mercado destino, producto, operación, recursos; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

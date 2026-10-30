@@ -1,6 +1,6 @@
 ---
 name: opportunity-analysis
-description: "opportunity-analysis: Business Intelligence. Usar para producir opportunity_matrix, recommendation, validation_plan a partir de alternati…"
+description: "opportunity-analysis: Business Intelligence. Usar para producir opportunity_matrix, recommendation, validation_plan a partir de alternativas, evidencia, costos, impacto, capacidad; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

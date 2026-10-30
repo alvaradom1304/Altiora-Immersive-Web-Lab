@@ -1,7 +1,6 @@
 ---
 name: aem-stage-02-research
 description: "Ejecuta la Fase 02 de AEM. Realiza investigación de mercado profundo, análisis de competidores (Benchmarking) y auditoría de presencia digital."
-disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

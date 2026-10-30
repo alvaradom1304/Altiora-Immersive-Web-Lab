@@ -1,7 +1,6 @@
 ---
 name: business-health-assessment
 description: "business-health-assessment: Business Intelligence. Usar para producir health_dimensions, red_flags, monitoring_plan a partir de periodos comparables, finanzas, demanda, servicio, capacidad; no sustituir otras fases ni declarar resultados sin evidencia."
-disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

@@ -1,6 +1,6 @@
 ---
 name: nextjs-architecture
-description: "nextjs-architecture: Premium Web Experience. Usar para producir architecture, boundaries, implementation_plan a partir de repo/versiones,…"
+description: "nextjs-architecture: Premium Web Experience. Usar para producir architecture, boundaries, implementation_plan a partir de repo/versiones, rutas, datos, auth, hosting; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

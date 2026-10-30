@@ -1,6 +1,6 @@
 ---
 name: gsap-animation
-description: "gsap-animation: Premium Web Experience. Usar para producir animation_code, cleanup, verification a partir de repo, versiones, elementos, …"
+description: "gsap-animation: Premium Web Experience. Usar para producir animation_code, cleanup, verification a partir de repo, versiones, elementos, motion spec; no sustituir otras fases ni declarar resultados sin evidencia."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->
