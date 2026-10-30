@@ -55,3 +55,6 @@ En `02_REFERENCIAS/REFERENCIAS.md` pegar URLs de anuncios y anotar qué estructu
 
 ## Protección
 `media-workspaces/` está excluido de Git por completo. El material puede seguir estando expuesto al sistema de archivos local o a otras aplicaciones con acceso: usar permisos mínimos, discos seguros y respaldos del cliente. Revisar derechos, licencia de música y consentimientos.
+
+## Sistema antirrepetición de Altiora
+Consultar `skills/creative-deconstruction-originality/references/video-editorial-variation.md`. El comando `npm run video:variation -- plan` produce tratamientos conceptuales distintos basados en tomas observadas y el historial **compartido por cliente** en `media-workspaces/<cliente>/editorial-history.json` (fuera de Git). Los planes van en `04_EDITABLES/`; las comparaciones y la revisión humana del video final se documentan en `05_QA/`. No registrar propuestas no renderizadas como historial ni confundir diversidad estructural con originalidad visual comprobada.

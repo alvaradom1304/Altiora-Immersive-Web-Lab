@@ -69,3 +69,8 @@ Seguir docs/workflows/immersive-project.md. Antes de ampliar una experiencia, co
 - Nunca modificar grabaciones originales ni subir media-workspaces a Git. El `.gitignore` los protege del seguimiento casual, pero la protección depende también de permisos y procedimientos del operador. Si no hay clips, no declarar MP4 producido.
 - Codex lee `AGENTS.md`, descubre skills en `.agents/skills/` y sus subagentes se generan desde `team/agents.json` en `.codex/agents/`; Claude usa `.claude/`; Antigravity usa `.agents/`. Los tres se sincronizan con `npm run agents:build` y se revisan con `npm run check`. No editar adaptadores derivados manualmente.
 - Usar `creative-ads-director` como responsable; delegar guion y montaje a `visual-producer`/`motion-designer`, revisión independiente a `qa-reviewer`, solo si aporta valor. Archivo MP4 exportado ≠ campaña que vende: medir después.
+
+## Variación creativa basada en esencia, no en presets
+- «Los edits se parecen», «crea algo distinto», «edita este video»: activar `creative-ads-director`, `creative-deconstruction-originality` y su módulo `references/video-editorial-variation.md` antes de montar con `ai-video-direction`.
+- Generar tratamientos con `npm run video:variation -- plan`, consultar el historial local `media-workspaces/<cliente>/editorial-history.json` y evitar repetir gancho/narrativa/gramática audiovisual. El comando compara DESCRIPTORES; es obligatorio visionar los MP4.
+- Remotion, FFmpeg y plantillas son herramientas, no el director creativo; mantener datos de producto, marca, derechos, identidad y emoción real. Si falta material, solicitar tomas o declarar `NEEDS_REVIEW` en lugar de inventar.

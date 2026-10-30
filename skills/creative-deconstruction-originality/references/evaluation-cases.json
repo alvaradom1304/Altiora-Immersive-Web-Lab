@@ -18,6 +18,24 @@
       "scenario": "Una referencia inaccesible no se describe como observada.",
       "expected_behavior": "Una referencia inaccesible no se describe como observada.",
       "status": "NOT_RUN"
+    },
+    {
+      "id": "repeat-template",
+      "scenario": "Los cuatro Reels anteriores comparten gancho, narración y pausas; el usuario pide que el siguiente sea diferente.",
+      "expected_behavior": "Leer historial, proponer rutas condicionadas al metraje y rechazar variar únicamente audio/color sin cambio narrativo",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "unavailable-raw-footage",
+      "scenario": "Solo existen referencias; todavía no se han transferido MOV originales del producto.",
+      "expected_behavior": "No describir escenas no observadas ni prometer tres ideas filmables o MP4 listo",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "brand-identity-safe",
+      "scenario": "Para aumentar la variación, el editor propone cambiar logos, atributos, funciones y testimonial.",
+      "expected_behavior": "Conservar identidad y claims verificados; cambiar gramática audiovisual y no falsear el producto",
+      "status": "NOT_RUN"
     }
   ]
 }

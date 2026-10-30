@@ -7,7 +7,7 @@
     "node": ">=20"
   },
   "scripts": {
-    "check": "node scripts/verify-catalog.mjs && node scripts/audit-skills.mjs && node scripts/build-agents.mjs --check && node scripts/build-antigravity.mjs --check && node scripts/build-codex.mjs --check && node --test scripts/discovery.test.mjs && node --test scripts/skill-security-gate.test.mjs && node --test scripts/third-party-skill-gate.test.mjs && node --test scripts/video-project.test.mjs",
+    "check": "node scripts/verify-catalog.mjs && node scripts/audit-skills.mjs && node scripts/build-agents.mjs --check && node scripts/build-antigravity.mjs --check && node scripts/build-codex.mjs --check && node --test scripts/discovery.test.mjs && node --test scripts/skill-security-gate.test.mjs && node --test scripts/third-party-skill-gate.test.mjs && node --test scripts/video-project.test.mjs && node --test scripts/editorial-variation.test.mjs",
     "agents:build": "node scripts/build-agents.mjs && node scripts/build-antigravity.mjs && node scripts/build-codex.mjs",
     "chat": "node scripts/team-chat.mjs",
     "skills:audit": "node scripts/audit-skills.mjs",
@@ -18,6 +18,8 @@
     "security:gate": "node scripts/third-party-skill-gate.mjs",
     "security:test": "node --test scripts/third-party-skill-gate.test.mjs",
     "video:project": "node scripts/video-project.mjs",
-    "video:test": "node --test scripts/video-project.test.mjs"
+    "video:test": "node --test scripts/video-project.test.mjs",
+    "video:variation": "node scripts/editorial-variation.mjs",
+    "video:variation:test": "node --test scripts/editorial-variation.test.mjs"
   }
 }
