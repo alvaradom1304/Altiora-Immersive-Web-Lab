@@ -60,3 +60,11 @@ Seguir docs/workflows/immersive-project.md. Antes de ampliar una experiencia, co
 - Antes de importar un skill, MCP o repositorio externo: revisar `docs/security/third-party-skill-gate.md` y `references/av-security-sources.json`, registrar licencia y commit, y ejecutar `npm run security:scan -- skills/<nombre>` si está instalado NVIDIA SkillSpector; revisión de dependencias y permisos por separado.
 - El scanner es una barrera adicional, no permiso para instalar/ejectuar automáticamente. Bloquear riesgos altos, cobertura incompleta y archivos no revisados. No elevar permisos, exponer credenciales, ejecutar hooks externos ni copiar contenidos sin validar.
 - Para audiovisual, seguir `docs/research/audiovisual-repos-2026-10-30.md`. Priorizar Remotion, FFmpeg, transcripción local y herramientas de corte solo cuando aporten valor medido; licencias comerciales a verificar.
+
+## Intención mínima: selección y evolución de capacidades
+- Para encargos no triviales leer docs/operations/autonomous-capability-routing.md. El usuario indica el resultado; no debe elegir repositorios ni skills manualmente.
+- Con Node disponible: npm run route -- "encargo". Contrastar recomendación con brief, skills y especialistas; la salida NO ejecuta agentes ni herramientas.
+- Prioridad: REUSE, IMPROVE, CREATE_DRAFT (solo brechas repetibles) o DEFER. Consultar skills/aem-skill-factory/SKILL.md. npm run capability:draft -- "encargo" solo crea propuesta fuera de skills/.
+- Para repositorios externos consultar skills/altiora-repository-research/SKILL.md y gate de seguridad; licencia, commit, revisión y prueba antes de instalar o usar código.
+- Delegar tareas independientes con dueño y QA. Sin subagentes reales, ejecutar secuencialmente. Medir originalidad y valor empresarial.
+- Mantener aprobación humana de gastos, publicación, contacto externo, credenciales, permisos y producción. No fingir coordinación automática entre distintas sesiones de IA.
