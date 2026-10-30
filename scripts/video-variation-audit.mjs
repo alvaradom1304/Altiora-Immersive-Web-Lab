@@ -7,7 +7,8 @@ import {fileURLToPath} from 'node:url';
 export const AXES=Object.freeze(['hook','narrative','pacing','camera','motion','sound','typography','ending']);
 const fields=['footage_fit','brand_fit','feasibility','clarity'];
 const goodText=s=>typeof s==='string'&&s.trim().length>=8;
-const goodId=s=>typeof s==='string'&&/^[a-z0-9][a-z0-9-_]{1,79}$/i.test(s);
+const goodId=s=>typeof s==='string'&&/^[a-z0-9][a-z0-9_-]{1,79}$/i.test(s);
+const goodFile=s=>typeof s==='string'&&s.trim().length>0&&s.length<=255&&!s.includes('\\0');
 const norm=s=>typeof s==='string'?s.trim().toLocaleLowerCase('es').replace(/\s+/g,' '):'';
 export function distance(a,b){
  return AXES.reduce((n,axis)=>n+(norm(a?.[axis])!==norm(b?.[axis])?1:0),0);
@@ -24,7 +25,7 @@ export function audit(proposal,history={executions:[]}){
  if(evidence.length===0)errors.push('Registrar evidencia real de metraje y timecodes');
  const evidenceIds=new Set();
  for(const x of evidence){
-  if(!goodId(x?.id)||!goodText(x?.file)||!goodText(x?.observation)||
+  if(!goodId(x?.id)||!goodFile(x?.file)||!goodText(x?.observation)||
      !Number.isFinite(x?.in_seconds)||!Number.isFinite(x?.out_seconds)||
      x.in_seconds<0||x.out_seconds<=x.in_seconds)errors.push('Evidencia de metraje incompleta: id, archivo, observación, in/out segundos');
   if(evidenceIds.has(x?.id))errors.push('ID de evidencia duplicado: '+String(x?.id));
