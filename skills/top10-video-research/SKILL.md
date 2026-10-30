@@ -1,28 +1,37 @@
 ---
 name: top10-video-research
-description: "Investigar hasta diez videos públicos por producto y descomponer ganchos, emoción, guion, pruebas y CTA sin inventar desempeño."
+description: "Usar cuando el usuario pida encontrar o estudiar los diez mejores videos, anuncios o Reels de un producto en TikTok, Facebook, Instagram o plataformas públicas."
 metadata:
   version: 1.0.0
-  owner: Altiora Commerce Growth OS
-  status: operational-specification
 ---
 
-# top10-video-research
+# TOP10 VIDEO RESEARCH — Altiora
 
-## Activación
-Cuando se solicite un top diez de TikTok/Reels/Facebook o benchmarking audiovisual por SKU.
-## Entradas
-SKU exacto o categoría exploratoria, público, país, rango temporal, plataformas y objetivo comercial.
-## SOP
-1. Buscar en TikTok Creative Center Top Ads, Meta Ad Library y videos orgánicos públicos; priorizar productos comparables y mercado local.
-2. Registrar máximo diez enlaces **accesibles y verificables**. «Top» significa selección bajo criterios explícitos (relevancia, actualidad, señales visibles), NO ranking absoluto de ventas.
-3. Por referencia registrar URL, creador, plataforma, fecha de consulta, fecha de publicación si consta, país, duración, tipo orgánico/pago/desconocido, y métricas solo si son visibles.
-4. Analizar 0–3 segundos (gancho), contexto, conflicto, emoción, prueba de valor, audiovisual, cambio de ritmo, señal de marca y CTA. Indicar «video no accesible» cuando corresponda.
-5. Extraer patrones repetidos y 3 ideas nuevas; registrar elementos distintivos protegidos que NO se copiarán.
-6. Señalar sesgo de muestra, cuentas inaccesibles y confianza en cada conclusión.
-## Salida verificable
-Hasta 10 fichas con enlaces + matriz de patrones + 3 conceptos originales + riesgos + datos faltantes. Si se hallan 4 videos, se entregan 4; no rellenar artificialmente.
-## Controles
-Vistas/likes/CTR no demuestran ventas ni ROAS; no descargar/republicar material ajeno sin derechos.
-## Fuentes de partida
-https://ads.tiktok.com/resources/help/article/how-to-use-the-top-ads-dashboard ; https://www.facebook.com/ads/library/
+## Misión y criterio de activación
+Crear inteligencia creativa trazable a fuentes sin confundir popularidad con ventas. Activar exclusivamente para una tarea pertinente y usar contexto real del negocio.
+
+## Entradas requeridas
+SKU exacto o categoría, país, periodo, plataforma, objetivo, público; criterios de ranking; enlaces o videos aportados.
+
+## Procedimiento operativo (SOP)
+1. Separar SKU exacto de categoría aproximada; si no hay modelo, declarar búsqueda exploratoria.
+2. Buscar en fuentes públicas como TikTok Creative Center, Meta Ad Library y videos accesibles; fechar cada consulta y guardar URL real.
+3. Seleccionar hasta 10 piezas según criterio explícito (vistas verificables, fecha, relevancia, demostración, formato); registrar N/10 si faltan fuentes.
+4. Para cada video documentar gancho 0–3 s, promesa, trama, planos, sonido, branding, prueba, CTA, duración, público, datos visibles y originalidad.
+5. Separar hechos, hipótesis, anuncios pagados/orgánicos y métricas no disponibles; evaluar sesgo de supervivencia.
+6. Entregar tres patrones transferibles y tres conceptos nuevos, diferenciados de la puesta en escena protegida del original.
+
+## Entregable y métricas
+Tabla 1–10 con URL/fecha/observación/criterio; breakdown por secuencia; reporte de patrones y tres propuestas propias con nivel de confianza.
+
+## Calidad, ética y límites
+No inventar links, vistas, ROAS ni ventas. Si un video requiere login o impide acceso, marcar inaccesible y solicitar archivo autorizado; evitar descargar o republicar material sin derechos. Evidencia antes que opinión; declarar NO VERIFICADO, PENDIENTE o BLOQUEADO cuando corresponda.
+
+## Validación y casos de evaluación
+Ejecutar al menos tres casos de `references/evaluation-cases.json` al integrar; documentar resultados PASS/FAIL/NOT_RUN. Una revisión de estructura no prueba efectividad real.
+
+## Dependencias y traspaso
+Leer `AGENTS.md` y `creative-ads-os/WORK_ROUTER.md` desde la raíz del repositorio. Complementar con `consumer-psychology`, `ethical-influence`, `advertising-concept`, `brand-storytelling` y `growth-experimentation` solo si aportan valor concreto.
+
+## Versión
+1.0.0 — 2026-10-29: primera implementación de skill operativa reutilizable.

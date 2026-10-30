@@ -1,0 +1,23 @@
+{
+  "version": "1.0.0",
+  "cases": [
+    {
+      "id": "organic-social-distribution-1",
+      "scenario": "Audiencia sin datos horarios: plantear horarios como hipótesis.",
+      "expected_behavior": "Audiencia sin datos horarios: plantear horarios como hipótesis.",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "organic-social-distribution-2",
+      "scenario": "Sin permiso para publicar: entregar piezas preparadas, no declarar publicación.",
+      "expected_behavior": "Sin permiso para publicar: entregar piezas preparadas, no declarar publicación.",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "organic-social-distribution-3",
+      "scenario": "Un Reel con muchas vistas sin consultas no se llama venta exitosa.",
+      "expected_behavior": "Un Reel con muchas vistas sin consultas no se llama venta exitosa.",
+      "status": "NOT_RUN"
+    }
+  ]
+}

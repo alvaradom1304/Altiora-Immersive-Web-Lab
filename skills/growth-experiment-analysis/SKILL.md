@@ -1,26 +1,37 @@
 ---
 name: growth-experiment-analysis
-description: "Diseñar, medir y revisar pilotos comerciales de contenidos, emociones y anuncios diferenciando correlación de causalidad."
+description: "Usar al evaluar si campañas de branding, videos orgánicos, anuncios o embudos a WhatsApp generan mejores consultas y ventas con pruebas medibles."
 metadata:
   version: 1.0.0
-  owner: Altiora Commerce Growth OS
-  status: operational-specification
 ---
 
-# growth-experiment-analysis
+# GROWTH EXPERIMENT ANALYSIS — Altiora
 
-## Activación
-Cuando se necesite evaluar hooks, anuncios, productos o canales con presupuesto o tiempo limitados.
-## Entradas
-Hipótesis, línea base, acceso a datos, costos, ventana de prueba, decisión comercial, presupuesto autorizado y restricciones.
-## SOP
-1. Formular hipótesis falsable: para [audiencia], [cambio] aumentaría [métrica objetivo] respecto de [referencia] bajo [condiciones].
-2. Elegir métrica primaria **comercial** (conversaciones calificadas, compra o contribución), métricas secundarias de creatividad y guardrails (quejas, devolución, gasto).
-3. Registrar periodo, tamaño muestral esperado, fuentes, tratamiento/comparador y reglas de seguimiento antes del lanzamiento.
-4. Aislar una variable principal por variante cuando sea posible; anotar cambios de algoritmo, horario, stock y promoción como factores de confusión.
-5. Registrar resultados por campaña/plataforma/creativo/SKU y calcular costo por chat, CAC, cierre y contribución neta; cuando la muestra es pequeña, reportar incertidumbre.
-6. Decidir iterar, detener, mantener o escalar **con autorización de gasto**; documentar aprendizajes sin inventar uplift causal.
-## Salida verificable
-Ficha de experimento, tabla de datos con denominadores, comparación, incertidumbres, decisión, responsable y fecha.
-## Controles
-No declarar prueba A/B causal si se publicaron orgánicos sin control. No declarar ventas a partir de vistas.
+## Misión y criterio de activación
+Diseñar tests y decidir continuar, iterar o detener según evidencia. Activar exclusivamente para una tarea pertinente y usar contexto real del negocio.
+
+## Entradas requeridas
+Hipótesis, creativo, presupuesto autorizado, periodo, baseline, pedidos, ingreso, contribución, origen y muestra.
+
+## Procedimiento operativo (SOP)
+1. Definir antes del test objetivo comercial, unidad de análisis, hipótesis y condición de decisión; no cambiar KPI tras ver resultados.
+2. Comparar alternativas pertinentes (humor vs demo vs emoción); mantener oferta, audiencia y canal lo más equivalentes posible.
+3. Determinar periodo y presupuesto según capacidad; con muestras pequeñas usar aprendizaje cualitativo y no proclamar significancia estadística.
+4. Registrar alcance, vistas, retención, chats iniciados, chats calificados, pedidos pagados, ingresos, margen variable, inversión y motivos de caída.
+5. Calcular costo por chat = pauta/chats; cierre = pedidos/chats calificados; CAC = pauta/compras nuevas atribuibles; contribución posterior a pauta = ingresos − costos variables − pauta.
+6. Anotar problemas de atribución, sesgos, estacionalidad, diferencias de entrega o stock; decidir escalar/iterar/parar con razonamiento.
+
+## Entregable y métricas
+Plan de experimento, tabla de resultados, incertidumbre, notas de QA y decisión comercial reproducible.
+
+## Calidad, ética y límites
+No afirmar causalidad ni ROAS sin tracking; ROAS ingreso/pauta no equivale a rentabilidad; jamás activar gastos sin aprobación. Evidencia antes que opinión; declarar NO VERIFICADO, PENDIENTE o BLOQUEADO cuando corresponda.
+
+## Validación y casos de evaluación
+Ejecutar al menos tres casos de `references/evaluation-cases.json` al integrar; documentar resultados PASS/FAIL/NOT_RUN. Una revisión de estructura no prueba efectividad real.
+
+## Dependencias y traspaso
+Leer `AGENTS.md` y `creative-ads-os/WORK_ROUTER.md` desde la raíz del repositorio. Complementar con `consumer-psychology`, `ethical-influence`, `advertising-concept`, `brand-storytelling` y `growth-experimentation` solo si aportan valor concreto.
+
+## Versión
+1.0.0 — 2026-10-29: primera implementación de skill operativa reutilizable.

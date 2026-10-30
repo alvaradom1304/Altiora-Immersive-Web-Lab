@@ -1,0 +1,23 @@
+{
+  "version": "1.0.0",
+  "cases": [
+    {
+      "id": "business-social-audit-1",
+      "scenario": "Perfil sin enlace verificable debe quedar bloqueado, sin afirmar enlace roto.",
+      "expected_behavior": "Perfil sin enlace verificable debe quedar bloqueado, sin afirmar enlace roto.",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "business-social-audit-2",
+      "scenario": "Captura sin estadísticas no produce tasas de interacción inventadas.",
+      "expected_behavior": "Captura sin estadísticas no produce tasas de interacción inventadas.",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "business-social-audit-3",
+      "scenario": "Proveedor aparece en vitrina: se promociona la marca del cliente y se registra la relación.",
+      "expected_behavior": "Proveedor aparece en vitrina: se promociona la marca del cliente y se registra la relación.",
+      "status": "NOT_RUN"
+    }
+  ]
+}

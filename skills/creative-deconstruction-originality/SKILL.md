@@ -1,26 +1,37 @@
 ---
 name: creative-deconstruction-originality
-description: "Descomponer anuncios ajenos en técnicas transferibles y producir conceptos audiovisuales nuevos con control de originalidad y derechos."
+description: "Usar cuando el usuario comparta anuncios de referencia y quiera inspirarse en ritmo, emoción, humor, sonido, iluminación o montaje sin copiar obras ajenas."
 metadata:
   version: 1.0.0
-  owner: Altiora Commerce Growth OS
-  status: operational-specification
 ---
 
-# creative-deconstruction-originality
+# CREATIVE DECONSTRUCTION ORIGINALITY — Altiora
 
-## Activación
-Cuando se compartan videos de referencia o se pida recrear la calidad técnica/estilo de una campaña.
-## Entradas
-Enlaces o archivos permitidos, propósito, audiencia, producto comprobado, recursos de rodaje y derechos disponibles.
-## SOP
-1. Registrar si cada referencia fue realmente visualizada, solo descrita o no accesible.
-2. Describir estructura: 0–3s gancho; problema/contexto; giro; prueba; emoción; marca; CTA; cámara; luz; edición; audio.
-3. Separar principios genéricos transferibles (duración, ritmo, arco) de elementos concretos no copiables (diálogo, montaje distintivo, personaje, música, imágenes, marca).
-4. Elaborar tres rutas **originales** con premisa, beneficio probado, emoción, guion de 15–30s, lista de tomas, audio lícito y CTA.
-5. Comprobar inventario, atributos, precio, permiso de imagen y derechos antes de producir; definir variante A/B con una variable aislada.
-6. Aplicar QA al corte final, incluyendo legibilidad móvil, subtítulos y contexto de compra.
-## Salida verificable
-Ficha de referencia, patrones, elementos excluidos, tres conceptos, storyboard/shotlist, claim checks, QA y métrica objetivo.
-## Controles
-No clonar voces, rostros, escenas o guiones protegidos ni simular testimonios. La inspiración debe generar ejecución independiente.
+## Misión y criterio de activación
+Traducir inspiración visual a dirección creativa propia y defendible. Activar exclusivamente para una tarea pertinente y usar contexto real del negocio.
+
+## Entradas requeridas
+Video(s) o URLs de referencia, derechos, producto real, objetivos, identidad de marca, capacidad de rodaje.
+
+## Procedimiento operativo (SOP)
+1. Analizar únicamente el contenido visual/audio efectivamente accesible y detallar limitaciones.
+2. Descomponer técnica: primeros 3 s, trama, cambio emocional, cámara, cortes, iluminación, actuación, tipografía, sonido, CTA.
+3. Separar patrones generales reutilizables de expresiones distintivas (diálogo, personajes, música, composición singular, montaje idéntico).
+4. Proponer al menos tres conceptos con diferente situación, guion, puesta en escena o punto de vista; conservar autenticidad del SKU.
+5. Comparar referencia y propuesta en matriz de similitud; rediseñar cuando escena/punchline o composición se parezcan demasiado.
+6. Crear shot list, diseño sonoro original/licenciado y controles de continuidad (manos, logos, reflejos, texto, características reales).
+
+## Entregable y métricas
+Análisis de referencia, mapa 'aprender/no copiar', tres rutas originales, guion y checklist audiovisual/propiedad intelectual.
+
+## Calidad, ética y límites
+No asegurar que replicar características generales conceda derecho a usar clips, marcas, música ni voces; solicitar revisión legal en casos complejos. Evidencia antes que opinión; declarar NO VERIFICADO, PENDIENTE o BLOQUEADO cuando corresponda.
+
+## Validación y casos de evaluación
+Ejecutar al menos tres casos de `references/evaluation-cases.json` al integrar; documentar resultados PASS/FAIL/NOT_RUN. Una revisión de estructura no prueba efectividad real.
+
+## Dependencias y traspaso
+Leer `AGENTS.md` y `creative-ads-os/WORK_ROUTER.md` desde la raíz del repositorio. Complementar con `consumer-psychology`, `ethical-influence`, `advertising-concept`, `brand-storytelling` y `growth-experimentation` solo si aportan valor concreto.
+
+## Versión
+1.0.0 — 2026-10-29: primera implementación de skill operativa reutilizable.

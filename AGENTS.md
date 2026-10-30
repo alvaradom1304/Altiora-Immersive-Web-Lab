@@ -32,3 +32,9 @@ Seguir docs/workflows/immersive-project.md. Antes de ampliar una experiencia, co
 ## Equipo multi-IA
 - Los 12 roles de team/registry.md tienen prompt en team/agents/<rol>.md (Claude Code los usa como subagentes en .claude/agents/). Se generan con npm run agents:build desde team/agents.json y team/roles/; no editarlos a mano.
 - Repartir y coordinar el trabajo en el chat del equipo (team/chat/README.md): firmar como <ia>/<rol>, reclamar la tarea antes de editar, tocar solo sus archivos y cerrar con evidencia.
+
+## Enrutamiento por intención para marketing / anuncios / branding
+- Ante solicitudes como «marketing», «anuncios», «Reels», «publicidad», «branding», «buscá 10 videos», «producto ganador», «captación» o «ventas», consultar primero [creative-ads-os/WORK_ROUTER.md](creative-ads-os/WORK_ROUTER.md) y el brief de la marca.
+- Seleccionar solo el director y las 1–3 skills necesarias, reutilizando `skills/` y los agentes existentes. Para trabajo de campaña, integrar diagnóstico, investigación, creatividad, producción real, WhatsApp, medición y QA según alcance.
+- Esta regla aplica a todos los clientes de Altiora. No sustituir la evaluación de seguridad, derechos, pruebas comerciales ni autorizaciones para publicar o gastar. Los roles descritos en Markdown no son agentes independientes desplegados.
+- El espejo de `.claude/skills/` y el índice son generados; después de agregar skills fuente ejecutar `npm run agents:build` y `npm run check` antes de integrar la rama.

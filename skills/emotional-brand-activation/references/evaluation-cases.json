@@ -1,0 +1,23 @@
+{
+  "version": "1.0.0",
+  "cases": [
+    {
+      "id": "emotional-brand-activation-1",
+      "scenario": "Consola retro: nostalgia y reencuentro adulto, pero producto visible y CTA verificable.",
+      "expected_behavior": "Consola retro: nostalgia y reencuentro adulto, pero producto visible y CTA verificable.",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "emotional-brand-activation-2",
+      "scenario": "Audífonos: humor/valor puede ganar sin apelar a lágrimas.",
+      "expected_behavior": "Audífonos: humor/valor puede ganar sin apelar a lágrimas.",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "emotional-brand-activation-3",
+      "scenario": "Producto para bebés: explicar beneficio real sin amenazas a la seguridad ni exagerar riesgos.",
+      "expected_behavior": "Producto para bebés: explicar beneficio real sin amenazas a la seguridad ni exagerar riesgos.",
+      "status": "NOT_RUN"
+    }
+  ]
+}
