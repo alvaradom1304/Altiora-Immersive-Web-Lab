@@ -1,0 +1,34 @@
+{
+  "id": "T1029-a77f",
+  "title": "Tilichero: plan de captacion semana 1",
+  "role": "commerce-growth-director",
+  "ai": "claude",
+  "reviewer": "qa-reviewer",
+  "depends": [],
+  "files": [
+    "projects/tilicheros/ads/CAPTACION_SEMANA_1.md"
+  ],
+  "acceptance": "Plantillas Marketplace y grupos, estados WhatsApp, perfil, clips rapidos, campana clic a WhatsApp para aprobar, calendario diario, medicion por canal, sin contaminar Prueba A, sin numeros prometidos",
+  "status": "hecha",
+  "owner": "claude/commerce-growth-director",
+  "created": "2026-10-30T02:12:25Z",
+  "created_by": "claude/experience-director",
+  "history": [
+    {
+      "at": "2026-10-30T02:12:25Z",
+      "by": "claude/experience-director",
+      "status": "pendiente"
+    },
+    {
+      "at": "2026-10-30T02:12:29Z",
+      "by": "claude/commerce-growth-director",
+      "status": "en_curso"
+    },
+    {
+      "at": "2026-10-30T02:36:58Z",
+      "by": "claude/commerce-growth-director",
+      "status": "hecha",
+      "note": "DISEÑADO. CAPTACION_SEMANA_1.md: textos listos por canal con marcadores [PRECIO]/[STOCK]/[ENTREGA]; tabla LISTO/BLOQUEADO; solicitud al dueño de 9 lineas (no enviada); mensajes de WhatsApp de respuesta y cierre, cada uno ligado a Cualificada/Cotizada/Pedido confirmado/Cobrado; Marketplace, grupos, estados, clips y campaña de clic a WhatsApp NO activada; calendario dia 0-7; revision del dia 7 por canal. Fuentes oficiales de Meta y WhatsApp citadas; politica de Marketplace releida por el coordinador (solo EEE, Filipinas e India figuran con restricciones). El SKU de audifonos queda fuera del paquete durante la Prueba A. Sin clientes ni resultados declarados. npm run check PASS."
+    }
+  ]
+}

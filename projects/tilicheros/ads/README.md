@@ -5,6 +5,7 @@ Marca anunciada: **El Tilichero** (`@el.tilichero.cr`). Tecnogau es proveedor y 
 ## Por dónde empezar
 
 - [`PRODUCCION_CANONICA.md`](PRODUCCION_CANONICA.md): **única fuente vigente** de guiones, códigos de WhatsApp (GAME1, GAME2, RETRO1, RGB1) y duraciones.
+- [`CAPTACION_SEMANA_1.md`](CAPTACION_SEMANA_1.md): paquete para conseguir más mensajes ya (perfil, Marketplace, grupos, estados, clips, campaña de clic a WhatsApp para aprobar y mensajes de cierre), con lo publicable separado de lo bloqueado.
 - [`kit-cliente/`](kit-cliente/README.md): fichas de producto y registro de consultas que llena el dueño antes de grabar y durante la prueba de 7 días.
 - [`AUDITORIA_INSTAGRAM_PUBLICO_2026-10-29.md`](AUDITORIA_INSTAGRAM_PUBLICO_2026-10-29.md) y [`AUDITORIA_VISUAL_2026-10-29.md`](AUDITORIA_VISUAL_2026-10-29.md): diagnóstico de partida.
 

@@ -20,7 +20,7 @@
 | RETRO1 | Consola portátil retro [PENDIENTE: modelo exacto] | Nostalgia | 20 s | 9:16, master 1080×1920 | Instagram Reels + TikTok, orgánico | DISEÑADO | Modelo, contenido incluido y sus derechos, precio, stock, garantía |
 | RGB1 | Mouse gaming [PENDIENTE: modelo exacto] o accesorio sustituto validado | Demostración | 15 s | 9:16, master 1080×1920 | TikTok + Instagram Reels, orgánico | DISEÑADO | Modelo, specs validadas, iluminación real sí/no, precio, stock |
 
-**Reglas de código.** Siempre en mayúsculas, sin tildes, espacios ni guiones bajos. Aparece igual en el cierre del video y en el copy; el cliente lo escribe en WhatsApp. Consulta sin código: `SIN CODIGO`. Consulta con código de otra pieza o de una publicación anterior: `OTRO`. Si RGB1 cambia de accesorio, conserva el código y la ficha registra el SKU real.
+**Reglas de código.** Siempre en mayúsculas, sin tildes, espacios ni guiones bajos. Aparece igual en el cierre del video y en el copy; el cliente lo escribe en WhatsApp. El código dice de qué pieza viene la consulta y el canal dice dónde la vio. `SIN CODIGO`: no se sabe la pieza, aunque diga el canal o que se lo recomendaron, o escribió un código que no está en la lista. `OTRO`: vino por una publicación sin código que sí se identifica (Marketplace, grupo, estado, clip, anuncio con foto o una publicación anterior). Si RGB1 cambia de accesorio, conserva el código y la ficha registra el SKU real.
 
 **Pauta.** Meta con clic a WhatsApp solo con presupuesto y accesos autorizados por el dueño; usa las mismas piezas y códigos. TikTok arranca en orgánico.
 
@@ -118,7 +118,7 @@ No se construyen enlaces `wa.me` con el número: el número oficial está pendie
 | RETRO1 | «¡Qué buena! Te confirmo el modelo de la consola retro, qué trae incluido, la disponibilidad y la entrega a tu zona. ¿Es para vos o para regalo?» |
 | RGB1 | «¡Tuanis! ¿Buscás mouse u otro accesorio para tu setup? Te paso los modelos disponibles con precio final y entrega a tu zona.» |
 
-**Sin código.** Preguntar una sola vez «¿En qué publicación nos viste?»; si no lo sabe, registrar `SIN CODIGO` y atender igual. Si menciona otra pieza o una publicación vieja, registrar `OTRO`. Para cotizar basta la zona: no pedir la dirección hasta confirmar el pedido.
+**Sin código.** Preguntar una sola vez «¿En qué publicación nos viste?»; si no lo sabe, registrar `SIN CODIGO` y atender igual. Si identifica una publicación sin código (una foto vieja, Marketplace, un estado), registrar `OTRO` con su canal. Para cotizar basta la zona: no pedir la dirección hasta confirmar el pedido.
 
 **Cotización (común).** «Modelo: [ ] · Precio final: ₡[ ] · Disponibilidad: [ ] · Garantía: [ ] · Entrega a [zona]: [costo y plazo]. ¿Querés que coordinemos el pedido?» Solo con datos de la ficha vigente.
 
