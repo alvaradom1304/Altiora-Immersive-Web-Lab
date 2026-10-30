@@ -1,0 +1,15 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {audit,distance,AXES} from './video-variation-audit.mjs';
+const g=(id)=>Object.fromEntries(AXES.map(k=>[k,id+' - dirección específica para '+k]));
+const cand=id=>({id,concept:'Concepto distintivo '+id,why_this:'Aprovecha gesto, textura y sonido de las tomas '+id,footage_ids:['clipA'],grammar:g(id),scores:{footage_fit:5,brand_fit:4,feasibility:4,clarity:5}});
+const proposal=()=>({schema_version:1,client:'el-tilichero',campaign:'earbuds-2026',objective:'Comunicar el producto con material real',footage_reviewed:true,brand_invariants:['No inventar prestaciones'],evidence:[{id:'clipA',file:'raw-01.mov',in_seconds:0,out_seconds:3,observation:'Se ve la caja en una mesa y una mano'}],candidates:[cand('poesia'),cand('documental'),cand('detalle')],selected_id:'poesia'});
+test('tres rutas distinguibles y evidencia válida pasan',()=>{const r=audit(proposal());assert.equal(r.status,'PASS');assert.equal(r.weighted_fit,4.55)});
+test('detecta conceptos casi idénticos incluso con nombres distintos',()=>{let p=proposal();p.candidates[1].grammar={...p.candidates[0].grammar,ending:'Cierre especial completamente diferente'};assert.equal(audit(p).status,'FAIL')});
+test('bloquea propuesta que no inspeccionó clips',()=>{let p=proposal();p.footage_reviewed=false;assert.equal(audit(p).status,'FAIL')});
+test('bloquea inventar evidencia en la ruta',()=>{let p=proposal();p.candidates[2].footage_ids=['clip-que-no-existe'];assert.equal(audit(p).status,'FAIL')});
+test('comparación con campañas reales aprobadas',()=>{let p=proposal();let h={executions:[{client:'el-tilichero',campaign:'previo-earbuds',approved:true,fingerprint:g('poesia')}]};assert.equal(audit(p,h).status,'FAIL');p.override_reason='Se pide una serie consistente con test A/B y revisión humana documentada';assert.equal(audit(p,h).status,'NEEDS_REVIEW')});
+test('no compara otros clientes ni propuestas no aprobadas',()=>{let p=proposal(),h={executions:[{client:'otra-empresa',campaign:'previa',approved:true,fingerprint:g('poesia')},{client:'el-tilichero',campaign:'sin-render',approved:false,fingerprint:g('poesia')}]};assert.equal(audit(p,h).status,'PASS')});
+test('puntuación baja necesita revisión; no garantiza arte',()=>{let p=proposal();p.candidates[0].scores={footage_fit:1,brand_fit:1,feasibility:1,clarity:1};assert.equal(audit(p).status,'NEEDS_REVIEW')});
+test('distancia ignora mayúsculas/espacios y compara ocho decisiones',()=>{assert.equal(distance(g('poesia'),g('documental')),8);let a=g('poesia'),b={...a,hook:a.hook.toUpperCase()+'   '};assert.equal(distance(a,b),0)});
+test('historial malformado falla cerrado',()=>assert.equal(audit(proposal(),{executions:null}).status,'FAIL'));
