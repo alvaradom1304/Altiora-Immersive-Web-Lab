@@ -10,3 +10,6 @@ Consultar `references/discovery-manifest.json` para reconciliar fuentes, agentes
 
 ## Videos de clientes
 Para montaje, motion graphics y exportación final, leer `docs/video/VIDEO_WORKSPACES.md`. Crear la campaña local con `npm run video:project -- init --client el-tilichero --campaign earbuds` y seguir `ai-video-direction` y su protocolo de postproducción. Registrar video final solo después de QA.
+
+## Regla universal de creación
+Toda petición de una nueva skill, agente o superagente se interpreta para **Claude Code, Antigravity y Codex a la vez**, sin pedir esa aclaración. Leer `docs/operations/UNIVERSAL_CAPABILITIES.md` y `AGENTS.md`; editar solamente fuentes y ejecutar `npm run capability:sync` en el mismo cambio. La regla no implica instalación fuera del repositorio ni ejecución de subagentes no comprobada.
