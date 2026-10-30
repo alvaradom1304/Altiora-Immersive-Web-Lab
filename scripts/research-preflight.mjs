@@ -47,9 +47,20 @@ export function preflight({client,campaign,exec=spawnSync,stat=lstatSync,root=RO
 }
 async function main(){
  const a=process.argv.slice(2);
- if(a.some(x=>!['--client','--campaign','--json'].includes(x)&&!a.includes('--client')&&!a.includes('--campaign')))throw Error('Argumento no reconocido');
- const get=k=>{let i=a.indexOf(k);return i<0?undefined:a[i+1]};
- const client=get('--client'),campaign=get('--campaign');
+ let client,campaign;
+ for(let i=0;i<a.length;i++){
+  const flag=a[i];
+  if(flag==='--json')continue;
+  if(!['--client','--campaign'].includes(flag))throw Error('Argumento no reconocido: '+flag);
+  if(!a[i+1]||a[i+1].startsWith('--'))throw Error('Valor faltante: '+flag);
+  if(flag==='--client'){
+   if(client!==undefined)throw Error('Cliente duplicado');
+   client=a[++i];
+  }else{
+   if(campaign!==undefined)throw Error('Campaña duplicada');
+   campaign=a[++i];
+  }
+ }
  const report=preflight({client,campaign});
  console.log(JSON.stringify(report,null,2));
  if(report.media_tools!=='READY'||['MISSING','UNSAFE','ERROR'].includes(report.workspace))process.exitCode=2;
