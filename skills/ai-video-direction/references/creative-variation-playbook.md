@@ -9,7 +9,7 @@ Responsable: `creative-ads-director`. Invocar este protocolo **antes del storybo
 
 ### Puerta 1: lectura de la esencia, sin editar todavía
 1. Leer `00_BRIEF.md`, `02_REFERENCIAS/REFERENCIAS.md`, material autorizado de `01_CRUDOS` y campañas previas del **mismo cliente**. Si hay referencias visuales, describir qué mecanismo inspiran, sin copiarlas.
-2. Visionar material real y registrar `file + in/out + observación verificable` en `04_EDITABLES/footage-notes.md`. `ffprobe` aporta datos técnicos, **no interpreta la escena**. No inventar acciones ni diálogos si no se pudieron ver/escuchar.
+2. Visionar material real (reproducir cuando el entorno lo permita; si Claude Code no soporta MOV/MP4 directamente, extraer contactos de fotogramas con FFmpeg y segmentos de audio para revisar) y registrar `file + in/out + observación verificable` en `04_EDITABLES/footage-notes.md`. `ffprobe` aporta datos técnicos, **no interpreta la escena**. No inventar acciones ni diálogos si no se pudieron ver/escuchar.
 3. Construir una **huella editorial de esencia**: emoción dominante; energía real; momentos irrepetibles; tensión/conflicto; gestos y sonidos aprovechables; textura de imagen; puntos débiles; claridad del producto; marca, audiencia y objetivo. Indicar evidencia y desconocidos.
 4. Anotar restricciones de identidad que se **mantienen constantes**: voz, autenticidad del producto, CTA, derechos, claims comprobables. La personalidad de marca no debe cambiar porque varía el montaje.
 
