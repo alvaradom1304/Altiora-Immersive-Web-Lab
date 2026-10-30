@@ -26,7 +26,7 @@ Logo, colores y fuentes autorizados: PENDIENTE
 Personas participantes y permisos: PENDIENTE
 Música, sonidos y licencias: PENDIENTE
 
-Entregables: montaje humor (si hay escenas), montaje premium, originales inmutables, proyecto editable, MP4 verificados y QA.
+Entregables: analizar esencia del metraje, proponer 3 rutas editoriales distintas, auditar variedad, elegir una o más según brief, originales inmutables, proyectos editables, MP4 verificados y QA.
 No publicar sin aprobación ni atribuir prestaciones al producto sin pruebas.
 `;
 export async function initCampaign(base,client,campaign){
