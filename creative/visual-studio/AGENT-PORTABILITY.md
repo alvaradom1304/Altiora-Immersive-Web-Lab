@@ -15,7 +15,7 @@ El [checkpoint de continuidad](../../continuity/checkpoint.json) contiene lo ter
 5. **Playbook** correspondiente de [la biblioteca operativa](playbooks/README.md).
 6. [Workflow multi-IA](../../docs/workflows/visual-production-multi-ai.md) — gates y QA.
 
-## Vigilancia continua de las 56 referencias
+## Vigilancia continua de las 70 referencias
 
 El [Visual Tech Scout](agents/visual-tech-scout.md) prepara y revisa señales de cambio desde el [watcher semanal](../../continuity/visual-watch/README.md). El reporte automatizado propone PRs para revisión; cada IA usa las mismas evidencias para decidir qué evaluar y mejorar. `npm run visual:preflight` revela herramientas visibles en la máquina actual, no conexiones remotas universales.
 
@@ -73,3 +73,6 @@ Estados permitidos: `DESIGNED`, `IMPLEMENTED`, `RENDERED`, `TESTED`, `BLOCKED`, 
 - `NOASSERTION` en licencia de GitHub significa **licencia por verificar**, no dominio público ni permiso comercial.
 - En materiales de bebés comprobar seguridad, edad/uso, instrucciones y requisitos legales antes de publicidad.
 - En marketing premium priorizar la experiencia y el negocio; evitar efectos costosos sin objetivo comprobable.
+
+## Skills avanzadas V3 compartidas
+Para CGI y postproducción de color abrir [advanced-cgi-color.md](playbooks/advanced-cgi-color.md). Para ilustración/motion artístico abrir [illustration-particles.md](playbooks/illustration-particles.md). Para novedades de versiones y pruebas de adopción abrir [SCOUT-V3.md](SCOUT-V3.md). Los tres documentos son portables a Claude Code, Gemini/Antigravity y ChatGPT/Codex cuando disponen de acceso al repositorio.

@@ -24,7 +24,7 @@ Mantener la calidad y actualidad de motion graphics, Blender, postproducción Ad
 
 ## Cadencia y entregables
 
-- **Semanal:** GitHub Action revisa metadatos de **las 56 referencias visuales curadas** y genera PR de observaciones si hay cambios materiales (requiere permisos de Actions/PR habilitados). El primer run genera línea base.
+- **Semanal:** GitHub Action revisa metadatos de **las 70 referencias visuales curadas** y genera PR de observaciones si hay cambios materiales (requiere permisos de Actions/PR habilitados). El primer run genera línea base.
 - **En cada nuevo proyecto:** leer el último reporte; seleccionar máximo 1–3 tecnologías candidatas, verificar sus requisitos y ejecutar prueba específica.
 - **Después de cada release relevante:** cuando una IA retome tareas y exista reporte, clasificar el cambio, actualizar matriz/playbook si hay valor demostrado.
 - **Mensualmente con un operador autorizado:** decidir qué propuestas adoptar, deprecar o dejar en HOLD.
@@ -53,3 +53,6 @@ Handoff JSON mínimo:
 Este agente es un **rol documental portable**. Para ejecutarlo mediante un producto de IA hay que darle acceso a GitHub y al contexto; no existe ejecución autónoma garantizada por escribir este archivo.
 
 [Guía de vigilancia continua](../../../continuity/visual-watch/README.md).
+
+## Monitor de versiones V3
+Además de existencia/licencia, consultar los campos `release_tag` y `release_published_at` de las entradas P0/P1 del snapshot. El primer enriquecimiento es una línea base, **no** una actualización. Una release nueva requiere análisis de cambios de API, licencia, dependencia, seguridad, rendimiento y piloto. [Protocolo V3](../SCOUT-V3.md).

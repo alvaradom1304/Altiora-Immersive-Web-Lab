@@ -19,3 +19,6 @@ Para decidir nuevas librerías o actualizar pipelines consultar el [rol de vigil
 
 ## Punto de entrada audiovisual automático
 Cuando haya petición visual activar el subagente `audiovisual-experience-director` antes de repartir el trabajo. Leer su [contrato de decisiones](creative/visual-studio/agents/audiovisual-experience-director.md). Este director escoge Blender/Adobe/Remotion/Three u otras opciones sin hacer elegir tecnología al usuario; delega a creative-director, visual-producer, motion-designer, web-engineer y QA. `/chat-audiovisual-experience-director` abre su bandeja; las ejecuciones dependen del acceso real al repositorio y herramientas.
+
+## Visual Studio V3 y skills actualizables
+El Director Audiovisual consulta [SCOUT-V3](creative/visual-studio/SCOUT-V3.md) para nuevas versiones y activa por intención [CGI-color](creative/visual-studio/playbooks/advanced-cgi-color.md) o [2D-motion-artístico](creative/visual-studio/playbooks/illustration-particles.md). Las nuevas herramientas son referencias, no dependencias ya instaladas.

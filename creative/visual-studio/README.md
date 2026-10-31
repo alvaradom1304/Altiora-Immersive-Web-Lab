@@ -4,7 +4,7 @@
 
 ## Expansión profesional de referencias (V2)
 
-El [catálogo visual](../../references/visual-libraries-2026.json) contiene **56 repositorios evaluables**, entre ellos 33 nuevas referencias de OpenColorIO, MaterialX, OpenUSD, OpenVDB, FFmpeg, Blender, shaders y motores web. [Matriz de producción](PRODUCTION-MATRIX.md), [protocolo para todas las IAs](AGENT-PORTABILITY.md) y [playbooks de ejecución](playbooks/README.md). Son **referencias documentales, no 56 instalaciones**.
+El [catálogo visual](../../references/visual-libraries-2026.json) contiene **70 repositorios evaluables**, entre ellos 33 nuevas referencias de OpenColorIO, MaterialX, OpenUSD, OpenVDB, FFmpeg, Blender, shaders y motores web. [Matriz de producción](PRODUCTION-MATRIX.md), [protocolo para todas las IAs](AGENT-PORTABILITY.md) y [playbooks de ejecución](playbooks/README.md). Son **referencias documentales, no 70 instalaciones**.
 
 ## Dirección audiovisual de Altiora
 
@@ -63,3 +63,6 @@ Todos los agentes deben leer [el router común](ROUTER.md) y aplicar [el workflo
 ## Definition of Done
 
 Un trabajo se considera terminado solo con: brief aprobado, storyboard/beat sheet o estados UX, archivos fuentes, export finales o artefactos ejecutables, inventario de licencias/assets, pruebas según destino, fallback, presupuesto y checklist de QA con resultados reales (PASS / FAIL / NOT_RUN). Ninguna referencia externa es evidencia de un render propio.
+
+## Evolución Visual Studio V3
+[Guía de releases y mejora continua](SCOUT-V3.md) con referencias de OpenEXR, OIDN, shading y animación dibujada; [CGI avanzado](playbooks/advanced-cgi-color.md) y [motion ilustrado](playbooks/illustration-particles.md). La vigilancia semanal ahora diferencia actividad rutinaria y nueva versión estable, sin actualizaciones automáticas de producción.

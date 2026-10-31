@@ -6,9 +6,9 @@ La base de investigación reúne **25 repositorios** con una función, una decis
 
 ## Altiora Visual Studio — Motion, Blender, Adobe y producción multi-IA
 
-Nuevo: [sistema visual compartido](creative/visual-studio/README.md), [router para Claude, Gemini/Antigravity y ChatGPT/Codex](creative/visual-studio/ROUTER.md), [56 referencias visuales evaluables](references/visual-libraries-2026.json) y [workflow de producción](docs/workflows/visual-production-multi-ai.md). Son extensiones documentales; no se han instalado programas, addons ni servidores MCP.
+Nuevo: [sistema visual compartido](creative/visual-studio/README.md), [router para Claude, Gemini/Antigravity y ChatGPT/Codex](creative/visual-studio/ROUTER.md), [70 referencias visuales evaluables](references/visual-libraries-2026.json) y [workflow de producción](docs/workflows/visual-production-multi-ai.md). Son extensiones documentales; no se han instalado programas, addons ni servidores MCP.
 
-La expansión avanzada agrega [matriz técnica](creative/visual-studio/PRODUCTION-MATRIX.md), [playbooks portables](creative/visual-studio/playbooks/README.md) y [protocolo común para Claude, Gemini/Antigravity y ChatGPT/Codex](creative/visual-studio/AGENT-PORTABILITY.md), sin ejecutar 56 paquetes ni instalar aplicaciones Adobe.
+La expansión avanzada agrega [matriz técnica](creative/visual-studio/PRODUCTION-MATRIX.md), [playbooks portables](creative/visual-studio/playbooks/README.md) y [protocolo común para Claude, Gemini/Antigravity y ChatGPT/Codex](creative/visual-studio/AGENT-PORTABILITY.md), sin instalar automáticamente las 70 referencias ni instalar aplicaciones Adobe.
 
 ## Experimento audiovisual ejecutable (código)
 
@@ -20,7 +20,7 @@ El [Director de Experiencia Audiovisual](creative/visual-studio/agents/audiovisu
 
 ## Mejora continua del stack visual
 
-[Visual Tech Scout](creative/visual-studio/agents/visual-tech-scout.md) + [vigilancia semanal de los 56 repositorios](continuity/visual-watch/README.md) + `npm run visual:preflight`: detecta cambios de actividad, licencia y estado, crea informes y puede proponer PRs con revisión humana. Es una rutina automatizada de GitHub Actions, **no** instalación ilimitada de paquetes ni una IA conectada permanentemente.
+[Visual Tech Scout](creative/visual-studio/agents/visual-tech-scout.md) + [vigilancia semanal de los 70 repositorios](continuity/visual-watch/README.md) + `npm run visual:preflight`: detecta cambios de actividad, licencia y estado, crea informes y puede proponer PRs con revisión humana. Es una rutina automatizada de GitHub Actions, **no** instalación ilimitada de paquetes ni una IA conectada permanentemente.
 
 ## Recuperar trabajo sin repetir «continúa»
 
@@ -89,3 +89,6 @@ Las skills mejoran por ciclos PDCA medidos: `npm run skills:audit` puntúa cada 
 Las estrellas y fechas son una fotografía de investigación, no una garantía de calidad. La licencia de código no acredita automáticamente modelos, imágenes, sonidos o fuentes tipográficas. Registrar la procedencia de cada recurso utilizado y conservar avisos cuando se reutilice código.
 
 GSAP usa su licencia propia Standard No Charge. El catálogo señala una discrepancia MIT/ISC en r3f-scroll-rig; ese candidato queda en espera.
+
+## Visual Studio V3
+[70 librerías curadas](references/visual-libraries-2026.json), [vigilancia de versiones estables](creative/visual-studio/SCOUT-V3.md), [CGI/color avanzado](creative/visual-studio/playbooks/advanced-cgi-color.md) y [animación 2D generativa](creative/visual-studio/playbooks/illustration-particles.md). Todas las IAs consumen el mismo Director Audiovisual y router; ninguna instala automáticamente todo el catálogo.

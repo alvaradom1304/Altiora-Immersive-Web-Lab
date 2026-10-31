@@ -75,3 +75,8 @@ El [Visual Tech Scout](visual-tech-scout.md) ejecuta observación de metadatos (
 ## Referencias del rol
 
 [Visual Studio](../README.md) · [Matriz](../PRODUCTION-MATRIX.md) · [Router](../ROUTER.md) · [Tech Scout](visual-tech-scout.md) · [Checkpoint](../../../continuity/checkpoint.json) · [Playbooks](../playbooks/README.md).
+
+## Capa de especialidades V3 (selección automática)
+- Para fidelidad CGI, color, pases EXR y denoising: [playbook profesional](../playbooks/advanced-cgi-color.md).
+- Para motion 2D artístico, pintura, frames, partículas: [playbook ilustración](../playbooks/illustration-particles.md).
+- Para una versión nueva de un paquete: [Visual Tech Scout V3](../SCOUT-V3.md) registra `release_tag` estable, evalúa mejoras y descarta ruido de commits. El Director elige si vale la pena un experimento; no exigir al usuario saber de librerías.
