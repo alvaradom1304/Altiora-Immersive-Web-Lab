@@ -13,6 +13,8 @@ node scripts/capability-doctor.mjs --json
 
 El segundo comando emite JSON puro por stdout. Para conservar evidencia, el operador puede redirigirlo a `out/capability.local.json` tras crear `out/`. Ese directorio se ignora en Git. El informe no lee configuraciones personales ni imprime comandos MCP, entornos o credenciales de configuración. Solo consulta versiones de ejecutables y archivos concretos del proyecto. No inicia servidores MCP, clientes, renders ni servicios.
 
+Blender se busca también en instalaciones estándar fuera de PATH; ver [evidencia y límites locales](BLENDER-LOCAL.md). Su ruta ejecutable puede aparecer en el JSON: conservar ese informe localmente si contiene ubicaciones personales. La detección no habilita conexiones de clientes.
+
 | Resultado | Significado | Siguiente acción |
 |---|---|---|
 | `AVAILABLE` | Un ejecutable respondió a la consulta de versión | Probar el trabajo concreto con permisos vigentes |

@@ -1,6 +1,57 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import {probeExecutable, createReport, formatReport} from "./visual-preflight.mjs";
+import {probeExecutable, createReport, formatReport, blenderCandidates, detectBlender} from "./visual-preflight.mjs";
+
+test('Windows Blender discovery uses installed versions in numeric order without shell', () => {
+  const paths = blenderCandidates({platform: 'win32', env: {ProgramFiles: 'C:\\Program Files'},
+    list: () => ['Blender 5.9', 'Blender 5.10', 'Blender 5.2', 'other', 'Blender 5.99 beta']});
+  assert.ok(paths[0].includes('Blender 5.10'));
+  assert.ok(paths[1].includes('Blender 5.9'));
+  assert.equal(paths.at(-1), 'blender');
+  assert.ok(paths.every(p => !p.includes('beta') && !p.includes('other')));
+});
+
+test('installed Blender is detected after PATH failure; returned path is local evidence only', () => {
+  const calls = [];
+  const runner = (exe, args, options) => {
+    calls.push(exe);
+    assert.deepEqual(args, ['--version']);
+    assert.equal(options.shell, false);
+    return exe === 'blender' ? {error: {code: 'ENOENT'}} : {status: 0, stdout: 'Blender 5.2.2 LTS\n'};
+  };
+  const report = detectBlender(runner, ['C:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe', 'blender']);
+  assert.equal(report.status, 'AVAILABLE');
+  assert.equal(report.version, 'Blender 5.2.2 LTS');
+  assert.ok(report.executable.includes('Blender 5.2'));
+  assert.equal(report.discovery, 'INSTALLATION_PATH');
+  assert.deepEqual(calls, ['blender', 'C:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe']);
+});
+
+test('an explicit Blender override never silently falls back to another version', () => {
+  for (const value of ['relative/blender.exe', '\\\\server\\share\\blender.exe', 'C:\\path:alias\\blender.exe', 'C:\\tool\\other.exe']) {
+    assert.throws(() => blenderCandidates({platform: 'win32', env: {ALTIORA_BLENDER: value}}));
+  }
+  const candidates = blenderCandidates({platform: 'win32', env: {ALTIORA_BLENDER: 'C:\\missing\\blender.exe'}, list: () => {throw Error('must not scan');}});
+  assert.deepEqual(candidates, ['C:\\missing\\blender.exe']);
+  const calls = [];
+  const report = detectBlender(exe => {calls.push(exe); return {error: {code: 'ENOENT'}};}, candidates);
+  assert.equal(report.status, 'NOT_FOUND');
+  assert.deepEqual(calls, candidates);
+});
+
+test('a working PATH Blender remains authoritative without launching every installed version', () => {
+  const calls = [];
+  const result = detectBlender(exe => {calls.push(exe); return {status: 0, stdout: 'Blender 5.2\n'};}, ['C:\\other\\blender.exe', 'blender']);
+  assert.equal(result.discovery, 'PATH');
+  assert.deepEqual(calls, ['blender']);
+});
+
+test('failed Blender probes remain errors, discovery does not invoke renders', () => {
+  const result = detectBlender(() => ({error: {code: 'ETIMEDOUT'}}), ['blender']);
+  assert.equal(result.status, 'ERROR');
+  assert.equal(result.executable, null);
+  assert.deepEqual(blenderCandidates({platform: 'linux', env: {}, list: () => {throw Error('must not scan');}}), ['blender']);
+});
 
 test("executable found is not mistaken for connected plugin", () => {
   const stub = () => ({status: 0, stdout: "Blender 4.3.1\nBuild: ..."});
