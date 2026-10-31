@@ -13,3 +13,6 @@ Si la intención del usuario contiene **motion graphics, After Effects, Premiere
 
 ## Reanudación sin reconstruir el chat
 Antes de continuar una tarea de Altiora, leer [checkpoint](continuity/checkpoint.json) y [recovery runbook](continuity/README.md), ejecutar `npm run resume` si hay checkout y verificar PRs/CI. Si el usuario dice «sigue», priorizar siguiente paso desbloqueado; no duplicar milestones completados ni pedir de nuevo el brief existente.
+
+## Visual Tech Scout — actualización periódica
+Para decidir nuevas librerías o actualizar pipelines consultar el [rol de vigilancia](creative/visual-studio/agents/visual-tech-scout.md), el [reporte semanal de GitHub Actions](continuity/visual-watch/README.md) y el [preflight real](scripts/visual-preflight.mjs). Priorizar cambios de licencia, seguridad y P0; proponer PR/piloto y registrar QA, nunca auto-instalar o fusionar sin revisión. El workflow es el monitor programado; el subagente Claude solo interviene cuando se ejecuta/autoriza.
