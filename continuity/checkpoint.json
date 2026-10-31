@@ -49,6 +49,21 @@
           "claim": "33 referencias suplementarias, matriz y playbooks multi-IA"
         }
       ]
+    },
+    {
+      "id": "VIS-OPS-01",
+      "name": "Director audiovisual formal, monitor semanal de 56 librerías y primera línea base",
+      "result": "MERGED",
+      "evidence": [
+        {
+          "url": "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/pull/25",
+          "claim": "Director formal con instrucciones Claude, Gemini y ChatGPT/Codex, preflight y monitor GitHub Actions"
+        },
+        {
+          "url": "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/pull/26",
+          "claim": "Primera línea base de 56 repositorios verificada por GitHub Actions y fusionada"
+        }
+      ]
     }
   ],
   "current_milestone": {
@@ -66,8 +81,8 @@
       },
       {
         "id": "VIS-05-B",
-        "action": "Auditar y registrar accesos reales a Blender, Adobe, Remotion y MCP antes de conectar",
-        "status": "PENDING",
+        "action": "Ejecutar preflight en la máquina que produce, comprobar Blender/Adobe/Remotion y validar permisos MCP; herramienta de inspección implementada pero conexión local aún no certificada",
+        "status": "IN_PROGRESS",
         "blocker": null,
         "deliverable": "matriz de versiones/permisos/accesos, licencias y riesgos",
         "validation": "Prueba reproducible por aplicación, no solo documentación"
@@ -131,6 +146,19 @@
       "name": "MCP externos para Adobe o Blender",
       "status": "NOT_CONNECTED",
       "evidence": []
+    },
+    {
+      "name": "Visual Tech Scout revisión de metadatos GitHub de 56 repositorios",
+      "status": "DOCUMENTED",
+      "evidence": [
+        "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/actions/runs/41160273108",
+        "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/pull/26"
+      ]
+    },
+    {
+      "name": "GitHub Actions apertura autónoma de pull requests",
+      "status": "NOT_CONNECTED",
+      "evidence": []
     }
   ],
   "context_files": [
@@ -149,7 +177,8 @@
     "Este snapshot no consulta GitHub en tiempo real; cotejar siempre PR, checks y archivos antes de declarar completado.",
     "Las referencias a repositorios no instalan librerías ni conceden permisos a las IAs.",
     "Un error de interfaz 'This response couldn't load' es externo a este repositorio.",
-    "El agente no sigue ejecutándose automáticamente cuando se cierra o interrumpe el chat."
+    "El agente no sigue ejecutándose automáticamente cuando se cierra o interrumpe el chat.",
+    "La primera vigilancia completó escaneo y artefacto, pero GitHub bloqueó crear PR automáticamente; habilitar permiso Actions→General→Allow GitHub Actions to create and approve pull requests. Sin él quedan rama y artefacto, no PR automática."
   ],
   "recovery_instruction": "Leer checkpoint, consultar el commit/PR más reciente y los checks, reclamar tarea, ejecutar y escribir evidencia antes de terminar. No pedir al usuario que repita el briefing salvo necesidad material."
 }
