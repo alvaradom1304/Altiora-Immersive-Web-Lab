@@ -25,3 +25,6 @@ Leer [guía del puente AE](creative/visual-studio/after-effects/README.md) para 
 
 ## MCP local After Effects para Gemini/Antigravity
 Consultar [registro multi-cliente](creative/visual-studio/after-effects/MCP-SETUP.md) y el archivo de proyecto `.agents/mcp_config.json` generado desde la laptop. Para Gemini CLI usar `gemini mcp list`; para Antigravity revisar su panel MCP. Los renders requieren autorización expresa por proyecto.
+
+## After Effects en PC — Gemini / Antigravity
+El servidor local `altiora-after-effects` se prepara mediante `npm run after-effects:setup -- --apply` desde el repositorio de la computadora. Gemini CLI usa `.gemini/settings.json`; Antigravity IDE/CLI usa `.agents/mcp_config.json` generado localmente. Revisar [guía MCP](creative/visual-studio/after-effects/MCP-SETUP.md) y confirmar herramientas desde el cliente antes de declarar acceso. El Director determina cuándo usar AE; no conectar apps desconocidas ni ejecutar renders sin autorización del PC.
