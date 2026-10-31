@@ -1,0 +1,38 @@
+name: Tilicheros motion pilot
+
+on:
+  pull_request:
+    paths:
+      - 'experiments/tilicheros-motion-lab/**'
+      - '.github/workflows/tilicheros-motion-pilot.yml'
+  push:
+    paths:
+      - 'experiments/tilicheros-motion-lab/**'
+      - '.github/workflows/tilicheros-motion-pilot.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: tilicheros-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  contract-and-types:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    defaults:
+      run:
+        working-directory: experiments/tilicheros-motion-lab
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node scripts/check-contract.mjs
+      - run: python3 -m py_compile blender/generate-concept.py
+      - name: Install dependencies for static TypeScript validation
+        run: npm install --no-audit --no-fund
+      - run: npm run typecheck
+      # Rendering requires Chromium/FFmpeg + approved assets and remains a separate gate.
