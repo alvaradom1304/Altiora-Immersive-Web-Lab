@@ -76,3 +76,12 @@ Estados permitidos: `DESIGNED`, `IMPLEMENTED`, `RENDERED`, `TESTED`, `BLOCKED`, 
 
 ## Skills avanzadas V3 compartidas
 Para CGI y postproducción de color abrir [advanced-cgi-color.md](playbooks/advanced-cgi-color.md). Para ilustración/motion artístico abrir [illustration-particles.md](playbooks/illustration-particles.md). Para novedades de versiones y pruebas de adopción abrir [SCOUT-V3.md](SCOUT-V3.md). Los tres documentos son portables a Claude Code, Gemini/Antigravity y ChatGPT/Codex cuando disponen de acceso al repositorio.
+
+## Acceso Adobe After Effects
+Hay un [puente de render local](after-effects/README.md) y una composición .jsx original para ejecutar manualmente con autorización. El comando `npm run adobe:check` determina visibilidad del ejecutable `aerender` **en la máquina de la IA**, no en la laptop del usuario. El conector Adobe de ChatGPT tiene funciones propias y no se debe presentar como control del proyecto .aep sin validación explícita.
+
+## After Effects entre asistentes
+La presencia de Adobe conectado en ChatGPT permite operaciones de medios compatibles, **no equivale a controlar .aep**. Claude Code y Gemini pueden utilizar el [puente aerender](../../scripts/after-effects-bridge.mjs) si tienen acceso autorizado al escritorio, un .aep existente y licencia. Los permisos son distintos para cada IA/ejecutor. Confirmar `npm run after-effects:check` en ese entorno antes de planificar un render nativo.
+
+## Acceso local a After Effects para todos los ejecutores
+Existe un servidor MCP STDIO compartido con herramientas de preflight, plan y render autorizado. Cada IA que realmente corra en la PC debe ejecutar [setup de proyecto](after-effects/MCP-SETUP.md) y comprobar que `altiora-after-effects` esté conectado; Claude, Gemini, Antigravity y Codex no comparten permisos automáticamente ni heredan la sesión Adobe de ChatGPT. Se bloquean por defecto los renders; el Director Audiovisual decide, QA verifica, y el propietario autoriza proyecto exacto.

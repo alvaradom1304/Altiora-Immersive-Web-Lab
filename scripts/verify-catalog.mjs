@@ -42,12 +42,23 @@ for (const entry of visual.repos) {
   assert.ok(['P0', 'P1', 'P2'].includes(entry.priority));
   for (const key of ['category', 'use', 'license_note', 'risk']) assert.ok(entry[key]?.length);
   assert.equal(entry.integrated, false, 'Referencia no puede declararse instalada: ' + entry.id);
+  if (entry.license_review) {
+    assert.ok(entry.license_review.status.length > 8);
+    assert.match(entry.license_review.reviewed_on, /^\d{4}-\d{2}-\d{2}$/);
+    assert.equal(new URL(entry.license_review.source_url).host, 'github.com');
+  }
   if (entry.verified_on !== undefined) {
     assert.match(entry.verified_on, /^\d{4}-\d{2}-\d{2}$/);
     assert.ok(entry.verified_scope?.includes('metadata'), 'Falta alcance de verificación: ' + entry.id);
     assert.notEqual(entry.decision, 'tool_reference', 'Nuevos proyectos se registran solo como candidatos: ' + entry.id);
   }
 }
+
+const lygia = visual.repos.find(x => x.id === 'patriciogonzalezvivo/lygia');
+assert.equal(lygia?.decision, 'hold', 'Lygia comercial debe permanecer en HOLD hasta obtener autorización legal verificable');
+assert.match(lygia.license_note, /Prosperity Public License/);
+const usd = visual.repos.find(x => x.id === 'PixarAnimationStudios/OpenUSD');
+assert.match(usd.license_note, /Tomorrow Open Source Technology License/);
 
 const skillSources = JSON.parse(await readFile(resolve(root, 'references/skill-sources.json'), 'utf8'));
 let externalSkills = 0;

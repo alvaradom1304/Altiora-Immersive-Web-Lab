@@ -21,3 +21,19 @@
 **Gate de seguridad:** NO ejecutar un servidor MCP Adobe no auditado: acceso a archivos, red, permisos de edición y protección de proyecto. Si app no instalada, entregar plan/instrucciones, no afirmar render.
 
 [Back to playbooks](README.md).
+
+## After Effects — puente local disponible
+[Instrucciones y límites del puente aerender](../after-effects/README.md) y [composición ExtendScript original](../after-effects/altiora-concept-comp.jsx). Antes de delegar a AE: `npm run adobe:check` en la computadora ejecutora, permiso de cuenta/licencia y fuente .aep revisada. No declarar que el conector Adobe para ChatGPT controla After Effects si no se comprobó esa función. Para efectos y componer a nivel nativo, optar por AE cuando sí está instalado; en caso contrario, el Director selecciona alternativa con Remotion, Blender o FFmpeg.
+
+## After Effects: dos canales de acceso verificables
+
+**Canal A — Adobe conectado en ChatGPT:** el conector Adobe está disponible para edición y composición de videos mediante operaciones de media/video y Creative Cloud, pero **no expone actualmente una operación directa para abrir o editar un proyecto nativo .aep o controlar el escritorio de After Effects**. La capacidad debe reevaluarse si aparecen nuevas herramientas. No prometer acceso a AE por el solo hecho de contar con Adobe.
+
+**Canal B — After Effects instalado localmente:** puente [`scripts/after-effects-bridge.mjs`](../../../scripts/after-effects-bridge.mjs), usado desde un checkout autorizado. Ejecutar `npm run after-effects:check` para descubrir aerender. Para diseñar una composición de ejemplo original, abrir la app y ejecutar [`after-effects/altiora-concept-comp.jsx`](../after-effects/altiora-concept-comp.jsx) con File → Scripts → Run Script File. Guardar el .aep en este workspace, configurar Render Queue/Output Module, y ejecutar:
+
+```bash
+node scripts/after-effects-bridge.mjs --plan approved/project.aep "NOMBRE_COMPOSICION" out/comercial.mov
+node scripts/after-effects-bridge.mjs --render approved/project.aep "NOMBRE_COMPOSICION" out/comercial.mov
+```
+
+`--plan` no ejecuta nada; `--render` requiere solicitud de ejecución explícita, licencia válida y un proyecto existente. El informe resultante no equivale a QA de códec ni aprobación comercial. No ejecutar scripts de terceros sin revisión. Nunca conceder a plugins/MCP acceso ilimitado a proyectos de clientes.

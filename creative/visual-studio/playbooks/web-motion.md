@@ -8,7 +8,7 @@
 
 1. UX primero: contenido semántico, scroll, legibilidad y compra funcionan sin WebGL ni animación.
 2. Elegir un motor 3D (Three/R3F **o** Babylon **o** PlayCanvas). No migrar por popularidad; validar compatibilidad con el stack cliente.
-3. Para efectos, evaluar shader de Lygia/GLSL/Slang solo con permiso de licencia y benchmark GPU. Preferir materiales simples cuando resuelvan el resultado.
+3. Para efectos, NO utilizar Lygia en proyectos comerciales sin autorización: su licencia Prosperity restringe el uso comercial; crear shaders propios o evaluar alternativas con licencia apta. Para GLSL/Slang verificar licencias y benchmark GPU. Preferir materiales simples cuando resuelvan el resultado.
 4. Animación: un reloj; escoger GSAP **o** Motion **o** Anime.js/React Spring según necesidades. No sumarlos en un mismo elemento sin delimitación.
 5. SVG: CSS básico; Rive para interactividad de estados; Lottie/dotLottie para playback; SVG.js cuando se necesite editar formas; evitar duplicados.
 6. Web 3D: GLB validado, optimizado, texture atlases, mipmaps, KTX según destino; comprobar límites de móviles y fallback de imagen.

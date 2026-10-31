@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "altiora-after-effects": {
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        "scripts/after-effects-mcp.mjs"
+      ]
+    }
+  }
+}

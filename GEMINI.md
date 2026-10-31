@@ -19,3 +19,12 @@ Para cualquier intención visual, actuar primero como [Director de Experiencia A
 
 ## Visual Studio V3 y skills actualizables
 El Director Audiovisual consulta [SCOUT-V3](creative/visual-studio/SCOUT-V3.md) para nuevas versiones y selecciona por objetivo [CGI-color](creative/visual-studio/playbooks/advanced-cgi-color.md) o [2D-motion-artístico](creative/visual-studio/playbooks/illustration-particles.md). Las referencias externas no constituyen conexiones verificadas.
+
+## Adobe After Effects
+Leer [guía del puente AE](creative/visual-studio/after-effects/README.md) para comprobar `aerender`, preparar un `.aep` y ejecutar un render cuando el usuario lo permita. No dar por conectado Adobe por leer un archivo; elegir alternativa segura si falla el preflight.
+
+## MCP local After Effects para Gemini/Antigravity
+Consultar [registro multi-cliente](creative/visual-studio/after-effects/MCP-SETUP.md) y el archivo de proyecto `.agents/mcp_config.json` generado desde la laptop. Para Gemini CLI usar `gemini mcp list`; para Antigravity revisar su panel MCP. Los renders requieren autorización expresa por proyecto.
+
+## After Effects en PC — Gemini / Antigravity
+El servidor local `altiora-after-effects` se prepara mediante `npm run after-effects:setup -- --apply` desde el repositorio de la computadora. Gemini CLI usa `.gemini/settings.json`; Antigravity IDE/CLI usa `.agents/mcp_config.json` generado localmente. Revisar [guía MCP](creative/visual-studio/after-effects/MCP-SETUP.md) y confirmar herramientas desde el cliente antes de declarar acceso. El Director determina cuándo usar AE; no conectar apps desconocidas ni ejecutar renders sin autorización del PC.

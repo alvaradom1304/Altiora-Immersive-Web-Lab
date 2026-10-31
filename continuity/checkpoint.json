@@ -96,7 +96,7 @@
       },
       {
         "id": "VIS-05-B",
-        "action": "Ejecutar preflight en la máquina que produce, comprobar Blender/Adobe/Remotion y validar permisos MCP; herramienta de inspección implementada pero conexión local aún no certificada",
+        "action": "Local preflight de Blender/Adobe/Remotion: scripts visual:preflight y adobe:check implementados; ejecutar en la laptop sigue pendiente y no se afirma acceso remoto.",
         "status": "IN_PROGRESS",
         "blocker": null,
         "deliverable": "matriz de versiones/permisos/accesos, licencias y riesgos",
@@ -182,6 +182,18 @@
         "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/actions/runs/41161761071",
         "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/pull/29"
       ]
+    },
+    {
+      "name": "After Effects local JSX/aerender puente disponible en repositorio",
+      "status": "DOCUMENTED",
+      "evidence": [
+        "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/pull/32"
+      ]
+    },
+    {
+      "name": "Adobe After Effects de la laptop y licencia",
+      "status": "UNVERIFIED",
+      "evidence": []
     }
   ],
   "context_files": [
@@ -205,7 +217,8 @@
     "Un error de interfaz 'This response couldn't load' es externo a este repositorio.",
     "El agente no sigue ejecutándose automáticamente cuando se cierra o interrumpe el chat.",
     "La primera vigilancia completó escaneo y artefacto, pero GitHub bloqueó crear PR automáticamente; habilitar permiso Actions→General→Allow GitHub Actions to create and approve pull requests. Sin él quedan rama y artefacto, no PR automática.",
-    "Scout V3 revisa últimas releases estables de GitHub P0/P1; no detecta necesariamente versiones publicadas solo en npm, PyPI o Creative Cloud, ni CVEs sin revisar advisories."
+    "Scout V3 revisa últimas releases estables de GitHub P0/P1; no detecta necesariamente versiones publicadas solo en npm, PyPI o Creative Cloud, ni CVEs sin revisar advisories.",
+    "El puente aerender requiere After Effects instalado y autorizado en la laptop: el CI Linux no demuestra conexión ni acceso de un agente a la app del usuario."
   ],
   "recovery_instruction": "Leer checkpoint, consultar el commit/PR más reciente y los checks, reclamar tarea, ejecutar y escribir evidencia antes de terminar. No pedir al usuario que repita el briefing salvo necesidad material."
 }

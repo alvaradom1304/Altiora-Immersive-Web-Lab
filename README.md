@@ -92,3 +92,12 @@ GSAP usa su licencia propia Standard No Charge. El catálogo señala una discrep
 
 ## Visual Studio V3
 [70 librerías curadas](references/visual-libraries-2026.json), [vigilancia de versiones estables](creative/visual-studio/SCOUT-V3.md), [CGI/color avanzado](creative/visual-studio/playbooks/advanced-cgi-color.md) y [animación 2D generativa](creative/visual-studio/playbooks/illustration-particles.md). Todas las IAs consumen el mismo Director Audiovisual y router; ninguna instala automáticamente todo el catálogo.
+
+## Adobe After Effects · preparación de acceso
+[Puente local AE y tutorial de permisos](creative/visual-studio/after-effects/README.md) y `npm run adobe:check`: permiten a las IAs planear y controlar renders de proyectos propios con After Effects instalado y autorizado. **No hay conexión comprobada con la laptop del usuario**; el conector Adobe de ChatGPT requiere autorización independiente.
+
+## Acceso preparado a After Effects
+Se añadió un [puente local aerender](scripts/after-effects-bridge.mjs), [guion de composición original](creative/visual-studio/after-effects/altiora-concept-comp.jsx) y [protocolo de acceso](creative/visual-studio/playbooks/adobe-post.md). El conector Adobe permite flujos de medios/Creative Cloud en ChatGPT, pero no edición nativa de archivos .aep. La activación local sigue pendiente de comprobar aplicación, proyecto y permisos; `npm run after-effects:check` informa sin instalar.
+
+## Conexión de After Effects para Claude/Gemini/Antigravity/Codex
+[Guía de un solo paso local](creative/visual-studio/after-effects/MCP-SETUP.md): `npm run ae:clients:plan` y `npm run ae:clients:connect`. Las configuraciones son locales de cada cliente y requieren instalaciones reales; no concede control remoto desde ChatGPT web o móvil.

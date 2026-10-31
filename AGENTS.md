@@ -58,3 +58,12 @@ La documentación y los repositorios de referencia **no** equivalen a librerías
 ## Equipo multi-IA
 - Los 12 roles de team/registry.md tienen prompt en team/agents/<rol>.md (Claude Code los usa como subagentes en .claude/agents/). Se generan con npm run agents:build desde team/agents.json y team/roles/; no editarlos a mano.
 - Repartir y coordinar el trabajo en el chat del equipo (team/chat/README.md): firmar como <ia>/<rol>, reclamar la tarea antes de editar, tocar solo sus archivos y cerrar con evidencia.
+
+## Handoff de After Effects (verificación obligatoria)
+Para trabajos de AE abrir [guía de integración](creative/visual-studio/after-effects/README.md) y comprobar acceso real con `npm run adobe:check` en el dispositivo ejecutor. No anunciar AE conectado, render completado ni integrar un MCP no auditado por existir el script `scripts/after-effects-bridge.mjs`. El Director selecciona un fallback si no hay acceso autorizado.
+
+## MCP After Effects: acceso compartido, privilegio mínimo
+No crear servidores web públicos para controlar Adobe. Utilizar [MCP stdio local](creative/visual-studio/after-effects/MCP-SETUP.md), registrar en Claude/Gemini/Antigravity/Codex con autorización del dueño del PC. Por defecto solo preflight/plan; habilitar render solo con permiso por proyecto y validar la salida; ningún chat en la nube adquiere control local automáticamente.
+
+## After Effects local — acceso compartido de IAs
+El Director Audiovisual puede invocar el MCP local `altiora-after-effects` mediante `after_effects_preflight`, `after_effects_plan_render` o `after_effects_render` **solo si el cliente corre en la PC autorizada**. Las instrucciones y instalación segura para Claude Code, Gemini CLI/Antigravity y Codex están en [MCP-SETUP](creative/visual-studio/after-effects/MCP-SETUP.md). Una nueva conversación o app cloud **no recibe** control del escritorio por leer GitHub. El render requiere variables de autorización de la PC, proyecto exacto, archivo nuevo, QA y aprobación. Si el MCP no aparece conectado, usar alternativas remotas permitidas y marcar acceso `NOT_VERIFIED`.
