@@ -3,6 +3,9 @@
   "scope": "Authored Spanish retrieval fixtures, not live-user telemetry or runtime routing certification",
   "top_k": 5,
   "cases": [
+    {"id":"word-boundary-deseo","query":"Deseo qzxv","expected_any":[],"forbidden":["seo"],"constraint":"No interpretar SEO dentro de deseo; sin intención reconocible abstenerse"},
+    {"id":"word-boundary-micro","query":"Micro qzxv","expected_any":[],"forbidden":["cro"],"constraint":"No interpretar CRO dentro de micro; el buscador no decide intención empresarial"},
+    {"id":"word-boundary-api","query":"API","expected_any":["api-integration","api-security"],"forbidden":["capital-requirements","working-capital"],"constraint":"API es un término independiente; no confundirlo con capital ni conceder permisos"},
     {"id":"audio-cleanup","query":"Limpiar ruido de voz y revisar mezcla de audio para un anuncio","expected_any":["audio-production","audio-specialist"],"forbidden":["api-security"],"constraint":"Medición no acredita escucha ni autoriza instalar un DAW"},
     {"id":"audio-music","query":"Necesito música y masterización de sonido para video","expected_any":["audio-production","audio-specialist"],"forbidden":["brand-strategy"],"constraint":"Verificar derechos de música antes de uso comercial"},
     {"id":"economy","query":"Ahorrar tokens y contexto al distribuir tareas entre modelos","expected_any":["altiora-ai-economy"],"forbidden":["audio-production"],"constraint":"No afirmar ahorro medido ni cambiar modelos sin capacidad real"},

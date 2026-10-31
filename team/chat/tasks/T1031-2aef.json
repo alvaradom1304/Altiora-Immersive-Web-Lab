@@ -1,0 +1,35 @@
+{
+  "id": "T1031-2aef",
+  "title": "Corregir coincidencias parciales falsas del Bibliotecario",
+  "role": "web-engineer",
+  "ai": null,
+  "reviewer": null,
+  "depends": [],
+  "files": [
+    "skills/altiora-bibliotecario/scripts/library.py",
+    "skills/altiora-bibliotecario/scripts/test_library.py"
+  ],
+  "acceptance": "Deseo no es SEO, microempresa no es CRO y API no es capital; conservar casos validos",
+  "status": "hecha",
+  "owner": "codex/web-engineer",
+  "created": "2026-10-31T18:13:54Z",
+  "created_by": "codex/web-engineer",
+  "history": [
+    {
+      "at": "2026-10-31T18:13:54Z",
+      "by": "codex/web-engineer",
+      "status": "pendiente"
+    },
+    {
+      "at": "2026-10-31T18:15:27Z",
+      "by": "codex/web-engineer",
+      "status": "en_curso"
+    },
+    {
+      "at": "2026-10-31T18:27:41Z",
+      "by": "codex/web-engineer",
+      "status": "hecha",
+      "note": "Reproducidos deseo/SEO, microempresa/CRO y API/capital; corregido matchingcompleto.19tests+17/17 casos, revisión17aserciones propias,5copiasactualizadas yprobadas conrecibo yrespaldo; doctor74PASSED. Sin prometer semantica oahorro."
+    }
+  ]
+}

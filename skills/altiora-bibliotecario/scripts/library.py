@@ -111,17 +111,26 @@ the a an and are as at be by can could for from have help i in is it me my of
 on or please that the their this to use want we with you your'''.split())
 
 
+def indexed_terms(value):
+    identifiers = set(re.findall(r'[\w-]+', normalize(value)))
+    return identifiers | {part for token in identifiers
+                          for part in re.split(r'[-_]+', token) if part}
+
+
 def find(catalog, query, limit=5):
-    words = set(re.findall(r'[\w-]+', normalize(query))) - STOP_WORDS
+    query_identifiers = set(re.findall(r'[\w-]+', normalize(query)))
+    words = query_identifiers - STOP_WORDS
     expanded = set(words)
     for word in words:
         expanded.update(ALIASES.get(word, '').split())
     ranked = []
     for entry in catalog['entries']:
-        name, description = normalize(entry['name']), normalize(entry['description'])
-        score = sum((4 if word in name else 1 if word in description else 0)
+        name = normalize(entry['name'])
+        name_terms = indexed_terms(entry['name'])
+        description_terms = indexed_terms(entry['description'])
+        score = sum((4 if word in name_terms else 1 if word in description_terms else 0)
                     for word in expanded if len(word) > 2)
-        if name in normalize(query):
+        if name in query_identifiers:
             score += 20
         if score:
             ranked.append((score, entry))

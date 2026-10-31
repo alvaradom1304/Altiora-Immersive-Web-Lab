@@ -7,6 +7,15 @@
   "description": "Estado reproducible para reanudar entre sesiones e IAs. No significa ejecución persistente ni conexión automática con software.",
   "completed_milestones": [
     {
+      "id": "VIS-OPS-06",
+      "name": "Bibliotecario sin coincidencias falsas dentro de otras palabras",
+      "result": "DONE",
+      "evidence": [{
+        "url": "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/blob/fix/altiora-librarian-token-boundaries-2026-10-31/skills/altiora-bibliotecario/references/word-boundaries.md",
+        "claim": "Reproducidos SEO/deseo, CRO/microempresa y API/capital; corregida recuperación por términos completos conservando nombres, componentes y acentos. Pruebas y ejemplos antes/después; no demuestra selección nativa o comprensión semántica."
+      }]
+    },
+    {
       "id": "VIS-OPS-05",
       "name": "Verificación funcional aislada de handlers y consulta de ejecutor nativo",
       "result": "DONE",
@@ -258,6 +267,7 @@
     }
   ],
   "context_files": [
+    "docs/operations/LIBRARIAN-BOUNDARIES.md",
     "docs/operations/NATIVE-RUNTIME-VALIDATION.md",
     "docs/operations/RUNTIME-SMOKE.md",
     "docs/operations/TOOLKIT-VALIDATION.md",
