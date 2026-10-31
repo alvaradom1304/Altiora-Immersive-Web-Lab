@@ -7,3 +7,6 @@ Para Antigravity/Gemini: leer [Visual Studio](creative/visual-studio/README.md),
 
 ## Skill operativa V2 (compartida con Claude y Codex)
 Si la intención del usuario requiere **motion graphics, After Effects, Premiere, Photoshop, Blender, VFX, cinematic, shaders, web 3D o anuncios**, seguir [protocolo portable](creative/visual-studio/AGENT-PORTABILITY.md), [matriz profesional](creative/visual-studio/PRODUCTION-MATRIX.md) y [playbooks](creative/visual-studio/playbooks/README.md). Cada tool access se registra como UNKNOWN hasta comprobar conexión, versión y permisos; cualquier MCP externo se audita antes de ejecutar.
+
+## Reanudación sin reconstruir el chat
+Antes de continuar en Antigravity/Gemini, leer [checkpoint](continuity/checkpoint.json) y [recovery runbook](continuity/README.md), ejecutar `npm run resume` si hay checkout y verificar PRs/CI. Diferenciar documentación, CI probado y apps realmente conectadas.
