@@ -8,7 +8,7 @@ La base de investigación reúne **25 repositorios** con una función, una decis
 
 Nuevo: [sistema visual compartido](creative/visual-studio/README.md), [router para Claude, Gemini/Antigravity y ChatGPT/Codex](creative/visual-studio/ROUTER.md), [70 referencias visuales evaluables](references/visual-libraries-2026.json) y [workflow de producción](docs/workflows/visual-production-multi-ai.md). Son extensiones documentales; no se han instalado programas, addons ni servidores MCP.
 
-La expansión avanzada agrega [matriz técnica](creative/visual-studio/PRODUCTION-MATRIX.md), [playbooks portables](creative/visual-studio/playbooks/README.md) y [protocolo común para Claude, Gemini/Antigravity y ChatGPT/Codex](creative/visual-studio/AGENT-PORTABILITY.md), sin ejecutar 56 paquetes ni instalar aplicaciones Adobe.
+La expansión avanzada agrega [matriz técnica](creative/visual-studio/PRODUCTION-MATRIX.md), [playbooks portables](creative/visual-studio/playbooks/README.md) y [protocolo común para Claude, Gemini/Antigravity y ChatGPT/Codex](creative/visual-studio/AGENT-PORTABILITY.md), sin instalar automáticamente las 70 referencias ni instalar aplicaciones Adobe.
 
 ## Experimento audiovisual ejecutable (código)
 
