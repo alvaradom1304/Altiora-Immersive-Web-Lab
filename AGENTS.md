@@ -29,6 +29,12 @@ Seguir docs/workflows/immersive-project.md. Antes de ampliar una experiencia, co
 - En una app ejecutable, validar build, accesibilidad, móvil, fallback y el flujo de pedido afectado.
 - Indicar con claridad qué está diseñado, implementado, probado o pendiente.
 
+## Altiora Visual Studio (norma común de todas las IAs)
+
+Para cualquier trabajo de motion graphics, anuncios, Blender/3D, Adobe, animación web o VFX, **leer antes** [Visual Studio](creative/visual-studio/README.md), [router por intención](creative/visual-studio/ROUTER.md), [catálogo visual](references/visual-libraries-2026.json) y [workflow de producción multi-IA](docs/workflows/visual-production-multi-ai.md). Usar los roles y skills existentes; no duplicar la lógica.
+
+La documentación y los repositorios de referencia **no** equivalen a librerías instaladas, licencias comerciales concedidas ni control remoto de Blender, Adobe o servicios de pago. Validar seguridad, derechos, compatibilidad, performance y presupuesto antes de ejecutar. Servidores MCP no auditados permanecen en HOLD.
+
 ## Equipo multi-IA
 - Los 12 roles de team/registry.md tienen prompt en team/agents/<rol>.md (Claude Code los usa como subagentes en .claude/agents/). Se generan con npm run agents:build desde team/agents.json y team/roles/; no editarlos a mano.
 - Repartir y coordinar el trabajo en el chat del equipo (team/chat/README.md): firmar como <ia>/<rol>, reclamar la tarea antes de editar, tocar solo sus archivos y cerrar con evidencia.
