@@ -21,3 +21,6 @@
 **Gate de seguridad:** NO ejecutar un servidor MCP Adobe no auditado: acceso a archivos, red, permisos de edición y protección de proyecto. Si app no instalada, entregar plan/instrucciones, no afirmar render.
 
 [Back to playbooks](README.md).
+
+## After Effects — puente local disponible
+[Instrucciones y límites del puente aerender](../after-effects/README.md) y [composición ExtendScript original](../after-effects/altiora-concept-comp.jsx). Antes de delegar a AE: `npm run adobe:check` en la computadora ejecutora, permiso de cuenta/licencia y fuente .aep revisada. No declarar que el conector Adobe para ChatGPT controla After Effects si no se comprobó esa función. Para efectos y componer a nivel nativo, optar por AE cuando sí está instalado; en caso contrario, el Director selecciona alternativa con Remotion, Blender o FFmpeg.
