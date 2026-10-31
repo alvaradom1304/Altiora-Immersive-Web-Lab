@@ -83,3 +83,6 @@ El [Visual Tech Scout](visual-tech-scout.md) ejecuta observación de metadatos (
 
 ## Gate adicional de licencias comerciales
 El Director **no autoriza** incorporar `patriciogonzalezvivo/lygia` en proyectos comerciales sin licencia/aprobación específica: el repositorio publica Prosperity Public License 3.0.0, con términos distintos a MIT/Apache. Consultar [auditoría de licencias](../../../references/visual-license-review.md) antes de seleccionar shaders, assets, Adobe legacy o herramientas con avisos de terceros. El pipeline debe buscar alternativas seguras sin pedir al cliente elegir librerías.
+
+## Handoff ejecutable de After Effects
+Para campañas con composición, tracking, VFX o motion nativo, consultar [puente local After Effects](../after-effects/README.md) y elegirlo solo cuando la app esté instalada y `aerender` y el proyecto .aep estén verificados en la máquina ejecutora. El Director puede pedir a Claude, Gemini o Codex un plan y código JSX original sin requerir que el cliente escoja herramientas. Ningún archivo de repo ni conector Adobe sugerido constituye acceso confirmado al programa local.
