@@ -29,7 +29,7 @@
 
 **Canal A — Adobe conectado en ChatGPT:** el conector Adobe está disponible para edición y composición de videos mediante operaciones de media/video y Creative Cloud, pero **no expone actualmente una operación directa para abrir o editar un proyecto nativo .aep o controlar el escritorio de After Effects**. La capacidad debe reevaluarse si aparecen nuevas herramientas. No prometer acceso a AE por el solo hecho de contar con Adobe.
 
-**Canal B — After Effects instalado localmente:** puente [`scripts/after-effects-bridge.mjs`](../../scripts/after-effects-bridge.mjs), usado desde un checkout autorizado. Ejecutar `npm run after-effects:check` para descubrir aerender. Para diseñar una composición de ejemplo original, abrir la app y ejecutar [`after-effects/altiora-concept-comp.jsx`](../after-effects/altiora-concept-comp.jsx) con File → Scripts → Run Script File. Guardar el .aep en este workspace, configurar Render Queue/Output Module, y ejecutar:
+**Canal B — After Effects instalado localmente:** puente [`scripts/after-effects-bridge.mjs`](../../../scripts/after-effects-bridge.mjs), usado desde un checkout autorizado. Ejecutar `npm run after-effects:check` para descubrir aerender. Para diseñar una composición de ejemplo original, abrir la app y ejecutar [`after-effects/altiora-concept-comp.jsx`](../after-effects/altiora-concept-comp.jsx) con File → Scripts → Run Script File. Guardar el .aep en este workspace, configurar Render Queue/Output Module, y ejecutar:
 
 ```bash
 node scripts/after-effects-bridge.mjs --plan approved/project.aep "NOMBRE_COMPOSICION" out/comercial.mov
