@@ -7,13 +7,17 @@
     "node": ">=20"
   },
   "scripts": {
-    "check": "node scripts/verify-catalog.mjs && node scripts/audit-skills.mjs && node scripts/build-agents.mjs --check && npm run continuity:check",
+    "check": "node scripts/verify-catalog.mjs && node scripts/audit-skills.mjs && node scripts/build-agents.mjs --check && npm run continuity:check && npm run visual:preflight:test && npm run visual:watch:test",
     "agents:build": "node scripts/build-agents.mjs",
     "chat": "node scripts/team-chat.mjs",
     "skills:audit": "node scripts/audit-skills.mjs",
     "skills:baseline": "node scripts/audit-skills.mjs --write",
     "reference": "node scripts/fetch-reference.mjs",
     "resume": "node scripts/continuity.mjs",
-    "continuity:check": "node scripts/continuity.mjs --check && node --test scripts/continuity.test.mjs"
+    "continuity:check": "node scripts/continuity.mjs --check && node --test scripts/continuity.test.mjs",
+    "visual:preflight": "node scripts/visual-preflight.mjs",
+    "visual:preflight:test": "node --test scripts/visual-preflight.test.mjs",
+    "visual:watch": "node scripts/visual-watch.mjs",
+    "visual:watch:test": "node --test scripts/visual-watch.test.mjs"
   }
 }
