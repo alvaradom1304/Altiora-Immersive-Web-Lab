@@ -40,7 +40,7 @@ jobs:
   preview-render:
     needs: contract-and-types
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 25
     defaults:
       run:
         working-directory: experiments/tilicheros-motion-lab
@@ -52,8 +52,16 @@ jobs:
       - run: npm install --no-audit --no-fund
       - name: Render concept cover at 50% resolution
         run: npm run still -- --scale=0.5
-      - name: Render 15s concept at 50% resolution
-        run: npm run render -- --scale=0.5 --concurrency=2
+      - name: Render Anime and Baby covers at 40% resolution
+        run: |
+          npm run still:anime -- --scale=0.4
+          npm run still:baby -- --scale=0.4
+      - name: Render Gaming 15s concept at 40% resolution
+        run: npm run render -- --scale=0.4 --concurrency=2
+      - name: Render Anime 15s concept at 40% resolution
+        run: npm run render:anime -- --scale=0.4 --concurrency=2
+      - name: Render Baby 15s concept at 40% resolution
+        run: npm run render:baby -- --scale=0.4 --concurrency=2
       - name: Upload concept preview (not commercially publishable)
         uses: actions/upload-artifact@v4
         with:
@@ -61,4 +69,37 @@ jobs:
           path: |
             experiments/tilicheros-motion-lab/out/tilicheros-gaming-demo.mp4
             experiments/tilicheros-motion-lab/out/tilicheros-cover.png
+            experiments/tilicheros-motion-lab/out/tilicheros-anime-demo.mp4
+            experiments/tilicheros-motion-lab/out/tilicheros-baby-demo.mp4
+            experiments/tilicheros-motion-lab/out/tilicheros-anime-cover.png
+            experiments/tilicheros-motion-lab/out/tilicheros-baby-cover.png
+          retention-days: 7
+
+  blender-concept-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    defaults:
+      run:
+        working-directory: experiments/tilicheros-motion-lab
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Blender from Ubuntu repository
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y blender
+      - name: Record version
+        run: blender --version
+      - name: Render original concept in Blender CPU headless at 256px
+        run: blender --background --python blender/generate-concept.py -- --output out/blender-smoke.png --blend out/blender-smoke.blend --size 256 --samples 4
+      - name: Assert Blender produced editable scene and image
+        run: |
+          test -s out/blender-smoke.png
+          test -s out/blender-smoke.blend
+      - name: Upload Blender test assets
+        uses: actions/upload-artifact@v4
+        with:
+          name: altiora-blender-concept-smoke
+          path: |
+            experiments/tilicheros-motion-lab/out/blender-smoke.png
+            experiments/tilicheros-motion-lab/out/blender-smoke.blend
           retention-days: 7

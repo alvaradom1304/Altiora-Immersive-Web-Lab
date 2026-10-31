@@ -3,7 +3,6 @@ import {
   AbsoluteFill,
   Img,
   Sequence,
-  Easing,
   interpolate,
   spring,
   staticFile,
@@ -16,7 +15,7 @@ const limit = {extrapolateLeft: "clamp" as const, extrapolateRight: "clamp" as c
 const F = "'Arial Black', Impact, system-ui, sans-serif";
 const S = "'Inter', Arial, sans-serif";
 
-const FloatingLights: React.FC<{accent: string; secondary: string}> = ({accent, secondary}) => {
+const FloatingLights: React.FC<{accent: string; secondary: string; atmosphere: AdContent["atmosphere"]}> = ({accent, secondary, atmosphere}) => {
   const f = useCurrentFrame();
   return (
     <AbsoluteFill style={{pointerEvents: "none", overflow: "hidden"}}>
@@ -30,19 +29,19 @@ const FloatingLights: React.FC<{accent: string; secondary: string}> = ({accent, 
         borderRadius: "50%", background: secondary, opacity: 0.11, filter: "blur(150px)",
         transform: `translate3d(${Math.cos(f / 61) * 65}px,${Math.sin(f / 83) * 40}px,0)`
       }}/>
-      <div style={{
+      {atmosphere === "cyber" && <div style={{
         position: "absolute", inset: 0,
         backgroundImage: "linear-gradient(rgba(255,255,255,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.055) 1px,transparent 1px)",
         backgroundSize: "130px 130px", opacity: 0.13,
         transform: `perspective(800px) rotateX(22deg) translateY(${(f * 0.65) % 130}px)`
-      }}/>
-      {Array.from({length: 24}, (_, i) => {
+      }}/>}
+      {Array.from({length: atmosphere === "cyber" ? 24 : 14}, (_, i) => {
         const x = (i * 193 + 117) % 1080;
         const y = ((i * 337 + 101) + f * (0.45 + (i % 4) * 0.22)) % 1920;
         return <div key={i} style={{
           position: "absolute", left: x, top: y, width: i % 5 === 0 ? 6 : 3,
           height: i % 5 === 0 ? 6 : 3, borderRadius: "50%",
-          background: i % 3 === 0 ? secondary : "#FFF", opacity: 0.17 + (i % 4) * 0.11
+          background: i % 3 === 0 ? secondary : "#FFF", opacity: (atmosphere === "soft" ? 0.08 : 0.17) + (i % 4) * 0.09
         }}/>;
       })}
     </AbsoluteFill>
@@ -74,7 +73,7 @@ const Intro: React.FC<{content: AdContent}> = ({content}) => {
       opacity: fade, fontFamily: F, color: "white"
     }}>
       <div style={{fontSize: 33, fontFamily: S, fontWeight: 750, color: content.accentSecondary,
-        letterSpacing: 10, marginBottom: 32, opacity: p}}>UN NUEVO NIVEL</div>
+        letterSpacing: 10, marginBottom: 32, opacity: p}}>{content.eyebrow}</div>
       <div style={{
         fontSize: 146, lineHeight: 1.01, letterSpacing: -6,
         transform: `translateX(${(1 - p) * -165}px)`,
@@ -115,7 +114,7 @@ const ProductReveal: React.FC<{content: AdContent}> = ({content}) => {
         border: `2px dashed ${content.accentSecondary}55`, borderRadius: "50%",
         transform: `rotate(${-f * 0.38}deg)`, opacity: 0.55
       }}/>
-      <Img src={staticFile(content.productImage)} alt="Arte conceptual de consola portátil genérica"
+      <Img src={staticFile(content.productImage)} alt="Arte conceptual original, no corresponde a un producto comercial"
         style={{
           width: 1020, height: 1020, objectFit: "contain", zIndex: 3,
           opacity: appear, transform: `translateY(${(1 - appear) * 300 + Math.sin(f / 17) * 16}px) scale(${zoom}) rotate(${angle}deg)`,
@@ -143,7 +142,7 @@ const Ending: React.FC<{content: AdContent}> = ({content}) => {
       <div style={{
         fontSize: 36, fontFamily: S, letterSpacing: 9, fontWeight: 800,
         color: content.accentSecondary, opacity: p, marginBottom: 50
-      }}>ENCONTRALO EN</div>
+      }}>{content.outroLabel}</div>
       <div style={{
         fontSize: 126, lineHeight: 1, letterSpacing: -4,
         transform: `scale(${0.7 + p * 0.3})`, opacity: p,
@@ -169,7 +168,7 @@ export const GamingAd: React.FC<{content: AdContent}> = ({content}) => {
   const entrance = interpolate(f, [0, 15], [0, 1], limit);
   return (
     <AbsoluteFill style={{backgroundColor: content.background, overflow: "hidden", color: "#FFF"}}>
-      <FloatingLights accent={content.accent} secondary={content.accentSecondary}/>
+      <FloatingLights accent={content.accent} secondary={content.accentSecondary} atmosphere={content.atmosphere}/>
       <Header content={content}/>
       <Sequence from={0} durationInFrames={105}><Intro content={content}/></Sequence>
       <Sequence from={82} durationInFrames={265}><ProductReveal content={content}/></Sequence>

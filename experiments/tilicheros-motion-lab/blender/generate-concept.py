@@ -68,6 +68,11 @@ def setup_scene():
     scene = bpy.context.scene
     scene.render.engine = "CYCLES"
     scene.cycles.samples = 32
+    # Debian/Ubuntu Blender builds may omit OpenImageDenoise; disable it for portable CPU renders.
+    # Production renders can enable supported denoisers explicitly after checking capabilities.
+    for view_layer in scene.view_layers:
+        if hasattr(view_layer, "cycles") and hasattr(view_layer.cycles, "use_denoising"):
+            view_layer.cycles.use_denoising = False
     scene.render.resolution_x = 1080
     scene.render.resolution_y = 1080
     scene.render.resolution_percentage = 100
@@ -139,9 +144,18 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--output", default="public/assets/product-render.png")
     parser.add_argument("--blend", default="out/concept.blend")
+    parser.add_argument("--size", type=int, default=1080, help="Square render size in pixels")
+    parser.add_argument("--samples", type=int, default=32, help="Cycles samples")
     opts = parser.parse_args(extra)
 
+    if not (128 <= opts.size <= 4096):
+        parser.error("--size must be between 128 and 4096")
+    if not (1 <= opts.samples <= 1024):
+        parser.error("--samples must be between 1 and 1024")
     scene = setup_scene()
+    scene.render.resolution_x = opts.size
+    scene.render.resolution_y = opts.size
+    scene.cycles.samples = opts.samples
     output = Path(opts.output).resolve()
     blend = Path(opts.blend).resolve()
     output.parent.mkdir(parents=True, exist_ok=True)
