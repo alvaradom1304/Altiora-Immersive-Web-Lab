@@ -31,7 +31,7 @@ const visual = JSON.parse(await readFile(resolve(root, 'references/visual-librar
 assert.equal(visual.schema_version, 1);
 assert.match(visual.updated_on, /^\d{4}-\d{2}-\d{2}$/);
 assert.equal(visual.operational_status, 'catalogued_not_installed');
-assert.ok(visual.repos.length >= 15);
+assert.ok(visual.repos.length >= 50);
 const visualIds = new Set();
 for (const entry of visual.repos) {
   assert.match(entry.id, /^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/);
@@ -42,6 +42,11 @@ for (const entry of visual.repos) {
   assert.ok(['P0', 'P1', 'P2'].includes(entry.priority));
   for (const key of ['category', 'use', 'license_note', 'risk']) assert.ok(entry[key]?.length);
   assert.equal(entry.integrated, false, 'Referencia no puede declararse instalada: ' + entry.id);
+  if (entry.verified_on !== undefined) {
+    assert.match(entry.verified_on, /^\d{4}-\d{2}-\d{2}$/);
+    assert.ok(entry.verified_scope?.includes('metadata'), 'Falta alcance de verificación: ' + entry.id);
+    assert.notEqual(entry.decision, 'tool_reference', 'Nuevos proyectos se registran solo como candidatos: ' + entry.id);
+  }
 }
 
 const skillSources = JSON.parse(await readFile(resolve(root, 'references/skill-sources.json'), 'utf8'));

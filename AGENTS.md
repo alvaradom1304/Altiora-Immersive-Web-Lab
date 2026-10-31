@@ -33,6 +33,8 @@ Seguir docs/workflows/immersive-project.md. Antes de ampliar una experiencia, co
 
 Para cualquier trabajo de motion graphics, anuncios, Blender/3D, Adobe, animación web o VFX, **leer antes** [Visual Studio](creative/visual-studio/README.md), [router por intención](creative/visual-studio/ROUTER.md), [catálogo visual](references/visual-libraries-2026.json) y [workflow de producción multi-IA](docs/workflows/visual-production-multi-ai.md). Usar los roles y skills existentes; no duplicar la lógica.
 
+**Capa profesional V2, obligatoria según intención:** consultar [matriz](creative/visual-studio/PRODUCTION-MATRIX.md), [skills portables / playbooks](creative/visual-studio/playbooks/README.md) y [handoff entre IAs](creative/visual-studio/AGENT-PORTABILITY.md). Elegir un solo pipeline por medio (ad, web, CGI, VFX), evitar agregar motores redundantes y registrar qué se ejecutó realmente.
+
 La documentación y los repositorios de referencia **no** equivalen a librerías instaladas, licencias comerciales concedidas ni control remoto de Blender, Adobe o servicios de pago. Validar seguridad, derechos, compatibilidad, performance y presupuesto antes de ejecutar. Servidores MCP no auditados permanecen en HOLD.
 
 ## Equipo multi-IA

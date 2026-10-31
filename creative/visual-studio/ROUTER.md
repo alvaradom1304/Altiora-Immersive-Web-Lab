@@ -2,6 +2,10 @@
 
 Este documento es una instrucción portable para cualquier IA. No activa herramientas sin conexión real.
 
+## Selección experta V2
+
+Antes de seleccionar tecnología: abrir [matriz profesional](PRODUCTION-MATRIX.md), el [catálogo expandido](../../references/visual-libraries-2026.json) y el [playbook de la tarea](playbooks/README.md). El [protocolo de portabilidad](AGENT-PORTABILITY.md) sincroniza la intención y los handoffs entre Claude Code, Gemini/Antigravity y ChatGPT/Codex sin fingir que Adobe/Blender están conectados.
+
 ## Diagnóstico rápido
 
 A partir de una solicitud corta (p. ej. “anuncio de 15 segundos de consola retro”, “finca cinematográfica con scroll”, “logo animado”), identificar:
