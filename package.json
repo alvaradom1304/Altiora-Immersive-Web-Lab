@@ -7,7 +7,7 @@
     "node": ">=20"
   },
   "scripts": {
-    "check": "node scripts/verify-catalog.mjs && node scripts/audit-skills.mjs && node scripts/build-agents.mjs --check && npm run continuity:check && npm run visual:preflight:test && npm run visual:watch:test && npm run video:master:test && npm run adobe:test && npm run after-effects:test && npm run ae:clients:test",
+    "check": "node scripts/verify-catalog.mjs && node scripts/audit-skills.mjs && node scripts/build-agents.mjs --check && npm run continuity:check && npm run visual:preflight:test && npm run visual:watch:test && npm run video:master:test && npm run adobe:test && npm run after-effects:test && npm run ae:clients:test && npm run after-effects:mcp:test && npm run after-effects:setup:test",
     "agents:build": "node scripts/build-agents.mjs",
     "chat": "node scripts/team-chat.mjs",
     "skills:audit": "node scripts/audit-skills.mjs",
@@ -27,6 +27,9 @@
     "after-effects:test": "node --test scripts/after-effects-bridge.test.mjs",
     "ae:clients:plan": "node scripts/connect-after-effects.mjs --plan",
     "ae:clients:connect": "node scripts/connect-after-effects.mjs --apply",
-    "ae:clients:test": "node --test scripts/connect-after-effects.test.mjs scripts/after-effects-mcp.test.mjs"
+    "ae:clients:test": "node --test scripts/connect-after-effects.test.mjs scripts/after-effects-mcp.test.mjs",
+    "after-effects:mcp:test": "node --test scripts/after-effects-mcp.test.mjs",
+    "after-effects:setup:test": "node --test scripts/setup-after-effects-access.test.mjs",
+    "after-effects:setup": "node scripts/setup-after-effects-access.mjs"
   }
 }
