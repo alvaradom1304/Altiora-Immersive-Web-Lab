@@ -4,7 +4,7 @@
 
 ## Expansión profesional de referencias (V2)
 
-El [catálogo visual](../../references/visual-libraries-2026.json) contiene **70 repositorios evaluables**, entre ellos 33 nuevas referencias de OpenColorIO, MaterialX, OpenUSD, OpenVDB, FFmpeg, Blender, shaders y motores web. [Matriz de producción](PRODUCTION-MATRIX.md), [protocolo para todas las IAs](AGENT-PORTABILITY.md) y [playbooks de ejecución](playbooks/README.md). Son **referencias documentales, no 56 instalaciones**.
+El [catálogo visual](../../references/visual-libraries-2026.json) contiene **70 repositorios evaluables**, entre ellos 33 nuevas referencias de OpenColorIO, MaterialX, OpenUSD, OpenVDB, FFmpeg, Blender, shaders y motores web. [Matriz de producción](PRODUCTION-MATRIX.md), [protocolo para todas las IAs](AGENT-PORTABILITY.md) y [playbooks de ejecución](playbooks/README.md). Son **referencias documentales, no 70 instalaciones**.
 
 ## Dirección audiovisual de Altiora
 
