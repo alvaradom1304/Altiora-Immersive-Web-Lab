@@ -10,7 +10,7 @@ import {readFile,writeFile,mkdir,stat,copyFile} from "node:fs/promises";
 import {dirname,resolve,relative,isAbsolute,sep,join} from "node:path";
 import {fileURLToPath} from "node:url";
 const ROOT=fileURLToPath(new URL("../",import.meta.url));
-const FILES=[".mcp.json",".gemini/settings.json",".codex/config.toml"];
+const FILES=[".mcp.json",".gemini/settings.json",".agents/mcp_config.json",".codex/config.toml"];
 const SERVER="altiora-after-effects";
 
 export function configurations(root) {
@@ -25,6 +25,9 @@ export function configurations(root) {
         includeTools:["after_effects_preflight","after_effects_plan_render","after_effects_render"],
         timeout:1800000
       }
+    }},
+    ".agents/mcp_config.json":{mcpServers:{
+      [SERVER]:{command:"node",args:[script]}
     }},
     ".codex/config.toml":codexBlock(root,script)
   };
@@ -107,7 +110,7 @@ async function main(){
   process.stdout.write(JSON.stringify({
     status:"PROJECT_MCP_CONFIGURED_NOT_YET_CONNECTED",updated:changed.map(x=>x.relativePath),
     backup_directory:backups,
-    next:"Restart Claude Code / Gemini CLI / Codex from this trusted repository. Approve MCP project trust, run after_effects_preflight, verify aerender and Adobe license. Render remains disabled until local opt-in."
+    next:"Restart Claude Code / Gemini CLI / Antigravity / Codex from this trusted repository. Approve MCP project trust, run after_effects_preflight, verify aerender and Adobe license. Render remains disabled until local opt-in."
   },null,2)+"\n");
 }
 if(process.argv[1]&&resolve(process.argv[1])===fileURLToPath(import.meta.url)){
