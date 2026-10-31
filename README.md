@@ -4,6 +4,10 @@ Laboratorio de experiencias web inmersivas y comerciales. Primer caso: **La Cent
 
 La base de investigación reúne **25 repositorios** con una función, una decisión y una revisión concreta. La selección inicial favorece Three.js + React Three Fiber + Drei + GSAP; glTF Transform prepara los modelos. Lenis se evalúa después de comparar con el scroll nativo.
 
+## Altiora Visual Studio — Motion, Blender, Adobe y producción multi-IA
+
+Nuevo: [sistema visual compartido](creative/visual-studio/README.md), [router para Claude, Gemini/Antigravity y ChatGPT/Codex](creative/visual-studio/ROUTER.md), [23 referencias visuales evaluables](references/visual-libraries-2026.json) y [workflow de producción](docs/workflows/visual-production-multi-ai.md). Son extensiones documentales; no se han instalado programas, addons ni servidores MCP.
+
 ## Empezar
 
 1. Leer la [comparación de repositorios](docs/research/repository-review.md).
