@@ -82,3 +82,6 @@ Hay un [puente de render local](after-effects/README.md) y una composición .jsx
 
 ## After Effects entre asistentes
 La presencia de Adobe conectado en ChatGPT permite operaciones de medios compatibles, **no equivale a controlar .aep**. Claude Code y Gemini pueden utilizar el [puente aerender](../../scripts/after-effects-bridge.mjs) si tienen acceso autorizado al escritorio, un .aep existente y licencia. Los permisos son distintos para cada IA/ejecutor. Confirmar `npm run after-effects:check` en ese entorno antes de planificar un render nativo.
+
+## Acceso local a After Effects para todos los ejecutores
+Existe un servidor MCP STDIO compartido con herramientas de preflight, plan y render autorizado. Cada IA que realmente corra en la PC debe ejecutar [setup de proyecto](after-effects/MCP-SETUP.md) y comprobar que `altiora-after-effects` esté conectado; Claude, Gemini, Antigravity y Codex no comparten permisos automáticamente ni heredan la sesión Adobe de ChatGPT. Se bloquean por defecto los renders; el Director Audiovisual decide, QA verifica, y el propietario autoriza proyecto exacto.
