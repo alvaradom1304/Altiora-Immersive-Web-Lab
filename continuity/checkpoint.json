@@ -194,6 +194,13 @@
       "name": "Adobe After Effects de la laptop y licencia",
       "status": "UNVERIFIED",
       "evidence": []
+    },
+    {
+      "name": "Bibliotecario portable: selección de skills y roles con contexto mínimo",
+      "status": "DOCUMENTED",
+      "evidence": [
+        "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/pull/33"
+      ]
     }
   ],
   "context_files": [
@@ -209,7 +216,9 @@
     "references/visual-libraries-2026.json",
     "creative/visual-studio/SCOUT-V3.md",
     "creative/visual-studio/playbooks/advanced-cgi-color.md",
-    "creative/visual-studio/playbooks/illustration-particles.md"
+    "creative/visual-studio/playbooks/illustration-particles.md",
+    "skills/altiora-bibliotecario/SKILL.md",
+    "creative/visual-studio/after-effects/VERIFICATION.md"
   ],
   "known_limits": [
     "Este snapshot no consulta GitHub en tiempo real; cotejar siempre PR, checks y archivos antes de declarar completado.",
@@ -218,7 +227,8 @@
     "El agente no sigue ejecutándose automáticamente cuando se cierra o interrumpe el chat.",
     "La primera vigilancia completó escaneo y artefacto, pero GitHub bloqueó crear PR automáticamente; habilitar permiso Actions→General→Allow GitHub Actions to create and approve pull requests. Sin él quedan rama y artefacto, no PR automática.",
     "Scout V3 revisa últimas releases estables de GitHub P0/P1; no detecta necesariamente versiones publicadas solo en npm, PyPI o Creative Cloud, ni CVEs sin revisar advisories.",
-    "El puente aerender requiere After Effects instalado y autorizado en la laptop: el CI Linux no demuestra conexión ni acceso de un agente a la app del usuario."
+    "El puente aerender requiere After Effects instalado y autorizado en la laptop: el CI Linux no demuestra conexión ni acceso de un agente a la app del usuario.",
+    "El bibliotecario enruta según capacidades disponibles y metadatos; no garantiza ahorro medido ni descubrimiento automático idéntico en todos los clientes. El puente AE tiene pruebas Windows y validación de configuración Codex aislada; las sesiones Adobe/Claude/Gemini/Antigravity siguen sin certificarse."
   ],
   "recovery_instruction": "Leer checkpoint, consultar el commit/PR más reciente y los checks, reclamar tarea, ejecutar y escribir evidencia antes de terminar. No pedir al usuario que repita el briefing salvo necesidad material."
 }

@@ -4,5 +4,6 @@
 command = "node"
 args = ["scripts/after-effects-mcp.mjs"]
 cwd = "."
+enabled = false
 startup_timeout_sec = 10
 tool_timeout_sec = 1800

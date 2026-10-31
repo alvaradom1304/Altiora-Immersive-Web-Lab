@@ -34,7 +34,7 @@ export const TOOLS=[
   },
   {
     name:"after_effects_render",
-    description:"Opt-in only: render an EXISTING approved .aep composition via local aerender, with fresh output file. Disabled unless PC owner sets ALTIORA_AE_ALLOW_RENDER and exact ALTIORA_AE_APPROVED_PROJECT. No code execution, project editing or external network.",
+    description:"Render an existing owner-approved .aep via local aerender to a fresh file. Requires owner opt-in and exact project approval. After Effects may evaluate expressions, plugins and linked media: approve trusted projects only.",
     inputSchema:{
       type:"object",
       properties:{
@@ -44,7 +44,7 @@ export const TOOLS=[
       },
       required:["project","composition","output"],additionalProperties:false
     },
-    annotations:{readOnlyHint:false,destructiveHint:false}
+    annotations:{readOnlyHint:false,destructiveHint:true}
   }
 ];
 
@@ -53,7 +53,7 @@ function toToolResult(value,isError=false){
 }
 
 export async function handleRequest(msg){
-  if(!msg || typeof msg!=="object" || Array.isArray(msg)) throw new Error("Invalid JSON-RPC message");
+  if(!msg || typeof msg!=="object" || Array.isArray(msg) || msg.jsonrpc!=="2.0" || typeof msg.method!=="string") return {jsonrpc:'2.0',id:null,error:{code:-32600,message:'Invalid Request'}};
   if(msg.method?.startsWith("notifications/")) return null;
   const id=Object.hasOwn(msg,"id")?msg.id:undefined;
   const response=(result)=>({jsonrpc:"2.0",id,result});
@@ -74,9 +74,10 @@ export async function handleRequest(msg){
     const args=msg.params?.arguments??{};
     try {
       if(!args||typeof args!=="object"||Array.isArray(args))throw new Error("Arguments must be an object");
+      if(Object.keys(args).some(k=>!['project','composition','output'].includes(k)))throw new Error('Unexpected argument');
       if(name==="after_effects_preflight"){
         if(Object.keys(args).length)throw new Error("No arguments accepted");
-        return response(toToolResult({status:"CHECKED_LOCAL_ONLY",...detectAerender(),render_enabled:process.env.ALTIORA_AE_ALLOW_RENDER==="YES-I-APPROVE-LOCAL-RENDERS" && Boolean(process.env.ALTIORA_AE_APPROVED_PROJECT),supports_native_project_editing:false}));
+        return response(toToolResult({status:"CHECKED_LOCAL_ONLY",...detectAerender(),render_enabled:process.env.ALTIORA_AE_ALLOW_RENDER==="YES-I-APPROVE-LOCAL-RENDERS" && !!process.env.ALTIORA_AE_APPROVED_PROJECT,supports_native_project_editing:false}));
       }
       if(name==="after_effects_plan_render"){
         return response(toToolResult(await planLocalRender(args.project,args.composition,args.output)));
@@ -107,9 +108,9 @@ async function main(){
     }
     try{
       const value=await handleRequest(payload);
-      if(value!==null && payload.id!==undefined)process.stdout.write(JSON.stringify(value)+"\n");
+      if(value!==null && (payload?.id!==undefined || value.error?.code===-32600))process.stdout.write(JSON.stringify(value)+"\n");
     }catch(e){
-      if(payload.id!==undefined)process.stdout.write(JSON.stringify({jsonrpc:"2.0",id:payload.id,error:{code:-32603,message:"Internal error"}})+"\n");
+      if(payload?.id!==undefined)process.stdout.write(JSON.stringify({jsonrpc:"2.0",id:payload.id,error:{code:-32603,message:"Internal error"}})+"\n");
       process.stderr.write("Altiora MCP error: "+e.message+"\n");
     }
   }

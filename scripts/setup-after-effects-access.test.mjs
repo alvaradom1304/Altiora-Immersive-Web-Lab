@@ -7,7 +7,7 @@ import {configurations,codexBlock,mergeToml,mergeJson,buildPlan} from "./setup-a
 
 test("Generates project-scoped configs for all four tools without elevated privileges",()=>{
   const c=configurations("/tmp/Altiora Visual Studio");
-  assert.deepEqual(Object.keys(c),[".mcp.json",".gemini/settings.json",".agents/mcp_config.json",".codex/config.toml"]);
+  assert.deepEqual(Object.keys(c).sort(),[".mcp.json",".gemini/settings.json",".agents/mcp_config.json",".codex/config.toml"].sort());
   assert.ok(c[".mcp.json"].mcpServers["altiora-after-effects"].args[0].includes("Altiora Visual Studio"));
   assert.equal(c[".gemini/settings.json"].mcpServers["altiora-after-effects"].trust,false);
   assert.ok(c[".agents/mcp_config.json"].mcpServers["altiora-after-effects"].args[0].includes("after-effects-mcp.mjs"));
@@ -26,7 +26,7 @@ test("Merges without discarding any existing MCP server",()=>{
   assert.equal(updated.mcpServers["altiora-after-effects"].trust,false);
 });
 test("Replaces only this TOML server block, preserving unrelated sections",()=>{
-  const existing="[mcp_servers.other]\ncommand = \"git\"\n\n[mcp_servers.altiora-after-effects]\ncommand = \"old\"\n\n[features]\nweb_search = true\n";
+  const existing="[mcp_servers.other]\ncommand = \"git\"\n\n[mcp_servers.altiora-after-effects]\ncommand = \"node\"\nargs = [\"scripts/after-effects-mcp.mjs\"]\n\n[features]\nweb_search = true\n";
   const newText=mergeToml(existing,codexBlock("/tmp/current","/tmp/current/scripts/after-effects-mcp.mjs"));
   assert.ok(newText.includes('[mcp_servers.other]\ncommand = "git"'));
   assert.ok(newText.includes("[features]\nweb_search = true"));

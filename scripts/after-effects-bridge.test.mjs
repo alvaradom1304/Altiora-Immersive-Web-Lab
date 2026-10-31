@@ -6,7 +6,7 @@ const root="/tmp/altiora-safe";
 
 test("aerender plan validates project, composition, and output path",()=>{
  const v=validateArgs("approved/product.aep","Shot 1 — PRODUCT","out/approved.mov",root);
- assert.equal(v.project,"/tmp/altiora-safe/approved/product.aep");
+ assert.equal(v.project,resolve(root,"approved/product.aep"));
  assert.deepEqual(renderArguments(v),["-project",v.project,"-comp","Shot 1 — PRODUCT","-output",v.output]);
 });
 test("blocks traversal, external files, bad extensions and line injection",()=>{
@@ -14,6 +14,9 @@ test("blocks traversal, external files, bad extensions and line injection",()=>{
   ["../secret.aep","Shot","out/a.mov"],
   ["approved/p.aep","Shot","../../outside.mov"],
   ["approved/p.jsx","Shot","out/a.mov"],
+  ["approved/p.aep","-help","out/a.mov"],
+  ["approved/p.aep","Shot","out/a:stream.mov"],
+  ["approved/p.aep","Shot\u0000hidden","out/a.mov"],
   ["approved/p.aep","Shot\nanother","out/a.mov"],
   ["approved/p.aep","Shot","out/a.sh"]
  ]) assert.throws(()=>validateArgs(...fields,root));

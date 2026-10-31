@@ -67,3 +67,8 @@ No crear servidores web públicos para controlar Adobe. Utilizar [MCP stdio loca
 
 ## After Effects local — acceso compartido de IAs
 El Director Audiovisual puede invocar el MCP local `altiora-after-effects` mediante `after_effects_preflight`, `after_effects_plan_render` o `after_effects_render` **solo si el cliente corre en la PC autorizada**. Las instrucciones y instalación segura para Claude Code, Gemini CLI/Antigravity y Codex están en [MCP-SETUP](creative/visual-studio/after-effects/MCP-SETUP.md). Una nueva conversación o app cloud **no recibe** control del escritorio por leer GitHub. El render requiere variables de autorización de la PC, proyecto exacto, archivo nuevo, QA y aprobación. Si el MCP no aparece conectado, usar alternativas remotas permitidas y marcar acceso `NOT_VERIFIED`.
+
+<!-- ALTIORA_BIBLIOTECARIO_START -->
+## Selección y contexto
+En cada mensaje conserva el objetivo activo y elige entre las capacidades realmente disponibles. Usa la skill más específica y carga sus referencias solo cuando hagan falta; si nada aporta, resuelve directamente. Para selección ambigua consulta [Bibliotecario](skills/altiora-bibliotecario/SKILL.md). En trabajos pequeños evita equipos; delega solo con autorización y capacidad real. Reutiliza evidencia vigente y responde con resultado, comprobación y límite material, sin repetir historia ni omitir requisitos para ahorrar. No presupongas ahorro medido, modelos cambiados o conexiones por existir un archivo.
+<!-- ALTIORA_BIBLIOTECARIO_END -->

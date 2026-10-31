@@ -12,6 +12,7 @@ import {realpath, stat, mkdir, writeFile} from "node:fs/promises";
 import {existsSync, readdirSync} from "node:fs";
 import {resolve,dirname,relative,isAbsolute,sep,extname,join} from "node:path";
 import {fileURLToPath} from "node:url";
+import {safeLocalPath} from './local-path-safety.mjs';
 const ROOT=fileURLToPath(new URL("../",import.meta.url));
 const ALLOWED_AERENDER=process.platform==="win32"?"aerender.exe":"aerender";
 
@@ -21,8 +22,9 @@ export function isWithin(parent,child){
 }
 export function validateArgs(project,comp,output,root=ROOT) {
   assert.ok(typeof project==="string"&&project.trim(),"Project path required");
-  assert.ok(typeof comp==="string"&&comp.trim()&&comp.length<=160&&!/[\r\n]/.test(comp),"Valid composition name required");
+  assert.ok(typeof comp==="string"&&comp.trim()&&comp.length<=160&&!/^[\s]*-|[\x00-\x1f]/.test(comp),"Valid composition name required");
   assert.ok(typeof output==="string"&&output.trim(),"Output path required");
+  for (const value of [project,output]) assert.ok(!/[\x00-\x1f]/.test(value) && !value.replace(/^[A-Za-z]:[\\/]/,'').includes(':'), 'Unsafe path or alternate data stream');
   const pj=resolve(root,project),out=resolve(root,output);
   assert.ok(isWithin(root,pj)&&isWithin(root,out),"Paths must remain inside workspace");
   assert.equal(extname(pj).toLowerCase(),".aep","Only .aep project files accepted");
@@ -82,6 +84,8 @@ export function detectAerender(runner=spawnSync,exe=null) {
 
 export async function planLocalRender(project,comp,output) {
   const job=validateArgs(project,comp,output);
+  await safeLocalPath(ROOT,job.project);
+  await safeLocalPath(ROOT,job.output);
   const src=await stat(job.project);
   assert.ok(src.isFile(),"Source must be a file");
   const real=await realpath(job.project);
@@ -90,7 +94,7 @@ export async function planLocalRender(project,comp,output) {
   return {
     status:"PLANNED",application:"Adobe After Effects",engine:"aerender",
     project:job.project,composition:job.comp,output:job.output,
-    command:[detectAerender().executable,...renderArguments(job)],
+    command:[aerenderCandidates()[0],...renderArguments(job)],
     notes:["Requires licensed After Effects locally; no cloud desktop access implied","AE Output Module settings determine actual codec","Visual, rights and sound QA required"]
   };
 }
@@ -110,13 +114,15 @@ export async function executeLocalRender(project,comp,output) {
   assert.ok(isWithin(allowedOut,plan.output),"Output must remain inside out/");
   const probe=detectAerender();
   assert.ok(probe.available,"After Effects aerender is not verified on this machine");
+  await safeLocalPath(ROOT,plan.output);
   await mkdir(dirname(plan.output),{recursive:true});
   const realRoot=await realpath(ROOT);
   const realOutputDirectory=await realpath(dirname(plan.output));
   assert.ok(isWithin(realRoot,realOutputDirectory),"Output directory symbolic link escapes workspace");
+  await safeLocalPath(ROOT,plan.output);
   const previous=await stat(plan.output).catch(e=>{if(e.code==="ENOENT")return null;throw e;});
   assert.equal(previous,null,"Output already exists; choose a new output name (prevents accidental overwrite)");
-  const runner=spawnSync(plan.command[0],renderArguments({project:plan.project,comp:plan.composition,output:plan.output}),{
+  const runner=spawnSync(probe.executable,renderArguments({project:plan.project,comp:plan.composition,output:plan.output}),{
     cwd:ROOT,encoding:"utf8",timeout:1800000,maxBuffer:1024*1024,shell:false,windowsHide:true
   });
   assert.ok(!runner.error&&runner.status===0,
@@ -129,6 +135,7 @@ export async function executeLocalRender(project,comp,output) {
     marketing_approved:false,format_verified:false,
     notes:["Run technical media metadata and human QA","Check content rights and Adobe license"]
   };
+  await safeLocalPath(ROOT,resolve(ROOT,"continuity/after-effects-last-render.json"));
   await writeFile(resolve(ROOT,"continuity/after-effects-last-render.json"),JSON.stringify(report,null,2)+"\n");
   return report;
 }

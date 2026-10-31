@@ -28,3 +28,8 @@ Consultar [registro multi-cliente](creative/visual-studio/after-effects/MCP-SETU
 
 ## After Effects en PC — Gemini / Antigravity
 El servidor local `altiora-after-effects` se prepara mediante `npm run after-effects:setup -- --apply` desde el repositorio de la computadora. Gemini CLI usa `.gemini/settings.json`; Antigravity IDE/CLI usa `.agents/mcp_config.json` generado localmente. Revisar [guía MCP](creative/visual-studio/after-effects/MCP-SETUP.md) y confirmar herramientas desde el cliente antes de declarar acceso. El Director determina cuándo usar AE; no conectar apps desconocidas ni ejecutar renders sin autorización del PC.
+
+<!-- ALTIORA_BIBLIOTECARIO_START -->
+## Selección y contexto
+En cada mensaje conserva el objetivo activo y elige entre las capacidades realmente disponibles. Usa la skill más específica y carga sus referencias solo cuando hagan falta; si nada aporta, resuelve directamente. Para selección ambigua consulta [Bibliotecario](skills/altiora-bibliotecario/SKILL.md). En trabajos pequeños evita equipos; delega solo con autorización y capacidad real. Reutiliza evidencia vigente y responde con resultado, comprobación y límite material, sin repetir historia ni omitir requisitos para ahorrar. No presupongas ahorro medido, modelos cambiados o conexiones por existir un archivo.
+<!-- ALTIORA_BIBLIOTECARIO_END -->

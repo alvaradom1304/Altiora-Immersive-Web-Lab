@@ -1,0 +1,36 @@
+{
+  "id": "T1030-6eea",
+  "title": "Auditar MCP After Effects Windows y seguridad",
+  "role": "web-engineer",
+  "ai": "codex",
+  "reviewer": "qa-reviewer",
+  "depends": [],
+  "files": [
+    "scripts/after-effects-bridge.mjs",
+    "scripts/after-effects-mcp.mjs",
+    "scripts/setup-after-effects-access.mjs"
+  ],
+  "acceptance": "Pruebas Windows Linux y registro local sin acceso remoto supuesto",
+  "status": "hecha",
+  "owner": "codex/web-engineer",
+  "created": "2026-10-31T04:52:44Z",
+  "created_by": "codex/web-engineer",
+  "history": [
+    {
+      "at": "2026-10-31T04:52:44Z",
+      "by": "codex/web-engineer",
+      "status": "pendiente"
+    },
+    {
+      "at": "2026-10-31T04:53:06Z",
+      "by": "codex/web-engineer",
+      "status": "en_curso"
+    },
+    {
+      "at": "2026-10-31T05:06:28Z",
+      "by": "codex/web-engineer",
+      "status": "hecha",
+      "note": "Pruebas Windows del puente y registro local pasaron; Codex real leyó config aislada; revisión independiente sin fallos materiales; aerender no encontrado, clientes AE no certificados. Evidencia creative/visual-studio/after-effects/VERIFICATION.md"
+    }
+  ]
+}

@@ -5,6 +5,15 @@ import {fileURLToPath} from "node:url";
 import {resolve} from "node:path";
 import {handleRequest,TOOLS} from "./after-effects-mcp.mjs";
 
+test('Malformed JSON-RPC and unknown tool fields fail closed',async()=>{
+  for(const message of [null,[],{}, {jsonrpc:'1.0',method:'tools/list'}]) {
+    const out=await handleRequest(message);
+    assert.equal(out.error.code,-32600);
+  }
+  const out=await handleRequest({jsonrpc:'2.0',id:12,method:'tools/call',params:{name:'after_effects_plan_render',arguments:{project:'approved/test.aep',composition:'Shot',output:'out/test.mov',shell:'ignored?'}}});
+  assert.equal(out.result.isError,true);
+});
+
 test("MCP supports initialization and restricted read-only list until owner approves",async()=>{
   const init=await handleRequest({jsonrpc:"2.0",id:1,method:"initialize",params:{protocolVersion:"2025-06-18"}});
   assert.equal(init.id,1);
