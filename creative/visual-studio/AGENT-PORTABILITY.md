@@ -76,3 +76,6 @@ Estados permitidos: `DESIGNED`, `IMPLEMENTED`, `RENDERED`, `TESTED`, `BLOCKED`, 
 
 ## Skills avanzadas V3 compartidas
 Para CGI y postproducción de color abrir [advanced-cgi-color.md](playbooks/advanced-cgi-color.md). Para ilustración/motion artístico abrir [illustration-particles.md](playbooks/illustration-particles.md). Para novedades de versiones y pruebas de adopción abrir [SCOUT-V3.md](SCOUT-V3.md). Los tres documentos son portables a Claude Code, Gemini/Antigravity y ChatGPT/Codex cuando disponen de acceso al repositorio.
+
+## Acceso Adobe After Effects
+Hay un [puente de render local](after-effects/README.md) y una composición .jsx original para ejecutar manualmente con autorización. El comando `npm run adobe:check` determina visibilidad del ejecutable `aerender` **en la máquina de la IA**, no en la laptop del usuario. El conector Adobe de ChatGPT tiene funciones propias y no se debe presentar como control del proyecto .aep sin validación explícita.
