@@ -25,3 +25,22 @@ Cuando haya petición visual activar el subagente `audiovisual-experience-direct
 
 ## Visual Studio V3 y skills actualizables
 El Director Audiovisual consulta [SCOUT-V3](creative/visual-studio/SCOUT-V3.md) para nuevas versiones y activa por intención [CGI-color](creative/visual-studio/playbooks/advanced-cgi-color.md) o [2D-motion-artístico](creative/visual-studio/playbooks/illustration-particles.md). Las nuevas herramientas son referencias, no dependencias ya instaladas.
+
+## Adobe After Effects
+El [puente local AE](creative/visual-studio/after-effects/README.md) permite comprobar `aerender`, planear un render y, con permiso explícito y archivo .aep local, ejecutarlo en una computadora con After Effects instalado. Si no hay acceso, delegar alternativa. El conector Adobe de ChatGPT es una integración distinta.
+
+## MCP local After Effects para Claude Code
+Consultar [registro multi-cliente](creative/visual-studio/after-effects/MCP-SETUP.md): `npm run ae:clients:plan` y, solo desde la laptop con permiso, `npm run ae:clients:connect`. Comprobar con `claude mcp list`. El Director Audiovisual puede entonces elegir AE si `aerender` funciona; nunca afirmar acceso del ChatGPT remoto.
+
+## After Effects en PC — MCP local
+Desde la carpeta Altiora confiable, ejecutar `npm run after-effects:setup -- --apply` para crear configuración de este proyecto y verificar `/mcp`. Abrir [instrucciones MCP](creative/visual-studio/after-effects/MCP-SETUP.md). Usar siempre primero `after_effects_preflight`; si la app no está disponible, no afirmar acceso. Render solo tras autorización explícita del propietario y aprobación del proyecto exacto.
+
+<!-- ALTIORA_BIBLIOTECARIO_START -->
+## Selección y contexto
+En cada mensaje conserva el objetivo activo y elige entre las capacidades realmente disponibles. Usa la skill más específica y carga sus referencias solo cuando hagan falta; si nada aporta, resuelve directamente. Para selección ambigua consulta [Bibliotecario](skills/altiora-bibliotecario/SKILL.md). En trabajos pequeños evita equipos; delega solo con autorización y capacidad real. Reutiliza evidencia vigente y responde con resultado, comprobación y límite material, sin repetir historia ni omitir requisitos para ahorrar. No presupongas ahorro medido, modelos cambiados o conexiones por existir un archivo.
+<!-- ALTIORA_BIBLIOTECARIO_END -->
+
+<!-- ALTIORA_AUDIO_SPECIALIST -->
+Para sonido, voz, música, restauración, mezcla o masterización, usar [audio-specialist](team/agents/audio-specialist.md) y [audio-production](skills/audio-production/SKILL.md). Cargar solo la modalidad necesaria; separar medición, escucha y aprobación.
+
+Para diagnóstico, evaluación de recuperación o QA audiovisual, seguir bajo demanda [operación compartida](docs/operations/SHARED-OPERATIONS.md). No declarar conexiones ni aprobación comercial por existencia de archivos o éxito de tests.

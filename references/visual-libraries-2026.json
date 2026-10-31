@@ -12,21 +12,33 @@
       "category": "video-generativo",
       "use": "Publicidad, reels, motion typography y clips con React",
       "decision": "evaluate",
-      "license_note": "Licencia especial Remotion; revisar elegibilidad comercial",
+      "license_note": "Custom Remotion free/company license; commercial eligibility depends on entity size/type and version",
       "priority": "P0",
       "risk": "No ejecutar renders masivos ni instalar sin revisión; presupuesto de GPU/almacenamiento",
-      "integrated": false
+      "integrated": false,
+      "license_review": {
+        "status": "license-file-reviewed; verify legal entity criteria for each commercial project",
+        "source_url": "https://github.com/remotion-dev/remotion/blob/main/LICENSE.md",
+        "reviewed_on": "2026-10-30",
+        "scope": "Top-level source evidence only; full asset/codec/dependency review still needed"
+      }
     },
     {
       "id": "remotion-dev/skills",
       "url": "https://github.com/remotion-dev/skills",
       "category": "ai-workflows",
       "use": "Buenas prácticas oficiales para generar video con agentes",
-      "decision": "reference_only",
-      "license_note": "Licencia del contenido por verificar",
+      "decision": "hold",
+      "license_note": "No top-level LICENSE observed; README documents agent skills and installation commands",
       "priority": "P0",
       "risk": "Evaluar el contenido de skills antes de importar; no ejecución automática",
-      "integrated": false
+      "integrated": false,
+      "license_review": {
+        "status": "no-root-license-found; documentation reference only",
+        "source_url": "https://github.com/remotion-dev/skills/blob/main/README.md",
+        "reviewed_on": "2026-10-30",
+        "scope": "Top-level source evidence only; full asset/codec/dependency review still needed"
+      }
     },
     {
       "id": "motiondivision/motion",
@@ -133,10 +145,16 @@
       "category": "3d-authoring",
       "use": "DCC para entornos, iluminación, materiales, Geometry Nodes y renders",
       "decision": "tool_reference",
-      "license_note": "GPL y licencias mixtas del repositorio; verificar componente",
+      "license_note": "GNU GPL, main COPYING refers to detailed GPL terms; asset and addon licensing separate",
       "priority": "P0",
       "risk": "No equivale a controlar Blender instalado ni autoriza addons externos",
-      "integrated": false
+      "integrated": false,
+      "license_review": {
+        "status": "license-file-reviewed; addons/assets subject to own licenses",
+        "source_url": "https://github.com/blender/blender/blob/main/COPYING",
+        "reviewed_on": "2026-10-30",
+        "scope": "Top-level source evidence only; full asset/codec/dependency review still needed"
+      }
     },
     {
       "id": "KhronosGroup/glTF-Blender-IO",
@@ -188,10 +206,16 @@
       "category": "adobe-after-effects",
       "use": "Guía comunitaria ExtendScript para After Effects",
       "decision": "reference_only",
-      "license_note": "Contenido con copyright Adobe; solo consulta",
+      "license_note": "README states Adobe copyright; community scripting reference, not open-source license grant",
       "priority": "P0",
       "risk": "No copiar/republicar guía ni presumir compatibilidad moderna",
-      "integrated": false
+      "integrated": false,
+      "license_review": {
+        "status": "copyright-reference-only; cannot republish guide",
+        "source_url": "https://github.com/docsforadobe/after-effects-scripting-guide/blob/master/readme.md",
+        "reviewed_on": "2026-10-30",
+        "scope": "Top-level source evidence only; full asset/codec/dependency review still needed"
+      }
     },
     {
       "id": "ffmpegwasm/ffmpeg.wasm",
@@ -220,11 +244,17 @@
       "url": "https://github.com/remotion-dev/claude-code-plugin",
       "category": "ai-claude",
       "use": "Bridge de skills Remotion para Claude Code",
-      "decision": "reference_only",
-      "license_note": "Licencia no comprobada",
+      "decision": "hold",
+      "license_note": "README says internal package without documentation; no root LICENSE observed",
       "priority": "P1",
       "risk": "Auditar manifests, hooks y scripts antes de usar",
-      "integrated": false
+      "integrated": false,
+      "license_review": {
+        "status": "no-root-license-found; internal undocumented plugin, do not install",
+        "source_url": "https://github.com/remotion-dev/claude-code-plugin/blob/main/README.md",
+        "reviewed_on": "2026-10-30",
+        "scope": "Top-level source evidence only; full asset/codec/dependency review still needed"
+      }
     },
     {
       "id": "remotion-dev/codex-plugin",
@@ -254,10 +284,16 @@
       "category": "blender-addon",
       "use": "Referencia de retopología para Blender",
       "decision": "hold",
-      "license_note": "Licencia no comprobada",
+      "license_note": "GPL-3.0-or-later code; non-code assets property of CG Cookie/Orange Turbine and restricted",
       "priority": "P2",
       "risk": "Revisar licencia, Blender target y distribución del addon antes de usar",
-      "integrated": false
+      "integrated": false,
+      "license_review": {
+        "status": "license-file-reviewed; assets rights require explicit permissions",
+        "source_url": "https://github.com/CGCookie/retopoflow/blob/master/RetopoFlow.LICENSE",
+        "reviewed_on": "2026-10-30",
+        "scope": "Top-level source evidence only; full asset/codec/dependency review still needed"
+      }
     },
     {
       "id": "AcademySoftwareFoundation/OpenColorIO",
@@ -329,13 +365,19 @@
       "url": "https://github.com/PixarAnimationStudios/OpenUSD",
       "category": "scene-interchange",
       "use": "Layered scene composition and assets for multi-DCC workflows",
-      "decision": "evaluate",
-      "license_note": "NOASSERTION: inspect licenses and notices",
+      "decision": "hold",
+      "license_note": "Tomorrow Open Source Technology License 1.0 (custom); review trademark and notices",
       "priority": "P1",
       "risk": "USD not a one-click GLB substitute; review scale, variants, materials and pipelines",
       "integrated": false,
       "verified_on": "2026-10-30",
-      "verified_scope": "Repository existence/activity/license field reviewed via GitHub metadata; no code audit or render"
+      "verified_scope": "Repository existence/activity/license field reviewed via GitHub metadata; no code audit or render",
+      "license_review": {
+        "status": "license-file-reviewed; downstream notices and legal review pending",
+        "source_url": "https://github.com/PixarAnimationStudios/OpenUSD/blob/dev/LICENSE.txt",
+        "reviewed_on": "2026-10-30",
+        "scope": "Top-level evidence only; no permission to auto-install or distribute"
+      }
     },
     {
       "id": "google/draco",
@@ -356,12 +398,18 @@
       "category": "3d-reconstruction",
       "use": "Point clouds, geometry cleaning and spatial asset processing",
       "decision": "evaluate",
-      "license_note": "NOASSERTION: inspect LICENSE and third-party notices",
+      "license_note": "MIT (repository LICENSE); dependency notices still require review",
       "priority": "P2",
       "risk": "Privacy/consent of scans; high memory CPU; not a Blender connector",
       "integrated": false,
       "verified_on": "2026-10-30",
-      "verified_scope": "Repository existence/activity/license field reviewed via GitHub metadata; no code audit or render"
+      "verified_scope": "Repository existence/activity/license field reviewed via GitHub metadata; no code audit or render",
+      "license_review": {
+        "status": "license-file-reviewed; dependencies pending",
+        "source_url": "https://github.com/isl-org/Open3D/blob/main/LICENSE",
+        "reviewed_on": "2026-10-30",
+        "scope": "Top-level evidence only; no permission to auto-install or distribute"
+      }
     },
     {
       "id": "Adobe-CEP/Samples",
@@ -382,25 +430,37 @@
       "category": "adobe-legacy",
       "use": "Legacy Adobe Creative Cloud extension tooling and documentation",
       "decision": "hold",
-      "license_note": "License not identified from GitHub metadata",
+      "license_note": "Adobe SDK terms (English/French PDF linked in README); do not assume open source",
       "priority": "P2",
       "risk": "Host version and code signing required; never run unsigned extension",
       "integrated": false,
       "verified_on": "2026-10-30",
-      "verified_scope": "Repository existence/activity/license field reviewed via GitHub metadata; no code audit or render"
+      "verified_scope": "Repository existence/activity/license field reviewed via GitHub metadata; no code audit or render",
+      "license_review": {
+        "status": "linked-terms-only; legal review required",
+        "source_url": "https://github.com/Adobe-CEP/CEP-Resources/blob/master/README.md",
+        "reviewed_on": "2026-10-30",
+        "scope": "Top-level evidence only; no permission to auto-install or distribute"
+      }
     },
     {
       "id": "patriciogonzalezvivo/lygia",
       "url": "https://github.com/patriciogonzalezvivo/lygia",
       "category": "glsl-shaders",
       "use": "Reusable GLSL shader functions and procedural visual effects",
-      "decision": "evaluate",
-      "license_note": "NOASSERTION: review repo LICENSE",
+      "decision": "hold",
+      "license_note": "Prosperity Public License 3.0.0; noncommercial and limited 30-day commercial trial",
       "priority": "P0",
-      "risk": "Audit include graph, shader performance, WebGL/WebGPU dialect and notices",
+      "risk": "Noncommercial-focused Prosperity license with limited commercial trial. HOLD for ALL commercial Altiora/client use unless properly licensed; use own shaders or a permitted alternative.",
       "integrated": false,
       "verified_on": "2026-10-30",
-      "verified_scope": "Repository existence/activity/license field reviewed via GitHub metadata; no code audit or render"
+      "verified_scope": "Repository existence/activity/license field reviewed via GitHub metadata; no code audit or render",
+      "license_review": {
+        "status": "commercial-use-blocked-until-authorized",
+        "source_url": "https://github.com/patriciogonzalezvivo/lygia/blob/main/LICENSE.md",
+        "reviewed_on": "2026-10-30",
+        "scope": "Top-level evidence only; no permission to auto-install or distribute"
+      }
     },
     {
       "id": "ashima/webgl-noise",
@@ -421,12 +481,18 @@
       "category": "shader-compilation",
       "use": "Cross-target shader language and compiler for graphics",
       "decision": "evaluate",
-      "license_note": "NOASSERTION: inspect component licenses",
+      "license_note": "Apache-2.0 WITH LLVM-exception (top-level); third-party notices may apply",
       "priority": "P1",
       "risk": "High integration cost; validate GPU backend and shader compatibility",
       "integrated": false,
       "verified_on": "2026-10-30",
-      "verified_scope": "Repository existence/activity/license field reviewed via GitHub metadata; no code audit or render"
+      "verified_scope": "Repository existence/activity/license field reviewed via GitHub metadata; no code audit or render",
+      "license_review": {
+        "status": "license-file-reviewed; third-party review pending",
+        "source_url": "https://github.com/shader-slang/slang/blob/master/LICENSE",
+        "reviewed_on": "2026-10-30",
+        "scope": "Top-level evidence only; no permission to auto-install or distribute"
+      }
     },
     {
       "id": "regl-project/regl",
@@ -447,12 +513,18 @@
       "category": "webgl-lightweight",
       "use": "Small WebGL engine for lightweight artistic web scenes",
       "decision": "evaluate",
-      "license_note": "License unspecified in GitHub metadata",
+      "license_note": "Unlicense (package.json and README), check asset notices",
       "priority": "P1",
       "risk": "Check current release, WebGL target, controls and accessibility",
       "integrated": false,
       "verified_on": "2026-10-30",
-      "verified_scope": "Repository existence/activity/license field reviewed via GitHub metadata; no code audit or render"
+      "verified_scope": "Repository existence/activity/license field reviewed via GitHub metadata; no code audit or render",
+      "license_review": {
+        "status": "package-metadata-reviewed; other notices pending",
+        "source_url": "https://github.com/oframe/ogl/blob/master/README.md",
+        "reviewed_on": "2026-10-30",
+        "scope": "Top-level evidence only; no permission to auto-install or distribute"
+      }
     },
     {
       "id": "visgl/luma.gl",
@@ -460,12 +532,18 @@
       "category": "webgl-webgpu",
       "use": "Advanced graphics GPU rendering and data visualizations",
       "decision": "evaluate",
-      "license_note": "NOASSERTION: verify package licenses",
+      "license_note": "MIT (repository LICENSE; acknowledges third-party code)",
       "priority": "P2",
       "risk": "Heavy dependency surface; do not combine blindly with Three or Babylon",
       "integrated": false,
       "verified_on": "2026-10-30",
-      "verified_scope": "Repository existence/activity/license field reviewed via GitHub metadata; no code audit or render"
+      "verified_scope": "Repository existence/activity/license field reviewed via GitHub metadata; no code audit or render",
+      "license_review": {
+        "status": "license-file-reviewed; third-party review pending",
+        "source_url": "https://github.com/visgl/luma.gl/blob/master/LICENSE",
+        "reviewed_on": "2026-10-30",
+        "scope": "Top-level evidence only; no permission to auto-install or distribute"
+      }
     },
     {
       "id": "BabylonJS/Babylon.js",
@@ -525,12 +603,18 @@
       "category": "svg-animation",
       "use": "Programmable SVG vector transformations and artwork",
       "decision": "evaluate",
-      "license_note": "NOASSERTION: verify license per release",
+      "license_note": "MIT-style license (repository LICENSE.txt)",
       "priority": "P1",
       "risk": "Verify accessibility, browser compatibility and animation ownership",
       "integrated": false,
       "verified_on": "2026-10-30",
-      "verified_scope": "Repository existence/activity/license field reviewed via GitHub metadata; no code audit or render"
+      "verified_scope": "Repository existence/activity/license field reviewed via GitHub metadata; no code audit or render",
+      "license_review": {
+        "status": "license-file-reviewed; per-release review pending",
+        "source_url": "https://github.com/svgdotjs/svg.js/blob/master/LICENSE.txt",
+        "reviewed_on": "2026-10-30",
+        "scope": "Top-level evidence only; no permission to auto-install or distribute"
+      }
     },
     {
       "id": "d3/d3",
@@ -551,12 +635,18 @@
       "category": "media-postproduction",
       "use": "Transcode, cut, mux audio, validate output formats",
       "decision": "evaluate",
-      "license_note": "LGPL/GPL depending on build flags and linked codecs",
+      "license_note": "LGPL-2.1-or-later default; optional GPL components and build flags change obligations",
       "priority": "P0",
       "risk": "Codec patents and distribution conditions vary; log exact binary build",
       "integrated": false,
       "verified_on": "2026-10-30",
-      "verified_scope": "Repository existence/activity/license field reviewed via GitHub metadata; no code audit or render"
+      "verified_scope": "Repository existence/activity/license field reviewed via GitHub metadata; no code audit or render",
+      "license_review": {
+        "status": "license-file-reviewed; inspect binary, codecs and distribution flags",
+        "source_url": "https://github.com/FFmpeg/FFmpeg/blob/master/LICENSE.md",
+        "reviewed_on": "2026-10-30",
+        "scope": "Top-level source evidence only; full asset/codec/dependency review still needed"
+      }
     },
     {
       "id": "mltframework/mlt",
@@ -603,12 +693,18 @@
       "category": "2d-animation",
       "use": "Handdrawn 2D animation and compositing reference",
       "decision": "reference_only",
-      "license_note": "NOASSERTION: review bundled licenses",
+      "license_note": "BSD-3-Clause base; separate licenses for third-party components and brushes",
       "priority": "P2",
       "risk": "Desktop workflow, not automatic agent control or web runtime",
       "integrated": false,
       "verified_on": "2026-10-30",
-      "verified_scope": "Repository existence/activity/license field reviewed via GitHub metadata; no code audit or render"
+      "verified_scope": "Repository existence/activity/license field reviewed via GitHub metadata; no code audit or render",
+      "license_review": {
+        "status": "license-file-reviewed; third-party review pending",
+        "source_url": "https://github.com/opentoonz/opentoonz/blob/master/LICENSE.txt",
+        "reviewed_on": "2026-10-30",
+        "scope": "Top-level evidence only; no permission to auto-install or distribute"
+      }
     },
     {
       "id": "ManimCommunity/manim",
@@ -668,12 +764,18 @@
       "category": "model-interchange",
       "use": "Import and convert common 3D model formats",
       "decision": "evaluate",
-      "license_note": "NOASSERTION: verify licensing and importers",
+      "license_note": "BSD-style primary license; test/models-nonbsd and components have exceptions",
       "priority": "P1",
       "risk": "Untrusted 3D files are an attack surface; sandbox conversion",
       "integrated": false,
       "verified_on": "2026-10-30",
-      "verified_scope": "Repository existence/activity/license field reviewed via GitHub metadata; no code audit or render"
+      "verified_scope": "Repository existence/activity/license field reviewed via GitHub metadata; no code audit or render",
+      "license_review": {
+        "status": "license-file-reviewed; third-party review pending",
+        "source_url": "https://github.com/assimp/assimp/blob/master/LICENSE",
+        "reviewed_on": "2026-10-30",
+        "scope": "Top-level evidence only; no permission to auto-install or distribute"
+      }
     },
     {
       "id": "KhronosGroup/glTF-Validator",
@@ -863,12 +965,18 @@
       "category": "shader-build",
       "use": "Shader compilation tooling for Vulkan-based graphics pipelines",
       "decision": "hold",
-      "license_note": "NOASSERTION — validate individual components",
+      "license_note": "Apache-2.0 (top-level); bundled subcomponents may differ",
       "priority": "P2",
       "risk": "Not a direct Three.js GLSL/WebGPU solution; complex native build/security surface",
       "integrated": false,
       "verified_on": "2026-10-30",
-      "verified_scope": "GitHub metadata: repository existence, recent activity, archived and license fields; no execution or security audit"
+      "verified_scope": "GitHub metadata: repository existence, recent activity, archived and license fields; no execution or security audit",
+      "license_review": {
+        "status": "license-file-reviewed; third-party review pending",
+        "source_url": "https://github.com/google/shaderc/blob/main/LICENSE",
+        "reviewed_on": "2026-10-30",
+        "scope": "Top-level evidence only; no permission to auto-install or distribute"
+      }
     }
   ]
 }

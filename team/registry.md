@@ -13,6 +13,7 @@ Roles operativos; no representan personal contratado ni agentes ya ejecutándose
 | Diseñador UI | Construir interfaz coherente y responsive | Tokens, componentes y estados | UX + Ingeniería |
 | Productor visual | Producir imágenes, video e ilustraciones | Recursos optimizados con manifiesto | Dirección creativa + QA |
 | Motion designer | Añadir continuidad e inmersión con propósito | Guion de motion y fallbacks | UX + Ingeniería |
+| Especialista en sonido y audio | Diseño sonoro, voz, música, restauración, mezcla y masterización | Cue sheet, fuentes/stems, master e informe de medidas/escucha/derechos | Dirección audiovisual + QA |
 | Ingeniero web | Implementar experiencia fiable y mantenible | Componentes, integración y verificación técnica | QA |
 | Content designer | Hacer comprensible la oferta y las acciones | Copy por sección, CTA, errores y ayuda | Marca + UX |
 | QA y accesibilidad | Detectar y bloquear problemas demostrados | Hallazgos, evidencias y scorecard | Director de experiencia |

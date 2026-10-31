@@ -280,6 +280,20 @@
         "ai-video-direction",
         "creative-quality-assurance"
       ]
+    },
+    {
+      "id": "audio-specialist",
+      "when": "Usar para diseño sonoro, voz, música, Foley, restauración, edición, mezcla, masterización y QA de audio en anuncios, video, podcasts o experiencias interactivas.",
+      "milestones": [
+        "M1",
+        "M3",
+        "M4"
+      ],
+      "skills": [
+        "audio-production",
+        "creative-quality-assurance",
+        "altiora-quality-review"
+      ]
     }
   ]
 }

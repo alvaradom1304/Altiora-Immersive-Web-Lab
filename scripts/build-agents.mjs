@@ -52,6 +52,8 @@ El trabajo se reparte en el [chat del equipo](../../team/chat/README.md). Identi
 5. Si algo bloquea: \`npm run chat -- block <tarea> --as <ia>/${agent.id} --note "motivo y qué se necesita"\`.
 
 ## Reglas
+Para diagnosticar herramientas, evaluar recuperación de skills o entregar producción audiovisual, consultar [operación compartida](../../docs/operations/SHARED-OPERATIONS.md) bajo demanda. Un archivo de configuración no prueba una conexión; los informes automáticos no sustituyen escucha, revisión visual ni derechos.
+
 - Leer AGENTS.md y los documentos aprobados del proyecto antes de producir.
 - No inventar hechos, métricas, testimonios ni resultados de herramientas no ejecutadas.
 - Separar evidencia, supuestos, decisiones pendientes y criterio de aceptación.
@@ -77,6 +79,12 @@ for (const agent of agents) {
   frontmatter.push('---', '');
   const text = body(agent, role);
   outputs.push([`.claude/agents/${agent.id}.md`, frontmatter.join('\n') + '\n' + text]);
+  if (agent.id === 'audio-specialist') {
+    // Native adapters inherit client tools/model/permissions; no account edits.
+    const instructions = 'Read skills/audio-production/SKILL.md from the project root before audio work.\n\n' + text;
+    outputs.push([`.codex/agents/${agent.id}.toml`, `name = ${JSON.stringify(agent.id)}\ndescription = ${JSON.stringify(description)}\ndeveloper_instructions = ${JSON.stringify(instructions)}\n`]);
+    outputs.push([`.gemini/agents/${agent.id}.md`, `---\nname: ${agent.id}\ndescription: ${JSON.stringify(description)}\nkind: local\n---\n\n${instructions}`]);
+  }
   outputs.push([`team/agents/${agent.id}.md`, `<!-- Generado con npm run agents:build desde team/agents.json, team/local-agents.json y team/roles/${agent.id}.md. No editar a mano. -->\n\n` + text.replace('\n\nRol del equipo', `\n\n> ${description}\n> Pegar este archivo como instrucciones del sistema o primer mensaje en cualquier IA.\n\nRol del equipo`)]);
 }
 

@@ -15,7 +15,7 @@ Mapa de agentes, chats, skills y repositorios disponibles en Claude Code y en el
 
 Otras IAs (Codex, Gemini, ChatGPT): prompts en [team/agents/](team/agents/experience-director.md) y el mismo chat (`npm run chat`), ver [team/chat/README.md](team/chat/README.md).
 
-## Agentes (23)
+## Agentes (24)
 
 | Agente | Chat | Milestones | Skills asignadas |
 |---|---|---|---|
@@ -35,6 +35,7 @@ Otras IAs (Codex, Gemini, ChatGPT): prompts en [team/agents/](team/agents/experi
 | [Director de crecimiento comercial](.claude/agents/commerce-growth-director.md) | `/chat-commerce-growth-director` | M0, M1, M6 | `business-social-audit`, `product-winner-scorecard`, `organic-social-distribution`, `whatsapp-lead-to-sale`, `growth-experiment-analysis`, `consumer-psychology`, `marketing-analytics` |
 | [Director de inteligencia de mercado](.claude/agents/market-intelligence-director.md) | `/chat-market-intelligence-director` | M0, M1 | `top10-video-research`, `product-winner-scorecard`, `creative-deconstruction-originality`, `marketing-psychology`, `market-research` |
 | [Director de anuncios audiovisuales](.claude/agents/creative-ads-director.md) | `/chat-creative-ads-director` | M1, M3, M6 | `emotional-brand-activation`, `creative-deconstruction-originality`, `organic-social-distribution`, `advertising-concept`, `storyboarding`, `ai-video-direction`, `creative-quality-assurance` |
+| [Especialista en sonido y audio](.claude/agents/audio-specialist.md) | `/chat-audio-specialist` | M1, M3, M4 | `audio-production`, `creative-quality-assurance`, `altiora-quality-review` |
 | [altiora-engineering](.claude/agents/altiora-engineering.md) | `/chat-altiora-engineering` |  |  |
 | [altiora-experience](.claude/agents/altiora-experience.md) | `/chat-altiora-experience` |  |  |
 | [altiora-research](.claude/agents/altiora-research.md) | `/chat-altiora-research` |  | `altiora-repository-research` |
@@ -43,7 +44,7 @@ Otras IAs (Codex, Gemini, ChatGPT): prompts en [team/agents/](team/agents/experi
 | [immersive-motion-engineer](.claude/agents/immersive-motion-engineer.md) | `/chat-immersive-motion-engineer` |  | `immersive-interaction-lab` |
 | [immersive-reviewer](.claude/agents/immersive-reviewer.md) | `/chat-immersive-reviewer` |  | `immersive-interaction-lab` |
 
-## Skills (261)
+## Skills (263)
 
 **Auto** = el adaptador permite invocación por el modelo; no prueba carga en una sesión. La asignación a agentes no restringe el descubrimiento. Origen vacío = sin fuente externa registrada; no certifica autoría.
 
@@ -78,12 +79,14 @@ Otras IAs (Codex, Gemini, ChatGPT): prompts en [team/agents/](team/agents/experi
 | [ai-video-direction](skills/ai-video-direction/SKILL.md) | sí | audiovisual-experience-director, visual-producer, creative-ads-director |  | ai-video-direction: Creative Intelligence. Usar para producir video_brief, prompts, continuity_checks a partir de guion, duración, refere… |
 | [altiora-agent-orchestrator](skills/altiora-agent-orchestrator/SKILL.md) | sí | experience-director |  | Coordina proyectos de Altiora que combinan investigación de repositorios, diseño, implementación y revisión mediante agentes y skills. Se… |
 | [altiora-ai-economy](skills/altiora-ai-economy/SKILL.md) | sí | — |  | Selecciona un flujo de IA para Altiora que reduzca coste y contexto repetido preservando la calidad final. Se usa al comparar proveedores… |
-| [altiora-quality-review](skills/altiora-quality-review/SKILL.md) | sí | qa-reviewer, altiora-review |  | Revisa cambios de Altiora contra el encargo, las funciones afectadas y su evidencia de prueba. Se usa para comprobar una entrega o una ta… |
+| [altiora-bibliotecario](skills/altiora-bibliotecario/SKILL.md) | sí | — |  | Selecciona skills, herramientas y roles con contexto mínimo en Altiora. Usar al enrutar una petición nueva, retomar una tarea o resolver … |
+| [altiora-quality-review](skills/altiora-quality-review/SKILL.md) | sí | qa-reviewer, audio-specialist, altiora-review |  | Revisa cambios de Altiora contra el encargo, las funciones afectadas y su evidencia de prueba. Se usa para comprobar una entrega o una ta… |
 | [altiora-repository-research](skills/altiora-repository-research/SKILL.md) | sí | altiora-research |  | Selecciona y compara repositorios o skills para un proyecto de Altiora según utilidad, compatibilidad, mantenimiento, licencia y coste to… |
 | [analytics](skills/analytics/SKILL.md) | sí | growth-analyst | coreyhaines31/marketingskills | When the user wants to set up, improve, or audit analytics tracking and measurement. Also use when the user mentions "set up tracking," "… |
 | [api-integration](skills/api-integration/SKILL.md) | sí | — |  | api-integration: AI & Automation. Usar para producir integration_code, error_handling, tests a partir de API oficial, contrato, entorno, … |
 | [api-security](skills/api-security/SKILL.md) | sí | — |  | api-security: Cybersecurity. Usar para producir api_risks, controls, verification a partir de endpoints, contrato, auth, datos, límites; … |
 | [art-direction](skills/art-direction/SKILL.md) | sí | creative-director |  | art-direction: Brand Intelligence. Usar para producir art_concept, visual_rules, alternatives a partir de estrategia, audiencia, medios, … |
+| [audio-production](skills/audio-production/SKILL.md) | sí | audio-specialist |  | Diseña y revisa sonido, voz, música, restauración, mezcla y masterización para anuncios, video, podcasts y experiencias interactivas. Usa… |
 | [authentication-security](skills/authentication-security/SKILL.md) | sí | — |  | authentication-security: Cybersecurity. Usar para producir auth_findings, session_controls, fixes a partir de flujos login/sesión, roles,… |
 | [authorization-security](skills/authorization-security/SKILL.md) | sí | — |  | authorization-security: Cybersecurity. Usar para producir access_matrix, negative_tests, fixes a partir de roles, recursos, reglas, owner… |
 | [automation-design](skills/automation-design/SKILL.md) | sí | — |  | automation-design: AI & Automation. Usar para producir automation_case, workflow, human_exceptions a partir de proceso actual, volumen, c… |
@@ -135,7 +138,7 @@ Otras IAs (Codex, Gemini, ChatGPT): prompts en [team/agents/](team/agents/experi
 | [cost-to-serve](skills/cost-to-serve/SKILL.md) | sí | — |  | cost-to-serve: Operations & Logistics. Usar para producir service_cost, allocation, decisions a partir de pedidos/clientes, tiempos, tran… |
 | [creative-deconstruction-originality](skills/creative-deconstruction-originality/SKILL.md) | sí | market-intelligence-director, creative-ads-director |  | Usar cuando el usuario comparta anuncios de referencia y quiera inspirarse en ritmo, emoción, humor, sonido, iluminación o montaje sin co… |
 | [creative-direction](skills/creative-direction/SKILL.md) | sí | creative-director, audiovisual-experience-director |  | creative-direction: Creative Intelligence. Usar para producir creative_routes, production_rules, recommendation a partir de brief, marca,… |
-| [creative-quality-assurance](skills/creative-quality-assurance/SKILL.md) | sí | creative-director, audiovisual-experience-director, creative-ads-director |  | creative-quality-assurance: Creative Intelligence. Usar para producir creative_review, defects, fixes a partir de piezas, brief, marca, f… |
+| [creative-quality-assurance](skills/creative-quality-assurance/SKILL.md) | sí | creative-director, audiovisual-experience-director, creative-ads-director, audio-specialist |  | creative-quality-assurance: Creative Intelligence. Usar para producir creative_review, defects, fixes a partir de piezas, brief, marca, f… |
 | [creative-strategy](skills/creative-strategy/SKILL.md) | sí | — |  | creative-strategy: Creative Intelligence. Usar para producir creative_brief, message, success_criteria a partir de objetivo, insight, aud… |
 | [cro](skills/cro/SKILL.md) | sí | — | coreyhaines31/marketingskills | When the user wants to optimize, improve, or increase conversions on any marketing page or form — including homepage, landing pages, pric… |
 | [cross-selling](skills/cross-selling/SKILL.md) | sí | — |  | cross-selling: Sales Intelligence. Usar para producir complementary_offer, suitability, message a partir de compra/uso actual, necesidad … |

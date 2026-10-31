@@ -2,10 +2,57 @@
   "schema_version": 1,
   "project": "Altiora Visual Studio",
   "repository": "alvaradom1304/Altiora-Immersive-Web-Lab",
-  "snapshot_date": "2026-10-30",
+  "snapshot_date": "2026-10-31",
   "snapshot_kind": "repo_checkpoint_not_live_github_api",
   "description": "Estado reproducible para reanudar entre sesiones e IAs. No significa ejecución persistente ni conexión automática con software.",
   "completed_milestones": [
+    {
+      "id": "VIS-OPS-07",
+      "name": "Control completo idéntico en local y CI para todas las IAs",
+      "result": "DONE",
+      "evidence": [{
+        "url": "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/blob/fix/altiora-unified-quality-check-2026-10-31/docs/operations/SHARED-OPERATIONS.md",
+        "claim": "npm run check reúne las suites existentes de catálogo, puentes, operaciones, toolkit, handler, recuperación y audio; CI llama una sola vez al mismo comando. Check completo local aprobado; fixtures no certifican conexiones nativas."
+      }]
+    },
+    {
+      "id": "VIS-OPS-06",
+      "name": "Bibliotecario sin coincidencias falsas dentro de otras palabras",
+      "result": "DONE",
+      "evidence": [{
+        "url": "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/blob/fix/altiora-librarian-token-boundaries-2026-10-31/skills/altiora-bibliotecario/references/word-boundaries.md",
+        "claim": "Reproducidos SEO/deseo, CRO/microempresa y API/capital; corregida recuperación por términos completos conservando nombres, componentes y acentos. Pruebas y ejemplos antes/después; no demuestra selección nativa o comprensión semántica."
+      }]
+    },
+    {
+      "id": "VIS-OPS-05",
+      "name": "Verificación funcional aislada de handlers y consulta de ejecutor nativo",
+      "result": "DONE",
+      "evidence": [{
+        "url": "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/blob/feature/altiora-runtime-functional-verification-2026-10-31/docs/operations/NATIVE-RUNTIME-VALIDATION.md",
+        "claim": "Codex CLI respondió consultas en perfil aislado; kit propio pasó 18 casos de handler en fixtures temporales. No demuestra confianza, descubrimiento o sesión nativa de otros clientes ni conexión MCP."
+      }]
+    },
+    {
+      "id": "VIS-OPS-04",
+      "name": "Afilado de copias instaladas, rutas de capacidades e identidad de publicación",
+      "result": "DONE",
+      "evidence": [{
+        "url": "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/blob/feature/altiora-toolkit-sharpening-2026-10-31/docs/operations/TOOLKIT-VALIDATION.md",
+        "claim": "390 archivos instalados compactados con respaldos/hashes, cinco capacidades pertinentes incorporadas al proyecto, doctor/traspaso validados y lectura/escritura del MCP de coordinación verificada solo en esta sesión. Sesiones de otros clientes y ahorro de tokens sin certificar."
+      }]
+    },
+    {
+      "id": "VIS-OPS-03",
+      "name": "Diagnóstico compartido, recuperación evaluada y QA audiovisual con evidencia",
+      "result": "DONE",
+      "evidence": [
+        {
+          "url": "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/pull/35",
+          "claim": "Implementado y probado localmente: diagnóstico de cinco clientes, 14 casos de recuperación y revisión conjunta de audio/video. No certifica conexiones, ahorro ni producción comercial. Revisar estado vivo de PR y CI."
+        }
+      ]
+    },
     {
       "id": "VIS-01",
       "name": "Visual Studio base + 23 repositorios",
@@ -79,6 +126,17 @@
           "claim": "Snapshot de 70 referencias y 37 releases estables registradas; baseline fusionado y verificado"
         }
       ]
+    },
+    {
+      "id": "VIS-AUDIO-01",
+      "name": "Especialista portable de sonido y audio con fuentes y medidor original",
+      "result": "DONE",
+      "evidence": [
+        {
+          "url": "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/pull/34",
+          "claim": "Rol/skill implementados; fuentes y compatibilidad revisadas; medidor y casos independientes probados, sin certificar escucha de cliente ni DAW"
+        }
+      ]
     }
   ],
   "current_milestone": {
@@ -96,7 +154,7 @@
       },
       {
         "id": "VIS-05-B",
-        "action": "Ejecutar preflight en la máquina que produce, comprobar Blender/Adobe/Remotion y validar permisos MCP; herramienta de inspección implementada pero conexión local aún no certificada",
+        "action": "Blender 5.2.2 LTS detectado fuera de PATH: versión, arranque limpio, render conceptual PNG 1080x1080 y reapertura de fuente .blend comprobados. FFmpeg decodificó el PNG sin errores. MCP de archivos de coordinación pasó lectura/escritura dentro de su carpeta autorizada; no controla Blender ni Adobe. Aerender no detectado con las consultas disponibles; Remotion local no instalado. Faltan permisos/sesiones de clientes y producción comercial con material real.",
         "status": "IN_PROGRESS",
         "blocker": null,
         "deliverable": "matriz de versiones/permisos/accesos, licencias y riesgos",
@@ -122,6 +180,13 @@
   },
   "capabilities": [
     {
+      "name": "Operación compartida para Claude, Codex, Gemini, Antigravity y ChatGPT: diagnóstico, recuperación y QA audiovisual",
+      "status": "DOCUMENTED",
+      "evidence": [
+        "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/pull/35"
+      ]
+    },
+    {
       "name": "GitHub catálogo y guía visual multi-IA",
       "status": "DOCUMENTED",
       "evidence": [
@@ -143,9 +208,9 @@
       ]
     },
     {
-      "name": "Blender local de la persona",
-      "status": "UNVERIFIED",
-      "evidence": []
+      "name": "Blender local: versión, arranque, render conceptual 1080x1080 y reapertura de fuente comprobados; MCP pendiente",
+      "status": "DOCUMENTED",
+      "evidence": ["https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/blob/fix/altiora-blender-windows-discovery-2026-10-31/docs/operations/BLENDER-LOCAL.md"]
     },
     {
       "name": "Adobe local y APIs UXP",
@@ -182,9 +247,43 @@
         "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/actions/runs/41161761071",
         "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/pull/29"
       ]
+    },
+    {
+      "name": "After Effects local JSX/aerender puente disponible en repositorio",
+      "status": "DOCUMENTED",
+      "evidence": [
+        "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/pull/32"
+      ]
+    },
+    {
+      "name": "Adobe After Effects de la laptop y licencia",
+      "status": "UNVERIFIED",
+      "evidence": []
+    },
+    {
+      "name": "Bibliotecario portable: selección de skills y roles con contexto mínimo",
+      "status": "DOCUMENTED",
+      "evidence": [
+        "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/pull/33"
+      ]
+    },
+    {
+      "name": "Especialista de sonido y audio portable; 14 repositorios revisados y medidor PCM original",
+      "status": "DOCUMENTED",
+      "evidence": [
+        "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/pull/34"
+      ]
     }
   ],
   "context_files": [
+    "docs/operations/LIBRARIAN-BOUNDARIES.md",
+    "docs/operations/NATIVE-RUNTIME-VALIDATION.md",
+    "docs/operations/RUNTIME-SMOKE.md",
+    "docs/operations/TOOLKIT-VALIDATION.md",
+    "docs/operations/BLENDER-LOCAL.md",
+    "docs/operations/SHARED-OPERATIONS.md",
+    "docs/operations/production-qa.md",
+    "docs/operations/VALIDATION.md",
     "AGENTS.md",
     "CLAUDE.md",
     "GEMINI.md",
@@ -197,7 +296,12 @@
     "references/visual-libraries-2026.json",
     "creative/visual-studio/SCOUT-V3.md",
     "creative/visual-studio/playbooks/advanced-cgi-color.md",
-    "creative/visual-studio/playbooks/illustration-particles.md"
+    "creative/visual-studio/playbooks/illustration-particles.md",
+    "skills/altiora-bibliotecario/SKILL.md",
+    "creative/visual-studio/after-effects/VERIFICATION.md",
+    "team/agents/audio-specialist.md",
+    "skills/audio-production/SKILL.md",
+    "references/audio-repositories-2026.json"
   ],
   "known_limits": [
     "Este snapshot no consulta GitHub en tiempo real; cotejar siempre PR, checks y archivos antes de declarar completado.",
@@ -205,7 +309,9 @@
     "Un error de interfaz 'This response couldn't load' es externo a este repositorio.",
     "El agente no sigue ejecutándose automáticamente cuando se cierra o interrumpe el chat.",
     "La primera vigilancia completó escaneo y artefacto, pero GitHub bloqueó crear PR automáticamente; habilitar permiso Actions→General→Allow GitHub Actions to create and approve pull requests. Sin él quedan rama y artefacto, no PR automática.",
-    "Scout V3 revisa últimas releases estables de GitHub P0/P1; no detecta necesariamente versiones publicadas solo en npm, PyPI o Creative Cloud, ni CVEs sin revisar advisories."
+    "Scout V3 revisa últimas releases estables de GitHub P0/P1; no detecta necesariamente versiones publicadas solo en npm, PyPI o Creative Cloud, ni CVEs sin revisar advisories.",
+    "El puente aerender requiere After Effects instalado y autorizado en la laptop: el CI Linux no demuestra conexión ni acceso de un agente a la app del usuario.",
+    "El bibliotecario enruta según capacidades disponibles y metadatos; no garantiza ahorro medido ni descubrimiento automático idéntico en todos los clientes. El puente AE tiene pruebas Windows y validación de configuración Codex aislada; las sesiones Adobe/Claude/Gemini/Antigravity siguen sin certificarse."
   ],
   "recovery_instruction": "Leer checkpoint, consultar el commit/PR más reciente y los checks, reclamar tarea, ejecutar y escribir evidencia antes de terminar. No pedir al usuario que repita el briefing salvo necesidad material."
 }

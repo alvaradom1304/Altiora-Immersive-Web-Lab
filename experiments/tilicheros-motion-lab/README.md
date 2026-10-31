@@ -88,3 +88,17 @@ Claude Code, Gemini/Antigravity y ChatGPT/Codex deben leer [Altiora Visual Studi
 El diseño para bebés es para regalo/decoración conceptual; **no implica que el objeto sea apto para niños, seguro para cunas o cumpla normas de seguridad**. Cualquier producto infantil requiere verificación de edad, materiales, etiquetado y riesgos de asfixia antes de anunciarlo.
 
 **Entrega multi-IA:** Claude Code, Gemini/Antigravity y ChatGPT/Codex utilizan el mismo repositorio, `AGENTS.md`, `creative/visual-studio/ROUTER.md` y `src/content.ts` / `src/variants.ts`. No se afirma acceso remoto a Adobe ni Blender sin instalar y autorizar sus herramientas. Todas las promesas de venta requieren validación independiente.
+
+## QA master 1080x1920 real (sin oferta comercial)
+
+La prueba `.github/workflows/altiora-fullhd-master.yml` procesa **una** variante conceptual completa a resolución nativa 1080×1920, 15 s y 30 fps. El comando `npm run master:verify` inspecciona el archivo REAL con ffprobe y almacena `out/qa-master.json`; no acepta previews 540p como master. La calidad estética se revisa por un operador en un dispositivo real; el CI no declara aprobación comercial.
+
+En local, tras `npm install`:
+
+```bash
+npm run render
+npm run master:verify
+npm run master:test
+```
+
+**Limitaciones:** ejemplo conceptual, sin producto/permiso real ni audio licenciado. Un MP4 válido no demuestra una pieza de marketing terminada. El pipeline documenta estos bloqueos y no publica contenido.

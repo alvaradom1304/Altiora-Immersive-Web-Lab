@@ -1,5 +1,9 @@
 # Altiora Immersive Web Lab
 
+## Diagnóstico y calidad compartidos
+
+Claude Code, Codex, Gemini CLI, Antigravity y ChatGPT utilizan [el mismo protocolo operativo](docs/operations/SHARED-OPERATIONS.md): `npm run capability:doctor` distingue archivos y herramientas de conexiones comprobadas; `npm run routing:eval` comprueba recuperación de skills con casos representativos; `npm run production:qa` reúne evidencia audiovisual y revisiones pendientes. No instala software, no conecta cuentas ni acredita aprobación comercial. El [índice generado](INDEX.md) contiene los recuentos vigentes de roles y skills.
+
 Laboratorio de experiencias web inmersivas y comerciales. Primer caso: **La Central del Queso**, un recorrido de la finca a la mesa.
 
 La base de investigación reúne **25 repositorios** con una función, una decisión y una revisión concreta. La selección inicial favorece Three.js + React Three Fiber + Drei + GSAP; glTF Transform prepara los modelos. Lenis se evalúa después de comparar con el scroll nativo.
@@ -47,7 +51,7 @@ El catálogo registra fuentes; no instala dependencias en la web ni incorpora co
 
 ## Comprobar el laboratorio
 
-Requiere Node.js 20 o posterior y Git para descargar referencias. No necesita instalar paquetes.
+El control completo requiere Node.js 20+ y Python 3.11+ disponibles como `node` y `python`. Git se usa para descargar referencias. No necesita instalar paquetes. `npm run check` ejecuta las mismas suites que CI Windows/Linux; `npm run check:base` es solo el control parcial anterior.
 
 ~~~sh
 npm run check
@@ -63,7 +67,7 @@ La segunda orden descarga únicamente esa revisión en `.references/`. No ejecut
 
 ## Equipo y Roles de Agentes (`team/`)
 
-El laboratorio define 12 roles operativos y directrices de orquestación en [team/registry.md](team/registry.md):
+El laboratorio define sus roles operativos y directrices de orquestación en [team/registry.md](team/registry.md); el recuento vigente está en [INDEX.md](INDEX.md):
 - **Director de experiencia**: Integración de estrategia, dirección de arte y gates de calidad.
 - **Director creativo & Motion designer**: Concepto visual, narrativa de cámara, animaciones y fallbacks.
 - **Ingeniero web & Shader artist**: Implementación WebGL, Three.js, React Three Fiber y shaders GLSL.
@@ -75,7 +79,7 @@ El [índice](INDEX.md) reúne agentes, chats, skills y repositorios. Los roles f
 
 ## Catálogo de Skills Integradas (`skills/`)
 
-El repositorio cuenta con un catálogo de **251 skills especializadas** (18 de ellas de terceros, con licencia y procedencia en [skill-sources.json](references/skill-sources.json)) categorizadas en:
+El repositorio cuenta con un catálogo de skills especializadas cuyo recuento se genera en [INDEX.md](INDEX.md). Las de terceros conservan licencia y procedencia en [skill-sources.json](references/skill-sources.json). Se categorizan en:
 1. **Brand & Creative Intelligence**: Art direction, brand architecture, storytelling, color system, typography direction.
 2. **Premium Web Experience**: Three.js, React Three Fiber, GSAP animation, motion design, responsive design, conversion UX.
 3. **Business & Financial Intelligence**: Unit economics, pricing strategy, margin analysis, cash flow, financial forecasting.
@@ -96,3 +100,12 @@ Corrección e inventario reconciliado: [diagnóstico de Claude](docs/operations/
 
 ## Visual Studio V3
 [70 librerías curadas](references/visual-libraries-2026.json), [vigilancia de versiones estables](creative/visual-studio/SCOUT-V3.md), [CGI/color avanzado](creative/visual-studio/playbooks/advanced-cgi-color.md) y [animación 2D generativa](creative/visual-studio/playbooks/illustration-particles.md). Todas las IAs consumen el mismo Director Audiovisual y router; ninguna instala automáticamente todo el catálogo.
+
+## Adobe After Effects · preparación de acceso
+[Puente local AE y tutorial de permisos](creative/visual-studio/after-effects/README.md) y `npm run adobe:check`: permiten a las IAs planear y controlar renders de proyectos propios con After Effects instalado y autorizado. **No hay conexión comprobada con la laptop del usuario**; el conector Adobe de ChatGPT requiere autorización independiente.
+
+## Acceso preparado a After Effects
+Se añadió un [puente local aerender](scripts/after-effects-bridge.mjs), [guion de composición original](creative/visual-studio/after-effects/altiora-concept-comp.jsx) y [protocolo de acceso](creative/visual-studio/playbooks/adobe-post.md). El conector Adobe permite flujos de medios/Creative Cloud en ChatGPT, pero no edición nativa de archivos .aep. La activación local sigue pendiente de comprobar aplicación, proyecto y permisos; `npm run after-effects:check` informa sin instalar.
+
+## Conexión de After Effects para Claude/Gemini/Antigravity/Codex
+[Guía de un solo paso local](creative/visual-studio/after-effects/MCP-SETUP.md): `npm run ae:clients:plan` y `npm run ae:clients:connect`. Las configuraciones son locales de cada cliente y requieren instalaciones reales; no concede control remoto desde ChatGPT web o móvil.

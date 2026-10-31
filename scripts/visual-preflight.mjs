@@ -6,10 +6,46 @@
 import assert from "node:assert/strict";
 import {spawnSync} from "node:child_process";
 import {readFile} from "node:fs/promises";
-import {resolve} from "node:path";
+import {readdirSync} from 'node:fs';
+import {resolve, win32, isAbsolute, basename} from "node:path";
 import {fileURLToPath} from "node:url";
 
 const root = fileURLToPath(new URL("../", import.meta.url));
+
+export function blenderCandidates({platform = process.platform, env = process.env,
+  list = folder => readdirSync(folder, {withFileTypes: true}).filter(d => d.isDirectory() && !d.isSymbolicLink()).map(d => d.name)} = {}) {
+  if (env.ALTIORA_BLENDER) {
+    const absolute = platform === 'win32' ? win32.isAbsolute : isAbsolute;
+    const base = platform === 'win32' ? win32.basename : basename;
+    const localWindowsPath = platform !== 'win32' || (/^[A-Za-z]:[\\/]/.test(env.ALTIORA_BLENDER) && !env.ALTIORA_BLENDER.slice(2).includes(':'));
+    assert.ok(localWindowsPath && absolute(env.ALTIORA_BLENDER) && base(env.ALTIORA_BLENDER).toLowerCase() === (platform === 'win32' ? 'blender.exe' : 'blender')
+      && !/[\x00-\x1f]/.test(env.ALTIORA_BLENDER), 'ALTIORA_BLENDER must name an absolute Blender executable');
+    return [env.ALTIORA_BLENDER];
+  }
+  const paths = [];
+  if (platform === 'win32') {
+    for (const base of [...new Set([env.ProgramFiles, env.PROGRAMFILES, env['ProgramFiles(x86)']].filter(Boolean))]) {
+      const foundation = win32.join(base, 'Blender Foundation');
+      let versions = [];
+      try {versions = list(foundation).filter(x => /^Blender \d+(?:\.\d+){1,2}(?: LTS)?$/.test(x));}
+      catch {continue;}
+      versions.sort((a, b) => b.localeCompare(a, 'en', {numeric: true}));
+      for (const version of versions) paths.push(win32.join(foundation, version, 'blender.exe'));
+    }
+  } else if (platform === 'darwin') paths.push('/Applications/Blender.app/Contents/MacOS/Blender');
+  return [...new Set([...paths, 'blender'])];
+}
+
+export function detectBlender(runner = spawnSync, candidates = blenderCandidates()) {
+  const ordered = candidates.includes('blender') ? ['blender', ...candidates.filter(x => x !== 'blender')] : candidates;
+  let failed = false;
+  for (const executable of ordered) {
+    const report = probeExecutable('Blender', executable, ['--version'], runner);
+    if (report.status === 'AVAILABLE') return {...report, executable, discovery: executable === 'blender' ? 'PATH' : 'INSTALLATION_PATH'};
+    if (report.status === 'ERROR') failed = true;
+  }
+  return {name: 'Blender', status: failed ? 'ERROR' : 'NOT_FOUND', version: null, executable: null, discovery: 'NOT_DETECTED'};
+}
 
 export function probeExecutable(name, executable, args, runner = spawnSync) {
   assert.equal(typeof executable, "string");
@@ -51,13 +87,12 @@ export async function inspectRemotion() {
 
 export async function createReport(runner = spawnSync) {
   const bins = [
-    ["Blender", "blender", ["--version"]],
     ["FFmpeg", "ffmpeg", ["-version"]],
     ["Git", "git", ["--version"]],
     ["npm", "npm", ["--version"]],
     ["Python 3", "python3", ["--version"]]
   ];
-  const tools = bins.map(([name, command, args]) => probeExecutable(name, command, args, runner));
+  const tools = [detectBlender(runner), ...bins.map(([name, command, args]) => probeExecutable(name, command, args, runner))];
   tools.push(await inspectRemotion());
   return {
     schema_version: 1,

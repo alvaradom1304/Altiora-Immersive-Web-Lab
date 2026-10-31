@@ -1,0 +1,9 @@
+# Local Altiora After Effects MCP. Only loads when Codex trusts this project.
+# The server is read-only by default; rendering also requires local owner opt-in.
+[mcp_servers.altiora-after-effects]
+command = "node"
+args = ["scripts/after-effects-mcp.mjs"]
+cwd = "."
+enabled = false
+startup_timeout_sec = 10
+tool_timeout_sec = 1800

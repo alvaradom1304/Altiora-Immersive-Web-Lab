@@ -80,3 +80,15 @@ El [Visual Tech Scout](visual-tech-scout.md) ejecuta observación de metadatos (
 - Para fidelidad CGI, color, pases EXR y denoising: [playbook profesional](../playbooks/advanced-cgi-color.md).
 - Para motion 2D artístico, pintura, frames, partículas: [playbook ilustración](../playbooks/illustration-particles.md).
 - Para una versión nueva de un paquete: [Visual Tech Scout V3](../SCOUT-V3.md) registra `release_tag` estable, evalúa mejoras y descarta ruido de commits. El Director elige si vale la pena un experimento; no exigir al usuario saber de librerías.
+
+## Gate adicional de licencias comerciales
+El Director **no autoriza** incorporar `patriciogonzalezvivo/lygia` en proyectos comerciales sin licencia/aprobación específica: el repositorio publica Prosperity Public License 3.0.0, con términos distintos a MIT/Apache. Consultar [auditoría de licencias](../../../references/visual-license-review.md) antes de seleccionar shaders, assets, Adobe legacy o herramientas con avisos de terceros. El pipeline debe buscar alternativas seguras sin pedir al cliente elegir librerías.
+
+## Handoff ejecutable de After Effects
+Para campañas con composición, tracking, VFX o motion nativo, consultar [puente local After Effects](../after-effects/README.md) y elegirlo solo cuando la app esté instalada y `aerender` y el proyecto .aep estén verificados en la máquina ejecutora. El Director puede pedir a Claude, Gemini o Codex un plan y código JSX original sin requerir que el cliente escoja herramientas. Ningún archivo de repo ni conector Adobe sugerido constituye acceso confirmado al programa local.
+
+## Control de After Effects (verificación 2026-10-30)
+La conexión Adobe de ChatGPT permite video y recursos Creative Cloud, pero **no debe confundirse con acceso de edición directa a After Effects .aep**. Para composiciones nativas, el Director puede seleccionar el puente local `aerender` y [script conceptual original](../after-effects/altiora-concept-comp.jsx) únicamente tras preflight, permiso de la persona, instalación y licencia del host. Si falta After Effects, utilizar Remotion/Blender/Adobe video conectado según objetivo, sin exigir al usuario escoger. [Playbook Adobe](../playbooks/adobe-post.md).
+
+## Especialista en sonido y audio
+Para voz, música, Foley, restauración, mezcla o masterización coordinar con [audio-specialist](../../../team/agents/audio-specialist.md). Su [skill](../../../skills/audio-production/SKILL.md) elige cadena por problema, mantiene derechos y conserva QA de medidas/escucha independiente. No convertir un video sin audio licenciado en anuncio aprobado ni dar por conectado un DAW.

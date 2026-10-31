@@ -191,11 +191,18 @@
       "assigned_agents": []
     },
     {
+      "name": "altiora-bibliotecario",
+      "source": "skills/altiora-bibliotecario/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": []
+    },
+    {
       "name": "altiora-quality-review",
       "source": "skills/altiora-quality-review/SKILL.md",
       "model_invocable": true,
       "assigned_agents": [
         "qa-reviewer",
+        "audio-specialist",
         "altiora-review"
       ]
     },
@@ -233,6 +240,14 @@
       "model_invocable": true,
       "assigned_agents": [
         "creative-director"
+      ]
+    },
+    {
+      "name": "audio-production",
+      "source": "skills/audio-production/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": [
+        "audio-specialist"
       ]
     },
     {
@@ -591,7 +606,8 @@
       "assigned_agents": [
         "creative-director",
         "audiovisual-experience-director",
-        "creative-ads-director"
+        "creative-ads-director",
+        "audio-specialist"
       ]
     },
     {
@@ -1876,6 +1892,12 @@
       "antigravity": ".agents/agents/creative-ads-director.md"
     },
     {
+      "id": "audio-specialist",
+      "source": "team/roles/audio-specialist.md",
+      "claude": ".claude/agents/audio-specialist.md",
+      "antigravity": ".agents/agents/audio-specialist.md"
+    },
+    {
       "id": "altiora-engineering",
       "source": "team/local-sources/codex/altiora-engineering.toml",
       "claude": ".claude/agents/altiora-engineering.md",
@@ -1935,6 +1957,7 @@
     "chat-commerce-growth-director",
     "chat-market-intelligence-director",
     "chat-creative-ads-director",
+    "chat-audio-specialist",
     "chat-altiora-engineering",
     "chat-altiora-experience",
     "chat-altiora-research",
@@ -1945,6 +1968,6 @@
     "equipo",
     "repos"
   ],
-  "listing_budget_characters": 139872,
+  "listing_budget_characters": 140855,
   "runtime_discovery": "NOT_RUN"
 }
