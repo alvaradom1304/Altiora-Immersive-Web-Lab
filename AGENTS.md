@@ -61,3 +61,6 @@ La documentación y los repositorios de referencia **no** equivalen a librerías
 
 ## Handoff de After Effects (verificación obligatoria)
 Para trabajos de AE abrir [guía de integración](creative/visual-studio/after-effects/README.md) y comprobar acceso real con `npm run adobe:check` en el dispositivo ejecutor. No anunciar AE conectado, render completado ni integrar un MCP no auditado por existir el script `scripts/after-effects-bridge.mjs`. El Director selecciona un fallback si no hay acceso autorizado.
+
+## MCP After Effects: acceso compartido, privilegio mínimo
+No crear servidores web públicos para controlar Adobe. Utilizar [MCP stdio local](creative/visual-studio/after-effects/MCP-SETUP.md), registrar en Claude/Gemini/Antigravity/Codex con autorización del dueño del PC. Por defecto solo preflight/plan; habilitar render solo con permiso por proyecto y validar la salida; ningún chat en la nube adquiere control local automáticamente.
