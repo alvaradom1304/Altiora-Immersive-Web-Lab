@@ -2,6 +2,10 @@
 
 Esta capa permite que diferentes IAs **comprendan y coordinen** los mismos procedimientos. No asume que cada IA tiene permisos, credenciales o acceso al software local.
 
+## Recuperación y estado versionado
+
+El [checkpoint de continuidad](../../continuity/checkpoint.json) contiene lo terminado, lo bloqueado y la próxima tarea, con [procedimiento de recuperación](../../continuity/README.md). Si una respuesta del chat falla, no perder el contexto: reabrir el repositorio, verificar PR y CI y retomar un paso sin rehacer los demás. **Esto no activa ejecución autónoma persistente**.
+
 ## Fuentes canónicas y orden de lectura
 
 1. [AGENTS.md](../../AGENTS.md) — reglas de seguridad, evidencia y roles.
