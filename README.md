@@ -14,6 +14,10 @@ La expansión avanzada agrega [matriz técnica](creative/visual-studio/PRODUCTIO
 
 [Tilicheros · Cinematic Motion Pilot](experiments/tilicheros-motion-lab/README.md) contiene una plantilla Remotion 15s vertical, un diseño conceptual original y un script Blender para generar CGI reproducible. Los archivos están versionados y cuentan con validación automatizada, pero **no** representan un anuncio final ni un render certificado.
 
+## Dirección audiovisual automática
+
+El [Director de Experiencia Audiovisual](creative/visual-studio/agents/audiovisual-experience-director.md) es el nuevo rol formal en el [equipo](team/registry.md), con prompt compartido para Claude, Gemini y ChatGPT/Codex. La IA debe escoger el pipeline audiovisual según el resultado pedido, accesos verificables, licencias y calidad, sin obligar al usuario a escoger librerías. El Visual Tech Scout le entrega señales para mejorar el sistema.
+
 ## Mejora continua del stack visual
 
 [Visual Tech Scout](creative/visual-studio/agents/visual-tech-scout.md) + [vigilancia semanal de los 56 repositorios](continuity/visual-watch/README.md) + `npm run visual:preflight`: detecta cambios de actividad, licencia y estado, crea informes y puede proponer PRs con revisión humana. Es una rutina automatizada de GitHub Actions, **no** instalación ilimitada de paquetes ni una IA conectada permanentemente.
