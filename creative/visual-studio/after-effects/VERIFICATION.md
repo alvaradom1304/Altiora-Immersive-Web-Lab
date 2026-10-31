@@ -1,6 +1,6 @@
 # Revisión del puente local de After Effects
 
-Fecha del cliente: 2026-10-30. Continúa la PR #32 y la rama existente.
+Fecha del cliente: 2026-10-30. Continúa la rama existente con correcciones a la PR #32 mediante la PR #33.
 
 ## Evidencia local
 
