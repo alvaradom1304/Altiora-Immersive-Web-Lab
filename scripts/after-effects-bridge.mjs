@@ -65,6 +65,8 @@ async function main(){
   const probe=detectAerender();
   assert.ok(probe.available,"Adobe aerender was not verified on this computer. Nothing was executed.");
   await mkdir(dirname(job.output),{recursive:true});
+  const realOutputDirectory=await realpath(dirname(job.output));
+  assert.ok(isWithin(ROOT,realOutputDirectory),"Output directory symlink escapes workspace");
   const runner=spawnSync(plan.command[0],renderArguments(job),{
     cwd:ROOT,encoding:"utf8",timeout:1800000,maxBuffer:1024*1024,shell:false,windowsHide:true
   });
