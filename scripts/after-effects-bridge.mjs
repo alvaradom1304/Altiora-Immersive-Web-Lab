@@ -42,6 +42,51 @@ export function detectAerender(runner=spawnSync,exe=process.env.ALTIORA_AERENDER
   };
 }
 
+export async function planLocalRender(project,comp,output) {
+  const job=validateArgs(project,comp,output);
+  const src=await stat(job.project);
+  assert.ok(src.isFile(),"Source must be a file");
+  const real=await realpath(job.project);
+  const realRoot=await realpath(ROOT);
+  assert.ok(isWithin(realRoot,real),"Source symbolic link escapes workspace");
+  return {
+    status:"PLANNED",application:"Adobe After Effects",engine:"aerender",
+    project:job.project,composition:job.comp,output:job.output,
+    command:[process.env.ALTIORA_AERENDER||ALLOWED_AERENDER,...renderArguments(job)],
+    notes:["Requires licensed After Effects locally; no cloud desktop access implied","AE Output Module settings determine actual codec","Visual, rights and sound QA required"]
+  };
+}
+
+export async function executeLocalRender(project,comp,output) {
+  // Opt-in must be provided by the PC owner in the LOCAL process environment.
+  assert.equal(process.env.ALTIORA_AE_ALLOW_RENDER,"YES-I-APPROVE-LOCAL-RENDERS",
+    "Render disabled. Owner must explicitly enable local render in the MCP/client environment.");
+  const plan=await planLocalRender(project,comp,output);
+  const probe=detectAerender();
+  assert.ok(probe.available,"After Effects aerender is not verified on this machine");
+  await mkdir(dirname(plan.output),{recursive:true});
+  const realRoot=await realpath(ROOT);
+  const realOutputDirectory=await realpath(dirname(plan.output));
+  assert.ok(isWithin(realRoot,realOutputDirectory),"Output directory symbolic link escapes workspace");
+  const previous=await stat(plan.output).catch(e=>{if(e.code==="ENOENT")return null;throw e;});
+  assert.equal(previous,null,"Output already exists; choose a new output name (prevents accidental overwrite)");
+  const runner=spawnSync(plan.command[0],renderArguments({project:plan.project,comp:plan.composition,output:plan.output}),{
+    cwd:ROOT,encoding:"utf8",timeout:1800000,maxBuffer:1024*1024,shell:false,windowsHide:true
+  });
+  assert.ok(!runner.error&&runner.status===0,
+    "aerender failed: "+(runner.error?.message||runner.stderr||runner.status).toString().slice(0,400));
+  const result=await stat(plan.output);
+  assert.ok(result.size>10000,"No substantial output file produced");
+  const report={
+    type:"after_effects_local_render",status:"RENDERED_NOT_QA_APPROVED",
+    output:plan.output,bytes:result.size,project:plan.project,comp:plan.composition,
+    marketing_approved:false,format_verified:false,
+    notes:["Run technical media metadata and human QA","Check content rights and Adobe license"]
+  };
+  await writeFile(resolve(ROOT,"continuity/after-effects-last-render.json"),JSON.stringify(report,null,2)+"\n");
+  return report;
+}
+
 async function main(){
   const args=process.argv.slice(2);
   if(args.length===0 || args[0]==="--check"){
@@ -51,36 +96,10 @@ async function main(){
   }
   assert.ok(["--plan","--render"].includes(args[0])&&args.length===4,"Invalid arguments");
   const job=validateArgs(args[1],args[2],args[3]);
-  const src=await stat(job.project);
-  assert.ok(src.isFile(),"Source must be a file");
-  const real=await realpath(job.project);
-  assert.ok(isWithin(ROOT,real),"Symbolic link escapes the workspace");
-  const plan={
-    status:"PLANNED",application:"Adobe After Effects",engine:"aerender",
-    project:job.project,composition:job.comp,output:job.output,
-    command:[process.env.ALTIORA_AERENDER||ALLOWED_AERENDER,...renderArguments(job)],
-    notes:["Needs AE with valid license on executing computer","Output module settings in .aep decide actual codec/container","Do not publish until product rights, output QA and client approval"]
-  };
-  if(args[0]==="--plan"){process.stdout.write(JSON.stringify(plan,null,2)+"\n");return;}
-  const probe=detectAerender();
-  assert.ok(probe.available,"Adobe aerender was not verified on this computer. Nothing was executed.");
-  await mkdir(dirname(job.output),{recursive:true});
-  const realOutputDirectory=await realpath(dirname(job.output));
-  assert.ok(isWithin(ROOT,realOutputDirectory),"Output directory symlink escapes workspace");
-  const runner=spawnSync(plan.command[0],renderArguments(job),{
-    cwd:ROOT,encoding:"utf8",timeout:1800000,maxBuffer:1024*1024,shell:false,windowsHide:true
-  });
-  assert.ok(!runner.error&&runner.status===0,"aerender failed: "+(runner.error?.message||runner.stderr||runner.status).toString().slice(0,600));
-  const result=await stat(job.output);
-  assert.ok(result.size>10000,"No substantial output file was produced");
-  const report={
-    type:"after_effects_local_render",status:"RENDERED_NOT_QA_APPROVED",
-    output:job.output,bytes:result.size,project:job.project,comp:job.comp,
-    marketing_approved:false,format_verified:false,
-    notes:["Run ffprobe and human QA","Verify compositing, codec, audio and permissions before client delivery"]
-  };
-  await writeFile(resolve(ROOT,"continuity/after-effects-last-render.json"),JSON.stringify(report,null,2)+"\n");
-  process.stdout.write(JSON.stringify(report,null,2)+"\n");
+  const result = args[0] === "--plan"
+    ? await planLocalRender(args[1],args[2],args[3])
+    : await executeLocalRender(args[1],args[2],args[3]);
+  process.stdout.write(JSON.stringify(result,null,2)+"\n");
 }
 if(process.argv[1]&&resolve(process.argv[1])===fileURLToPath(import.meta.url)){
   main().catch(e=>{process.stderr.write("AFTER_EFFECTS_BRIDGE: "+e.message+"\n");process.exitCode=1;});
