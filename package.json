@@ -7,7 +7,7 @@
     "node": ">=20"
   },
   "scripts": {
-    "check": "node scripts/verify-catalog.mjs && node scripts/audit-skills.mjs && node scripts/build-agents.mjs --check && npm run continuity:check && npm run visual:preflight:test && npm run visual:watch:test",
+    "check": "node scripts/verify-catalog.mjs && node scripts/audit-skills.mjs && node scripts/build-agents.mjs --check && npm run continuity:check && npm run visual:preflight:test && npm run visual:watch:test && npm run video:master:test",
     "agents:build": "node scripts/build-agents.mjs",
     "chat": "node scripts/team-chat.mjs",
     "skills:audit": "node scripts/audit-skills.mjs",
@@ -18,6 +18,8 @@
     "visual:preflight": "node scripts/visual-preflight.mjs",
     "visual:preflight:test": "node --test scripts/visual-preflight.test.mjs",
     "visual:watch": "node scripts/visual-watch.mjs",
-    "visual:watch:test": "node --test scripts/visual-watch.test.mjs"
+    "visual:watch:test": "node --test scripts/visual-watch.test.mjs",
+    "visual:license:check": "node scripts/verify-catalog.mjs",
+    "video:master:test": "node --test experiments/tilicheros-motion-lab/scripts/verify-master.test.mjs"
   }
 }
