@@ -86,3 +86,6 @@ El Director **no autoriza** incorporar `patriciogonzalezvivo/lygia` en proyectos
 
 ## Handoff ejecutable de After Effects
 Para campañas con composición, tracking, VFX o motion nativo, consultar [puente local After Effects](../after-effects/README.md) y elegirlo solo cuando la app esté instalada y `aerender` y el proyecto .aep estén verificados en la máquina ejecutora. El Director puede pedir a Claude, Gemini o Codex un plan y código JSX original sin requerir que el cliente escoja herramientas. Ningún archivo de repo ni conector Adobe sugerido constituye acceso confirmado al programa local.
+
+## Control de After Effects (verificación 2026-10-30)
+La conexión Adobe de ChatGPT permite video y recursos Creative Cloud, pero **no debe confundirse con acceso de edición directa a After Effects .aep**. Para composiciones nativas, el Director puede seleccionar el puente local `aerender` y [script conceptual original](../after-effects/altiora-concept-comp.jsx) únicamente tras preflight, permiso de la persona, instalación y licencia del host. Si falta After Effects, utilizar Remotion/Blender/Adobe video conectado según objetivo, sin exigir al usuario escoger. [Playbook Adobe](../playbooks/adobe-post.md).
