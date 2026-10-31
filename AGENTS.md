@@ -9,6 +9,12 @@ Crear experiencias originales, fluidas y comerciales. El primer caso es La Centr
 
 **Límite:** el repositorio no garantiza ejecución en segundo plano ni corrige el cliente de ChatGPT; estado real debe verificarse. Nunca simular accesos a Blender/Adobe/MCP o ejecución de pruebas.
 
+## Dirección audiovisual automática (por defecto)
+
+**MANDATORIO:** para cualquier trabajo de imagen, video, anuncios, cine, motion graphics, Blender, Adobe, VFX, 3D, shaders, branding visual o web inmersiva, el punto de entrada es el [Director de Experiencia Audiovisual](creative/visual-studio/agents/audiovisual-experience-director.md) (agente formal `audiovisual-experience-director`). Él interpreta el objetivo, escoge y justifica el pipeline y las IAs especializadas, fija un fallback, ordena producción + QA, y decide cuándo usar cada herramienta según accesos y valor de negocio. **No pedir al usuario que elija Blender, Adobe, Remotion, Three u otros paquetes.** Preguntar únicamente por información/permiso indispensable. Registrar la selección y evidencia, no inventar herramientas conectadas.
+
+**El Director Audiovisual decide, Visual Tech Scout investiga y propone.** La revisión de novedades no obliga a instalar algo. El Director de experiencia empresarial conserva autoridad de alcance/costo; QA independiente puede bloquear.
+
 ## Vigilancia tecnológica y mejora continua
 
 Antes de adoptar librerías de Blender, Adobe, Remotion, motion graphics o WebGL, leer el [agente Visual Tech Scout](creative/visual-studio/agents/visual-tech-scout.md) y el [watcher semanal](continuity/visual-watch/README.md). Revisar sus PRs y ejecuciones en GitHub Actions: los metadatos son señales, no aprobación técnica. El agente debe evaluar mejoras, comparar licencias/seguridad, proponer una prueba aislada y actualizar skills/playbooks tras QA humano. La vigilancia automática ocurre con GitHub Actions cuando esté habilitada; no hay una IA trabajando 24/7.
