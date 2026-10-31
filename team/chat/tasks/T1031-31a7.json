@@ -1,0 +1,35 @@
+{
+  "id": "T1031-31a7",
+  "title": "Detectar Blender instalado fuera de PATH",
+  "role": "web-engineer",
+  "ai": null,
+  "reviewer": null,
+  "depends": [],
+  "files": [
+    "scripts/visual-preflight.mjs",
+    "scripts/visual-preflight.test.mjs"
+  ],
+  "acceptance": "Detecta instalacion Windows sin modificar PATH ni afirmar render",
+  "status": "hecha",
+  "owner": "codex/web-engineer",
+  "created": "2026-10-31T15:24:26Z",
+  "created_by": "codex/web-engineer",
+  "history": [
+    {
+      "at": "2026-10-31T15:24:26Z",
+      "by": "codex/web-engineer",
+      "status": "pendiente"
+    },
+    {
+      "at": "2026-10-31T15:24:49Z",
+      "by": "codex/web-engineer",
+      "status": "en_curso"
+    },
+    {
+      "at": "2026-10-31T15:27:34Z",
+      "by": "codex/web-engineer",
+      "status": "hecha",
+      "note": "Blender 5.2.2 LTS detectado fuera de PATH; version y arranque headless verificados sin render. Detector compartido con override local estricto y regresiones de rutas."
+    }
+  ]
+}

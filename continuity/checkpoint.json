@@ -118,7 +118,7 @@
       },
       {
         "id": "VIS-05-B",
-        "action": "Diagnóstico local ejecutado: FFmpeg/FFprobe/Python respondieron; Blender y aerender no se detectaron con las consultas disponibles y Remotion local no estaba instalado. Falta comprobar licencias, sesiones de clientes y ejecución real por aplicación. Usar capability:doctor y conservar evidencia privada; no implica acceso remoto.",
+        "action": "Diagnóstico local ampliado: Blender 5.2.2 LTS detectado fuera de PATH; versión y arranque headless limpio comprobados sin render. FFmpeg/FFprobe/Python respondieron; aerender no se detectó y Remotion local no estaba instalado. Falta comprobar permisos, sesiones de clientes y render real. Usar capability:doctor y conservar evidencia privada; no implica conexión MCP ni acceso remoto.",
         "status": "IN_PROGRESS",
         "blocker": null,
         "deliverable": "matriz de versiones/permisos/accesos, licencias y riesgos",
@@ -172,9 +172,9 @@
       ]
     },
     {
-      "name": "Blender local de la persona",
-      "status": "UNVERIFIED",
-      "evidence": []
+      "name": "Blender local: versión y arranque headless comprobados, render y MCP pendientes",
+      "status": "DOCUMENTED",
+      "evidence": ["https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/blob/fix/altiora-blender-windows-discovery-2026-10-31/docs/operations/BLENDER-LOCAL.md"]
     },
     {
       "name": "Adobe local y APIs UXP",
@@ -240,6 +240,7 @@
     }
   ],
   "context_files": [
+    "docs/operations/BLENDER-LOCAL.md",
     "docs/operations/SHARED-OPERATIONS.md",
     "docs/operations/production-qa.md",
     "docs/operations/VALIDATION.md",
