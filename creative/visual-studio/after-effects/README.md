@@ -48,3 +48,7 @@ node scripts/after-effects-bridge.mjs --render out/approved-concept.aep "ALTIORA
 `PLANNED → AE_LOCAL_FOUND → SOURCE_AEP_VERIFIED → RENDERED → VIDEO_QA → HUMAN_APPROVED`.
 
 No declarar acceso **CONNECTED** por la presencia del archivo JSX o de la integración Adobe sugerida en ChatGPT. El trabajo comercial requiere productos reales, derechos y autorización.
+
+## Acceso de todas las IAs por MCP local
+
+La [guía para Claude Code, Gemini/Antigravity y Codex](MCP-SETUP.md) y `npm run ae:clients:connect` permiten **registrar el mismo servidor MCP de After Effects en la laptop donde corren dichas IAs**, sin abrir puertos externos. La conexión solo es efectiva tras ejecutar el instalador local y comprobar `aerender`; el render sigue bloqueado por defecto y exige autorización por proyecto.
