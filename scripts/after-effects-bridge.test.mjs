@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import {validateArgs,renderArguments,detectAerender,isWithin} from "./after-effects-bridge.mjs";
+import {validateArgs,renderArguments,detectAerender,isWithin,aerenderCandidates} from "./after-effects-bridge.mjs";
 import {resolve} from "node:path";
 const root="/tmp/altiora-safe";
 
@@ -29,5 +29,15 @@ test("successful help probe is not certified project render",()=>{
  const stub=()=>({status:0,stdout:"aerender - Adobe After Effects render engine",stderr:""});
  const x=detectAerender(stub,"aerender");
  assert.equal(x.available,true);
- assert.match(x.note,/Requires compatible installed licensed AE/);
+ assert.match(x.note,/Local aerender detected/);
+});
+
+test("Windows discovery prioritizes explicit trusted owner path",()=>{
+ const v=aerenderCandidates({ALTIORA_AERENDER:"D:\\Adobe\\aerender.exe",ProgramFiles:"C:\\Program Files"},"win32");
+ assert.equal(v[0],"D:\\Adobe\\aerender.exe");
+ assert.ok(v.includes("aerender.exe"));
+});
+test("macOS fallback is available without installed After Effects",()=>{
+ const v=aerenderCandidates({},"darwin");
+ assert.ok(v.includes("aerender"));
 });
