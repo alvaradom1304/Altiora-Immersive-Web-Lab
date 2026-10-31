@@ -26,7 +26,10 @@ export function normalizeEntry(entry, data) {
     last_push: data.pushed_at || null,
     license,
     default_branch: data.default_branch || null,
-    canonical_repo: data.full_name || entry.id
+    canonical_repo: data.full_name || entry.id,
+    // Latest stable GitHub release (not necessarily a safe package upgrade).
+    release_tag: null,
+    release_published_at: null
   };
 }
 
@@ -45,9 +48,25 @@ export function changesSince(previous, current) {
         previous: before[field] ?? null, current: after[field] ?? null
       });
     }
-    if (after.priority === "P0" && before.last_push !== after.last_push) {
+    // Release monitoring: suppress false RELEASE_CHANGE when migrating old snapshots
+    // that did not yet include release fields.
+    if (Object.hasOwn(before, "release_tag") &&
+        before.release_tag !== after.release_tag) {
       changes.push({
-        id: after.id, kind: "P0_ACTIVITY", priority: after.priority,
+        id: after.id, kind: "STABLE_RELEASE", priority: after.priority,
+        previous: before.release_tag ?? null, current: after.release_tag ?? null
+      });
+    }
+    // Routine pushes aren't an actionable update signal. Only flag a P0 repo
+    // that resumes activity after 90+ days of inactivity.
+    const priorMs = Date.parse(before.last_push ?? "");
+    const nextMs = Date.parse(after.last_push ?? "");
+    if (after.priority === "P0" && Number.isFinite(priorMs) &&
+        Number.isFinite(nextMs) && nextMs > priorMs &&
+        Date.now() - priorMs > 90 * 86400000 &&
+        nextMs - priorMs > 90 * 86400000) {
+      changes.push({
+        id: after.id, kind: "P0_ACTIVITY_RESUMED", priority: after.priority,
         previous: before.last_push, current: after.last_push
       });
     }
@@ -61,7 +80,7 @@ export function changesSince(previous, current) {
 }
 
 export function reportText(current, changes, isBaseline) {
-  const alerts = changes.filter(c=>["ARCHIVED","DISABLED","LICENSE"].includes(c.kind));
+  const alerts = changes.filter(c=>["ARCHIVED","DISABLED","LICENSE","STABLE_RELEASE"].includes(c.kind));
   return [
     "# Altiora · Visual Tech Scout — revisión de repositorios",
     "",
@@ -70,7 +89,7 @@ export function reportText(current, changes, isBaseline) {
     "**Cambios detectados:** " + changes.length,
     "**Alertas de riesgo:** " + alerts.length,
     "",
-    "Este reporte se genera solo a partir de metadatos públicos de GitHub. **No demuestra compatibilidad ni recomienda instalar automáticamente**.",
+    "Este reporte usa metadatos públicos de GitHub, incluida la última versión estable de repositorios P0/P1. **No certifica seguridad, licencias de dependencias, ni compatibilidad comercial**.",
     "",
     "## Cambios",
     ...(changes.length ? changes.map(c =>
@@ -79,7 +98,7 @@ export function reportText(current, changes, isBaseline) {
     ) : ["Sin cambios relevantes."]),
     "",
     "## Protocolo para visual-tech-scout",
-    "1. Priorizar ARCHIVED, DISABLED, LICENSE y repos P0 con actividad reciente.",
+    "1. Priorizar ARCHIVED, DISABLED, LICENSE y STABLE_RELEASE; toda versión requiere revisar changelog, seguridad y ruptura de API.",
     "2. Inspeccionar changelog, versión estable, derechos comerciales y CVEs antes de proponer un cambio.",
     "3. Crear prueba aislada del producto y comparar calidad, rendimiento, accesibilidad y complejidad.",
     "4. Si el cambio aporta valor medido, crear otra PR para instalación o mejora, con rollback y QA.",
@@ -112,6 +131,34 @@ async function fetchRepo(entry, token, fetcher=fetch) {
   } finally {clearTimeout(timeout);}
 }
 
+async function fetchLatestStableRelease(entry, token, fetcher=fetch) {
+  // Only metadata. 404 is normal for repositories that publish no GitHub releases.
+  const endpoint = "https://api.github.com/repos/" +
+    entry.id.split("/").map(encodeURIComponent).join("/") + "/releases/latest";
+  const headers = {
+    "Accept": "application/vnd.github+json",
+    "User-Agent": "altiora-visual-tech-scout",
+    "X-GitHub-Api-Version": "2022-11-28"
+  };
+  if (token) headers.Authorization = "Bearer " + token;
+  const ctrl = new AbortController();
+  const timeout = setTimeout(() => ctrl.abort(), 10000);
+  try {
+    const res = await fetcher(endpoint, {headers, signal: ctrl.signal, redirect: "follow"});
+    if (res.status === 404) return {release_tag: null, release_published_at: null};
+    if (!res.ok) throw Error(entry.id + ": release metadata GitHub API " + res.status);
+    const data = await res.json();
+    if (typeof data.tag_name !== "string" || !data.tag_name.trim())
+      throw Error(entry.id + ": invalid release response");
+    return {
+      release_tag: data.tag_name.slice(0, 128),
+      release_published_at: data.published_at || null
+    };
+  } finally {
+    clearTimeout(timeout);
+  }
+}
+
 export async function buildSnapshot(catalog, token, fetcher=fetch) {
   assert.ok(catalog?.repos?.length>0,"Catálogo no válido");
   const ids = new Set();
@@ -124,7 +171,12 @@ export async function buildSnapshot(catalog, token, fetcher=fetch) {
   const worker=async()=>{
     while(cursor<catalog.repos.length) {
       const i=cursor++;
-      entries[i]=await fetchRepo(catalog.repos[i],token,fetcher);
+      const entry = catalog.repos[i];
+      const meta = await fetchRepo(entry, token, fetcher);
+      if (entry.priority === "P0" || entry.priority === "P1") {
+        Object.assign(meta, await fetchLatestStableRelease(entry, token, fetcher));
+      }
+      entries[i] = meta;
     }
   };
   await Promise.all(Array.from({length:5},()=>worker()));
