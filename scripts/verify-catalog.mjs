@@ -26,6 +26,24 @@ for (const repo of catalog.repositories) {
   assert.ok(!repo.archived || repo.decision !== 'adopt', 'No adoptar un repositorio archivado sin revisar');
 }
 assert.equal(catalog.repositories.find(r => r.id === '14islands/r3f-scroll-rig')?.decision, 'hold');
+// Catálogo suplementario de librerías visuales (referencias, no instalaciones).
+const visual = JSON.parse(await readFile(resolve(root, 'references/visual-libraries-2026.json'), 'utf8'));
+assert.equal(visual.schema_version, 1);
+assert.match(visual.updated_on, /^\\d{4}-\\d{2}-\\d{2}$/);
+assert.equal(visual.operational_status, 'catalogued_not_installed');
+assert.ok(visual.repos.length >= 15);
+const visualIds = new Set();
+for (const entry of visual.repos) {
+  assert.match(entry.id, /^[A-Za-z0-9_.-]+\\/[A-Za-z0-9_.-]+$/);
+  assert.ok(!visualIds.has(entry.id), 'Duplicado visual: ' + entry.id);
+  visualIds.add(entry.id);
+  assert.equal(entry.url, 'https://github.com/' + entry.id);
+  assert.ok(['evaluate', 'reference_only', 'tool_reference', 'hold'].includes(entry.decision));
+  assert.ok(['P0', 'P1', 'P2'].includes(entry.priority));
+  for (const key of ['category', 'use', 'license_note', 'risk']) assert.ok(entry[key]?.length);
+  assert.equal(entry.integrated, false, 'Referencia no puede declararse instalada: ' + entry.id);
+}
+
 const skillSources = JSON.parse(await readFile(resolve(root, 'references/skill-sources.json'), 'utf8'));
 let externalSkills = 0;
 for (const source of skillSources.sources) {
@@ -58,5 +76,5 @@ async function walk(dir) {
   }
 }
 await walk(root);
-console.log('OK: ' + ids.size + ' repositorios, ' + externalSkills + ' skills externas con licencia y ' + documentCount + ' documentos; estructura, revisiones y enlaces locales válidos.');
+console.log('OK: ' + ids.size + ' repositorios base, ' + visualIds.size + ' repositorios visuales, ' + externalSkills + ' skills externas con licencia y ' + documentCount + ' documentos; estructura, revisiones y enlaces locales válidos.');
 console.log('Esta comprobación no ejecuta demos ni certifica compatibilidad de runtime.');
