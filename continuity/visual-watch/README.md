@@ -53,3 +53,6 @@ Para proponer actualización de snapshot desde un checkout revisado: `node scrip
 - El scanner es metadatos; NO autoriza ejecutar README, npm install, scripts MCP, Adobe UXP, código Blender externo ni extensiones.
 - Evitar PRs solo por stars; las estrellas no predicen estabilidad ni calidad.
 - [Reanudar Altiora](../README.md) y revisar el checkpoint para no depender de la respuesta de ChatGPT.
+
+## Seguimiento de versiones estables (V3)
+Para repositorios P0/P1 consulta la última versión estable declarada en GitHub Releases, registrando `release_tag` y `release_published_at`. Un 404 de GitHub Releases significa «sin release publicada», no que el repositorio esté inactivo. Los cambios de versión se proponen para análisis; no actualizan dependencias automáticamente. [Guía de mejora continua](../../creative/visual-studio/SCOUT-V3.md).
