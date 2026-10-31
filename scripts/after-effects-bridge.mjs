@@ -9,7 +9,8 @@
 import assert from "node:assert/strict";
 import {spawnSync} from "node:child_process";
 import {realpath, stat, mkdir, writeFile} from "node:fs/promises";
-import {resolve,dirname,relative,isAbsolute,sep,extname} from "node:path";
+import {existsSync, readdirSync} from "node:fs";
+import {resolve,dirname,relative,isAbsolute,sep,extname,join} from "node:path";
 import {fileURLToPath} from "node:url";
 const ROOT=fileURLToPath(new URL("../",import.meta.url));
 const ALLOWED_AERENDER=process.platform==="win32"?"aerender.exe":"aerender";
@@ -31,15 +32,52 @@ export function validateArgs(project,comp,output,root=ROOT) {
 export function renderArguments(job){
   return ["-project",job.project,"-comp",job.comp,"-output",job.output];
 }
-export function detectAerender(runner=spawnSync,exe=process.env.ALTIORA_AERENDER||ALLOWED_AERENDER){
-  // Version/help alone cannot confirm a working GUI license; use a benign probe.
-  const x=runner(exe,["-help"],{encoding:"utf8",timeout:8000,maxBuffer:256*1024,shell:false,windowsHide:true});
-  return {
-    available:!x.error && (x.status===0 || /After Effects|aerender|usage:/i.test(String(x.stdout||"")+" "+String(x.stderr||""))),
-    executable:exe,
-    diagnostic:x.error?.code||x.status,
-    note:"Availability is local CLI discovery only. Requires compatible installed licensed AE and valid render settings."
-  };
+export function aerenderCandidates(env=process.env, platform=process.platform) {
+  const candidates=[];
+  if (env.ALTIORA_AERENDER) candidates.push(env.ALTIORA_AERENDER);
+  if (platform==="win32") {
+    const roots=[env.ProgramFiles, env.PROGRAMFILES, env["ProgramFiles(x86)"]].filter(Boolean);
+    for (const root of roots) {
+      const adobe=join(root,"Adobe");
+      let names=[];
+      try{names=readdirSync(adobe).filter(n=>/^Adobe After Effects(?: |$)/i.test(n)).sort().reverse();}
+      catch{ /* Adobe not installed under default location. */ }
+      for (const name of names) candidates.push(join(adobe,name,"Support Files","aerender.exe"));
+    }
+    candidates.push("aerender.exe");
+  } else if (platform==="darwin") {
+    const root="/Applications";
+    let names=[];
+    try{names=readdirSync(root).filter(n=>/^Adobe After Effects(?: |$)/i.test(n)).sort().reverse();}
+    catch{ /* No system Applications access. */ }
+    for (const name of names) {
+      candidates.push(join(root,name,"aerender"));
+      candidates.push(join(root,name,"Adobe After Effects.app","Contents","MacOS","aerender"));
+    }
+    candidates.push("aerender");
+  } else candidates.push("aerender");
+  return [...new Set(candidates)];
+}
+
+export function detectAerender(runner=spawnSync,exe=null) {
+  let lastStatus=null;
+  for (const candidate of exe?[exe]:aerenderCandidates()) {
+    // An explicit absolute path is probed only if it exists, to avoid accidental PATH confusion.
+    if (isAbsolute(candidate) && !existsSync(candidate)) continue;
+    try {
+      const x=runner(candidate,["-help"],{
+        encoding:"utf8",timeout:8000,maxBuffer:256*1024,shell:false,windowsHide:true
+      });
+      const output=String(x.stdout||"")+" "+String(x.stderr||"");
+      if (!x.error && (x.status===0 || /After Effects|aerender|usage:/i.test(output))) {
+        return {available:true,executable:candidate,diagnostic:x.status,
+          note:"Local aerender detected. Licensing, project rendering and GPU not yet verified."};
+      }
+      lastStatus=x.error?.code||x.status;
+    } catch {lastStatus="PROBE_EXCEPTION";}
+  }
+  return {available:false,executable:exe||aerenderCandidates()[0],diagnostic:lastStatus||"NOT_FOUND",
+    note:"No working local aerender detected. Verify installation and ALTIORA_AERENDER path."};
 }
 
 export async function planLocalRender(project,comp,output) {
@@ -52,7 +90,7 @@ export async function planLocalRender(project,comp,output) {
   return {
     status:"PLANNED",application:"Adobe After Effects",engine:"aerender",
     project:job.project,composition:job.comp,output:job.output,
-    command:[process.env.ALTIORA_AERENDER||ALLOWED_AERENDER,...renderArguments(job)],
+    command:[detectAerender().executable,...renderArguments(job)],
     notes:["Requires licensed After Effects locally; no cloud desktop access implied","AE Output Module settings determine actual codec","Visual, rights and sound QA required"]
   };
 }
