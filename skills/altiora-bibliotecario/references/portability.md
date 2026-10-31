@@ -23,4 +23,16 @@ python scripts/library.py check --catalog references/catalog.local.json
 
 `build` lee únicamente frontmatter de SKILL.md y de Markdown situado directamente en carpetas `agents`, además de metadatos de agentes TOML; no ejecuta contenidos, importa código ni sigue enlaces de directorio. `find` devuelve candidatos con ruta; abrir la skill pertinente antes de aplicarla. El índice es snapshot; no sustituye el descubrimiento nativo ni recomienda un modelo por precio supuesto.
 
+`build` registra las raíces absolutas elegidas. `check` vuelve a leer únicamente los metadatos de esas raíces y detecta altas, bajas y cambios de nombre, descripción o tipo. Solo ejecutar este control sobre catálogos locales propios o revisados: las raíces del JSON determinan qué carpetas se consultan. No compartir índices con rutas personales en GitHub.
+
+| Estado de `check` | Acción |
+|---|---|
+| `METADATA_CURRENT` (salida0) | Los metadatos coinciden en este momento; no certifica cuerpos, sesión nativa o herramientas conectadas |
+| `STALE` (salida1) | Revisar `added`, `removed`, `changed` y reconstruir con las raíces previstas |
+| `LEGACY_REBUILD_REQUIRED` (salida1) | El catálogo antiguo carece de raíces; reconstruir explícitamente, sin adivinarlas |
+| `INVALID_CATALOG` (salida1) | Corregir o reconstruir un índice local propio; no usarlo como prueba de vigencia |
+| `UNVERIFIED` (salida1) | Una fuente no está disponible, no se pudo leer o la raíz/ancestro es un enlace; resolver sin ampliar permisos por efecto lateral |
+
+Los informes se imprimen como JSON por stdout también cuando el control no pasa. `check` es de solo lectura y no reescribe el catálogo. Un cambio solo en el cuerpo de una skill no exige reconstruir sus metadatos, pero sus instrucciones deben leerse al aplicarla. Ejecutar este control al reutilizar un índice tras cambios o al retomar una instalación; no repetirlo por mensaje. `find` conserva su búsqueda rápida sobre el snapshot y no lo refresca implícitamente. No hay garantía de atomicidad si otra aplicación modifica fuentes durante el recorrido.
+
 Fuentes oficiales consultadas el 30/10/2026: [Claude Code skills](https://code.claude.com/docs/en/skills), [Gemini CLI skills](https://geminicli.com/docs/cli/creating-skills/), [Codex skills](https://learn.chatgpt.com/docs/build-skills). Las rutas disponibles pueden depender de versión y despliegue. No se probó un chat real en Claude, Gemini o Antigravity en esta entrega.
