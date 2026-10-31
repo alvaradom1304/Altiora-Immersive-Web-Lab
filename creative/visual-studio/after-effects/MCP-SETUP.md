@@ -9,14 +9,15 @@ Requisitos: Node.js 20+, repositorio Altiora clonado en una carpeta local, aplic
 Desde terminal en la raíz del repo de Altiora:
 
 ```bash
-npm run ae:clients:plan
-npm run ae:clients:connect
+npm run after-effects:setup             # Solo revisar; no cambia archivos
+npm run after-effects:setup -- --apply   # Registrar 4 clientes en este proyecto
 npm run after-effects:check
+npm run after-effects:mcp:test
 ```
 
-**Plan** solo imprime qué configuraciones se instalarían. **Connect** es una acción local explícita: utiliza los comandos oficiales `claude mcp add --transport stdio --scope project`, `gemini mcp add --scope project`, `codex mcp add`; además escribe `.agents/mcp_config.json` de Antigravity, preservando otros servidores. Las configuraciones apuntan al Node.js y al archivo MCP absolutos del PC donde se ejecute. Si una CLI no está instalada, reporta `CLI_NOT_INSTALLED`, y no se marca conectada.
+**Plan** solo informa qué archivos cambiarían. **--apply** modifica únicamente los cuatro archivos de configuración de este repositorio: `.mcp.json` (Claude), `.gemini/settings.json` (Gemini CLI), `.agents/mcp_config.json` (Antigravity) y `.codex/config.toml` (Codex). Conserva otros servidores y hace respaldos privados en `.altiora-private/backups/`. No modifica configuración global ni instala software. Las rutas pasan a ser absolutas de la PC. **Configurado no significa conectado**: hay que reiniciar y comprobar cada IA. El instalador por CLI `npm run ae:clients:connect` es una vía alternativa con alcances distintos según la CLI y no se recomienda como primera opción.
 
-No guardar `.agents/mcp_config.json` con rutas absolutas personales o claves en un commit. Para evitar exponerla, se añade al `.gitignore`. La herramienta también puede utilizarse cliente por cliente si alguno no acepta su comando debido a versión.
+No subir rutas personales ni claves a GitHub. `.agents/mcp_config.json` y los respaldos quedan ignorados; los demás archivos son plantillas versionadas, por lo que tras `--apply` revisá `git status` **antes de cualquier commit/push**, para excluir cambios con rutas personales. El instalador no concede acceso a aplicaciones en la nube que no ejecutan MCP STDIO sobre tu PC.
 
 ## Verificación cliente por cliente
 
@@ -33,7 +34,7 @@ Servidor: `scripts/after-effects-mcp.mjs`.
 
 - `after_effects_preflight` — consulta el ejecutable local `aerender`; solo lectura.
 - `after_effects_plan_render` — valida un archivo existente `.aep` dentro del repo y prepara argumentos; NO ejecuta.
-- `after_effects_render` — **oculto/deshabilitado por defecto**. Solo disponible cuando el propietario establece explícitamente dos variables en la configuración local de la IA: `ALTIORA_AE_ALLOW_RENDER=YES-I-APPROVE-LOCAL-RENDERS` y `ALTIORA_AE_APPROVED_PROJECT=approved/my-approved-project.aep`. El render únicamente acepta **ese archivo exacto** dentro de Altiora, y una salida nueva en `out/`. No sobrescribe archivos existentes.
+- `after_effects_render` — **expuesto como herramienta pero bloqueado por defecto**. Solo disponible cuando el propietario establece explícitamente dos variables en la configuración local de la IA: `ALTIORA_AE_ALLOW_RENDER=YES-I-APPROVE-LOCAL-RENDERS` y `ALTIORA_AE_APPROVED_PROJECT=approved/my-approved-project.aep`. El render únicamente acepta **ese archivo exacto** dentro de Altiora, y una salida nueva en `out/`. No sobrescribe archivos existentes.
 
 No configurar esas variables para todas las IAs sin evaluar permisos de cada una. Usar permiso por proyecto, apagarlo al terminar y revisar la acción antes de ejecutar. La detección de `aerender` no acredita que Adobe tenga licencia activa; la validación real exige ejecutar un render y comprobarlo.
 
