@@ -1,0 +1,75 @@
+# GitHub performs a metadata-only review on the default branch every Monday.
+# Automated PRs require repo setting "Allow GitHub Actions to create pull requests".
+# No external repos are downloaded or executed, and no PR is merged automatically.
+name: Altiora Visual Tech Scout
+
+on:
+  schedule:
+    - cron: '17 13 * * 1' # Monday 07:17 Costa Rica (UTC-6)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: altiora-visual-tech-scout-main
+  cancel-in-progress: false
+
+jobs:
+  survey:
+    # Survey only from main; avoids using arbitrary feature-branch scripts with write tokens.
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Validate local watcher (no third-party code execution)
+        run: node --test scripts/visual-watch.test.mjs
+      - name: Survey curated repositories from GitHub metadata
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/visual-watch.mjs --write
+      - name: Upload reviewed metadata for recovery
+        uses: actions/upload-artifact@v4
+        with:
+          name: visual-tech-scout-observations
+          path: |
+            continuity/visual-watch/latest.json
+            continuity/visual-watch/review.md
+          if-no-files-found: ignore
+          retention-days: 30
+      - name: Propose updates for review (never auto-merge)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- continuity/visual-watch/; then
+            echo "No actionable metadata changes. No pull request." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          # Only one outstanding Scout proposal: no automatic branch rewrites or duplicate PRs.
+          existing="$(gh pr list --state open --search 'Visual Tech Scout in:title' --json number --jq 'length')"
+          if [ "$existing" -gt 0 ]; then
+            echo "Existing Visual Tech Scout PR awaits human review. New scan is attached as run artifact." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -c "automation/visual-tech-scout-${GITHUB_RUN_ID}"
+          git add continuity/visual-watch/latest.json continuity/visual-watch/review.md
+          git commit -m "chore(visual): propose curated library metadata review"
+          git push origin HEAD
+          if ! gh pr create --base main --head "automation/visual-tech-scout-${GITHUB_RUN_ID}" \
+            --title "Visual Tech Scout: review latest visual ecosystem changes" \
+            --body "Automatic metadata-only scan of curated repos. Review license/activity/archival changes and choose experiments. No packages installed; no automatic merge. See continuity/visual-watch/review.md and run artifacts."; then
+            echo "WARNING: GitHub Actions could not create the PR. Enable 'Allow GitHub Actions to create pull requests' in repository settings. Metadata branch was pushed." >> "$GITHUB_STEP_SUMMARY"
+            exit 1
+          fi
+          echo "A Visual Tech Scout PR was opened; human approval and project-specific QA are required." >> "$GITHUB_STEP_SUMMARY"
