@@ -1,7 +1,7 @@
 @AGENTS.md
 
 ## Equipo de agentes
-Los 12 roles de `team/registry.md` están disponibles como subagentes en `.claude/agents/`. Para trabajo multirrol, coordinarse en el chat del equipo (`team/chat/README.md`) firmando como `claude/<rol>`: reclamar la tarea antes de editar y cerrar con evidencia.
+Los 13 roles de `team/registry.md` están disponibles como subagentes en `.claude/agents/`. Para trabajo multirrol, coordinarse en el chat del equipo (`team/chat/README.md`) firmando como `claude/<rol>`: reclamar la tarea antes de editar y cerrar con evidencia.
 
 Índice completo en INDEX.md. En Claude Code: `/equipo <encargo>` reparte trabajo, `/chat-<rol> <mensaje>` habla con un agente, `/repos <necesidad>` consulta repositorios de referencia y cada skill de `skills/` está disponible como `/<nombre>` (las asignadas a un agente también se cargan solas). `.claude/skills/` e INDEX.md se generan con `npm run agents:build`; no editarlos a mano.
 
@@ -28,3 +28,6 @@ El [puente local AE](creative/visual-studio/after-effects/README.md) permite com
 
 ## MCP local After Effects para Claude Code
 Consultar [registro multi-cliente](creative/visual-studio/after-effects/MCP-SETUP.md): `npm run ae:clients:plan` y, solo desde la laptop con permiso, `npm run ae:clients:connect`. Comprobar con `claude mcp list`. El Director Audiovisual puede entonces elegir AE si `aerender` funciona; nunca afirmar acceso del ChatGPT remoto.
+
+## After Effects en PC — MCP local
+Desde la carpeta Altiora confiable, ejecutar `npm run after-effects:setup -- --apply` para crear configuración de este proyecto y verificar `/mcp`. Abrir [instrucciones MCP](creative/visual-studio/after-effects/MCP-SETUP.md). Usar siempre primero `after_effects_preflight`; si la app no está disponible, no afirmar acceso. Render solo tras autorización explícita del propietario y aprobación del proyecto exacto.
