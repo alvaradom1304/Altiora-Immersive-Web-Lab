@@ -8,6 +8,10 @@ La base de investigación reúne **25 repositorios** con una función, una decis
 
 Nuevo: [sistema visual compartido](creative/visual-studio/README.md), [router para Claude, Gemini/Antigravity y ChatGPT/Codex](creative/visual-studio/ROUTER.md), [23 referencias visuales evaluables](references/visual-libraries-2026.json) y [workflow de producción](docs/workflows/visual-production-multi-ai.md). Son extensiones documentales; no se han instalado programas, addons ni servidores MCP.
 
+## Experimento audiovisual ejecutable (código)
+
+[Tilicheros · Cinematic Motion Pilot](experiments/tilicheros-motion-lab/README.md) contiene una plantilla Remotion 15s vertical, un diseño conceptual original y un script Blender para generar CGI reproducible. Los archivos están versionados y cuentan con validación automatizada, pero **no** representan un anuncio final ni un render certificado.
+
 ## Empezar
 
 1. Leer la [comparación de repositorios](docs/research/repository-review.md).
