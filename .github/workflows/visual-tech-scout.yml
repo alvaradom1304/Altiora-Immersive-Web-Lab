@@ -75,7 +75,8 @@ jobs:
           if ! gh pr create --base main --head "automation/visual-tech-scout-${GITHUB_RUN_ID}" \
             --title "Visual Tech Scout: review latest visual ecosystem changes" \
             --body "Automatic metadata-only scan of curated repos. Review license/activity/archival changes and choose experiments. No packages installed; no automatic merge. See continuity/visual-watch/review.md and run artifacts."; then
-            echo "WARNING: GitHub Actions could not create the PR. Enable 'Allow GitHub Actions to create pull requests' in repository settings. Metadata branch was pushed." >> "$GITHUB_STEP_SUMMARY"
-            exit 1
+            echo "WARNING: GitHub Actions cannot create PRs with current repository permissions. The metadata review is complete and the proposed branch is available at automation/visual-tech-scout-${GITHUB_RUN_ID}. Enable 'Allow GitHub Actions to create and approve pull requests' in Settings > Actions > General to automate proposal creation." >> "$GITHUB_STEP_SUMMARY"
+            echo "Metadata and review were saved as Actions artifacts. No third-party code was installed or updated." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
           fi
           echo "A Visual Tech Scout PR was opened; human approval and project-specific QA are required." >> "$GITHUB_STEP_SUMMARY"
