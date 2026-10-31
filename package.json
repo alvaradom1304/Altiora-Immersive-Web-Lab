@@ -7,11 +7,13 @@
     "node": ">=20"
   },
   "scripts": {
-    "check": "node scripts/verify-catalog.mjs && node scripts/audit-skills.mjs && node scripts/build-agents.mjs --check",
+    "check": "node scripts/verify-catalog.mjs && node scripts/audit-skills.mjs && node scripts/build-agents.mjs --check && npm run continuity:check",
     "agents:build": "node scripts/build-agents.mjs",
     "chat": "node scripts/team-chat.mjs",
     "skills:audit": "node scripts/audit-skills.mjs",
     "skills:baseline": "node scripts/audit-skills.mjs --write",
-    "reference": "node scripts/fetch-reference.mjs"
+    "reference": "node scripts/fetch-reference.mjs",
+    "resume": "node scripts/continuity.mjs",
+    "continuity:check": "node scripts/continuity.mjs --check && node --test scripts/continuity.test.mjs"
   }
 }
