@@ -12,21 +12,33 @@
       "category": "video-generativo",
       "use": "Publicidad, reels, motion typography y clips con React",
       "decision": "evaluate",
-      "license_note": "Licencia especial Remotion; revisar elegibilidad comercial",
+      "license_note": "Custom Remotion free/company license; commercial eligibility depends on entity size/type and version",
       "priority": "P0",
       "risk": "No ejecutar renders masivos ni instalar sin revisión; presupuesto de GPU/almacenamiento",
-      "integrated": false
+      "integrated": false,
+      "license_review": {
+        "status": "license-file-reviewed; verify legal entity criteria for each commercial project",
+        "source_url": "https://github.com/remotion-dev/remotion/blob/main/LICENSE.md",
+        "reviewed_on": "2026-10-30",
+        "scope": "Top-level source evidence only; full asset/codec/dependency review still needed"
+      }
     },
     {
       "id": "remotion-dev/skills",
       "url": "https://github.com/remotion-dev/skills",
       "category": "ai-workflows",
       "use": "Buenas prácticas oficiales para generar video con agentes",
-      "decision": "reference_only",
-      "license_note": "Licencia del contenido por verificar",
+      "decision": "hold",
+      "license_note": "No top-level LICENSE observed; README documents agent skills and installation commands",
       "priority": "P0",
       "risk": "Evaluar el contenido de skills antes de importar; no ejecución automática",
-      "integrated": false
+      "integrated": false,
+      "license_review": {
+        "status": "no-root-license-found; documentation reference only",
+        "source_url": "https://github.com/remotion-dev/skills/blob/main/README.md",
+        "reviewed_on": "2026-10-30",
+        "scope": "Top-level source evidence only; full asset/codec/dependency review still needed"
+      }
     },
     {
       "id": "motiondivision/motion",
@@ -133,10 +145,16 @@
       "category": "3d-authoring",
       "use": "DCC para entornos, iluminación, materiales, Geometry Nodes y renders",
       "decision": "tool_reference",
-      "license_note": "GPL y licencias mixtas del repositorio; verificar componente",
+      "license_note": "GNU GPL, main COPYING refers to detailed GPL terms; asset and addon licensing separate",
       "priority": "P0",
       "risk": "No equivale a controlar Blender instalado ni autoriza addons externos",
-      "integrated": false
+      "integrated": false,
+      "license_review": {
+        "status": "license-file-reviewed; addons/assets subject to own licenses",
+        "source_url": "https://github.com/blender/blender/blob/main/COPYING",
+        "reviewed_on": "2026-10-30",
+        "scope": "Top-level source evidence only; full asset/codec/dependency review still needed"
+      }
     },
     {
       "id": "KhronosGroup/glTF-Blender-IO",
@@ -188,10 +206,16 @@
       "category": "adobe-after-effects",
       "use": "Guía comunitaria ExtendScript para After Effects",
       "decision": "reference_only",
-      "license_note": "Contenido con copyright Adobe; solo consulta",
+      "license_note": "README states Adobe copyright; community scripting reference, not open-source license grant",
       "priority": "P0",
       "risk": "No copiar/republicar guía ni presumir compatibilidad moderna",
-      "integrated": false
+      "integrated": false,
+      "license_review": {
+        "status": "copyright-reference-only; cannot republish guide",
+        "source_url": "https://github.com/docsforadobe/after-effects-scripting-guide/blob/master/readme.md",
+        "reviewed_on": "2026-10-30",
+        "scope": "Top-level source evidence only; full asset/codec/dependency review still needed"
+      }
     },
     {
       "id": "ffmpegwasm/ffmpeg.wasm",
@@ -220,11 +244,17 @@
       "url": "https://github.com/remotion-dev/claude-code-plugin",
       "category": "ai-claude",
       "use": "Bridge de skills Remotion para Claude Code",
-      "decision": "reference_only",
-      "license_note": "Licencia no comprobada",
+      "decision": "hold",
+      "license_note": "README says internal package without documentation; no root LICENSE observed",
       "priority": "P1",
       "risk": "Auditar manifests, hooks y scripts antes de usar",
-      "integrated": false
+      "integrated": false,
+      "license_review": {
+        "status": "no-root-license-found; internal undocumented plugin, do not install",
+        "source_url": "https://github.com/remotion-dev/claude-code-plugin/blob/main/README.md",
+        "reviewed_on": "2026-10-30",
+        "scope": "Top-level source evidence only; full asset/codec/dependency review still needed"
+      }
     },
     {
       "id": "remotion-dev/codex-plugin",
@@ -254,10 +284,16 @@
       "category": "blender-addon",
       "use": "Referencia de retopología para Blender",
       "decision": "hold",
-      "license_note": "Licencia no comprobada",
+      "license_note": "GPL-3.0-or-later code; non-code assets property of CG Cookie/Orange Turbine and restricted",
       "priority": "P2",
       "risk": "Revisar licencia, Blender target y distribución del addon antes de usar",
-      "integrated": false
+      "integrated": false,
+      "license_review": {
+        "status": "license-file-reviewed; assets rights require explicit permissions",
+        "source_url": "https://github.com/CGCookie/retopoflow/blob/master/RetopoFlow.LICENSE",
+        "reviewed_on": "2026-10-30",
+        "scope": "Top-level source evidence only; full asset/codec/dependency review still needed"
+      }
     },
     {
       "id": "AcademySoftwareFoundation/OpenColorIO",
@@ -599,12 +635,18 @@
       "category": "media-postproduction",
       "use": "Transcode, cut, mux audio, validate output formats",
       "decision": "evaluate",
-      "license_note": "LGPL/GPL depending on build flags and linked codecs",
+      "license_note": "LGPL-2.1-or-later default; optional GPL components and build flags change obligations",
       "priority": "P0",
       "risk": "Codec patents and distribution conditions vary; log exact binary build",
       "integrated": false,
       "verified_on": "2026-10-30",
-      "verified_scope": "Repository existence/activity/license field reviewed via GitHub metadata; no code audit or render"
+      "verified_scope": "Repository existence/activity/license field reviewed via GitHub metadata; no code audit or render",
+      "license_review": {
+        "status": "license-file-reviewed; inspect binary, codecs and distribution flags",
+        "source_url": "https://github.com/FFmpeg/FFmpeg/blob/master/LICENSE.md",
+        "reviewed_on": "2026-10-30",
+        "scope": "Top-level source evidence only; full asset/codec/dependency review still needed"
+      }
     },
     {
       "id": "mltframework/mlt",
