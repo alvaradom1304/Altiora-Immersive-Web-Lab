@@ -10,6 +10,7 @@ Fecha: 2026-10-31. Entrega: [PR 35](https://github.com/alvaradom1304/Altiora-Imm
 - `npm run routing:eval`: 14/14 casos redactados de recuperación top-5. Cuatro tareas se formularon sin nombrar la skill. Se corrigieron palabras vacías y el caso de redacción publicitaria en español; se ajustó contra esta misma suite, no es evaluación independiente ni prueba de generalización.
 - `python -m unittest discover -s skills/audio-production/scripts -p test_audio_qa.py`: nueve pruebas aprobadas del medidor PCM existente.
 - Copia personal del evaluador con `--root` apuntando al checkout: 14/14. Copias locales del Bibliotecario y tres entradas de instrucciones actualizadas con respaldo y hashes coincidentes; se conservaron los demás ajustes. Gemini/Antigravity comparten la entrada GEMINI.md. Esto no prueba descubrimiento por cada sesión.
+- La captura JSON en Windows detectó codificación regional en la salida del evaluador. Se corrigió a UTF-8 y se añadió cobertura de caracteres españoles con un entorno CP1252 en la prueba del checkout aislado.
 - Revisión independiente: detectó que el productor original mantenía siempre cuatro bloqueos; se incorporaron resoluciones individuales verificables sin eliminar los motivos originales. La corrección se volvió a revisar con el productor real en pruebas sintéticas. El agregador nunca autoriza publicación.
 
 Los tests sintéticos no equivalen a escucha o revisión de un video de cliente. La plantilla incompleta permanece `BLOCKED` con salida 2; un registro inventado no acredita una revisión.

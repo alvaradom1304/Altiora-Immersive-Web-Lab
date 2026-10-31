@@ -1,4 +1,5 @@
 import json
+import os
 from pathlib import Path
 import subprocess
 import sys
@@ -58,14 +59,17 @@ class RoutingEvaluationTests(unittest.TestCase):
             (root / 'skills' / 'test-only-skill' / 'SKILL.md').write_text(
                 '---\nname: explicit-root-only\ndescription: Singular fixture capability\n---\n', encoding='utf-8')
             suite = self.suite(query='explicit-root-only', expected_any=['explicit-root-only'], forbidden=[])
+            suite['cases'][0]['constraint'] = 'Revisión española: evidencia auténtica'
             cases = root / 'cases.json'
             cases.write_text(json.dumps(suite), encoding='utf-8')
             result = subprocess.run([sys.executable, str(Path(evaluator.__file__)),
                                      '--root', str(root), '--cases', str(cases), '--json'],
-                                    capture_output=True, text=True, timeout=30)
+                                    capture_output=True, encoding='utf-8', timeout=30,
+                                    env={**os.environ, 'PYTHONIOENCODING': 'cp1252'})
             self.assertEqual(result.returncode, 0, result.stderr)
             report = json.loads(result.stdout)
             self.assertEqual(report['entries'], 1)
+            self.assertEqual(report['results'][0]['constraint_not_executed'], 'Revisión española: evidencia auténtica')
             self.assertEqual(report['results'][0]['candidate_names'], ['explicit-root-only'])
 
     def test_top_k_cannot_hide_unbounded_context(self):

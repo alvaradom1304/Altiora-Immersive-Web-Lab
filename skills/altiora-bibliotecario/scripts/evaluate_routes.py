@@ -57,6 +57,8 @@ def evaluate(catalog, suite):
 
 
 def main():
+    if hasattr(sys.stdout, 'reconfigure'):
+        sys.stdout.reconfigure(encoding='utf-8')
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--cases', type=Path, default=DEFAULT_CASES)
     parser.add_argument('--json', action='store_true')
