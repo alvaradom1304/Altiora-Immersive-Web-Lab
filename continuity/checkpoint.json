@@ -7,6 +7,15 @@
   "description": "Estado reproducible para reanudar entre sesiones e IAs. No significa ejecución persistente ni conexión automática con software.",
   "completed_milestones": [
     {
+      "id": "VIS-AUDIO-02",
+      "name": "Identidad del WAV medido y coherencia del sidecar",
+      "result": "DONE",
+      "evidence": [{
+        "url": "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/blob/fix/altiora-audio-source-identity-2026-10-31/docs/operations/production-qa.md",
+        "claim": "Medidor PCM incluye hash/tamaño del WAV completo y rechaza ediciones comunes durante lectura; agregado bloquea identidades declaradas contradictorias. Control local aprobado; legacy conserva vínculo manual. No certifica extracción, escucha, derechos ni snapshot atómico."
+      }]
+    },
+    {
       "id": "VIS-OPS-08",
       "name": "Vigencia de catálogos por metadatos y raíces explícitas",
       "result": "DONE",

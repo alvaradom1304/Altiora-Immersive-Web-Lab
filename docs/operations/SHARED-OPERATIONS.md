@@ -53,6 +53,8 @@ Al reutilizar un índice local tras cambios o retomar una instalación, ejecutar
 
 Reutilizar los informes técnicos de video y audio existentes y seguir [QA de producción](production-qa.md). Vincular la evidencia a la misma versión de medios; una modificación del master exige repetir los controles afectados. No considerar el WAV analizado como la pista del MP4 sin evidencia explícita de extracción o correspondencia.
 
+El medidor PCM incorpora hash y tamaño del WAV completo; usar esa identidad en el sidecar. El agregado bloquea una identidad declarada contradictoria. Los informes antiguos sin hash medido siguen requiriendo vínculo manual explícito; ninguna de esas declaraciones demuestra extracción auténtica o escucha.
+
 Escuchar y ver el archivo real, comprobar sincronización e inteligibilidad, registrar derechos y revisión del cliente. No rellenar esos campos por inferencia ni por éxito de tests. La medición PCM original no certifica LUFS ni true peak. El agregado no publica ni autoriza difusión.
 
 El hito comercial exige producto, material, afirmaciones y derechos auténticos. Si faltan, dejar bloqueado ese paso y continuar con herramientas y pruebas reversibles.

@@ -1,5 +1,11 @@
 # Criterio de producción sonora
 
+## Identidad de la medición
+
+El helper `scripts/audio_qa.py` incluye `source.sha256` y `source.size_bytes` del WAV completo, sin guardar rutas en el informe ni escribir en el audio. Conservar ese informe junto al archivo medido y usar ese hash para vincular el sidecar del final. Repetir la medición y las revisiones afectadas si cambia el WAV. El hash no autentica al productor, la extracción desde el MP4, la escucha ni los derechos; el agregado sigue exigiendo atestaciones y revisiones. Los informes antiguos sin identidad medida deben declararse como tales.
+
+Mantener la fuente estable y controlada por su propietario. La lectura se limita en tamaño/duración y compara tamaño/fechas para rechazar ediciones comunes; no es un snapshot atómico frente a escritores concurrentes hostiles.
+
 ## Definir antes de mover controles
 
 Relacionar cada decisión con atención, emoción, comprensión o continuidad. Para una marca: escoger un vocabulario tímbrico, un motivo reconocible y reglas de variación; no confundir identidad sonora con añadir un jingle a todo. Pedir referencias de intención y comparar rasgos (ritmo, densidad, espacio, textura), sin copiar melodías o identidades ajenas.
