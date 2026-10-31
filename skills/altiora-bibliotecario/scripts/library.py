@@ -4,6 +4,7 @@ import argparse
 import json
 import os
 import re
+import stat
 import sys
 import unicodedata
 from pathlib import Path
@@ -48,20 +49,34 @@ def skill_metadata(path):
             'path': str(path.resolve())}
 
 
+def linked(path):
+    # Python 3.11 lacks Path.is_junction; Windows reparse points include junctions.
+    return path.is_symlink() or bool(getattr(path.lstat(), 'st_file_attributes', 0)
+                                     & getattr(stat, 'FILE_ATTRIBUTE_REPARSE_POINT', 0))
+
+
+def walk_error(error):
+    raise error
+
+
 def build(roots):
-    entries, seen = [], set()
+    entries, seen, recorded_roots = [], set(), []
     for root in roots:
-        root = Path(root)
+        root = Path(os.path.abspath(root))
         if not root.is_dir():
             raise ValueError('Root not found: ' + str(root))
-        for folder, dirs, files in os.walk(root, followlinks=False):
+        if any(linked(parent) for parent in (root, *root.parents)):
+            raise ValueError('Linked root is not supported: ' + str(root))
+        if str(root) in recorded_roots:
+            continue
+        recorded_roots.append(str(root))
+        for folder, dirs, files in os.walk(root, followlinks=False, onerror=walk_error):
             dirs[:] = sorted(d for d in dirs if d not in {
                 '.git', 'node_modules', 'references', 'assets', '__pycache__'
-            } and not (Path(folder) / d).is_symlink()
-              and not getattr(Path(folder) / d, 'is_junction', lambda: False)())
+            } and not linked(Path(folder) / d))
             for name in sorted(files):
                 path = Path(folder) / name
-                if path.is_symlink() or str(path.resolve()) in seen:
+                if linked(path) or str(path.resolve()) in seen:
                     continue
                 item = None
                 if name == 'SKILL.md':
@@ -84,7 +99,40 @@ def build(roots):
                     entries.append(item)
                     seen.add(str(path.resolve()))
     return {'schema_version': 1, 'scope': 'local_metadata_snapshot_not_runtime_capabilities',
+            'roots': recorded_roots,
             'entries': sorted(entries, key=lambda e: (e['kind'], e['name'], e['path']))}
+
+
+def check(catalog):
+    """Explicit metadata rescan; does not refresh files or certify runtime availability."""
+    if not isinstance(catalog, dict) or catalog.get('schema_version') != 1 or not isinstance(catalog.get('entries'), list):
+        return {'status': 'INVALID_CATALOG'}
+    if 'roots' not in catalog:
+        return {'status': 'LEGACY_REBUILD_REQUIRED'}
+    roots = catalog['roots']
+    if not isinstance(roots, list) or not roots or any(not isinstance(r, str) or not Path(r).is_absolute() for r in roots):
+        return {'status': 'INVALID_CATALOG'}
+    fields = ('kind', 'name', 'description', 'path')
+    for entry in catalog['entries']:
+        if (not isinstance(entry, dict) or
+                any(not isinstance(entry.get(key), str) or not entry[key] for key in fields) or
+                not Path(entry['path']).is_absolute()):
+            return {'status': 'INVALID_CATALOG'}
+    before = {e['path']: {key: e[key] for key in fields} for e in catalog['entries']}
+    if len(before) != len(catalog['entries']):
+        return {'status': 'INVALID_CATALOG'}
+    try:
+        fresh = build(roots)
+    except (OSError, ValueError):
+        return {'status': 'UNVERIFIED', 'reason': 'Source unavailable, unreadable or linked; no freshness claim.'}
+    after = {e['path']: e for e in fresh['entries']}
+    added = sorted(after.keys() - before.keys())
+    removed = sorted(before.keys() - after.keys())
+    changed = sorted(path for path in before.keys() & after.keys() if before[path] != after[path])
+    return {'status': 'STALE' if added or removed or changed else 'METADATA_CURRENT',
+            'entries': len(before), 'current_entries': len(after),
+            'added': added, 'removed': removed, 'changed': changed,
+            'scope': 'metadata_only_not_runtime_capabilities'}
 
 
 ALIASES = {
@@ -160,17 +208,20 @@ def main():
         output.write_text(json.dumps(catalog, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
         result = {'status': 'BUILT', 'entries': len(catalog['entries']), 'output': str(output.resolve())}
     else:
-        catalog = json.loads(Path(args.catalog).read_text(encoding='utf-8'))
+        try:
+            catalog = json.loads(Path(args.catalog).read_text(encoding='utf-8'))
+        except (OSError, ValueError):
+            if args.command != 'check':
+                raise
+            print(json.dumps({'status': 'INVALID_CATALOG'}))
+            return 1
         if args.command == 'find':
             result = {'status': 'CANDIDATES_ONLY', 'candidates': find(catalog, args.query, args.limit)}
         else:
-            missing = [e['path'] for e in catalog['entries'] if not Path(e['path']).is_file()]
-            result = {'status': 'STALE' if missing else 'PATHS_EXIST',
-                      'entries': len(catalog['entries']), 'missing': missing}
-            if missing:
-                sys.exit(json.dumps(result, ensure_ascii=False))
+            result = check(catalog)
     print(json.dumps(result, ensure_ascii=False, indent=2))
+    return 1 if args.command == 'check' and result['status'] != 'METADATA_CURRENT' else 0
 
 
 if __name__ == '__main__':
-    main()
+    sys.exit(main())
