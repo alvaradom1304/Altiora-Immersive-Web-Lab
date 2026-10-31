@@ -92,3 +92,6 @@ GSAP usa su licencia propia Standard No Charge. El catálogo señala una discrep
 
 ## Visual Studio V3
 [70 librerías curadas](references/visual-libraries-2026.json), [vigilancia de versiones estables](creative/visual-studio/SCOUT-V3.md), [CGI/color avanzado](creative/visual-studio/playbooks/advanced-cgi-color.md) y [animación 2D generativa](creative/visual-studio/playbooks/illustration-particles.md). Todas las IAs consumen el mismo Director Audiovisual y router; ninguna instala automáticamente todo el catálogo.
+
+## Adobe After Effects · preparación de acceso
+[Puente local AE y tutorial de permisos](creative/visual-studio/after-effects/README.md) y `npm run adobe:check`: permiten a las IAs planear y controlar renders de proyectos propios con After Effects instalado y autorizado. **No hay conexión comprobada con la laptop del usuario**; el conector Adobe de ChatGPT requiere autorización independiente.
