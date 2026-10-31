@@ -4,6 +4,12 @@
 name: Altiora Visual Tech Scout
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/visual-tech-scout.yml'
+      - 'scripts/visual-watch.mjs'
+      - 'references/visual-libraries-2026.json'
   schedule:
     - cron: '17 13 * * 1' # Monday 07:17 Costa Rica (UTC-6)
   workflow_dispatch:
