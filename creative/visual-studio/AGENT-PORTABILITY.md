@@ -79,3 +79,6 @@ Para CGI y postproducción de color abrir [advanced-cgi-color.md](playbooks/adva
 
 ## Acceso Adobe After Effects
 Hay un [puente de render local](after-effects/README.md) y una composición .jsx original para ejecutar manualmente con autorización. El comando `npm run adobe:check` determina visibilidad del ejecutable `aerender` **en la máquina de la IA**, no en la laptop del usuario. El conector Adobe de ChatGPT tiene funciones propias y no se debe presentar como control del proyecto .aep sin validación explícita.
+
+## After Effects entre asistentes
+La presencia de Adobe conectado en ChatGPT permite operaciones de medios compatibles, **no equivale a controlar .aep**. Claude Code y Gemini pueden utilizar el [puente aerender](../../scripts/after-effects-bridge.mjs) si tienen acceso autorizado al escritorio, un .aep existente y licencia. Los permisos son distintos para cada IA/ejecutor. Confirmar `npm run after-effects:check` en ese entorno antes de planificar un render nativo.
