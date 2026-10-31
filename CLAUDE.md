@@ -10,3 +10,6 @@ Antes de tareas de Blender, Adobe, motion, VFX, anuncios o video programático, 
 
 ## Skill operativa V2 (compartida con Gemini y Codex)
 Si la intención del usuario contiene **motion graphics, After Effects, Premiere, Photoshop, Blender, VFX, cinematic, shaders, web 3D o anuncios**, cargar [protocolo](creative/visual-studio/AGENT-PORTABILITY.md), [matriz](creative/visual-studio/PRODUCTION-MATRIX.md) y el [playbook correspondiente](creative/visual-studio/playbooks/README.md). Delegar a los agentes existentes solo las skills pertinentes, sin instalar servidores MCP de terceros por defecto.
+
+## Reanudación sin reconstruir el chat
+Antes de continuar una tarea de Altiora, leer [checkpoint](continuity/checkpoint.json) y [recovery runbook](continuity/README.md), ejecutar `npm run resume` si hay checkout y verificar PRs/CI. Si el usuario dice «sigue», priorizar siguiente paso desbloqueado; no duplicar milestones completados ni pedir de nuevo el brief existente.
