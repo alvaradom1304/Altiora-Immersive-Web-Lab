@@ -62,6 +62,14 @@ export async function executeLocalRender(project,comp,output) {
   assert.equal(process.env.ALTIORA_AE_ALLOW_RENDER,"YES-I-APPROVE-LOCAL-RENDERS",
     "Render disabled. Owner must explicitly enable local render in the MCP/client environment.");
   const plan=await planLocalRender(project,comp,output);
+  const exact=process.env.ALTIORA_AE_APPROVED_PROJECT;
+  assert.ok(exact && exact.trim(), "Approved local .aep path required in ALTIORA_AE_APPROVED_PROJECT");
+  const approvedPath=resolve(ROOT,exact);
+  const actualApproved=await realpath(approvedPath);
+  const actualSource=await realpath(plan.project);
+  assert.equal(actualSource,actualApproved,"Project was not approved by the PC owner");
+  const allowedOut=resolve(ROOT,"out");
+  assert.ok(isWithin(allowedOut,plan.output),"Output must remain inside out/");
   const probe=detectAerender();
   assert.ok(probe.available,"After Effects aerender is not verified on this machine");
   await mkdir(dirname(plan.output),{recursive:true});
