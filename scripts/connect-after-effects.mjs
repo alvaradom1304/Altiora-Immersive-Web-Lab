@@ -29,6 +29,13 @@ export function mergeAntigravity(old,nodePath=process.execPath,serverPath=SERVER
   if(data.mcpServers[NAME]){
     const entry=data.mcpServers[NAME];
     if(entry.command===nodePath&&JSON.stringify(entry.args)===JSON.stringify([serverPath]))return {value:data,changed:false};
+    // The repository can include a relative-path template. Convert only that
+    // known trusted template to this PC's absolute paths; never rewrite
+    // unrelated user-defined MCP commands.
+    if(entry.command==="node"&&JSON.stringify(entry.args)===JSON.stringify(["scripts/after-effects-mcp.mjs"])){
+      data.mcpServers[NAME]={command:nodePath,args:[serverPath]};
+      return {value:data,changed:true};
+    }
     throw Error("Existing "+NAME+" config differs; resolve manually, no automatic overwrite");
   }
   data.mcpServers[NAME]={command:nodePath,args:[serverPath]};
@@ -36,7 +43,9 @@ export function mergeAntigravity(old,nodePath=process.execPath,serverPath=SERVER
 }
 export function runClient(plan,run=spawnSync){
   const result=run(plan.command,plan.args,{cwd:ROOT,encoding:"utf8",timeout:30000,windowsHide:true,shell:false,maxBuffer:256*1024});
-  return {client:plan.client,status:result.error?.code==="ENOENT"?"CLI_NOT_INSTALLED":result.status===0?"REGISTERED":"FAILED",diagnostic:String(result.error?.message||result.stderr||"").slice(0,180)};
+  const diagnostic=String(result.error?.message||result.stderr||"").slice(0,180);
+  const duplicate=/already (?:exists|configured|registered)|duplicate server/i.test(diagnostic);
+  return {client:plan.client,status:result.error?.code==="ENOENT"?"CLI_NOT_INSTALLED":result.status===0?"REGISTERED":duplicate?"ALREADY_PRESENT_CHECK_PATH":"FAILED",diagnostic};
 }
 export async function updateAntigravity(){
   let prior={};
