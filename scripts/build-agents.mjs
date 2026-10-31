@@ -76,6 +76,13 @@ for (const agent of agents) {
   frontmatter.push('---', '');
   const text = body(agent, role);
   outputs.push([`.claude/agents/${agent.id}.md`, frontmatter.join('\n') + '\n' + text]);
+  if (agent.id === 'audio-specialist') {
+    // Native adapters inherit client tools/model/permissions; no account edits.
+    const instructions = 'Read skills/audio-production/SKILL.md from the project root before audio work.\n\n' + text;
+    outputs.push([`.codex/agents/${agent.id}.toml`, `name = ${JSON.stringify(agent.id)}\ndescription = ${JSON.stringify(description)}\ndeveloper_instructions = ${JSON.stringify(instructions)}\n`]);
+    outputs.push([`.gemini/agents/${agent.id}.md`, `---\nname: ${agent.id}\ndescription: ${JSON.stringify(description)}\nkind: local\n---\n\n${instructions}`]);
+    outputs.push(['.agents/skills/audio-production/SKILL.md', `---\nname: audio-production\ndescription: ${JSON.stringify('Diseño sonoro, voz, restauración, mezcla y masterización con QA; usar en trabajos de audio.')}\n---\n\nLeer [la skill completa](../../../skills/audio-production/SKILL.md) y solo sus referencias pertinentes. Mantener permisos, evidencia y límites de escucha.\n`]);
+  }
   outputs.push([`team/agents/${agent.id}.md`, `<!-- Generado con npm run agents:build desde team/agents.json y team/roles/${agent.id}.md. No editar a mano. -->\n\n` + text.replace('\n\nRol del equipo', `\n\n> ${description}\n> Pegar este archivo como instrucciones del sistema o primer mensaje en cualquier IA.\n\nRol del equipo`)]);
 }
 

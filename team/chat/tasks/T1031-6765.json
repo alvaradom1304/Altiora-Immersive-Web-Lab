@@ -1,0 +1,36 @@
+{
+  "id": "T1031-6765",
+  "title": "Especialista de sonido y audio con fuentes y QA",
+  "role": "web-engineer",
+  "ai": "codex",
+  "reviewer": "qa-reviewer",
+  "depends": [],
+  "files": [
+    "skills/audio-production",
+    "team/roles/audio-specialist.md",
+    "references/audio-repositories-2026.json"
+  ],
+  "acceptance": "Fuentes verificadas, rol portable, medidor PCM probado y conexión al router",
+  "status": "hecha",
+  "owner": "codex/web-engineer",
+  "created": "2026-10-31T12:50:32Z",
+  "created_by": "codex/web-engineer",
+  "history": [
+    {
+      "at": "2026-10-31T12:50:32Z",
+      "by": "codex/web-engineer",
+      "status": "pendiente"
+    },
+    {
+      "at": "2026-10-31T12:51:48Z",
+      "by": "codex/web-engineer",
+      "status": "en_curso"
+    },
+    {
+      "at": "2026-10-31T13:06:42Z",
+      "by": "codex/web-engineer",
+      "status": "hecha",
+      "note": "14 fuentes con SHA/licencias revisadas, rol y adaptadores generados, 9 tests PCM y 2 casos independientes comprobados; sin escucha de audio de cliente ni instalación de motores/modelos"
+    }
+  ]
+}

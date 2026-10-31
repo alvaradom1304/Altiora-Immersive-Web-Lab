@@ -27,6 +27,7 @@ Si falta un dato imprescindible, preguntar **solo ese dato**. Mantener supuestos
 | Escenario 3D cinematográfico | Dirección creativa > Productor visual > Ingeniero web > QA | Blender + glTF Blender IO + glTF Transform + Three/R3F | escena fuente, GLB validado, atlas texturas, mapa de performance y fallback |
 | Producto 3D / AR | Producto/UX > Visual > Web > QA | Blender + model-viewer o R3F | GLB, escena simple, controles accesibles, fallback foto |
 | Motion graphics explicativos | Dirección creativa > Motion > QA | Remotion o Motion Canvas, AE según entorno y permisos | animatic, composición editable, video con subtítulos |
+| Sonido, voz, música, Foley, podcast o mezcla/master | Dirección audiovisual > audio-specialist > QA | [audio-production](../../skills/audio-production/SKILL.md); herramientas autorizadas según [catálogo](../../skills/audio-production/references/tools.md) | tratamiento/cue sheet, fuentes/stems, master, medidas y escucha documentadas |
 | Automatización Adobe | Ingeniería/Seguridad > Visual > QA | UXP Photoshop/Premiere oficiales; AE scripting documentado | plugin aislado, permisos, test local, rollback |
 | Pedir “integrar MCP de Blender/Adobe” | Seguridad > Ingeniería > QA | solo evaluar servidor de terceros en HOLD | matriz de amenazas, permisos, plan de instalación; nunca conexión asumida |
 

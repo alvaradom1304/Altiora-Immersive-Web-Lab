@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": "Altiora Visual Studio",
   "repository": "alvaradom1304/Altiora-Immersive-Web-Lab",
-  "snapshot_date": "2026-10-30",
+  "snapshot_date": "2026-10-31",
   "snapshot_kind": "repo_checkpoint_not_live_github_api",
   "description": "Estado reproducible para reanudar entre sesiones e IAs. No significa ejecución persistente ni conexión automática con software.",
   "completed_milestones": [
@@ -201,6 +201,13 @@
       "evidence": [
         "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/pull/33"
       ]
+    },
+    {
+      "name": "Especialista de sonido y audio portable; 14 repositorios revisados y medidor PCM original",
+      "status": "DOCUMENTED",
+      "evidence": [
+        "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/tree/feature/altiora-audio-specialist-2026-10-31/skills/audio-production"
+      ]
     }
   ],
   "context_files": [
@@ -218,7 +225,10 @@
     "creative/visual-studio/playbooks/advanced-cgi-color.md",
     "creative/visual-studio/playbooks/illustration-particles.md",
     "skills/altiora-bibliotecario/SKILL.md",
-    "creative/visual-studio/after-effects/VERIFICATION.md"
+    "creative/visual-studio/after-effects/VERIFICATION.md",
+    "team/agents/audio-specialist.md",
+    "skills/audio-production/SKILL.md",
+    "references/audio-repositories-2026.json"
   ],
   "known_limits": [
     "Este snapshot no consulta GitHub en tiempo real; cotejar siempre PR, checks y archivos antes de declarar completado.",

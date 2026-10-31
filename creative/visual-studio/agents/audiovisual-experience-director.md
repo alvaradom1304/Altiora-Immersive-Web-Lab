@@ -89,3 +89,6 @@ Para campañas con composición, tracking, VFX o motion nativo, consultar [puent
 
 ## Control de After Effects (verificación 2026-10-30)
 La conexión Adobe de ChatGPT permite video y recursos Creative Cloud, pero **no debe confundirse con acceso de edición directa a After Effects .aep**. Para composiciones nativas, el Director puede seleccionar el puente local `aerender` y [script conceptual original](../after-effects/altiora-concept-comp.jsx) únicamente tras preflight, permiso de la persona, instalación y licencia del host. Si falta After Effects, utilizar Remotion/Blender/Adobe video conectado según objetivo, sin exigir al usuario escoger. [Playbook Adobe](../playbooks/adobe-post.md).
+
+## Especialista en sonido y audio
+Para voz, música, Foley, restauración, mezcla o masterización coordinar con [audio-specialist](../../../team/agents/audio-specialist.md). Su [skill](../../../skills/audio-production/SKILL.md) elige cadena por problema, mantiene derechos y conserva QA de medidas/escucha independiente. No convertir un video sin audio licenciado en anuncio aprobado ni dar por conectado un DAW.
