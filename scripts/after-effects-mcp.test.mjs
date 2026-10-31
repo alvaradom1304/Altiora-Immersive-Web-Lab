@@ -3,14 +3,14 @@ import assert from "node:assert/strict";
 import {spawn} from "node:child_process";
 import {handleRequest,TOOLS} from "./after-effects-mcp.mjs";
 
-test("MCP supports initialization and restricted list of exactly three tools",async()=>{
+test("MCP supports initialization and restricted read-only list until owner approves",async()=>{
   const init=await handleRequest({jsonrpc:"2.0",id:1,method:"initialize",params:{protocolVersion:"2025-06-18"}});
   assert.equal(init.id,1);
   assert.equal(init.result.serverInfo.name,"altiora-after-effects-local");
   assert.ok(init.result.capabilities.tools);
   const list=await handleRequest({jsonrpc:"2.0",id:2,method:"tools/list"});
   assert.deepEqual(list.result.tools.map(t=>t.name),[
-    "after_effects_preflight","after_effects_plan_render","after_effects_render"
+    "after_effects_preflight","after_effects_plan_render"
   ]);
   assert.ok(TOOLS.every(t=>t.inputSchema.additionalProperties===false));
   assert.equal(await handleRequest({jsonrpc:"2.0",method:"notifications/initialized"}),null);
@@ -34,7 +34,7 @@ test("Render is blocked without the PC owner's explicit render opt-in",async()=>
       arguments:{project:"approved/real.aep",composition:"Approved",output:"out/approved.mov"}
     }});
     assert.equal(out.result.isError,true);
-    assert.match(out.result.content[0].text,/owner must explicitly enable|Render disabled/i);
+    assert.match(out.result.content[0].text,/owner must approve|Render disabled/i);
   }finally{
     if(before===undefined)delete process.env.ALTIORA_AE_ALLOW_RENDER;
     else process.env.ALTIORA_AE_ALLOW_RENDER=before;
@@ -71,5 +71,5 @@ test("MCP stdio roundtrip launches on local Node and replies to tools/list",asyn
   });
   const response=JSON.parse(output.trim());
   assert.equal(response.id,99);
-  assert.equal(response.result.tools.length,3);
+  assert.equal(response.result.tools.length,2);
 });
