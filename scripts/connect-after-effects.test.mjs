@@ -33,3 +33,14 @@ test("client with failed CLI command is reported as FAILED",()=>{
  assert.equal(runClient(commands(node,server)[1],()=>({status:1,stderr:"invalid argument"})).status,"FAILED");
  assert.equal(runClient(commands(node,server)[2],()=>({status:0,stdout:"added"})).status,"REGISTERED");
 });
+
+test("tracked relative Antigravity template upgrades to this PC's real path",()=>{
+  const old={mcpServers:{"altiora-after-effects":{command:"node",args:["scripts/after-effects-mcp.mjs"]}}};
+  const v=mergeAntigravity(old,node,server);
+  assert.equal(v.changed,true);
+  assert.equal(v.value.mcpServers["altiora-after-effects"].command,node);
+});
+test("duplicate CLI registration is not misreported as a successful new link",()=>{
+ const v=runClient(commands(node,server)[0],()=>({status:1,stderr:"MCP server already exists"}));
+ assert.equal(v.status,"ALREADY_PRESENT_CHECK_PATH");
+});
