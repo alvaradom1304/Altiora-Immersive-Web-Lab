@@ -88,6 +88,13 @@ export function evaluateProductionQA(bundle) {
   require(a.status === 'MEASURED_NOT_APPROVED' && a.commercial_certification === false
     && a.listening_review === 'NOT_PERFORMED' && a.rights === 'NOT_VERIFIED',
   'Audio report must be original sample measurement evidence, not approval');
+  if (a.source !== undefined) {
+    require(isObject(a.source) && hash(a.source.sha256)
+      && a.source.sha256 === audio.source_sha256
+      && integer(a.source.size_bytes)
+      && a.source.size_bytes >= 44 + a.frames * a.channels * (a.bit_depth / 8),
+    'Measured WAV source identity is malformed or contradicts the declared sidecar');
+  }
   require([1, 2].includes(a.channels) && [8, 16, 24, 32].includes(a.bit_depth)
     && integer(a.sample_rate_hz) && a.sample_rate_hz > 0 && integer(a.frames) && a.frames > 0
     && positive(a.duration_seconds) && Math.abs(a.duration_seconds - a.frames / a.sample_rate_hz) < 0.000001,

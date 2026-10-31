@@ -5,16 +5,57 @@ import hashlib
 import io
 import json
 import math
+import os
 from pathlib import Path
 import struct
 import tempfile
 import unittest
+from unittest.mock import patch
 import wave
 
 import audio_qa
 
 
 class AudioQATests(unittest.TestCase):
+    def test_source_identity_matches_complete_multiblock_file_without_paths(self):
+        path = self.fixture([1000, -1000] * 10000)
+        before = path.read_bytes()
+        report = audio_qa.analyze(path)
+        self.assertEqual(report['source'], {'sha256': hashlib.sha256(before).hexdigest(), 'size_bytes': len(before)})
+        self.assertNotIn(str(path), json.dumps(report))
+        self.assertEqual(path.read_bytes(), before)
+
+    def test_source_identity_includes_unmeasured_riff_chunks(self):
+        path = self.fixture([1000, -1000] * 10)
+        first = audio_qa.analyze(path)
+        raw = path.read_bytes()
+        raw = raw[:12] + b'JUNK' + struct.pack('<I', 4) + b'abcd' + raw[12:]
+        raw = raw[:4] + struct.pack('<I', len(raw)-8) + raw[8:]
+        path.write_bytes(raw)
+        second = audio_qa.analyze(path)
+        self.assertEqual(second['source']['sha256'], hashlib.sha256(raw).hexdigest())
+        self.assertNotEqual(first['source']['sha256'], second['source']['sha256'])
+        self.assertEqual(first['channel_measurements'], second['channel_measurements'])
+
+    def test_same_size_input_edit_during_measurement_is_rejected(self):
+        path = self.fixture([1000, -1000] * 10)
+        original_read = audio_qa._read
+        changed = False
+        def read_then_edit(stream, count):
+            nonlocal changed
+            data = original_read(stream, count)
+            if count == 40 and not changed:
+                changed = True
+                stamp = path.stat()
+                with path.open('r+b') as output:
+                    output.seek(44)
+                    output.write(b'\x01\x00')
+                os.utime(path, ns=(stamp.st_atime_ns, stamp.st_mtime_ns + 1000000000))
+            return data
+        with patch.object(audio_qa, '_read', side_effect=read_then_edit):
+            with self.assertRaisesRegex(audio_qa.AudioQAError, 'changed during analysis'):
+                audio_qa.analyze(path)
+        self.assertTrue(changed)
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)

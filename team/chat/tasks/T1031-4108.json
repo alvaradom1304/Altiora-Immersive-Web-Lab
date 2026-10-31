@@ -1,0 +1,39 @@
+{
+  "id": "T1031-4108",
+  "title": "Vincular medición PCM con identidad del WAV",
+  "role": "web-engineer",
+  "ai": "codex",
+  "reviewer": "experience-director",
+  "depends": [],
+  "files": [
+    "skills/audio-production/scripts/audio_qa.py",
+    "skills/audio-production/scripts/test_audio_qa.py",
+    "scripts/production-qa.mjs",
+    "scripts/production-qa.test.mjs",
+    "docs/operations/production-qa.md",
+    "continuity/checkpoint.json"
+  ],
+  "acceptance": "Hash de WAV completo en informe; detectar cambios comunes durante lectura; rechazo de vínculo contradictorio; compatibilidad legacy explícita y pruebas",
+  "status": "hecha",
+  "owner": "codex/web-engineer",
+  "created": "2026-10-31T19:14:37Z",
+  "created_by": "codex/web-engineer",
+  "history": [
+    {
+      "at": "2026-10-31T19:14:37Z",
+      "by": "codex/web-engineer",
+      "status": "pendiente"
+    },
+    {
+      "at": "2026-10-31T19:15:17Z",
+      "by": "codex/web-engineer",
+      "status": "en_curso"
+    },
+    {
+      "at": "2026-10-31T19:24:25Z",
+      "by": "codex/web-engineer",
+      "status": "hecha",
+      "note": "PASS local:148 pruebas +17/17 casos;12 audio y15 producción. SHA256 completo incluye chunks no medidos; edición de mismo tamaño bloqueada; vínculo contradictorio bloqueado aun con digest actualizado. Revisión secuencial; CI pendiente antes de merge."
+    }
+  ]
+}
