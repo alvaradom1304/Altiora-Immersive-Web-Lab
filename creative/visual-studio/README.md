@@ -39,6 +39,10 @@ Todos los agentes deben leer [el router común](ROUTER.md) y aplicar [el workflo
 
 [Ver repositorios visuales, decisiones y riesgos](../../references/visual-libraries-2026.json). Es **complementario** a [references/repositories.json](../../references/repositories.json). No es un archivo `package.json`, no incluye código de terceros y no demuestra que una integración esté instalada.
 
+## Primer piloto implementado
+
+[Experimento Tilicheros Gaming](../../experiments/tilicheros-motion-lab/README.md): código fuente de un spot 9:16, artwork conceptual propio, generador Blender y pruebas estructurales/TypeScript. Se mantiene aislado del sitio comercial; no contiene assets o productos auténticos de Tilicheros, y no declara render de video concluido.
+
 ## Plantillas
 
 - [Brief audiovisual y de experiencia](BRIEF.template.md)
