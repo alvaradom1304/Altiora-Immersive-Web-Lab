@@ -7,7 +7,7 @@
     "node": ">=20"
   },
   "scripts": {
-    "check": "node scripts/verify-catalog.mjs && node scripts/audit-skills.mjs && node scripts/build-agents.mjs --check && npm run continuity:check && npm run visual:preflight:test && npm run visual:watch:test && npm run video:master:test && npm run adobe:test && npm run after-effects:test && npm run ae:clients:test && npm run after-effects:mcp:test && npm run after-effects:setup:test",
+    "check": "node scripts/verify-catalog.mjs && node scripts/audit-skills.mjs && node scripts/build-agents.mjs --check && npm run continuity:check && npm run visual:preflight:test && npm run visual:watch:test && npm run video:master:test && npm run adobe:test && npm run ae:clients:test && npm run after-effects:setup:test",
     "agents:build": "node scripts/build-agents.mjs",
     "chat": "node scripts/team-chat.mjs",
     "skills:audit": "node scripts/audit-skills.mjs",

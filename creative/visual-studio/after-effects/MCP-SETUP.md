@@ -15,7 +15,7 @@ npm run after-effects:check
 npm run after-effects:mcp:test
 ```
 
-**Plan** solo informa qué archivos cambiarían. **--apply** modifica únicamente los cuatro archivos de configuración de este repositorio: `.mcp.json` (Claude), `.gemini/settings.json` (Gemini CLI), `.agents/mcp_config.json` (Antigravity) y `.codex/config.toml` (Codex). Conserva otros servidores y hace respaldos privados en `.altiora-private/backups/`. No modifica configuración global ni instala software. Las rutas pasan a ser absolutas de la PC. **Configurado no significa conectado**: hay que reiniciar y comprobar cada IA. El instalador por CLI `npm run ae:clients:connect` es una vía alternativa con alcances distintos según la CLI y no se recomienda como primera opción.
+**Plan** solo informa qué archivos cambiarían. **--apply** modifica únicamente los cuatro archivos de configuración de este repositorio: `.mcp.json` (Claude), `.gemini/settings.json` (Gemini CLI), `.agents/mcp_config.json` (Antigravity) y `.codex/config.toml` (Codex). Conserva otros servidores y hace respaldos privados en `.altiora-private/backups/`. No modifica configuración global ni instala software. Las rutas pasan a ser absolutas de la PC. **Configurado no significa conectado**: hay que reiniciar y comprobar cada IA. El alias ae:clients:connect utiliza el mismo registro local y los mismos límites.
 
 No subir rutas personales ni claves a GitHub. `.agents/mcp_config.json` y los respaldos quedan ignorados; los demás archivos son plantillas versionadas, por lo que tras `--apply` revisá `git status` **antes de cualquier commit/push**, para excluir cambios con rutas personales. El instalador no concede acceso a aplicaciones en la nube que no ejecutan MCP STDIO sobre tu PC.
 
@@ -47,3 +47,15 @@ Configurar en el **PC local** `ALTIORA_AERENDER` con la ruta del ejecutable ofic
 «Altiora: prepará una animación cinematográfica del artículo de Tilicheros. Elegí automáticamente si conviene After Effects, Blender o Remotion, revisá accesos disponibles y solo usá After Effects para un proyecto autorizado. Entregá preview y QA antes de publicar».
 
 El Director consulta las herramientas sin pedirte seleccionar software; decide el pipeline y delega. Este archivo de configuración no mantiene una IA trabajando 24/7 y no habilita control de escritorio para servicios remotos.
+
+## Compatibilidad y límites de la revisión
+
+`ae:clients:connect` y `after-effects:setup -- --apply` usan el mismo registro de proyecto. Ninguno llama a las CLIs de registro ni modifica archivos globales. Se registran Node y script con rutas absolutas, también con espacios en Windows. La plantilla Codex está deshabilitada hasta ejecutar el registro local. No hace falta npm install para este puente. Después, reiniciar los clientes instalados y aceptar su confianza de proyecto; la herramienta no acepta ese permiso en tu nombre.
+
+Fuentes oficiales: [Claude Code](https://code.claude.com/docs/en/mcp), [Gemini CLI](https://geminicli.com/docs/tools/mcp-server/), [Antigravity](https://antigravity.google/docs/mcp), [Codex](https://learn.chatgpt.com/docs/extend/mcp?surface=cli). Admiten MCP stdio local; soporte documentado no prueba una sesión conectada. Los tests verifican arranque, protocolo, bloqueo de render y configuraciones temporales; no sustituyen una prueba dentro de cada cliente instalado.
+
+El registro rechaza enlaces/junctions, archivos con varios enlaces físicos y configuraciones personalizadas del mismo servidor que necesiten revisión. Respalda originales y detecta cambios desde el plan. El editor TOML es conservador: rechaza tablas anidadas de este servidor, comillas alternativas y cadenas multilínea; no es un parser TOML general.
+
+Para autorizar render hacen falta **ambas** variables indicadas arriba en el proceso MCP. Codex puede filtrar variables heredadas: añadir a su tabla local `env_vars = ["ALTIORA_AERENDER", "ALTIORA_AE_ALLOW_RENDER", "ALTIORA_AE_APPROVED_PROJECT"]` solo tras autorización del dueño. También se pueden establecer valores explícitos en `env` privado del cliente. Reiniciar después de habilitar o revocar. El registro no activa autorizaciones y rechaza reemplazarlas silenciosamente.
+
+El puente restringe rutas del .aep y la salida; no inspecciona expresiones, plugins ni medios externos cargados por After Effects. Aprobar solo proyectos y recursos confiables. El checkout y sus carpetas padre deben estar bajo control del dueño: estas comprobaciones no aíslan un proceso malicioso que cambie enlaces concurrentemente. Preflight ejecuta `aerender -help`; plan no inicia Adobe. No se ha ejecutado un render Adobe durante esta revisión.

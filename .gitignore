@@ -13,3 +13,4 @@ continuity/after-effects-last-render.json
 
 # Private machine-specific MCP configuration backups (never commit)
 .altiora-private/
+out/
