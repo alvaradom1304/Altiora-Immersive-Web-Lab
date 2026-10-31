@@ -699,7 +699,7 @@
       "risk": "EXR is an intermediate, not a browser format; test alpha, channels and color transforms",
       "integrated": false,
       "verified_on": "2026-10-30",
-      "verified_scope": "Metadata existence, last-push, archived and license fields inspected using GitHub; no execution nor security audit"
+      "verified_scope": "GitHub metadata: repository existence, recent activity, archived and license fields; no execution or security audit"
     },
     {
       "id": "AcademySoftwareFoundation/OpenShadingLanguage",
@@ -712,7 +712,7 @@
       "risk": "OSL support differs by renderer; not directly compatible with WebGL/Three",
       "integrated": false,
       "verified_on": "2026-10-30",
-      "verified_scope": "Metadata existence, last-push, archived and license fields inspected using GitHub; no execution nor security audit"
+      "verified_scope": "GitHub metadata: repository existence, recent activity, archived and license fields; no execution or security audit"
     },
     {
       "id": "AcademySoftwareFoundation/Imath",
@@ -725,7 +725,7 @@
       "risk": "Native build dependency, not a creative effect library; avoid unnecessary adoption",
       "integrated": false,
       "verified_on": "2026-10-30",
-      "verified_scope": "Metadata existence, last-push, archived and license fields inspected using GitHub; no execution nor security audit"
+      "verified_scope": "GitHub metadata: repository existence, recent activity, archived and license fields; no execution or security audit"
     },
     {
       "id": "AcademySoftwareFoundation/rez",
@@ -738,7 +738,7 @@
       "risk": "Adds operational complexity; use only where multiple DCC versions require isolation",
       "integrated": false,
       "verified_on": "2026-10-30",
-      "verified_scope": "Metadata existence, last-push, archived and license fields inspected using GitHub; no execution nor security audit"
+      "verified_scope": "GitHub metadata: repository existence, recent activity, archived and license fields; no execution or security audit"
     },
     {
       "id": "RenderKit/oidn",
@@ -751,7 +751,7 @@
       "risk": "Verify renderer compatibility and denoiser availability on CI/local; avoid temporal artifacts",
       "integrated": false,
       "verified_on": "2026-10-30",
-      "verified_scope": "Metadata existence, last-push, archived and license fields inspected using GitHub; no execution nor security audit"
+      "verified_scope": "GitHub metadata: repository existence, recent activity, archived and license fields; no execution or security audit"
     },
     {
       "id": "gkjohnson/three-mesh-bvh",
@@ -764,7 +764,7 @@
       "risk": "Budget BVH build time and memory; use only on dense interactive geometry",
       "integrated": false,
       "verified_on": "2026-10-30",
-      "verified_scope": "Metadata existence, last-push, archived and license fields inspected using GitHub; no execution nor security audit"
+      "verified_scope": "GitHub metadata: repository existence, recent activity, archived and license fields; no execution or security audit"
     },
     {
       "id": "pmndrs/three-stdlib",
@@ -777,7 +777,7 @@
       "risk": "Check duplicate dependency imports with drei/three and match Three version",
       "integrated": false,
       "verified_on": "2026-10-30",
-      "verified_scope": "Metadata existence, last-push, archived and license fields inspected using GitHub; no execution nor security audit"
+      "verified_scope": "GitHub metadata: repository existence, recent activity, archived and license fields; no execution or security audit"
     },
     {
       "id": "processing/p5.js",
@@ -790,7 +790,7 @@
       "risk": "Review build/commercial distribution conditions; avoid shipping generative editor to simple sites",
       "integrated": false,
       "verified_on": "2026-10-30",
-      "verified_scope": "Metadata existence, last-push, archived and license fields inspected using GitHub; no execution nor security audit"
+      "verified_scope": "GitHub metadata: repository existence, recent activity, archived and license fields; no execution or security audit"
     },
     {
       "id": "tsparticles/tsparticles",
@@ -803,7 +803,7 @@
       "risk": "Mobile performance and accessibility, limit particle counts and avoid scroll jitter",
       "integrated": false,
       "verified_on": "2026-10-30",
-      "verified_scope": "Metadata existence, last-push, archived and license fields inspected using GitHub; no execution nor security audit"
+      "verified_scope": "GitHub metadata: repository existence, recent activity, archived and license fields; no execution or security audit"
     },
     {
       "id": "mifi/lossless-cut",
@@ -816,7 +816,7 @@
       "risk": "Desktop GUI, not a programmatic Adobe bridge; check codec/audio stream limits",
       "integrated": false,
       "verified_on": "2026-10-30",
-      "verified_scope": "Metadata existence, last-push, archived and license fields inspected using GitHub; no execution nor security audit"
+      "verified_scope": "GitHub metadata: repository existence, recent activity, archived and license fields; no execution or security audit"
     },
     {
       "id": "KDE/krita",
@@ -829,7 +829,7 @@
       "risk": "Local installation required; verify export colourspace and rights of brushes/assets",
       "integrated": false,
       "verified_on": "2026-10-30",
-      "verified_scope": "Metadata existence, last-push, archived and license fields inspected using GitHub; no execution nor security audit"
+      "verified_scope": "GitHub metadata: repository existence, recent activity, archived and license fields; no execution or security audit"
     },
     {
       "id": "synfig/synfig",
@@ -842,7 +842,7 @@
       "risk": "Compare setup and frame output against existing Remotion/Motion Canvas",
       "integrated": false,
       "verified_on": "2026-10-30",
-      "verified_scope": "Metadata existence, last-push, archived and license fields inspected using GitHub; no execution nor security audit"
+      "verified_scope": "GitHub metadata: repository existence, recent activity, archived and license fields; no execution or security audit"
     },
     {
       "id": "Pencil2D/pencil",
@@ -855,7 +855,7 @@
       "risk": "Requires artist time; export fidelity and alpha channel need testing",
       "integrated": false,
       "verified_on": "2026-10-30",
-      "verified_scope": "Metadata existence, last-push, archived and license fields inspected using GitHub; no execution nor security audit"
+      "verified_scope": "GitHub metadata: repository existence, recent activity, archived and license fields; no execution or security audit"
     },
     {
       "id": "google/shaderc",
@@ -868,7 +868,7 @@
       "risk": "Not a direct Three.js GLSL/WebGPU solution; complex native build/security surface",
       "integrated": false,
       "verified_on": "2026-10-30",
-      "verified_scope": "Metadata existence, last-push, archived and license fields inspected using GitHub; no execution nor security audit"
+      "verified_scope": "GitHub metadata: repository existence, recent activity, archived and license fields; no execution or security audit"
     }
   ]
 }
