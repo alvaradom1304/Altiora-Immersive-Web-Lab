@@ -34,7 +34,7 @@ Servidor: `scripts/after-effects-mcp.mjs`.
 
 - `after_effects_preflight` — consulta el ejecutable local `aerender`; solo lectura.
 - `after_effects_plan_render` — valida un archivo existente `.aep` dentro del repo y prepara argumentos; NO ejecuta.
-- `after_effects_render` — **expuesto como herramienta pero bloqueado por defecto**. Solo disponible cuando el propietario establece explícitamente dos variables en la configuración local de la IA: `ALTIORA_AE_ALLOW_RENDER=YES-I-APPROVE-LOCAL-RENDERS` y `ALTIORA_AE_APPROVED_PROJECT=approved/my-approved-project.aep`. El render únicamente acepta **ese archivo exacto** dentro de Altiora, y una salida nueva en `out/`. No sobrescribe archivos existentes.
+- `after_effects_render` — **oculto y bloqueado por defecto**. Solo disponible cuando el propietario establece explícitamente dos variables en la configuración local de la IA: `ALTIORA_AE_ALLOW_RENDER=YES-I-APPROVE-LOCAL-RENDERS` y `ALTIORA_AE_APPROVED_PROJECT=approved/my-approved-project.aep`. El render únicamente acepta **ese archivo exacto** dentro de Altiora, y una salida nueva en `out/`. No sobrescribe archivos existentes.
 
 No configurar esas variables para todas las IAs sin evaluar permisos de cada una. Usar permiso por proyecto, apagarlo al terminar y revisar la acción antes de ejecutar. La detección de `aerender` no acredita que Adobe tenga licencia activa; la validación real exige ejecutar un render y comprobarlo.
 

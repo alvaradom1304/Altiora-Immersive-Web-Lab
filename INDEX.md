@@ -33,7 +33,7 @@ Otras IAs (Codex, Gemini, ChatGPT): prompts en [team/agents/](team/agents/experi
 | [QA y accesibilidad](.claude/agents/qa-reviewer.md) | `/chat-qa-reviewer` | M4 | `web-quality-assurance`, `accessibility`, `altiora-quality-review`, `web-performance`, `security-testing`, `owasp-review`, `webapp-testing`, `web-design-guidelines`, `verification-before-completion` |
 | [Analista de conversión y fidelización](.claude/agents/growth-analyst.md) | `/chat-growth-analyst` | M6 | `marketing-analytics`, `conversion-analysis`, `conversion-rate-optimization`, `growth-experimentation`, `retention`, `ltv-optimization`, `analytics`, `ab-testing`, `referrals`, `events` |
 
-## Skills (251)
+## Skills (252)
 
 **Auto** = Claude puede cargarla sola (está asignada a un agente). El resto se usa con `/nombre`. Origen vacío = skill propia de Altiora.
 
@@ -68,6 +68,7 @@ Otras IAs (Codex, Gemini, ChatGPT): prompts en [team/agents/](team/agents/experi
 | [ai-video-direction](skills/ai-video-direction/SKILL.md) | sí | audiovisual-experience-director, visual-producer |  | ai-video-direction: Creative Intelligence. Usar para producir video_brief, prompts, continuity_checks a partir de guion, duración, refere… |
 | [altiora-agent-orchestrator](skills/altiora-agent-orchestrator/SKILL.md) | sí | experience-director |  | Coordina proyectos de Altiora que combinan investigación de repositorios, diseño, implementación y revisión mediante agentes y skills. Se… |
 | [altiora-ai-economy](skills/altiora-ai-economy/SKILL.md) | — | — |  | Selecciona un flujo de IA para Altiora que reduzca coste y contexto repetido preservando la calidad final. Se usa al comparar proveedores… |
+| [altiora-bibliotecario](skills/altiora-bibliotecario/SKILL.md) | — | — |  | Selecciona skills, herramientas y roles con contexto mínimo en Altiora. Usar al enrutar una petición nueva, retomar una tarea o resolver … |
 | [altiora-quality-review](skills/altiora-quality-review/SKILL.md) | sí | qa-reviewer |  | Revisa cambios de Altiora contra el encargo, las funciones afectadas y su evidencia de prueba. Se usa para comprobar una entrega o una ta… |
 | [altiora-repository-research](skills/altiora-repository-research/SKILL.md) | — | — |  | Selecciona y compara repositorios o skills para un proyecto de Altiora según utilidad, compatibilidad, mantenimiento, licencia y coste to… |
 | [analytics](skills/analytics/SKILL.md) | sí | growth-analyst | coreyhaines31/marketingskills | When the user wants to set up, improve, or audit analytics tracking and measurement. Also use when the user mentions "set up tracking," "… |

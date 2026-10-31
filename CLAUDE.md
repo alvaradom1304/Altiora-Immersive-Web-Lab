@@ -31,3 +31,9 @@ Consultar [registro multi-cliente](creative/visual-studio/after-effects/MCP-SETU
 
 ## After Effects en PC — MCP local
 Desde la carpeta Altiora confiable, ejecutar `npm run after-effects:setup -- --apply` para crear configuración de este proyecto y verificar `/mcp`. Abrir [instrucciones MCP](creative/visual-studio/after-effects/MCP-SETUP.md). Usar siempre primero `after_effects_preflight`; si la app no está disponible, no afirmar acceso. Render solo tras autorización explícita del propietario y aprobación del proyecto exacto.
+
+<!-- ALTIORA_BIBLIOTECARIO_START -->
+## Selección y contexto
+En cada mensaje conserva el objetivo activo y elige entre las capacidades realmente disponibles. Usa la skill más específica y carga sus referencias solo cuando hagan falta; si nada aporta, resuelve directamente. Para selección ambigua consulta [Bibliotecario](skills/altiora-bibliotecario/SKILL.md). En trabajos pequeños evita equipos; delega solo con autorización y capacidad real. Reutiliza evidencia vigente y responde con resultado, comprobación y límite material, sin repetir historia ni omitir requisitos para ahorrar. No presupongas ahorro medido, modelos cambiados o conexiones por existir un archivo.
+<!-- ALTIORA_BIBLIOTECARIO_END -->
+
