@@ -22,3 +22,6 @@ El Director Audiovisual consulta [SCOUT-V3](creative/visual-studio/SCOUT-V3.md) 
 
 ## Adobe After Effects
 Leer [guía del puente AE](creative/visual-studio/after-effects/README.md) para comprobar `aerender`, preparar un `.aep` y ejecutar un render cuando el usuario lo permita. No dar por conectado Adobe por leer un archivo; elegir alternativa segura si falla el preflight.
+
+## MCP local After Effects para Gemini/Antigravity
+Consultar [registro multi-cliente](creative/visual-studio/after-effects/MCP-SETUP.md) y el archivo de proyecto `.agents/mcp_config.json` generado desde la laptop. Para Gemini CLI usar `gemini mcp list`; para Antigravity revisar su panel MCP. Los renders requieren autorización expresa por proyecto.
