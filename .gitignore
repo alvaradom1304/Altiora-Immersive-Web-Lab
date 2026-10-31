@@ -10,3 +10,6 @@ dist/
 # User-PC specific MCP config contains absolute paths; never commit
 .agents/mcp_config.json
 continuity/after-effects-last-render.json
+
+# Private machine-specific MCP configuration backups (never commit)
+.altiora-private/
