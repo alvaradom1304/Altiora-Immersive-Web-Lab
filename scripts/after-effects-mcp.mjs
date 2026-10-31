@@ -63,7 +63,10 @@ export async function handleRequest(msg){
     serverInfo:{name:SERVER_NAME,version:"0.1.0"}
   });
   if(msg.method==="ping")return response({});
-  if(msg.method==="tools/list")return response({tools:TOOLS});
+  if(msg.method==="tools/list")return response({tools:
+    process.env.ALTIORA_AE_ALLOW_RENDER==="YES-I-APPROVE-LOCAL-RENDERS" &&
+    !!process.env.ALTIORA_AE_APPROVED_PROJECT ? TOOLS : TOOLS.filter(t=>t.name!=="after_effects_render")
+  });
   if(msg.method==="resources/list")return response({resources:[]});
   if(msg.method==="prompts/list")return response({prompts:[]});
   if(msg.method==="tools/call"){
@@ -79,6 +82,8 @@ export async function handleRequest(msg){
         return response(toToolResult(await planLocalRender(args.project,args.composition,args.output)));
       }
       if(name==="after_effects_render"){
+        if(process.env.ALTIORA_AE_ALLOW_RENDER!=="YES-I-APPROVE-LOCAL-RENDERS" || !process.env.ALTIORA_AE_APPROVED_PROJECT)
+          throw new Error("Owner must approve both render opt-in and an exact .aep path");
         return response(toToolResult(await executeLocalRender(args.project,args.composition,args.output)));
       }
       throw new Error("Unknown tool: "+String(name).slice(0,100));
