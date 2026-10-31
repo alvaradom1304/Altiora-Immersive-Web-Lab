@@ -4,6 +4,9 @@
  */
 export type AdContent = {
   brand: string;
+  eyebrow: string;
+  outroLabel: string;
+  atmosphere: "cyber" | "dream" | "soft";
   category: string;
   hook: string;
   highlight: string;
@@ -19,6 +22,9 @@ export type AdContent = {
 
 export const defaultContent: AdContent = {
   brand: "TILICHEROS",
+  eyebrow: "UN NUEVO NIVEL",
+  outroLabel: "ENCONTRALO EN",
+  atmosphere: "cyber",
   category: "GAMING · TECNOLOGÍA",
   hook: "EL JUEGO",
   highlight: "CAMBIA AQUÍ.",
