@@ -1,0 +1,66 @@
+name: Altiora FullHD Master Technical QA
+
+on:
+  pull_request:
+    paths:
+      - 'experiments/tilicheros-motion-lab/**'
+      - '.github/workflows/altiora-fullhd-master.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'experiments/tilicheros-motion-lab/**'
+      - '.github/workflows/altiora-fullhd-master.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: altiora-master-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  render-fullhd-concept:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    defaults:
+      run:
+        working-directory: experiments/tilicheros-motion-lab
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Confirm video tools (runner only, not the user's laptop)
+        run: |
+          node --version
+          ffmpeg -version | head -n 1
+          ffprobe -version | head -n 1
+      - name: Test contract before render
+        run: |
+          node scripts/check-contract.mjs
+          node --test scripts/verify-master.test.mjs
+      - name: Install pinned direct dependencies for isolated concept
+        run: npm install --no-audit --no-fund
+      - name: Validate TypeScript
+        run: npm run typecheck
+      - name: Render 1080x1920 30fps 15s video at native 100% scale
+        run: npm run render -- --concurrency=2
+      - name: Technical QA using ffprobe
+        run: npm run master:verify
+      - name: Representative images for human/artistic QA
+        run: |
+          ffmpeg -hide_banner -loglevel error -ss 1 -i out/tilicheros-gaming-demo.mp4 -frames:v 1 -y out/master-01s.png
+          ffmpeg -hide_banner -loglevel error -ss 7 -i out/tilicheros-gaming-demo.mp4 -frames:v 1 -y out/master-07s.png
+          ffmpeg -hide_banner -loglevel error -ss 13 -i out/tilicheros-gaming-demo.mp4 -frames:v 1 -y out/master-13s.png
+      - name: Preserve technical evidence (NOT approved commercial ad)
+        uses: actions/upload-artifact@v4
+        with:
+          name: altiora-fullhd-concept-master-and-qa
+          path: |
+            experiments/tilicheros-motion-lab/out/tilicheros-gaming-demo.mp4
+            experiments/tilicheros-motion-lab/out/qa-master.json
+            experiments/tilicheros-motion-lab/out/master-01s.png
+            experiments/tilicheros-motion-lab/out/master-07s.png
+            experiments/tilicheros-motion-lab/out/master-13s.png
+          retention-days: 14
