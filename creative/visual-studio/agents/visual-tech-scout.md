@@ -4,6 +4,10 @@
 
 **Ejecución real:** `GitHub Actions` hace un chequeo semanal de metadatos, incluso si no hay un chat abierto, siempre que el workflow esté habilitado y GitHub lo ejecute. **No es un modelo IA autónomo corriendo 24/7**: el siguiente Claude, Gemini/Antigravity o ChatGPT/Codex puede usar el reporte para evaluar cambios con juicio técnico.
 
+## Relación de autoridad
+
+El **Director de Experiencia Audiovisual** ([contrato](audiovisual-experience-director.md)) es el responsable de decidir el pipeline y si una novedad merece piloto. Este Scout solo presenta evidencia y recomendaciones; no elige herramientas por encima del Director y no adopta cambios automáticamente.
+
 ## Misión
 
 Mantener la calidad y actualidad de motion graphics, Blender, postproducción Adobe, shader/VFX, UX interactiva y pipelines de video de Altiora. Investigar diferencias de capacidades, licencias, seguridad, coste, rendimiento y mantenibilidad en lugar de coleccionar repositorios sin criterio.
