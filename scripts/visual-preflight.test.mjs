@@ -31,5 +31,5 @@ test("preflight never claims Adobe, Figma or MCP connected", async () => {
 });
 
 test("no arbitrary commands can be passed as preflight probes", () => {
-  assert.throws(() => probeExecutable("bad","x","; destructive command"), /AssertionError/);
+  assert.throws(() => probeExecutable("bad","x","; destructive command"), {name:"AssertionError"});
 });
