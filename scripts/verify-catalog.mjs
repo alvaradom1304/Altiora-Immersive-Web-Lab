@@ -29,12 +29,12 @@ assert.equal(catalog.repositories.find(r => r.id === '14islands/r3f-scroll-rig')
 // Catálogo suplementario de librerías visuales (referencias, no instalaciones).
 const visual = JSON.parse(await readFile(resolve(root, 'references/visual-libraries-2026.json'), 'utf8'));
 assert.equal(visual.schema_version, 1);
-assert.match(visual.updated_on, /^\\d{4}-\\d{2}-\\d{2}$/);
+assert.match(visual.updated_on, /^\d{4}-\d{2}-\d{2}$/);
 assert.equal(visual.operational_status, 'catalogued_not_installed');
 assert.ok(visual.repos.length >= 15);
 const visualIds = new Set();
 for (const entry of visual.repos) {
-  assert.match(entry.id, /^[A-Za-z0-9_.-]+\\/[A-Za-z0-9_.-]+$/);
+  assert.match(entry.id, /^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/);
   assert.ok(!visualIds.has(entry.id), 'Duplicado visual: ' + entry.id);
   visualIds.add(entry.id);
   assert.equal(entry.url, 'https://github.com/' + entry.id);
