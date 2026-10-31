@@ -64,6 +64,21 @@
           "claim": "Primera línea base de 56 repositorios verificada por GitHub Actions y fusionada"
         }
       ]
+    },
+    {
+      "id": "VIS-OPS-02",
+      "name": "Visual Studio V3 — 70 curaciones y Scout release-aware",
+      "result": "MERGED",
+      "evidence": [
+        {
+          "url": "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/pull/28",
+          "claim": "14 nuevos repositorios, playbooks CGI/color/denoise y 2D, monitor últimas releases con tests exitosos"
+        },
+        {
+          "url": "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/pull/29",
+          "claim": "Snapshot de 70 referencias y 37 releases estables registradas; baseline fusionado y verificado"
+        }
+      ]
     }
   ],
   "current_milestone": {
@@ -159,6 +174,14 @@
       "name": "GitHub Actions apertura autónoma de pull requests",
       "status": "NOT_CONNECTED",
       "evidence": []
+    },
+    {
+      "name": "Visual Tech Scout GitHub Releases P0/P1 y líneas base",
+      "status": "TESTED_IN_CI",
+      "evidence": [
+        "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/actions/runs/41161761071",
+        "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/pull/29"
+      ]
     }
   ],
   "context_files": [
@@ -171,14 +194,18 @@
     "creative/visual-studio/PRODUCTION-MATRIX.md",
     "docs/workflows/visual-production-multi-ai.md",
     "experiments/tilicheros-motion-lab/README.md",
-    "references/visual-libraries-2026.json"
+    "references/visual-libraries-2026.json",
+    "creative/visual-studio/SCOUT-V3.md",
+    "creative/visual-studio/playbooks/advanced-cgi-color.md",
+    "creative/visual-studio/playbooks/illustration-particles.md"
   ],
   "known_limits": [
     "Este snapshot no consulta GitHub en tiempo real; cotejar siempre PR, checks y archivos antes de declarar completado.",
     "Las referencias a repositorios no instalan librerías ni conceden permisos a las IAs.",
     "Un error de interfaz 'This response couldn't load' es externo a este repositorio.",
     "El agente no sigue ejecutándose automáticamente cuando se cierra o interrumpe el chat.",
-    "La primera vigilancia completó escaneo y artefacto, pero GitHub bloqueó crear PR automáticamente; habilitar permiso Actions→General→Allow GitHub Actions to create and approve pull requests. Sin él quedan rama y artefacto, no PR automática."
+    "La primera vigilancia completó escaneo y artefacto, pero GitHub bloqueó crear PR automáticamente; habilitar permiso Actions→General→Allow GitHub Actions to create and approve pull requests. Sin él quedan rama y artefacto, no PR automática.",
+    "Scout V3 revisa últimas releases estables de GitHub P0/P1; no detecta necesariamente versiones publicadas solo en npm, PyPI o Creative Cloud, ni CVEs sin revisar advisories."
   ],
   "recovery_instruction": "Leer checkpoint, consultar el commit/PR más reciente y los checks, reclamar tarea, ejecutar y escribir evidencia antes de terminar. No pedir al usuario que repita el briefing salvo necesidad material."
 }
