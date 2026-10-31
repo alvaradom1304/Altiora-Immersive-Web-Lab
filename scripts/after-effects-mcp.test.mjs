@@ -1,6 +1,8 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import {spawn} from "node:child_process";
+import {fileURLToPath} from "node:url";
+import {resolve} from "node:path";
 import {handleRequest,TOOLS} from "./after-effects-mcp.mjs";
 
 test("MCP supports initialization and restricted read-only list until owner approves",async()=>{
@@ -52,7 +54,7 @@ test("No arbitrary shell, script or file-browse tool is exposed",async()=>{
 
 test("MCP stdio roundtrip launches on local Node and replies to tools/list",async()=>{
   const child=spawn(process.execPath,["scripts/after-effects-mcp.mjs"],{
-    cwd:new URL("../",import.meta.url).pathname,
+    cwd:fileURLToPath(new URL("../",import.meta.url)),
     stdio:["pipe","pipe","pipe"],
     env:{...process.env,ALTIORA_AE_ALLOW_RENDER:""},
     windowsHide:true
