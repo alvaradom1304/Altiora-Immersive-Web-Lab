@@ -14,6 +14,10 @@ La expansión avanzada agrega [matriz técnica](creative/visual-studio/PRODUCTIO
 
 [Tilicheros · Cinematic Motion Pilot](experiments/tilicheros-motion-lab/README.md) contiene una plantilla Remotion 15s vertical, un diseño conceptual original y un script Blender para generar CGI reproducible. Los archivos están versionados y cuentan con validación automatizada, pero **no** representan un anuncio final ni un render certificado.
 
+## Mejora continua del stack visual
+
+[Visual Tech Scout](creative/visual-studio/agents/visual-tech-scout.md) + [vigilancia semanal de los 56 repositorios](continuity/visual-watch/README.md) + `npm run visual:preflight`: detecta cambios de actividad, licencia y estado, crea informes y puede proponer PRs con revisión humana. Es una rutina automatizada de GitHub Actions, **no** instalación ilimitada de paquetes ni una IA conectada permanentemente.
+
 ## Recuperar trabajo sin repetir «continúa»
 
 [Continuity OS](continuity/README.md) usa un [checkpoint versionado](continuity/checkpoint.json) y `npm run resume` para recuperar milestones, evidencia y próximos pasos entre chats de Claude, Gemini y ChatGPT/Codex. Se valida automáticamente con `npm run check`; no promete solucionar la interfaz de ChatGPT ni activar tareas en segundo plano.
