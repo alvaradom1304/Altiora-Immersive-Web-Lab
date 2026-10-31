@@ -79,6 +79,17 @@
           "claim": "Snapshot de 70 referencias y 37 releases estables registradas; baseline fusionado y verificado"
         }
       ]
+    },
+    {
+      "id": "VIS-AUDIO-01",
+      "name": "Especialista portable de sonido y audio con fuentes y medidor original",
+      "result": "DONE",
+      "evidence": [
+        {
+          "url": "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/pull/34",
+          "claim": "Rol/skill implementados; fuentes y compatibilidad revisadas; medidor y casos independientes probados, sin certificar escucha de cliente ni DAW"
+        }
+      ]
     }
   ],
   "current_milestone": {
@@ -206,7 +217,7 @@
       "name": "Especialista de sonido y audio portable; 14 repositorios revisados y medidor PCM original",
       "status": "DOCUMENTED",
       "evidence": [
-        "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/tree/feature/altiora-audio-specialist-2026-10-31/skills/audio-production"
+        "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/pull/34"
       ]
     }
   ],
