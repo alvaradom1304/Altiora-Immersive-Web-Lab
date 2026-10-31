@@ -1,7 +1,9 @@
 @AGENTS.md
 
 ## Equipo de agentes
-Los 13 roles de `team/registry.md` están disponibles como subagentes en `.claude/agents/`. Para trabajo multirrol, coordinarse en el chat del equipo (`team/chat/README.md`) firmando como `claude/<rol>`: reclamar la tarea antes de editar y cerrar con evidencia.
+Los roles actuales de `team/registry.md` tienen adaptadores en `.claude/agents/`; el recuento vigente está en `INDEX.md`. Para trabajo multirrol, coordinarse en el chat del equipo (`team/chat/README.md`) firmando como `claude/<rol>`: reclamar la tarea antes de editar y cerrar con evidencia.
+
+Para diagnóstico, evaluación de recuperación o QA audiovisual, seguir bajo demanda [operación compartida](docs/operations/SHARED-OPERATIONS.md). No declarar conexiones ni aprobación comercial por existencia de archivos o éxito de tests.
 
 Índice completo en INDEX.md. En Claude Code: `/equipo <encargo>` reparte trabajo, `/chat-<rol> <mensaje>` habla con un agente, `/repos <necesidad>` consulta repositorios de referencia y cada skill de `skills/` está disponible como `/<nombre>` (las asignadas a un agente también se cargan solas). `.claude/skills/` e INDEX.md se generan con `npm run agents:build`; no editarlos a mano.
 

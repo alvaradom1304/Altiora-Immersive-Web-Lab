@@ -56,7 +56,7 @@ Para cualquier trabajo de motion graphics, anuncios, Blender/3D, Adobe, animaci�
 La documentación y los repositorios de referencia **no** equivalen a librerías instaladas, licencias comerciales concedidas ni control remoto de Blender, Adobe o servicios de pago. Validar seguridad, derechos, compatibilidad, performance y presupuesto antes de ejecutar. Servidores MCP no auditados permanecen en HOLD.
 
 ## Equipo multi-IA
-- Los 12 roles de team/registry.md tienen prompt en team/agents/<rol>.md (Claude Code los usa como subagentes en .claude/agents/). Se generan con npm run agents:build desde team/agents.json y team/roles/; no editarlos a mano.
+- Los roles actuales de team/registry.md tienen prompt en team/agents/<rol>.md (Claude Code los usa como subagentes en .claude/agents/). El recuento se genera en INDEX.md. Se generan con npm run agents:build desde team/agents.json y team/roles/; no editarlos a mano.
 - Repartir y coordinar el trabajo en el chat del equipo (team/chat/README.md): firmar como <ia>/<rol>, reclamar la tarea antes de editar, tocar solo sus archivos y cerrar con evidencia.
 
 ## Handoff de After Effects (verificación obligatoria)
@@ -75,3 +75,6 @@ En cada mensaje conserva el objetivo activo y elige entre las capacidades realme
 
 <!-- ALTIORA_AUDIO_SPECIALIST -->
 Para sonido, voz, música, restauración, mezcla o masterización, usar [audio-specialist](team/agents/audio-specialist.md) y [audio-production](skills/audio-production/SKILL.md). Cargar solo la modalidad necesaria; separar medición, escucha y aprobación.
+
+<!-- ALTIORA_SHARED_OPERATIONS -->
+Para diagnóstico de herramientas, evaluación del Bibliotecario o entrega audiovisual, leer bajo demanda [operación compartida](docs/operations/SHARED-OPERATIONS.md). Usar `npm run capability:doctor`, `npm run routing:eval` o `npm run production:qa` según la tarea. Un adaptador presente no prueba conexión y un informe automático no acredita escucha, derechos ni aprobación del cliente. Esta regla es común a Claude, Codex, Gemini, Antigravity y ChatGPT; no concede permisos ni inicia servicios.

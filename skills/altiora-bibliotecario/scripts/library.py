@@ -98,11 +98,21 @@ ALIASES = {
     'animacion': 'motion animation gsap',
     'investigar': 'research investigacion',
     'web': 'web frontend nextjs',
+    'redactar': 'copywriting',
 }
+
+# Function words are not evidence of a pertinent capability. Without filtering,
+# a generic request such as "quiero que me ayudes con esto" ranks unrelated
+# descriptions merely because they contain "que" or "para".
+STOP_WORDS = set('''a al algo ante como con de del el ella ello en entre es esa ese
+esto esta este favor hay la las lo los me mi mis no o para pero por porque que
+quiero se sin solo su sus te tengo tu un una unas uno unos y ayudes ayuda
+the a an and are as at be by can could for from have help i in is it me my of
+on or please that the their this to use want we with you your'''.split())
 
 
 def find(catalog, query, limit=5):
-    words = set(re.findall(r'[\w-]+', normalize(query)))
+    words = set(re.findall(r'[\w-]+', normalize(query))) - STOP_WORDS
     expanded = set(words)
     for word in words:
         expanded.update(ALIASES.get(word, '').split())

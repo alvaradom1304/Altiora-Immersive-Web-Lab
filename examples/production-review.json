@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "_template": "INCOMPLETE: replace only with real evidence. This file must remain BLOCKED.",
+  "media": {
+    "sha256": "REQUIRED_FINAL_MP4_SHA256"
+  },
+  "video": {
+    "media_sha256": "REQUIRED_FINAL_MP4_SHA256",
+    "report_sha256": "REQUIRED_PARSED_VIDEO_REPORT_DIGEST",
+    "report": {}
+  },
+  "blocker_resolutions": [],
+  "audio": {
+    "media_sha256": "REQUIRED_FINAL_MP4_SHA256",
+    "source_sha256": "REQUIRED_DECODED_WAV_SHA256",
+    "report_sha256": "REQUIRED_PARSED_AUDIO_REPORT_DIGEST",
+    "report": {},
+    "relationship": {
+      "kind": "DECODED_FINAL_AUDIO",
+      "verified": false,
+      "media_sha256": "REQUIRED_FINAL_MP4_SHA256",
+      "source_sha256": "REQUIRED_DECODED_WAV_SHA256",
+      "reviewer": "",
+      "evidence": ""
+    }
+  },
+  "reviews": {
+    "listening": {
+      "status": "PENDING",
+      "reviewer": "",
+      "evidence": "",
+      "media_sha256": "REQUIRED_FINAL_MP4_SHA256",
+      "video_report_sha256": "REQUIRED_PARSED_VIDEO_REPORT_DIGEST",
+      "audio_report_sha256": "REQUIRED_PARSED_AUDIO_REPORT_DIGEST"
+    },
+    "synchronization": {"status": "PENDING"},
+    "intelligibility": {"status": "PENDING"},
+    "visual": {"status": "PENDING"},
+    "rights": {"status": "PENDING"}
+  }
+}
