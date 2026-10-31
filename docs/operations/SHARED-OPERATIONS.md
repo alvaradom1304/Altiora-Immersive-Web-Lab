@@ -39,6 +39,8 @@ Ver los casos versionados en [routing-evals](../../skills/altiora-bibliotecario/
 
 Para medir ahorro en el futuro, comparar encargos equivalentes con criterio de aceptación fijo, consumo expuesto por el cliente, relecturas, correcciones y tiempo total, incluidos subagentes. Sin esas mediciones el ahorro es desconocido.
 
+El buscador local compara términos completos para evitar [falsos candidatos por subcadenas](LIBRARIAN-BOUNDARIES.md), como SEO dentro de «deseo». Eso no añade comprensión semántica, negación o sinónimos automáticos: el coordinador conserva la decisión y los permisos.
+
 ## Producción audiovisual y revisión humana
 
 Reutilizar los informes técnicos de video y audio existentes y seguir [QA de producción](production-qa.md). Vincular la evidencia a la misma versión de medios; una modificación del master exige repetir los controles afectados. No considerar el WAV analizado como la pista del MP4 sin evidencia explícita de extracción o correspondencia.

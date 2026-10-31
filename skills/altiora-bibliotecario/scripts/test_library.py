@@ -12,6 +12,33 @@ spec.loader.exec_module(library)
 
 
 class LibraryTests(unittest.TestCase):
+    def test_short_names_do_not_match_inside_unrelated_words(self):
+        catalog = {'entries': [
+            {'name': 'seo', 'description': 'Search optimization', 'path': 'seo'},
+            {'name': 'cro', 'description': 'Conversion optimization', 'path': 'cro'}]}
+        self.assertEqual(library.find(catalog, 'Deseo qzxv'), [])
+        self.assertEqual(library.find(catalog, 'Organizar una microempresa'), [])
+        self.assertEqual(library.find(catalog, 'Micro qzxv'), [])
+
+    def test_api_does_not_match_capital_in_name_or_description(self):
+        catalog = {'entries': [
+            {'name': 'capital-requirements', 'description': 'capital', 'path': 'capital'},
+            {'name': 'working-capital', 'description': 'capital requerido', 'path': 'working'},
+            {'name': 'finance', 'description': 'capital requirements', 'path': 'finance'},
+            {'name': 'api-security', 'description': 'Endpoints', 'path': 'api'}]}
+        self.assertEqual([x['name'] for x in library.find(catalog, 'API')], ['api-security'])
+
+    def test_exact_names_components_and_accents_remain_searchable(self):
+        catalog = {'entries': [
+            {'name': 'seo', 'description': 'Search optimization', 'path': 'seo'},
+            {'name': 'api-security', 'description': 'Endpoints', 'path': 'api'},
+            {'name': 'reviewer', 'description': 'Revisión y métricas a11y_findings', 'path': 'review'}]}
+        self.assertEqual(library.find(catalog, 'SEO')[0]['name'], 'seo')
+        self.assertEqual(library.find(catalog, 'usar $api-security')[0]['name'], 'api-security')
+        self.assertEqual(library.find(catalog, 'security')[0]['name'], 'api-security')
+        self.assertEqual(library.find(catalog, 'revision metricas')[0]['name'], 'reviewer')
+        self.assertEqual(library.find(catalog, 'a11y_findings')[0]['name'], 'reviewer')
+
     def test_markdown_agent_frontmatter_without_reading_prompt(self):
         with tempfile.TemporaryDirectory() as folder:
             agents = Path(folder)/'agents'
