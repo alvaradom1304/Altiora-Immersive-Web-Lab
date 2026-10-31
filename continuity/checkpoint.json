@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "project": "Altiora Visual Studio",
+  "repository": "alvaradom1304/Altiora-Immersive-Web-Lab",
+  "snapshot_date": "2026-10-30",
+  "snapshot_kind": "repo_checkpoint_not_live_github_api",
+  "description": "Estado reproducible para reanudar entre sesiones e IAs. No significa ejecución persistente ni conexión automática con software.",
+  "completed_milestones": [
+    {
+      "id": "VIS-01",
+      "name": "Visual Studio base + 23 repositorios",
+      "result": "MERGED",
+      "evidence": [
+        {
+          "url": "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/pull/20",
+          "claim": "Arquitectura inicial, router, referencias y workflow multi-IA"
+        }
+      ]
+    },
+    {
+      "id": "VIS-02",
+      "name": "Piloto Remotion/Blender Tilicheros",
+      "result": "MERGED",
+      "evidence": [
+        {
+          "url": "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/pull/21",
+          "claim": "Código de prototipo y render conceptual en CI"
+        }
+      ]
+    },
+    {
+      "id": "VIS-03",
+      "name": "Tres variantes + Blender headless",
+      "result": "MERGED",
+      "evidence": [
+        {
+          "url": "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/pull/22",
+          "claim": "Gaming, anime y bebés; pruebas de render de muestra y Blender"
+        }
+      ]
+    },
+    {
+      "id": "VIS-04",
+      "name": "Visual Studio V2: 56 referencias y cuatro playbooks",
+      "result": "MERGED",
+      "evidence": [
+        {
+          "url": "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/pull/23",
+          "claim": "33 referencias suplementarias, matriz y playbooks multi-IA"
+        }
+      ]
+    }
+  ],
+  "current_milestone": {
+    "id": "VIS-05",
+    "name": "Producción comercial verificable con assets reales y control de herramientas",
+    "status": "PLANNED",
+    "next_steps": [
+      {
+        "id": "VIS-05-A",
+        "action": "Seleccionar artículo real, reunir fotos/cotizaciones y derechos del material",
+        "status": "BLOCKED",
+        "blocker": "Se necesita fotografía o permiso para usar material real del cliente",
+        "deliverable": "asset_manifest con proveedor/propietario, fotos y afirmaciones verificadas",
+        "validation": "Confirmación del producto, autenticidad, derechos y disponibilidad"
+      },
+      {
+        "id": "VIS-05-B",
+        "action": "Auditar y registrar accesos reales a Blender, Adobe, Remotion y MCP antes de conectar",
+        "status": "PENDING",
+        "blocker": null,
+        "deliverable": "matriz de versiones/permisos/accesos, licencias y riesgos",
+        "validation": "Prueba reproducible por aplicación, no solo documentación"
+      },
+      {
+        "id": "VIS-05-C",
+        "action": "Producir un master 1080x1920 con CGI/producto real y audio con derechos",
+        "status": "BLOCKED",
+        "blocker": "Requiere asset real aprobado y pipeline operativo",
+        "deliverable": "fuentes editables, master MP4 y evidencia de render",
+        "validation": "Revisión visual real y control técnico de export"
+      },
+      {
+        "id": "VIS-05-D",
+        "action": "Validar calidad, seguridad comercial y rendimiento; aprobar publicación",
+        "status": "BLOCKED",
+        "blocker": "Requiere master y validación del cliente",
+        "deliverable": "informe QA, reporte de licencias y aprobación",
+        "validation": "Pruebas y aprobación humana documentadas"
+      }
+    ]
+  },
+  "capabilities": [
+    {
+      "name": "GitHub catálogo y guía visual multi-IA",
+      "status": "DOCUMENTED",
+      "evidence": [
+        "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/pull/23"
+      ]
+    },
+    {
+      "name": "Remotion render conceptual en CI",
+      "status": "TESTED_IN_CI",
+      "evidence": [
+        "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/actions/runs/41158123661"
+      ]
+    },
+    {
+      "name": "Blender render conceptual headless en CI",
+      "status": "TESTED_IN_CI",
+      "evidence": [
+        "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/actions/runs/41158123661"
+      ]
+    },
+    {
+      "name": "Blender local de la persona",
+      "status": "UNVERIFIED",
+      "evidence": []
+    },
+    {
+      "name": "Adobe local y APIs UXP",
+      "status": "NOT_CONNECTED",
+      "evidence": []
+    },
+    {
+      "name": "Claude Code/Gemini/ChatGPT acceso a software local",
+      "status": "UNVERIFIED",
+      "evidence": []
+    },
+    {
+      "name": "MCP externos para Adobe o Blender",
+      "status": "NOT_CONNECTED",
+      "evidence": []
+    }
+  ],
+  "context_files": [
+    "AGENTS.md",
+    "CLAUDE.md",
+    "GEMINI.md",
+    "creative/visual-studio/README.md",
+    "creative/visual-studio/ROUTER.md",
+    "creative/visual-studio/AGENT-PORTABILITY.md",
+    "creative/visual-studio/PRODUCTION-MATRIX.md",
+    "docs/workflows/visual-production-multi-ai.md",
+    "experiments/tilicheros-motion-lab/README.md",
+    "references/visual-libraries-2026.json"
+  ],
+  "known_limits": [
+    "Este snapshot no consulta GitHub en tiempo real; cotejar siempre PR, checks y archivos antes de declarar completado.",
+    "Las referencias a repositorios no instalan librerías ni conceden permisos a las IAs.",
+    "Un error de interfaz 'This response couldn't load' es externo a este repositorio.",
+    "El agente no sigue ejecutándose automáticamente cuando se cierra o interrumpe el chat."
+  ],
+  "recovery_instruction": "Leer checkpoint, consultar el commit/PR más reciente y los checks, reclamar tarea, ejecutar y escribir evidencia antes de terminar. No pedir al usuario que repita el briefing salvo necesidad material."
+}
