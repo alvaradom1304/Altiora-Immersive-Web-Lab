@@ -61,4 +61,10 @@ Todos usan los mismos scripts y formatos del repositorio. Un prompt portable no 
 
 ## Continuidad y entrega
 
+Para afilar la biblioteca instalada, usar el [compactador conservador](SKILL-COMPACTION.md): plan de solo lectura primero y aplicación sobre plan revisado con respaldo. Solo elimina dos secciones generadas exactamente repetidas; no reescribe skills de terceros, modelos o el plugin Superpowers. Mide bytes/caracteres, no ahorro de tokens.
+
+Antes de compartir cambios, comprobar [identidad del proyecto](PROJECT-IDENTITY.md) contra un repositorio esperado explícito del encargo. No deducir el destino de origin, mezclar carpetas de empresa/cliente ni reparar Git automáticamente para forzar un PASS. El diagnóstico no publica ni concede permiso.
+
+Ver [evidencia de afilado](TOOLKIT-VALIDATION.md) para distinguir archivos locales instalados, pruebas, MCP de coordinación y sesiones que siguen sin verificarse. Una instrucción de continuar permite completar los pasos desbloqueados del encargo; no implica ejecución después de cerrar el chat ni crear automatizaciones periódicas.
+
 Guardar en el tablero solo resultado y evidencia breve. No incluir credenciales ni medios privados en GitHub. El [checkpoint](../../continuity/checkpoint.json) distingue implementación de conexión y producción real. El permiso pendiente del Scout está en [issue 31](https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/issues/31); este protocolo no lo modifica.

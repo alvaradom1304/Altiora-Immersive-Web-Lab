@@ -34,6 +34,9 @@
     "capability:doctor": "node scripts/capability-doctor.mjs",
     "operations:test": "node --test scripts/capability-doctor.test.mjs scripts/production-qa.test.mjs",
     "routing:eval": "python skills/altiora-bibliotecario/scripts/evaluate_routes.py",
-    "production:qa": "node scripts/production-qa.mjs"
+    "production:qa": "node scripts/production-qa.mjs",
+    "skills:compact": "node scripts/compact-skills.mjs",
+    "project:identity": "node scripts/project-identity.mjs",
+    "toolkit:test": "node --test scripts/compact-skills.test.mjs scripts/project-identity.test.mjs"
   }
 }
