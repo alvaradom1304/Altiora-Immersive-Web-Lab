@@ -10,3 +10,6 @@ Si la intención del usuario requiere **motion graphics, After Effects, Premiere
 
 ## Reanudación sin reconstruir el chat
 Antes de continuar en Antigravity/Gemini, leer [checkpoint](continuity/checkpoint.json) y [recovery runbook](continuity/README.md), ejecutar `npm run resume` si hay checkout y verificar PRs/CI. Diferenciar documentación, CI probado y apps realmente conectadas.
+
+## Visual Tech Scout — actualización periódica
+Al solicitar mejora continua, leer el [rol de vigilancia](creative/visual-studio/agents/visual-tech-scout.md), el [reporte GitHub](continuity/visual-watch/README.md) y el [preflight](scripts/visual-preflight.mjs). Registrar la fuente, cambios técnicos, seguridad, licencias y evidencia de QA. GitHub Actions programa la revisión; Gemini/Antigravity no queda ejecutándose constantemente por existir este archivo.
