@@ -51,7 +51,7 @@ El catálogo registra fuentes; no instala dependencias en la web ni incorpora co
 
 ## Comprobar el laboratorio
 
-Requiere Node.js 20 o posterior y Git para descargar referencias. No necesita instalar paquetes.
+El control completo requiere Node.js 20+ y Python 3.11+ disponibles como `node` y `python`. Git se usa para descargar referencias. No necesita instalar paquetes. `npm run check` ejecuta las mismas suites que CI Windows/Linux; `npm run check:base` es solo el control parcial anterior.
 
 ~~~sh
 npm run check

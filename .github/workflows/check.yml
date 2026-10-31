@@ -27,17 +27,6 @@ jobs:
         with:
           node-version: 20
 
-      # Sin dependencias: no hace falta npm ci.
-      - run: npm run check
-      - name: Verify shared diagnostics and production evidence
-        run: npm run operations:test
-      - name: Verify conservative skill compaction and repository identity
-        run: npm run toolkit:test
-      - name: Verify isolated runtime adapter diagnostic
-        run: npm run runtime:test
-      - name: Verify portable librarian retrieval
-        run: python -m unittest discover -s skills/altiora-bibliotecario/scripts -p "test_*.py"
-      - name: Evaluate representative routing cases
-        run: npm run routing:eval
-      - name: Verify original audio sample meter
-        run: python -m unittest discover -s skills/audio-production/scripts -p test_audio_qa.py
+      # Mismo control completo que en local; no requiere npm ci.
+      - name: Verify catalog, adapters, toolkit, routing and audio
+        run: npm run check
