@@ -34,7 +34,7 @@ const FloatingLights: React.FC<{accent: string; secondary: string; atmosphere: A
         backgroundImage: "linear-gradient(rgba(255,255,255,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.055) 1px,transparent 1px)",
         backgroundSize: "130px 130px", opacity: 0.13,
         transform: `perspective(800px) rotateX(22deg) translateY(${(f * 0.65) % 130}px)`
-      }}/ >}
+      }}/>}
       {Array.from({length: atmosphere === "cyber" ? 24 : 14}, (_, i) => {
         const x = (i * 193 + 117) % 1080;
         const y = ((i * 337 + 101) + f * (0.45 + (i % 4) * 0.22)) % 1920;
