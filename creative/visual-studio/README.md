@@ -2,6 +2,10 @@
 
 > Estado: diseño y catálogo en revisión. Esta carpeta **no** instala Blender, Adobe, plugins ni servidores MCP. Primero elegir la herramienta adecuada; después implementar una escena o anuncio demostrable.
 
+## Expansión profesional de referencias (V2)
+
+El [catálogo visual](../../references/visual-libraries-2026.json) contiene **56 repositorios evaluables**, entre ellos 33 nuevas referencias de OpenColorIO, MaterialX, OpenUSD, OpenVDB, FFmpeg, Blender, shaders y motores web. [Matriz de producción](PRODUCTION-MATRIX.md), [protocolo para todas las IAs](AGENT-PORTABILITY.md) y [playbooks de ejecución](playbooks/README.md). Son **referencias documentales, no 56 instalaciones**.
+
 ## Objetivo
 
 Producir sistemas visuales reutilizables para (1) anuncios cortos de alto impacto, (2) experiencias web inmersivas y (3) escenas cinematográficas 3D. El resultado debe servir al negocio y permanecer editable, accesible, mantenible y verificable.
