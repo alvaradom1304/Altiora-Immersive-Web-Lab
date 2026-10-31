@@ -1,0 +1,28 @@
+{
+  "name": "altiora-tilicheros-motion-lab",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Altiora prototype: reusable vertical commercial motion template (conceptual assets only)",
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts TilicherosGamingDemo out/tilicheros-gaming-demo.mp4 --codec h264",
+    "still": "remotion still src/index.ts TilicherosGamingDemo out/tilicheros-cover.png --frame 180",
+    "typecheck": "tsc --noEmit",
+    "check": "node scripts/check-contract.mjs && npm run typecheck",
+    "render:anime": "remotion render src/index.ts TilicherosAnimeDemo out/tilicheros-anime-demo.mp4 --codec h264",
+    "render:baby": "remotion render src/index.ts TilicherosBabyDemo out/tilicheros-baby-demo.mp4 --codec h264",
+    "still:anime": "remotion still src/index.ts TilicherosAnimeDemo out/tilicheros-anime-cover.png --frame 180",
+    "still:baby": "remotion still src/index.ts TilicherosBabyDemo out/tilicheros-baby-cover.png --frame 180"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.539",
+    "remotion": "4.0.539",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "18.3.27",
+    "@types/react-dom": "18.3.7",
+    "typescript": "5.9.3"
+  }
+}

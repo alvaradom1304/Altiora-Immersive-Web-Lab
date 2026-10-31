@@ -73,6 +73,28 @@
       ]
     },
     {
+      "id": "audiovisual-experience-director",
+      "when": "Activar AUTOMÁTICAMENTE cuando una petición incluya arte visual, anuncios, video, motion graphics, animación, cine, Blender, Adobe, VFX, shaders, escenografía, producto 3D o web inmersiva. Decide la herramienta, cuándo usarla y cómo, coordina al equipo y aprueba o rechaza su adecuación técnica; no exige al usuario escoger tecnología.",
+      "milestones": [
+        "M0",
+        "M1",
+        "M2",
+        "M3",
+        "M4",
+        "M5",
+        "M6"
+      ],
+      "skills": [
+        "creative-direction",
+        "cinematic-direction",
+        "storyboarding",
+        "ai-video-direction",
+        "motion-design",
+        "creative-quality-assurance",
+        "verification-before-completion"
+      ]
+    },
+    {
       "id": "ux-researcher",
       "when": "Usar para entender tareas del usuario, mapear flujos, diseñar pruebas de tareas y reducir fricción en compra o pedido.",
       "milestones": [

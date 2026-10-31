@@ -7,13 +7,19 @@
     "node": ">=20"
   },
   "scripts": {
-    "check": "node scripts/verify-catalog.mjs && node scripts/audit-skills.mjs && node scripts/build-agents.mjs --check && node scripts/build-antigravity.mjs --check && node --test scripts/discovery.test.mjs && node --test scripts/skill-security-gate.test.mjs",
+    "check": "node scripts/verify-catalog.mjs && node scripts/audit-skills.mjs && node scripts/build-agents.mjs --check && node scripts/build-antigravity.mjs --check && node --test scripts/discovery.test.mjs && node --test scripts/skill-security-gate.test.mjs && npm run continuity:check && npm run visual:preflight:test && npm run visual:watch:test",
     "agents:build": "node scripts/build-agents.mjs && node scripts/build-antigravity.mjs",
     "chat": "node scripts/team-chat.mjs",
     "skills:audit": "node scripts/audit-skills.mjs",
     "skills:baseline": "node scripts/audit-skills.mjs --write",
     "reference": "node scripts/fetch-reference.mjs",
     "antigravity:build": "node scripts/build-antigravity.mjs",
-    "security:scan": "node scripts/skill-security-gate.mjs"
+    "security:scan": "node scripts/skill-security-gate.mjs",
+    "resume": "node scripts/continuity.mjs",
+    "continuity:check": "node scripts/continuity.mjs --check && node --test scripts/continuity.test.mjs",
+    "visual:preflight": "node scripts/visual-preflight.mjs",
+    "visual:preflight:test": "node --test scripts/visual-preflight.test.mjs",
+    "visual:watch": "node scripts/visual-watch.mjs",
+    "visual:watch:test": "node --test scripts/visual-watch.test.mjs"
   }
 }

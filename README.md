@@ -4,6 +4,28 @@ Laboratorio de experiencias web inmersivas y comerciales. Primer caso: **La Cent
 
 La base de investigación reúne **25 repositorios** con una función, una decisión y una revisión concreta. La selección inicial favorece Three.js + React Three Fiber + Drei + GSAP; glTF Transform prepara los modelos. Lenis se evalúa después de comparar con el scroll nativo.
 
+## Altiora Visual Studio — Motion, Blender, Adobe y producción multi-IA
+
+Nuevo: [sistema visual compartido](creative/visual-studio/README.md), [router para Claude, Gemini/Antigravity y ChatGPT/Codex](creative/visual-studio/ROUTER.md), [70 referencias visuales evaluables](references/visual-libraries-2026.json) y [workflow de producción](docs/workflows/visual-production-multi-ai.md). Son extensiones documentales; no se han instalado programas, addons ni servidores MCP.
+
+La expansión avanzada agrega [matriz técnica](creative/visual-studio/PRODUCTION-MATRIX.md), [playbooks portables](creative/visual-studio/playbooks/README.md) y [protocolo común para Claude, Gemini/Antigravity y ChatGPT/Codex](creative/visual-studio/AGENT-PORTABILITY.md), sin instalar automáticamente las 70 referencias ni instalar aplicaciones Adobe.
+
+## Experimento audiovisual ejecutable (código)
+
+[Tilicheros · Cinematic Motion Pilot](experiments/tilicheros-motion-lab/README.md) contiene una plantilla Remotion 15s vertical, un diseño conceptual original y un script Blender para generar CGI reproducible. Los archivos están versionados y cuentan con validación automatizada, pero **no** representan un anuncio final ni un render certificado.
+
+## Dirección audiovisual automática
+
+El [Director de Experiencia Audiovisual](creative/visual-studio/agents/audiovisual-experience-director.md) es el nuevo rol formal en el [equipo](team/registry.md), con prompt compartido para Claude, Gemini y ChatGPT/Codex. La IA debe escoger el pipeline audiovisual según el resultado pedido, accesos verificables, licencias y calidad, sin obligar al usuario a escoger librerías. El Visual Tech Scout le entrega señales para mejorar el sistema.
+
+## Mejora continua del stack visual
+
+[Visual Tech Scout](creative/visual-studio/agents/visual-tech-scout.md) + [vigilancia semanal de los 70 repositorios](continuity/visual-watch/README.md) + `npm run visual:preflight`: detecta cambios de actividad, licencia y estado, crea informes y puede proponer PRs con revisión humana. Es una rutina automatizada de GitHub Actions, **no** instalación ilimitada de paquetes ni una IA conectada permanentemente.
+
+## Recuperar trabajo sin repetir «continúa»
+
+[Continuity OS](continuity/README.md) usa un [checkpoint versionado](continuity/checkpoint.json) y `npm run resume` para recuperar milestones, evidencia y próximos pasos entre chats de Claude, Gemini y ChatGPT/Codex. Se valida automáticamente con `npm run check`; no promete solucionar la interfaz de ChatGPT ni activar tareas en segundo plano.
+
 ## Empezar
 
 1. Leer la [comparación de repositorios](docs/research/repository-review.md).
@@ -71,3 +93,6 @@ GSAP usa su licencia propia Standard No Charge. El catálogo señala una discrep
 ## Descubrimiento Claude Code y auditoría pública
 
 Corrección e inventario reconciliado: [diagnóstico de Claude](docs/operations/claude-discovery.md). Auditoría pública con límites y pruebas propuestas: [Instagram de El Tilichero](projects/tilicheros/ads/AUDITORIA_INSTAGRAM_PUBLICO_2026-10-29.md). Los 260 originales se conservan; la incorporación local comprobada lleva el catálogo a 261. Los 15 roles canónicos y siete adaptadores suman 22 identidades. Los comandos auxiliares se cuentan aparte.
+
+## Visual Studio V3
+[70 librerías curadas](references/visual-libraries-2026.json), [vigilancia de versiones estables](creative/visual-studio/SCOUT-V3.md), [CGI/color avanzado](creative/visual-studio/playbooks/advanced-cgi-color.md) y [animación 2D generativa](creative/visual-studio/playbooks/illustration-particles.md). Todas las IAs consumen el mismo Director Audiovisual y router; ninguna instala automáticamente todo el catálogo.

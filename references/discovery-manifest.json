@@ -171,6 +171,7 @@
       "source": "skills/ai-video-direction/SKILL.md",
       "model_invocable": true,
       "assigned_agents": [
+        "audiovisual-experience-director",
         "visual-producer",
         "creative-ads-director"
       ]
@@ -451,6 +452,7 @@
       "model_invocable": true,
       "assigned_agents": [
         "creative-director",
+        "audiovisual-experience-director",
         "motion-designer"
       ]
     },
@@ -578,7 +580,8 @@
       "source": "skills/creative-direction/SKILL.md",
       "model_invocable": true,
       "assigned_agents": [
-        "creative-director"
+        "creative-director",
+        "audiovisual-experience-director"
       ]
     },
     {
@@ -587,6 +590,7 @@
       "model_invocable": true,
       "assigned_agents": [
         "creative-director",
+        "audiovisual-experience-director",
         "creative-ads-director"
       ]
     },
@@ -1085,6 +1089,7 @@
       "source": "skills/motion-design/SKILL.md",
       "model_invocable": true,
       "assigned_agents": [
+        "audiovisual-experience-director",
         "motion-designer"
       ]
     },
@@ -1512,6 +1517,7 @@
       "model_invocable": true,
       "assigned_agents": [
         "creative-director",
+        "audiovisual-experience-director",
         "creative-ads-director"
       ]
     },
@@ -1682,6 +1688,7 @@
       "model_invocable": true,
       "assigned_agents": [
         "experience-director",
+        "audiovisual-experience-director",
         "qa-reviewer"
       ]
     },
@@ -1797,6 +1804,12 @@
       "antigravity": ".agents/agents/creative-director.md"
     },
     {
+      "id": "audiovisual-experience-director",
+      "source": "team/roles/audiovisual-experience-director.md",
+      "claude": ".claude/agents/audiovisual-experience-director.md",
+      "antigravity": ".agents/agents/audiovisual-experience-director.md"
+    },
+    {
       "id": "ux-researcher",
       "source": "team/roles/ux-researcher.md",
       "claude": ".claude/agents/ux-researcher.md",
@@ -1910,6 +1923,7 @@
     "chat-business-strategist",
     "chat-brand-strategist",
     "chat-creative-director",
+    "chat-audiovisual-experience-director",
     "chat-ux-researcher",
     "chat-ui-designer",
     "chat-visual-producer",
