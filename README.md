@@ -1,5 +1,9 @@
 # Altiora Immersive Web Lab
 
+## Diagnóstico y calidad compartidos
+
+Claude Code, Codex, Gemini CLI, Antigravity y ChatGPT utilizan [el mismo protocolo operativo](docs/operations/SHARED-OPERATIONS.md): `npm run capability:doctor` distingue archivos y herramientas de conexiones comprobadas; `npm run routing:eval` comprueba recuperación de skills con casos representativos; `npm run production:qa` reúne evidencia audiovisual y revisiones pendientes. No instala software, no conecta cuentas ni acredita aprobación comercial. El [índice generado](INDEX.md) contiene los recuentos vigentes de roles y skills.
+
 Laboratorio de experiencias web inmersivas y comerciales. Primer caso: **La Central del Queso**, un recorrido de la finca a la mesa.
 
 La base de investigación reúne **25 repositorios** con una función, una decisión y una revisión concreta. La selección inicial favorece Three.js + React Three Fiber + Drei + GSAP; glTF Transform prepara los modelos. Lenis se evalúa después de comparar con el scroll nativo.
@@ -63,7 +67,7 @@ La segunda orden descarga únicamente esa revisión en `.references/`. No ejecut
 
 ## Equipo y Roles de Agentes (`team/`)
 
-El laboratorio define 12 roles operativos y directrices de orquestación en [team/registry.md](team/registry.md):
+El laboratorio define sus roles operativos y directrices de orquestación en [team/registry.md](team/registry.md); el recuento vigente está en [INDEX.md](INDEX.md):
 - **Director de experiencia**: Integración de estrategia, dirección de arte y gates de calidad.
 - **Director creativo & Motion designer**: Concepto visual, narrativa de cámara, animaciones y fallbacks.
 - **Ingeniero web & Shader artist**: Implementación WebGL, Three.js, React Three Fiber y shaders GLSL.
@@ -75,7 +79,7 @@ El [índice](INDEX.md) reúne agentes, chats, skills y repositorios. Los roles f
 
 ## Catálogo de Skills Integradas (`skills/`)
 
-El repositorio cuenta con un catálogo de **251 skills especializadas** (18 de ellas de terceros, con licencia y procedencia en [skill-sources.json](references/skill-sources.json)) categorizadas en:
+El repositorio cuenta con un catálogo de skills especializadas cuyo recuento se genera en [INDEX.md](INDEX.md). Las de terceros conservan licencia y procedencia en [skill-sources.json](references/skill-sources.json). Se categorizan en:
 1. **Brand & Creative Intelligence**: Art direction, brand architecture, storytelling, color system, typography direction.
 2. **Premium Web Experience**: Three.js, React Three Fiber, GSAP animation, motion design, responsive design, conversion UX.
 3. **Business & Financial Intelligence**: Unit economics, pricing strategy, margin analysis, cash flow, financial forecasting.

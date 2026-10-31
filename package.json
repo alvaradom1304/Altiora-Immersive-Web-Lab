@@ -30,6 +30,10 @@
     "ae:clients:test": "node --test scripts/connect-after-effects.test.mjs scripts/after-effects-mcp.test.mjs",
     "after-effects:mcp:test": "node --test scripts/after-effects-mcp.test.mjs",
     "after-effects:setup:test": "node --test scripts/setup-after-effects-access.test.mjs",
-    "after-effects:setup": "node scripts/setup-after-effects-access.mjs"
+    "after-effects:setup": "node scripts/setup-after-effects-access.mjs",
+    "capability:doctor": "node scripts/capability-doctor.mjs",
+    "operations:test": "node --test scripts/capability-doctor.test.mjs scripts/production-qa.test.mjs",
+    "routing:eval": "python skills/altiora-bibliotecario/scripts/evaluate_routes.py",
+    "production:qa": "node scripts/production-qa.mjs"
   }
 }

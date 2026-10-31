@@ -1,6 +1,6 @@
 # Chat del equipo: dividir tareas entre IAs
 
-Claude, Codex, Gemini, ChatGPT y las personas del equipo trabajan sobre el mismo tablero y el mismo hilo de mensajes. Cada participante firma como `<ia>/<rol>`: `claude/web-engineer`, `gemini/business-strategist`, `humano/experience-director`. Los roles son los 12 del [registro](../registry.md); los agentes están en `.claude/agents/` (Claude Code) y en [team/agents](../agents/experience-director.md) (cualquier otra IA).
+Claude, Codex, Gemini, ChatGPT y las personas del equipo trabajan sobre el mismo tablero y el mismo hilo de mensajes. Cada participante firma como `<ia>/<rol>`: `claude/web-engineer`, `gemini/business-strategist`, `humano/experience-director`. Los roles actuales están en el [registro](../registry.md) y su recuento en [INDEX.md](../../INDEX.md); los agentes están en `.claude/agents/` (Claude Code) y en [team/agents](../agents/experience-director.md) (cualquier otra IA).
 
 ## Flujo
 
@@ -25,7 +25,7 @@ Regla de oro: **una tarea, un dueño, sus archivos**. Dos IAs nunca editan los m
 
 | IA | Cómo se conecta | Fortalezas habituales para repartir |
 |---|---|---|
-| Claude Code | Lee `CLAUDE.md`; los 12 roles son subagentes (`.claude/agents/`). `/chat-<rol> <mensaje>` abre el chat de un agente con su bandeja ya cargada; `/equipo` muestra el tablero. Ver [INDEX.md](../../INDEX.md). | Orquestación, código con muchos archivos, revisión, redacción en español |
+| Claude Code | Lee `CLAUDE.md`; los roles tienen adaptadores de subagentes (`.claude/agents/`). `/chat-<rol> <mensaje>` abre el chat de un agente con su bandeja ya cargada; `/equipo` muestra el tablero. Ver [INDEX.md](../../INDEX.md). | Orquestación, código con muchos archivos, revisión, redacción en español |
 | Codex (CLI/IDE) | Lee `AGENTS.md`. Indicarle: «Actúa como el rol de `team/agents/<rol>.md`». | Implementación y pruebas acotadas |
 | Gemini CLI | Lee `GEMINI.md`. Mismo uso que Codex. | Investigación con contexto largo, análisis de documentos |
 | ChatGPT, Gemini web u otra IA sin terminal | Pegar `team/agents/<rol>.md` y la salida de `npm run chat -- show <id>`. Una persona registra la respuesta con `post` y `done`. | Ideación, copy, imágenes |

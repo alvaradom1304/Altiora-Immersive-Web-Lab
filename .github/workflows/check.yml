@@ -29,7 +29,11 @@ jobs:
 
       # Sin dependencias: no hace falta npm ci.
       - run: npm run check
+      - name: Verify shared diagnostics and production evidence
+        run: npm run operations:test
       - name: Verify portable librarian retrieval
-        run: python -m unittest discover -s skills/altiora-bibliotecario/scripts -p test_library.py
+        run: python -m unittest discover -s skills/altiora-bibliotecario/scripts -p "test_*.py"
+      - name: Evaluate representative routing cases
+        run: npm run routing:eval
       - name: Verify original audio sample meter
         run: python -m unittest discover -s skills/audio-production/scripts -p test_audio_qa.py
