@@ -31,7 +31,7 @@ const visual = JSON.parse(await readFile(resolve(root, 'references/visual-librar
 assert.equal(visual.schema_version, 1);
 assert.match(visual.updated_on, /^\d{4}-\d{2}-\d{2}$/);
 assert.equal(visual.operational_status, 'catalogued_not_installed');
-assert.ok(visual.repos.length >= 50);
+assert.ok(visual.repos.length >= 70);
 const visualIds = new Set();
 for (const entry of visual.repos) {
   assert.match(entry.id, /^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/);
