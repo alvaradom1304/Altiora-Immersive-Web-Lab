@@ -34,7 +34,7 @@ export const TOOLS=[
   },
   {
     name:"after_effects_render",
-    description:"Opt-in only: render an EXISTING approved .aep composition via local aerender, with fresh output file. Disabled unless PC owner sets ALTIORA_AE_ALLOW_RENDER=YES-I-APPROVE-LOCAL-RENDERS. No code execution, project editing or external network.",
+    description:"Opt-in only: render an EXISTING approved .aep composition via local aerender, with fresh output file. Disabled unless PC owner sets ALTIORA_AE_ALLOW_RENDER and exact ALTIORA_AE_APPROVED_PROJECT. No code execution, project editing or external network.",
     inputSchema:{
       type:"object",
       properties:{
@@ -76,7 +76,7 @@ export async function handleRequest(msg){
       if(!args||typeof args!=="object"||Array.isArray(args))throw new Error("Arguments must be an object");
       if(name==="after_effects_preflight"){
         if(Object.keys(args).length)throw new Error("No arguments accepted");
-        return response(toToolResult({status:"CHECKED_LOCAL_ONLY",...detectAerender(),render_enabled:process.env.ALTIORA_AE_ALLOW_RENDER==="YES-I-APPROVE-LOCAL-RENDERS",supports_native_project_editing:false}));
+        return response(toToolResult({status:"CHECKED_LOCAL_ONLY",...detectAerender(),render_enabled:process.env.ALTIORA_AE_ALLOW_RENDER==="YES-I-APPROVE-LOCAL-RENDERS" && Boolean(process.env.ALTIORA_AE_APPROVED_PROJECT),supports_native_project_editing:false}));
       }
       if(name==="after_effects_plan_render"){
         return response(toToolResult(await planLocalRender(args.project,args.composition,args.output)));
