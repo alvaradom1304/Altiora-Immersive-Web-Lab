@@ -15,7 +15,7 @@ Mapa de agentes, chats, skills y repositorios disponibles en Claude Code y en el
 
 Otras IAs (Codex, Gemini, ChatGPT): prompts en [team/agents/](team/agents/experience-director.md) y el mismo chat (`npm run chat`), ver [team/chat/README.md](team/chat/README.md).
 
-## Agentes (12)
+## Agentes (13)
 
 | Agente | Chat | Milestones | Skills asignadas |
 |---|---|---|---|
@@ -23,6 +23,7 @@ Otras IAs (Codex, Gemini, ChatGPT): prompts en [team/agents/](team/agents/experi
 | [Estratega de negocio](.claude/agents/business-strategist.md) | `/chat-business-strategist` | M0 | `business-strategy`, `value-proposition-design`, `buyer-persona`, `unit-economics`, `pricing`, `market-research`, `financial-forecasting`, `offers` |
 | [Estratega de marca](.claude/agents/brand-strategist.md) | `/chat-brand-strategist` | M1 | `brand-strategy`, `brand-positioning`, `brand-voice`, `brand-personality`, `premium-branding`, `brand-guidelines` |
 | [Director creativo](.claude/agents/creative-director.md) | `/chat-creative-director` | M1 | `creative-direction`, `art-direction`, `cinematic-direction`, `storyboarding`, `photography-direction`, `creative-quality-assurance` |
+| [Director de Experiencia Audiovisual](.claude/agents/audiovisual-experience-director.md) | `/chat-audiovisual-experience-director` | M0, M1, M2, M3, M4, M5, M6 | `creative-direction`, `cinematic-direction`, `storyboarding`, `ai-video-direction`, `motion-design`, `creative-quality-assurance`, `verification-before-completion` |
 | [UX researcher](.claude/agents/ux-researcher.md) | `/chat-ux-researcher` | M0, M2, M6 | `ux-research`, `user-flow`, `customer-journey`, `information-architecture`, `conversion-ux`, `accessibility`, `web-design-guidelines` |
 | [Diseñador UI](.claude/agents/ui-designer.md) | `/chat-ui-designer` | M2 | `ui-direction`, `design-system`, `color-system`, `typography-direction`, `responsive-design`, `frontend-design`, `web-design-guidelines` |
 | [Productor visual](.claude/agents/visual-producer.md) | `/chat-visual-producer` | M3 | `product-photography-direction`, `ai-image-direction`, `ai-video-direction`, `visual-identity`, `web-performance` |
@@ -64,7 +65,7 @@ Otras IAs (Codex, Gemini, ChatGPT): prompts en [team/agents/](team/agents/experi
 | [ai-governance](skills/ai-governance/SKILL.md) | — | — |  | ai-governance: AI & Automation. Usar para producir governance_controls, responsibilities, review a partir de usos IA, datos, actores, rie… |
 | [ai-image-direction](skills/ai-image-direction/SKILL.md) | sí | visual-producer |  | ai-image-direction: Creative Intelligence. Usar para producir generation_brief, variants, qa a partir de objetivo, referencias autorizada… |
 | [ai-observability](skills/ai-observability/SKILL.md) | — | — |  | ai-observability: AI & Automation. Usar para producir telemetry_plan, alerts, diagnostics a partir de sistema, eventos, límites de privac… |
-| [ai-video-direction](skills/ai-video-direction/SKILL.md) | sí | visual-producer |  | ai-video-direction: Creative Intelligence. Usar para producir video_brief, prompts, continuity_checks a partir de guion, duración, refere… |
+| [ai-video-direction](skills/ai-video-direction/SKILL.md) | sí | audiovisual-experience-director, visual-producer |  | ai-video-direction: Creative Intelligence. Usar para producir video_brief, prompts, continuity_checks a partir de guion, duración, refere… |
 | [altiora-agent-orchestrator](skills/altiora-agent-orchestrator/SKILL.md) | sí | experience-director |  | Coordina proyectos de Altiora que combinan investigación de repositorios, diseño, implementación y revisión mediante agentes y skills. Se… |
 | [altiora-ai-economy](skills/altiora-ai-economy/SKILL.md) | — | — |  | Selecciona un flujo de IA para Altiora que reduzca coste y contexto repetido preservando la calidad final. Se usa al comparar proveedores… |
 | [altiora-quality-review](skills/altiora-quality-review/SKILL.md) | sí | qa-reviewer |  | Revisa cambios de Altiora contra el encargo, las funciones afectadas y su evidencia de prueba. Se usa para comprobar una entrega o una ta… |
@@ -104,7 +105,7 @@ Otras IAs (Codex, Gemini, ChatGPT): prompts en [team/agents/](team/agents/experi
 | [challenger-selling](skills/challenger-selling/SKILL.md) | — | — |  | challenger-selling: Sales Intelligence. Usar para producir teaching_insight, tailored_message, next_step a partir de problema B2B, insigh… |
 | [channel-expansion](skills/channel-expansion/SKILL.md) | — | — |  | channel-expansion: Growth & Scaling. Usar para producir channel_options, pilot, conflict_controls a partir de canal actual, clientes, cos… |
 | [cicd-security](skills/cicd-security/SKILL.md) | — | — |  | cicd-security: Cybersecurity. Usar para producir pipeline_risks, controls, verification a partir de pipeline, repos, secretos, artifacts,… |
-| [cinematic-direction](skills/cinematic-direction/SKILL.md) | sí | creative-director, motion-designer |  | cinematic-direction: Creative Intelligence. Usar para producir cinematic_brief, camera_plan, continuity a partir de guion, marca, recurso… |
+| [cinematic-direction](skills/cinematic-direction/SKILL.md) | sí | creative-director, audiovisual-experience-director, motion-designer |  | cinematic-direction: Creative Intelligence. Usar para producir cinematic_brief, camera_plan, continuity a partir de guion, marca, recurso… |
 | [cloud-security](skills/cloud-security/SKILL.md) | — | — |  | cloud-security: Cybersecurity. Usar para producir cloud_review, misconfigurations, actions a partir de proveedor, recursos, permisos, red… |
 | [cold-outbound-system](skills/cold-outbound-system/SKILL.md) | — | — |  | Investiga y prepara prospección B2B personalizada y verificable con fuentes públicas permitidas, produce borradores de correo y seguimien… |
 | [color-system](skills/color-system/SKILL.md) | sí | ui-designer |  | color-system: Brand Intelligence. Usar para producir palette, semantic_tokens, contrast_checks a partir de marca, contextos, estados, con… |
@@ -121,8 +122,8 @@ Otras IAs (Codex, Gemini, ChatGPT): prompts en [team/agents/](team/agents/experi
 | [copywriting](skills/copywriting/SKILL.md) | sí | content-designer |  | copywriting: Marketing Intelligence. Usar para producir copy_variants, claim_sources, rationale a partir de audiencia, oferta, evidencia,… |
 | [cost-analysis](skills/cost-analysis/SKILL.md) | — | — |  | cost-analysis: Financial Intelligence. Usar para producir cost_structure, drivers, allocation_rules a partir de costos, drivers, volúmene… |
 | [cost-to-serve](skills/cost-to-serve/SKILL.md) | — | — |  | cost-to-serve: Operations & Logistics. Usar para producir service_cost, allocation, decisions a partir de pedidos/clientes, tiempos, tran… |
-| [creative-direction](skills/creative-direction/SKILL.md) | sí | creative-director |  | creative-direction: Creative Intelligence. Usar para producir creative_routes, production_rules, recommendation a partir de brief, marca,… |
-| [creative-quality-assurance](skills/creative-quality-assurance/SKILL.md) | sí | creative-director |  | creative-quality-assurance: Creative Intelligence. Usar para producir creative_review, defects, fixes a partir de piezas, brief, marca, f… |
+| [creative-direction](skills/creative-direction/SKILL.md) | sí | creative-director, audiovisual-experience-director |  | creative-direction: Creative Intelligence. Usar para producir creative_routes, production_rules, recommendation a partir de brief, marca,… |
+| [creative-quality-assurance](skills/creative-quality-assurance/SKILL.md) | sí | creative-director, audiovisual-experience-director |  | creative-quality-assurance: Creative Intelligence. Usar para producir creative_review, defects, fixes a partir de piezas, brief, marca, f… |
 | [creative-strategy](skills/creative-strategy/SKILL.md) | — | — |  | creative-strategy: Creative Intelligence. Usar para producir creative_brief, message, success_criteria a partir de objetivo, insight, aud… |
 | [cro](skills/cro/SKILL.md) | — | — | coreyhaines31/marketingskills | When the user wants to optimize, improve, or increase conversions on any marketing page or form — including homepage, landing pages, pric… |
 | [cross-selling](skills/cross-selling/SKILL.md) | — | — |  | cross-selling: Sales Intelligence. Usar para producir complementary_offer, suitability, message a partir de compra/uso actual, necesidad … |
@@ -193,7 +194,7 @@ Otras IAs (Codex, Gemini, ChatGPT): prompts en [team/agents/](team/agents/experi
 | [meta-ads-creator](skills/meta-ads-creator/SKILL.md) | — | — |  | Convierte un brief aprobado en variantes de anuncios para Meta con hook, body, CTA, concepto visual y plan de prueba, señalando claims y … |
 | [modular-docs-architect](skills/modular-docs-architect/SKILL.md) | — | — |  | Divide documentación Markdown monolítica en módulos ligeros con divulgación progresiva (índice, módulos y anexos bajo demanda) para reduc… |
 | [mom-test-interviewing](skills/mom-test-interviewing/SKILL.md) | — | — |  | mom-test-interviewing: Sales Intelligence. Usar para producir interview_questions, past_behavior, commitments a partir de hipótesis, acce… |
-| [motion-design](skills/motion-design/SKILL.md) | sí | motion-designer |  | motion-design: Premium Web Experience. Usar para producir motion_spec, states, alternatives a partir de tarea, UI/escena, ritmo, marca; n… |
+| [motion-design](skills/motion-design/SKILL.md) | sí | audiovisual-experience-director, motion-designer |  | motion-design: Premium Web Experience. Usar para producir motion_spec, states, alternatives a partir de tarea, UI/escena, ritmo, marca; n… |
 | [n8n-webhook-architect](skills/n8n-webhook-architect/SKILL.md) | — | — |  | Diseña y documenta el flujo CRM Web → n8n → WhatsApp con validación, idempotencia, consentimiento, reintentos, observabilidad y plan de p… |
 | [negotiation](skills/negotiation/SKILL.md) | — | — |  | negotiation: Sales Intelligence. Usar para producir negotiation_plan, concessions, approval_points a partir de intereses, alternativas, l… |
 | [nextjs-architecture](skills/nextjs-architecture/SKILL.md) | sí | web-engineer |  | nextjs-architecture: Premium Web Experience. Usar para producir architecture, boundaries, implementation_plan a partir de repo/versiones,… |
@@ -255,7 +256,7 @@ Otras IAs (Codex, Gemini, ChatGPT): prompts en [team/agents/](team/agents/experi
 | [social-creative](skills/social-creative/SKILL.md) | — | — |  | social-creative: Creative Intelligence. Usar para producir social_variants, platform_fit, tests a partir de canal, audiencia, marca, mens… |
 | [social-media-strategy](skills/social-media-strategy/SKILL.md) | — | — |  | social-media-strategy: Marketing Intelligence. Usar para producir channel_roles, content_system, measurement a partir de audiencia, marca… |
 | [spin-selling](skills/spin-selling/SKILL.md) | — | — |  | Estructura conversaciones de venta consultiva compleja con el método SPIN de Neil Rackham (Situación, Problema, Implicación, Necesidad-be… |
-| [storyboarding](skills/storyboarding/SKILL.md) | sí | creative-director |  | storyboarding: Creative Intelligence. Usar para producir storyboard, shot_sequence, continuity a partir de guion, formato, duración, recu… |
+| [storyboarding](skills/storyboarding/SKILL.md) | sí | creative-director, audiovisual-experience-director |  | storyboarding: Creative Intelligence. Usar para producir storyboard, shot_sequence, continuity a partir de guion, formato, duración, recu… |
 | [strategic-planning](skills/strategic-planning/SKILL.md) | — | — |  | strategic-planning: Business Intelligence. Usar para producir milestones, initiatives, kpis, dependencies a partir de estrategia vigente,… |
 | [supplier-evaluation](skills/supplier-evaluation/SKILL.md) | — | — |  | supplier-evaluation: Operations & Logistics. Usar para producir supplier_scorecard, risks, actions a partir de proveedores, criterios, en… |
 | [supply-chain](skills/supply-chain/SKILL.md) | — | — |  | supply-chain: Operations & Logistics. Usar para producir supply_network, vulnerabilities, resilience a partir de red proveedores, flujos,… |
@@ -278,7 +279,7 @@ Otras IAs (Codex, Gemini, ChatGPT): prompts en [team/agents/](team/agents/experi
 | [venture-risk-assessment](skills/venture-risk-assessment/SKILL.md) | — | — |  | venture-risk-assessment: Venture Building. Usar para producir venture_risks, validation_order, stop_conditions a partir de hipótesis del … |
 | [vercel-composition-patterns](skills/vercel-composition-patterns/SKILL.md) | sí | web-engineer | vercel-labs/agent-skills | React composition patterns that scale. Use when refactoring components with boolean prop proliferation, building flexible component libra… |
 | [vercel-react-best-practices](skills/vercel-react-best-practices/SKILL.md) | sí | web-engineer |  | React and Next.js performance optimization and UI engineering guidelines from Vercel Engineering. Use when writing, reviewing, or refacto… |
-| [verification-before-completion](skills/verification-before-completion/SKILL.md) | sí | experience-director, qa-reviewer | obra/superpowers | Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands a… |
+| [verification-before-completion](skills/verification-before-completion/SKILL.md) | sí | experience-director, audiovisual-experience-director, qa-reviewer | obra/superpowers | Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands a… |
 | [visual-identity](skills/visual-identity/SKILL.md) | sí | visual-producer |  | visual-identity: Brand Intelligence. Usar para producir identity_system, tokens, applications a partir de plataforma, dirección, usos, re… |
 | [vulnerability-triage](skills/vulnerability-triage/SKILL.md) | — | — |  | vulnerability-triage: Cybersecurity. Usar para producir severity, impact, likelihood, priority, remediation a partir de hallazgo, evidenc… |
 | [web-design-guidelines](skills/web-design-guidelines/SKILL.md) | sí | ux-researcher, ui-designer, qa-reviewer | vercel-labs/agent-skills | Review UI code for Web Interface Guidelines compliance. Use when asked to "review my UI", "check accessibility", "audit design", "review … |

@@ -10,3 +10,9 @@ Si la intención del usuario requiere **motion graphics, After Effects, Premiere
 
 ## Reanudación sin reconstruir el chat
 Antes de continuar en Antigravity/Gemini, leer [checkpoint](continuity/checkpoint.json) y [recovery runbook](continuity/README.md), ejecutar `npm run resume` si hay checkout y verificar PRs/CI. Diferenciar documentación, CI probado y apps realmente conectadas.
+
+## Visual Tech Scout — actualización periódica
+Al solicitar mejora continua, leer el [rol de vigilancia](creative/visual-studio/agents/visual-tech-scout.md), el [reporte GitHub](continuity/visual-watch/README.md) y el [preflight](scripts/visual-preflight.mjs). Registrar la fuente, cambios técnicos, seguridad, licencias y evidencia de QA. GitHub Actions programa la revisión; Gemini/Antigravity no queda ejecutándose constantemente por existir este archivo.
+
+## Punto de entrada audiovisual automático
+Para cualquier intención visual, actuar primero como [Director de Experiencia Audiovisual](creative/visual-studio/agents/audiovisual-experience-director.md) y coordinar sus agentes especializados. La decisión sobre Blender, Adobe, Motion, Remotion, shaders o WebGL corresponde al director según resultado, acceso real y costo: no trasladar esa selección al usuario. El workflow no instala software por sí solo.

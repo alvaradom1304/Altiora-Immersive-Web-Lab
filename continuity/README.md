@@ -55,6 +55,10 @@ Este aviso ocurre en el cliente/plataforma donde se muestra una respuesta; **no 
 
 **Resultado garantizado por este módulo:** contexto recuperable mediante archivo y comando, siempre que GitHub y el repositorio sean accesibles. No garantiza respuesta de ChatGPT ni trabajo desatendido.
 
+## Mantenimiento de librerías y chequeo de entorno
+
+La [vigilancia visual](visual-watch/README.md) ejecuta un chequeo de metadatos semanal en GitHub Actions y genera propuestas revisables si el workflow tiene permisos. `npm run visual:preflight` muestra los binarios disponibles en la máquina en que se ejecuta, sin tocar instalaciones. Ninguna rutina convierte una IA de chat en un proceso autónomo 24/7.
+
 ## Próxima mejora opcional
 
 Un orquestador externo autorizado puede usar el formato JSON para abrir tareas/reports recurrentes en GitHub. Sería una integración nueva, con credenciales, permisos, presupuesto y confirmación explícita de automatización; no queda activada por esta entrega.

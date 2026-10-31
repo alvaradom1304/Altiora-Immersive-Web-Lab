@@ -6,6 +6,14 @@
 
 El [catálogo visual](../../references/visual-libraries-2026.json) contiene **56 repositorios evaluables**, entre ellos 33 nuevas referencias de OpenColorIO, MaterialX, OpenUSD, OpenVDB, FFmpeg, Blender, shaders y motores web. [Matriz de producción](PRODUCTION-MATRIX.md), [protocolo para todas las IAs](AGENT-PORTABILITY.md) y [playbooks de ejecución](playbooks/README.md). Son **referencias documentales, no 56 instalaciones**.
 
+## Dirección audiovisual de Altiora
+
+El [Director de Experiencia Audiovisual](agents/audiovisual-experience-director.md) es la entrada por defecto de cualquier tarea visual: transforma objetivos en decisiones de herramientas, encarga escenas y anuncios a los especialistas, orquesta revisiones y evita que el usuario tenga que elegir tecnologías. Su asesor [Visual Tech Scout](agents/visual-tech-scout.md) identifica cambios; el Director solo propone una adopción tras pruebas y revisión de licencias.
+
+## Mejora continua — Visual Tech Scout
+
+[Rol compartido por las IAs](agents/visual-tech-scout.md) y [monitor programado en GitHub Actions](../../continuity/visual-watch/README.md): semanalmente revisa estado de repositorios y propone cambios que requieren aceptación, licencias, seguridad y pruebas. [Preflight local](../../scripts/visual-preflight.mjs) distingue herramientas que responden en cada máquina de integraciones aún no habilitadas. No es un agente IA permanente ni se fusionan automáticamente los cambios.
+
 ## Objetivo
 
 Producir sistemas visuales reutilizables para (1) anuncios cortos de alto impacto, (2) experiencias web inmersivas y (3) escenas cinematográficas 3D. El resultado debe servir al negocio y permanecer editable, accesible, mantenible y verificable.
