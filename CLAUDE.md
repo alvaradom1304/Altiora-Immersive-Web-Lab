@@ -25,3 +25,6 @@ El Director Audiovisual consulta [SCOUT-V3](creative/visual-studio/SCOUT-V3.md) 
 
 ## Adobe After Effects
 El [puente local AE](creative/visual-studio/after-effects/README.md) permite comprobar `aerender`, planear un render y, con permiso explícito y archivo .aep local, ejecutarlo en una computadora con After Effects instalado. Si no hay acceso, delegar alternativa. El conector Adobe de ChatGPT es una integración distinta.
+
+## MCP local After Effects para Claude Code
+Consultar [registro multi-cliente](creative/visual-studio/after-effects/MCP-SETUP.md): `npm run ae:clients:plan` y, solo desde la laptop con permiso, `npm run ae:clients:connect`. Comprobar con `claude mcp list`. El Director Audiovisual puede entonces elegir AE si `aerender` funciona; nunca afirmar acceso del ChatGPT remoto.
