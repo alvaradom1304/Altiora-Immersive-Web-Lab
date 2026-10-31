@@ -60,6 +60,31 @@ assert.match(lygia.license_note, /Prosperity Public License/);
 const usd = visual.repos.find(x => x.id === 'PixarAnimationStudios/OpenUSD');
 assert.match(usd.license_note, /Tomorrow Open Source Technology License/);
 
+// Audio has one canonical catalog inside its portable skill bundle.
+const audioIndexPath = resolve(root, 'references/audio-repositories-2026.json');
+const audioIndex = JSON.parse(await readFile(audioIndexPath, 'utf8'));
+const audioPath = resolve(dirname(audioIndexPath), audioIndex.catalog);
+assert.equal(relative(root, audioPath).replaceAll('\\', '/'), 'skills/audio-production/references/repositories.json');
+const audio = JSON.parse(await readFile(audioPath, 'utf8'));
+assert.equal(audio.schema_version, 1);
+const audioIds = new Set();
+for (const entry of audio.repos) {
+  assert.ok(!audioIds.has(entry.id), 'Audio reference duplicated: ' + entry.id);
+  audioIds.add(entry.id);
+  assert.equal(entry.url, 'https://github.com/' + entry.id);
+  assert.match(entry.revision, /^[a-f0-9]{40}$/);
+  assert.match(entry.verified_on, /^\d{4}-\d{2}-\d{2}$/);
+  assert.ok(['evaluate', 'hold', 'reference_only'].includes(entry.decision));
+  assert.equal(entry.integrated, false, 'A reviewed source is not installed');
+  assert.equal(entry.runtime_status, 'NOT_TESTED');
+  assert.ok(entry.license_code && entry.model_license && entry.risk);
+  assert.ok(entry.sources.length >= 2);
+  for (const source of entry.sources) assert.ok(source.startsWith(entry.url + '/blob/' + entry.revision + '/'));
+}
+const audioCraft = audio.repos.find(x => x.id === 'facebookresearch/audiocraft');
+assert.equal(audioCraft.decision, 'hold', 'Noncommercial model weights cannot be approved for commercial production');
+assert.match(audioCraft.model_license, /CC-BY-NC-4.0/);
+
 const skillSources = JSON.parse(await readFile(resolve(root, 'references/skill-sources.json'), 'utf8'));
 let externalSkills = 0;
 for (const source of skillSources.sources) {

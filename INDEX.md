@@ -15,7 +15,7 @@ Mapa de agentes, chats, skills y repositorios disponibles en Claude Code y en el
 
 Otras IAs (Codex, Gemini, ChatGPT): prompts en [team/agents/](team/agents/experience-director.md) y el mismo chat (`npm run chat`), ver [team/chat/README.md](team/chat/README.md).
 
-## Agentes (13)
+## Agentes (14)
 
 | Agente | Chat | Milestones | Skills asignadas |
 |---|---|---|---|
@@ -23,7 +23,7 @@ Otras IAs (Codex, Gemini, ChatGPT): prompts en [team/agents/](team/agents/experi
 | [Estratega de negocio](.claude/agents/business-strategist.md) | `/chat-business-strategist` | M0 | `business-strategy`, `value-proposition-design`, `buyer-persona`, `unit-economics`, `pricing`, `market-research`, `financial-forecasting`, `offers` |
 | [Estratega de marca](.claude/agents/brand-strategist.md) | `/chat-brand-strategist` | M1 | `brand-strategy`, `brand-positioning`, `brand-voice`, `brand-personality`, `premium-branding`, `brand-guidelines` |
 | [Director creativo](.claude/agents/creative-director.md) | `/chat-creative-director` | M1 | `creative-direction`, `art-direction`, `cinematic-direction`, `storyboarding`, `photography-direction`, `creative-quality-assurance` |
-| [Director de Experiencia Audiovisual](.claude/agents/audiovisual-experience-director.md) | `/chat-audiovisual-experience-director` | M0, M1, M2, M3, M4, M5, M6 | `creative-direction`, `cinematic-direction`, `storyboarding`, `ai-video-direction`, `motion-design`, `creative-quality-assurance`, `verification-before-completion` |
+| [Director de Experiencia Audiovisual](.claude/agents/audiovisual-experience-director.md) | `/chat-audiovisual-experience-director` | M0, M1, M2, M3, M4, M5, M6 | `creative-direction`, `cinematic-direction`, `storyboarding`, `ai-video-direction`, `motion-design`, `creative-quality-assurance`, `verification-before-completion`, `audio-production` |
 | [UX researcher](.claude/agents/ux-researcher.md) | `/chat-ux-researcher` | M0, M2, M6 | `ux-research`, `user-flow`, `customer-journey`, `information-architecture`, `conversion-ux`, `accessibility`, `web-design-guidelines` |
 | [Diseñador UI](.claude/agents/ui-designer.md) | `/chat-ui-designer` | M2 | `ui-direction`, `design-system`, `color-system`, `typography-direction`, `responsive-design`, `frontend-design`, `web-design-guidelines` |
 | [Productor visual](.claude/agents/visual-producer.md) | `/chat-visual-producer` | M3 | `product-photography-direction`, `ai-image-direction`, `ai-video-direction`, `visual-identity`, `web-performance` |
@@ -32,8 +32,9 @@ Otras IAs (Codex, Gemini, ChatGPT): prompts en [team/agents/](team/agents/experi
 | [Content designer](.claude/agents/content-designer.md) | `/chat-content-designer` | M2 | `copywriting`, `content-strategy`, `brand-voice`, `seo`, `local-seo`, `emails`, `schema` |
 | [QA y accesibilidad](.claude/agents/qa-reviewer.md) | `/chat-qa-reviewer` | M4 | `web-quality-assurance`, `accessibility`, `altiora-quality-review`, `web-performance`, `security-testing`, `owasp-review`, `webapp-testing`, `web-design-guidelines`, `verification-before-completion` |
 | [Analista de conversión y fidelización](.claude/agents/growth-analyst.md) | `/chat-growth-analyst` | M6 | `marketing-analytics`, `conversion-analysis`, `conversion-rate-optimization`, `growth-experimentation`, `retention`, `ltv-optimization`, `analytics`, `ab-testing`, `referrals`, `events` |
+| [Especialista en sonido y audio](.claude/agents/audio-specialist.md) | `/chat-audio-specialist` | M1, M3, M4 | `audio-production`, `creative-quality-assurance`, `altiora-quality-review` |
 
-## Skills (252)
+## Skills (253)
 
 **Auto** = Claude puede cargarla sola (está asignada a un agente). El resto se usa con `/nombre`. Origen vacío = skill propia de Altiora.
 
@@ -69,12 +70,13 @@ Otras IAs (Codex, Gemini, ChatGPT): prompts en [team/agents/](team/agents/experi
 | [altiora-agent-orchestrator](skills/altiora-agent-orchestrator/SKILL.md) | sí | experience-director |  | Coordina proyectos de Altiora que combinan investigación de repositorios, diseño, implementación y revisión mediante agentes y skills. Se… |
 | [altiora-ai-economy](skills/altiora-ai-economy/SKILL.md) | — | — |  | Selecciona un flujo de IA para Altiora que reduzca coste y contexto repetido preservando la calidad final. Se usa al comparar proveedores… |
 | [altiora-bibliotecario](skills/altiora-bibliotecario/SKILL.md) | — | — |  | Selecciona skills, herramientas y roles con contexto mínimo en Altiora. Usar al enrutar una petición nueva, retomar una tarea o resolver … |
-| [altiora-quality-review](skills/altiora-quality-review/SKILL.md) | sí | qa-reviewer |  | Revisa cambios de Altiora contra el encargo, las funciones afectadas y su evidencia de prueba. Se usa para comprobar una entrega o una ta… |
+| [altiora-quality-review](skills/altiora-quality-review/SKILL.md) | sí | qa-reviewer, audio-specialist |  | Revisa cambios de Altiora contra el encargo, las funciones afectadas y su evidencia de prueba. Se usa para comprobar una entrega o una ta… |
 | [altiora-repository-research](skills/altiora-repository-research/SKILL.md) | — | — |  | Selecciona y compara repositorios o skills para un proyecto de Altiora según utilidad, compatibilidad, mantenimiento, licencia y coste to… |
 | [analytics](skills/analytics/SKILL.md) | sí | growth-analyst | coreyhaines31/marketingskills | When the user wants to set up, improve, or audit analytics tracking and measurement. Also use when the user mentions "set up tracking," "… |
 | [api-integration](skills/api-integration/SKILL.md) | — | — |  | api-integration: AI & Automation. Usar para producir integration_code, error_handling, tests a partir de API oficial, contrato, entorno, … |
 | [api-security](skills/api-security/SKILL.md) | — | — |  | api-security: Cybersecurity. Usar para producir api_risks, controls, verification a partir de endpoints, contrato, auth, datos, límites; … |
 | [art-direction](skills/art-direction/SKILL.md) | sí | creative-director |  | art-direction: Brand Intelligence. Usar para producir art_concept, visual_rules, alternatives a partir de estrategia, audiencia, medios, … |
+| [audio-production](skills/audio-production/SKILL.md) | sí | audiovisual-experience-director, audio-specialist |  | Diseña y revisa sonido, voz, música, restauración, mezcla y masterización para anuncios, video, podcasts y experiencias interactivas. Usa… |
 | [authentication-security](skills/authentication-security/SKILL.md) | — | — |  | authentication-security: Cybersecurity. Usar para producir auth_findings, session_controls, fixes a partir de flujos login/sesión, roles,… |
 | [authorization-security](skills/authorization-security/SKILL.md) | — | — |  | authorization-security: Cybersecurity. Usar para producir access_matrix, negative_tests, fixes a partir de roles, recursos, reglas, owner… |
 | [automation-design](skills/automation-design/SKILL.md) | — | — |  | automation-design: AI & Automation. Usar para producir automation_case, workflow, human_exceptions a partir de proceso actual, volumen, c… |
@@ -124,7 +126,7 @@ Otras IAs (Codex, Gemini, ChatGPT): prompts en [team/agents/](team/agents/experi
 | [cost-analysis](skills/cost-analysis/SKILL.md) | — | — |  | cost-analysis: Financial Intelligence. Usar para producir cost_structure, drivers, allocation_rules a partir de costos, drivers, volúmene… |
 | [cost-to-serve](skills/cost-to-serve/SKILL.md) | — | — |  | cost-to-serve: Operations & Logistics. Usar para producir service_cost, allocation, decisions a partir de pedidos/clientes, tiempos, tran… |
 | [creative-direction](skills/creative-direction/SKILL.md) | sí | creative-director, audiovisual-experience-director |  | creative-direction: Creative Intelligence. Usar para producir creative_routes, production_rules, recommendation a partir de brief, marca,… |
-| [creative-quality-assurance](skills/creative-quality-assurance/SKILL.md) | sí | creative-director, audiovisual-experience-director |  | creative-quality-assurance: Creative Intelligence. Usar para producir creative_review, defects, fixes a partir de piezas, brief, marca, f… |
+| [creative-quality-assurance](skills/creative-quality-assurance/SKILL.md) | sí | creative-director, audiovisual-experience-director, audio-specialist |  | creative-quality-assurance: Creative Intelligence. Usar para producir creative_review, defects, fixes a partir de piezas, brief, marca, f… |
 | [creative-strategy](skills/creative-strategy/SKILL.md) | — | — |  | creative-strategy: Creative Intelligence. Usar para producir creative_brief, message, success_criteria a partir de objetivo, insight, aud… |
 | [cro](skills/cro/SKILL.md) | — | — | coreyhaines31/marketingskills | When the user wants to optimize, improve, or increase conversions on any marketing page or form — including homepage, landing pages, pric… |
 | [cross-selling](skills/cross-selling/SKILL.md) | — | — |  | cross-selling: Sales Intelligence. Usar para producir complementary_offer, suitability, message a partir de compra/uso actual, necesidad … |

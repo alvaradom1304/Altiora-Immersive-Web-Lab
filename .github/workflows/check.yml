@@ -31,3 +31,5 @@ jobs:
       - run: npm run check
       - name: Verify portable librarian retrieval
         run: python -m unittest discover -s skills/altiora-bibliotecario/scripts -p test_library.py
+      - name: Verify original audio sample meter
+        run: python -m unittest discover -s skills/audio-production/scripts -p test_audio_qa.py

@@ -74,7 +74,7 @@
     },
     {
       "id": "audiovisual-experience-director",
-      "when": "Activar AUTOMÁTICAMENTE cuando una petición incluya arte visual, anuncios, video, motion graphics, animación, cine, Blender, Adobe, VFX, shaders, escenografía, producto 3D o web inmersiva. Decide la herramienta, cuándo usarla y cómo, coordina al equipo y aprueba o rechaza su adecuación técnica; no exige al usuario escoger tecnología.",
+      "when": "Activar AUTOMÁTICAMENTE cuando una petición incluya arte visual, anuncios, video, motion graphics, animación, cine, Blender, Adobe, VFX, shaders, escenografía, producto 3D o web inmersiva. Decide la herramienta, cuándo usarla y cómo, coordina al equipo y aprueba o rechaza su adecuación técnica; no exige al usuario escoger tecnología. Para sonido, audio, voz o música, coordinar con audio-specialist.",
       "milestones": [
         "M0",
         "M1",
@@ -91,7 +91,8 @@
         "ai-video-direction",
         "motion-design",
         "creative-quality-assurance",
-        "verification-before-completion"
+        "verification-before-completion",
+        "audio-production"
       ]
     },
     {
@@ -228,6 +229,20 @@
         "ab-testing",
         "referrals",
         "events"
+      ]
+    },
+    {
+      "id": "audio-specialist",
+      "when": "Usar para diseño sonoro, voz, música, Foley, restauración, edición, mezcla, masterización y QA de audio en anuncios, video, podcasts o experiencias interactivas.",
+      "milestones": [
+        "M1",
+        "M3",
+        "M4"
+      ],
+      "skills": [
+        "audio-production",
+        "creative-quality-assurance",
+        "altiora-quality-review"
       ]
     }
   ]
