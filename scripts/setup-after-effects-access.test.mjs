@@ -5,11 +5,12 @@ import {tmpdir} from "node:os";
 import {join,resolve} from "node:path";
 import {configurations,codexBlock,mergeToml,mergeJson,buildPlan} from "./setup-after-effects-access.mjs";
 
-test("Generates project-scoped configs for all three tools without elevated privileges",()=>{
+test("Generates project-scoped configs for all four tools without elevated privileges",()=>{
   const c=configurations("/tmp/Altiora Visual Studio");
-  assert.deepEqual(Object.keys(c),[".mcp.json",".gemini/settings.json",".codex/config.toml"]);
+  assert.deepEqual(Object.keys(c),[".mcp.json",".gemini/settings.json",".agents/mcp_config.json",".codex/config.toml"]);
   assert.ok(c[".mcp.json"].mcpServers["altiora-after-effects"].args[0].includes("Altiora Visual Studio"));
   assert.equal(c[".gemini/settings.json"].mcpServers["altiora-after-effects"].trust,false);
+  assert.ok(c[".agents/mcp_config.json"].mcpServers["altiora-after-effects"].args[0].includes("after-effects-mcp.mjs"));
   assert.ok(c[".codex/config.toml"].includes("[mcp_servers.altiora-after-effects]"));
 });
 test("TOML escapes Windows backslashes and quotes",()=>{
@@ -37,7 +38,7 @@ test("Build plan reads existing configs and does not write to disk",async()=>{
   await mkdir(join(home,".gemini"),{recursive:true});
   await writeFile(join(home,".gemini/settings.json"),JSON.stringify({mcpServers:{other:{command:"echo"}}}));
   const plan=await buildPlan(home);
-  assert.equal(plan.length,3);
+  assert.equal(plan.length,4);
   assert.ok(JSON.parse(plan.find(p=>p.relativePath===".gemini/settings.json").content).mcpServers.other);
   assert.equal((await readFile(join(home,".gemini/settings.json"),"utf8")).includes("altiora-after-effects"),false);
 });
