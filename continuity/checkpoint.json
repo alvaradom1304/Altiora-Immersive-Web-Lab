@@ -7,6 +7,17 @@
   "description": "Estado reproducible para reanudar entre sesiones e IAs. No significa ejecución persistente ni conexión automática con software.",
   "completed_milestones": [
     {
+      "id": "VIS-OPS-03",
+      "name": "Diagnóstico compartido, recuperación evaluada y QA audiovisual con evidencia",
+      "result": "DONE",
+      "evidence": [
+        {
+          "url": "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/pull/35",
+          "claim": "Implementado y probado localmente: diagnóstico de cinco clientes, 14 casos de recuperación y revisión conjunta de audio/video. No certifica conexiones, ahorro ni producción comercial. Revisar estado vivo de PR y CI."
+        }
+      ]
+    },
+    {
       "id": "VIS-01",
       "name": "Visual Studio base + 23 repositorios",
       "result": "MERGED",
@@ -107,7 +118,7 @@
       },
       {
         "id": "VIS-05-B",
-        "action": "Local preflight de Blender/Adobe/Remotion: scripts visual:preflight y adobe:check implementados; ejecutar en la laptop sigue pendiente y no se afirma acceso remoto.",
+        "action": "Diagnóstico local ejecutado: FFmpeg/FFprobe/Python respondieron; Blender y aerender no se detectaron con las consultas disponibles y Remotion local no estaba instalado. Falta comprobar licencias, sesiones de clientes y ejecución real por aplicación. Usar capability:doctor y conservar evidencia privada; no implica acceso remoto.",
         "status": "IN_PROGRESS",
         "blocker": null,
         "deliverable": "matriz de versiones/permisos/accesos, licencias y riesgos",
@@ -132,6 +143,13 @@
     ]
   },
   "capabilities": [
+    {
+      "name": "Operación compartida para Claude, Codex, Gemini, Antigravity y ChatGPT: diagnóstico, recuperación y QA audiovisual",
+      "status": "DOCUMENTED",
+      "evidence": [
+        "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/pull/35"
+      ]
+    },
     {
       "name": "GitHub catálogo y guía visual multi-IA",
       "status": "DOCUMENTED",
@@ -222,6 +240,9 @@
     }
   ],
   "context_files": [
+    "docs/operations/SHARED-OPERATIONS.md",
+    "docs/operations/production-qa.md",
+    "docs/operations/VALIDATION.md",
     "AGENTS.md",
     "CLAUDE.md",
     "GEMINI.md",
