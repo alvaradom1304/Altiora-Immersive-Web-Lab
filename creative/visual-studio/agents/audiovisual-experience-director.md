@@ -80,3 +80,6 @@ El [Visual Tech Scout](visual-tech-scout.md) ejecuta observación de metadatos (
 - Para fidelidad CGI, color, pases EXR y denoising: [playbook profesional](../playbooks/advanced-cgi-color.md).
 - Para motion 2D artístico, pintura, frames, partículas: [playbook ilustración](../playbooks/illustration-particles.md).
 - Para una versión nueva de un paquete: [Visual Tech Scout V3](../SCOUT-V3.md) registra `release_tag` estable, evalúa mejoras y descarta ruido de commits. El Director elige si vale la pena un experimento; no exigir al usuario saber de librerías.
+
+## Gate adicional de licencias comerciales
+El Director **no autoriza** incorporar `patriciogonzalezvivo/lygia` en proyectos comerciales sin licencia/aprobación específica: el repositorio publica Prosperity Public License 3.0.0, con términos distintos a MIT/Apache. Consultar [auditoría de licencias](../../../references/visual-license-review.md) antes de seleccionar shaders, assets, Adobe legacy o herramientas con avisos de terceros. El pipeline debe buscar alternativas seguras sin pedir al cliente elegir librerías.
