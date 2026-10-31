@@ -15,6 +15,10 @@ El [checkpoint de continuidad](../../continuity/checkpoint.json) contiene lo ter
 5. **Playbook** correspondiente de [la biblioteca operativa](playbooks/README.md).
 6. [Workflow multi-IA](../../docs/workflows/visual-production-multi-ai.md) — gates y QA.
 
+## Vigilancia continua de las 56 referencias
+
+El [Visual Tech Scout](agents/visual-tech-scout.md) prepara y revisa señales de cambio desde el [watcher semanal](../../continuity/visual-watch/README.md). El reporte automatizado propone PRs para revisión; cada IA usa las mismas evidencias para decidir qué evaluar y mejorar. `npm run visual:preflight` revela herramientas visibles en la máquina actual, no conexiones remotas universales.
+
 ## Conexión por ejecutor
 
 | IA | Entrada natural | Qué queda disponible | Qué requiere configuración |
