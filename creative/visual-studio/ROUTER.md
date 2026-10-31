@@ -2,6 +2,8 @@
 
 Este documento es una instrucción portable para cualquier IA. No activa herramientas sin conexión real.
 
+**Router principal obligatorio:** ante toda intención audiovisual asignar primero al [Director de Experiencia Audiovisual](agents/audiovisual-experience-director.md). Él selecciona herramientas según el brief, disponibilidad real y score de negocio/calidad, después coordina a los roles de las rutas siguientes. No preguntar al cliente qué librería debe usar; si falta software, escoger un fallback permitido.
+
 ## Selección experta V2
 
 Antes de seleccionar tecnología: abrir [matriz profesional](PRODUCTION-MATRIX.md), el [catálogo expandido](../../references/visual-libraries-2026.json) y el [playbook de la tarea](playbooks/README.md). El [protocolo de portabilidad](AGENT-PORTABILITY.md) sincroniza la intención y los handoffs entre Claude Code, Gemini/Antigravity y ChatGPT/Codex sin fingir que Adobe/Blender están conectados.
