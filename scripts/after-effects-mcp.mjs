@@ -5,6 +5,8 @@
  * Render is disabled unless the owner explicitly opts in using env variable.
  */
 import {createInterface} from "node:readline";
+import {fileURLToPath} from "node:url";
+import {resolve} from "node:path";
 import {detectAerender, planLocalRender, executeLocalRender} from "./after-effects-bridge.mjs";
 
 const SERVER_NAME="altiora-after-effects-local";
@@ -107,6 +109,6 @@ async function main(){
     }
   }
 }
-if(import.meta.url===new URL("file://"+process.argv[1]).href) {
+if(process.argv[1] && fileURLToPath(import.meta.url)===resolve(process.argv[1])) {
   main().catch(e=>{process.stderr.write("Altiora MCP fatal: "+e.message+"\n");process.exitCode=1;});
 }
