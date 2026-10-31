@@ -19,6 +19,10 @@ El [checkpoint de continuidad](../../continuity/checkpoint.json) contiene lo ter
 
 El [Visual Tech Scout](agents/visual-tech-scout.md) prepara y revisa señales de cambio desde el [watcher semanal](../../continuity/visual-watch/README.md). El reporte automatizado propone PRs para revisión; cada IA usa las mismas evidencias para decidir qué evaluar y mejorar. `npm run visual:preflight` revela herramientas visibles en la máquina actual, no conexiones remotas universales.
 
+## Dirección por intención, sin instrucciones técnicas del cliente
+
+[Director de Experiencia Audiovisual](agents/audiovisual-experience-director.md) es la primera responsabilidad de cualquier IA conectada a Altiora ante pedidos visuales: decide *qué, cuándo y cómo* usar Blender, Adobe, Remotion, shaders, video o 3D y qué especialistas coordinan cada fase. El Visual Tech Scout investiga cambios, pero no adopta herramientas por su cuenta. Un documento de agente no implica ejecución continua ni permisos externos.
+
 ## Conexión por ejecutor
 
 | IA | Entrada natural | Qué queda disponible | Qué requiere configuración |
