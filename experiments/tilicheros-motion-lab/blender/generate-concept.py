@@ -68,6 +68,11 @@ def setup_scene():
     scene = bpy.context.scene
     scene.render.engine = "CYCLES"
     scene.cycles.samples = 32
+    # Debian/Ubuntu Blender builds may omit OpenImageDenoise; disable it for portable CPU renders.
+    # Production renders can enable supported denoisers explicitly after checking capabilities.
+    for view_layer in scene.view_layers:
+        if hasattr(view_layer, "cycles") and hasattr(view_layer.cycles, "use_denoising"):
+            view_layer.cycles.use_denoising = False
     scene.render.resolution_x = 1080
     scene.render.resolution_y = 1080
     scene.render.resolution_percentage = 100
