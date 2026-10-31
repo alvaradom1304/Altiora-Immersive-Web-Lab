@@ -2,6 +2,12 @@
 
 Fuente compartida para Claude Code, Codex, Gemini CLI, Antigravity y ChatGPT. Cargar únicamente la sección necesaria. No instala software, no conecta cuentas y no amplía permisos.
 
+## Control completo antes de integrar cambios
+
+Desde la raíz del checkout ejecutar `npm run check`, con Node.js 20+ y Python 3.11+ disponibles como `node` y `python`. Es el mismo control usado en CI Windows/Linux: catálogo/agentes/continuidad, puentes AE, diagnóstico y QA de producción, compactador/identidad, handler aislado, Bibliotecario, 17 casos de recuperación y medidor PCM. Las suites se detienen ante un error; no ejecutar otra vez cada comando por separado tras un PASS completo sin cambios nuevos.
+
+`npm run check:base` conserva el control anterior del catálogo y los puentes, pero es una comprobación parcial. Para cambios acotados siguen disponibles `operations:test`, `toolkit:test`, `runtime:test`, `librarian:test`, `routing:eval` y `audio:test`. Son pruebas con fixtures; no arrancan aplicaciones creativas, servidores MCP ni sesiones autenticadas, y no certifican selección nativa, escucha o derechos.
+
 ## Diagnóstico en la máquina ejecutora
 
 Desde la raíz del checkout, con Node.js 20+:

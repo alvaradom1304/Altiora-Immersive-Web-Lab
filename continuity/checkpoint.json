@@ -7,6 +7,15 @@
   "description": "Estado reproducible para reanudar entre sesiones e IAs. No significa ejecución persistente ni conexión automática con software.",
   "completed_milestones": [
     {
+      "id": "VIS-OPS-07",
+      "name": "Control completo idéntico en local y CI para todas las IAs",
+      "result": "DONE",
+      "evidence": [{
+        "url": "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/blob/fix/altiora-unified-quality-check-2026-10-31/docs/operations/SHARED-OPERATIONS.md",
+        "claim": "npm run check reúne las suites existentes de catálogo, puentes, operaciones, toolkit, handler, recuperación y audio; CI llama una sola vez al mismo comando. Check completo local aprobado; fixtures no certifican conexiones nativas."
+      }]
+    },
+    {
       "id": "VIS-OPS-06",
       "name": "Bibliotecario sin coincidencias falsas dentro de otras palabras",
       "result": "DONE",

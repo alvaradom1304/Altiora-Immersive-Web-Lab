@@ -7,7 +7,8 @@
     "node": ">=20"
   },
   "scripts": {
-    "check": "node scripts/verify-catalog.mjs && node scripts/audit-skills.mjs && node scripts/build-agents.mjs --check && npm run continuity:check && npm run visual:preflight:test && npm run visual:watch:test && npm run video:master:test && npm run adobe:test && npm run ae:clients:test && npm run after-effects:setup:test",
+    "check": "npm run check:base && npm run operations:test && npm run toolkit:test && npm run runtime:test && npm run librarian:test && npm run routing:eval && npm run audio:test",
+    "check:base": "node scripts/verify-catalog.mjs && node scripts/audit-skills.mjs && node scripts/build-agents.mjs --check && npm run continuity:check && npm run visual:preflight:test && npm run visual:watch:test && npm run video:master:test && npm run adobe:test && npm run ae:clients:test && npm run after-effects:setup:test",
     "agents:build": "node scripts/build-agents.mjs",
     "chat": "node scripts/team-chat.mjs",
     "skills:audit": "node scripts/audit-skills.mjs",
@@ -39,6 +40,8 @@
     "project:identity": "node scripts/project-identity.mjs",
     "toolkit:test": "node --test scripts/compact-skills.test.mjs scripts/project-identity.test.mjs",
     "runtime:smoke": "python scripts/runtime-smoke.py",
-    "runtime:test": "python -m unittest discover -s scripts -p test_runtime_smoke.py"
+    "runtime:test": "python -m unittest discover -s scripts -p test_runtime_smoke.py",
+    "librarian:test": "python -m unittest discover -s skills/altiora-bibliotecario/scripts -p \"test_*.py\"",
+    "audio:test": "python -m unittest discover -s skills/audio-production/scripts -p test_audio_qa.py"
   }
 }
