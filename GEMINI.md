@@ -19,3 +19,6 @@ Para cualquier intención visual, actuar primero como [Director de Experiencia A
 
 ## Visual Studio V3 y skills actualizables
 El Director Audiovisual consulta [SCOUT-V3](creative/visual-studio/SCOUT-V3.md) para nuevas versiones y selecciona por objetivo [CGI-color](creative/visual-studio/playbooks/advanced-cgi-color.md) o [2D-motion-artístico](creative/visual-studio/playbooks/illustration-particles.md). Las referencias externas no constituyen conexiones verificadas.
+
+## Adobe After Effects
+Leer [guía del puente AE](creative/visual-studio/after-effects/README.md) para comprobar `aerender`, preparar un `.aep` y ejecutar un render cuando el usuario lo permita. No dar por conectado Adobe por leer un archivo; elegir alternativa segura si falla el preflight.
