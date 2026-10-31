@@ -49,6 +49,8 @@ El hito comercial exige producto, material, afirmaciones y derechos auténticos.
 
 ## Uso por cliente
 
+Para comprobar que el handler instalado responde, utilizar la [prueba funcional aislada](RUNTIME-SMOKE.md) únicamente con un kit propio ya revisado. Separa PASS del script y NOT_VERIFIED de la sesión nativa: no ejecuta comandos de configuración, no autentica clientes ni otorga confianza. La [observación de ejecutores locales](NATIVE-RUNTIME-VALIDATION.md) registra capacidades consultadas en un perfil aislado; no extrapolarlo al perfil personal o al de otra IA.
+
 | Cliente | Entrada compartida | Evidencia local necesaria |
 |---|---|---|
 | Claude Code | `CLAUDE.md` → `AGENTS.md`; agentes generados en `.claude/agents` | Herramientas visibles en sesión; revisar `/mcp` |

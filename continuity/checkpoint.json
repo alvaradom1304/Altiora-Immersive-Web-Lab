@@ -7,6 +7,15 @@
   "description": "Estado reproducible para reanudar entre sesiones e IAs. No significa ejecución persistente ni conexión automática con software.",
   "completed_milestones": [
     {
+      "id": "VIS-OPS-05",
+      "name": "Verificación funcional aislada de handlers y consulta de ejecutor nativo",
+      "result": "DONE",
+      "evidence": [{
+        "url": "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/blob/feature/altiora-runtime-functional-verification-2026-10-31/docs/operations/NATIVE-RUNTIME-VALIDATION.md",
+        "claim": "Codex CLI respondió consultas en perfil aislado; kit propio pasó 18 casos de handler en fixtures temporales. No demuestra confianza, descubrimiento o sesión nativa de otros clientes ni conexión MCP."
+      }]
+    },
+    {
       "id": "VIS-OPS-04",
       "name": "Afilado de copias instaladas, rutas de capacidades e identidad de publicación",
       "result": "DONE",
@@ -249,6 +258,8 @@
     }
   ],
   "context_files": [
+    "docs/operations/NATIVE-RUNTIME-VALIDATION.md",
+    "docs/operations/RUNTIME-SMOKE.md",
     "docs/operations/TOOLKIT-VALIDATION.md",
     "docs/operations/BLENDER-LOCAL.md",
     "docs/operations/SHARED-OPERATIONS.md",

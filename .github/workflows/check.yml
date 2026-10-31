@@ -33,6 +33,8 @@ jobs:
         run: npm run operations:test
       - name: Verify conservative skill compaction and repository identity
         run: npm run toolkit:test
+      - name: Verify isolated runtime adapter diagnostic
+        run: npm run runtime:test
       - name: Verify portable librarian retrieval
         run: python -m unittest discover -s skills/altiora-bibliotecario/scripts -p "test_*.py"
       - name: Evaluate representative routing cases
