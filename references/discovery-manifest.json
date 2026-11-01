@@ -19,6 +19,18 @@
       ]
     },
     {
+      "name": "accidental-data-loss-prevention",
+      "source": "skills/accidental-data-loss-prevention/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "ad-creative",
+      "source": "skills/ad-creative/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
       "name": "advertising-concept",
       "source": "skills/advertising-concept/SKILL.md",
       "model_invocable": true,
@@ -167,6 +179,12 @@
       "assigned_agents": []
     },
     {
+      "name": "ai-seo",
+      "source": "skills/ai-seo/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
       "name": "ai-video-direction",
       "source": "skills/ai-video-direction/SKILL.md",
       "model_invocable": true,
@@ -175,6 +193,12 @@
         "visual-producer",
         "creative-ads-director"
       ]
+    },
+    {
+      "name": "algorithmic-art",
+      "source": "skills/algorithmic-art/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
     },
     {
       "name": "altiora-agent-orchestrator",
@@ -197,6 +221,78 @@
       "assigned_agents": []
     },
     {
+      "name": "altiora-case-study",
+      "source": "skills/altiora-case-study/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "altiora-commercial-director",
+      "source": "skills/altiora-commercial-director/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "altiora-creative-analyst",
+      "source": "skills/altiora-creative-analyst/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "altiora-os-automation-growth",
+      "source": "skills/altiora-os-automation-growth/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "altiora-os-coordinate",
+      "source": "skills/altiora-os-coordinate/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "altiora-os-creative",
+      "source": "skills/altiora-os-creative/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "altiora-os-media",
+      "source": "skills/altiora-os-media/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "altiora-os-qa",
+      "source": "skills/altiora-os-qa/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "altiora-os-research",
+      "source": "skills/altiora-os-research/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "altiora-os-strategy",
+      "source": "skills/altiora-os-strategy/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "altiora-os-web-3d",
+      "source": "skills/altiora-os-web-3d/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "altiora-project-director",
+      "source": "skills/altiora-project-director/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
       "name": "altiora-quality-review",
       "source": "skills/altiora-quality-review/SKILL.md",
       "model_invocable": true,
@@ -213,6 +309,18 @@
       "assigned_agents": [
         "altiora-research"
       ]
+    },
+    {
+      "name": "altiora-runtime-bridge",
+      "source": "skills/altiora-runtime-bridge/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "altiora-session-handoff",
+      "source": "skills/altiora-session-handoff/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
     },
     {
       "name": "analytics",
@@ -241,6 +349,12 @@
       "assigned_agents": [
         "creative-director"
       ]
+    },
+    {
+      "name": "attribution",
+      "source": "skills/attribution/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
     },
     {
       "name": "audio-production",
@@ -277,6 +391,66 @@
     {
       "name": "backend-security",
       "source": "skills/backend-security/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "bigquery-ai-ml",
+      "source": "skills/bigquery-ai-ml/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "bigquery-bigframes",
+      "source": "skills/bigquery-bigframes/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "bigquery-data-transfer-service",
+      "source": "skills/bigquery-data-transfer-service/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "bigquery-graph-author",
+      "source": "skills/bigquery-graph-author/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "bigquery-graph-query",
+      "source": "skills/bigquery-graph-query/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "bigquery-observability",
+      "source": "skills/bigquery-observability/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "bigquery-optimization",
+      "source": "skills/bigquery-optimization/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "bigquery-troubleshooting",
+      "source": "skills/bigquery-troubleshooting/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "bigtable-basics",
+      "source": "skills/bigtable-basics/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "brainstorming",
+      "source": "skills/brainstorming/SKILL.md",
       "model_invocable": false,
       "assigned_agents": []
     },
@@ -358,6 +532,12 @@
       "assigned_agents": []
     },
     {
+      "name": "building-data-apps",
+      "source": "skills/building-data-apps/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
       "name": "business-decision-gates",
       "source": "skills/business-decision-gates/SKILL.md",
       "model_invocable": true,
@@ -426,6 +606,12 @@
       "assigned_agents": []
     },
     {
+      "name": "canvas-design",
+      "source": "skills/canvas-design/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
       "name": "capacity-planning",
       "source": "skills/capacity-planning/SKILL.md",
       "model_invocable": false,
@@ -472,8 +658,20 @@
       ]
     },
     {
+      "name": "cloud-databases-onboarding",
+      "source": "skills/cloud-databases-onboarding/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
       "name": "cloud-security",
       "source": "skills/cloud-security/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "cold-email",
+      "source": "skills/cold-email/SKILL.md",
       "model_invocable": false,
       "assigned_agents": []
     },
@@ -507,6 +705,12 @@
       "name": "competitor-analysis",
       "source": "skills/competitor-analysis/SKILL.md",
       "model_invocable": true,
+      "assigned_agents": []
+    },
+    {
+      "name": "competitor-profiling",
+      "source": "skills/competitor-profiling/SKILL.md",
+      "model_invocable": false,
       "assigned_agents": []
     },
     {
@@ -554,12 +758,24 @@
       ]
     },
     {
+      "name": "conversion-tracking",
+      "source": "skills/conversion-tracking/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
       "name": "conversion-ux",
       "source": "skills/conversion-ux/SKILL.md",
       "model_invocable": false,
       "assigned_agents": [
         "ux-researcher"
       ]
+    },
+    {
+      "name": "copy-editing",
+      "source": "skills/copy-editing/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
     },
     {
       "name": "copywriting",
@@ -673,6 +889,30 @@
       "assigned_agents": []
     },
     {
+      "name": "dak-setup",
+      "source": "skills/dak-setup/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "data-autocleaning",
+      "source": "skills/data-autocleaning/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "dataform-bigquery",
+      "source": "skills/dataform-bigquery/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "dbt-bigquery",
+      "source": "skills/dbt-bigquery/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
       "name": "demand-planning",
       "source": "skills/demand-planning/SKILL.md",
       "model_invocable": false,
@@ -691,6 +931,18 @@
       "assigned_agents": [
         "ui-designer"
       ]
+    },
+    {
+      "name": "discovering-gcp-data-assets",
+      "source": "skills/discovering-gcp-data-assets/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "dispatching-parallel-agents",
+      "source": "skills/dispatching-parallel-agents/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
     },
     {
       "name": "elite-web-experience-os",
@@ -729,6 +981,12 @@
       "assigned_agents": []
     },
     {
+      "name": "enforcing-resource-attribution",
+      "source": "skills/enforcing-resource-attribution/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
       "name": "enterprise-growth-orchestrator",
       "source": "skills/enterprise-growth-orchestrator/SKILL.md",
       "model_invocable": false,
@@ -749,6 +1007,12 @@
       ]
     },
     {
+      "name": "executing-plans",
+      "source": "skills/executing-plans/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
       "name": "facebook-growth",
       "source": "skills/facebook-growth/SKILL.md",
       "model_invocable": false,
@@ -757,6 +1021,12 @@
     {
       "name": "fanatical-prospecting",
       "source": "skills/fanatical-prospecting/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "federate-lakehouse-catalog",
+      "source": "skills/federate-lakehouse-catalog/SKILL.md",
       "model_invocable": false,
       "assigned_agents": []
     },
@@ -773,6 +1043,12 @@
       "assigned_agents": [
         "business-strategist"
       ]
+    },
+    {
+      "name": "finishing-a-development-branch",
+      "source": "skills/finishing-a-development-branch/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
     },
     {
       "name": "free-tools",
@@ -809,6 +1085,84 @@
       "assigned_agents": []
     },
     {
+      "name": "gcp-composer-troubleshooting",
+      "source": "skills/gcp-composer-troubleshooting/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "gcp-data-pipelines",
+      "source": "skills/gcp-data-pipelines/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "gcp-dataflow",
+      "source": "skills/gcp-dataflow/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "gcp-managed-airflow-dag-authoring",
+      "source": "skills/gcp-managed-airflow-dag-authoring/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "gcp-managed-airflow-migrations",
+      "source": "skills/gcp-managed-airflow-migrations/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "gcp-managed-airflow-recommendations",
+      "source": "skills/gcp-managed-airflow-recommendations/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "gcp-managed-spark-upgrades",
+      "source": "skills/gcp-managed-spark-upgrades/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "gcp-pipeline-orchestration",
+      "source": "skills/gcp-pipeline-orchestration/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "gcp-pipeline-resource-provisioning",
+      "source": "skills/gcp-pipeline-resource-provisioning/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "gcp-spark",
+      "source": "skills/gcp-spark/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "gcp-spark-observability",
+      "source": "skills/gcp-spark-observability/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "gcp-spark-troubleshooting",
+      "source": "skills/gcp-spark-troubleshooting/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "gcs-security-assessment",
+      "source": "skills/gcs-security-assessment/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
       "name": "geographic-expansion",
       "source": "skills/geographic-expansion/SKILL.md",
       "model_invocable": false,
@@ -817,6 +1171,24 @@
     {
       "name": "go-to-market",
       "source": "skills/go-to-market/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "google-cloud-storage-basics",
+      "source": "skills/google-cloud-storage-basics/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "google-cloud-storage-bucket-architect",
+      "source": "skills/google-cloud-storage-bucket-architect/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "google-cloud-storage-fuse",
+      "source": "skills/google-cloud-storage-fuse/SKILL.md",
       "model_invocable": false,
       "assigned_agents": []
     },
@@ -869,6 +1241,12 @@
       "assigned_agents": [
         "experience-director"
       ]
+    },
+    {
+      "name": "image",
+      "source": "skills/image/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
     },
     {
       "name": "immersive-commerce",
@@ -949,6 +1327,12 @@
       "assigned_agents": []
     },
     {
+      "name": "launch",
+      "source": "skills/launch/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
       "name": "launch-readiness",
       "source": "skills/launch-readiness/SKILL.md",
       "model_invocable": false,
@@ -1001,6 +1385,12 @@
       "assigned_agents": [
         "growth-analyst"
       ]
+    },
+    {
+      "name": "managing-python-dependencies",
+      "source": "skills/managing-python-dependencies/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
     },
     {
       "name": "margin-analysis",
@@ -1071,6 +1461,12 @@
       "assigned_agents": []
     },
     {
+      "name": "mcp-builder",
+      "source": "skills/mcp-builder/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
       "name": "mcp-integration",
       "source": "skills/mcp-integration/SKILL.md",
       "model_invocable": false,
@@ -1085,6 +1481,18 @@
     {
       "name": "meta-ads-creator",
       "source": "skills/meta-ads-creator/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "meta-ads-growth",
+      "source": "skills/meta-ads-growth/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "ml-best-practices",
+      "source": "skills/ml-best-practices/SKILL.md",
       "model_invocable": false,
       "assigned_agents": []
     },
@@ -1130,6 +1538,12 @@
       ]
     },
     {
+      "name": "notebook-guidance",
+      "source": "skills/notebook-guidance/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
       "name": "offers",
       "source": "skills/offers/SKILL.md",
       "model_invocable": false,
@@ -1164,6 +1578,18 @@
     {
       "name": "opportunity-discovery",
       "source": "skills/opportunity-discovery/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "orca-cli",
+      "source": "skills/orca-cli/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "orca-orchestration",
+      "source": "skills/orca-orchestration/SKILL.md",
       "model_invocable": false,
       "assigned_agents": []
     },
@@ -1350,12 +1776,30 @@
       ]
     },
     {
+      "name": "receiving-code-review",
+      "source": "skills/receiving-code-review/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
       "name": "referrals",
       "source": "skills/referrals/SKILL.md",
       "model_invocable": false,
       "assigned_agents": [
         "growth-analyst"
       ]
+    },
+    {
+      "name": "requesting-code-review",
+      "source": "skills/requesting-code-review/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "resolving-mcp-region-configs",
+      "source": "skills/resolving-mcp-region-configs/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
     },
     {
       "name": "responsive-design",
@@ -1404,6 +1848,12 @@
       "assigned_agents": []
     },
     {
+      "name": "sales-enablement",
+      "source": "skills/sales-enablement/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
       "name": "sales-follow-up",
       "source": "skills/sales-follow-up/SKILL.md",
       "model_invocable": false,
@@ -1440,6 +1890,12 @@
       "assigned_agents": [
         "content-designer"
       ]
+    },
+    {
+      "name": "schema-mapping",
+      "source": "skills/schema-mapping/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
     },
     {
       "name": "scriptwriting",
@@ -1498,6 +1954,12 @@
       "assigned_agents": []
     },
     {
+      "name": "site-architecture",
+      "source": "skills/site-architecture/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
       "name": "skill-creator",
       "source": "skills/skill-creator/SKILL.md",
       "model_invocable": false,
@@ -1506,6 +1968,12 @@
     {
       "name": "smart-model-router",
       "source": "skills/smart-model-router/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "social",
+      "source": "skills/social/SKILL.md",
       "model_invocable": false,
       "assigned_agents": []
     },
@@ -1544,6 +2012,12 @@
       "assigned_agents": []
     },
     {
+      "name": "subagent-driven-development",
+      "source": "skills/subagent-driven-development/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
       "name": "supplier-evaluation",
       "source": "skills/supplier-evaluation/SKILL.md",
       "model_invocable": false,
@@ -1572,6 +2046,12 @@
     {
       "name": "technical-seo",
       "source": "skills/technical-seo/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "test-driven-development",
+      "source": "skills/test-driven-development/SKILL.md",
       "model_invocable": false,
       "assigned_agents": []
     },
@@ -1699,6 +2179,12 @@
       ]
     },
     {
+      "name": "vercel-react-view-transitions",
+      "source": "skills/vercel-react-view-transitions/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
       "name": "verification-before-completion",
       "source": "skills/verification-before-completion/SKILL.md",
       "model_invocable": true,
@@ -1707,6 +2193,12 @@
         "audiovisual-experience-director",
         "qa-reviewer"
       ]
+    },
+    {
+      "name": "video",
+      "source": "skills/video/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
     },
     {
       "name": "visual-identity",
@@ -1786,6 +2278,12 @@
       "assigned_agents": [
         "experience-director"
       ]
+    },
+    {
+      "name": "writing-skills",
+      "source": "skills/writing-skills/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
     },
     {
       "name": "youtube-strategy",
@@ -1947,6 +2445,6 @@
     "equipo",
     "repos"
   ],
-  "listing_budget_characters": 140855,
+  "listing_budget_characters": 200435,
   "runtime_discovery": "NOT_RUN"
 }

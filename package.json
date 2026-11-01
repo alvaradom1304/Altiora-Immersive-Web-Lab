@@ -2,12 +2,12 @@
   "name": "altiora-immersive-web-lab",
   "version": "0.1.0",
   "private": true,
-  "description": "Investigación y proceso reproducible para experiencias web inmersivas",
+  "description": "Altiora: investigación web inmersiva, equipo de agentes y sistema operativo de consultoría (estrategia, marca, web inmersiva e IA)",
   "engines": {
     "node": ">=20"
   },
   "scripts": {
-    "check": "npm run check:base && npm run operations:test && npm run toolkit:test && npm run runtime:test && npm run librarian:test && npm run routing:eval && npm run audio:test",
+    "check": "npm run check:base && npm run operations:test && npm run toolkit:test && npm run runtime:test && npm run librarian:test && npm run routing:eval && npm run audio:test && npm run check:enterprise",
     "agents:build": "node scripts/build-agents.mjs && node scripts/build-antigravity.mjs",
     "chat": "node scripts/team-chat.mjs",
     "skills:audit": "node scripts/audit-skills.mjs",
@@ -44,6 +44,11 @@
     "runtime:smoke": "python scripts/runtime-smoke.py",
     "runtime:test": "python -m unittest discover -s scripts -p test_runtime_smoke.py",
     "librarian:test": "python -m unittest discover -s skills/altiora-bibliotecario/scripts -p \"test_*.py\"",
-    "audio:test": "python -m unittest discover -s skills/audio-production/scripts -p test_audio_qa.py"
+    "audio:test": "python -m unittest discover -s skills/audio-production/scripts -p test_audio_qa.py",
+    "check:doctor": "python .altiora/system/scripts/manage.py doctor --target .",
+    "check:handoff": "python .altiora/system/scripts/manage.py handoff-check --target .",
+    "check:runtimes": "python .altiora/system/skills/altiora-runtime-bridge/scripts/check_runtimes.py --project .",
+    "check:enterprise": "npm run check:doctor && npm run check:handoff",
+    "orca:dispatch": "python scripts/orca-dispatch.py"
   }
 }
