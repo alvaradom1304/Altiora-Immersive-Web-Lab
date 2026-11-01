@@ -307,7 +307,7 @@ def finalize_streams(message: str, streams: list[dict[str, Any]]) -> list[dict[s
         stream["effort"] = effort
         codex_level = "xhigh" if effort == "max" else effort
         stream["effort_hint"] = EFFORT_HINTS[stream["preferred_ai"]].format(
-            level=effort, level_codex=codex_level
+            level=effort, level_codex=codex_level, model_hint=model_hint(stream["preferred_ai"], effort)
         )
         objective_line = f"Objetivo de este flujo: {stream['objective']}\n" if stream.get("objective") else ""
         if stream.get("depends_on"):
@@ -327,7 +327,7 @@ def finalize_streams(message: str, streams: list[dict[str, Any]]) -> list[dict[s
 
 
 # --- Enrutador por modelo de alto rendimiento -------------------------------------------
-# Un modelo fuerte (Claude Opus por defecto, vía `claude -p` sin herramientas) estudia el
+# Un modelo (Claude Sonnet por defecto, vía `claude -p` sin herramientas) estudia el
 # encargo y decide flujos, IA, esfuerzo y skills. La salida se valida contra las reglas
 # locales; si falla, se usa la heurística por palabras clave.
 
@@ -401,6 +401,8 @@ Esfuerzo de razonamiento (elige por flujo, no por mensaje):
 - max: solo si el usuario pide profundidad explícita o el riesgo es crítico.
 
 Reglas:
+- Elige el esfuerzo MÁS BAJO que cumpla el criterio de aceptación; sube solo con un motivo concreto del encargo.
+- No asignes a antigravity tareas fuera de 3D/WebGL/shaders/GSAP/auditoría visual: razona caro. Úsalo fuera de ese dominio solo si codex y claude están sin créditos.
 - Usa el mínimo número de flujos: uno si el encargo es de un solo dominio. Divide solo cuando haya trabajo realmente independiente.
 - Cada flujo necesita un objetivo concreto y verificable, en español.
 - 'depends_on' lista los números (empezando en 1, según el orden de 'streams') de los flujos cuyo resultado necesita este flujo antes de empezar; vacío si es independiente. Ordena los flujos para que las dependencias vayan antes.
@@ -505,8 +507,8 @@ HIGH_STAKES_RE = re.compile(
 # Trabajo de diseño, arquitectura o auditoría que pide razonamiento profundo.
 DEEP_RE = re.compile(
     r"arquitect|auditor|diagnost|estrategia|rediseñ|refactor|integra|investiga|"
-    r"compar|planific|oferta|webgl|3d|shader|scroll"
-)
+    r"compar|planific|oferta|diseñ"
+)  # El tema (3D, WebGL, shaders) no sube el nivel por sí solo; lo sube lo que se pide.
 # Peticiones explícitas de profundidad máxima.
 MAX_RE = re.compile(r"exhaustiv|a fondo|máxim|maxim|profund[oa]|sin atajos")
 # Tareas mecánicas: resumir, renombrar, formatear, comprobar.
@@ -529,8 +531,6 @@ def choose_effort(message: str, domain: str) -> str:
         level = max(level, 3)  # xhigh
     if MAX_RE.search(text):
         level = 4  # max
-    if domain == "immersive-3d-qa" and level < 2:
-        level = 2  # escenas 3D requieren razonamiento visual y de rendimiento
     return EFFORT_LEVELS[level]
 
 
@@ -539,16 +539,38 @@ def choose_effort(message: str, domain: str) -> str:
 # - codex: `-c model_reasoning_effort=<level>` (clave aceptada por el CLI; codex no tiene 'max').
 # - antigravity: sin flag de esfuerzo verificado; el nivel va solo como instrucción en el prompt.
 EFFORT_HINTS = {
-    "claude": "Aplícalo con `claude --effort {level}` si lanzas la sesión a mano.",
+    "claude": "Aplícalo con `claude --effort {level}` si lanzas la sesión a mano. {model_hint}",
     "codex": "Aplícalo con `codex -c model_reasoning_effort={level_codex}`.",
-    "antigravity": "Sin flag de esfuerzo verificado: ajusta la profundidad del análisis a este nivel.",
+    "antigravity": "Sin flag de esfuerzo verificado: ajusta la profundidad del análisis a este nivel. {model_hint}",
 }
 
-# Cadena de respaldo cuando una IA se queda sin créditos o cuota. Antigravity va primero
-# como respaldo de codex y claude porque su cuota es independiente de las otras dos.
+# Modelo sugerido según el esfuerzo. Solo alias verificados en Claude Code (haiku, sonnet, opus);
+# para Antigravity es una instrucción, porque no hay flag verificado.
+MODEL_HINTS = {
+    "claude": {
+        "low": "Basta `--model haiku`.",
+        "medium": "Basta `--model sonnet`.",
+        "default": "Usa `--model opus` solo en este nivel o superior.",
+    },
+    "antigravity": {
+        "low": "Usa el modelo Gemini más ligero disponible (Flash), sin razonamiento extendido.",
+        "medium": "Usa el modelo Gemini más ligero disponible (Flash); reserva Pro para high o más.",
+        "default": "Gemini Pro se justifica en este nivel.",
+    },
+}
+
+
+def model_hint(ai: str, effort: str) -> str:
+    hints = MODEL_HINTS.get(ai)
+    if not hints:
+        return ""
+    return hints.get(effort, hints["default"])
+
+# Cadena de respaldo cuando una IA se queda sin créditos o cuota. Antigravity (Gemini) va al
+# final para codex y claude: razona caro y sus fortalezas son 3D/visual, no el resto de dominios.
 FALLBACK_CHAIN = {
-    "codex": ["antigravity", "claude"],
-    "claude": ["antigravity", "codex"],
+    "codex": ["claude", "antigravity"],
+    "claude": ["codex", "antigravity"],
     "antigravity": ["claude", "codex"],
 }
 
@@ -835,14 +857,14 @@ def main() -> int:
     )
     parser.add_argument(
         "--router-model",
-        default="opus",
-        help="Modelo del enrutador para `claude -p` (alias o id completo). Por defecto: opus.",
+        default="sonnet",
+        help="Modelo del enrutador para `claude -p` (alias o id completo). Por defecto: sonnet.",
     )
     parser.add_argument(
         "--router-effort",
-        default="high",
+        default="medium",
         choices=["low", "medium", "high", "xhigh", "max"],
-        help="Esfuerzo de razonamiento del propio enrutador. Por defecto: high.",
+        help="Esfuerzo de razonamiento del propio enrutador. Por defecto: medium.",
     )
     parser.add_argument(
         "--watch-seconds",
