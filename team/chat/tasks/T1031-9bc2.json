@@ -1,0 +1,37 @@
+{
+  "id": "T1031-9bc2",
+  "title": "Unificar control local y CI de herramientas",
+  "role": "web-engineer",
+  "ai": "codex",
+  "reviewer": "experience-director",
+  "depends": [],
+  "files": [
+    "package.json",
+    ".github/workflows/check.yml",
+    "docs/operations/SHARED-OPERATIONS.md",
+    "continuity/checkpoint.json"
+  ],
+  "acceptance": "npm run check cubre todas las suites actuales sin duplicar su ejecución en CI",
+  "status": "hecha",
+  "owner": "codex/web-engineer",
+  "created": "2026-10-31T18:49:49Z",
+  "created_by": "codex/web-engineer",
+  "history": [
+    {
+      "at": "2026-10-31T18:49:49Z",
+      "by": "codex/web-engineer",
+      "status": "pendiente"
+    },
+    {
+      "at": "2026-10-31T18:50:05Z",
+      "by": "codex/web-engineer",
+      "status": "en_curso"
+    },
+    {
+      "at": "2026-10-31T18:52:32Z",
+      "by": "codex/web-engineer",
+      "status": "hecha",
+      "note": "Control unificado completo local PASS; conserva suites y orden de CI anterior; revisión secuencial sin subagentes. CI Windows/Linux se comprobará antes de fusionar."
+    }
+  ]
+}

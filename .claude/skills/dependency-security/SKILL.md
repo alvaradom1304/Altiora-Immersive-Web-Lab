@@ -1,6 +1,7 @@
 ---
 name: dependency-security
 description: "dependency-security: Cybersecurity. Usar para producir dependency_findings, upgrade_plan, retest a partir de manifest/lockfile, advisories, versiones, alcance; no sustituir otras fases ni declarar resultados sin evidencia."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

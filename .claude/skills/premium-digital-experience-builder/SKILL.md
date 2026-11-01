@@ -1,6 +1,7 @@
 ---
 name: premium-digital-experience-builder
 description: "premium-digital-experience-builder: Orchestration. Usar para producir experience_plan, verified_increment, qa a partir de estrategia, UX, marca, repo/acceso, objetivos, recursos; no sustituir otras fases ni declarar resultados sin evidencia."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

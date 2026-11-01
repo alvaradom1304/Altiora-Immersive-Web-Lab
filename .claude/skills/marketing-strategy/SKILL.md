@@ -1,6 +1,7 @@
 ---
 name: marketing-strategy
 description: "marketing-strategy: Marketing Intelligence. Usar para producir demand_strategy, channel_choices, measurement a partir de objetivos, segmentos, oferta, recursos, funnel; no sustituir otras fases ni declarar resultados sin evidencia."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

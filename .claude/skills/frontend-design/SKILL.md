@@ -1,6 +1,7 @@
 ---
 name: frontend-design
 description: "Guidance for distinctive, intentional visual design and interactive UI craftsmanship when building new web experiences or reshaping existing ones. Helps with aesthetic direction, bespoke typography, choreographed motion, and avoiding generic AI-generated templates."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

@@ -1,6 +1,7 @@
 ---
 name: customer-journey
 description: "customer-journey: Marketing Intelligence. Usar para producir journey_map, friction, opportunities a partir de segmento, tareas, puntos de contacto, evidencias; no sustituir otras fases ni declarar resultados sin evidencia."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

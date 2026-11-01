@@ -1,6 +1,7 @@
 ---
 name: product-photography-direction
 description: "product-photography-direction: Creative Intelligence. Usar para producir product_shots, lighting, fidelity_checks a partir de producto, atributos reales, marca, formatos; no sustituir otras fases ni declarar resultados sin evidencia."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

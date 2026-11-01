@@ -1,6 +1,7 @@
 ---
 name: lead-qualification
 description: "lead-qualification: Sales Intelligence. Usar para producir qualification, disqualifiers, next_action a partir de ICP, señal de necesidad, capacidad, autoridad, momento; no sustituir otras fases ni declarar resultados sin evidencia."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

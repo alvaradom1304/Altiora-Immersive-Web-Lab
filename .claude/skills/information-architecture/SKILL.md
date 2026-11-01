@@ -1,6 +1,7 @@
 ---
 name: information-architecture
 description: "information-architecture: Premium Web Experience. Usar para producir sitemap, taxonomy, navigation_rules a partir de contenido, tareas, audiencias, navegación; no sustituir otras fases ni declarar resultados sin evidencia."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

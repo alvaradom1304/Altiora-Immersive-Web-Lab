@@ -1,6 +1,7 @@
 ---
 name: spin-selling
 description: "Estructura conversaciones de venta consultiva compleja con el método SPIN de Neil Rackham (Situación, Problema, Implicación, Necesidad-beneficio). Usar cuando se prepare una reunión de descubrimiento, un guion de llamada B2B o se analice por qué una oportunidad de ticket alto no avanza. No usar para ventas transaccionales de bajo ticket ni para redactar anuncios."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

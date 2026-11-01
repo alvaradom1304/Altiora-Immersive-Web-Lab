@@ -1,6 +1,7 @@
 ---
 name: market-segmentation
 description: "market-segmentation: Marketing Intelligence. Usar para producir segments, criteria, validation a partir de mercado, necesidades, comportamiento, datos, alcance; no sustituir otras fases ni declarar resultados sin evidencia."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

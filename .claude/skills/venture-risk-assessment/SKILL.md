@@ -1,6 +1,7 @@
 ---
 name: venture-risk-assessment
 description: "venture-risk-assessment: Venture Building. Usar para producir venture_risks, validation_order, stop_conditions a partir de hipótesis del negocio, recursos, exposición, límites; no sustituir otras fases ni declarar resultados sin evidencia."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

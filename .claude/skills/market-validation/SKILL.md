@@ -1,6 +1,7 @@
 ---
 name: market-validation
 description: "market-validation: Venture Building. Usar para producir validation_experiment, demand_signals, verdict a partir de oferta, segmento, canal, prueba, criterio; no sustituir otras fases ni declarar resultados sin evidencia."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

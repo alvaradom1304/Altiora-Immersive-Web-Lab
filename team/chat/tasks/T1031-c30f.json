@@ -1,0 +1,38 @@
+{
+  "id": "T1031-c30f",
+  "title": "Comprobar vigencia real de catálogos del Bibliotecario",
+  "role": "web-engineer",
+  "ai": "codex",
+  "reviewer": "experience-director",
+  "depends": [],
+  "files": [
+    "skills/altiora-bibliotecario/scripts/library.py",
+    "skills/altiora-bibliotecario/scripts/test_library.py",
+    "skills/altiora-bibliotecario/references/portability.md",
+    "docs/operations/SHARED-OPERATIONS.md",
+    "continuity/checkpoint.json"
+  ],
+  "acceptance": "Detectar metadatos modificados, altas y bajas; catálogos antiguos sin falsa vigencia; pruebas y copias instaladas verificadas",
+  "status": "hecha",
+  "owner": "codex/web-engineer",
+  "created": "2026-10-31T18:58:20Z",
+  "created_by": "codex/web-engineer",
+  "history": [
+    {
+      "at": "2026-10-31T18:58:20Z",
+      "by": "codex/web-engineer",
+      "status": "pendiente"
+    },
+    {
+      "at": "2026-10-31T18:58:42Z",
+      "by": "codex/web-engineer",
+      "status": "en_curso"
+    },
+    {
+      "at": "2026-10-31T19:04:33Z",
+      "by": "codex/web-engineer",
+      "status": "hecha",
+      "note": "PASS local:144 pruebas +17/17 casos;27 pruebas Bibliotecario. Cinco helpers instalados: vigente/edición/alta/baja/legacy/solo lectura verificados. Índice empresarial reconstruido con raíces explícitas y respaldo179→194 definiciones; no runtime nativo. Revisión secuencial. CI se verificará antes de merge."
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 ---
 name: aem-stage-04-brand
 description: "Ejecuta la Fase 04 de AEM. Arquitectura de marca premium, arquetipos, tono de voz y dirección de arte."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

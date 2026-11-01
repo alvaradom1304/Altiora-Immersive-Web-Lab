@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-10-31",
+  "catalog": "../skills/audio-production/references/repositories.json",
+  "scope": "Single canonical audio catalog bundled with the portable skill; references are not installed tools"
+}

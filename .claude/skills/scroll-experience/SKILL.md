@@ -1,6 +1,7 @@
 ---
 name: scroll-experience
 description: "scroll-experience: Premium Web Experience. Usar para producir scroll_behavior, skip_paths, checks a partir de narrativa, navegación, dispositivos, stack; no sustituir otras fases ni declarar resultados sin evidencia."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

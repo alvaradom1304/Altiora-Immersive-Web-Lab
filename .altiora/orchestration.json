@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "coordinator": "Codex",
+  "scope": "Current Altiora engagement, subordinate to user/project/host authority",
+  "transport": "Current native tools; not an Orca runtime",
+  "objective": "Validate profitable10000USD projects + optional monthly maintenance; preserve previous technical/commercial tasks",
+  "updated_at": "2026-11-01T07:47:47Z",
+  "policy": {
+    "direct_for_small_changes": true,
+    "load_skills_on_demand": true,
+    "one_writer_per_file": true,
+    "verify_before_acceptance": true,
+    "source_presence_is_connection": false,
+    "automatic_background_or_periodic_work": false,
+    "verify_current_inventory_before_dispatch": true
+  },
+  "orca": {
+    "reference": "stablyai/orca",
+    "revision": "1c6ac8c3c4d2c3dec2cb5966d225ca2a0e0471d3",
+    "runtime": "VERIFIED_READY",
+    "orca_run_id": "run_b9a2a9d932fd",
+    "orca_dispatch_id": null,
+    "last_auto_routing": {
+      "timestamp": "2026-11-01T07:47:47Z",
+      "message": "Revisa la coherencia de la oferta de US$10k con unit economics y el margen del piloto",
+      "streams": [
+        {
+          "stream_index": 1,
+          "preferred_ai": "antigravity",
+          "orca_worker_agent": "antigravity",
+          "worktree_strategy": "current",
+          "title": "[ANTIGRAVITY] Estrategia, Finanzas, Outbound B2B y Backend/Automatización",
+          "skills": [
+            "pricing",
+            "unit-economics",
+            "high-ticket-offer",
+            "cold-outbound-system"
+          ],
+          "orca_task_error": {
+            "id": "e0b26543-ed7a-4d82-9d18-cf69ed9df95c",
+            "ok": false,
+            "error": {
+              "code": "consumer_fenced",
+              "message": "This terminal is attested as term_ce98e2cc-01f8-413c-91b0-94cd60989bf3 and cannot act as term_d096e700-4903-461b-b6fe-6338ea7a7529. Orchestration mutation request ID: 66e2e8a3-2e2a-4f01-a5e5-d174567797fe.",
+              "data": {
+                "effectsApplied": false,
+                "orchestrationRequestId": "66e2e8a3-2e2a-4f01-a5e5-d174567797fe",
+                "originalCommand": [
+                  "orca",
+                  "orchestration",
+                  "task-create",
+                  "--task-title",
+                  "[ANTIGRAVITY] Estrategia, Finanzas, Outbound B2B y Backend/Automatización",
+                  "--spec",
+                  "Encargo del usuario: Revisa la coherencia de la oferta de US$10k con unit economics y el margen del piloto\nRol asignado: antigravity (Estrategia, Finanzas, Outbound B2B y Backend/Automatización).\nEsfuerzo de razonamiento sugerido: xhigh. Sin flag de esfuerzo verificado: ajusta la profundidad del análisis a este nivel.\nSkills a consultar bajo demanda: pricing, unit-economics, high-ticket-offer, cold-outbound-system.\nÁmbito de archivos propios (un escritor por archivo): docs/altiora-business/, scripts/, .altiora/, app/api/.\nVerificación requerida antes de cerrar: npm run check.",
+                  "--run",
+                  "run_c4e4ac292801",
+                  "--from",
+                  "term_d096e700-4903-461b-b6fe-6338ea7a7529",
+                  "--json"
+                ]
+              }
+            },
+            "_meta": {
+              "runtimeId": "0b5a5ad8-77c8-4523-85f6-7bad9e91a103"
+            },
+            "exit_code": 1
+          },
+          "worker_terminal_handle": "term_646e44c0-64bd-485b-97b6-d4f157f8833b",
+          "failover": {
+            "from": "antigravity",
+            "signal": "sin créditos"
+          },
+          "failover_terminal_handle": "term_f6e79e76-654f-44dc-86f2-553e69c89e2c",
+          "failover_agent": "claude"
+        }
+      ]
+    },
+    "coordinator_handle": "term_aa247503-a1d2-437d-a017-0b084e8ab353"
+  },
+  "tasks": [
+    {
+      "id": "ALTIORA-ORCA-SOURCE-20261031",
+      "owner": "Codex",
+      "status": "completed",
+      "evidence": "docs/altiora-toolkit/orca-reference.json"
+    },
+    {
+      "id": "ALTIORA-ORCA-REVIEW-20261031",
+      "owner": "native subagent /root/orca_reference_review",
+      "status": "completed",
+      "scope": "Static reference review only; third-party code not executed"
+    },
+    {
+      "id": "ALTIORA-CLAUDE-PROMPT-DELIVERY",
+      "owner": "Codex",
+      "status": "not_sent",
+      "reason": "User stopped Computer Use with physical Escape; not resumed by this task",
+      "result_received": false
+    },
+    {
+      "id": "ALTIORA-ORCA-RUNTIME-PILOT",
+      "owner": "Antigravity",
+      "status": "completed",
+      "prerequisites": [
+        "Review executable installation and effects",
+        "Authorization applicable to installation/access/hooks/services",
+        "Isolated synthetic project and bounded acceptance test"
+      ],
+      "evidence": "Run run_c4e4ac292801 & Task task_44cbe4436491 completed in Orca v1.4.245; CALCULADORA.html audited in Orca Browser (browserPageId a80809c0-2816-49fe-a7a0-8b239433f0a4, 23 refs e1..e23, 0 console errors)."
+    }
+  ],
+  "acceptance_note": "This JSON is a local coordination record, not an executable queue or verified Orca API schema.",
+  "claude_kit_health": {
+    "status": "NEEDS_REVIEW",
+    "cause": "NOT_DETERMINED",
+    "last_doctor": "FAILED:8 entries differ or missing",
+    "do_not_assume_native_agents_available": true
+  },
+  "ai_status": {
+    "codex": {
+      "exhausted_until": "2026-11-05T00:00:00Z",
+      "reason": "límite de uso de Codex observado en su terminal el 01/11/2026 (reinicio indicado: 5 de noviembre)",
+      "detected_at": "2026-11-01T00:00:00Z"
+    }
+  }
+}

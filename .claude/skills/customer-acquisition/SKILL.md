@@ -1,6 +1,7 @@
 ---
 name: customer-acquisition
 description: "customer-acquisition: Growth & Scaling. Usar para producir acquisition_tests, cac, learning a partir de ICP, propuesta, canales, cohortes, costos; no sustituir otras fases ni declarar resultados sin evidencia."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

@@ -1,6 +1,7 @@
 ---
 name: aem-stage-06-automation
 description: "Ejecuta la Fase 06 de AEM. Auditoría de procesos repetitivos, diseño de workflows en n8n e integración de Agentes de IA."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

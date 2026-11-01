@@ -1,6 +1,7 @@
 ---
 name: conversion-analysis
 description: "conversion-analysis: Marketing Intelligence. Usar para producir funnel_rates, leakage, data_quality a partir de eventos, denominadores, periodos, segmentos; no sustituir otras fases ni declarar resultados sin evidencia."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

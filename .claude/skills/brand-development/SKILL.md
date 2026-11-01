@@ -1,6 +1,7 @@
 ---
 name: brand-development
 description: "brand-development: Orchestration. Usar para producir brand_program, specialist_outputs, review a partir de diagnóstico, posicionamiento, audiencias, activos; no sustituir otras fases ni declarar resultados sin evidencia."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

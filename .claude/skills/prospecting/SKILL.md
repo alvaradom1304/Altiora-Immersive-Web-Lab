@@ -1,6 +1,7 @@
 ---
 name: prospecting
 description: "prospecting: Sales Intelligence. Usar para producir prospecting_plan, contact_criteria, drafts a partir de ICP, oferta, canales permitidos, datos legítimos; no sustituir otras fases ni declarar resultados sin evidencia."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

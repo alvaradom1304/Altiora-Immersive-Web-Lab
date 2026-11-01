@@ -1,6 +1,7 @@
 ---
 name: b2b-expansion
 description: "b2b-expansion: Growth & Scaling. Usar para producir b2b_pilot, qualification, economics a partir de oferta, cuentas objetivo, capacidad, términos; no sustituir otras fases ni declarar resultados sin evidencia."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

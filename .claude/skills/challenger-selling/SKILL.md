@@ -1,6 +1,7 @@
 ---
 name: challenger-selling
 description: "challenger-selling: Sales Intelligence. Usar para producir teaching_insight, tailored_message, next_step a partir de problema B2B, insight sustentado, stakeholders, oferta; no sustituir otras fases ni declarar resultados sin evidencia."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

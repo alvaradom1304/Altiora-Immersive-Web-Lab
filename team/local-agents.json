@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "note": "Seven distinct local roles adapted; existing team/agents.json remains unchanged. Source snapshots in local-sources.",
+  "note": "Four distinct local roles adapted (altiora-*). The three immersive-* roles were merged into creative-director, web-engineer and qa-reviewer on 2026-10-31; their source snapshots remain in local-sources as evidence.",
   "agents": [
     {
       "id": "altiora-engineering",
@@ -33,34 +33,6 @@
         "altiora-quality-review"
       ],
       "source": "team/local-sources/codex/altiora-review.toml"
-    },
-    {
-      "id": "immersive-director",
-      "when": "Coordina dirección de arte e investigación de webs experimentales y delega implementación/revisión cuando la tarea lo merece.",
-      "milestones": [],
-      "skills": [
-        "immersive-interaction-lab"
-      ],
-      "source": "team/local-sources/claude/immersive-director.md"
-    },
-    {
-      "id": "immersive-motion-engineer",
-      "when": "Implementa cursor 3D, tipografía cinética y motion WebGL con lifecycle y fallback en los archivos asignados.",
-      "milestones": [],
-      "skills": [
-        "immersive-interaction-lab"
-      ],
-      "source": "team/local-sources/claude/immersive-motion-engineer.md"
-    },
-    {
-      "id": "immersive-reviewer",
-      "when": "Revisa fit check, accesibilidad, animación y rendimiento de experiencias WebGL con evidencia reproducible.",
-      "milestones": [],
-      "skills": [
-        "immersive-interaction-lab"
-      ],
-      "source": "team/local-sources/claude/immersive-reviewer.md",
-      "tools": "Read, Glob, Grep"
     }
   ]
 }

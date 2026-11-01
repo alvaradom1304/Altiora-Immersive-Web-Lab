@@ -1,0 +1,32 @@
+{
+  "id": "T1031-c625",
+  "title": "Diagnostico y calidad compartidos para todas las IAs",
+  "role": "experience-director",
+  "ai": null,
+  "reviewer": null,
+  "depends": [],
+  "files": [],
+  "acceptance": null,
+  "status": "hecha",
+  "owner": "codex/experience-director",
+  "created": "2026-10-31T14:56:37Z",
+  "created_by": "codex/experience-director",
+  "history": [
+    {
+      "at": "2026-10-31T14:56:37Z",
+      "by": "codex/experience-director",
+      "status": "pendiente"
+    },
+    {
+      "at": "2026-10-31T14:59:22Z",
+      "by": "codex/experience-director",
+      "status": "en_curso"
+    },
+    {
+      "at": "2026-10-31T15:07:30Z",
+      "by": "codex/experience-director",
+      "status": "hecha",
+      "note": "Diagnostico compartido, recuperacion 14/14 y QA audiovisual implementados. Revision independiente corregida; controles locales pasaron. Ver docs/operations/SHARED-OPERATIONS.md; conexiones y produccion comercial sin certificar."
+    }
+  ]
+}

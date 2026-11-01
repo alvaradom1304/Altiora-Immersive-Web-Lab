@@ -10,11 +10,15 @@ import { resolve } from 'node:path';
 const root = fileURLToPath(new URL('../', import.meta.url));
 const read = p => readFile(resolve(root, p), 'utf8').then(t => t.replace(/\r\n/g, '\n'));
 
-test('every canonical skill is model-discoverable in Claude and has a resolvable source', async () => {
+test('core skills are model-discoverable, reserve skills stay invocable, all resolve to a source', async () => {
+  const coreList = JSON.parse(await read('references/skill-core.json'));
+  const core = new Set([...coreList.used, ...coreList.method, ...(coreList.sales ?? [])]);
   for (const folder of await readdir(resolve(root, 'skills'))) {
     const source = await read(`skills/${folder}/SKILL.md`);
     const bridge = await read(`.claude/skills/${folder}/SKILL.md`);
-    assert.doesNotMatch(bridge, /^disable-model-invocation: true$/m, folder);
+    const manual = /^disable-model-invocation: true$/m.test(bridge);
+    const explicit = frontmatterField(source, 'disable-model-invocation') === 'true';
+    assert.equal(manual, explicit || !core.has(folder), folder);
     assert.ok(bridge.includes(`../../../skills/${folder}/SKILL.md`), folder);
     assert.ok(source.length > 0);
   }

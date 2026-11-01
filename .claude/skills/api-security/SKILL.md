@@ -1,6 +1,7 @@
 ---
 name: api-security
 description: "api-security: Cybersecurity. Usar para producir api_risks, controls, verification a partir de endpoints, contrato, auth, datos, límites; no sustituir otras fases ni declarar resultados sin evidencia."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

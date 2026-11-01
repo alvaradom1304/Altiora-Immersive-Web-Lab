@@ -1,6 +1,7 @@
 ---
 name: agent-design
 description: "agent-design: AI & Automation. Usar para producir agent_spec, tool_contracts, evaluation a partir de objetivo, tareas, herramientas reales, riesgo, límites; no sustituir otras fases ni declarar resultados sin evidencia."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

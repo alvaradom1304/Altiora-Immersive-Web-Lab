@@ -1,6 +1,7 @@
 ---
 name: cross-selling
 description: "cross-selling: Sales Intelligence. Usar para producir complementary_offer, suitability, message a partir de compra/uso actual, necesidad adicional, compatibilidad; no sustituir otras fases ni declarar resultados sin evidencia."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

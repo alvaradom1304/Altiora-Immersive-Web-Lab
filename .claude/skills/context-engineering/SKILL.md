@@ -1,6 +1,7 @@
 ---
 name: context-engineering
 description: "context-engineering: AI & Automation. Usar para producir context_pack, provenance, refresh_rules a partir de objetivo, fuentes, límites, estado, token budget; no sustituir otras fases ni declarar resultados sin evidencia."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

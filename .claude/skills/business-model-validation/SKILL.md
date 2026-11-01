@@ -1,6 +1,7 @@
 ---
 name: business-model-validation
 description: "business-model-validation: Venture Building. Usar para producir hypothesis_results, model_changes, viability_limits a partir de modelo, supuestos críticos, pruebas, datos observados; no sustituir otras fases ni declarar resultados sin evidencia."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

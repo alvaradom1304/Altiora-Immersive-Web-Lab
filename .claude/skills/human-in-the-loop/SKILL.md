@@ -1,6 +1,7 @@
 ---
 name: human-in-the-loop
 description: "human-in-the-loop: AI & Automation. Usar para producir review_gates, escalation, fallback a partir de acciones críticas, roles, tiempos, estados; no sustituir otras fases ni declarar resultados sin evidencia."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

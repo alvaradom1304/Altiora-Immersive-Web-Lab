@@ -1,6 +1,7 @@
 ---
 name: brand-guidelines
 description: "brand-guidelines: Brand Intelligence. Usar para producir brand_rules, examples, governance a partir de decisiones de identidad, usos, responsables; no sustituir otras fases ni declarar resultados sin evidencia."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

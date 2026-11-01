@@ -1,0 +1,17 @@
+{
+  "id": "20261101T035645Z-049bb0ef",
+  "files": {
+    ".codex/hooks.json": {
+      "backup": null,
+      "installed_hash": "ca4f913a5070813d17962c09119b50cefd55c28f31f0e1ee1b3ea8dc21aaca3b"
+    },
+    ".claude/settings.json": {
+      "backup": null,
+      "installed_hash": "7e3c00eb46d70b882e71b07c065471f0c55732e7649b0556cd70bff04cc51a3d"
+    },
+    ".agents/hooks.json": {
+      "backup": null,
+      "installed_hash": "182c07b26446e7089c1dad1f38720247eb193874f1cd67d66216efaa5e551fa5"
+    }
+  }
+}

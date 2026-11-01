@@ -1,6 +1,7 @@
 ---
 name: security-testing
 description: "security-testing: Cybersecurity. Usar para producir test_plan, evidence, remediation a partir de scope escrito, entorno, controles, límites; no sustituir otras fases ni declarar resultados sin evidencia."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->
