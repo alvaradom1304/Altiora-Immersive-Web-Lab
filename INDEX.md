@@ -41,7 +41,7 @@ Otras IAs (Codex, Gemini, ChatGPT): prompts en [team/agents/](team/agents/experi
 | [altiora-research](.claude/agents/altiora-research.md) | `/chat-altiora-research` |  | `altiora-repository-research` |
 | [altiora-review](.claude/agents/altiora-review.md) | `/chat-altiora-review` |  | `altiora-quality-review` |
 
-## Skills (352)
+## Skills (353)
 
 **Auto** = el adaptador permite invocación por el modelo; no prueba carga en una sesión. La asignación a agentes no restringe el descubrimiento. Origen vacío = sin fuente externa registrada; no certifica autoría.
 
@@ -235,6 +235,7 @@ Otras IAs (Codex, Gemini, ChatGPT): prompts en [team/agents/](team/agents/experi
 | [google-cloud-storage-basics](skills/google-cloud-storage-basics/SKILL.md) | — | — |  | Stores, retrieves, and manages data as objects in Cloud Storage on Google Cloud (also known colloquially as GCS) buckets. Use when you ne… |
 | [google-cloud-storage-bucket-architect](skills/google-cloud-storage-bucket-architect/SKILL.md) | — | — |  | Creates Cloud Storage (Google Cloud Storage, or GCS) buckets. Analyzes the workload (sensitive data, media hosting, ingestion, web hostin… |
 | [google-cloud-storage-fuse](skills/google-cloud-storage-fuse/SKILL.md) | — | — |  | Mounts Cloud Storage buckets as a POSIX file system with Cloud Storage FUSE (gcsfuse). Use when you need to interact with gcsfuse — decid… |
+| [graphify](skills/graphify/SKILL.md) | sí | — |  | Consulta un grafo de conocimiento del repositorio (código, y documentos solo con permiso) generado con Graphify para responder preguntas … |
 | [growth-experiment-analysis](skills/growth-experiment-analysis/SKILL.md) | sí | commerce-growth-director |  | Usar al evaluar si campañas de branding, videos orgánicos, anuncios o embudos a WhatsApp generan mejores consultas y ventas con pruebas m… |
 | [growth-experimentation](skills/growth-experimentation/SKILL.md) | sí | growth-analyst |  | growth-experimentation: Marketing Intelligence. Usar para producir experiment_design, results, learning a partir de hipótesis, funnel, ba… |
 | [growth-strategy](skills/growth-strategy/SKILL.md) | — | — |  | growth-strategy: Growth & Scaling. Usar para producir growth_levers, priorities, safeguards a partir de demanda, economía, capacidad, fun… |

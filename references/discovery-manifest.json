@@ -1223,6 +1223,12 @@
       "assigned_agents": []
     },
     {
+      "name": "graphify",
+      "source": "skills/graphify/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": []
+    },
+    {
       "name": "growth-experiment-analysis",
       "source": "skills/growth-experiment-analysis/SKILL.md",
       "model_invocable": true,
@@ -2481,6 +2487,6 @@
     "equipo",
     "repos"
   ],
-  "listing_budget_characters": 204665,
+  "listing_budget_characters": 205310,
   "runtime_discovery": "NOT_RUN"
 }
