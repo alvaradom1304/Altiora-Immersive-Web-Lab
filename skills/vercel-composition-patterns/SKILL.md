@@ -87,3 +87,7 @@ Each rule file contains:
 ## Full Compiled Document
 
 For the complete guide with all rules expanded: `AGENTS.md`
+
+## Entregable
+
+Resultado estructurado y verificable según las especificaciones del contrato de la skill.

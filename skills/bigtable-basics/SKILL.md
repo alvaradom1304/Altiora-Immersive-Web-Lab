@@ -119,3 +119,7 @@ defined as SQL queries but they must be created using gcloud CLI.
 *   [Bigtable SQL Reference](https://cloud.google.com/bigtable/docs/googlesql-overview)
 *   [cbt CLI Reference](https://cloud.google.com/bigtable/docs/cbt-reference)
 *   [gcloud bigtable Reference](https://cloud.google.com/sdk/gcloud/reference/bigtable)
+
+## Entregable
+
+Resultado estructurado y verificable según las especificaciones del contrato de la skill.

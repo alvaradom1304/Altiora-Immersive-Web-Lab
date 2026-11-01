@@ -1,4 +1,6 @@
 ---
+metadata:
+  version: 1.0.0
 name: executing-plans
 description: "Ejecuta un plan de implementación escrito, tarea por tarea, en la sesión actual y con puntos de revisión. Usar cuando ya existe un plan de writing-plans y se ejecuta en línea; si hay subagentes y tareas independientes, usar subagent-driven-development."
 ---

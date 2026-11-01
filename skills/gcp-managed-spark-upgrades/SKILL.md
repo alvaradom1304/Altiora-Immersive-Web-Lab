@@ -18,6 +18,8 @@ metadata:
   publisher: google
 ---
 
+# Gcp Managed Spark Upgrades
+
 ## Scope gate
 
 - **PySpark**: Cluster job field `pysparkJob`, Serverless batch field `pysparkBatch`. Status: **Supported**. Analysis reference: [pyspark_analysis.md](references/pyspark_analysis.md).

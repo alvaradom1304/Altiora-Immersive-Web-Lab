@@ -1,6 +1,8 @@
 ---
+metadata:
+  version: 1.0.0
 name: altiora-os-qa
-description: Revisar de forma independiente entregas de Altiora contra requisitos, funcionamiento, calidad visual y límites de seguridad.
+description: "Use when needed: Revisar de forma independiente entregas de Altiora contra requisitos, funcionamiento, calidad visual y límites de seguridad."
 ---
 
 # altiora-os-qa

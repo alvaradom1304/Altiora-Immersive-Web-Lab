@@ -182,3 +182,7 @@ Spark Debug   | `gcp-spark-troubleshooting`
 Provisioning  | `gcp-pipeline-resource-provisioning`
 Orchestration | `gcp-pipeline-orchestration`
 Other         | — (general GCP assistance)
+
+## Entregable
+
+Resultado estructurado y verificable según las especificaciones del contrato de la skill.

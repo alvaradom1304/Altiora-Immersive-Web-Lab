@@ -249,3 +249,7 @@ actions:
 
 *   Do not modify the code. Just analyze and provide the RCA report. Unless user
     explicitly asks to fix the code.
+
+## Entregable
+
+Resultado estructurado y verificable según las especificaciones del contrato de la skill.

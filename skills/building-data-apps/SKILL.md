@@ -64,7 +64,7 @@ data ecosystem.
 You MUST propose a plan to the user that specifies the chosen framework and
 justifies the choice based on the criteria above.
 
---------------------------------------------------------------------------------
+---
 
 ## Shared Design Standards
 
@@ -75,7 +75,7 @@ Regardless of framework, you MUST follow the principles in
     layouts.
 -   **Typography**: `DM Sans` for content, `JetBrains Mono` for data.
 
---------------------------------------------------------------------------------
+---
 
 ## Framework Implementation
 
@@ -90,7 +90,7 @@ Regardless of framework, you MUST follow the principles in
 1.  Read `references/react_framework.md` for Tailwind and ECharts setup.
 2.  Follow the detailed component guidelines for KPI cards, Tables, and Panels.
 
---------------------------------------------------------------------------------
+---
 
 ## AI Chat Interface (Optional Feature)
 
@@ -155,3 +155,7 @@ If the user requests or agrees to the chat interface:
 -   [ ] Do all visualizations render correctly and are they interactive where
     expected?
 -   [ ] Is the dashboard visually appealing?
+
+## Entregable
+
+Resultado estructurado y verificable según las especificaciones del contrato de la skill.

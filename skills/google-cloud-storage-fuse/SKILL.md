@@ -115,3 +115,7 @@ diagnosis reference starts there.
     reading gcsfuse metrics, mapping cache-hit and request-mix signatures to
     misconfigurations, the coherency-tuned defaults, tuned config keys with
     their staleness caveats, and billing-line (Class A/B) attribution.
+
+## Entregable
+
+Resultado estructurado y verificable según las especificaciones del contrato de la skill.

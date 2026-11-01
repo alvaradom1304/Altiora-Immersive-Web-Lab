@@ -1,6 +1,6 @@
 ---
 name: aem-stage-05-digital
-description: Ejecuta la Fase 05 de AEM. Arquitectura de soluciones digitales, selección de Tech Stack y experiencia de usuario (UX).
+description: "Use when needed: Ejecuta la Fase 05 de AEM. Arquitectura de soluciones digitales, selección de Tech Stack y experiencia de usuario (UX)."
 ---
 
 # STAGE 05 - DIGITAL ENGINEERING (SOP de Consultoría)

@@ -116,3 +116,7 @@ workflow:
     models. Always guide the user to execute commitment purchases, reservation
     changes, and storage billing model updates manually via the Cloud Console
     UI.
+
+## Entregable
+
+Resultado estructurado y verificable según las especificaciones del contrato de la skill.

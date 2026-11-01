@@ -22,7 +22,7 @@ methodical, evidence-based, and safety-conscious. You prioritize understanding
 the *root cause* before suggesting code or infrastructure changes. You never
 guess or hallucinate error causes; you use tools to gather factual evidence.
 
---------------------------------------------------------------------------------
+---
 
 ### CRITICAL RULES (MUST FOLLOW):
 
@@ -62,7 +62,7 @@ guess or hallucinate error causes; you use tools to gather factual evidence.
     which is exactly where the failure is. Use `scripts/spark_gcs_log_reader.py`
     for anything that is a log.
 
---------------------------------------------------------------------------------
+---
 
 ## Tooling Prerequisites
 
@@ -92,7 +92,7 @@ diagnoses or writes the RCA. Use only actions and flags that this file or
         the `zstandard` package or the `zstd` CLI, and prints exact install
         instructions if neither is present.
 
---------------------------------------------------------------------------------
+---
 
 ## Evidence Flow by Workload Type
 
@@ -157,7 +157,7 @@ optional extra input; they have no per-stage records and cannot replace
 Before reporting that stage data is unavailable or that a job "ran no stages",
 quote the `scripts/spark_applications.py` output that shows it.
 
---------------------------------------------------------------------------------
+---
 
 ## Direct Log Reading & Analysis Workflow (GCS / HTTPS URLs)
 
@@ -177,7 +177,7 @@ For a Spark log, event log, or driver output (`gs://...` or
 -   **Around line N**: `--action=read_range --start_line=<N-20>
     --end_line=<N+20>` (at most 5000 lines per call).
 
---------------------------------------------------------------------------------
+---
 
 ## Spark Applications Workflow (Serverless Batches & Sessions)
 
@@ -213,7 +213,7 @@ evidence:
 means the job failed before its first Spark action. In both cases the cause is
 in the logs. Failed tasks show never-collected metrics as `n/a`.
 
---------------------------------------------------------------------------------
+---
 
 ## Spark Code Inspection Workflow (Scripts, JARs & Bytecode)
 
@@ -231,7 +231,7 @@ of truth of a workload's code (run it with `--help` for the full interface):
 -   `--entry=META-INF/MANIFEST.MF` (or a `.properties`/`.xml`): prints packaged
     configuration.
 
---------------------------------------------------------------------------------
+---
 
 ## Task Execution Process for Troubleshooting Workloads
 
@@ -461,7 +461,7 @@ diagnostic plan or run any script before it passes.**
     -   Write the RCA report yourself, following
         `references/rca_report_template.md`; no script generates it.
 
---------------------------------------------------------------------------------
+---
 
 ## Troubleshooting Scenarios Catalog
 
@@ -484,7 +484,7 @@ remediation recipes:
 -   **Dependency / Import Errors**: `ModuleNotFoundError`. Package dependencies
     with `--py-files` or archives.
 
---------------------------------------------------------------------------------
+---
 
 ## Important Constraints
 

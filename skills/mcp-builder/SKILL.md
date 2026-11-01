@@ -14,7 +14,7 @@ Create MCP (Model Context Protocol) servers that enable LLMs to interact with ex
 
 ---
 
-# Process
+## Process
 
 ## 🚀 High-Level Workflow
 
@@ -206,7 +206,7 @@ Create an XML file with this structure:
 
 ---
 
-# Reference Files
+## Reference Files
 
 ## 📚 Documentation Library
 

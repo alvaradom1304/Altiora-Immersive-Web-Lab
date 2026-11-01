@@ -383,3 +383,7 @@ If you can read the product repo, generate the week's changelog, announcement dr
 - **marketing-psychology**: For psychology behind waitlists and exclusivity
 - **programmatic-seo**: For comparison pages mentioned in post-launch
 - **sales-enablement**: For launch sales collateral and enablement materials
+
+## Entregable
+
+Resultado estructurado y verificable según las especificaciones del contrato de la skill.

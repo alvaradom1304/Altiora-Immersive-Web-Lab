@@ -1,4 +1,6 @@
 ---
+metadata:
+  version: 1.0.0
 name: "altiora-repository-research"
 description: "Selecciona y compara repositorios o skills para un proyecto de Altiora según utilidad, compatibilidad, mantenimiento, licencia y coste total. Se usa cuando se pide investigar referencias o añadir herramientas antes de implementar."
 ---
@@ -22,3 +24,7 @@ Si el usuario pidió investigación primero, cerrar esa comparación antes de ca
 
 ## Laboratorio disponible en este equipo
 Para localizar las fuentes y proyectos de Altiora, consultar [la ubicación local](references/altiora-workspace.md) cuando sea pertinente.
+
+## Entregable
+
+Resultado estructurado y verificable según las especificaciones del contrato de la skill.

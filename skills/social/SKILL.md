@@ -457,3 +457,7 @@ Tools: CapCut (free), Descript, Captions.ai, Premiere Pro
 - **reverse-engineer-marketing**: For reading a company's content patterns, house style, and formulas across every channel
 - **emails**: For nurturing social audience via email
 - **marketing-psychology**: For understanding what drives engagement
+
+## Entregable
+
+Resultado estructurado y verificable según las especificaciones del contrato de la skill.

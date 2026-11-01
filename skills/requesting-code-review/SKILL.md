@@ -1,4 +1,6 @@
 ---
+metadata:
+  version: 1.0.0
 name: requesting-code-review
 description: "Pide una revisión de código independiente con contexto preciso (requisitos, rango de commits, qué revisar) antes de integrar. Usar al terminar una tarea o funcionalidad importante y antes de fusionar; en Altiora el revisor es altiora-os-qa o altiora-review, nunca quien escribió el código."
 ---
@@ -93,3 +95,7 @@ You: [Fix progress indicators]
 - Request clarification
 
 See template at: [code-reviewer.md](code-reviewer.md)
+
+## Entregable
+
+Resultado estructurado y verificable según las especificaciones del contrato de la skill.

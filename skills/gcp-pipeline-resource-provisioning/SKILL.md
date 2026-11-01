@@ -18,6 +18,8 @@ metadata:
   publisher: google
 ---
 
+# Gcp Pipeline Resource Provisioning
+
 ## How to use this skill
 
 Create or update existing `deployment.yaml` file and deploy resources. All
@@ -169,3 +171,7 @@ gcloud beta orchestration-pipelines deploy --environment=<ENV_NAME> --local
     values (no placeholders) and correct resource definitions.
 -   The agent runs the deployment command to perform the deployment, and it
     executes successfully (exit code 0).
+
+## Entregable
+
+Resultado estructurado y verificable según las especificaciones del contrato de la skill.

@@ -28,7 +28,7 @@ drafting starter resource provisioning code for user review.
     conversation, load reference files progressively. Follow the Just-in-Time
     (JiT) loading instructions outlined in the phases below.
 
---------------------------------------------------------------------------------
+---
 
 ## Workflow & Just-in-Time (JiT) Instructions
 
@@ -85,7 +85,7 @@ cloud resources, you must initiate the Implementation & Provisioning phase.
     tagging rules, and prepare a Change List (CL) or Pull Request for user
     review without applying live infrastructure changes directly.
 
---------------------------------------------------------------------------------
+---
 
 ## Supporting Resources & Documentation
 
@@ -93,3 +93,7 @@ cloud resources, you must initiate the Implementation & Provisioning phase.
 -   [Database Recommendation Matrix](references/recommendation_matrix.txt)
 -   [Google Cloud Databases Overview](https://cloud.google.com/products/databases)
 -   [Google Cloud SDK (gcloud) Reference](https://cloud.google.com/sdk/gcloud/reference)
+
+## Entregable
+
+Resultado estructurado y verificable según las especificaciones del contrato de la skill.

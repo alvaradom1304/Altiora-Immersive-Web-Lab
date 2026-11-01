@@ -1,6 +1,8 @@
 ---
+metadata:
+  version: 1.0.0
 name: aem-stage-06-automation
-description: Ejecuta la Fase 06 de AEM. Auditoría de procesos repetitivos, diseño de workflows en n8n e integración de Agentes de IA.
+description: "Usar para: Ejecuta la Fase 06 de AEM. Auditoría de procesos repetitivos, diseño de workflows en n8n e integración de Agentes de IA."
 ---
 
 # STAGE 06 - AUTOMATION & AI (SOP de Consultoría)

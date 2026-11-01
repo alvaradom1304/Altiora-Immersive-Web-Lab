@@ -1,6 +1,8 @@
 ---
+metadata:
+  version: 1.0.0
 name: aem-stage-04-brand
-description: Ejecuta la Fase 04 de AEM. Arquitectura de marca premium, arquetipos, tono de voz y dirección de arte.
+description: "Use when needed: Ejecuta la Fase 04 de AEM. Arquitectura de marca premium, arquetipos, tono de voz y dirección de arte."
 ---
 
 # STAGE 04 - BRAND ARCHITECTURE (SOP de Consultoría)

@@ -1,6 +1,8 @@
 ---
+metadata:
+  version: 1.0.0
 name: aem-stage-03-strategy
-description: Ejecuta la Fase 03 de AEM. Define posicionamiento, Unit Economics, Propuesta de Valor (UVP) y Go-To-Market strategy.
+description: "Use when needed: Ejecuta la Fase 03 de AEM. Define posicionamiento, Unit Economics, Propuesta de Valor (UVP) y Go-To-Market strategy."
 ---
 
 # STAGE 03 - STRATEGY (SOP de Consultoría)

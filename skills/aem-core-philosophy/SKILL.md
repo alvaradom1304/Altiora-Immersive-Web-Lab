@@ -1,4 +1,6 @@
 ---
+metadata:
+  version: 1.0.0
 name: aem-core-philosophy
 description: Usa este skill para alinear decisiones con la filosofía AEM OS (Strategy before design, Evidence before opinion) y entender la arquitectura central del sistema.
 ---
@@ -8,8 +10,7 @@ description: Usa este skill para alinear decisiones con la filosofía AEM OS (St
 **Rol de Agencia:** Especialista Técnico/Estratégico.
 **Regla de Oro:** "Evidence before opinion. Business outcomes before execution."
 
-## 1. Base de Conocimiento (Framework)
-## 1. Visión Central
+## 1. Base de Conocimiento y Visión Central
 No competimos por hacer más websites. Competimos por entender mejor los negocios.
 Metodología: Understand -> Research -> Strategize -> Architect -> Build -> Automate -> Measure -> Optimize -> Scale.
 

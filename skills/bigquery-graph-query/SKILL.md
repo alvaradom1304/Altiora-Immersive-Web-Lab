@@ -35,7 +35,7 @@ Graph** or a **Semantic Graph**:
     -   **Target Query Engine / Mechanism**: **Native GQL fallback** via
         `GRAPH_TABLE` over the `<property_graph>` with manual SQL aggregations.
 
---------------------------------------------------------------------------------
+---
 
 ## Reference Files (rarely needed — do NOT load for standard queries)
 
@@ -68,7 +68,7 @@ Only read a companion file when the query genuinely needs one of these
 
 If none of the above clearly applies, this core document is sufficient.
 
---------------------------------------------------------------------------------
+---
 
 ## PART 1: Property Graph Querying (Native GQL)
 
@@ -316,7 +316,7 @@ reference):
 4.  **Prefer a single comprehensive `MATCH`** over chaining several `MATCH`
     statements, giving the optimizer a wider global view of the pattern.
 
---------------------------------------------------------------------------------
+---
 
 ## PART 2: Semantic Graph Querying (GRAPH_EXPAND TVF)
 

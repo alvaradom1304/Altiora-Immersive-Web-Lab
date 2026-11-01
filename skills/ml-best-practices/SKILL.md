@@ -210,3 +210,7 @@ production based on predictive power, robustness, and viability.
     and NULL values. First, analyze their frequency. Then, decide whether to
     keep them, drop them or impute them with a contextually appropriate value,
     and explain your reasoning.
+
+## Entregable
+
+Resultado estructurado y verificable según las especificaciones del contrato de la skill.

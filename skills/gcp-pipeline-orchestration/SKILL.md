@@ -12,6 +12,8 @@ metadata:
   publisher: google
 ---
 
+# Gcp Pipeline Orchestration
+
 ## Mandatory Reference Routing
 
 If relevant, call the associated reference file(s) before you take actions.
@@ -23,7 +25,7 @@ Function/Use Case                  | Required Reference File                    
 ---------------------------------- | ---------------------------------------------- | ------------------------------
 **orchestration-pipelines schema** | `references/orchestration-pipelines-schema.md` | orchestrate, generate, create, update
 
-## How to use this skill
+## Overview and Core Files
 
 Orchestration pipelines require creating two files to ensure a complete and
 deployable pipeline:
@@ -68,8 +70,9 @@ Examine the repository's root directory for a `deployment.yaml` file.
     following command:
 
 ```
-# Replace <ORCHESTRATION_PIPELINE_NAME> with the actual name
-# Replace <ENV_NAME> with the actual environment name
+  # Replace <ORCHESTRATION_PIPELINE_NAME> with the actual name
+Detalles y especificaciones de esta sección.
+  # Replace <ENV_NAME> with the actual environment name
 gcloud beta orchestration-pipelines init <ORCHESTRATION_PIPELINE_NAME> --environment=<ENV_NAME>
 ```
 
@@ -362,7 +365,7 @@ After creating or editing pipeline files, you **MUST** validate them using the
 `validate` command below for **each** environment found in `deployment.yaml`.
 
 ```
-# Replace <ENV_NAME> with the identified environment name
+  # Replace <ENV_NAME> with the identified environment name
 gcloud beta orchestration-pipelines validate --environment=<ENV_NAME>
 ```
 
@@ -525,22 +528,4 @@ Deploy → Poll → Trigger flow.
 
 ## Other actions
 
-If requested to pause/stop the orchestration pipeline, use
-
-```bash
-    # Replace <ENV_NAME>, <BUNDLE_ID>, <PIPELINE_ID> with actual values
-    gcloud beta orchestration-pipelines pause \
-    --environment=<ENV_NAME> \
-    --bundle=<BUNDLE_ID> \
-    --pipeline=<PIPELINE_ID>
-```
-
-If requested to unpause/resume the orchestration pipeline, use
-
-```bash
-    # Replace <ENV_NAME>, <BUNDLE_ID>, <PIPELINE_ID> with actual values
-    gcloud beta orchestration-pipelines unpause \
-    --environment=<ENV_NAME> \
-    --bundle=<BUNDLE_ID> \
-    --pipeline=<PIPELINE_ID>
-```
+See [other-actions.md](references/other-actions.md) for instructions on pause and unpause operations.

@@ -205,7 +205,7 @@ metadata:
     Serverless using Spark Connect or Dataproc jobs.
 8.  **Follow up with the user**: If a brand new notebook was generated, instruct the user to select the appropriate kernel in the dropdown for cell execution.
 
---------------------------------------------------------------------------------
+---
 
 ## Common Mistakes Checklist
 
@@ -244,7 +244,7 @@ Before submitting a job, verify:
     (such as `notebook__read_cell`, `jupyter__read_cell`, or specific line
     slices).
 
---------------------------------------------------------------------------------
+---
 
 ## IAM Requirements
 
@@ -259,7 +259,7 @@ The Managed Spark (Dataproc) service account needs:
 *   `roles/spanner.databaseUser`: Spanner reads and writes
 *   `roles/secretmanager.secretAccessor`: Accessing database passwords and credentials stored in Secret Manager
 
---------------------------------------------------------------------------------
+---
 
 ## Spark resource management & observability
 
@@ -273,7 +273,7 @@ zombie cluster waste detection, scheduled pipeline cadence health, configuration
 auditing, and Cloud Monitoring / Cloud Logging telemetry — use the
 `@skill:gcp-spark-observability` skill.
 
---------------------------------------------------------------------------------
+---
 
 ## Code Optimization & Pre-Submission Verification
 
@@ -282,7 +282,7 @@ verification protocol in `references/spark_refactoring_guide.md`: inspect the
 code for the anti-patterns catalogued in `references/spark_optimizations.md` and
 obtain explicit user confirmation before applying refactoring.
 
---------------------------------------------------------------------------------
+---
 
 ## Troubleshooting & Root Cause Analysis
 

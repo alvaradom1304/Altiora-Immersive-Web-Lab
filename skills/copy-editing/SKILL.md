@@ -489,3 +489,7 @@ Copy editing isn't just for new content. Existing pages decay over time — outd
 | Reviewing and improving existing copy | copy-editing (this skill) |
 | Editing copy you just wrote | copy-editing (this skill) |
 | Structural or strategic page changes | cro |
+
+## Entregable
+
+Resultado estructurado y verificable según las especificaciones del contrato de la skill.

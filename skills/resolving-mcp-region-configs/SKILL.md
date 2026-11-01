@@ -77,3 +77,7 @@ so the fix survives a reinstall):
     -   **Claude Code**: `claude --resume` (or `--continue`)
     -   **Codex**: `codex resume --last` (or `codex resume` for a picker)
     -   **Antigravity**: use its resume/history picker if available
+
+## Entregable
+
+Resultado estructurado y verificable según las especificaciones del contrato de la skill.

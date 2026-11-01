@@ -1,6 +1,6 @@
 ---
 name: meta-ads-growth
-description: Diagnostica, planifica y evalúa campañas de Meta Ads para un negocio con oferta y datos reales; coordina creatividades, medición, pruebas y decisiones de inversión. No publica anuncios ni cambia presupuestos.
+description: "Usar para: Diagnostica, planifica y evalúa campañas de Meta Ads para un negocio con oferta y datos reales; coordina creatividades, medición, pruebas y decisiones de inversión. No publica anuncios ni cambia presupuestos."
 ---
 
 # Especialista de Meta Ads para Altiora

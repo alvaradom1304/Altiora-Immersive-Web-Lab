@@ -444,13 +444,16 @@ For pulling performance data and managing campaigns, see the [tools registry](ht
 ### Workflow: Pull Data, Analyze, Generate
 
 ```bash
-# 1. Pull recent ad performance
+  # 1. Pull recent ad performance
 node tools/clis/google-ads.js reports get --type ad_performance --date-range last_30_days
 
-# 2. Analyze output (identify top/bottom performers)
-# 3. Feed winning patterns into this skill
-# 4. Generate new variations
-# 5. Upload to platform
+  # 2. Analyze output (identify top/bottom performers)
+Detalles y especificaciones de esta sección.
+  # 3. Feed winning patterns into this skill
+Detalles y especificaciones de esta sección.
+  # 4. Generate new variations
+Detalles y especificaciones de esta sección.
+  # 5. Upload to platform
 ```
 
 > **Skip the plumbing.** Step 1 is the hard part to run yourself — the Google

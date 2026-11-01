@@ -1,4 +1,6 @@
 ---
+metadata:
+  version: 1.0.0
 name: altiora-runtime-bridge
 description: Prepara o verifica la portabilidad de un proyecto Altiora entre Codex, Claude Code y Antigravity cuando se configura o cambia el entorno de trabajo.
 ---
@@ -24,3 +26,7 @@ Entradas: raíz del proyecto, entorno destino y capacidad que se necesita. Salid
 Entregar una tabla con capa, ruta, estado (`CREATED`, `INSTALLED`, `DISCOVERED`, `LIVE_TESTED`), evidencia y limitación. Si hay incompatibilidad, conservar los archivos fuente, usar el procedimiento manual delimitado y explicar qué función falta. No confundir copiar un ZIP con instalar un plugin nativo.
 
 Para migrar trabajo activo, aplicar `altiora-session-handoff`; no mover secretos ni historial completo.
+
+## Entregable
+
+Resultado estructurado y verificable según las especificaciones del contrato de la skill.

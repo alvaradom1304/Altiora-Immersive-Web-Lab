@@ -120,9 +120,11 @@ Prefer using the imperative form in instructions.
 ```markdown
 ## Report structure
 ALWAYS use this exact template:
-# [Title]
+## [Title]
 ## Executive summary
+Detalles y especificaciones de esta sección.
 ## Key findings
+Detalles y especificaciones de esta sección.
 ## Recommendations
 ```
 

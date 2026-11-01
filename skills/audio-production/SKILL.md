@@ -28,3 +28,7 @@ Entregar según el trabajo: tratamiento sonoro/cue sheet, cadena y ajustes justi
 Registrar por separado `DESIGNED`, `PROCESSED`, `MEASURED`, `LISTENED` y `APPROVED`, con archivos y evidencia reales. `MEASURED_NOT_APPROVED` es el estado del helper. Si el runtime no permite oír la señal, declarar escucha pendiente: una transcripción, un gráfico o una prueba sintética no la sustituyen. No prometer calidad perceptual, licencia comercial, conexión a Adobe o ahorro medido por tener esta skill.
 
 Para evaluar el comportamiento sin audio de cliente usar los [casos de prueba](references/evaluation-cases.json); para comprobar el medidor, ejecutar `python -m unittest discover -s scripts -p test_audio_qa.py` desde la carpeta de la skill. Versión 0.1.0.
+
+## Entregable
+
+Resultado estructurado y verificable según las especificaciones del contrato de la skill.

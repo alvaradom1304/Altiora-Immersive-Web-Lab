@@ -1,4 +1,6 @@
 ---
+metadata:
+  version: 1.0.0
 name: dispatching-parallel-agents
 description: "Reparte 2 o más tareas independientes (sin estado compartido ni dependencias) entre subagentes en paralelo y después integra y verifica sus resultados. Usar ante varios fallos o investigaciones independientes; para ejecutar un plan completo usar subagent-driven-development."
 ---
@@ -71,7 +73,7 @@ Issue all three subagent dispatches in the same response — they run in paralle
 Subagent (general-purpose): "Fix agent-tool-abort.test.ts failures"
 Subagent (general-purpose): "Fix batch-completion-behavior.test.ts failures"
 Subagent (general-purpose): "Fix tool-approval-race-conditions.test.ts failures"
-# All three run concurrently.
+  # All three run concurrently.
 ```
 
 Multiple dispatch calls in one response = parallel execution. One per response = sequential.

@@ -43,3 +43,6 @@ Integrated system combining Art Direction, Motion Design, Conversion Growth, and
   1. **Declarar la "Ficha de Stack"**: Especificar siempre el trío tecnológico (**Framework base + Motor de animación + Motor 3D/Canvas**) antes de proponer arquitectura o código.
   2. **Justificar los conectores elegidos**: Explicar cómo reducen la latencia, aseguran **60–120 FPS estables** y elevan la percepción de valor.
 
+## Entregable
+
+Resultado estructurado y verificable según las especificaciones del contrato de la skill.

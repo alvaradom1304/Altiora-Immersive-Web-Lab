@@ -190,7 +190,7 @@ gcloud dataplex context lookup --resources="<FULL_ENTRY_NAME>"
 *Completion Criteria*: The command returns the detailed schema and business
 context.
 
---------------------------------------------------------------------------------
+---
 
 ## Troubleshooting
 
@@ -238,3 +238,7 @@ If you find yourself repeatedly searching for the same asset:
     permissions.
 -   **Fix**: Ask the user if they have a project which has the Dataplex API
     enabled with the dataplex.entries.get permission
+
+## Entregable
+
+Resultado estructurado y verificable según las especificaciones del contrato de la skill.

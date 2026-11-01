@@ -1,6 +1,8 @@
 ---
+metadata:
+  version: 1.0.0
 name: aem-stage-07-growth
-description: Ejecuta la Fase 07 de AEM. Estrategias de retención, optimización LTV:CAC, y experimentación de crecimiento (Growth Hacking).
+description: "Usar para: Ejecuta la Fase 07 de AEM. Estrategias de retención, optimización LTV:CAC, y experimentación de crecimiento (Growth Hacking)."
 ---
 
 # STAGE 07 - GROWTH & SCALING (SOP de Consultoría)

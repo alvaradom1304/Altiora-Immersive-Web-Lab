@@ -1,6 +1,6 @@
 ---
 name: meta-ads-creator
-description: Convierte un brief aprobado en variantes de anuncios para Meta con hook, body, CTA, concepto visual y plan de prueba, señalando claims y políticas por verificar. Produce borradores, nunca publica ni cambia presupuestos.
+description: "Use when needed: Convierte un brief aprobado en variantes de anuncios para Meta con hook, body, CTA, concepto visual y plan de prueba, señalando claims y políticas por verificar. Produce borradores, nunca publica ni cambia presupuestos."
 ---
 
 # META-ADS-CREATOR

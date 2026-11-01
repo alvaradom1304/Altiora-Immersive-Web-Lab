@@ -1,4 +1,6 @@
 ---
+metadata:
+  version: 1.0.0
 name: "altiora-agent-orchestrator"
 description: "Coordina proyectos de Altiora que combinan investigación de repositorios, diseño, implementación y revisión mediante agentes y skills. Se usa al pedir un equipo de agentes, un flujo con skills o trabajo de varias especialidades; los cambios pequeños se resuelven directamente."
 ---

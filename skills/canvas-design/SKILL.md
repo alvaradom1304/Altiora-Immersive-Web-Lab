@@ -4,6 +4,8 @@ description: "Crea piezas visuales originales en PNG o PDF a partir de una filos
 license: Complete terms in LICENSE.txt
 ---
 
+# Canvas Design
+
 These are instructions for creating design philosophies - aesthetic movements that are then EXPRESSED VISUALLY. Output only .md files, .pdf files, and .png files.
 
 Complete this in two steps:

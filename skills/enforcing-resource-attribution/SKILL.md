@@ -118,3 +118,6 @@ CLOUDSDK_METRICS_ENVIRONMENT="${CLOUDSDK_METRICS_ENVIRONMENT:+$CLOUDSDK_METRICS_
 > This applies to **ALL** `gcloud` commands, whether they are read-only
 > (`gcloud ... list`) or mutations (`gcloud ... create`).
 
+## Entregable
+
+Resultado estructurado y verificable según las especificaciones del contrato de la skill.

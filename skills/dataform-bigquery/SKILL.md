@@ -344,3 +344,7 @@ When the user requests unit tests:
 -   **Execution Constraints** — do not execute a real `dataform run` without
     explicit user confirmation (`dataform run --dry-run` can be used without
     confirmation).
+
+## Entregable
+
+Resultado estructurado y verificable según las especificaciones del contrato de la skill.

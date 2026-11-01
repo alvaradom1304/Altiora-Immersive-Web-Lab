@@ -1,4 +1,6 @@
 ---
+metadata:
+  version: 1.0.0
 name: finishing-a-development-branch
 description: "Cierra una rama terminada: verifica las pruebas y presenta opciones (fusionar, abrir PR, conservar o descartar) para que el usuario decida. Usar cuando la implementación está completa y las pruebas pasan."
 ---
@@ -32,8 +34,9 @@ Tests failing (<N> failures). Must fix before completing:
 ```bash
 GIT_DIR=$(cd "$(git rev-parse --git-dir)" 2>/dev/null && pwd -P)
 GIT_COMMON=$(cd "$(git rev-parse --git-common-dir)" 2>/dev/null && pwd -P)
-# Capture now, while still inside the workspace — Step 5 changes directory
-# before cleanup (Step 6) needs this value
+  # Capture now, while still inside the workspace — Step 5 changes directory
+Detalles y especificaciones de esta sección.
+  # before cleanup (Step 6) needs this value
 WORKTREE_PATH=$(git rev-parse --show-toplevel)
 ```
 
@@ -88,16 +91,16 @@ is theirs.
 ### Option 1: Merge Locally
 
 ```bash
-# Get main repo root for CWD safety
+  # Get main repo root for CWD safety
 MAIN_ROOT=$(git -C "$(git rev-parse --git-common-dir)/.." rev-parse --show-toplevel)
 cd "$MAIN_ROOT"
 
-# Merge first — verify success before removing anything
+  # Merge first — verify success before removing anything
 git checkout <base-branch>
 git pull
 git merge <feature-branch>
 
-# Verify tests on merged result
+  # Verify tests on merged result
 <test command>
 ```
 
@@ -116,8 +119,9 @@ git branch -d <feature-branch>
 
 ```bash
 git push -u origin <feature-branch>
-# From a detached HEAD, name the new branch on the remote:
-# git push origin HEAD:refs/heads/<new-branch>
+  # From a detached HEAD, name the new branch on the remote:
+Detalles y especificaciones de esta sección.
+  # git push origin HEAD:refs/heads/<new-branch>
 ```
 
 Then create the pull/merge request against <base-branch> with the forge's
@@ -225,3 +229,7 @@ place. If your platform provides a workspace-exit tool, use it.
 | "The merged-result failure is probably flaky" | A failing merged result stops everything. Branch and worktree stay put while you investigate. |
 | "The base branch is obviously main" | Confirm the fork point or ask. Merging into the wrong base is expensive to undo. |
 | "The push was rejected — force-push will fix it" | A rejected push means the remote moved. Investigate; force-push only on your human partner's explicit request. |
+
+## Entregable
+
+Resultado estructurado y verificable según las especificaciones del contrato de la skill.

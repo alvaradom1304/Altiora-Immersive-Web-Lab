@@ -1,6 +1,8 @@
 ---
+metadata:
+  version: 1.0.0
 name: aem-stage-02-research
-description: Ejecuta la Fase 02 de AEM. Realiza investigación de mercado profundo, análisis de competidores (Benchmarking) y auditoría de presencia digital.
+description: "Usar para: Ejecuta la Fase 02 de AEM. Realiza investigación de mercado profundo, análisis de competidores (Benchmarking) y auditoría de presencia digital."
 ---
 
 # STAGE 02 - RESEARCH (SOP de Consultoría)

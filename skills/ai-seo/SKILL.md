@@ -305,7 +305,7 @@ Add these machine-readable files to your site root:
 **`/pricing.md` or `/pricing.txt`** — Structured pricing data for AI agents
 
 ```markdown
-# Pricing — [Your Product Name]
+  # Pricing — [Your Product Name]
 
 ## Free
 - Price: $0/month
@@ -498,3 +498,7 @@ For implementation, see the [tools registry](https://github.com/coreyhaines31/ma
 - **programmatic-seo**: For building SEO pages at scale
 - **copywriting**: For writing content that's both human-readable and AI-extractable
 - **lead-magnets**: For packaging an owned course or content library as an installable agent skill (different from public-site AI visibility)
+
+## Entregable
+
+Resultado estructurado y verificable según las especificaciones del contrato de la skill.
