@@ -58,14 +58,16 @@ npm run orca:dispatch -- "mensaje del usuario"
 # Plan sin coste de modelo (heurística por palabras clave)
 npm run orca:dispatch -- --router heuristic "mensaje del usuario"
 
-# Registrar tareas en Orca y lanzar los workers independientes
-npm run orca:dispatch -- --execute --launch-workers "mensaje del usuario"
+# Registrar y lanzar: desactivado (modo solo plan). Solo con autorización expresa del usuario:
+#   $env:ALTIORA_DISPATCH_EXECUTE = "1"; npm run orca:dispatch -- --execute --launch-workers "mensaje"
 
 # Cambiar el modelo o el esfuerzo del propio enrutador
 npm run orca:dispatch -- --router-model opus --router-effort xhigh "mensaje"
 ```
 
 ## Límites
+
+- **Modo solo plan (01/11/2026)**: `--execute` y `--launch-workers` salen con código 2 antes de llamar al modelo, salvo `ALTIORA_DISPATCH_EXECUTE=1`. Motivo: el enrutado automático cuesta, varía entre ejecuciones y producía cambios sin revisión; la IA de cada encargo la elige el usuario en Orca.
 
 - **Coste**: cada enrutado con Opus cuesta dinero (medido: US$0,08–0,12 por consulta con esfuerzo `high`).
 - **Variabilidad**: el modelo no es determinista; dos ejecuciones del mismo mensaje pueden diferir en dependencias o skills. La validación local acota el resultado, pero no lo fija.

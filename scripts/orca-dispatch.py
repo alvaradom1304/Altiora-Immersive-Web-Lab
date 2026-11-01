@@ -857,6 +857,16 @@ def main() -> int:
     )
     args = parser.parse_args()
 
+    # Modo solo plan (decisión del 01/11/2026): registrar o lanzar exige ALTIORA_DISPATCH_EXECUTE=1.
+    if (args.execute or args.launch_workers) and os.environ.get("ALTIORA_DISPATCH_EXECUTE") != "1":
+        print(
+            "Modo solo plan: --execute y --launch-workers están desactivados. "
+            "Delega desde Orca eligiendo la IA (orca worktree create --agent ...). "
+            "Para reactivarlos en una ejecución: ALTIORA_DISPATCH_EXECUTE=1.",
+            file=sys.stderr,
+        )
+        return 2
+
     full_message = " ".join(args.message).strip()
     router_meta: dict[str, Any] = {"router": "heuristic"}
     streams = None

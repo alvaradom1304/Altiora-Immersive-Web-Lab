@@ -5,14 +5,13 @@ Punto de entrada rápido para **Claude Code**, **Codex**, **Antigravity** y **Or
 ---
 
 ## 1. Enrutador Automático Multi-IA con un Solo Mensaje (`npm run orca:dispatch`)
-- **Despachador automático sobre Orca CLI:** [`scripts/orca-dispatch.py`](scripts/orca-dispatch.py)
+- **Despachador sobre Orca CLI (modo solo plan desde 01/11/2026):** [`scripts/orca-dispatch.py`](scripts/orca-dispatch.py)
   ```powershell
-  # Analiza un mensaje único, elige la mejor IA (codex / claude / antigravity) por flujo,
-  # separa worktrees si hay escrituras paralelas y registra las tareas en el Run de Orca:
-  npm run orca:dispatch -- --execute "tu mensaje"
+  # Muestra flujos, IA sugerida (codex / claude / antigravity) y esfuerzo; no registra ni lanza:
+  npm run orca:dispatch -- "tu mensaje"
 
-  # Para lanzar además las terminales de los agentes en Orca:
-  npm run orca:dispatch -- --execute --launch-workers "tu mensaje"
+  # Delegar: elegir la IA en Orca.
+  orca worktree create --name tarea-x --agent claude --prompt "encargo con resultado verificable"
   ```
 - **Reglas de decisión por IA:**
   - **Codex (`codex.cmd`):** Estrategia, oferta de US$10.000, unit economics, pricing, investigación B2B, backend/API, n8n, scripts Python y validación (`npm run check`).

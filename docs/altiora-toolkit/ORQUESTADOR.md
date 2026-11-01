@@ -6,9 +6,9 @@ El usuario autorizó a **Orca (`v1.4.245`)** como enrutador y orquestador de flu
 
 1. **Entrada de un solo mensaje:** Al recibir un objetivo del usuario, ejecutar o consultar [`scripts/orca-dispatch.py`](../../scripts/orca-dispatch.py):
    ```powershell
-   npm run orca:dispatch -- --execute "mensaje del usuario"
-   # Para lanzar además las terminales de los agentes en Orca:
-   npm run orca:dispatch -- --execute --launch-workers "mensaje del usuario"
+   # Modo solo plan (01/11/2026): muestra el reparto; no registra tareas ni lanza agentes.
+   npm run orca:dispatch -- "mensaje del usuario"
+   # Delegar: el usuario elige la IA en Orca (orca worktree create --agent claude --prompt "...").
    ```
 2. **Regla de decisión por especialidad (verificada contra `.altiora/catalog.local.json`):**
    - **Codex (`codex-cli 0.166.0`):** Estrategia, oferta de US$10.000, unit economics, pricing, investigación B2B (`cold-outbound-system`), backend/API, flujos n8n, scripts Python, seguridad OWASP y validación (`npm run check`).
