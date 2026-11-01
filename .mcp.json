@@ -6,6 +6,10 @@
       "args": [
         "scripts/after-effects-mcp.mjs"
       ]
+    },
+    "metricool": {
+      "type": "http",
+      "url": "https://ai.metricool.com/mcp"
     }
   }
 }
