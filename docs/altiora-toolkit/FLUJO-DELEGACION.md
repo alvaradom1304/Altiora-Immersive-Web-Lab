@@ -71,7 +71,8 @@ npm run orca:dispatch -- --router-model opus --router-effort xhigh "mensaje"
 - **Variabilidad**: el modelo no es determinista; dos ejecuciones del mismo mensaje pueden diferir en dependencias o skills. La validación local acota el resultado, pero no lo fija.
 - **Dependencias**: los flujos que esperan no se lanzan solos al terminar sus dependencias; hay que relanzarlos con un nuevo dispatch.
 - **Vigilancia**: solo durante `--watch-seconds` tras el lanzamiento. Si la cuota se agota más tarde, no se detecta.
-- **Orca**: `task-create` falla con `consumer_fenced` mientras el coordinador del Run `run_c4e4ac292801` sea una terminal que ya no existe. Los workers se lanzan igualmente, pero sin tarea registrada.
+- **Orca**: un Run solo se reutiliza si su terminal coordinadora sigue viva (`terminal show`); si no, se crea uno nuevo desde una terminal conectada del worktree actual. Corregido el 01/11/2026 tras el `consumer_fenced` del Run `run_c4e4ac292801`.
+- **Heurística**: el respaldo por palabras clave enruta mal encargos triviales (prueba del 01/11/2026: "corrige un typo en el README" → dominio de finanzas con skills de pricing). Usarla solo para ver un plan sin coste, no para lanzar.
 - No se han medido ahorros de tokens ni de tiempo.
 
 ## Estado verificado (01/11/2026)
@@ -79,4 +80,5 @@ npm run orca:dispatch -- --router-model opus --router-effort xhigh "mensaje"
 - Enrutador por modelo: probado con `claude-opus-5-5` en tres consultas (trivial, multidisciplinar ×2). Planes válidos, con dependencias y esfuerzo por flujo.
 - Cambio automático: probado. Codex está marcado como agotado hasta el 05/11/2026 y sus flujos se reasignan.
 - Worker de Antigravity lanzado en Orca (`term_646e44c0…`) con la prueba de revisión de la oferta.
-- Pendiente: reasignar el coordinador del Run y revisar el resultado del worker de Antigravity.
+- Run activo: `run_b9a2a9d932fd`, coordinado desde la terminal del worktree `altiora-enterprise-os` (repo Altiora-Immersive-Web-Lab). Registro de tareas probado con `--router heuristic --execute`.
+- Pendiente: revisar el resultado del worker de Antigravity en `docs/altiora-business/`.

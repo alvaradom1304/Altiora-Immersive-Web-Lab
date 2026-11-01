@@ -18,7 +18,7 @@
     "reference": "stablyai/orca",
     "revision": "1c6ac8c3c4d2c3dec2cb5966d225ca2a0e0471d3",
     "runtime": "VERIFIED_READY",
-    "orca_run_id": "run_c4e4ac292801",
+    "orca_run_id": "run_b9a2a9d932fd",
     "orca_dispatch_id": null,
     "last_auto_routing": {
       "timestamp": "2026-11-01T07:47:47Z",
@@ -76,7 +76,7 @@
         }
       ]
     },
-    "coordinator_handle": "term_d096e700-4903-461b-b6fe-6338ea7a7529"
+    "coordinator_handle": "term_aa247503-a1d2-437d-a017-0b084e8ab353"
   },
   "tasks": [
     {

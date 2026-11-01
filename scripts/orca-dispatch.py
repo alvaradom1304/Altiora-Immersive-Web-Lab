@@ -637,6 +637,11 @@ def load_orchestration_state() -> dict[str, Any]:
     return {}
 
 
+def terminal_alive(handle: str | None) -> bool:
+    # Un Run cuyo coordinador es una terminal cerrada rechaza task-create con consumer_fenced.
+    return bool(handle) and bool(run_orca(["terminal", "show", "--terminal", handle]).get("ok"))
+
+
 def ensure_orca_run(state: dict[str, Any], objective: str) -> tuple[str | None, str | None]:
     orca_cfg = state.get("orca", {})
     existing_run_id = orca_cfg.get("orca_run_id")
@@ -647,19 +652,21 @@ def ensure_orca_run(state: dict[str, Any], objective: str) -> tuple[str | None, 
         if show_res.get("ok"):
             run_obj = show_res.get("result", {}).get("run", {})
             coord = run_obj.get("coordinator_handle") or existing_coord
-            if run_obj.get("id") and coord:
+            if run_obj.get("id") and terminal_alive(coord):
                 return run_obj.get("id"), coord
 
     list_res = run_orca(["orchestration", "run-list"])
     if list_res.get("ok"):
-        runs = list_res.get("result", {}).get("runs", [])
-        if runs:
-            latest = runs[0]
-            return latest.get("id"), latest.get("coordinator_handle") or existing_coord
+        for run in list_res.get("result", {}).get("runs", []):
+            if not run.get("legacy") and terminal_alive(run.get("coordinator_handle")):
+                return run.get("id"), run.get("coordinator_handle")
 
-    term_res = run_orca(["terminal", "list"])
+    term_res = run_orca(["terminal", "list", "--worktree", "active"])
     if term_res.get("ok"):
-        terms = term_res.get("result", {}).get("terminals", [])
+        terms = [
+            t for t in term_res.get("result", {}).get("terminals", [])
+            if t.get("connected") and not t.get("orphaned")
+        ]
         if terms:
             first_handle = terms[0].get("handle")
             if first_handle:
@@ -677,7 +684,7 @@ def ensure_orca_run(state: dict[str, Any], objective: str) -> tuple[str | None, 
                     new_run = create_res.get("result", {}).get("run", {})
                     return new_run.get("id"), new_run.get("coordinator_handle") or first_handle
 
-    return existing_run_id, existing_coord
+    return None, None
 
 
 def launch_worker(agent_id: str, stream: dict[str, Any]) -> dict[str, Any]:
