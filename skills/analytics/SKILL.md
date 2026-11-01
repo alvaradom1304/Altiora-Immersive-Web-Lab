@@ -307,6 +307,7 @@ You can't tag links that ChatGPT, Claude, Perplexity, Gemini, or Copilot put in 
 
 ```markdown
 ### [Site/Product] Tracking Plan
+Plan de seguimiento analítico y telemetría.
 
 ## Overview
 - Tools: GA4, GTM

@@ -84,4 +84,4 @@ Deploy → Poll → Trigger flow.
 > --environment=<ENV_NAME>` to find the bundle ID, then trigger directly with
 > Step 7.4.
 
-> **Fallback:** See [fallback-trigger.md](references/fallback-trigger.md) if direct trigger fails.
+> **Fallback:** See [fallback-trigger.md](fallback-trigger.md) if direct trigger fails.
