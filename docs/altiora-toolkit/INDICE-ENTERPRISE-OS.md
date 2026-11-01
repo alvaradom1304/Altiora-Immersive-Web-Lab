@@ -40,7 +40,7 @@ Punto de entrada rápido para **Claude Code**, **Codex**, **Antigravity** y **Or
 - **Google Cloud & Data Agent Kit (40 skills + MCPs):** [`docs/altiora-toolkit/GOOGLE-CLOUD-KIT.md`](GOOGLE-CLOUD-KIT.md)
 - **Enrutamiento y estado de herramientas:** [`docs/altiora-toolkit/ROUTING.md`](ROUTING.md)
 - **Coordinación multi-agente y runtime Orca (`stablyai/orca`):** [`docs/altiora-toolkit/ORQUESTADOR.md`](ORQUESTADOR.md) y [`docs/altiora-toolkit/ORCA-ALTIORA.md`](ORCA-ALTIORA.md)
-- **Catálogo local de metadatos (519 entradas):** [`.altiora/catalog.local.json`](../../.altiora/catalog.local.json)
+- **Catálogo local de metadatos (519 entradas):** `.altiora/catalog.local.json` (se genera en cada equipo; no se guarda en git)
 
 ### Coordinadores principales (Skills en sesión principal)
 | Tipo de encargo | Skill coordinadora |

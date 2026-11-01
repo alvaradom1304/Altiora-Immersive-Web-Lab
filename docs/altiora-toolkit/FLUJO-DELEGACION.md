@@ -71,6 +71,8 @@ npm run orca:dispatch -- --router-model opus --router-effort xhigh "mensaje"
 
 ## Límites
 
+- **Comprobación en espacios de Orca (01/11/2026)**: `npm run check` es portátil y pasa en cualquier worktree. El doctor del Enterprise compara los hooks con rutas absolutas de la carpeta donde se instaló, así que va aparte en `npm run check:local` y solo se ejecuta en la carpeta principal (`altiora-unificado`). Detectado en la primera prueba de delegación.
+
 - **Modo solo plan (01/11/2026)**: `--execute` y `--launch-workers` salen con código 2 antes de llamar al modelo, salvo `ALTIORA_DISPATCH_EXECUTE=1`. Motivo: el enrutado automático cuesta, varía entre ejecuciones y producía cambios sin revisión; la IA de cada encargo la elige el usuario en Orca.
 
 - **Coste**: cada enrutado con Opus cuesta dinero (medido: US$0,08–0,12 por consulta con esfuerzo `high`).

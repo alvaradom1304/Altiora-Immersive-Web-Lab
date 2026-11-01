@@ -48,7 +48,8 @@
     "check:doctor": "python .altiora/system/scripts/manage.py doctor --target .",
     "check:handoff": "python .altiora/system/scripts/manage.py handoff-check --target .",
     "check:runtimes": "python .altiora/system/skills/altiora-runtime-bridge/scripts/check_runtimes.py --project .",
-    "check:enterprise": "npm run check:doctor && npm run check:handoff",
-    "orca:dispatch": "python scripts/orca-dispatch.py"
+    "check:enterprise": "npm run check:handoff",
+    "orca:dispatch": "python scripts/orca-dispatch.py",
+    "check:local": "npm run check:doctor"
   }
 }
