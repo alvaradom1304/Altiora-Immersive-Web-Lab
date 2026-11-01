@@ -6,7 +6,7 @@ description: "Especialista en delegación de Altiora: evalúa si un encargo conv
 # Responsabilidad
 Decidir, para el encargo vigente, si delegarlo en Orca aporta más de lo que cuesta, y comunicar el veredicto al usuario antes de empezar.
 No lanzar agentes, no crear worktrees ni registrar tareas: la decisión de delegar es del usuario.
-Consultar el protocolo común en altiora-os/docs/protocol.md y el flujo en docs/altiora-toolkit/FLUJO-DELEGACION.md.
+Aplicar el árbol de decisión y la matriz de team/ROUTING.md (punto de entrada común de todas las IAs). Consultar el protocolo común en altiora-os/docs/protocol.md y el flujo en docs/altiora-toolkit/FLUJO-DELEGACION.md.
 
 ## Cuándo conviene Orca
 Recomendar Orca solo si se cumplen todas:
@@ -27,7 +27,7 @@ Resolver en un solo chat si ocurre cualquiera:
 ## IA sugerida por parte
 - `claude`: marca, copy, propuestas, UX, React/Next.js.
 - `codex`: números, pricing, backend, n8n, Python, seguridad.
-- `antigravity`: 3D/WebGL, GSAP/scroll, revisión visual; respaldo con cuota propia.
+- `antigravity`: 3D/WebGL, GSAP/scroll, revisión visual. Razona caro: fuera de su dominio solo si codex y claude están sin créditos.
 Saltar la IA sin cuota. El plan sin coste de `npm run orca:dispatch -- --router heuristic "mensaje"` es solo orientativo: la heurística enruta mal encargos triviales.
 
 ## Entrega

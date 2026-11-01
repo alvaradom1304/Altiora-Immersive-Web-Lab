@@ -1,12 +1,12 @@
 # Flujo de delegación multi-IA con esfuerzo automático
 
-Versión: 2 · 01/11/2026. Complementa a [ORQUESTADOR.md](ORQUESTADOR.md) y [ORCA-ALTIORA.md](ORCA-ALTIORA.md).
+Versión: 3 · 01/11/2026. Punto de entrada común para todas las IAs: [team/ROUTING.md](../../team/ROUTING.md). Complementa a [ORQUESTADOR.md](ORQUESTADOR.md) y [ORCA-ALTIORA.md](ORCA-ALTIORA.md).
 
 ## Qué hace
 
 Ante un único mensaje del usuario, `scripts/orca-dispatch.py`:
 
-1. **Estudia el encargo con un modelo de alto rendimiento** (Claude Opus por defecto, vía `claude -p` sin herramientas). El modelo escribe un análisis: qué se pide, qué riesgo tiene y cómo dividirlo.
+1. **Estudia el encargo con un modelo** (Claude Sonnet con esfuerzo medium por defecto, vía `claude -p` sin herramientas; `--router-model` y `--router-effort` lo cambian). El modelo escribe un análisis: qué se pide, qué riesgo tiene y cómo dividirlo.
 2. **Decide los flujos**: el mínimo necesario, cada uno con un objetivo verificable y sus dependencias (`depends_on`).
 3. **Elige la IA de cada flujo**: `codex`, `claude` o `antigravity`, sin asignar ninguna que esté sin créditos.
 4. **Elige el esfuerzo de razonamiento de cada flujo**: `low`, `medium`, `high`, `xhigh` o `max`.
@@ -18,9 +18,9 @@ Ante un único mensaje del usuario, `scripts/orca-dispatch.py`:
 
 | IA | Fortaleza | Respaldo si se queda sin créditos |
 |---|---|---|
-| **codex** | Finanzas, pricing, backend, n8n, Python, seguridad, validación | antigravity → claude |
-| **claude** | Marca, copy, propuestas, Meta Ads, UX, React/Next.js | antigravity → codex |
-| **antigravity** | 3D/WebGL, GSAP/scroll, auditoría visual en Orca Browser; respaldo general con cuota independiente | claude → codex |
+| **codex** | Finanzas, pricing, backend, n8n, Python, seguridad, validación | claude → antigravity |
+| **claude** | Marca, copy, propuestas, Meta Ads, UX, React/Next.js | codex → antigravity |
+| **antigravity** | 3D/WebGL, GSAP/scroll, auditoría visual en Orca Browser. Razona caro (Gemini 4 Argon): fuera de su dominio solo si las otras dos están sin créditos | claude → codex |
 
 - Un solo flujo → worktree actual (`current`). Varios → worktrees separados y un escritor por archivo.
 - El modelo puede apartarse de la IA habitual de un dominio si lo justifica (por ejemplo, Codex sin créditos → Claude para una oferta de alto ticket).
@@ -33,14 +33,15 @@ Lo decide el enrutador por flujo con esta rúbrica (la misma se usa como respald
 |---|---|
 | `low` | Tarea mecánica, corta y sin riesgo |
 | `medium` | Encargo concreto y acotado |
-| `high` | Diseño, arquitectura, auditoría, investigación o 3D |
+| `high` | Diseño, arquitectura, auditoría o investigación (el tema 3D por sí solo no sube el nivel) |
 | `xhigh` | Consecuencias económicas, de datos, seguridad, producción o legales |
 | `max` | Profundidad pedida explícitamente o riesgo crítico |
 
 Cómo llega a cada worker (solo formas verificadas en esta PC):
 - **Claude**: `claude --effort <level>`.
 - **Codex**: `codex -c model_reasoning_effort=<level>` (no tiene `max`; se envía `xhigh`).
-- **Antigravity**: no tiene flag verificado; el nivel va como instrucción en el encargo.
+- **Antigravity**: `agy --effort <level> --model <id>` (verificado con `agy --help` y `agy models`): Gemini 3.8 Flash por debajo de high, Gemini 4 Argon solo en high o más.
+- **Claude**: modelo sugerido haiku/sonnet por debajo de high y opus en high o más.
 
 ## Cambio automático por falta de créditos
 
@@ -56,7 +57,7 @@ El especialista `altiora-os-delegation` evalúa cada encargo con varias partes y
 ## Uso
 
 ```powershell
-# Ver el plan sin registrar nada (llama a Opus: ~US$0,08–0,12 por consulta)
+# Ver el plan sin registrar nada (llama a Claude Sonnet; el coste por consulta no se ha medido)
 npm run orca:dispatch -- "mensaje del usuario"
 
 # Plan sin coste de modelo (heurística por palabras clave)
@@ -75,7 +76,7 @@ npm run orca:dispatch -- --router-model opus --router-effort xhigh "mensaje"
 
 - **Modo solo plan (01/11/2026)**: `--execute` y `--launch-workers` salen con código 2 antes de llamar al modelo, salvo `ALTIORA_DISPATCH_EXECUTE=1`. Motivo: el enrutado automático cuesta, varía entre ejecuciones y producía cambios sin revisión; la IA de cada encargo la elige el usuario en Orca.
 
-- **Coste**: cada enrutado con Opus cuesta dinero (medido: US$0,08–0,12 por consulta con esfuerzo `high`).
+- **Coste**: cada enrutado con modelo cuesta dinero. Con Opus y esfuerzo `high` se midió US$0,08–0,12 por consulta; con el valor actual (Sonnet, `medium`) no se ha medido. `--router heuristic` no tiene coste.
 - **Variabilidad**: el modelo no es determinista; dos ejecuciones del mismo mensaje pueden diferir en dependencias o skills. La validación local acota el resultado, pero no lo fija.
 - **Dependencias**: los flujos que esperan no se lanzan solos al terminar sus dependencias; hay que relanzarlos con un nuevo dispatch.
 - **Vigilancia**: solo durante `--watch-seconds` tras el lanzamiento. Si la cuota se agota más tarde, no se detecta.

@@ -2,6 +2,8 @@
 
 Seguir [AGENTS.md](AGENTS.md) y sus límites comerciales, de propiedad intelectual y autorización. Para trabajar como un rol, cargar `team/agents/<rol>.md` y coordinarse en el [chat del equipo](team/chat/README.md) firmando como `gemini/<rol>`: reclamar la tarea antes de editar y cerrar con evidencia. Los archivos y tests no prueban conexiones de la sesión ni aprobación comercial.
 
+Ante cualquier encargo, aplicar primero [team/ROUTING.md](team/ROUTING.md): decide si lo hace Antigravity, un subagente u otra IA, y fija el formato de entrega y la puerta de calidad comunes.
+
 ## Antigravity — carga ligera
 - `.agents/agents/` tiene los subagentes, `.agents/skills/` el catálogo de skills y `.agents/rules/` las reglas de selección. Elegir solo los roles y skills del encargo; no recorrer el catálogo completo.
 - Cargar una skill solo cuando se va a usar, y sus `references/` solo si el paso lo exige. Los documentos enlazados abajo se leen bajo demanda, nunca por adelantado.

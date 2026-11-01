@@ -3,6 +3,9 @@
 ## Objetivo
 Crear experiencias originales, fluidas y comerciales. El primer caso es La Central del Queso. Usar referencias para resolver problemas concretos de dirección, cámara, materiales y navegación.
 
+## Delegación: punto de entrada único
+**Todas las IAs (Claude Code, Codex, Antigravity), también desde Orca:** ante cualquier encargo, aplicar [team/ROUTING.md](team/ROUTING.md) antes de empezar. Decide si la IA actual lo hace, lo delega a un subagente o propone pasarlo a otra IA, con qué rol, skills y esfuerzo, y fija el formato de entrega y la puerta de calidad comunes para que el resultado sea el mismo con cualquier IA.
+
 ## Continuidad entre chats / recuperación automática de contexto
 
 **Antes de ejecutar cualquier nuevo milestone o recibir "sigue/continúa"**: leer [checkpoint de continuidad](continuity/checkpoint.json) y [guía de recuperación](continuity/README.md); en un checkout local, usar `npm run resume`. Revisar PR/CI actuales antes de confiar en un snapshot. No hacer repetir al usuario lo que ya está documentado; completar acciones desbloqueadas en el turno. Después de fusionar un milestone, dejar checkpoint actualizado y verificado. No interpretar "This response couldn't load" de ChatGPT como fallo de GitHub.
