@@ -40,7 +40,7 @@ Otro proyecto (`~/OneDrive/Desktop/altiora`) tiene diez comandos de Altiora OS: 
 
 ## Actualización 2026-10-31: núcleo por uso demostrado
 
-Con autorización del dueño, el listado automático se reduce a un **núcleo de 49 skills** definido en `references/skill-core.json`: las 34 con uso demostrado en trabajo real y 15 de método. Las otras 214 quedan en **reserva**: conservan su puente en `.claude/skills/`, se invocan con `/nombre` y aparecen en `INDEX.md` con «Auto: —», pero llevan `disable-model-invocation: true`.
+Con autorización del dueño, el listado automático se reduce a un **núcleo de 51 skills** definido en `references/skill-core.json`: las 34 con uso demostrado en trabajo real y 17 de método (incluido `aem-company-builder`, método único de agencia desde el 2026-10-31). Las otras 212 quedan en **reserva**: conservan su puente en `.claude/skills/`, se invocan con `/nombre` y aparecen en `INDEX.md` con «Auto: —», pero llevan `disable-model-invocation: true`.
 
 El criterio de 2026-10-29 (no ocultar por falta de rol asignado) sigue siendo válido; lo que cambia es el criterio de visibilidad: **uso demostrado**, no asignación a un rol. Promover una skill = añadirla a `skill-core.json` y ejecutar `npm run agents:build`. Evidencia y método en la [auditoría](auditoria-infraestructura-agentes-2026-10-31.md). Antigravity no aplica esta distinción: sigue recibiendo las 263 skills.
 

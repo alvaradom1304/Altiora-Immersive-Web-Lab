@@ -41,7 +41,7 @@
     {
       "name": "aem-company-builder",
       "source": "skills/aem-company-builder/SKILL.md",
-      "model_invocable": false,
+      "model_invocable": true,
       "assigned_agents": []
     },
     {
@@ -360,7 +360,7 @@
     {
       "name": "business-decision-gates",
       "source": "skills/business-decision-gates/SKILL.md",
-      "model_invocable": false,
+      "model_invocable": true,
       "assigned_agents": [
         "experience-director"
       ]

@@ -40,7 +40,10 @@
     "top10-video-research",
     "whatsapp-lead-to-sale"
   ],
+  "agency_method": "aem-company-builder es el método único de agencia (decisión del dueño, 2026-10-31). agency-os, company-builder-orchestrator, aem-stage-01 a 07 y enterprise-growth-orchestrator quedan en reserva.",
   "method": [
+    "aem-company-builder",
+    "business-decision-gates",
     "altiora-agent-orchestrator",
     "altiora-quality-review",
     "altiora-repository-research",
