@@ -7,7 +7,7 @@ Fecha: 2026-10-31. Rama: `feature/altiora-creative-ads-media-pipeline` (base `1f
 - El catálogo tiene **263 skills y 24 agentes**. En el trabajo real de este repositorio aparecen **34 skills (13 %)** y **18 agentes**.
 - Hay grupos de skills que hacen casi lo mismo (por ejemplo, cuatro de conversión y cinco de SEO) y siete adaptadores locales que repiten roles canónicos.
 - Las instrucciones que se cargan en cada sesión repiten reglas: `CLAUDE.md` tiene cuatro secciones sobre After Effects y la sección «Selección y contexto» aparece en `CLAUDE.md`, `AGENTS.md` y las preferencias globales.
-- Propuesta: un **núcleo** de skills visibles para el modelo, una **reserva** que sigue disponible por comando y un **archivo** para lo duplicado. Requiere revertir una decisión del 2026-10-29 (sección 6).
+- Aplicado: un **núcleo** de 49 skills visibles para el modelo y una **reserva** de 214 disponible por comando, incluidas las duplicadas (sección 6).
 
 Esto coincide con el hueco 4 de la [diferenciación](../strategy/DIFERENCIACION.md): muchas capacidades documentadas y pocas entregas terminadas.
 
@@ -78,7 +78,7 @@ Esto coincide con el hueco 4 de la [diferenciación](../strategy/DIFERENCIACION.
 
 1. **Núcleo (visible para el modelo) — APLICADO:** 49 skills en `references/skill-core.json`: las 34 con uso y 15 de método (altiora-agent-orchestrator, altiora-quality-review, altiora-repository-research, competitor-analysis, gsap-animation, immersive-interaction-lab, logistics-supply-chain, premium-branding, systematic-debugging, threejs-experience, verification-before-completion, web-design-guidelines, web-performance, webapp-testing, writing-plans).
 2. **Reserva — APLICADO:** las otras 214 reciben `disable-model-invocation: true` en su puente generado, sin tocar los `SKILL.md` fuente ni los originales importados. Siguen disponibles con `/nombre` y en `INDEX.md`. Se promueven al núcleo cuando una tarea real las use.
-3. **Archivo:** las duplicadas de la sección 4 que no aporten nada propio se mueven a una carpeta fuera de `skills/`, con nota en `references/skill-sources.json`.
+3. **Archivo — DESCARTADO (2026-10-31):** el dueño decidió dejar las duplicadas de la sección 4 en reserva en lugar de archivarlas. No se mueve ninguna skill; las propuestas «mantener / a reserva» de la sección 4 quedan como guía para elegir cuál promover al núcleo.
 4. **Agentes:** convertir los 7 adaptadores locales en alias de los roles canónicos, o archivarlos, y reducir las direcciones a las que se usan.
 5. **Instrucciones:** unificar las secciones repetidas de `CLAUDE.md` en una sola por tema. Tu `CLAUDE.md` tiene cambios sin commitear, así que esto se hace después de que los integres.
 
@@ -87,7 +87,7 @@ Esto coincide con el hueco 4 de la [diferenciación](../strategy/DIFERENCIACION.
 ## 7. Decisiones que necesito de ti
 
 1. ~~¿Aceptas el criterio de uso demostrado para el núcleo?~~ Aprobado el 2026-10-31; test y [claude-discovery.md](claude-discovery.md) actualizados.
-2. ¿Archivar o solo pasar a reserva las skills duplicadas?
+2. ~~¿Archivar o solo pasar a reserva las skills duplicadas?~~ Quedan en reserva (2026-10-31).
 3. ¿Qué método de agencia queda como único: Agency OS, AEM Company Builder u otro?
 4. ¿Se mantienen los agentes `immersive-*` porque los usas desde las preferencias globales?
 
