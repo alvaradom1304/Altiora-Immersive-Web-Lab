@@ -2,8 +2,10 @@
 """Read-only sample measurements for local integer PCM WAV files (not approval)."""
 
 import argparse
+import hashlib
 import json
 import math
+import os
 from pathlib import Path
 import struct
 import sys
@@ -47,10 +49,19 @@ def analyze(input_path, *, max_bytes=DEFAULT_MAX_BYTES,
             or max_seconds <= 0):
         raise AudioQAError("Size and duration limits must be finite and positive")
     with path.open("rb") as stream:
+        original_stat = os.fstat(stream.fileno())
         stream.seek(0, 2)
         size = stream.tell()
         if size > max_bytes:
             raise AudioQAError("WAV exceeds maximum file size")
+        # Hash the complete bounded RIFF, including chunks not used by the meter.
+        source_hash = hashlib.sha256()
+        stream.seek(0)
+        remaining_bytes = size
+        while remaining_bytes:
+            count = min(remaining_bytes, 1024 * 1024)
+            source_hash.update(_read(stream, count))
+            remaining_bytes -= count
         stream.seek(0)
         riff, declared, kind = struct.unpack("<4sI4s", _read(stream, 12))
         if riff != b"RIFF" or kind != b"WAVE":
@@ -118,10 +129,14 @@ def analyze(input_path, *, max_bytes=DEFAULT_MAX_BYTES,
                 if channels == 2:
                     cross += samples[0] * samples[1]
             remaining -= count
-        # Detect common concurrent size changes; the input must stay stable.
+        # Detect common concurrent edits; caller must keep the input stable.
+        # This is not an atomic snapshot or a lock against hostile writers.
         stream.seek(0, 2)
-        if stream.tell() != size:
-            raise AudioQAError("Input size changed during analysis")
+        final_stat = os.fstat(stream.fileno())
+        if (stream.tell() != size or
+                any(getattr(final_stat, key) != getattr(original_stat, key)
+                    for key in ('st_size', 'st_mtime_ns', 'st_ctime_ns'))):
+            raise AudioQAError("Input changed during analysis")
     correlation = None
     mono_loss = None
     cancellation = False
@@ -139,6 +154,7 @@ def analyze(input_path, *, max_bytes=DEFAULT_MAX_BYTES,
             cancellation = ratio <= 0.01
     return {
         "status": "MEASURED_NOT_APPROVED",
+        "source": {"sha256": source_hash.hexdigest(), "size_bytes": size},
         "sample_rate_hz": rate, "channels": channels, "bit_depth": bits,
         "frames": frames, "duration_seconds": duration,
         "channel_measurements": [

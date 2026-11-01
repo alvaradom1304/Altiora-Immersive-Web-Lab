@@ -43,6 +43,29 @@ function expectBlocked(bundle, pattern) {
   assert.ok(result.blockers.some(x => pattern.test(x)), JSON.stringify(result.blockers));
 }
 
+function refreshAudioDigest(bundle) {
+  const digest = reportDigest(bundle.audio.report);
+  bundle.audio.report_sha256 = digest;
+  for (const review of Object.values(bundle.reviews)) review.audio_report_sha256 = digest;
+}
+
+test('measured WAV identity agrees with sidecar hash while legacy evidence remains explicitly attested', () => {
+  const legacy = fixture();
+  assert.equal(evaluateProductionQA(legacy).status, 'READY_FOR_CLIENT_REVIEW');
+  const bundle = fixture();
+  bundle.audio.report.source = {sha256: sourceHash, size_bytes: 1440044};
+  refreshAudioDigest(bundle);
+  assert.equal(evaluateProductionQA(bundle).status, 'READY_FOR_CLIENT_REVIEW');
+  for (const source of [null, {}, {sha256: 'f'.repeat(64), size_bytes: 1440044},
+    {sha256: sourceHash, size_bytes: 1}, {sha256: sourceHash, size_bytes: '1440044'},
+    {sha256: sourceHash, size_bytes: -1}]) {
+    const bad = structuredClone(bundle);
+    bad.audio.report.source = source;
+    refreshAudioDigest(bad);
+    expectBlocked(bad, /Measured WAV source identity/);
+  }
+});
+
 function withOriginalVideoBlockers() {
   const bundle = fixture();
   bundle.video.report = makeQAReport({streams: [

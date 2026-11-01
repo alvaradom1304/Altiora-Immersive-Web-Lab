@@ -4,6 +4,7 @@ import tempfile
 import os
 import subprocess
 import unittest
+from unittest.mock import patch
 from pathlib import Path
 
 spec = importlib.util.spec_from_file_location('library', Path(__file__).with_name('library.py'))
@@ -12,6 +13,110 @@ spec.loader.exec_module(library)
 
 
 class LibraryTests(unittest.TestCase):
+    def test_check_unreadable_source_is_unverified(self):
+        with tempfile.TemporaryDirectory() as folder:
+            catalog = library.build([folder])
+            with patch.object(library, 'build', side_effect=PermissionError('PRIVATE OS DETAIL')):
+                report = library.check(catalog)
+            self.assertEqual(report['status'], 'UNVERIFIED')
+            self.assertNotIn('PRIVATE', json.dumps(report))
+
+    def test_check_rejects_invalid_entries_and_duplicate_paths(self):
+        with tempfile.TemporaryDirectory() as folder:
+            catalog = library.build([folder])
+            entry = {'kind': 'skill', 'name': 'same', 'description': 'Same', 'path': str(Path(folder)/'SKILL.md')}
+            for entries in ([entry, entry], [{}], ['invalid'], [dict(entry, path='relative')]):
+                self.assertEqual(library.check(dict(catalog, entries=entries))['status'], 'INVALID_CATALOG')
+
+    def test_linked_root_and_linked_ancestor_are_never_certified(self):
+        with tempfile.TemporaryDirectory() as folder, tempfile.TemporaryDirectory() as other:
+            root = Path(folder)/'root'
+            root.mkdir()
+            catalog = library.build([root])
+            root.rmdir()
+            try:
+                root.symlink_to(other, target_is_directory=True)
+            except OSError:
+                if os.name != 'nt':
+                    self.skipTest('Creating symlinks unavailable')
+                result = subprocess.run(['cmd', '/c', 'mklink', '/J', str(root), other], capture_output=True)
+                if result.returncode:
+                    self.skipTest('Neither symlinks nor junctions available')
+            (Path(other)/'child').mkdir()
+            self.assertEqual(library.check(catalog)['status'], 'UNVERIFIED')
+            self.assertRaises(ValueError, library.build, [root/'child'])
+
+    def test_check_detects_edits_additions_removals_and_rebuild(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            path = root/'SKILL.md'
+            path.write_text('---\nname: original\ndescription: First\n---\nPRIVATE BODY\n', encoding='utf-8')
+            catalog = library.build([root])
+            self.assertEqual(library.check(catalog)['status'], 'METADATA_CURRENT')
+            path.write_text('---\nname: revised\ndescription: Second\n---\nPRIVATE BODY\n', encoding='utf-8')
+            other = root/'extra'
+            other.mkdir()
+            (other/'SKILL.md').write_text('---\nname: extra\ndescription: Added\n---\n', encoding='utf-8')
+            report = library.check(catalog)
+            self.assertEqual(report['status'], 'STALE')
+            self.assertEqual(report['changed'], [str(path.resolve())])
+            self.assertEqual(report['added'], [str((other/'SKILL.md').resolve())])
+            self.assertNotIn('PRIVATE BODY', json.dumps(report))
+            path.unlink()
+            self.assertEqual(library.check(catalog)['removed'], [str(path.resolve())])
+            self.assertEqual(library.check(library.build([root]))['status'], 'METADATA_CURRENT')
+
+    def test_body_only_changes_do_not_require_catalog_rebuild(self):
+        with tempfile.TemporaryDirectory() as folder:
+            path = Path(folder)/'SKILL.md'
+            header = '---\nname: same\ndescription: Same metadata\n---\n'
+            path.write_text(header + 'BODY ONE', encoding='utf-8')
+            catalog = library.build([folder])
+            path.write_text(header + 'BODY TWO', encoding='utf-8')
+            self.assertEqual(library.check(catalog)['status'], 'METADATA_CURRENT')
+
+    def test_check_legacy_missing_roots_and_invalid_catalog_fail_closed(self):
+        self.assertEqual(library.check({'schema_version': 1, 'entries': []})['status'], 'LEGACY_REBUILD_REQUIRED')
+        for data in ({}, [], {'schema_version': 1, 'roots': [], 'entries': []},
+                     {'schema_version': 1, 'roots': ['relative'], 'entries': []}):
+            self.assertEqual(library.check(data)['status'], 'INVALID_CATALOG')
+        with tempfile.TemporaryDirectory() as folder:
+            catalog = library.build([folder])
+        self.assertEqual(library.check(catalog)['status'], 'UNVERIFIED')
+
+    def test_recorded_roots_are_absolute_deduplicated_and_keep_variants(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            for name in ('first', 'second'):
+                (root/name).mkdir()
+                (root/name/'SKILL.md').write_text('---\nname: same\ndescription: Same\n---\n', encoding='utf-8')
+            catalog = library.build([root, root])
+            self.assertEqual(catalog['roots'], [str(root.absolute())])
+            self.assertEqual(library.check(catalog)['status'], 'METADATA_CURRENT')
+            (root/'second'/'SKILL.md').unlink()
+            report = library.check(catalog)
+            self.assertEqual(report['status'], 'STALE')
+            self.assertEqual(len(report['removed']), 1)
+
+    def test_check_cli_json_and_nonzero_for_stale_legacy_or_invalid(self):
+        with tempfile.TemporaryDirectory() as folder:
+            catalog_path = Path(folder)/'catalog.json'
+            catalog_path.write_text(json.dumps(library.build([folder])), encoding='utf-8')
+            command = [os.sys.executable, str(Path(library.__file__).resolve()), 'check', '--catalog', str(catalog_path)]
+            current = subprocess.run(command, capture_output=True, text=True, cwd=Path(folder).parent)
+            self.assertEqual(current.returncode, 0, current.stderr)
+            self.assertEqual(json.loads(current.stdout)['status'], 'METADATA_CURRENT')
+            (Path(folder)/'SKILL.md').write_text('---\nname: new\ndescription: New\n---\n', encoding='utf-8')
+            stale = subprocess.run(command, capture_output=True, text=True)
+            self.assertEqual(stale.returncode, 1)
+            self.assertEqual(json.loads(stale.stdout)['status'], 'STALE')
+            self.assertEqual(stale.stderr, '')
+            for content, status in (('{"schema_version":1,"entries":[]}', 'LEGACY_REBUILD_REQUIRED'), ('{broken', 'INVALID_CATALOG')):
+                catalog_path.write_text(content, encoding='utf-8')
+                result = subprocess.run(command, capture_output=True, text=True)
+                self.assertEqual(result.returncode, 1)
+                self.assertEqual(json.loads(result.stdout)['status'], status)
+
     def test_short_names_do_not_match_inside_unrelated_words(self):
         catalog = {'entries': [
             {'name': 'seo', 'description': 'Search optimization', 'path': 'seo'},
