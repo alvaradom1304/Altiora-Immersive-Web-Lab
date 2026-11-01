@@ -86,5 +86,5 @@ npm run orca:dispatch -- --router-model opus --router-effort xhigh "mensaje"
 - Enrutador por modelo: probado con `claude-opus-5-5` en tres consultas (trivial, multidisciplinar ×2). Planes válidos, con dependencias y esfuerzo por flujo.
 - Cambio automático: probado. Codex está marcado como agotado hasta el 05/11/2026 y sus flujos se reasignan.
 - Worker de Antigravity lanzado en Orca (`term_646e44c0…`) con la prueba de revisión de la oferta.
-- Run activo: `run_b9a2a9d932fd`, coordinado desde la terminal del worktree `altiora-enterprise-os` (repo Altiora-Immersive-Web-Lab). Registro de tareas probado con `--router heuristic --execute`.
+- Run activo: `run_b9a2a9d932fd`, creado desde el worktree `altiora-enterprise-os`; desde la unificación se trabaja en `altiora-unificado` y el despachador crea un Run nuevo si su coordinador ya no está vivo. Registro de tareas probado con `--router heuristic --execute`.
 - Pendiente: revisar el resultado del worker de Antigravity en `docs/altiora-business/`.
