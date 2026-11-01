@@ -21,3 +21,4 @@ out/
 .env.local
 .env*.local
 *.pyc
+graphify-out/
