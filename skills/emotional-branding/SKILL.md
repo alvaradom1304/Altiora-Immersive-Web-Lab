@@ -1,6 +1,6 @@
 ---
 name: emotional-branding
-description: "Diseñar campañas de branding emocional que conecten motivaciones reales con recuerdos de marca y acciones de compra medibles, de manera ética."
+description: "Usar para diseñar campañas de branding emocional que conecten motivaciones reales con recuerdos de marca."
 metadata:
   version: 1.0.0
   owner: Altiora Commerce Growth OS

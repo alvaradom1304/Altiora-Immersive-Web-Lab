@@ -480,15 +480,6 @@ For tactical guidance on SaaS product pages, blog content, comparison/alternativ
 
 For implementation, see the [tools registry](https://github.com/coreyhaines31/marketingskills/blob/main/tools/REGISTRY.md).
 
-| Tool | Use For |
-|------|---------|
-| `semrush` | AI Overview tracking, keyword research, content gap analysis |
-| `ahrefs` | Backlink analysis, content explorer, AI Overview data |
-| `gsc` | Search Console performance data, query tracking |
-| `ga4` | Referral traffic from AI sources |
-
----
-
 ## Related Skills
 
 - **seo-audit**: For traditional technical and on-page SEO audits; **link-building** for earning links and mentions on the third-party pages AI engines cite

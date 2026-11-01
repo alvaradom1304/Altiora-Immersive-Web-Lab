@@ -21,3 +21,4 @@ for (const name of ['analytics', 'mcp-builder', 'skill-creator']) {
     }
   });
 }
+
