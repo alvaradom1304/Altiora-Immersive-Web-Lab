@@ -1,3 +1,10 @@
+# Las huellas de los manifiestos de Altiora se calculan con finales LF.
+* text=auto eol=lf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# Lab: excepciones (van después para prevalecer)
 # El chat del equipo es solo-añadir: fusionar ramas uniendo líneas evita conflictos.
 team/chat/messages.jsonl merge=union
 

@@ -2,12 +2,12 @@
   "name": "altiora-immersive-web-lab",
   "version": "0.1.0",
   "private": true,
-  "description": "Investigación y proceso reproducible para experiencias web inmersivas",
+  "description": "Altiora: investigación web inmersiva, equipo de agentes y sistema operativo de consultoría (estrategia, marca, web inmersiva e IA)",
   "engines": {
     "node": ">=20"
   },
   "scripts": {
-    "check": "npm run check:base && npm run operations:test && npm run toolkit:test && npm run runtime:test && npm run librarian:test && npm run routing:eval && npm run audio:test",
+    "check": "npm run check:base && npm run operations:test && npm run toolkit:test && npm run runtime:test && npm run librarian:test && npm run routing:eval && npm run audio:test && npm run check:enterprise",
     "agents:build": "node scripts/build-agents.mjs && node scripts/build-antigravity.mjs",
     "chat": "node scripts/team-chat.mjs",
     "skills:audit": "node scripts/audit-skills.mjs",
@@ -21,7 +21,7 @@
     "visual:preflight:test": "node --test scripts/visual-preflight.test.mjs",
     "visual:watch": "node scripts/visual-watch.mjs",
     "visual:watch:test": "node --test scripts/visual-watch.test.mjs",
-    "check:base": "node scripts/verify-catalog.mjs && node scripts/audit-skills.mjs && node scripts/build-agents.mjs --check && node scripts/build-antigravity.mjs --check && node --test scripts/discovery.test.mjs && node --test scripts/skill-security-gate.test.mjs && npm run continuity:check && npm run visual:preflight:test && npm run visual:watch:test && npm run video:master:test && npm run adobe:test && npm run ae:clients:test && npm run after-effects:setup:test",
+    "check:base": "node scripts/verify-catalog.mjs && node scripts/audit-skills.mjs && node scripts/build-agents.mjs --check && node scripts/build-antigravity.mjs --check && node --test scripts/discovery.test.mjs && node --test scripts/routing.test.mjs && node --test scripts/skill-security-gate.test.mjs && npm run continuity:check && npm run visual:preflight:test && npm run visual:watch:test && npm run video:master:test && npm run adobe:test && npm run ae:clients:test && npm run after-effects:setup:test",
     "visual:license:check": "node scripts/verify-catalog.mjs",
     "video:master:test": "node --test experiments/tilicheros-motion-lab/scripts/verify-master.test.mjs",
     "adobe:check": "node scripts/after-effects-bridge.mjs --check",
@@ -44,6 +44,12 @@
     "runtime:smoke": "python scripts/runtime-smoke.py",
     "runtime:test": "python -m unittest discover -s scripts -p test_runtime_smoke.py",
     "librarian:test": "python -m unittest discover -s skills/altiora-bibliotecario/scripts -p \"test_*.py\"",
-    "audio:test": "python -m unittest discover -s skills/audio-production/scripts -p test_audio_qa.py"
+    "audio:test": "python -m unittest discover -s skills/audio-production/scripts -p test_audio_qa.py",
+    "check:doctor": "python .altiora/system/scripts/manage.py doctor --target .",
+    "check:handoff": "python .altiora/system/scripts/manage.py handoff-check --target .",
+    "check:runtimes": "python .altiora/system/skills/altiora-runtime-bridge/scripts/check_runtimes.py --project .",
+    "check:enterprise": "npm run check:handoff",
+    "orca:dispatch": "python scripts/orca-dispatch.py",
+    "check:local": "npm run check:doctor"
   }
 }

@@ -43,11 +43,12 @@
   "agency_method": "aem-company-builder es el método único de agencia (decisión del dueño, 2026-10-31). agency-os, company-builder-orchestrator, aem-stage-01 a 07 y enterprise-growth-orchestrator quedan en reserva.",
   "method": [
     "aem-company-builder",
-    "business-decision-gates",
     "altiora-agent-orchestrator",
     "altiora-quality-review",
     "altiora-repository-research",
+    "business-decision-gates",
     "competitor-analysis",
+    "graphify",
     "gsap-animation",
     "immersive-interaction-lab",
     "logistics-supply-chain",
@@ -59,5 +60,16 @@
     "web-performance",
     "webapp-testing",
     "writing-plans"
-  ]
+  ],
+  "sales": [
+    "account-research",
+    "call-prep",
+    "call-summary",
+    "close-plan",
+    "cold-email",
+    "draft-outreach",
+    "revops",
+    "sales-enablement"
+  ],
+  "sales_note": "Bloque B de docs/operations/propuesta-equipo-ia-2026-11-01.md, aprobado por el dueño el 2026-11-01: entran al núcleo por decisión, no por uso demostrado."
 }

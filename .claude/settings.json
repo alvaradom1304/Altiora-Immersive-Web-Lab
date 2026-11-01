@@ -1,5 +1,31 @@
 {
   "env": {
-    "SLASH_COMMAND_TOOL_CHAR_BUDGET": "140855"
+    "SLASH_COMMAND_TOOL_CHAR_BUDGET": "205310"
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "C:/Users/Usuario/AppData/Local/Programs/Python/Python312/python.exe C:/Users/Usuario/orca/workspaces/Altiora-Immersive-Web-Lab/altiora-unificado/.altiora/system/scripts/guard.py --runtime claude --project C:/Users/Usuario/orca/workspaces/Altiora-Immersive-Web-Lab/altiora-unificado --event SessionStart",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "C:/Users/Usuario/AppData/Local/Programs/Python/Python312/python.exe C:/Users/Usuario/orca/workspaces/Altiora-Immersive-Web-Lab/altiora-unificado/.altiora/system/scripts/guard.py --runtime claude --project C:/Users/Usuario/orca/workspaces/Altiora-Immersive-Web-Lab/altiora-unificado --event PreToolUse",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
   }
 }

@@ -6,6 +6,87 @@
       "args": [
         "scripts/after-effects-mcp.mjs"
       ]
+    },
+    "altiora-shared": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "C:/Users/Usuario/Documents/Codex/2026-10-18/referenced-chatgpt-conversation-this-is-an-2/outputs/altiora-connection/shared",
+        "C:/Users/Usuario/Documents/Codex/2026-10-30/referenced-chatgpt-conversation-this-is-an/work/Altiora-Immersive-Web-Lab"
+      ]
+    },
+    "chrome-devtools": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "chrome-devtools-mcp@latest"
+      ]
+    },
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@playwright/mcp@latest"
+      ]
+    },
+    "dak-notebook": {
+      "command": "node",
+      "args": [
+        "C:/Users/Usuario/.gemini/config/plugins/dak/mcp/dist/index.js",
+        "--mode=notebook"
+      ]
+    },
+    "dak-data-agent-kit": {
+      "command": "node",
+      "args": [
+        "C:/Users/Usuario/.gemini/config/plugins/dak/mcp/dist/index.js",
+        "--mode=data-agent-kit"
+      ]
+    },
+    "dak-gcs": {
+      "command": "node",
+      "args": [
+        "C:/Users/Usuario/.gemini/config/plugins/dak/mcp/bin/mcp_proxy_bundle.cjs",
+        "https://storage.googleapis.com/storage/mcp"
+      ],
+      "env": {
+        "X_GOOG_PROXY_HEADERS": "{\"User-Agent\":\"datacloud.altiora\"}"
+      }
+    },
+    "dak-bigquery": {
+      "command": "node",
+      "args": [
+        "C:/Users/Usuario/.gemini/config/plugins/dak/mcp/bin/mcp_proxy_bundle.cjs",
+        "https://bigquery.googleapis.com/mcp"
+      ],
+      "env": {
+        "X_GOOG_PROXY_HEADERS": "{\"User-Agent\":\"datacloud.altiora\"}"
+      }
+    },
+    "dak-cloudsql": {
+      "command": "node",
+      "args": [
+        "C:/Users/Usuario/.gemini/config/plugins/dak/mcp/bin/mcp_proxy_bundle.cjs",
+        "https://sqladmin.googleapis.com/mcp"
+      ],
+      "env": {
+        "X_GOOG_PROXY_HEADERS": "{\"User-Agent\":\"datacloud.altiora\"}"
+      }
+    },
+    "dak-firestore": {
+      "command": "node",
+      "args": [
+        "C:/Users/Usuario/.gemini/config/plugins/dak/mcp/bin/mcp_proxy_bundle.cjs",
+        "https://firestore.googleapis.com/mcp"
+      ],
+      "env": {
+        "X_GOOG_PROXY_HEADERS": "{\"User-Agent\":\"datacloud.altiora\"}"
+      }
+    },
+    "metricool": {
+      "type": "http",
+      "url": "https://ai.metricool.com/mcp"
     }
   }
 }

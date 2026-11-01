@@ -37,6 +37,7 @@ El [Director de Experiencia Audiovisual](creative/visual-studio/agents/audiovisu
 3. Seguir la [decisión de arquitectura](docs/decisions/0001-immersive-foundation.md).
 4. Abrir el [caso La Central del Queso](projects/la-central-del-queso/BRIEF.md).
 5. Trabajar con el [proceso de experimentos](docs/workflows/immersive-project.md) y la [plantilla](templates/experiment.md).
+6. Revisar la [estrategia de diferenciación](docs/strategy/DIFERENCIACION.md) y el [borrador de paquetes](docs/strategy/PAQUETES-BORRADOR.md).
 
 La [validación](docs/research/VALIDATION.md) distingue lo comprobado de lo pendiente.
 
@@ -109,3 +110,28 @@ Se añadió un [puente local aerender](scripts/after-effects-bridge.mjs), [guion
 
 ## Conexión de After Effects para Claude/Gemini/Antigravity/Codex
 [Guía de un solo paso local](creative/visual-studio/after-effects/MCP-SETUP.md): `npm run ae:clients:plan` y `npm run ae:clients:connect`. Las configuraciones son locales de cada cliente y requieren instalaciones reales; no concede control remoto desde ChatGPT web o móvil.
+
+---
+
+# Altiora Enterprise OS (integrado el 01/11/2026)
+
+<!-- ALTIORA_BUSINESS_ENTRYPOINT -->
+## Operación comercial vigente
+
+[Oferta, economía de proyecto y experiencia de cliente](docs/altiora-business/INICIO.md): objetivo US$10.000 por proyecto y mantenimiento mensual opcional. Etapa de validación, con cero clientes de pago confirmados. Capacidades y aspiraciones descritas abajo no acreditan resultados comerciales o personal contratado.
+
+# Altiora Enterprise OS
+
+**Altiora** diagnostica, diseña e implementa sistemas de crecimiento para empresas: estrategia, marca, marketing, ventas, tecnología y operación conectadas con resultados que puedan medirse. Su alcance incluye puntos de contacto digitales y físicos cuando el proyecto y la capacidad lo permitan. [Alcance de la empresa](docs/altiora-business/POSICIONAMIENTO.md).
+
+Este repositorio contiene la arquitectura central (AEM OS), la biblioteca de capacidades empresariales (Skills) y el motor de automatización que permite a Altiora diagnosticar, construir, operar y escalar empresas.
+
+## Laboratorio Fundacional: La Central del Queso
+Para validar y demostrar la capacidad operativa del sistema al mundo empresarial, Altiora utiliza **La Central del Queso** como su caso de estudio y laboratorio piloto. Este proyecto aplica en tiempo real todas las metodologías de la firma:
+- Business Discovery & Research
+- Sales & Marketing Intelligence
+- Premium Web Experience & E-commerce
+- AI Automation & Growth Analytics
+
+---
+*Misión: Construir sistemas inteligentes capaces de ayudar a empresas a entender mejor su realidad, tomar mejores decisiones, operar mejor, crecer y escalar.*

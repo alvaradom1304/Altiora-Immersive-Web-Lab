@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-10-30",
+  "purpose": "Fuentes externas para alta calidad audiovisual y protección de skills. Registrar NO equivale a instalar, ejecutar ni auditar completamente cada código.",
+  "selection_criteria": [
+    "Función concreta no cubierta por Altiora",
+    "Mantenimiento y documentación oficial",
+    "Comunidad y adopción verificables (estrellas como indicador débil)",
+    "Licencia y costo de uso comercial",
+    "Dependencias, aislamiento y superficie de ataque",
+    "Prueba sobre material real antes de adoptar"
+  ],
+  "policy": "approve-by-exception: reference/pilot/priority no autoriza instalación; pasar security gate, licencia, revisión humana y PR.",
+  "repositories": [
+    {
+      "id": "NVIDIA/SkillSpector",
+      "url": "https://github.com/NVIDIA/SkillSpector",
+      "revision": "54921c8c7c23008c8af2328d5ab492a904b6ece4",
+      "license": "Apache-2.0",
+      "decision": "priority",
+      "purpose": "Seguridad de skills: prompt injection, exfiltración y riesgos de ejecución.",
+      "caution": "Version 2.12.0 al revisar; alpha, usar análisis estático sin LLM; CI opcional; revisión humana obligatoria.",
+      "installed": false,
+      "scan_status": "NOT_RUN"
+    },
+    {
+      "id": "remotion-dev/remotion",
+      "url": "https://github.com/remotion-dev/remotion",
+      "revision": "3b7e7008a495094424859e9cf4f66f4844d2dfd9",
+      "license": "custom-commercial",
+      "decision": "priority",
+      "purpose": "Video programático, motion graphics, subtítulos y composición en React.",
+      "caution": "Licencia comercial depende de tamaño y entidad; comprobar términos antes de producir para clientes.",
+      "installed": false,
+      "scan_status": "NOT_RUN"
+    },
+    {
+      "id": "remotion-dev/skills",
+      "url": "https://github.com/remotion-dev/skills",
+      "revision": "30d4553ecd46fbc5212fd0ff006ae43af522158b",
+      "license": "verify-per-file",
+      "decision": "reference",
+      "purpose": "Buenas prácticas de Remotion para agentes, animaciones y captions.",
+      "caution": "No instalar a ciegas; revisar cada SKILL.md, autoría y licencia; evitar duplicar skills de Altiora.",
+      "installed": false,
+      "scan_status": "NOT_RUN"
+    },
+    {
+      "id": "remotion-dev/claude-code-plugin",
+      "url": "https://github.com/remotion-dev/claude-code-plugin",
+      "revision": "413c6d622c88045217b441b871d636920961b6a2",
+      "license": "verify-per-file",
+      "decision": "reference",
+      "purpose": "Integración oficial de Remotion en Claude Code.",
+      "caution": "Plugin no instalado, revisar permisos y contenido antes de habilitar.",
+      "installed": false,
+      "scan_status": "NOT_RUN"
+    },
+    {
+      "id": "WyattBlue/auto-editor",
+      "url": "https://github.com/WyattBlue/auto-editor",
+      "revision": "2e46bc706bfac15532fea2fa5fa7cd0183001dc1",
+      "license": "Unlicense",
+      "decision": "pilot",
+      "purpose": "Proxies y rough cuts automáticos basados en audio y criterios editables.",
+      "caution": "Jamás descartar originales; revisar cortes de diálogos y respiraciones; test pequeño.",
+      "installed": false,
+      "scan_status": "NOT_RUN"
+    },
+    {
+      "id": "Breakthrough/PySceneDetect",
+      "url": "https://github.com/Breakthrough/PySceneDetect",
+      "revision": "36ca0229a898d6a25965f5f0b94c109c674833df",
+      "license": "BSD-3-Clause",
+      "decision": "pilot",
+      "purpose": "Identificación de cortes y escenas para seleccionar tomas.",
+      "caution": "Puede fallar con transiciones graduales o cámara inestable; supervisión humana.",
+      "installed": false,
+      "scan_status": "NOT_RUN"
+    },
+    {
+      "id": "openai/whisper",
+      "url": "https://github.com/openai/whisper",
+      "revision": "86098128c0b4f24f0e2aa2994de830614b474227",
+      "license": "MIT",
+      "decision": "pilot",
+      "purpose": "Transcripción y subtítulos con modelos locales.",
+      "caution": "Revisar errores de nombres, marcas, español costarricense y datos sensibles.",
+      "installed": false,
+      "scan_status": "NOT_RUN"
+    },
+    {
+      "id": "SYSTRAN/faster-whisper",
+      "url": "https://github.com/SYSTRAN/faster-whisper",
+      "revision": "9e472ae9de8bb374552f531f752654554b76b2d6",
+      "license": "MIT",
+      "decision": "pilot",
+      "purpose": "Alternativa eficiente de Whisper con CTranslate2.",
+      "caution": "Comparar memoria/CPU/GPU en computador real, no prometer velocidad sin benchmark.",
+      "installed": false,
+      "scan_status": "NOT_RUN"
+    },
+    {
+      "id": "aquasecurity/trivy",
+      "url": "https://github.com/aquasecurity/trivy",
+      "revision": "6ec0da294ff6501226a42a222a313938e79d95e0",
+      "license": "Apache-2.0",
+      "decision": "priority",
+      "purpose": "Vulnerabilidades, secretos, manifiestos y SBOM en código/dependencias.",
+      "caution": "Escaneo complementario; findings pueden requerir triage y no prueban explotación.",
+      "installed": false,
+      "scan_status": "NOT_RUN"
+    },
+    {
+      "id": "ossf/scorecard",
+      "url": "https://github.com/ossf/scorecard",
+      "revision": "2ef237f4e967d18e600e71aa36ab3be640314650",
+      "license": "Apache-2.0",
+      "decision": "reference",
+      "purpose": "Evaluación de prácticas de seguridad de repositorios externos.",
+      "caution": "La puntuación no garantiza ausencia de malware.",
+      "installed": false,
+      "scan_status": "NOT_RUN"
+    },
+    {
+      "id": "mifi/editly",
+      "url": "https://github.com/mifi/editly",
+      "revision": "dc46674052eacd15ef6e0f563a58eb378b3804ad",
+      "license": "MIT",
+      "decision": "hold",
+      "purpose": "Edición de video declarativa; alternativa de utilidad solapada.",
+      "caution": "Menor actividad reciente y solapamiento con Remotion y FFmpeg; no incorporar actualmente.",
+      "installed": false,
+      "scan_status": "NOT_RUN"
+    }
+  ]
+}
