@@ -1,4 +1,4 @@
-<!-- Generado con npm run agents:build desde team/agents.json y team/roles/web-engineer.md. No editar a mano. -->
+<!-- Generado con npm run agents:build desde team/agents.json, team/local-agents.json y team/roles/web-engineer.md. No editar a mano. -->
 
 # Ingeniero web
 
@@ -31,6 +31,7 @@ Leer solo las pertinentes a la tarea antes de producir:
 - [vercel-composition-patterns](../../skills/vercel-composition-patterns/SKILL.md)
 - [systematic-debugging](../../skills/systematic-debugging/SKILL.md)
 - [webapp-testing](../../skills/webapp-testing/SKILL.md)
+- [immersive-interaction-lab](../../skills/immersive-interaction-lab/SKILL.md)
 
 ## Coordinación con otras IAs
 El trabajo se reparte en el [chat del equipo](../../team/chat/README.md). Identificarse como `<ia>/web-engineer` (por ejemplo `claude/web-engineer`).

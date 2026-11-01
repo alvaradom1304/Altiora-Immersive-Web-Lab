@@ -18,7 +18,7 @@
     {"id":"copy","query":"Redactar textos publicitarios para la oferta con tono de marca y afirmaciones verificadas","expected_any":["copywriting"],"forbidden":["audio-production"],"constraint":"No inventar testimonios ni claims comerciales"},
     {"id":"brand","query":"Definir estrategia y posicionamiento de nuestra marca para diferenciarnos de la competencia","expected_any":["brand-strategy","brand-positioning","brand-strategist"],"forbidden":["audio-production"],"constraint":"Usar hechos de negocio verificables"},
     {"id":"unknown","query":"zxqv flarnorbit quuxz","expected_any":[],"forbidden":[],"constraint":"Abstenerse sin una coincidencia pertinente"},
-    {"id":"unavailable-local-skill","query":"immersive-interaction-lab","expected_any":[],"forbidden":[],"constraint":"Esta skill personal no está en el catálogo portable de este checkout; no inventarla"},
+    {"id":"unavailable-local-skill","query":"skill-personal-inexistente-zq","expected_any":[],"forbidden":[],"constraint":"Esta skill personal no está en el catálogo portable de este checkout; no inventarla"},
     {"id":"stopwords-only","query":"Por favor quiero que me ayudes con esto para mí","expected_any":[],"forbidden":[],"constraint":"Las palabras vacías no deben producir una ruta aparentemente pertinente"}
   ]
 }

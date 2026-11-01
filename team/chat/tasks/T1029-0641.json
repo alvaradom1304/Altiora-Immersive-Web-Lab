@@ -1,0 +1,40 @@
+{
+  "id": "T1029-0641",
+  "title": "Auditar descubrimiento Claude y perfil publico El Tilichero",
+  "role": "web-engineer",
+  "ai": null,
+  "reviewer": null,
+  "depends": [],
+  "files": [
+    "scripts/",
+    "CLAUDE.md",
+    "INDEX.md",
+    "docs/",
+    "creative-ads-os/",
+    ".claude/",
+    ".agents/"
+  ],
+  "acceptance": "Fuentes intactas; capacidades reconciliadas; regresiones y checks; evidencia de acceso publico",
+  "status": "hecha",
+  "owner": "codex/web-engineer",
+  "created": "2026-10-30T00:35:39Z",
+  "created_by": "codex/web-engineer",
+  "history": [
+    {
+      "at": "2026-10-30T00:35:39Z",
+      "by": "codex/web-engineer",
+      "status": "pendiente"
+    },
+    {
+      "at": "2026-10-30T00:35:50Z",
+      "by": "codex/web-engineer",
+      "status": "en_curso"
+    },
+    {
+      "at": "2026-10-30T00:49:42Z",
+      "by": "codex/web-engineer",
+      "status": "hecha",
+      "note": "261 skills fuente, 22 identidades y 24 comandos auxiliares reconciliados; 1876 originales sin cambios; check y 7 regresiones PASS; 617 derivados idempotentes. Instagram publico y WhatsApp revisados, detalles/Insights bloqueados por login. Runtime Claude NOT_RUN. Evidencia en docs/research/evidence y auditoria en projects/tilicheros/ads."
+    }
+  ]
+}

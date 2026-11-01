@@ -1,0 +1,23 @@
+{
+  "version": "1.0.0",
+  "cases": [
+    {
+      "id": "creative-deconstruction-originality-1",
+      "scenario": "Referencia con canción conocida se sustituye por audio original/licenciado.",
+      "expected_behavior": "Referencia con canción conocida se sustituye por audio original/licenciado.",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "creative-deconstruction-originality-2",
+      "scenario": "Usuario pide clon plano a plano: proponer transformación creativa original.",
+      "expected_behavior": "Usuario pide clon plano a plano: proponer transformación creativa original.",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "creative-deconstruction-originality-3",
+      "scenario": "Una referencia inaccesible no se describe como observada.",
+      "expected_behavior": "Una referencia inaccesible no se describe como observada.",
+      "status": "NOT_RUN"
+    }
+  ]
+}

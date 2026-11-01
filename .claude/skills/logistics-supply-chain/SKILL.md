@@ -1,7 +1,6 @@
 ---
 name: logistics-supply-chain
 description: "Diagnostica y mejora operaciones de inventario, merma, rutas de distribución y proveedores con Teoría de Restricciones (The Goal) y Lean (Toyota Way). Usar cuando haya quiebres de stock, producto vencido, entregas tardías, rutas costosas (p. ej. Turrialba–GAM) o se deba elegir proveedor. Para cálculos de pronóstico detallados delegar en inventory-forecasting o demand-planning."
-disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

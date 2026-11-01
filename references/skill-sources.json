@@ -66,6 +66,30 @@
       ],
       "why": "Disciplina de ingeniería: planificar antes de tocar código, depurar por causa raíz y no declarar terminado sin evidencia (alineado con AGENTS.md).",
       "caution": "writing-plans y systematic-debugging mencionan skills de superpowers no importadas (executing-plans, test-driven-development, using-git-worktrees); usar el flujo del laboratorio en su lugar."
+    },
+    {
+      "repo": "anthropics/knowledge-work-plugins",
+      "revision": "2574e29377c7173d0cecffef29a6ecbd7f8ccb5d",
+      "license": "Apache-2.0 (sales/LICENSE, copiada como LICENSE.txt por skill)",
+      "skills": [
+        "account-research",
+        "call-prep",
+        "draft-outreach",
+        "call-summary",
+        "close-plan"
+      ],
+      "why": "Ventas del primer cliente: investigar cuentas, preparar y resumir llamadas, redactar contacto y plan de cierre.",
+      "caution": "Adaptadas: modo borrador con confirmación explícita por acción y sin la instrucción que impedía rechazar (AR1). No se importó sales/.mcp.json. Revisión: docs/security/reviews/ventas-skills-2026-11-01.md."
+    },
+    {
+      "repo": "coreyhaines31/marketingskills",
+      "revision": "88c79f6528a9347420e57ceb1fff9a60de651768",
+      "license": "MIT",
+      "skills": [
+        "revops"
+      ],
+      "why": "Proceso comercial (etapas, enrutamiento, traspaso a ventas) para el primer cliente de Altiora.",
+      "caution": "cold-email y sales-enablement de la misma revisión ya estaban en el catálogo (importadas el 2026-10-31); se conservan esas versiones. Revisión: docs/security/reviews/ventas-skills-2026-11-01.md."
     }
   ],
   "considered_not_imported": [

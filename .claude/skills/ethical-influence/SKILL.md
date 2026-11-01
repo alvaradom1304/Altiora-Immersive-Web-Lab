@@ -1,7 +1,6 @@
 ---
 name: ethical-influence
 description: "ethical-influence: Sales Intelligence. Usar para producir persuasion_options, evidence_checks, test a partir de audiencia, mensaje, evidencia, objetivo; no sustituir otras fases ni declarar resultados sin evidencia."
-disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

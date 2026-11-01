@@ -1,6 +1,7 @@
 ---
 name: conversion-ux
 description: "conversion-ux: Premium Web Experience. Usar para producir conversion_flow, trust_content, test_plan a partir de oferta, flujo, fricciones, datos; no sustituir otras fases ni declarar resultados sin evidencia."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

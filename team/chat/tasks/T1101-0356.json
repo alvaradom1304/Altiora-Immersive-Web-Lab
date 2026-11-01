@@ -1,0 +1,34 @@
+{
+  "id": "T1101-0356",
+  "title": "Tilichero: sistema de captación (flujo de clientes)",
+  "role": "commerce-growth-director",
+  "ai": "claude",
+  "reviewer": "qa-reviewer",
+  "depends": [],
+  "files": [
+    "projects/tilicheros/SISTEMA_CAPTACION_2026-11-01.md"
+  ],
+  "acceptance": "6 criterios del encargo; QA independiente sin bloqueantes; npm run check",
+  "status": "hecha",
+  "owner": "claude/commerce-growth-director",
+  "created": "2026-11-01T19:03:35Z",
+  "created_by": "claude/experience-director",
+  "history": [
+    {
+      "at": "2026-11-01T19:03:35Z",
+      "by": "claude/experience-director",
+      "status": "pendiente"
+    },
+    {
+      "at": "2026-11-01T19:03:39Z",
+      "by": "claude/commerce-growth-director",
+      "status": "en_curso"
+    },
+    {
+      "at": "2026-11-01T19:03:41Z",
+      "by": "claude/commerce-growth-director",
+      "status": "hecha",
+      "note": "Entregado projects/tilicheros/SISTEMA_CAPTACION_2026-11-01.md (DISEÑADO). QA qa-reviewer: ACEPTAR CON CORRECCIONES, 0 bloqueantes; I-1..I-6 y M-1..M-8 corregidos y verificados por el coordinador. npm run check OK. Pendiente: datos del negocio, revisión legal Ley 8968/PRODHAB, Metricool sin la marca."
+    }
+  ]
+}

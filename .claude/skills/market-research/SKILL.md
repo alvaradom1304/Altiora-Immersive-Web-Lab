@@ -1,6 +1,7 @@
 ---
 name: market-research
 description: "market-research: Business Intelligence. Usar para producir evidence_matrix, insights, research_gaps a partir de pregunta, mercado, geografía, periodo, fuentes accesibles; no sustituir otras fases ni declarar resultados sin evidencia."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

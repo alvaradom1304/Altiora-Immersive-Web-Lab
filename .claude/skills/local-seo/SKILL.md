@@ -1,6 +1,7 @@
 ---
 name: local-seo
 description: "local-seo: Marketing Intelligence. Usar para producir local_presence_plan, consistency, measures a partir de ubicación/servicio, datos negocio, acceso, mercado; no sustituir otras fases ni declarar resultados sin evidencia."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

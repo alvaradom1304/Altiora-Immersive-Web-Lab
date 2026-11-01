@@ -1,4 +1,4 @@
-<!-- Generado con npm run agents:build desde team/agents.json y team/roles/creative-director.md. No editar a mano. -->
+<!-- Generado con npm run agents:build desde team/agents.json, team/local-agents.json y team/roles/creative-director.md. No editar a mano. -->
 
 # Director creativo
 
@@ -27,6 +27,7 @@ Leer solo las pertinentes a la tarea antes de producir:
 - [storyboarding](../../skills/storyboarding/SKILL.md)
 - [photography-direction](../../skills/photography-direction/SKILL.md)
 - [creative-quality-assurance](../../skills/creative-quality-assurance/SKILL.md)
+- [immersive-interaction-lab](../../skills/immersive-interaction-lab/SKILL.md)
 
 ## Coordinación con otras IAs
 El trabajo se reparte en el [chat del equipo](../../team/chat/README.md). Identificarse como `<ia>/creative-director` (por ejemplo `claude/creative-director`).

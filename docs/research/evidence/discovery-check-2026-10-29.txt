@@ -1,0 +1,31 @@
+
+> altiora-immersive-web-lab@0.1.0 check
+> node scripts/verify-catalog.mjs && node scripts/audit-skills.mjs && node scripts/build-agents.mjs --check && node scripts/build-antigravity.mjs --check && node --test scripts/discovery.test.mjs
+
+OK: 25 repositorios, 18 skills externas con licencia y 1301 documentos; estructura, revisiones y enlaces locales válidos.
+Esta comprobación no ejecuta demos ni certifica compatibilidad de runtime.
+Skills: 261; media 97.4/100 (línea base 97.4).
+   15 × description indica cuándo usarla
+    3 × Un único título H1
+    2 × Sin encabezados vacíos
+   30 × Al menos 3 casos de evaluación
+   10 × Define el entregable
+   18 × Versión declarada
+OK: ninguna skill empeora respecto a la línea base.
+OK: 22 agentes y 22 chats, 261 skills en Claude Code (261 automáticas), /equipo, /repos e INDEX.md.
+OK Antigravity: 22 agentes, 261 skills, 2 reglas.
+✔ every canonical skill is model-discoverable in Claude and has a resolvable source (1981.0283ms)
+✔ Antigravity receives full descriptions from source, independently of INDEX line endings (2111.286ms)
+✔ registered subagents and fork commands resolve without duplicate identities (2416.5839ms)
+✔ imported originals match their recorded hashes (100.6661ms)
+✔ project listing budget covers metadata without granting tool permissions (1018.983ms)
+✔ source metadata works with LF, CRLF and explicit invocation restrictions (0.7503ms)
+✔ Antigravity builds without INDEX and checks a CRLF checkout (699.1673ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 8697.2145

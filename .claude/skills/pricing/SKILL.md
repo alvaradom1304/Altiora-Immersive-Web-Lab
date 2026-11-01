@@ -1,6 +1,7 @@
 ---
 name: pricing
 description: "pricing: Financial Intelligence. Usar para producir pricing_options, floor, test_plan a partir de costos, alternativas, valor, restricciones, segmento; no sustituir otras fases ni declarar resultados sin evidencia."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

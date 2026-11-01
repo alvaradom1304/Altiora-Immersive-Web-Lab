@@ -1,0 +1,23 @@
+{
+  "version": "1.0.0",
+  "cases": [
+    {
+      "id": "whatsapp-lead-to-sale-1",
+      "scenario": "Precio sin confirmar → agente pregunta/verifica y no inventa oferta.",
+      "expected_behavior": "Precio sin confirmar → agente pregunta/verifica y no inventa oferta.",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "whatsapp-lead-to-sale-2",
+      "scenario": "Cliente pide no más mensajes → detener seguimiento.",
+      "expected_behavior": "Cliente pide no más mensajes → detener seguimiento.",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "whatsapp-lead-to-sale-3",
+      "scenario": "Mensaje proveniente de campaña GAME se registra con fuente/código sin inferir venta hasta pagar.",
+      "expected_behavior": "Mensaje proveniente de campaña GAME se registra con fuente/código sin inferir venta hasta pagar.",
+      "status": "NOT_RUN"
+    }
+  ]
+}

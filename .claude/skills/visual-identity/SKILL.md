@@ -1,6 +1,7 @@
 ---
 name: visual-identity
 description: "visual-identity: Brand Intelligence. Usar para producir identity_system, tokens, applications a partir de plataforma, dirección, usos, restricciones, activos; no sustituir otras fases ni declarar resultados sin evidencia."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

@@ -1,0 +1,2486 @@
+{
+  "schema_version": 1,
+  "skills": [
+    {
+      "name": "ab-testing",
+      "source": "skills/ab-testing/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": [
+        "growth-analyst"
+      ]
+    },
+    {
+      "name": "accessibility",
+      "source": "skills/accessibility/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": [
+        "ux-researcher",
+        "qa-reviewer"
+      ]
+    },
+    {
+      "name": "accidental-data-loss-prevention",
+      "source": "skills/accidental-data-loss-prevention/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "account-research",
+      "source": "skills/account-research/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": []
+    },
+    {
+      "name": "ad-creative",
+      "source": "skills/ad-creative/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "advertising-concept",
+      "source": "skills/advertising-concept/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": [
+        "creative-ads-director"
+      ]
+    },
+    {
+      "name": "aem-autonomous-quality-loop",
+      "source": "skills/aem-autonomous-quality-loop/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "aem-business-transformation",
+      "source": "skills/aem-business-transformation/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "aem-company-builder",
+      "source": "skills/aem-company-builder/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": []
+    },
+    {
+      "name": "aem-core-philosophy",
+      "source": "skills/aem-core-philosophy/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "aem-learning-os",
+      "source": "skills/aem-learning-os/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "aem-library-validation",
+      "source": "skills/aem-library-validation/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "aem-skill-factory",
+      "source": "skills/aem-skill-factory/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "aem-skill-system",
+      "source": "skills/aem-skill-system/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": []
+    },
+    {
+      "name": "aem-stage-01-discovery",
+      "source": "skills/aem-stage-01-discovery/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "aem-stage-02-research",
+      "source": "skills/aem-stage-02-research/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "aem-stage-03-strategy",
+      "source": "skills/aem-stage-03-strategy/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "aem-stage-04-brand",
+      "source": "skills/aem-stage-04-brand/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "aem-stage-05-digital",
+      "source": "skills/aem-stage-05-digital/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "aem-stage-06-automation",
+      "source": "skills/aem-stage-06-automation/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "aem-stage-07-growth",
+      "source": "skills/aem-stage-07-growth/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "aem-venture-architect",
+      "source": "skills/aem-venture-architect/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "agency-os",
+      "source": "skills/agency-os/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "agent-design",
+      "source": "skills/agent-design/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "agent-orchestration",
+      "source": "skills/agent-orchestration/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "ai-evaluation",
+      "source": "skills/ai-evaluation/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "ai-governance",
+      "source": "skills/ai-governance/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "ai-image-direction",
+      "source": "skills/ai-image-direction/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": [
+        "visual-producer"
+      ]
+    },
+    {
+      "name": "ai-observability",
+      "source": "skills/ai-observability/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "ai-seo",
+      "source": "skills/ai-seo/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "ai-video-direction",
+      "source": "skills/ai-video-direction/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": [
+        "audiovisual-experience-director",
+        "visual-producer",
+        "creative-ads-director"
+      ]
+    },
+    {
+      "name": "algorithmic-art",
+      "source": "skills/algorithmic-art/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "altiora-agent-orchestrator",
+      "source": "skills/altiora-agent-orchestrator/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": [
+        "experience-director"
+      ]
+    },
+    {
+      "name": "altiora-ai-economy",
+      "source": "skills/altiora-ai-economy/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "altiora-bibliotecario",
+      "source": "skills/altiora-bibliotecario/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": []
+    },
+    {
+      "name": "altiora-case-study",
+      "source": "skills/altiora-case-study/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "altiora-commercial-director",
+      "source": "skills/altiora-commercial-director/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "altiora-creative-analyst",
+      "source": "skills/altiora-creative-analyst/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "altiora-os-automation-growth",
+      "source": "skills/altiora-os-automation-growth/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "altiora-os-coordinate",
+      "source": "skills/altiora-os-coordinate/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "altiora-os-creative",
+      "source": "skills/altiora-os-creative/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "altiora-os-media",
+      "source": "skills/altiora-os-media/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "altiora-os-qa",
+      "source": "skills/altiora-os-qa/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "altiora-os-research",
+      "source": "skills/altiora-os-research/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "altiora-os-strategy",
+      "source": "skills/altiora-os-strategy/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "altiora-os-web-3d",
+      "source": "skills/altiora-os-web-3d/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "altiora-project-director",
+      "source": "skills/altiora-project-director/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "altiora-quality-review",
+      "source": "skills/altiora-quality-review/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": [
+        "qa-reviewer",
+        "audio-specialist",
+        "altiora-review"
+      ]
+    },
+    {
+      "name": "altiora-repository-research",
+      "source": "skills/altiora-repository-research/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": [
+        "altiora-research"
+      ]
+    },
+    {
+      "name": "altiora-runtime-bridge",
+      "source": "skills/altiora-runtime-bridge/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "altiora-session-handoff",
+      "source": "skills/altiora-session-handoff/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "analytics",
+      "source": "skills/analytics/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": [
+        "growth-analyst"
+      ]
+    },
+    {
+      "name": "api-integration",
+      "source": "skills/api-integration/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "api-security",
+      "source": "skills/api-security/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "art-direction",
+      "source": "skills/art-direction/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": [
+        "creative-director"
+      ]
+    },
+    {
+      "name": "attribution",
+      "source": "skills/attribution/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "audio-production",
+      "source": "skills/audio-production/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": [
+        "audio-specialist"
+      ]
+    },
+    {
+      "name": "authentication-security",
+      "source": "skills/authentication-security/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "authorization-security",
+      "source": "skills/authorization-security/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "automation-design",
+      "source": "skills/automation-design/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "b2b-expansion",
+      "source": "skills/b2b-expansion/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "backend-security",
+      "source": "skills/backend-security/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "bigquery-ai-ml",
+      "source": "skills/bigquery-ai-ml/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "bigquery-bigframes",
+      "source": "skills/bigquery-bigframes/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "bigquery-data-transfer-service",
+      "source": "skills/bigquery-data-transfer-service/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "bigquery-graph-author",
+      "source": "skills/bigquery-graph-author/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "bigquery-graph-query",
+      "source": "skills/bigquery-graph-query/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "bigquery-observability",
+      "source": "skills/bigquery-observability/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "bigquery-optimization",
+      "source": "skills/bigquery-optimization/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "bigquery-troubleshooting",
+      "source": "skills/bigquery-troubleshooting/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "bigtable-basics",
+      "source": "skills/bigtable-basics/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "brainstorming",
+      "source": "skills/brainstorming/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "brand-architecture",
+      "source": "skills/brand-architecture/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "brand-development",
+      "source": "skills/brand-development/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "brand-guidelines",
+      "source": "skills/brand-guidelines/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": [
+        "brand-strategist"
+      ]
+    },
+    {
+      "name": "brand-personality",
+      "source": "skills/brand-personality/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": [
+        "brand-strategist"
+      ]
+    },
+    {
+      "name": "brand-positioning",
+      "source": "skills/brand-positioning/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": [
+        "brand-strategist"
+      ]
+    },
+    {
+      "name": "brand-quality-assurance",
+      "source": "skills/brand-quality-assurance/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "brand-research",
+      "source": "skills/brand-research/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "brand-storytelling",
+      "source": "skills/brand-storytelling/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": []
+    },
+    {
+      "name": "brand-strategy",
+      "source": "skills/brand-strategy/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": [
+        "brand-strategist"
+      ]
+    },
+    {
+      "name": "brand-voice",
+      "source": "skills/brand-voice/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": [
+        "brand-strategist",
+        "content-designer"
+      ]
+    },
+    {
+      "name": "break-even-analysis",
+      "source": "skills/break-even-analysis/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "building-data-apps",
+      "source": "skills/building-data-apps/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "business-decision-gates",
+      "source": "skills/business-decision-gates/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": [
+        "experience-director"
+      ]
+    },
+    {
+      "name": "business-diagnostic",
+      "source": "skills/business-diagnostic/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "business-health-assessment",
+      "source": "skills/business-health-assessment/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "business-model-analysis",
+      "source": "skills/business-model-analysis/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "business-model-design",
+      "source": "skills/business-model-design/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "business-model-validation",
+      "source": "skills/business-model-validation/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "business-social-audit",
+      "source": "skills/business-social-audit/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": [
+        "commerce-growth-director"
+      ]
+    },
+    {
+      "name": "business-strategy",
+      "source": "skills/business-strategy/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": [
+        "business-strategist"
+      ]
+    },
+    {
+      "name": "buyer-persona",
+      "source": "skills/buyer-persona/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": [
+        "business-strategist"
+      ]
+    },
+    {
+      "name": "call-prep",
+      "source": "skills/call-prep/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": []
+    },
+    {
+      "name": "call-summary",
+      "source": "skills/call-summary/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": []
+    },
+    {
+      "name": "campaign-concept",
+      "source": "skills/campaign-concept/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "canvas-design",
+      "source": "skills/canvas-design/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "capacity-planning",
+      "source": "skills/capacity-planning/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "capital-requirements",
+      "source": "skills/capital-requirements/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "cash-flow-analysis",
+      "source": "skills/cash-flow-analysis/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "challenger-selling",
+      "source": "skills/challenger-selling/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "channel-expansion",
+      "source": "skills/channel-expansion/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "cicd-security",
+      "source": "skills/cicd-security/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "cinematic-direction",
+      "source": "skills/cinematic-direction/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": [
+        "creative-director",
+        "audiovisual-experience-director",
+        "motion-designer"
+      ]
+    },
+    {
+      "name": "close-plan",
+      "source": "skills/close-plan/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": []
+    },
+    {
+      "name": "cloud-databases-onboarding",
+      "source": "skills/cloud-databases-onboarding/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "cloud-security",
+      "source": "skills/cloud-security/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "cold-email",
+      "source": "skills/cold-email/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": []
+    },
+    {
+      "name": "cold-outbound-system",
+      "source": "skills/cold-outbound-system/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "color-system",
+      "source": "skills/color-system/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": [
+        "ui-designer"
+      ]
+    },
+    {
+      "name": "company-builder-orchestrator",
+      "source": "skills/company-builder-orchestrator/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "competitive-intelligence",
+      "source": "skills/competitive-intelligence/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "competitor-analysis",
+      "source": "skills/competitor-analysis/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": []
+    },
+    {
+      "name": "competitor-profiling",
+      "source": "skills/competitor-profiling/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "consumer-behavior",
+      "source": "skills/consumer-behavior/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "consumer-psychology",
+      "source": "skills/consumer-psychology/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": [
+        "commerce-growth-director"
+      ]
+    },
+    {
+      "name": "content-strategy",
+      "source": "skills/content-strategy/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": [
+        "content-designer"
+      ]
+    },
+    {
+      "name": "context-engineering",
+      "source": "skills/context-engineering/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "conversion-analysis",
+      "source": "skills/conversion-analysis/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": [
+        "growth-analyst"
+      ]
+    },
+    {
+      "name": "conversion-rate-optimization",
+      "source": "skills/conversion-rate-optimization/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": [
+        "growth-analyst"
+      ]
+    },
+    {
+      "name": "conversion-tracking",
+      "source": "skills/conversion-tracking/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "conversion-ux",
+      "source": "skills/conversion-ux/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": [
+        "ux-researcher"
+      ]
+    },
+    {
+      "name": "copy-editing",
+      "source": "skills/copy-editing/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "copywriting",
+      "source": "skills/copywriting/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": [
+        "content-designer"
+      ]
+    },
+    {
+      "name": "cost-analysis",
+      "source": "skills/cost-analysis/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "cost-to-serve",
+      "source": "skills/cost-to-serve/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "creative-deconstruction-originality",
+      "source": "skills/creative-deconstruction-originality/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": [
+        "market-intelligence-director",
+        "creative-ads-director"
+      ]
+    },
+    {
+      "name": "creative-direction",
+      "source": "skills/creative-direction/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": [
+        "creative-director",
+        "audiovisual-experience-director"
+      ]
+    },
+    {
+      "name": "creative-quality-assurance",
+      "source": "skills/creative-quality-assurance/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": [
+        "creative-director",
+        "audiovisual-experience-director",
+        "creative-ads-director",
+        "audio-specialist"
+      ]
+    },
+    {
+      "name": "creative-strategy",
+      "source": "skills/creative-strategy/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "cro",
+      "source": "skills/cro/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": []
+    },
+    {
+      "name": "cross-selling",
+      "source": "skills/cross-selling/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "customer-acquisition",
+      "source": "skills/customer-acquisition/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "customer-discovery",
+      "source": "skills/customer-discovery/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "customer-journey",
+      "source": "skills/customer-journey/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": [
+        "ux-researcher"
+      ]
+    },
+    {
+      "name": "customer-research",
+      "source": "skills/customer-research/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "customer-success",
+      "source": "skills/customer-success/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "customer-value-architect",
+      "source": "skills/customer-value-architect/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "cybersecurity-owasp",
+      "source": "skills/cybersecurity-owasp/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "dak-setup",
+      "source": "skills/dak-setup/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "data-autocleaning",
+      "source": "skills/data-autocleaning/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "dataform-bigquery",
+      "source": "skills/dataform-bigquery/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "dbt-bigquery",
+      "source": "skills/dbt-bigquery/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "demand-planning",
+      "source": "skills/demand-planning/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "dependency-security",
+      "source": "skills/dependency-security/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "design-system",
+      "source": "skills/design-system/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": [
+        "ui-designer"
+      ]
+    },
+    {
+      "name": "discovering-gcp-data-assets",
+      "source": "skills/discovering-gcp-data-assets/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "dispatching-parallel-agents",
+      "source": "skills/dispatching-parallel-agents/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "draft-outreach",
+      "source": "skills/draft-outreach/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": []
+    },
+    {
+      "name": "elite-web-experience-os",
+      "source": "skills/elite-web-experience-os/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": [
+        "experience-director"
+      ]
+    },
+    {
+      "name": "email-marketing",
+      "source": "skills/email-marketing/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "emails",
+      "source": "skills/emails/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": [
+        "content-designer"
+      ]
+    },
+    {
+      "name": "emotional-brand-activation",
+      "source": "skills/emotional-brand-activation/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": [
+        "creative-ads-director"
+      ]
+    },
+    {
+      "name": "emotional-branding",
+      "source": "skills/emotional-branding/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": []
+    },
+    {
+      "name": "enforcing-resource-attribution",
+      "source": "skills/enforcing-resource-attribution/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "enterprise-growth-orchestrator",
+      "source": "skills/enterprise-growth-orchestrator/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "ethical-influence",
+      "source": "skills/ethical-influence/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": []
+    },
+    {
+      "name": "events",
+      "source": "skills/events/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": [
+        "growth-analyst"
+      ]
+    },
+    {
+      "name": "executing-plans",
+      "source": "skills/executing-plans/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "facebook-growth",
+      "source": "skills/facebook-growth/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "fanatical-prospecting",
+      "source": "skills/fanatical-prospecting/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "federate-lakehouse-catalog",
+      "source": "skills/federate-lakehouse-catalog/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "financial-diagnostic",
+      "source": "skills/financial-diagnostic/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "financial-forecasting",
+      "source": "skills/financial-forecasting/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": [
+        "business-strategist"
+      ]
+    },
+    {
+      "name": "finishing-a-development-branch",
+      "source": "skills/finishing-a-development-branch/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "free-tools",
+      "source": "skills/free-tools/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "frontend-design",
+      "source": "skills/frontend-design/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": [
+        "ui-designer"
+      ]
+    },
+    {
+      "name": "frontend-security",
+      "source": "skills/frontend-security/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": [
+        "web-engineer"
+      ]
+    },
+    {
+      "name": "funding-strategy",
+      "source": "skills/funding-strategy/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "gap-selling",
+      "source": "skills/gap-selling/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "gcp-composer-troubleshooting",
+      "source": "skills/gcp-composer-troubleshooting/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "gcp-data-pipelines",
+      "source": "skills/gcp-data-pipelines/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "gcp-dataflow",
+      "source": "skills/gcp-dataflow/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "gcp-managed-airflow-dag-authoring",
+      "source": "skills/gcp-managed-airflow-dag-authoring/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "gcp-managed-airflow-migrations",
+      "source": "skills/gcp-managed-airflow-migrations/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "gcp-managed-airflow-recommendations",
+      "source": "skills/gcp-managed-airflow-recommendations/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "gcp-managed-spark-upgrades",
+      "source": "skills/gcp-managed-spark-upgrades/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "gcp-pipeline-orchestration",
+      "source": "skills/gcp-pipeline-orchestration/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "gcp-pipeline-resource-provisioning",
+      "source": "skills/gcp-pipeline-resource-provisioning/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "gcp-spark",
+      "source": "skills/gcp-spark/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "gcp-spark-observability",
+      "source": "skills/gcp-spark-observability/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "gcp-spark-troubleshooting",
+      "source": "skills/gcp-spark-troubleshooting/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "gcs-security-assessment",
+      "source": "skills/gcs-security-assessment/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "geographic-expansion",
+      "source": "skills/geographic-expansion/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "go-to-market",
+      "source": "skills/go-to-market/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "google-cloud-storage-basics",
+      "source": "skills/google-cloud-storage-basics/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "google-cloud-storage-bucket-architect",
+      "source": "skills/google-cloud-storage-bucket-architect/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "google-cloud-storage-fuse",
+      "source": "skills/google-cloud-storage-fuse/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "growth-experiment-analysis",
+      "source": "skills/growth-experiment-analysis/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": [
+        "commerce-growth-director"
+      ]
+    },
+    {
+      "name": "growth-experimentation",
+      "source": "skills/growth-experimentation/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": [
+        "growth-analyst"
+      ]
+    },
+    {
+      "name": "growth-strategy",
+      "source": "skills/growth-strategy/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "gsap-animation",
+      "source": "skills/gsap-animation/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": [
+        "motion-designer"
+      ]
+    },
+    {
+      "name": "high-ticket-offer",
+      "source": "skills/high-ticket-offer/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": []
+    },
+    {
+      "name": "high-value-deliberation",
+      "source": "skills/high-value-deliberation/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "human-in-the-loop",
+      "source": "skills/human-in-the-loop/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": [
+        "experience-director"
+      ]
+    },
+    {
+      "name": "image",
+      "source": "skills/image/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "immersive-commerce",
+      "source": "skills/immersive-commerce/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": []
+    },
+    {
+      "name": "immersive-interaction-lab",
+      "source": "skills/immersive-interaction-lab/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": [
+        "creative-director",
+        "web-engineer",
+        "qa-reviewer"
+      ]
+    },
+    {
+      "name": "immersive-web-design",
+      "source": "skills/immersive-web-design/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "incident-response",
+      "source": "skills/incident-response/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "industry-analysis",
+      "source": "skills/industry-analysis/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "information-architecture",
+      "source": "skills/information-architecture/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": [
+        "ux-researcher"
+      ]
+    },
+    {
+      "name": "instagram-growth",
+      "source": "skills/instagram-growth/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": []
+    },
+    {
+      "name": "international-expansion",
+      "source": "skills/international-expansion/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "inventory-forecasting",
+      "source": "skills/inventory-forecasting/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "inventory-management",
+      "source": "skills/inventory-management/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "investment-analysis",
+      "source": "skills/investment-analysis/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "knowledge-retrieval",
+      "source": "skills/knowledge-retrieval/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "launch",
+      "source": "skills/launch/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "launch-readiness",
+      "source": "skills/launch-readiness/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": [
+        "experience-director"
+      ]
+    },
+    {
+      "name": "lead-generation",
+      "source": "skills/lead-generation/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "lead-magnets",
+      "source": "skills/lead-magnets/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "lead-qualification",
+      "source": "skills/lead-qualification/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "local-seo",
+      "source": "skills/local-seo/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": [
+        "content-designer"
+      ]
+    },
+    {
+      "name": "logistics",
+      "source": "skills/logistics/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "logistics-supply-chain",
+      "source": "skills/logistics-supply-chain/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": []
+    },
+    {
+      "name": "ltv-optimization",
+      "source": "skills/ltv-optimization/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": [
+        "growth-analyst"
+      ]
+    },
+    {
+      "name": "managing-python-dependencies",
+      "source": "skills/managing-python-dependencies/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "margin-analysis",
+      "source": "skills/margin-analysis/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "market-development",
+      "source": "skills/market-development/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "market-penetration",
+      "source": "skills/market-penetration/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "market-research",
+      "source": "skills/market-research/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": [
+        "business-strategist",
+        "market-intelligence-director"
+      ]
+    },
+    {
+      "name": "market-segmentation",
+      "source": "skills/market-segmentation/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "market-sizing",
+      "source": "skills/market-sizing/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "market-validation",
+      "source": "skills/market-validation/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "marketing-analytics",
+      "source": "skills/marketing-analytics/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": [
+        "growth-analyst",
+        "commerce-growth-director"
+      ]
+    },
+    {
+      "name": "marketing-psychology",
+      "source": "skills/marketing-psychology/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": [
+        "market-intelligence-director"
+      ]
+    },
+    {
+      "name": "marketing-strategy",
+      "source": "skills/marketing-strategy/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "mcp-builder",
+      "source": "skills/mcp-builder/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "mcp-integration",
+      "source": "skills/mcp-integration/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "meddicc",
+      "source": "skills/meddicc/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "meta-ads-creator",
+      "source": "skills/meta-ads-creator/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "meta-ads-growth",
+      "source": "skills/meta-ads-growth/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "ml-best-practices",
+      "source": "skills/ml-best-practices/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "modular-docs-architect",
+      "source": "skills/modular-docs-architect/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "mom-test-interviewing",
+      "source": "skills/mom-test-interviewing/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "motion-design",
+      "source": "skills/motion-design/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": [
+        "audiovisual-experience-director",
+        "motion-designer"
+      ]
+    },
+    {
+      "name": "n8n-webhook-architect",
+      "source": "skills/n8n-webhook-architect/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "negotiation",
+      "source": "skills/negotiation/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "nextjs-architecture",
+      "source": "skills/nextjs-architecture/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": [
+        "web-engineer"
+      ]
+    },
+    {
+      "name": "notebook-guidance",
+      "source": "skills/notebook-guidance/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "offers",
+      "source": "skills/offers/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": [
+        "business-strategist"
+      ]
+    },
+    {
+      "name": "operational-kpis",
+      "source": "skills/operational-kpis/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "operational-risk",
+      "source": "skills/operational-risk/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "operational-scalability",
+      "source": "skills/operational-scalability/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "opportunity-analysis",
+      "source": "skills/opportunity-analysis/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "opportunity-discovery",
+      "source": "skills/opportunity-discovery/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "orca-cli",
+      "source": "skills/orca-cli/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "orca-orchestration",
+      "source": "skills/orca-orchestration/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "organic-social-distribution",
+      "source": "skills/organic-social-distribution/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": [
+        "commerce-growth-director",
+        "creative-ads-director"
+      ]
+    },
+    {
+      "name": "organizational-scalability",
+      "source": "skills/organizational-scalability/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "owasp-review",
+      "source": "skills/owasp-review/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": [
+        "qa-reviewer"
+      ]
+    },
+    {
+      "name": "paid-media",
+      "source": "skills/paid-media/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "photography-direction",
+      "source": "skills/photography-direction/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": [
+        "creative-director"
+      ]
+    },
+    {
+      "name": "positioning",
+      "source": "skills/positioning/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "premium-branding",
+      "source": "skills/premium-branding/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": [
+        "brand-strategist"
+      ]
+    },
+    {
+      "name": "premium-digital-experience-builder",
+      "source": "skills/premium-digital-experience-builder/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "pricing",
+      "source": "skills/pricing/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": [
+        "business-strategist"
+      ]
+    },
+    {
+      "name": "pricing-optimization",
+      "source": "skills/pricing-optimization/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "privacy-engineering",
+      "source": "skills/privacy-engineering/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "problem-centric-selling",
+      "source": "skills/problem-centric-selling/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "problem-validation",
+      "source": "skills/problem-validation/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "process-mapping",
+      "source": "skills/process-mapping/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "process-optimization",
+      "source": "skills/process-optimization/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "procurement",
+      "source": "skills/procurement/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "product-expansion",
+      "source": "skills/product-expansion/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "product-market-fit-research",
+      "source": "skills/product-market-fit-research/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "product-photography-direction",
+      "source": "skills/product-photography-direction/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": [
+        "visual-producer"
+      ]
+    },
+    {
+      "name": "product-winner-scorecard",
+      "source": "skills/product-winner-scorecard/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": [
+        "commerce-growth-director",
+        "market-intelligence-director"
+      ]
+    },
+    {
+      "name": "profitability-analysis",
+      "source": "skills/profitability-analysis/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "prompt-engineering",
+      "source": "skills/prompt-engineering/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "prospecting",
+      "source": "skills/prospecting/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "quality-council",
+      "source": "skills/quality-council/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": [
+        "experience-director"
+      ]
+    },
+    {
+      "name": "quality-management",
+      "source": "skills/quality-management/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "rag-architecture",
+      "source": "skills/rag-architecture/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "react-three-fiber",
+      "source": "skills/react-three-fiber/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": [
+        "web-engineer"
+      ]
+    },
+    {
+      "name": "receiving-code-review",
+      "source": "skills/receiving-code-review/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "referrals",
+      "source": "skills/referrals/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": [
+        "growth-analyst"
+      ]
+    },
+    {
+      "name": "requesting-code-review",
+      "source": "skills/requesting-code-review/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "resolving-mcp-region-configs",
+      "source": "skills/resolving-mcp-region-configs/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "responsive-design",
+      "source": "skills/responsive-design/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": [
+        "ui-designer"
+      ]
+    },
+    {
+      "name": "retention",
+      "source": "skills/retention/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": [
+        "growth-analyst"
+      ]
+    },
+    {
+      "name": "revenue-growth",
+      "source": "skills/revenue-growth/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "revenue-intelligence",
+      "source": "skills/revenue-intelligence/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "revops",
+      "source": "skills/revops/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": []
+    },
+    {
+      "name": "risk-analysis",
+      "source": "skills/risk-analysis/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "route-optimization",
+      "source": "skills/route-optimization/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "sales-discovery",
+      "source": "skills/sales-discovery/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "sales-enablement",
+      "source": "skills/sales-enablement/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": []
+    },
+    {
+      "name": "sales-follow-up",
+      "source": "skills/sales-follow-up/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "sales-objection-analysis",
+      "source": "skills/sales-objection-analysis/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "sales-proposal",
+      "source": "skills/sales-proposal/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "scaling-readiness",
+      "source": "skills/scaling-readiness/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "scenario-planning",
+      "source": "skills/scenario-planning/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "schema",
+      "source": "skills/schema/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": [
+        "content-designer"
+      ]
+    },
+    {
+      "name": "schema-mapping",
+      "source": "skills/schema-mapping/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "scriptwriting",
+      "source": "skills/scriptwriting/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "scroll-experience",
+      "source": "skills/scroll-experience/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": [
+        "motion-designer"
+      ]
+    },
+    {
+      "name": "secrets-management",
+      "source": "skills/secrets-management/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "secure-development",
+      "source": "skills/secure-development/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": [
+        "web-engineer"
+      ]
+    },
+    {
+      "name": "security-requirements",
+      "source": "skills/security-requirements/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "security-testing",
+      "source": "skills/security-testing/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": [
+        "qa-reviewer"
+      ]
+    },
+    {
+      "name": "seo",
+      "source": "skills/seo/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": [
+        "content-designer"
+      ]
+    },
+    {
+      "name": "seo-audit",
+      "source": "skills/seo-audit/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "site-architecture",
+      "source": "skills/site-architecture/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "skill-creator",
+      "source": "skills/skill-creator/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "smart-model-router",
+      "source": "skills/smart-model-router/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "social",
+      "source": "skills/social/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "social-creative",
+      "source": "skills/social-creative/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "social-media-strategy",
+      "source": "skills/social-media-strategy/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "spin-selling",
+      "source": "skills/spin-selling/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "storyboarding",
+      "source": "skills/storyboarding/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": [
+        "creative-director",
+        "audiovisual-experience-director",
+        "creative-ads-director"
+      ]
+    },
+    {
+      "name": "strategic-planning",
+      "source": "skills/strategic-planning/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "subagent-driven-development",
+      "source": "skills/subagent-driven-development/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "supplier-evaluation",
+      "source": "skills/supplier-evaluation/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "supply-chain",
+      "source": "skills/supply-chain/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "systematic-debugging",
+      "source": "skills/systematic-debugging/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": [
+        "web-engineer"
+      ]
+    },
+    {
+      "name": "targeting",
+      "source": "skills/targeting/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "technical-seo",
+      "source": "skills/technical-seo/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "test-driven-development",
+      "source": "skills/test-driven-development/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "threat-modeling",
+      "source": "skills/threat-modeling/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "threejs-experience",
+      "source": "skills/threejs-experience/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": [
+        "motion-designer",
+        "web-engineer"
+      ]
+    },
+    {
+      "name": "tiktok-strategy",
+      "source": "skills/tiktok-strategy/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "tool-selection",
+      "source": "skills/tool-selection/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "top10-video-research",
+      "source": "skills/top10-video-research/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": [
+        "market-intelligence-director"
+      ]
+    },
+    {
+      "name": "trend-analysis",
+      "source": "skills/trend-analysis/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "typography-direction",
+      "source": "skills/typography-direction/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": [
+        "ui-designer"
+      ]
+    },
+    {
+      "name": "ui-direction",
+      "source": "skills/ui-direction/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": [
+        "ui-designer"
+      ]
+    },
+    {
+      "name": "unit-economics",
+      "source": "skills/unit-economics/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": [
+        "business-strategist"
+      ]
+    },
+    {
+      "name": "upselling",
+      "source": "skills/upselling/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "user-flow",
+      "source": "skills/user-flow/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": [
+        "ux-researcher"
+      ]
+    },
+    {
+      "name": "ux-research",
+      "source": "skills/ux-research/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": [
+        "ux-researcher"
+      ]
+    },
+    {
+      "name": "value-proposition-design",
+      "source": "skills/value-proposition-design/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": [
+        "business-strategist"
+      ]
+    },
+    {
+      "name": "value-selling",
+      "source": "skills/value-selling/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "venture-risk-assessment",
+      "source": "skills/venture-risk-assessment/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "vercel-composition-patterns",
+      "source": "skills/vercel-composition-patterns/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": [
+        "web-engineer"
+      ]
+    },
+    {
+      "name": "vercel-react-best-practices",
+      "source": "skills/vercel-react-best-practices/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": [
+        "web-engineer"
+      ]
+    },
+    {
+      "name": "vercel-react-view-transitions",
+      "source": "skills/vercel-react-view-transitions/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "verification-before-completion",
+      "source": "skills/verification-before-completion/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": [
+        "experience-director",
+        "audiovisual-experience-director",
+        "qa-reviewer"
+      ]
+    },
+    {
+      "name": "video",
+      "source": "skills/video/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "visual-identity",
+      "source": "skills/visual-identity/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": [
+        "visual-producer"
+      ]
+    },
+    {
+      "name": "vulnerability-triage",
+      "source": "skills/vulnerability-triage/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "web-design-guidelines",
+      "source": "skills/web-design-guidelines/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": [
+        "ux-researcher",
+        "ui-designer",
+        "qa-reviewer"
+      ]
+    },
+    {
+      "name": "web-performance",
+      "source": "skills/web-performance/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": [
+        "visual-producer",
+        "web-engineer",
+        "qa-reviewer"
+      ]
+    },
+    {
+      "name": "web-quality-assurance",
+      "source": "skills/web-quality-assurance/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": [
+        "qa-reviewer"
+      ]
+    },
+    {
+      "name": "web-strategy",
+      "source": "skills/web-strategy/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "webapp-testing",
+      "source": "skills/webapp-testing/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": [
+        "web-engineer",
+        "qa-reviewer"
+      ]
+    },
+    {
+      "name": "whatsapp-lead-to-sale",
+      "source": "skills/whatsapp-lead-to-sale/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": [
+        "commerce-growth-director"
+      ]
+    },
+    {
+      "name": "working-capital",
+      "source": "skills/working-capital/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "writing-plans",
+      "source": "skills/writing-plans/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": [
+        "experience-director"
+      ]
+    },
+    {
+      "name": "writing-skills",
+      "source": "skills/writing-skills/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "youtube-strategy",
+      "source": "skills/youtube-strategy/SKILL.md",
+      "model_invocable": false,
+      "assigned_agents": []
+    }
+  ],
+  "agents": [
+    {
+      "id": "experience-director",
+      "source": "team/roles/experience-director.md",
+      "claude": ".claude/agents/experience-director.md",
+      "antigravity": ".agents/agents/experience-director.md"
+    },
+    {
+      "id": "business-strategist",
+      "source": "team/roles/business-strategist.md",
+      "claude": ".claude/agents/business-strategist.md",
+      "antigravity": ".agents/agents/business-strategist.md"
+    },
+    {
+      "id": "brand-strategist",
+      "source": "team/roles/brand-strategist.md",
+      "claude": ".claude/agents/brand-strategist.md",
+      "antigravity": ".agents/agents/brand-strategist.md"
+    },
+    {
+      "id": "creative-director",
+      "source": "team/roles/creative-director.md",
+      "claude": ".claude/agents/creative-director.md",
+      "antigravity": ".agents/agents/creative-director.md"
+    },
+    {
+      "id": "audiovisual-experience-director",
+      "source": "team/roles/audiovisual-experience-director.md",
+      "claude": ".claude/agents/audiovisual-experience-director.md",
+      "antigravity": ".agents/agents/audiovisual-experience-director.md"
+    },
+    {
+      "id": "ux-researcher",
+      "source": "team/roles/ux-researcher.md",
+      "claude": ".claude/agents/ux-researcher.md",
+      "antigravity": ".agents/agents/ux-researcher.md"
+    },
+    {
+      "id": "ui-designer",
+      "source": "team/roles/ui-designer.md",
+      "claude": ".claude/agents/ui-designer.md",
+      "antigravity": ".agents/agents/ui-designer.md"
+    },
+    {
+      "id": "visual-producer",
+      "source": "team/roles/visual-producer.md",
+      "claude": ".claude/agents/visual-producer.md",
+      "antigravity": ".agents/agents/visual-producer.md"
+    },
+    {
+      "id": "motion-designer",
+      "source": "team/roles/motion-designer.md",
+      "claude": ".claude/agents/motion-designer.md",
+      "antigravity": ".agents/agents/motion-designer.md"
+    },
+    {
+      "id": "web-engineer",
+      "source": "team/roles/web-engineer.md",
+      "claude": ".claude/agents/web-engineer.md",
+      "antigravity": ".agents/agents/web-engineer.md"
+    },
+    {
+      "id": "content-designer",
+      "source": "team/roles/content-designer.md",
+      "claude": ".claude/agents/content-designer.md",
+      "antigravity": ".agents/agents/content-designer.md"
+    },
+    {
+      "id": "qa-reviewer",
+      "source": "team/roles/qa-reviewer.md",
+      "claude": ".claude/agents/qa-reviewer.md",
+      "antigravity": ".agents/agents/qa-reviewer.md"
+    },
+    {
+      "id": "growth-analyst",
+      "source": "team/roles/growth-analyst.md",
+      "claude": ".claude/agents/growth-analyst.md",
+      "antigravity": ".agents/agents/growth-analyst.md"
+    },
+    {
+      "id": "commerce-growth-director",
+      "source": "team/roles/commerce-growth-director.md",
+      "claude": ".claude/agents/commerce-growth-director.md",
+      "antigravity": ".agents/agents/commerce-growth-director.md"
+    },
+    {
+      "id": "market-intelligence-director",
+      "source": "team/roles/market-intelligence-director.md",
+      "claude": ".claude/agents/market-intelligence-director.md",
+      "antigravity": ".agents/agents/market-intelligence-director.md"
+    },
+    {
+      "id": "creative-ads-director",
+      "source": "team/roles/creative-ads-director.md",
+      "claude": ".claude/agents/creative-ads-director.md",
+      "antigravity": ".agents/agents/creative-ads-director.md"
+    },
+    {
+      "id": "audio-specialist",
+      "source": "team/roles/audio-specialist.md",
+      "claude": ".claude/agents/audio-specialist.md",
+      "antigravity": ".agents/agents/audio-specialist.md"
+    },
+    {
+      "id": "altiora-engineering",
+      "source": "team/local-sources/codex/altiora-engineering.toml",
+      "claude": ".claude/agents/altiora-engineering.md",
+      "antigravity": ".agents/agents/altiora-engineering.md"
+    },
+    {
+      "id": "altiora-experience",
+      "source": "team/local-sources/codex/altiora-experience.toml",
+      "claude": ".claude/agents/altiora-experience.md",
+      "antigravity": ".agents/agents/altiora-experience.md"
+    },
+    {
+      "id": "altiora-research",
+      "source": "team/local-sources/codex/altiora-research.toml",
+      "claude": ".claude/agents/altiora-research.md",
+      "antigravity": ".agents/agents/altiora-research.md"
+    },
+    {
+      "id": "altiora-review",
+      "source": "team/local-sources/codex/altiora-review.toml",
+      "claude": ".claude/agents/altiora-review.md",
+      "antigravity": ".agents/agents/altiora-review.md"
+    }
+  ],
+  "convenience_commands": [
+    "chat-experience-director",
+    "chat-business-strategist",
+    "chat-brand-strategist",
+    "chat-creative-director",
+    "chat-audiovisual-experience-director",
+    "chat-ux-researcher",
+    "chat-ui-designer",
+    "chat-visual-producer",
+    "chat-motion-designer",
+    "chat-web-engineer",
+    "chat-content-designer",
+    "chat-qa-reviewer",
+    "chat-growth-analyst",
+    "chat-commerce-growth-director",
+    "chat-market-intelligence-director",
+    "chat-creative-ads-director",
+    "chat-audio-specialist",
+    "chat-altiora-engineering",
+    "chat-altiora-experience",
+    "chat-altiora-research",
+    "chat-altiora-review",
+    "equipo",
+    "repos"
+  ],
+  "listing_budget_characters": 204665,
+  "runtime_discovery": "NOT_RUN"
+}

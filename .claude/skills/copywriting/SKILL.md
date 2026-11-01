@@ -1,6 +1,7 @@
 ---
 name: copywriting
 description: "copywriting: Marketing Intelligence. Usar para producir copy_variants, claim_sources, rationale a partir de audiencia, oferta, evidencia, tono, canal; no sustituir otras fases ni declarar resultados sin evidencia."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Paquetes de Altiora · Borrador para revisión</title>
+  <meta name="description" content="Borrador de revisión de los tres paquetes de servicio de Altiora: alcance, criterios de aceptación y exclusiones.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="salto" href="#contenido-principal">Saltar al contenido principal</a>
+
+  <header class="cabecera">
+    <div class="cabecera-marca">
+      <span class="etiqueta-estado">Estado: borrador · 2026-10-31</span>
+      <p class="marca">Altiora · Revisión interna de oferta</p>
+    </div>
+    <nav class="navegacion" aria-label="Navegación de paquetes">
+      <a href="#paquete-1">Paquete 1</a>
+      <a href="#paquete-2">Paquete 2</a>
+      <a href="#paquete-3">Paquete 3</a>
+      <a href="#limites-y-decisiones">Límites y decisiones</a>
+    </nav>
+  </header>
+
+  <main id="contenido-principal" class="contenedor-principal" tabindex="-1">
+    <section class="introduccion" aria-labelledby="titulo-principal">
+      <h1 id="titulo-principal">Paquetes de Altiora — borrador para revisión</h1>
+      <p class="resumen-intro">
+        Base común de los tres paquetes: etapas de descubrimiento, construcción, automatización, QA y lanzamiento.
+        Cada paquete delimita para quién está pensado, qué incluye, su prueba de aceptación y sus exclusiones.
+        Cualquier cotización, descuento o plazo requiere diagnóstico previo y aprobación humana.
+      </p>
+    </section>
+
+    <section class="rejilla-paquetes" aria-label="Comparativa de los tres paquetes">
+      <article class="tarjeta-paquete" id="paquete-1" tabindex="0" aria-labelledby="titulo-paquete-1">
+        <header class="cabecera-paquete">
+          <span class="numero-paquete">Opción 01</span>
+          <h2 id="titulo-paquete-1">Paquete 1 — Experiencia de marca con pedido</h2>
+          <p class="precio-paquete">Precio: por definir</p>
+        </header>
+
+        <dl class="detalle-paquete">
+          <div class="bloque-detalle">
+            <dt>Para quién</dt>
+            <dd>Para negocios que venden por catálogo o por WhatsApp y necesitan una página inmersiva que conserve el pedido.</dd>
+          </div>
+
+          <div class="bloque-detalle">
+            <dt>Qué incluye</dt>
+            <dd>
+              <ul>
+                <li>Arquitectura de conversión.</li>
+                <li>Una página de historia con una secuencia de scroll.</li>
+                <li>Catálogo accesible en HTML.</li>
+                <li>Formulario de pedido o enlace a WhatsApp.</li>
+                <li>Versión estática de respaldo.</li>
+                <li>Analítica acordada.</li>
+              </ul>
+            </dd>
+          </div>
+
+          <div class="bloque-detalle">
+            <dt>Aceptación</dt>
+            <dd>El pedido llega al canal acordado; el catálogo funciona sin WebGL y con teclado; la página respeta movimiento reducido.</dd>
+          </div>
+
+          <div class="bloque-detalle">
+            <dt>Exclusiones</dt>
+            <dd>Fotografía o video producidos por Altiora, dominio, hosting, licencias de terceros, proveedor de WhatsApp Business, migración de datos y traducciones.</dd>
+          </div>
+        </dl>
+      </article>
+
+      <article class="tarjeta-paquete" id="paquete-2" tabindex="0" aria-labelledby="titulo-paquete-2">
+        <header class="cabecera-paquete">
+          <span class="numero-paquete">Opción 02</span>
+          <h2 id="titulo-paquete-2">Paquete 2 — Experiencia de producto 3D</h2>
+          <p class="precio-paquete">Precio: por definir</p>
+        </header>
+
+        <dl class="detalle-paquete">
+          <div class="bloque-detalle">
+            <dt>Para quién</dt>
+            <dd>Para productos que necesitan una vista detallada o una secuencia de producto y proceso.</dd>
+          </div>
+
+          <div class="bloque-detalle">
+            <dt>Qué incluye</dt>
+            <dd>
+              <ul>
+                <li>Todo el Paquete 1 más una escena 3D limitada a un producto.</li>
+                <li>Carga progresiva.</li>
+                <li>Presupuesto de rendimiento documentado.</li>
+                <li>Alternativa estática.</li>
+              </ul>
+            </dd>
+          </div>
+
+          <div class="bloque-detalle">
+            <dt>Aceptación</dt>
+            <dd>La escena carga dentro del presupuesto acordado en dispositivo de referencia; el contenido de texto sigue en HTML.</dd>
+          </div>
+
+          <div class="bloque-detalle">
+            <dt>Exclusiones</dt>
+            <dd>Modelado o escaneo del producto si el cliente no lo entrega; licencias de modelos o texturas; campañas de medios.</dd>
+          </div>
+        </dl>
+      </article>
+
+      <article class="tarjeta-paquete" id="paquete-3" tabindex="0" aria-labelledby="titulo-paquete-3">
+        <header class="cabecera-paquete">
+          <span class="numero-paquete">Opción 03</span>
+          <h2 id="titulo-paquete-3">Paquete 3 — Automatización de captación</h2>
+          <p class="precio-paquete">Precio: por definir</p>
+        </header>
+
+        <dl class="detalle-paquete">
+          <div class="bloque-detalle">
+            <dt>Para quién</dt>
+            <dd>Para negocios que ya tienen web y necesitan convertir consultas en seguimiento ordenado.</dd>
+          </div>
+
+          <div class="bloque-detalle">
+            <dt>Qué incluye</dt>
+            <dd>
+              <ul>
+                <li>Flujo Web → automatización → CRM o WhatsApp, con validación, consentimiento y registro mínimo.</li>
+                <li>Plan de pruebas.</li>
+                <li>Documentación de handover.</li>
+              </ul>
+            </dd>
+          </div>
+
+          <div class="bloque-detalle">
+            <dt>Aceptación</dt>
+            <dd>Una consulta de prueba llega al destino correcto y queda registrada sin duplicarse; el consentimiento se guarda como dato.</dd>
+          </div>
+
+          <div class="bloque-detalle">
+            <dt>Exclusiones</dt>
+            <dd>Envío masivo de mensajes; compra de bases de datos; soporte de la plataforma de terceros; cumplimiento legal específico del país (requiere revisión del cliente).</dd>
+          </div>
+        </dl>
+      </article>
+    </section>
+
+    <section class="panel-inferior" id="limites-y-decisiones" aria-label="Límites comerciales y decisiones pendientes">
+      <div class="bloque-nota" tabindex="0" aria-labelledby="titulo-no-prometen">
+        <h2 id="titulo-no-prometen">Qué no prometen los paquetes</h2>
+        <ul>
+          <li>Ventas, ingresos o conversiones concretas.</li>
+          <li>Mejoras de posicionamiento en buscadores.</li>
+          <li>Resultados en FPS o tiempos de carga sin medición en el dispositivo del cliente.</li>
+        </ul>
+      </div>
+
+      <div class="bloque-nota" tabindex="0" aria-labelledby="titulo-decisiones">
+        <h2 id="titulo-decisiones">Decisiones que necesitan al equipo</h2>
+        <ol>
+          <li>Definición de cada paquete tras diagnóstico.</li>
+          <li>Si se ofrecen por separado o como etapas de un mismo proyecto.</li>
+          <li>Qué plazo de corrección de defectos se ofrece después del lanzamiento.</li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <p>Documento de trabajo interno en español · Sin dependencias externas ni JavaScript obligatorio.</p>
+  </footer>
+</body>
+</html>

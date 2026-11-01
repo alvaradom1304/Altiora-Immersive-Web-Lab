@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "note": "Four distinct local roles adapted (altiora-*). The three immersive-* roles were merged into creative-director, web-engineer and qa-reviewer on 2026-10-31; their source snapshots remain in local-sources as evidence.",
+  "agents": [
+    {
+      "id": "altiora-engineering",
+      "when": "Implementa una tarea técnica delimitada con las versiones y archivos acordados.",
+      "milestones": [],
+      "skills": [],
+      "source": "team/local-sources/codex/altiora-engineering.toml"
+    },
+    {
+      "id": "altiora-experience",
+      "when": "Define composición, storyboard y relación entre experiencia visual y conversión en webs de Altiora.",
+      "milestones": [],
+      "skills": [],
+      "source": "team/local-sources/codex/altiora-experience.toml"
+    },
+    {
+      "id": "altiora-research",
+      "when": "Investiga repositorios, skills y compatibilidad para una tarea concreta de Altiora.",
+      "milestones": [],
+      "skills": [
+        "altiora-repository-research"
+      ],
+      "source": "team/local-sources/codex/altiora-research.toml"
+    },
+    {
+      "id": "altiora-review",
+      "when": "Revisa una entrega contra el brief y verifica su evidencia sin rehacer el trabajo.",
+      "milestones": [],
+      "skills": [
+        "altiora-quality-review"
+      ],
+      "source": "team/local-sources/codex/altiora-review.toml"
+    }
+  ]
+}

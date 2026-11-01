@@ -31,6 +31,7 @@ Leer solo las pertinentes a la tarea antes de producir:
 - [vercel-composition-patterns](../../skills/vercel-composition-patterns/SKILL.md)
 - [systematic-debugging](../../skills/systematic-debugging/SKILL.md)
 - [webapp-testing](../../skills/webapp-testing/SKILL.md)
+- [immersive-interaction-lab](../../skills/immersive-interaction-lab/SKILL.md)
 
 ## Coordinación con otras IAs
 El trabajo se reparte en el [chat del equipo](../../team/chat/README.md). Identificarse como `<ia>/web-engineer` (por ejemplo `claude/web-engineer`).

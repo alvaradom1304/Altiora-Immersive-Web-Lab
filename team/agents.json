@@ -69,12 +69,13 @@
         "cinematic-direction",
         "storyboarding",
         "photography-direction",
-        "creative-quality-assurance"
+        "creative-quality-assurance",
+        "immersive-interaction-lab"
       ]
     },
     {
       "id": "audiovisual-experience-director",
-      "when": "Activar AUTOMÁTICAMENTE cuando una petición incluya arte visual, anuncios, video, motion graphics, animación, cine, Blender, Adobe, VFX, shaders, escenografía, producto 3D o web inmersiva. Decide la herramienta, cuándo usarla y cómo, coordina al equipo y aprueba o rechaza su adecuación técnica; no exige al usuario escoger tecnología. Para sonido, audio, voz o música, coordinar con audio-specialist.",
+      "when": "Activar AUTOMÁTICAMENTE cuando una petición incluya arte visual, anuncios, video, motion graphics, animación, cine, Blender, Adobe, VFX, shaders, escenografía, producto 3D o web inmersiva. Decide la herramienta, cuándo usarla y cómo, coordina al equipo y aprueba o rechaza su adecuación técnica; no exige al usuario escoger tecnología.",
       "milestones": [
         "M0",
         "M1",
@@ -91,8 +92,7 @@
         "ai-video-direction",
         "motion-design",
         "creative-quality-assurance",
-        "verification-before-completion",
-        "audio-production"
+        "verification-before-completion"
       ]
     },
     {
@@ -174,7 +174,8 @@
         "secure-development",
         "vercel-composition-patterns",
         "systematic-debugging",
-        "webapp-testing"
+        "webapp-testing",
+        "immersive-interaction-lab"
       ]
     },
     {
@@ -209,7 +210,8 @@
         "owasp-review",
         "webapp-testing",
         "web-design-guidelines",
-        "verification-before-completion"
+        "verification-before-completion",
+        "immersive-interaction-lab"
       ]
     },
     {
@@ -229,6 +231,57 @@
         "ab-testing",
         "referrals",
         "events"
+      ]
+    },
+    {
+      "id": "commerce-growth-director",
+      "when": "Usar cuando el usuario pida marketing, captación, crecimiento, campañas comerciales, ventas, WhatsApp, productos ganadores o adquisición de clientes.",
+      "milestones": [
+        "M0",
+        "M1",
+        "M6"
+      ],
+      "skills": [
+        "business-social-audit",
+        "product-winner-scorecard",
+        "organic-social-distribution",
+        "whatsapp-lead-to-sale",
+        "growth-experiment-analysis",
+        "consumer-psychology",
+        "marketing-analytics"
+      ]
+    },
+    {
+      "id": "market-intelligence-director",
+      "when": "Usar cuando el usuario solicite buscar los diez mejores videos de un producto, estudiar publicidad de competidores, investigar tendencias y escoger producto ganador.",
+      "milestones": [
+        "M0",
+        "M1"
+      ],
+      "skills": [
+        "top10-video-research",
+        "product-winner-scorecard",
+        "creative-deconstruction-originality",
+        "marketing-psychology",
+        "market-research"
+      ]
+    },
+    {
+      "id": "creative-ads-director",
+      "when": "Usar cuando el usuario solicite crear anuncios, videos cortos, campañas de branding emocional, humor, guiones cinematográficos o motion graphics.",
+      "milestones": [
+        "M1",
+        "M3",
+        "M6"
+      ],
+      "skills": [
+        "emotional-brand-activation",
+        "creative-deconstruction-originality",
+        "organic-social-distribution",
+        "advertising-concept",
+        "storyboarding",
+        "ai-video-direction",
+        "creative-quality-assurance"
       ]
     },
     {

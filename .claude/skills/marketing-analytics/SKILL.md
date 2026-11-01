@@ -1,6 +1,7 @@
 ---
 name: marketing-analytics
 description: "marketing-analytics: Marketing Intelligence. Usar para producir measurement_model, reconciliation, insights a partir de objetivos, fuentes, eventos, permisos, periodos; no sustituir otras fases ni declarar resultados sin evidencia."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

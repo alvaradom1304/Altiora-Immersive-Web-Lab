@@ -1,6 +1,7 @@
 ---
 name: responsive-design
 description: "responsive-design: Premium Web Experience. Usar para producir responsive_rules, fixes, verification a partir de UI, contenido, dispositivos, input modes; no sustituir otras fases ni declarar resultados sin evidencia."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

@@ -18,5 +18,8 @@ Roles operativos; no representan personal contratado ni agentes ya ejecutándose
 | Content designer | Hacer comprensible la oferta y las acciones | Copy por sección, CTA, errores y ayuda | Marca + UX |
 | QA y accesibilidad | Detectar y bloquear problemas demostrados | Hallazgos, evidencias y scorecard | Director de experiencia |
 | Analista de conversión y fidelización | Medir utilidad, conversión y retorno | Plan de eventos, baseline y backlog | Estrategia + UX |
+| Director de crecimiento comercial | Coordinar captación, ventas y rendimiento | Diagnóstico, campaña y KPIs comerciales | Estrategia + QA |
+| Director de inteligencia de mercado | Investigar videos, demanda y competidores | Top 10 verificado y score de productos | Comercial + QA |
+| Director de anuncios audiovisuales | Dirigir originalidad, rodaje y postproducción | Guion, video y QA audiovisual | Marca + QA |
 
 La dirección audiovisual se activa automáticamente cuando el encargo incluye contenidos visuales; no hace que el cliente elija entre herramientas. Se coordina con el Director de experiencia, y tiene como asesor al Visual Tech Scout. QA revisa de forma independiente y puede bloquear el lanzamiento. El cliente decide sobre identidad y alcance mediante propuestas concretas. Las herramientas de IA, Figma, automatización o desarrollo son intercambiables.

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "project": "Altiora Visual Studio",
-  "repository": "alvaradom1304/Altiora-Immersive-Web-Lab",
+  "repository": "alvaradom1304/Altiora",
   "snapshot_date": "2026-10-31",
   "snapshot_kind": "repo_checkpoint_not_live_github_api",
   "description": "Estado reproducible para reanudar entre sesiones e IAs. No significa ejecución persistente ni conexión automática con software.",
@@ -11,7 +11,7 @@
       "name": "Identidad del WAV medido y coherencia del sidecar",
       "result": "DONE",
       "evidence": [{
-        "url": "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/blob/fix/altiora-audio-source-identity-2026-10-31/docs/operations/production-qa.md",
+        "url": "https://github.com/alvaradom1304/Altiora/blob/fix/altiora-audio-source-identity-2026-10-31/docs/operations/production-qa.md",
         "claim": "Medidor PCM incluye hash/tamaño del WAV completo y rechaza ediciones comunes durante lectura; agregado bloquea identidades declaradas contradictorias. Control local aprobado; legacy conserva vínculo manual. No certifica extracción, escucha, derechos ni snapshot atómico."
       }]
     },
@@ -20,7 +20,7 @@
       "name": "Vigencia de catálogos por metadatos y raíces explícitas",
       "result": "DONE",
       "evidence": [{
-        "url": "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/blob/fix/altiora-catalog-freshness-2026-10-31/skills/altiora-bibliotecario/references/portability.md",
+        "url": "https://github.com/alvaradom1304/Altiora/blob/fix/altiora-catalog-freshness-2026-10-31/skills/altiora-bibliotecario/references/portability.md",
         "claim": "check detecta altas, bajas y cambios de metadatos; catálogos antiguos piden reconstrucción y fuentes inaccesibles no producen vigencia falsa. Control completo local aprobado y raíces enlazadas probadas. No certifica runtime nativo ni refresca por mensaje."
       }]
     },
@@ -29,7 +29,7 @@
       "name": "Control completo idéntico en local y CI para todas las IAs",
       "result": "DONE",
       "evidence": [{
-        "url": "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/blob/fix/altiora-unified-quality-check-2026-10-31/docs/operations/SHARED-OPERATIONS.md",
+        "url": "https://github.com/alvaradom1304/Altiora/blob/fix/altiora-unified-quality-check-2026-10-31/docs/operations/SHARED-OPERATIONS.md",
         "claim": "npm run check reúne las suites existentes de catálogo, puentes, operaciones, toolkit, handler, recuperación y audio; CI llama una sola vez al mismo comando. Check completo local aprobado; fixtures no certifican conexiones nativas."
       }]
     },
@@ -38,7 +38,7 @@
       "name": "Bibliotecario sin coincidencias falsas dentro de otras palabras",
       "result": "DONE",
       "evidence": [{
-        "url": "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/blob/fix/altiora-librarian-token-boundaries-2026-10-31/skills/altiora-bibliotecario/references/word-boundaries.md",
+        "url": "https://github.com/alvaradom1304/Altiora/blob/fix/altiora-librarian-token-boundaries-2026-10-31/skills/altiora-bibliotecario/references/word-boundaries.md",
         "claim": "Reproducidos SEO/deseo, CRO/microempresa y API/capital; corregida recuperación por términos completos conservando nombres, componentes y acentos. Pruebas y ejemplos antes/después; no demuestra selección nativa o comprensión semántica."
       }]
     },
@@ -47,7 +47,7 @@
       "name": "Verificación funcional aislada de handlers y consulta de ejecutor nativo",
       "result": "DONE",
       "evidence": [{
-        "url": "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/blob/feature/altiora-runtime-functional-verification-2026-10-31/docs/operations/NATIVE-RUNTIME-VALIDATION.md",
+        "url": "https://github.com/alvaradom1304/Altiora/blob/feature/altiora-runtime-functional-verification-2026-10-31/docs/operations/NATIVE-RUNTIME-VALIDATION.md",
         "claim": "Codex CLI respondió consultas en perfil aislado; kit propio pasó 18 casos de handler en fixtures temporales. No demuestra confianza, descubrimiento o sesión nativa de otros clientes ni conexión MCP."
       }]
     },
@@ -56,7 +56,7 @@
       "name": "Afilado de copias instaladas, rutas de capacidades e identidad de publicación",
       "result": "DONE",
       "evidence": [{
-        "url": "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/blob/feature/altiora-toolkit-sharpening-2026-10-31/docs/operations/TOOLKIT-VALIDATION.md",
+        "url": "https://github.com/alvaradom1304/Altiora/blob/feature/altiora-toolkit-sharpening-2026-10-31/docs/operations/TOOLKIT-VALIDATION.md",
         "claim": "390 archivos instalados compactados con respaldos/hashes, cinco capacidades pertinentes incorporadas al proyecto, doctor/traspaso validados y lectura/escritura del MCP de coordinación verificada solo en esta sesión. Sesiones de otros clientes y ahorro de tokens sin certificar."
       }]
     },
@@ -66,7 +66,7 @@
       "result": "DONE",
       "evidence": [
         {
-          "url": "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/pull/35",
+          "url": "https://github.com/alvaradom1304/Altiora/pull/35",
           "claim": "Implementado y probado localmente: diagnóstico de cinco clientes, 14 casos de recuperación y revisión conjunta de audio/video. No certifica conexiones, ahorro ni producción comercial. Revisar estado vivo de PR y CI."
         }
       ]
@@ -77,7 +77,7 @@
       "result": "MERGED",
       "evidence": [
         {
-          "url": "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/pull/20",
+          "url": "https://github.com/alvaradom1304/Altiora/pull/20",
           "claim": "Arquitectura inicial, router, referencias y workflow multi-IA"
         }
       ]
@@ -88,7 +88,7 @@
       "result": "MERGED",
       "evidence": [
         {
-          "url": "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/pull/21",
+          "url": "https://github.com/alvaradom1304/Altiora/pull/21",
           "claim": "Código de prototipo y render conceptual en CI"
         }
       ]
@@ -99,7 +99,7 @@
       "result": "MERGED",
       "evidence": [
         {
-          "url": "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/pull/22",
+          "url": "https://github.com/alvaradom1304/Altiora/pull/22",
           "claim": "Gaming, anime y bebés; pruebas de render de muestra y Blender"
         }
       ]
@@ -110,7 +110,7 @@
       "result": "MERGED",
       "evidence": [
         {
-          "url": "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/pull/23",
+          "url": "https://github.com/alvaradom1304/Altiora/pull/23",
           "claim": "33 referencias suplementarias, matriz y playbooks multi-IA"
         }
       ]
@@ -121,11 +121,11 @@
       "result": "MERGED",
       "evidence": [
         {
-          "url": "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/pull/25",
+          "url": "https://github.com/alvaradom1304/Altiora/pull/25",
           "claim": "Director formal con instrucciones Claude, Gemini y ChatGPT/Codex, preflight y monitor GitHub Actions"
         },
         {
-          "url": "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/pull/26",
+          "url": "https://github.com/alvaradom1304/Altiora/pull/26",
           "claim": "Primera línea base de 56 repositorios verificada por GitHub Actions y fusionada"
         }
       ]
@@ -136,11 +136,11 @@
       "result": "MERGED",
       "evidence": [
         {
-          "url": "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/pull/28",
+          "url": "https://github.com/alvaradom1304/Altiora/pull/28",
           "claim": "14 nuevos repositorios, playbooks CGI/color/denoise y 2D, monitor últimas releases con tests exitosos"
         },
         {
-          "url": "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/pull/29",
+          "url": "https://github.com/alvaradom1304/Altiora/pull/29",
           "claim": "Snapshot de 70 referencias y 37 releases estables registradas; baseline fusionado y verificado"
         }
       ]
@@ -151,7 +151,7 @@
       "result": "DONE",
       "evidence": [
         {
-          "url": "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/pull/34",
+          "url": "https://github.com/alvaradom1304/Altiora/pull/34",
           "claim": "Rol/skill implementados; fuentes y compatibilidad revisadas; medidor y casos independientes probados, sin certificar escucha de cliente ni DAW"
         }
       ]
@@ -201,34 +201,34 @@
       "name": "Operación compartida para Claude, Codex, Gemini, Antigravity y ChatGPT: diagnóstico, recuperación y QA audiovisual",
       "status": "DOCUMENTED",
       "evidence": [
-        "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/pull/35"
+        "https://github.com/alvaradom1304/Altiora/pull/35"
       ]
     },
     {
       "name": "GitHub catálogo y guía visual multi-IA",
       "status": "DOCUMENTED",
       "evidence": [
-        "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/pull/23"
+        "https://github.com/alvaradom1304/Altiora/pull/23"
       ]
     },
     {
       "name": "Remotion render conceptual en CI",
       "status": "TESTED_IN_CI",
       "evidence": [
-        "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/actions/runs/41158123661"
+        "https://github.com/alvaradom1304/Altiora/actions/runs/41158123661"
       ]
     },
     {
       "name": "Blender render conceptual headless en CI",
       "status": "TESTED_IN_CI",
       "evidence": [
-        "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/actions/runs/41158123661"
+        "https://github.com/alvaradom1304/Altiora/actions/runs/41158123661"
       ]
     },
     {
       "name": "Blender local: versión, arranque, render conceptual 1080x1080 y reapertura de fuente comprobados; MCP pendiente",
       "status": "DOCUMENTED",
-      "evidence": ["https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/blob/fix/altiora-blender-windows-discovery-2026-10-31/docs/operations/BLENDER-LOCAL.md"]
+      "evidence": ["https://github.com/alvaradom1304/Altiora/blob/fix/altiora-blender-windows-discovery-2026-10-31/docs/operations/BLENDER-LOCAL.md"]
     },
     {
       "name": "Adobe local y APIs UXP",
@@ -249,8 +249,8 @@
       "name": "Visual Tech Scout revisión de metadatos GitHub de 56 repositorios",
       "status": "DOCUMENTED",
       "evidence": [
-        "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/actions/runs/41160273108",
-        "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/pull/26"
+        "https://github.com/alvaradom1304/Altiora/actions/runs/41160273108",
+        "https://github.com/alvaradom1304/Altiora/pull/26"
       ]
     },
     {
@@ -262,15 +262,15 @@
       "name": "Visual Tech Scout GitHub Releases P0/P1 y líneas base",
       "status": "TESTED_IN_CI",
       "evidence": [
-        "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/actions/runs/41161761071",
-        "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/pull/29"
+        "https://github.com/alvaradom1304/Altiora/actions/runs/41161761071",
+        "https://github.com/alvaradom1304/Altiora/pull/29"
       ]
     },
     {
       "name": "After Effects local JSX/aerender puente disponible en repositorio",
       "status": "DOCUMENTED",
       "evidence": [
-        "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/pull/32"
+        "https://github.com/alvaradom1304/Altiora/pull/32"
       ]
     },
     {
@@ -282,14 +282,14 @@
       "name": "Bibliotecario portable: selección de skills y roles con contexto mínimo",
       "status": "DOCUMENTED",
       "evidence": [
-        "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/pull/33"
+        "https://github.com/alvaradom1304/Altiora/pull/33"
       ]
     },
     {
       "name": "Especialista de sonido y audio portable; 14 repositorios revisados y medidor PCM original",
       "status": "DOCUMENTED",
       "evidence": [
-        "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/pull/34"
+        "https://github.com/alvaradom1304/Altiora/pull/34"
       ]
     }
   ],
