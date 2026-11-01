@@ -48,6 +48,7 @@ Punto de entrada rápido para **Claude Code**, **Codex**, **Antigravity** y **Or
 
 ### Subagentes especialistas (`.claude/agents/`, `.codex/agents/`, `altiora-os/agents/`)
 - **Investigación y Estrategia:** `altiora-os-research` (con web), `altiora-research` (local), `altiora-os-strategy`
+- **Delegación (cuándo usar Orca):** `altiora-os-delegation` (veredicto Orca o un solo chat, partición, IA sugerida; no lanza)
 - **Cloud & Data Engineering:** `altiora-os-cloud-data` (Google Cloud, BigQuery, Dataflow, Airflow, dbt, Cloud Storage)
 - **Marca y Creatividad:** `altiora-creative-analyst`, `altiora-os-creative`
 - **Experiencia Web, 3D e Ingeniería:** `altiora-experience`, `altiora-os-web-3d`, `altiora-engineering`

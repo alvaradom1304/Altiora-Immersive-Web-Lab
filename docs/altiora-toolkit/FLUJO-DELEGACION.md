@@ -49,6 +49,10 @@ Cómo llega a cada worker (solo formas verificadas en esta PC):
 - Después de lanzar un worker, el script vigila su terminal (`--watch-seconds`, 60 por defecto). Si aparece un aviso de cuota del proveedor, marca la IA como agotada (24 h si el aviso no trae fecha) y relanza el flujo en la siguiente IA.
 - El detector usa frases específicas de los proveedores (por ejemplo, "You've hit your usage limit"). Las frases genéricas se retiraron tras un falso positivo el 01/11/2026.
 
+## Quién decide
+
+El especialista `altiora-os-delegation` evalúa cada encargo con varias partes y le dice al usuario si conviene Orca o un solo chat. La medición vive en [REGISTRO-DELEGACION.md](REGISTRO-DELEGACION.md).
+
 ## Uso
 
 ```powershell

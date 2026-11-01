@@ -121,6 +121,24 @@
     },
     {
       "kind": "agent-definition",
+      "name": "altiora-os-delegation",
+      "description": "Especialista en delegación de Altiora: evalúa si un encargo conviene repartirlo entre IAs en Orca o resolverlo en un solo chat, y se lo dice al usuario con partición, IA sugerida, revisión necesaria y comando. Usar antes de un encargo con varias partes, largo o multidisciplinar; no lanza agentes ni registra tareas.",
+      "path": "C:\\Users\\Usuario\\orca\\workspaces\\Altiora-Immersive-Web-Lab\\altiora-enterprise-os\\.claude\\agents\\altiora-os-delegation.md"
+    },
+    {
+      "kind": "agent-definition",
+      "name": "altiora-os-delegation",
+      "description": "Especialista en delegación de Altiora: evalúa si un encargo conviene repartirlo entre IAs en Orca o resolverlo en un solo chat, y se lo dice al usuario con partición, IA sugerida, revisión necesaria y comando. Usar antes de un encargo con varias partes, largo o multidisciplinar; no lanza agentes ni registra tareas.",
+      "path": "C:\\Users\\Usuario\\orca\\workspaces\\Altiora-Immersive-Web-Lab\\altiora-enterprise-os\\.codex\\agents\\altiora-os-delegation.md"
+    },
+    {
+      "kind": "agent-definition",
+      "name": "altiora-os-delegation",
+      "description": "Especialista en delegación de Altiora: evalúa si un encargo conviene repartirlo entre IAs en Orca o resolverlo en un solo chat, y se lo dice al usuario con partición, IA sugerida, revisión necesaria y comando. Usar antes de un encargo con varias partes, largo o multidisciplinar; no lanza agentes ni registra tareas.",
+      "path": "C:\\Users\\Usuario\\orca\\workspaces\\Altiora-Immersive-Web-Lab\\altiora-enterprise-os\\altiora-os\\agents\\altiora-os-delegation.md"
+    },
+    {
+      "kind": "agent-definition",
       "name": "altiora-os-media",
       "description": "Productor de medios de Altiora: crea y prepara activos 3D, imagen o vídeo con Blender y herramientas multimedia disponibles, con ficha técnica, procedencia y derechos. Usar cuando un proyecto necesita activos reales.",
       "path": "C:\\Users\\Usuario\\orca\\workspaces\\Altiora-Immersive-Web-Lab\\altiora-enterprise-os\\.claude\\agents\\altiora-os-media.md"

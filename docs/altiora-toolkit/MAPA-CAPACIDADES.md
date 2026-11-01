@@ -29,6 +29,7 @@ Los coordinadores son **skills** que se ejecutan en la sesión principal, porque
 | Web 3D/WebGL | `altiora-os-web-3d` | `altiora-os-web-3d`, `threejs-experience`, `react-three-fiber`, `gsap-animation`, `scroll-experience`, `motion-design`, `immersive-interaction-lab`, `immersive-commerce`, `elite-web-experience-os` |
 | Activos 3D, imagen y vídeo | `altiora-os-media` | `altiora-os-media` |
 | Audio | `audio-specialist` | `audio-production` |
+| Delegación (cuándo usar Orca) | `altiora-os-delegation` | `orca-cli`, registro en `docs/altiora-toolkit/REGISTRO-DELEGACION.md` |
 | Cloud & Data Engineering | `altiora-os-cloud-data` | `gcp-data-pipelines`, `bigquery-data-transfer-service`, `google-cloud-storage-bucket-architect`, `dbt-bigquery`, `dataform-bigquery`, `cloud-databases-onboarding`, `gcp-pipeline-orchestration`, `gcp-dataflow`, `gcp-spark`, `dak-setup` |
 | QA independiente (navegador y pruebas) | `altiora-os-qa` | `altiora-quality-review`, `web-quality-assurance`, `accessibility`, `cybersecurity-owasp`, `requesting-code-review` |
 | Crecimiento y automatización posventa | `altiora-os-automation-growth` | `altiora-os-automation-growth`, `analytics`, `conversion-tracking`, `attribution`, `ai-seo`, `ab-testing`, `emails` |

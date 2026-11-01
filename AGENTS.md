@@ -53,7 +53,7 @@ Para estrategia, oferta, clientes, precios, finanzas u operación de Altiora, co
 
 <!-- ALTIORA_COORDINATOR_MODE_START -->
 ## Coordinación de Altiora · Enrutamiento Automático Multi-IA con Orca
-Ante un mensaje único del usuario que abarque múltiples especialidades, se puede ejecutar `npm run orca:dispatch -- "mensaje"` (`scripts/orca-dispatch.py`) solo para ver un plan de reparto (flujos, IA sugerida y esfuerzo). Desde el 01/11/2026 el despachador está en modo solo plan: no registra tareas ni lanza agentes, y no se reactiva (`ALTIORA_DISPATCH_EXECUTE=1`) sin autorización expresa del usuario. La delegación la decide el usuario en Orca eligiendo la IA (`orca worktree create --agent ...`). Consultar `docs/altiora-toolkit/FLUJO-DELEGACION.md`. Resolver directamente cambios pequeños de un solo dominio.
+Antes de un encargo con varias partes, largo o multidisciplinar, consultar al especialista `altiora-os-delegation` (`altiora-os/agents/altiora-os-delegation.md`): dice al usuario si conviene repartirlo en Orca o hacerlo en un solo chat, sin lanzar nada. Ante un mensaje único del usuario que abarque múltiples especialidades, se puede ejecutar `npm run orca:dispatch -- "mensaje"` (`scripts/orca-dispatch.py`) solo para ver un plan de reparto (flujos, IA sugerida y esfuerzo). Desde el 01/11/2026 el despachador está en modo solo plan: no registra tareas ni lanza agentes, y no se reactiva (`ALTIORA_DISPATCH_EXECUTE=1`) sin autorización expresa del usuario. La delegación la decide el usuario en Orca eligiendo la IA (`orca worktree create --agent ...`). Consultar `docs/altiora-toolkit/FLUJO-DELEGACION.md`. Resolver directamente cambios pequeños de un solo dominio.
 <!-- ALTIORA_COORDINATOR_MODE_END -->
 
 <!-- ALTIORA_META_ADS_GROWTH_START -->
