@@ -1,6 +1,6 @@
 # Auditoría de la infraestructura de agentes y skills
 
-Fecha: 2026-10-31. Rama: `feature/altiora-creative-ads-media-pipeline` (base `1fe5c16`). Estado: **núcleo aplicado** (punto 1 de la sección 6, aprobado por el dueño el 2026-10-31); el resto sigue como propuesta. No se borró ni movió ninguna skill.
+Fecha: 2026-10-31. Rama: `feature/altiora-creative-ads-media-pipeline` (base `1fe5c16`). Estado: **decisiones 1 a 4 resueltas** (núcleo aplicado, duplicadas en reserva, AEM Company Builder como método, agentes `immersive-*` se mantienen). Siguen como propuesta los adaptadores `altiora-*`, las direcciones y la unificación de `CLAUDE.md`. No se borró ni movió ninguna skill.
 
 ## 1. Resumen
 
@@ -64,7 +64,7 @@ Esto coincide con el hueco 4 de la [diferenciación](../strategy/DIFERENCIACION.
 
 | Grupo | Agentes | Propuesta |
 |---|---|---|
-| Web inmersiva | immersive-director, immersive-motion-engineer, immersive-reviewer | Equivalen a creative-director, web-engineer y qa-reviewer con la skill `immersive-interaction-lab`. **Nota:** tus preferencias globales (`~/.claude/CLAUDE.md`) los nombran, así que cambiarlos exige editar también ese archivo |
+| Web inmersiva | immersive-director, immersive-motion-engineer, immersive-reviewer | **Decidido (2026-10-31): se mantienen.** Equivalen a creative-director, web-engineer y qa-reviewer con la skill `immersive-interaction-lab`. **Nota:** tus preferencias globales (`~/.claude/CLAUDE.md`) los nombran, así que cambiarlos exige editar también ese archivo |
 | Adaptadores de Codex | altiora-experience, altiora-engineering, altiora-research, altiora-review | Equivalen a creative-director, web-engineer, la skill `altiora-repository-research` y qa-reviewer |
 | Direcciones | experience-director, audiovisual-experience-director, creative-director, creative-ads-director, commerce-growth-director, market-intelligence-director | Seis directores para un equipo pequeño. El audiovisual es la «entrada obligatoria» según `AGENTS.md`, pero no aparece en ningún trabajo |
 
@@ -89,7 +89,7 @@ Esto coincide con el hueco 4 de la [diferenciación](../strategy/DIFERENCIACION.
 1. ~~¿Aceptas el criterio de uso demostrado para el núcleo?~~ Aprobado el 2026-10-31; test y [claude-discovery.md](claude-discovery.md) actualizados.
 2. ~~¿Archivar o solo pasar a reserva las skills duplicadas?~~ Quedan en reserva (2026-10-31).
 3. ~~¿Qué método de agencia queda como único?~~ AEM Company Builder (2026-10-31).
-4. ¿Se mantienen los agentes `immersive-*` porque los usas desde las preferencias globales?
+4. ~~¿Se mantienen los agentes `immersive-*`?~~ Se mantienen (2026-10-31): las preferencias globales los usan para cursor 3D, tipografía cinética y motion WebGL.
 
 ## 8. Reproducir
 
