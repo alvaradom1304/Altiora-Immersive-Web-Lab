@@ -1,6 +1,6 @@
 ---
 name: aem-stage-02-research
-description: "Ejecuta la Fase 02 de AEM. Realiza investigación de mercado profundo, análisis de competidores (Benchmarking) y auditoría de presencia digital. Usar cuando ya existe un Discovery (fase 01) y hay que validar con evidencia el mercado, la competencia y la audiencia antes de definir estrategia. No usar para inventar datos de mercado sin fuentes, ni si aún no se conoce el problema del cliente (volver a aem-stage-01-discovery)."
+description: "Ejecuta la Fase 02 de AEM. Realiza investigación de mercado profundo, análisis de competidores (Benchmarking) y auditoría de presencia digital."
 disable-model-invocation: true
 ---
 
