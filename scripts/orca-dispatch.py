@@ -537,15 +537,15 @@ def choose_effort(message: str, domain: str) -> str:
 # Cómo transmitir el esfuerzo a cada worker. Solo se usan formas verificadas en esta PC:
 # - claude: `claude --effort <level>` (verificado en la ayuda del CLI).
 # - codex: `-c model_reasoning_effort=<level>` (clave aceptada por el CLI; codex no tiene 'max').
-# - antigravity: sin flag de esfuerzo verificado; el nivel va solo como instrucción en el prompt.
+# - antigravity: `agy --model <id> --effort <level>` (verificado con `agy --help` y `agy models` el 2026-11-01).
 EFFORT_HINTS = {
     "claude": "Aplícalo con `claude --effort {level}` si lanzas la sesión a mano. {model_hint}",
     "codex": "Aplícalo con `codex -c model_reasoning_effort={level_codex}`.",
-    "antigravity": "Sin flag de esfuerzo verificado: ajusta la profundidad del análisis a este nivel. {model_hint}",
+    "antigravity": "Aplícalo con `agy --effort {level}`. {model_hint}",
 }
 
-# Modelo sugerido según el esfuerzo. Solo alias verificados en Claude Code (haiku, sonnet, opus);
-# para Antigravity es una instrucción, porque no hay flag verificado.
+# Modelo sugerido según el esfuerzo. Claude Code: alias haiku, sonnet, opus. Antigravity: ids de
+# `agy models` (2026-11-01); Gemini 4 Argon es el modelo caro, Gemini 3.8 Flash el ligero.
 MODEL_HINTS = {
     "claude": {
         "low": "Basta `--model haiku`.",
@@ -553,9 +553,9 @@ MODEL_HINTS = {
         "default": "Usa `--model opus` solo en este nivel o superior.",
     },
     "antigravity": {
-        "low": "Usa el modelo Gemini más ligero disponible (Flash), sin razonamiento extendido.",
-        "medium": "Usa el modelo Gemini más ligero disponible (Flash); reserva Pro para high o más.",
-        "default": "Gemini Pro se justifica en este nivel.",
+        "low": "Usa `--model gemini-3.8-flash-low`.",
+        "medium": "Usa `--model gemini-3.8-flash-medium`; Gemini 4 Argon solo en high o más.",
+        "default": "Gemini 4 Argon se justifica en este nivel: `--model gemini-4-argon-high`.",
     },
 }
 
