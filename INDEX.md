@@ -41,7 +41,7 @@ Otras IAs (Codex, Gemini, ChatGPT): prompts en [team/agents/](team/agents/experi
 | [altiora-research](.claude/agents/altiora-research.md) | `/chat-altiora-research` |  | `altiora-repository-research` |
 | [altiora-review](.claude/agents/altiora-review.md) | `/chat-altiora-review` |  | `altiora-quality-review` |
 
-## Skills (346)
+## Skills (352)
 
 **Auto** = el adaptador permite invocación por el modelo; no prueba carga en una sesión. La asignación a agentes no restringe el descubrimiento. Origen vacío = sin fuente externa registrada; no certifica autoría.
 
@@ -50,6 +50,7 @@ Otras IAs (Codex, Gemini, ChatGPT): prompts en [team/agents/](team/agents/experi
 | [ab-testing](skills/ab-testing/SKILL.md) | — | growth-analyst | coreyhaines31/marketingskills | When the user wants to plan, design, or implement an A/B test or experiment, or build a growth experimentation program. Also use when the… |
 | [accessibility](skills/accessibility/SKILL.md) | sí | ux-researcher, qa-reviewer |  | accessibility: Premium Web Experience. Usar para producir a11y_findings, fixes, manual_checks a partir de UI/código, alcance, nivel objet… |
 | [accidental-data-loss-prevention](skills/accidental-data-loss-prevention/SKILL.md) | — | — |  | **STOP AND VERIFY**: Before running any command or tool that results in irreversible data loss, you MUST obtain explicit user consent. Wh… |
+| [account-research](skills/account-research/SKILL.md) | sí | — | anthropics/knowledge-work-plugins | Research a target company and optionally a specific contact - company overview, recent news, likely priorities, and fit against your ICP.… |
 | [ad-creative](skills/ad-creative/SKILL.md) | — | — |  | Genera e itera creatividad publicitaria a escala: titulares, descripciones, texto principal y variantes completas por plataforma (Meta, G… |
 | [advertising-concept](skills/advertising-concept/SKILL.md) | sí | creative-ads-director |  | advertising-concept: Creative Intelligence. Usar para producir ad_routes, hooks, claim_checks a partir de problema, oferta, canal, eviden… |
 | [aem-autonomous-quality-loop](skills/aem-autonomous-quality-loop/SKILL.md) | — | — |  | aem-autonomous-quality-loop: Orchestration. Usar para producir status, cycles, evidence, defects, final_result a partir de task, acceptan… |
@@ -139,6 +140,8 @@ Otras IAs (Codex, Gemini, ChatGPT): prompts en [team/agents/](team/agents/experi
 | [business-social-audit](skills/business-social-audit/SKILL.md) | sí | commerce-growth-director |  | Usar cuando el usuario pida auditar Instagram, Facebook, TikTok o WhatsApp Business de un negocio, identificar fallas de captación y prio… |
 | [business-strategy](skills/business-strategy/SKILL.md) | — | business-strategist |  | business-strategy: Business Intelligence. Usar para producir strategic_choices, tradeoffs, outcome_map a partir de diagnóstico, objetivos… |
 | [buyer-persona](skills/buyer-persona/SKILL.md) | — | business-strategist |  | buyer-persona: Marketing Intelligence. Usar para producir evidence_persona, goals, barriers a partir de segmento, entrevistas/datos, deci… |
+| [call-prep](skills/call-prep/SKILL.md) | sí | — | anthropics/knowledge-work-plugins | Pre-call brief for an upcoming meeting - attendees, account history, prior call context from transcripts, open opportunity status, and su… |
+| [call-summary](skills/call-summary/SKILL.md) | sí | — | anthropics/knowledge-work-plugins | Turn a call transcript or call notes into a customer follow-up email draft, an internal chat summary, and proposed CRM updates. Use when … |
 | [campaign-concept](skills/campaign-concept/SKILL.md) | — | — |  | campaign-concept: Creative Intelligence. Usar para producir campaign_idea, channel_expressions, test a partir de brief, audiencia, oferta… |
 | [canvas-design](skills/canvas-design/SKILL.md) | — | — |  | Crea piezas visuales originales en PNG o PDF a partir de una filosofía de diseño explícita (pósters, key visuals, moodboards, exploracion… |
 | [capacity-planning](skills/capacity-planning/SKILL.md) | — | — |  | capacity-planning: Operations & Logistics. Usar para producir capacity_model, bottleneck, scenarios a partir de demanda, recursos, tiempo… |
@@ -148,9 +151,10 @@ Otras IAs (Codex, Gemini, ChatGPT): prompts en [team/agents/](team/agents/experi
 | [channel-expansion](skills/channel-expansion/SKILL.md) | — | — |  | channel-expansion: Growth & Scaling. Usar para producir channel_options, pilot, conflict_controls a partir de canal actual, clientes, cos… |
 | [cicd-security](skills/cicd-security/SKILL.md) | — | — |  | cicd-security: Cybersecurity. Usar para producir pipeline_risks, controls, verification a partir de pipeline, repos, secretos, artifacts,… |
 | [cinematic-direction](skills/cinematic-direction/SKILL.md) | sí | creative-director, audiovisual-experience-director, motion-designer |  | cinematic-direction: Creative Intelligence. Usar para producir cinematic_brief, camera_plan, continuity a partir de guion, marca, recurso… |
+| [close-plan](skills/close-plan/SKILL.md) | sí | — | anthropics/knowledge-work-plugins | Build the business case and mutual action plan for a deal - the why-buy/why-now story, the ROI framing, and the dated step-by-step path t… |
 | [cloud-databases-onboarding](skills/cloud-databases-onboarding/SKILL.md) | — | — |  | Guides users through discovering their database requirements, recommends a Google Cloud database product or migration destination based o… |
 | [cloud-security](skills/cloud-security/SKILL.md) | — | — |  | cloud-security: Cybersecurity. Usar para producir cloud_review, misconfigurations, actions a partir de proveedor, recursos, permisos, red… |
-| [cold-email](skills/cold-email/SKILL.md) | — | — |  | Redacta prospección B2B en frío (primer correo, seguimientos, LinkedIn, cadencias y manejo de respuestas) con copy que obtiene respuesta … |
+| [cold-email](skills/cold-email/SKILL.md) | sí | — |  | Redacta prospección B2B en frío (primer correo, seguimientos, LinkedIn, cadencias y manejo de respuestas) con copy que obtiene respuesta … |
 | [cold-outbound-system](skills/cold-outbound-system/SKILL.md) | — | — |  | Investiga y prepara prospección B2B personalizada y verificable con fuentes públicas permitidas, produce borradores de correo y seguimien… |
 | [color-system](skills/color-system/SKILL.md) | — | ui-designer |  | color-system: Brand Intelligence. Usar para producir palette, semantic_tokens, contrast_checks a partir de marca, contextos, estados, con… |
 | [company-builder-orchestrator](skills/company-builder-orchestrator/SKILL.md) | — | — |  | Usa esta skill como orquestador principal al recibir un nuevo cliente o requerimiento en Altiora OS. Determina escenarios de diagnóstico … |
@@ -191,6 +195,7 @@ Otras IAs (Codex, Gemini, ChatGPT): prompts en [team/agents/](team/agents/experi
 | [design-system](skills/design-system/SKILL.md) | — | ui-designer |  | design-system: Premium Web Experience. Usar para producir tokens, components, guidelines a partir de producto, componentes, marca, stack,… |
 | [discovering-gcp-data-assets](skills/discovering-gcp-data-assets/SKILL.md) | — | — |  | Finds and inspects data assets within Google Cloud. Relevant when any of the following conditions are true: 1. The user request involves … |
 | [dispatching-parallel-agents](skills/dispatching-parallel-agents/SKILL.md) | — | — |  | Reparte 2 o más tareas independientes (sin estado compartido ni dependencias) entre subagentes en paralelo y después integra y verifica s… |
+| [draft-outreach](skills/draft-outreach/SKILL.md) | sí | — | anthropics/knowledge-work-plugins | Draft a personalized outreach email or multi-touch sequence to a prospect, create it as an email draft for review, and add the contact to… |
 | [elite-web-experience-os](skills/elite-web-experience-os/SKILL.md) | — | experience-director |  | Production workflow, creative art direction, motion guidelines, performance budgets, and quality scorecard from Elite Web Experience OS. … |
 | [email-marketing](skills/email-marketing/SKILL.md) | — | — |  | email-marketing: Marketing Intelligence. Usar para producir email_plan, drafts, suppression_rules a partir de audiencia consentida, ofert… |
 | [emails](skills/emails/SKILL.md) | — | content-designer | coreyhaines31/marketingskills | When the user wants to create or optimize an email sequence, drip campaign, automated email flow, or lifecycle email program. Also use wh… |
@@ -326,10 +331,11 @@ Otras IAs (Codex, Gemini, ChatGPT): prompts en [team/agents/](team/agents/experi
 | [retention](skills/retention/SKILL.md) | sí | growth-analyst |  | retention: Sales Intelligence. Usar para producir retention_diagnosis, interventions, measures a partir de cohortes, compras/uso, churn, … |
 | [revenue-growth](skills/revenue-growth/SKILL.md) | — | — |  | revenue-growth: Growth & Scaling. Usar para producir revenue_bridge, levers, experiments a partir de ingresos por drivers, segmentos, cos… |
 | [revenue-intelligence](skills/revenue-intelligence/SKILL.md) | — | — |  | revenue-intelligence: Orchestration. Usar para producir revenue_diagnosis, cross_team_actions, experiments a partir de funnel, ventas, ma… |
+| [revops](skills/revops/SKILL.md) | sí | — | coreyhaines31/marketingskills | When the user wants help with revenue operations, lead lifecycle management, or marketing-to-sales handoff processes. Also use when the u… |
 | [risk-analysis](skills/risk-analysis/SKILL.md) | — | — |  | risk-analysis: Business Intelligence. Usar para producir risk_register, mitigation, residual_risk a partir de objetivo, activos/procesos,… |
 | [route-optimization](skills/route-optimization/SKILL.md) | — | — |  | route-optimization: Operations & Logistics. Usar para producir route_options, feasibility, assumptions a partir de destinos consentidos, … |
 | [sales-discovery](skills/sales-discovery/SKILL.md) | — | — |  | sales-discovery: Sales Intelligence. Usar para producir discovery_questions, buyer_evidence, next_step a partir de oferta, contexto del c… |
-| [sales-enablement](skills/sales-enablement/SKILL.md) | — | — |  | Crea material de venta: presentación, one-pager, documento de objeciones, guion de demo y ROI por oportunidad. Usar al preparar la venta … |
+| [sales-enablement](skills/sales-enablement/SKILL.md) | sí | — |  | Crea material de venta: presentación, one-pager, documento de objeciones, guion de demo y ROI por oportunidad. Usar al preparar la venta … |
 | [sales-follow-up](skills/sales-follow-up/SKILL.md) | — | — |  | sales-follow-up: Sales Intelligence. Usar para producir followup_draft, cadence, stop_rules a partir de interacción previa, consentimient… |
 | [sales-objection-analysis](skills/sales-objection-analysis/SKILL.md) | — | — |  | sales-objection-analysis: Sales Intelligence. Usar para producir objection_hypotheses, clarification, response_options a partir de objeci… |
 | [sales-proposal](skills/sales-proposal/SKILL.md) | — | — |  | sales-proposal: Sales Intelligence. Usar para producir proposal, options, acceptance_terms a partir de problema validado, alcance, oferta… |

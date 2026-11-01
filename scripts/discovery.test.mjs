@@ -12,7 +12,7 @@ const read = p => readFile(resolve(root, p), 'utf8').then(t => t.replace(/\r\n/g
 
 test('core skills are model-discoverable, reserve skills stay invocable, all resolve to a source', async () => {
   const coreList = JSON.parse(await read('references/skill-core.json'));
-  const core = new Set([...coreList.used, ...coreList.method]);
+  const core = new Set([...coreList.used, ...coreList.method, ...(coreList.sales ?? [])]);
   for (const folder of await readdir(resolve(root, 'skills'))) {
     const source = await read(`skills/${folder}/SKILL.md`);
     const bridge = await read(`.claude/skills/${folder}/SKILL.md`);
