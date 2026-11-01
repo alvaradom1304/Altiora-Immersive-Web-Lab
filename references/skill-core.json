@@ -59,5 +59,16 @@
     "web-performance",
     "webapp-testing",
     "writing-plans"
-  ]
+  ],
+  "sales": [
+    "account-research",
+    "call-prep",
+    "call-summary",
+    "close-plan",
+    "cold-email",
+    "draft-outreach",
+    "revops",
+    "sales-enablement"
+  ],
+  "sales_note": "Bloque B de docs/operations/propuesta-equipo-ia-2026-11-01.md, aprobado por el dueño el 2026-11-01: entran al núcleo por decisión, no por uso demostrado."
 }

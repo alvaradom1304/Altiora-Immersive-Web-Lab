@@ -19,6 +19,12 @@
       ]
     },
     {
+      "name": "account-research",
+      "source": "skills/account-research/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": []
+    },
+    {
       "name": "advertising-concept",
       "source": "skills/advertising-concept/SKILL.md",
       "model_invocable": true,
@@ -420,6 +426,18 @@
       ]
     },
     {
+      "name": "call-prep",
+      "source": "skills/call-prep/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": []
+    },
+    {
+      "name": "call-summary",
+      "source": "skills/call-summary/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": []
+    },
+    {
       "name": "campaign-concept",
       "source": "skills/campaign-concept/SKILL.md",
       "model_invocable": false,
@@ -472,9 +490,21 @@
       ]
     },
     {
+      "name": "close-plan",
+      "source": "skills/close-plan/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": []
+    },
+    {
       "name": "cloud-security",
       "source": "skills/cloud-security/SKILL.md",
       "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "cold-email",
+      "source": "skills/cold-email/SKILL.md",
+      "model_invocable": true,
       "assigned_agents": []
     },
     {
@@ -691,6 +721,12 @@
       "assigned_agents": [
         "ui-designer"
       ]
+    },
+    {
+      "name": "draft-outreach",
+      "source": "skills/draft-outreach/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": []
     },
     {
       "name": "elite-web-experience-os",
@@ -1386,6 +1422,12 @@
       "assigned_agents": []
     },
     {
+      "name": "revops",
+      "source": "skills/revops/SKILL.md",
+      "model_invocable": true,
+      "assigned_agents": []
+    },
+    {
       "name": "risk-analysis",
       "source": "skills/risk-analysis/SKILL.md",
       "model_invocable": false,
@@ -1401,6 +1443,12 @@
       "name": "sales-discovery",
       "source": "skills/sales-discovery/SKILL.md",
       "model_invocable": false,
+      "assigned_agents": []
+    },
+    {
+      "name": "sales-enablement",
+      "source": "skills/sales-enablement/SKILL.md",
+      "model_invocable": true,
       "assigned_agents": []
     },
     {
@@ -1947,6 +1995,6 @@
     "equipo",
     "repos"
   ],
-  "listing_budget_characters": 140855,
+  "listing_budget_characters": 147519,
   "runtime_discovery": "NOT_RUN"
 }

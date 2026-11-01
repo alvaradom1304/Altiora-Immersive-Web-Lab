@@ -104,7 +104,7 @@ for (const src of sources.sources) for (const s of [...src.skills, ...(src.previ
 const catalogSkills = await loadSkills(root);
 // Núcleo visible para el modelo (references/skill-core.json); el resto queda en reserva por comando.
 const coreList = JSON.parse(await read(resolve(root, 'references/skill-core.json')));
-const core = new Set([...coreList.used, ...coreList.method]);
+const core = new Set([...coreList.used, ...coreList.method, ...(coreList.sales ?? [])]);
 for (const s of core) if (!catalogSkills.some(c => c.name === s)) throw Error('Skill del núcleo inexistente: ' + s);
 const skillRows = [];
 for (const skill of catalogSkills) {
