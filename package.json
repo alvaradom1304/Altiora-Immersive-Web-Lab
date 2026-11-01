@@ -1,0 +1,16 @@
+{
+  "name": "altiora-enterprise-os",
+  "version": "1.3.0",
+  "private": true,
+  "description": "Altiora Enterprise OS — Consultoría de estrategia, marca, web inmersiva e IA",
+  "scripts": {
+    "check:doctor": "python .altiora/system/scripts/manage.py doctor --target .",
+    "check:handoff": "python .altiora/system/scripts/manage.py handoff-check --target .",
+    "check:catalog": "python .agents/skills/altiora-bibliotecario/scripts/library.py check --catalog .altiora/catalog.local.json",
+    "check:runtimes": "python .altiora/system/skills/altiora-runtime-bridge/scripts/check_runtimes.py --project .",
+    "test:bibliotecario": "python -m unittest discover -s .agents/skills/altiora-bibliotecario/scripts -p \"test_library.py\"",
+    "test:audio": "python -m unittest discover -s .agents/skills/audio-production/scripts -p \"test_*.py\"",
+    "orca:dispatch": "python scripts/orca-dispatch.py",
+    "check": "npm run check:doctor && npm run check:handoff && npm run check:catalog && npm run test:bibliotecario && npm run test:audio"
+  }
+}
