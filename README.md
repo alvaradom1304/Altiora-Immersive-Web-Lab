@@ -37,6 +37,7 @@ El [Director de Experiencia Audiovisual](creative/visual-studio/agents/audiovisu
 3. Seguir la [decisión de arquitectura](docs/decisions/0001-immersive-foundation.md).
 4. Abrir el [caso La Central del Queso](projects/la-central-del-queso/BRIEF.md).
 5. Trabajar con el [proceso de experimentos](docs/workflows/immersive-project.md) y la [plantilla](templates/experiment.md).
+6. Revisar la [estrategia de diferenciación](docs/strategy/DIFERENCIACION.md) y el [borrador de paquetes](docs/strategy/PAQUETES-BORRADOR.md).
 
 La [validación](docs/research/VALIDATION.md) distingue lo comprobado de lo pendiente.
 

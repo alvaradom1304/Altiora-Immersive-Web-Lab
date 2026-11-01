@@ -1,41 +1,24 @@
 # Gemini en Altiora
 
-Para diagnóstico, evaluación de recuperación o QA audiovisual, seguir bajo demanda [operación compartida](docs/operations/SHARED-OPERATIONS.md), también en Antigravity. Los archivos y tests no prueban conexiones de la sesión ni aprobación comercial.
+Seguir [AGENTS.md](AGENTS.md) y sus límites comerciales, de propiedad intelectual y autorización. Para trabajar como un rol, cargar `team/agents/<rol>.md` y coordinarse en el [chat del equipo](team/chat/README.md) firmando como `gemini/<rol>`: reclamar la tarea antes de editar y cerrar con evidencia. Los archivos y tests no prueban conexiones de la sesión ni aprobación comercial.
 
-Seguir [AGENTS.md](AGENTS.md). Para trabajar como un rol del equipo, cargar su prompt en `team/agents/<rol>.md` y coordinarse en el [chat del equipo](team/chat/README.md) firmando como `gemini/<rol>`: reclamar la tarea antes de editar y cerrar con evidencia.
+## Antigravity — carga ligera
+- `.agents/agents/` tiene los subagentes, `.agents/skills/` el catálogo de skills y `.agents/rules/` las reglas de selección. Elegir solo los roles y skills del encargo; no recorrer el catálogo completo.
+- Cargar una skill solo cuando se va a usar, y sus `references/` solo si el paso lo exige. Los documentos enlazados abajo se leen bajo demanda, nunca por adelantado.
+- Las fuentes están en `team/` y `skills/`. `npm run agents:build` sincroniza Claude Code y Antigravity; `npm run check` verifica diferencias.
+- Para reanudar: leer [checkpoint](continuity/checkpoint.json) y [recovery runbook](continuity/README.md), ejecutar `npm run resume` si hay checkout y verificar PRs/CI.
+- Para diagnóstico, recuperación de skills o QA: [operación compartida](docs/operations/SHARED-OPERATIONS.md).
 
-## Antigravity — Agentes, skills y reglas compartidos
-- `.agents/agents/` contiene subagentes, `.agents/skills/` las mismas skills del catálogo Altiora y `.agents/rules/` las reglas de selección de roles.
-- Para marketing, branding, videos y anuncios leer `creative-ads-os/WORK_ROUTER.md`, e invocar solo los roles y skills pertinentes.
-- Las fuentes están en `team/` y `skills/`. Usar `npm run agents:build` para sincronizar Claude Code y Antigravity y `npm run check` para verificar diferencias.
-- Mantener los límites comerciales, de propiedad intelectual y autorización definidos en AGENTS.md.
+## Índice bajo demanda (leer solo si el encargo lo pide)
+| Intención | Leer |
+|---|---|
+| Marketing, branding, videos, anuncios | `creative-ads-os/WORK_ROUTER.md` |
+| Cualquier intención visual (motion, 3D, VFX, cinematic, shaders, Blender, Adobe) | [Director Audiovisual](creative/visual-studio/agents/audiovisual-experience-director.md), que decide la herramienta según resultado, acceso real y costo; después [protocolo portable](creative/visual-studio/AGENT-PORTABILITY.md) |
+| Producción visual entre IAs | [Visual Studio](creative/visual-studio/README.md), [router](creative/visual-studio/ROUTER.md), [workflow multi-IA](docs/workflows/visual-production-multi-ai.md) |
+| After Effects y su MCP local | [guía AE](creative/visual-studio/after-effects/README.md) y [MCP-SETUP](creative/visual-studio/after-effects/MCP-SETUP.md); Gemini CLI usa `.gemini/settings.json`, Antigravity `.agents/mcp_config.json` |
+| Mejora continua y nuevas versiones | [visual-tech-scout](creative/visual-studio/agents/visual-tech-scout.md), [SCOUT-V3](creative/visual-studio/SCOUT-V3.md) |
 
-## Expansión audiovisual
-Para Antigravity/Gemini: leer [Visual Studio](creative/visual-studio/README.md), [router visual](creative/visual-studio/ROUTER.md) y [workflow multi-IA](docs/workflows/visual-production-multi-ai.md). Seguir el mismo brief, manifiesto de activos, gates y estados de QA usados por Claude y ChatGPT/Codex. La integración con Blender, Adobe y MCP requiere configuración y permisos locales reales.
-
-## Skill operativa V2 (compartida con Claude y Codex)
-Si la intención del usuario requiere **motion graphics, After Effects, Premiere, Photoshop, Blender, VFX, cinematic, shaders, web 3D o anuncios**, seguir [protocolo portable](creative/visual-studio/AGENT-PORTABILITY.md), [matriz profesional](creative/visual-studio/PRODUCTION-MATRIX.md) y [playbooks](creative/visual-studio/playbooks/README.md). Cada tool access se registra como UNKNOWN hasta comprobar conexión, versión y permisos; cualquier MCP externo se audita antes de ejecutar.
-
-## Reanudación sin reconstruir el chat
-Antes de continuar en Antigravity/Gemini, leer [checkpoint](continuity/checkpoint.json) y [recovery runbook](continuity/README.md), ejecutar `npm run resume` si hay checkout y verificar PRs/CI. Diferenciar documentación, CI probado y apps realmente conectadas.
-
-## Visual Tech Scout — actualización periódica
-Al solicitar mejora continua, leer el [rol de vigilancia](creative/visual-studio/agents/visual-tech-scout.md), el [reporte GitHub](continuity/visual-watch/README.md) y el [preflight](scripts/visual-preflight.mjs). Registrar la fuente, cambios técnicos, seguridad, licencias y evidencia de QA. GitHub Actions programa la revisión; Gemini/Antigravity no queda ejecutándose constantemente por existir este archivo.
-
-## Punto de entrada audiovisual automático
-Para cualquier intención visual, actuar primero como [Director de Experiencia Audiovisual](creative/visual-studio/agents/audiovisual-experience-director.md) y coordinar sus agentes especializados. La decisión sobre Blender, Adobe, Motion, Remotion, shaders o WebGL corresponde al director según resultado, acceso real y costo: no trasladar esa selección al usuario. El workflow no instala software por sí solo.
-
-## Visual Studio V3 y skills actualizables
-El Director Audiovisual consulta [SCOUT-V3](creative/visual-studio/SCOUT-V3.md) para nuevas versiones y selecciona por objetivo [CGI-color](creative/visual-studio/playbooks/advanced-cgi-color.md) o [2D-motion-artístico](creative/visual-studio/playbooks/illustration-particles.md). Las referencias externas no constituyen conexiones verificadas.
-
-## Adobe After Effects
-Leer [guía del puente AE](creative/visual-studio/after-effects/README.md) para comprobar `aerender`, preparar un `.aep` y ejecutar un render cuando el usuario lo permita. No dar por conectado Adobe por leer un archivo; elegir alternativa segura si falla el preflight.
-
-## MCP local After Effects para Gemini/Antigravity
-Consultar [registro multi-cliente](creative/visual-studio/after-effects/MCP-SETUP.md) y el archivo de proyecto `.agents/mcp_config.json` generado desde la laptop. Para Gemini CLI usar `gemini mcp list`; para Antigravity revisar su panel MCP. Los renders requieren autorización expresa por proyecto.
-
-## After Effects en PC — Gemini / Antigravity
-El servidor local `altiora-after-effects` se prepara mediante `npm run after-effects:setup -- --apply` desde el repositorio de la computadora. Gemini CLI usa `.gemini/settings.json`; Antigravity IDE/CLI usa `.agents/mcp_config.json` generado localmente. Revisar [guía MCP](creative/visual-studio/after-effects/MCP-SETUP.md) y confirmar herramientas desde el cliente antes de declarar acceso. El Director determina cuándo usar AE; no conectar apps desconocidas ni ejecutar renders sin autorización del PC.
+Toda herramienta externa (Blender, Adobe, MCP) queda como UNKNOWN hasta comprobar conexión, versión y permisos desde el cliente. No instalar software, ejecutar renders ni conectar apps sin autorización expresa.
 
 <!-- ALTIORA_BIBLIOTECARIO_START -->
 ## Selección y contexto

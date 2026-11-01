@@ -45,6 +45,9 @@ Para sonido, voz, música, restauración, mezcla o masterización, usar [audio-s
 
 Para diagnóstico, evaluación de recuperación o QA audiovisual, seguir bajo demanda [operación compartida](docs/operations/SHARED-OPERATIONS.md). No declarar conexiones ni aprobación comercial por existencia de archivos o éxito de tests.
 
+## Herramientas compartidas
+La configuración HTTP de Metricool está en `.mcp.json`; su autorización y disponibilidad se verifican por cliente. Leer `docs/operations/shared-tools-claude.md` antes de usar conexiones compartidas. No contar una configuración o relato de conexión como una sesión autenticada. Reutilizar briefs, archivos y evidencia del mismo proyecto; no copiar tokens entre asistentes. Para la primera comprobación usar marcas y analítica de El Tilichero en solo lectura.
+
 ---
 
 # Altiora Enterprise OS (integrado el 01/11/2026)

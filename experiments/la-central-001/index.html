@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Experimento 001 · Del umbral a la mesa</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="salto" href="#catalogo">Ir directamente al catálogo</a>
+
+  <header class="cabecera">
+    <p class="marca">La Central del Queso · prototipo</p>
+    <nav aria-label="Principal">
+      <a href="#catalogo">Catálogo</a>
+      <a href="#historia">Historia</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="escena" id="historia" aria-labelledby="titulo-escena">
+      <div class="poster" role="img" aria-label="Póster provisional: portón de finca al amanecer"></div>
+      <div class="pasos">
+        <article class="paso" data-paso="1">
+          <h2 id="titulo-escena">Portón al amanecer</h2>
+          <p>Entrada breve a la finca. Texto e imagen estáticos; el movimiento es opcional.</p>
+          <a href="#catalogo">Ver productos</a>
+        </article>
+        <article class="paso" data-paso="2">
+          <h2>Camino y vegetación</h2>
+          <p>Profundidad por capas. Cualquier persona puede saltar el recorrido.</p>
+          <a href="#catalogo">Saltar recorrido</a>
+        </article>
+        <article class="paso" data-paso="3">
+          <h2>Indicio de elaboración</h2>
+          <p>Detalle del proceso. Usar material real de la finca cuando exista.</p>
+          <a href="#catalogo">Ver productos</a>
+        </article>
+        <article class="paso" data-paso="4">
+          <h2>Mesa y queso protagonista</h2>
+          <p>Cierre hacia el catálogo.</p>
+          <a href="#catalogo">Explorar catálogo</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="catalogo" id="catalogo" aria-labelledby="titulo-catalogo">
+      <h2 id="titulo-catalogo">Catálogo</h2>
+      <p class="aviso">Productos, precios y ubicaciones pendientes de validar con el negocio. Este bloque no usa datos inventados.</p>
+      <ul>
+        <li>Producto 1 · precio pendiente</li>
+        <li>Producto 2 · precio pendiente</li>
+        <li>Producto 3 · precio pendiente</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <p>Prototipo de experimento. No es el sitio comercial ni contiene pedidos reales.</p>
+  </footer>
+
+  <script src="scroll.js" defer></script>
+</body>
+</html>

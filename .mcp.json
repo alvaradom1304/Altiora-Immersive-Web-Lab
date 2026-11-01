@@ -83,6 +83,10 @@
       "env": {
         "X_GOOG_PROXY_HEADERS": "{\"User-Agent\":\"datacloud.altiora\"}"
       }
+    },
+    "metricool": {
+      "type": "http",
+      "url": "https://ai.metricool.com/mcp"
     }
   }
 }
