@@ -1,6 +1,7 @@
 ---
 name: user-flow
 description: "user-flow: Premium Web Experience. Usar para producir flow, transitions, error_states a partir de tarea, actores, estados, restricciones; no sustituir otras fases ni declarar resultados sin evidencia."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

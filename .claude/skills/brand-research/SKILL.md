@@ -1,6 +1,7 @@
 ---
 name: brand-research
 description: "brand-research: Brand Intelligence. Usar para producir brand_audit, perception_evidence, gaps a partir de marca, mercado, audiencia, activos, evidencia; no sustituir otras fases ni declarar resultados sin evidencia."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

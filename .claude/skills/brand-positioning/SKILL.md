@@ -1,6 +1,7 @@
 ---
 name: brand-positioning
 description: "brand-positioning: Brand Intelligence. Usar para producir brand_position, reasons_to_believe, validation a partir de marca, audiencia, alternativas, diferenciadores; no sustituir otras fases ni declarar resultados sin evidencia."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

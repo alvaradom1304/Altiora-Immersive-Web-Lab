@@ -1,6 +1,7 @@
 ---
 name: aem-library-validation
 description: "aem-library-validation: Foundation. Usar para producir structural_report, behavioral_review, maturity_recommendation a partir de workspace de skills, criterios, outputs de evaluación, alcance autorizado; no sustituir otras fases ni declarar resultados sin evidencia."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

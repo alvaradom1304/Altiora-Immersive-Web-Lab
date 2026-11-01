@@ -1,6 +1,7 @@
 ---
 name: ui-direction
 description: "ui-direction: Premium Web Experience. Usar para producir ui_concept, hierarchy, component_rules a partir de UX, marca, componentes, dispositivos; no sustituir otras fases ni declarar resultados sin evidencia."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

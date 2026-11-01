@@ -1,6 +1,7 @@
 ---
 name: art-direction
 description: "art-direction: Brand Intelligence. Usar para producir art_concept, visual_rules, alternatives a partir de estrategia, audiencia, medios, referencias, recursos; no sustituir otras fases ni declarar resultados sin evidencia."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

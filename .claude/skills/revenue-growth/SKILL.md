@@ -1,6 +1,7 @@
 ---
 name: revenue-growth
 description: "revenue-growth: Growth & Scaling. Usar para producir revenue_bridge, levers, experiments a partir de ingresos por drivers, segmentos, costos, capacidad; no sustituir otras fases ni declarar resultados sin evidencia."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

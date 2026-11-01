@@ -1,6 +1,7 @@
 ---
 name: aem-venture-architect
 description: "aem-venture-architect: Orchestration. Usar para producir venture_plan, evidence_by_gate, recommendation a partir de idea, recursos, límites, clientes accesibles; no sustituir otras fases ni declarar resultados sin evidencia."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

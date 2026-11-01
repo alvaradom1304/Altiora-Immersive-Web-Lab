@@ -1,6 +1,7 @@
 ---
 name: value-selling
 description: "value-selling: Sales Intelligence. Usar para producir value_case, assumptions, validation a partir de impacto base, drivers, costo, alternativas, criterios comprador; no sustituir otras fases ni declarar resultados sin evidencia."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

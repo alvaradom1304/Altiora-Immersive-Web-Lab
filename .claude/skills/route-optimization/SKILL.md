@@ -1,6 +1,7 @@
 ---
 name: route-optimization
 description: "route-optimization: Operations & Logistics. Usar para producir route_options, feasibility, assumptions a partir de destinos consentidos, ventanas, vehículo, capacidad; no sustituir otras fases ni declarar resultados sin evidencia."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

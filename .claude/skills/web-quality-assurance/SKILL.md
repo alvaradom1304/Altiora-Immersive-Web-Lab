@@ -1,6 +1,7 @@
 ---
 name: web-quality-assurance
 description: "web-quality-assurance: Premium Web Experience. Usar para producir qa_evidence, defects, release_verdict a partir de criterios, app/version, flujos, datos, alcance; no sustituir otras fases ni declarar resultados sin evidencia."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

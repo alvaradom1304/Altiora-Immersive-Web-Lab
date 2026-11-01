@@ -1,6 +1,7 @@
 ---
 name: risk-analysis
 description: "risk-analysis: Business Intelligence. Usar para producir risk_register, mitigation, residual_risk a partir de objetivo, activos/procesos, amenazas, impacto, controles; no sustituir otras fases ni declarar resultados sin evidencia."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

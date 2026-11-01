@@ -1,6 +1,7 @@
 ---
 name: gap-selling
 description: "gap-selling: Sales Intelligence. Usar para producir current_future_gap, value_case, open_questions a partir de estado actual, estado deseado, impacto, causa, oferta; no sustituir otras fases ni declarar resultados sin evidencia."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

@@ -1,6 +1,7 @@
 ---
 name: cash-flow-analysis
 description: "cash-flow-analysis: Financial Intelligence. Usar para producir cash_schedule, closing_balance, liquidity_gaps a partir de cobros/pagos, saldo inicial, fechas, moneda; no sustituir otras fases ni declarar resultados sin evidencia."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

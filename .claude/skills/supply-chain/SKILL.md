@@ -1,6 +1,7 @@
 ---
 name: supply-chain
 description: "supply-chain: Operations & Logistics. Usar para producir supply_network, vulnerabilities, resilience a partir de red proveedores, flujos, inventario, servicio; no sustituir otras fases ni declarar resultados sin evidencia."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

@@ -1,6 +1,7 @@
 ---
 name: ai-evaluation
 description: "ai-evaluation: AI & Automation. Usar para producir evaluation_protocol, results, limitations a partir de tarea, outputs, dataset, criterios, riesgos; no sustituir otras fases ni declarar resultados sin evidencia."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

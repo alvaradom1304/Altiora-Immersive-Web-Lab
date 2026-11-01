@@ -1,6 +1,7 @@
 ---
 name: customer-discovery
 description: "customer-discovery: Venture Building. Usar para producir interview_plan, behavior_notes, learning a partir de hipótesis, segmento, guía, acceso consentido; no sustituir otras fases ni declarar resultados sin evidencia."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

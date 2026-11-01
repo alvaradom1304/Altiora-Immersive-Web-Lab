@@ -1,6 +1,7 @@
 ---
 name: negotiation
 description: "negotiation: Sales Intelligence. Usar para producir negotiation_plan, concessions, approval_points a partir de intereses, alternativas, límites, autoridad, contexto; no sustituir otras fases ni declarar resultados sin evidencia."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

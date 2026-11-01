@@ -1,6 +1,7 @@
 ---
 name: funding-strategy
 description: "funding-strategy: Venture Building. Usar para producir funding_options, tradeoffs, verification_tasks a partir de necesidad, etapa, territorio, condiciones, tolerancia al riesgo; no sustituir otras fases ni declarar resultados sin evidencia."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

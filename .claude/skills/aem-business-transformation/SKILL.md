@@ -1,6 +1,7 @@
 ---
 name: aem-business-transformation
 description: "aem-business-transformation: Orchestration. Usar para producir current_target_state, root_causes, roadmap, kpis a partir de negocio existente, estado actual, problemas, datos, autoridad; no sustituir otras fases ni declarar resultados sin evidencia."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

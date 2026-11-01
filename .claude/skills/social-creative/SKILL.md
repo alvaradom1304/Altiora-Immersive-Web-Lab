@@ -1,6 +1,7 @@
 ---
 name: social-creative
 description: "social-creative: Creative Intelligence. Usar para producir social_variants, platform_fit, tests a partir de canal, audiencia, marca, mensaje, formatos; no sustituir otras fases ni declarar resultados sin evidencia."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

@@ -1,6 +1,7 @@
 ---
 name: sales-discovery
 description: "sales-discovery: Sales Intelligence. Usar para producir discovery_questions, buyer_evidence, next_step a partir de oferta, contexto del comprador, notas, objetivo de conversación; no sustituir otras fases ni declarar resultados sin evidencia."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->
