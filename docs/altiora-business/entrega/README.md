@@ -63,7 +63,7 @@ F0 y F1 se imputan a ventas, dentro de las 40 h de ventas y administración del 
 - No se prometen ventas, posicionamiento ni retorno. Los objetivos medibles son del recorrido entregado.
 - 3D, vídeo, audio, más integraciones o más idiomas no entran en el alcance base: se tratan como cambio (plantilla 04), con estimación y aprobación.
 - Las cuentas, accesos y documentación quedan bajo control del cliente.
-- Para el detalle técnico de la calidad se reutiliza la Definition of Done y los presupuestos de rendimiento del laboratorio (`Altiora-Immersive-Web-Lab/quality/`). No se copian aquí.
+- Para el detalle técnico de la calidad se reutiliza la Definition of Done y los presupuestos de rendimiento del laboratorio (`quality/` en la raíz del repo). No se copian aquí.
 
 ## Herramienta incluida
 

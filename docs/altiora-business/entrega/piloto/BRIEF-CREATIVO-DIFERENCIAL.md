@@ -5,7 +5,7 @@
 Skill aplicada: `altiora-creative-analyst`. Cada afirmación lleva su fuente o la etiqueta `HIPÓTESIS`. Rutas abreviadas:
 - `EST/` = `C:/Users/Usuario/OneDrive/Desktop/client-central-del-queso/estrategia/`
 - `WEB/` = `C:/Users/Usuario/OneDrive/Desktop/client-central-del-queso/web/`
-- `LAB/` = `.../Altiora-Immersive-Web-Lab/projects/la-central-del-queso/`
+- `LAB/` = `projects/la-central-del-queso/` en la raíz del repo Altiora
 
 `EST/01_DISCOVERY_DOCUMENT.md` es una plantilla de ejemplo («Acme Corp», `:4`), así que no se usa como fuente. La documentación de estrategia del cliente (`EST/01` a `04`) no cita entrevistas ni archivos de origen. Por eso se trata como **declaración no verificada**, salvo los datos de encuesta que se señalan.
 

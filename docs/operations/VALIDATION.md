@@ -1,6 +1,6 @@
 # Evidencia de operación compartida
 
-Fecha: 2026-10-31. Entrega: [PR 35](https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/pull/35). Consultar allí el commit y CI actuales; este documento no es una consulta en vivo.
+Fecha: 2026-10-31. Entrega: [PR 35](https://github.com/alvaradom1304/Altiora/pull/35). Consultar allí el commit y CI actuales; este documento no es una consulta en vivo.
 
 ## Comprobaciones locales
 
@@ -21,4 +21,4 @@ El diagnóstico respondió en esta máquina con FFmpeg, FFprobe, Git y Python di
 
 Los adaptadores de proyecto estaban presentes. El TOML de Codex declara `enabled=false`; Gemini declara `trust=false`; la configuración local de Antigravity no estaba presente. Todas las conexiones permanecen `NOT_VERIFIED` y las pruebas de ejecución de clientes `NOT_PERFORMED`. No se modificaron cuentas, permisos MCP ni instalaciones.
 
-No se ha producido un master comercial con materiales de cliente en este hito. Continúan pendientes material auténtico, derechos, escucha, revisión visual y decisión del cliente. El [permiso del Scout](https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/issues/31) requiere acción del propietario. Ahorro de tokens: `NOT_MEASURED`.
+No se ha producido un master comercial con materiales de cliente en este hito. Continúan pendientes material auténtico, derechos, escucha, revisión visual y decisión del cliente. El [permiso del Scout](https://github.com/alvaradom1304/Altiora/issues/31) requiere acción del propietario. Ahorro de tokens: `NOT_MEASURED`.

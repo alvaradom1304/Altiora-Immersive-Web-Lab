@@ -1,6 +1,6 @@
 # 06 · Plan de pruebas y registro de evidencia: [cliente] · [fecha]
 
-Lo ejecuta un revisor distinto de quien construyó (`altiora-os-qa`). Los criterios detallados están en la Definition of Done y en los presupuestos de rendimiento del laboratorio (`Altiora-Immersive-Web-Lab/quality/`). Aquí se registra qué se probó, sobre qué versión y con qué resultado.
+Lo ejecuta un revisor distinto de quien construyó (`altiora-os-qa`). Los criterios detallados están en la Definition of Done y en los presupuestos de rendimiento del laboratorio (`quality/` en la raíz del repo). Aquí se registra qué se probó, sobre qué versión y con qué resultado.
 
 ## Versión candidata
 - Repositorio y commit (o URL de vista previa):

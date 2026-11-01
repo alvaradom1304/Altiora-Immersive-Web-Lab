@@ -39,19 +39,19 @@ Completar la tarea autorizada por bloques sin pedir «sigue» entre pasos desblo
 
 ## Prueba funcional del handler
 
-La [PR38 del laboratorio](https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/pull/38) añade `runtime:smoke`. Ejecutarlo desde el laboratorio con `--project` apuntando a este kit propio revisado y `--scratch-root` a una carpeta temporal absoluta existente. No ejecuta comandos de configuración ni modifica cuentas, confianza o políticas reales. El handler instalado pasó18/18 casos con su recibo comprobado. Su PASS no equivale a hook cargado por el host: descubrimiento, confianza y sesión nativa permanecen NOT_VERIFIED. No ejecutarlo contra un kit desconocido solo porque tenga un recibo/hash.
+La [PR38 del laboratorio](https://github.com/alvaradom1304/Altiora/pull/38) añade `runtime:smoke`. Ejecutarlo desde el laboratorio con `--project` apuntando a este kit propio revisado y `--scratch-root` a una carpeta temporal absoluta existente. No ejecuta comandos de configuración ni modifica cuentas, confianza o políticas reales. El handler instalado pasó18/18 casos con su recibo comprobado. Su PASS no equivale a hook cargado por el host: descubrimiento, confianza y sesión nativa permanecen NOT_VERIFIED. No ejecutarlo contra un kit desconocido solo porque tenga un recibo/hash.
 
 ## Coincidencias del Bibliotecario
 
-La [PR39](https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/pull/39) corrige coincidencias internas: SEO en «deseo», CRO en «microempresa» y API en «capital». Las cinco copias instaladas pasaron el mismo corpus de17 casos;19 pruebas unitarias y CI Windows/Linux aprobaron. Es recuperación léxica: no demuestra comprensión semántica, selección en sesiones nativas ni ahorro medido de tokens.
+La [PR39](https://github.com/alvaradom1304/Altiora/pull/39) corrige coincidencias internas: SEO en «deseo», CRO en «microempresa» y API en «capital». Las cinco copias instaladas pasaron el mismo corpus de17 casos;19 pruebas unitarias y CI Windows/Linux aprobaron. Es recuperación léxica: no demuestra comprensión semántica, selección en sesiones nativas ni ahorro medido de tokens.
 
 ## Control completo compartido
 
-Desde la raíz del checkout del laboratorio Altiora-Immersive-Web-Lab, ejecutar `npm run check` (Node.js 20+ y Python 3.11+). Incluye las suites de herramientas, puentes, handler, Bibliotecario y audio; es el mismo comando de CI Windows/Linux. `npm run check:base` es parcial. No ejecutar el comando desde este directorio empresarial por suposición. [PR40](https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/pull/40) fusionada con CI aprobado. Son pruebas con fixtures, no conexiones nativas ni escucha de material comercial.
+Desde la raíz del checkout del repositorio Altiora (github.com/alvaradom1304/Altiora; la carpeta local puede llamarse aún Altiora-Immersive-Web-Lab), ejecutar `npm run check` (Node.js 20+ y Python 3.11+). Incluye las suites de herramientas, puentes, handler, Bibliotecario y audio; es el mismo comando de CI Windows/Linux. `npm run check:base` es parcial. No ejecutar el comando desde este directorio empresarial por suposición. [PR40](https://github.com/alvaradom1304/Altiora/pull/40) fusionada con CI aprobado. Son pruebas con fixtures, no conexiones nativas ni escucha de material comercial.
 
 ## Vigencia del índice local
 
-La [PR41](https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/pull/41) comprueba altas, bajas y cambios de metadatos. Solo METADATA_CURRENT termina con salida0; STALE exige reconstrucción revisada y LEGACY_REBUILD_REQUIRED identifica índices antiguos sin raíces. Una fuente inaccesible o enlazada queda UNVERIFIED. No aceptar índices ajenos sin revisar sus raíces ni comprobar por mensaje. El índice local se reconstruyó con cuatro raíces explícitas (.agents/skills, .claude/skills, .codex/agents y .claude/agents):194 entradas; conserva las179 anteriores e incorpora15 definiciones ya existentes en otra carpeta de agentes. No crea sesiones o herramientas.
+La [PR41](https://github.com/alvaradom1304/Altiora/pull/41) comprueba altas, bajas y cambios de metadatos. Solo METADATA_CURRENT termina con salida0; STALE exige reconstrucción revisada y LEGACY_REBUILD_REQUIRED identifica índices antiguos sin raíces. Una fuente inaccesible o enlazada queda UNVERIFIED. No aceptar índices ajenos sin revisar sus raíces ni comprobar por mensaje. El índice local se reconstruyó con cuatro raíces explícitas (.agents/skills, .claude/skills, .codex/agents y .claude/agents):194 entradas; conserva las179 anteriores e incorpora15 definiciones ya existentes en otra carpeta de agentes. No crea sesiones o herramientas.
 
 ## Coordinación y referencia Orca
 

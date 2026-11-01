@@ -92,7 +92,7 @@
     {
       "command": "Revisión de Check Windows/Linux y respuesta de merge PR37",
       "status": "passed",
-      "evidence": "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/actions/runs/41217390444; merge aec9152a3066bbe06d1a59ccdb6dcf0e0fb53f9c",
+      "evidence": "https://github.com/alvaradom1304/Altiora/actions/runs/41217390444; merge aec9152a3066bbe06d1a59ccdb6dcf0e0fb53f9c",
       "executed_at": "2026-10-31T16:02:06.490883+00:00"
     },
     {
@@ -104,19 +104,19 @@
     {
       "command": "Bibliotecario PR39: unitarias, corpus y copias instaladas",
       "status": "passed",
-      "evidence": "https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/pull/39; 19 unitarias; corpus de17 casos pasado en cada una de5 copias; CI Windows/Linux aprobado; no son85 casos independientes.",
+      "evidence": "https://github.com/alvaradom1304/Altiora/pull/39; 19 unitarias; corpus de17 casos pasado en cada una de5 copias; CI Windows/Linux aprobado; no son85 casos independientes.",
       "executed_at": "2026-10-31T18:33:52.124732+00:00"
     },
     {
       "command": "Control unificado de herramientas PR40",
       "status": "passed",
-      "evidence": "136 pruebas locales sin omisiones y17/17 casos de recuperación; paridad de17 comandos con CI anterior; https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/actions/runs/41231597001",
+      "evidence": "136 pruebas locales sin omisiones y17/17 casos de recuperación; paridad de17 comandos con CI anterior; https://github.com/alvaradom1304/Altiora/actions/runs/41231597001",
       "executed_at": "2026-10-31T18:54:59.032688+00:00"
     },
     {
       "command": "Vigencia de catálogos PR41 y cinco copias instaladas",
       "status": "passed",
-      "evidence": "144 pruebas locales +17/17 casos;27 pruebas Bibliotecario; cinco helpers pasaron el mismo fixture. Índice179→194 conserva entradas previas; incluye15 definiciones preexistentes de otra raíz de agentes. CI: https://github.com/alvaradom1304/Altiora-Immersive-Web-Lab/actions/runs/41232492872",
+      "evidence": "144 pruebas locales +17/17 casos;27 pruebas Bibliotecario; cinco helpers pasaron el mismo fixture. Índice179→194 conserva entradas previas; incluye15 definiciones preexistentes de otra raíz de agentes. CI: https://github.com/alvaradom1304/Altiora/actions/runs/41232492872",
       "executed_at": "2026-10-31T19:06:28.117085+00:00"
     },
     {
