@@ -1,2 +1,19 @@
+# Las huellas de los manifiestos de Altiora se calculan con finales LF.
+* text=auto eol=lf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# Lab: excepciones (van después para prevalecer)
 # El chat del equipo es solo-añadir: fusionar ramas uniendo líneas evita conflictos.
 team/chat/messages.jsonl merge=union
+
+# Generated bridges use stable line endings on Windows and Linux.
+.claude/** text eol=lf
+.agents/** text eol=lf
+scripts/*.mjs text eol=lf
+INDEX.md text eol=lf
+team/agents/*.md text eol=lf
+# Preserve exact imported source bytes for provenance hashes.
+team/local-sources/** -text whitespace=cr-at-eol
+skills/immersive-interaction-lab/SKILL.md -text whitespace=cr-at-eol

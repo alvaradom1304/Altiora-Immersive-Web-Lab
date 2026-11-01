@@ -1,0 +1,36 @@
+{
+  "id": "T1031-aa38",
+  "title": "Afilar skills, rutas y diagnosticos de herramientas compartidas",
+  "role": "web-engineer",
+  "ai": null,
+  "reviewer": null,
+  "depends": [],
+  "files": [
+    "scripts/compact-skills.mjs",
+    "scripts/project-identity.mjs",
+    "docs/operations"
+  ],
+  "acceptance": "Duplicados exactos con respaldo, rutas coherentes, identidad sin secretos y pruebas",
+  "status": "hecha",
+  "owner": "codex/web-engineer",
+  "created": "2026-10-31T15:55:48Z",
+  "created_by": "codex/web-engineer",
+  "history": [
+    {
+      "at": "2026-10-31T15:55:48Z",
+      "by": "codex/web-engineer",
+      "status": "pendiente"
+    },
+    {
+      "at": "2026-10-31T15:56:45Z",
+      "by": "codex/web-engineer",
+      "status": "en_curso"
+    },
+    {
+      "at": "2026-10-31T15:57:53Z",
+      "by": "codex/web-engineer",
+      "status": "hecha",
+      "note": "390 archivos compactados con hashes y respaldo; 21 pruebas nuevas aprobadas; casos HTML corregidos y revisados; cinco capacidades de proyecto instaladas, catalogo179 y doctor/handoff validos; MCP coordinacion lectura/escritura real. No cambiar Git empresarial ni permisos."
+    }
+  ]
+}

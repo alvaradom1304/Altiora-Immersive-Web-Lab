@@ -1,6 +1,7 @@
 ---
 name: secure-development
 description: "secure-development: Cybersecurity. Usar para producir secure_controls, fixes, verification a partir de repo, stack, datos, alcance autorizado, amenazas; no sustituir otras fases ni declarar resultados sin evidencia."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

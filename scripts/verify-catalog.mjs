@@ -26,6 +26,65 @@ for (const repo of catalog.repositories) {
   assert.ok(!repo.archived || repo.decision !== 'adopt', 'No adoptar un repositorio archivado sin revisar');
 }
 assert.equal(catalog.repositories.find(r => r.id === '14islands/r3f-scroll-rig')?.decision, 'hold');
+// Catálogo suplementario de librerías visuales (referencias, no instalaciones).
+const visual = JSON.parse(await readFile(resolve(root, 'references/visual-libraries-2026.json'), 'utf8'));
+assert.equal(visual.schema_version, 1);
+assert.match(visual.updated_on, /^\d{4}-\d{2}-\d{2}$/);
+assert.equal(visual.operational_status, 'catalogued_not_installed');
+assert.ok(visual.repos.length >= 70);
+const visualIds = new Set();
+for (const entry of visual.repos) {
+  assert.match(entry.id, /^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/);
+  assert.ok(!visualIds.has(entry.id), 'Duplicado visual: ' + entry.id);
+  visualIds.add(entry.id);
+  assert.equal(entry.url, 'https://github.com/' + entry.id);
+  assert.ok(['evaluate', 'reference_only', 'tool_reference', 'hold'].includes(entry.decision));
+  assert.ok(['P0', 'P1', 'P2'].includes(entry.priority));
+  for (const key of ['category', 'use', 'license_note', 'risk']) assert.ok(entry[key]?.length);
+  assert.equal(entry.integrated, false, 'Referencia no puede declararse instalada: ' + entry.id);
+  if (entry.license_review) {
+    assert.ok(entry.license_review.status.length > 8);
+    assert.match(entry.license_review.reviewed_on, /^\d{4}-\d{2}-\d{2}$/);
+    assert.equal(new URL(entry.license_review.source_url).host, 'github.com');
+  }
+  if (entry.verified_on !== undefined) {
+    assert.match(entry.verified_on, /^\d{4}-\d{2}-\d{2}$/);
+    assert.ok(entry.verified_scope?.includes('metadata'), 'Falta alcance de verificación: ' + entry.id);
+    assert.notEqual(entry.decision, 'tool_reference', 'Nuevos proyectos se registran solo como candidatos: ' + entry.id);
+  }
+}
+
+const lygia = visual.repos.find(x => x.id === 'patriciogonzalezvivo/lygia');
+assert.equal(lygia?.decision, 'hold', 'Lygia comercial debe permanecer en HOLD hasta obtener autorización legal verificable');
+assert.match(lygia.license_note, /Prosperity Public License/);
+const usd = visual.repos.find(x => x.id === 'PixarAnimationStudios/OpenUSD');
+assert.match(usd.license_note, /Tomorrow Open Source Technology License/);
+
+// Audio has one canonical catalog inside its portable skill bundle.
+const audioIndexPath = resolve(root, 'references/audio-repositories-2026.json');
+const audioIndex = JSON.parse(await readFile(audioIndexPath, 'utf8'));
+const audioPath = resolve(dirname(audioIndexPath), audioIndex.catalog);
+assert.equal(relative(root, audioPath).replaceAll('\\', '/'), 'skills/audio-production/references/repositories.json');
+const audio = JSON.parse(await readFile(audioPath, 'utf8'));
+assert.equal(audio.schema_version, 1);
+const audioIds = new Set();
+for (const entry of audio.repos) {
+  assert.ok(!audioIds.has(entry.id), 'Audio reference duplicated: ' + entry.id);
+  audioIds.add(entry.id);
+  assert.equal(entry.url, 'https://github.com/' + entry.id);
+  assert.match(entry.revision, /^[a-f0-9]{40}$/);
+  assert.match(entry.verified_on, /^\d{4}-\d{2}-\d{2}$/);
+  assert.ok(['evaluate', 'hold', 'reference_only'].includes(entry.decision));
+  assert.equal(entry.integrated, false, 'A reviewed source is not installed');
+  assert.equal(entry.runtime_status, 'NOT_TESTED');
+  assert.ok(entry.license_code && entry.model_license && entry.risk);
+  assert.ok(entry.sources.length >= 2);
+  for (const source of entry.sources) assert.ok(source.startsWith(entry.url + '/blob/' + entry.revision + '/'));
+}
+const audioCraft = audio.repos.find(x => x.id === 'facebookresearch/audiocraft');
+assert.equal(audioCraft.decision, 'hold', 'Noncommercial model weights cannot be approved for commercial production');
+assert.match(audioCraft.model_license, /CC-BY-NC-4.0/);
+
 const skillSources = JSON.parse(await readFile(resolve(root, 'references/skill-sources.json'), 'utf8'));
 let externalSkills = 0;
 for (const source of skillSources.sources) {
@@ -40,7 +99,7 @@ for (const source of skillSources.sources) {
 let documentCount = 0;
 async function walk(dir) {
   for (const entry of await readdir(dir, { withFileTypes: true })) {
-    if (['.git', '.references', 'node_modules'].includes(entry.name)) continue;
+    if (['.git', '.references', 'node_modules', '.altiora-private', 'out'].includes(entry.name)) continue;
     const path = resolve(dir, entry.name);
     if (entry.isDirectory()) await walk(path);
     else if (entry.name.endsWith('.md')) {
@@ -58,5 +117,5 @@ async function walk(dir) {
   }
 }
 await walk(root);
-console.log('OK: ' + ids.size + ' repositorios, ' + externalSkills + ' skills externas con licencia y ' + documentCount + ' documentos; estructura, revisiones y enlaces locales válidos.');
+console.log('OK: ' + ids.size + ' repositorios base, ' + visualIds.size + ' repositorios visuales, ' + externalSkills + ' skills externas con licencia y ' + documentCount + ' documentos; estructura, revisiones y enlaces locales válidos.');
 console.log('Esta comprobación no ejecuta demos ni certifica compatibilidad de runtime.');

@@ -1,6 +1,7 @@
 ---
 name: brand-strategy
 description: "brand-strategy: Brand Intelligence. Usar para producir brand_platform, promises, proof a partir de estrategia negocio, audiencia, valor, competencia; no sustituir otras fases ni declarar resultados sin evidencia."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

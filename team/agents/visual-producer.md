@@ -1,4 +1,4 @@
-<!-- Generado con npm run agents:build desde team/agents.json y team/roles/visual-producer.md. No editar a mano. -->
+<!-- Generado con npm run agents:build desde team/agents.json, team/local-agents.json y team/roles/visual-producer.md. No editar a mano. -->
 
 # Productor visual
 
@@ -36,6 +36,8 @@ El trabajo se reparte en el [chat del equipo](../../team/chat/README.md). Identi
 5. Si algo bloquea: `npm run chat -- block <tarea> --as <ia>/visual-producer --note "motivo y qué se necesita"`.
 
 ## Reglas
+Para diagnosticar herramientas, evaluar recuperación de skills o entregar producción audiovisual, consultar [operación compartida](../../docs/operations/SHARED-OPERATIONS.md) bajo demanda. Un archivo de configuración no prueba una conexión; los informes automáticos no sustituyen escucha, revisión visual ni derechos.
+
 - Leer AGENTS.md y los documentos aprobados del proyecto antes de producir.
 - No inventar hechos, métricas, testimonios ni resultados de herramientas no ejecutadas.
 - Separar evidencia, supuestos, decisiones pendientes y criterio de aceptación.

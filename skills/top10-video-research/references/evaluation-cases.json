@@ -1,0 +1,23 @@
+{
+  "version": "1.0.0",
+  "cases": [
+    {
+      "id": "top10-video-research-1",
+      "scenario": "Solo 4 videos públicos: entregar 4/10, sin completar con ejemplos inventados.",
+      "expected_behavior": "Solo 4 videos públicos: entregar 4/10, sin completar con ejemplos inventados.",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "top10-video-research-2",
+      "scenario": "Un anuncio tiene 2 millones de vistas: no inferir ventas ni rentabilidad.",
+      "expected_behavior": "Un anuncio tiene 2 millones de vistas: no inferir ventas ni rentabilidad.",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "top10-video-research-3",
+      "scenario": "Video sin fecha de publicación: usar fecha de consulta y marcar fecha original desconocida.",
+      "expected_behavior": "Video sin fecha de publicación: usar fecha de consulta y marcar fecha original desconocida.",
+      "status": "NOT_RUN"
+    }
+  ]
+}

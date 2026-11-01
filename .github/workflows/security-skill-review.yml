@@ -1,0 +1,34 @@
+name: Security Skill Review
+on:
+  workflow_dispatch:
+    inputs:
+      path:
+        description: "Carpeta de skill existente dentro de skills/ (sin symlinks)"
+        required: true
+        default: "skills/ai-video-direction"
+permissions:
+  contents: read
+jobs:
+  skillspector-static:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install reviewed scanner in isolated venv
+        run: |
+          python -m venv .venv-security
+          .venv-security/bin/python -m pip install --disable-pip-version-check 'skillspector==2.12.0'
+      - name: Scan requested skill (fail closed)
+        env:
+          TARGET: ${{ inputs.path }}
+        run: |
+          export PATH="$PWD/.venv-security/bin:$PATH"
+          npm run security:scan -- "$TARGET"

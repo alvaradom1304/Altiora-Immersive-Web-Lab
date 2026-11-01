@@ -1,0 +1,36 @@
+{
+  "id": "T1031-ed56",
+  "title": "Verificacion funcional aislada de adaptadores de runtime",
+  "role": "web-engineer",
+  "ai": null,
+  "reviewer": null,
+  "depends": [],
+  "files": [
+    "scripts/runtime-smoke.py",
+    "scripts/test_runtime_smoke.py",
+    "docs/operations/RUNTIME-SMOKE.md"
+  ],
+  "acceptance": "Casos reales de handler sin cuentas ni cambios de confianza; niveles de evidencia separados",
+  "status": "hecha",
+  "owner": "codex/web-engineer",
+  "created": "2026-10-31T16:10:45Z",
+  "created_by": "codex/web-engineer",
+  "history": [
+    {
+      "at": "2026-10-31T16:10:45Z",
+      "by": "codex/web-engineer",
+      "status": "pendiente"
+    },
+    {
+      "at": "2026-10-31T16:11:56Z",
+      "by": "codex/web-engineer",
+      "status": "en_curso"
+    },
+    {
+      "at": "2026-10-31T16:23:15Z",
+      "by": "codex/web-engineer",
+      "status": "hecha",
+      "note": "Kit revisado paso18/18 casos funcionales con validador corregido;13tests del diagnostico y3 regresiones revisadas. CodexCLI consultado con perfil aislado; sesiones y confianza nativas siguen NOT_VERIFIED. No se modifico kit ni cuentas."
+    }
+  ]
+}

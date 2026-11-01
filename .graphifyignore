@@ -1,0 +1,12 @@
+# Graphify: excluir copias históricas, terceros y archivos generados/minificados
+.altiora/retired/
+external/
+temp_skills/
+.references/
+node_modules/
+.claude/
+.agents/
+.codex/
+**/*.min.js
+**/dist/
+**/build/

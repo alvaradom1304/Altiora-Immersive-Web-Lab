@@ -1,6 +1,7 @@
 ---
 name: owasp-review
 description: "owasp-review: Cybersecurity. Usar para producir owasp_findings, mappings, remediation a partir de app/repo, alcance, versión estándar, evidencia; no sustituir otras fases ni declarar resultados sin evidencia."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

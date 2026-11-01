@@ -1,0 +1,23 @@
+{
+  "version": "1.0.0",
+  "cases": [
+    {
+      "id": "growth-experiment-analysis-1",
+      "scenario": "Cero compras → CAC no definido, no dividir por cero.",
+      "expected_behavior": "Cero compras → CAC no definido, no dividir por cero.",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "growth-experiment-analysis-2",
+      "scenario": "Dos ventas con muestra pequeña → no reclamar ganador estadístico.",
+      "expected_behavior": "Dos ventas con muestra pequeña → no reclamar ganador estadístico.",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "growth-experiment-analysis-3",
+      "scenario": "Ad creativo A no tenía stock → invalidar comparación por confusión.",
+      "expected_behavior": "Ad creativo A no tenía stock → invalidar comparación por confusión.",
+      "status": "NOT_RUN"
+    }
+  ]
+}

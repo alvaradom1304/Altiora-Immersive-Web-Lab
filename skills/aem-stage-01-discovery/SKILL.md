@@ -1,8 +1,6 @@
 ---
 name: aem-stage-01-discovery
-description: Ejecuta la Fase 01 de AEM. Úsalo para auditar un nuevo cliente, extraer sus dolores de negocio reales y definir el alcance inicial antes de proponer soluciones. Usar cuando llega un cliente o proyecto nuevo, o cuando piden una solución concreta (p. ej. «rediseño web») sin causa raíz documentada. No usar si ya existe un Discovery vigente y lo que se pide es investigación de mercado (aem-stage-02-research) o estrategia (aem-stage-03-strategy).
-metadata:
-  version: 1.1.0
+description: Ejecuta la Fase 01 de AEM. Úsalo para auditar un nuevo cliente, extraer sus dolores de negocio reales y definir el alcance inicial antes de proponer soluciones.
 ---
 
 # STAGE 01 - DISCOVERY (Instrucciones de Ejecución)
@@ -42,17 +40,3 @@ metadata:
 
 4. **Transición:**
    Al terminar y guardar el archivo, pregúntale al usuario si desea que procedas con la fase `aem-stage-02-research`.
-
-## Reglas de decisión
-
-- **Información completa** = se conocen las tres respuestas de la entrevista y hay al menos una métrica actual (ventas, pedidos, tiempo, merma…). Si falta alguna, el archivo puede crearse marcando la sección como `PENDIENTE: <qué falta y a quién preguntarlo>`; nunca rellenarla con supuestos presentados como hechos.
-- **Impacto financiero:** usar solo cifras dadas por el cliente o calculadas a partir de ellas, mostrando la cuenta. Si no hay cifras, escribir la fórmula y los datos necesarios.
-- **Criterios de éxito:** cada uno con métrica, valor actual (o `sin medir`) y meta o plazo. Evitar criterios no medibles como «más presencia».
-- **Petición de solución directa** (diseño, logo, web, campaña) sin Discovery: no entregar la solución; explicar en una frase por qué se diagnostica primero y lanzar las 2 primeras preguntas.
-
-## Verificación del entregable
-
-Antes de cerrar, comprobar que `01_DISCOVERY_[NombreCliente].md` tiene las 4 secciones, que el problema raíz es distinto del síntoma pedido, que cada cifra tiene fuente («dato del cliente», «cálculo») y que hay al menos 2 criterios de éxito medibles.
-
-## Historial
-- 1.1.0 (2026-10-19): descripción con cuándo usarla y cuándo no, reglas para información incompleta y cifras, verificación del entregable y casos de evaluación en `evals/evals.json`.

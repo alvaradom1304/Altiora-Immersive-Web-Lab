@@ -56,3 +56,9 @@ Ejemplo: «Usa $dependency-security con manifest/lockfile, advisories, versiones
 ## Historial
 
 0.1.0 — 2026-10-10: core delegable, contratos y casos iniciales. EXPERIMENTAL hasta revisión de comportamiento documentada.
+
+## Integración de seguridad para repositorios y skills externas
+
+Al incorporar herramientas en Claude Code o Antigravity, complementar este contrato con `docs/security/third-party-skill-gate.md`. Revisar manifiesto y lockfile, versión exacta, alcance de scripts de instalación, CVE aplicables, credenciales solicitadas y accesos de red/archivos. SkillSpector examina riesgos de la skill; Trivy/OSV revisan dependencias/manifiestos; OpenSSF Scorecard aporta señales sobre prácticas de repositorio. **Ninguno certifica seguridad absoluta**.
+
+La revisión comienza como `NOT_RUN`; registrar el comando ejecutado y su salida antes de pasar a `PASS`. No hacer `curl | bash`, no habilitar permisos amplios ni ejecutar código externo sin revisión. En modo `--no-llm`, SkillSpector evita enviar contenidos a un LLM, pero puede consultar coordenadas de dependencias a OSV. No enviar material privado de clientes a servicios externos sin autorización.

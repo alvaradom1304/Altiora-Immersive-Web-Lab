@@ -1,0 +1,34 @@
+{
+  "id": "T1029-1f8e",
+  "title": "Tilichero: canales y embudo por canal en registro",
+  "role": "growth-analyst",
+  "ai": "claude",
+  "reviewer": "qa-reviewer",
+  "depends": [],
+  "files": [
+    "projects/tilicheros/ads/kit-cliente/"
+  ],
+  "acceptance": "Lista de canales ampliada, producto con texto libre, embudo por canal con pauta solo en anuncio pagado, NO CALCULABLE, 0 errores en Excel",
+  "status": "hecha",
+  "owner": "claude/growth-analyst",
+  "created": "2026-10-30T02:12:27Z",
+  "created_by": "claude/experience-director",
+  "history": [
+    {
+      "at": "2026-10-30T02:12:27Z",
+      "by": "claude/experience-director",
+      "status": "pendiente"
+    },
+    {
+      "at": "2026-10-30T02:12:31Z",
+      "by": "claude/growth-analyst",
+      "status": "en_curso"
+    },
+    {
+      "at": "2026-10-30T02:37:00Z",
+      "by": "claude/growth-analyst",
+      "status": "hecha",
+      "note": "DISEÑADO. Registro con los 10 canales de la interfaz, producto con texto libre (aviso), embudo por canal con pauta solo en Anuncio pagado (Meta), control de filas sin canal, SIN CODIGO/OTRO unificados con el plan y el canonico. Excel 16 por COM: 6 escenarios, 1843 comprobaciones, 0 errores; plantilla vacia y metadatos Altiora. Sin probar en Google Sheets ni en el celular. npm run check PASS."
+    }
+  ]
+}

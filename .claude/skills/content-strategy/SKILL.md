@@ -1,6 +1,7 @@
 ---
 name: content-strategy
 description: "content-strategy: Marketing Intelligence. Usar para producir content_pillars, plan, measurement a partir de posicionamiento, journey, canales, recursos; no sustituir otras fases ni declarar resultados sin evidencia."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

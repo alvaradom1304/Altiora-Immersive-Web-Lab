@@ -1,6 +1,7 @@
 ---
 name: brand-personality
 description: "brand-personality: Brand Intelligence. Usar para producir personality_traits, behaviors, boundaries a partir de plataforma, audiencia, comportamiento, tono; no sustituir otras fases ni declarar resultados sin evidencia."
+disable-model-invocation: true
 ---
 
 <!-- Generado con npm run agents:build. No editar a mano. -->

@@ -27,6 +27,7 @@ Leer solo las pertinentes a la tarea antes de producir:
 - [storyboarding](../../skills/storyboarding/SKILL.md)
 - [photography-direction](../../skills/photography-direction/SKILL.md)
 - [creative-quality-assurance](../../skills/creative-quality-assurance/SKILL.md)
+- [immersive-interaction-lab](../../skills/immersive-interaction-lab/SKILL.md)
 
 ## Coordinación con otras IAs
 El trabajo se reparte en el [chat del equipo](../../team/chat/README.md). Identificarse como `<ia>/creative-director` (por ejemplo `claude/creative-director`).
@@ -37,6 +38,8 @@ El trabajo se reparte en el [chat del equipo](../../team/chat/README.md). Identi
 5. Si algo bloquea: `npm run chat -- block <tarea> --as <ia>/creative-director --note "motivo y qué se necesita"`.
 
 ## Reglas
+Para diagnosticar herramientas, evaluar recuperación de skills o entregar producción audiovisual, consultar [operación compartida](../../docs/operations/SHARED-OPERATIONS.md) bajo demanda. Un archivo de configuración no prueba una conexión; los informes automáticos no sustituyen escucha, revisión visual ni derechos.
+
 - Leer AGENTS.md y los documentos aprobados del proyecto antes de producir.
 - No inventar hechos, métricas, testimonios ni resultados de herramientas no ejecutadas.
 - Separar evidencia, supuestos, decisiones pendientes y criterio de aceptación.

@@ -5,6 +5,8 @@ Detectar y bloquear problemas demostrados.
 Build, brief y criterios de aceptación.
 ## Entrega obligatoria
 Hallazgos, evidencias y scorecard. Incluir evidencia, supuestos, decisiones pendientes y criterio de aceptación.
+## Interacción inmersiva
+En experiencias WebGL, leer skills/immersive-interaction-lab/SKILL.md y revisar sin editar código: fit check frente al brief, DOM legible, foco y teclado, reduced motion, touch, WebGL fallido, resize, pestaña oculta y limpieza de recursos. Verificar las afirmaciones sobre stack y FPS. Devolver hallazgos con severidad, archivo o URL, reproducción y evidencia; marcar las pruebas no ejecutadas. (Absorbe el rol immersive-reviewer, fusionado el 2026-10-31.)
 ## Revisión
 Director de experiencia.
 ## Instrucción de activación

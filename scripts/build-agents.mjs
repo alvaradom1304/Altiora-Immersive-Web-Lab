@@ -7,10 +7,11 @@
 import { mkdir, readFile, readdir, rm, writeFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { loadSkills, loadAgents } from './skill-catalog.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const check = process.argv.includes('--check');
-const { agents } = JSON.parse(await readFile(resolve(root, 'team/agents.json'), 'utf8'));
+const agents = await loadAgents(root);
 const read = path => readFile(path, 'utf8').then(t => t.replace(/\r\n/g, '\n'), () => null);
 
 function sections(markdown) {
@@ -51,6 +52,8 @@ El trabajo se reparte en el [chat del equipo](../../team/chat/README.md). Identi
 5. Si algo bloquea: \`npm run chat -- block <tarea> --as <ia>/${agent.id} --note "motivo y qué se necesita"\`.
 
 ## Reglas
+Para diagnosticar herramientas, evaluar recuperación de skills o entregar producción audiovisual, consultar [operación compartida](../../docs/operations/SHARED-OPERATIONS.md) bajo demanda. Un archivo de configuración no prueba una conexión; los informes automáticos no sustituyen escucha, revisión visual ni derechos.
+
 - Leer AGENTS.md y los documentos aprobados del proyecto antes de producir.
 - No inventar hechos, métricas, testimonios ni resultados de herramientas no ejecutadas.
 - Separar evidencia, supuestos, decisiones pendientes y criterio de aceptación.
@@ -76,14 +79,19 @@ for (const agent of agents) {
   frontmatter.push('---', '');
   const text = body(agent, role);
   outputs.push([`.claude/agents/${agent.id}.md`, frontmatter.join('\n') + '\n' + text]);
-  outputs.push([`team/agents/${agent.id}.md`, `<!-- Generado con npm run agents:build desde team/agents.json y team/roles/${agent.id}.md. No editar a mano. -->\n\n` + text.replace('\n\nRol del equipo', `\n\n> ${description}\n> Pegar este archivo como instrucciones del sistema o primer mensaje en cualquier IA.\n\nRol del equipo`)]);
+  if (agent.id === 'audio-specialist') {
+    // Native adapters inherit client tools/model/permissions; no account edits.
+    const instructions = 'Read skills/audio-production/SKILL.md from the project root before audio work.\n\n' + text;
+    outputs.push([`.codex/agents/${agent.id}.toml`, `name = ${JSON.stringify(agent.id)}\ndescription = ${JSON.stringify(description)}\ndeveloper_instructions = ${JSON.stringify(instructions)}\n`]);
+    outputs.push([`.gemini/agents/${agent.id}.md`, `---\nname: ${agent.id}\ndescription: ${JSON.stringify(description)}\nkind: local\n---\n\n${instructions}`]);
+  }
+  outputs.push([`team/agents/${agent.id}.md`, `<!-- Generado con npm run agents:build desde team/agents.json, team/local-agents.json y team/roles/${agent.id}.md. No editar a mano. -->\n\n` + text.replace('\n\nRol del equipo', `\n\n> ${description}\n> Pegar este archivo como instrucciones del sistema o primer mensaje en cualquier IA.\n\nRol del equipo`)]);
 }
 
 // --- Skills de Claude Code (.claude/skills/) ---------------------------------------------
 // Cada skill de skills/ se expone con un SKILL.md puente que remite al original, sin duplicar
-// archivos ni depender de symlinks (fallan en Windows). Solo las skills asignadas a un agente
-// entran en el listado automático del modelo; el resto se invoca con /nombre para no cargar
-// cientos de descripciones en cada turno.
+// archivos ni depender de symlinks. Todas son descubribles salvo restricción explícita
+// en la fuente. Asignación a roles y visibilidad del modelo son conceptos distintos.
 const MARK = '<!-- Generado con npm run agents:build. No editar a mano. -->';
 const roleTitles = {};
 for (const agent of agents) roleTitles[agent.id] = sections(await read(resolve(root, 'team/roles', agent.id + '.md'))).title;
@@ -93,26 +101,17 @@ const sources = JSON.parse(await read(resolve(root, 'references/skill-sources.js
 const origin = new Map();
 for (const src of sources.sources) for (const s of [...src.skills, ...(src.previously_imported ?? [])]) origin.set(s, src.repo);
 
-function frontmatterField(text, key) {
-  const block = text.match(/^---\n([\s\S]*?)\n---/)?.[1] ?? '';
-  const lines = block.split('\n');
-  const i = lines.findIndex(l => l.startsWith(key + ':'));
-  if (i < 0) return '';
-  let value = lines[i].slice(key.length + 1).trim();
-  for (let j = i + 1; j < lines.length && /^\s+/.test(lines[j]); j++) value += ' ' + lines[j].trim();
-  return value.replace(/^[>|]-?\s*/, '').replace(/^(['"])([\s\S]*)\1$/, '$2').replace(/''/g, "'").trim();
-}
-
-const skillNames = (await readdir(resolve(root, 'skills'), { withFileTypes: true })).filter(e => e.isDirectory()).map(e => e.name).sort();
+const catalogSkills = await loadSkills(root);
+// Núcleo visible para el modelo (references/skill-core.json); el resto queda en reserva por comando.
+const coreList = JSON.parse(await read(resolve(root, 'references/skill-core.json')));
+const core = new Set([...coreList.used, ...coreList.method, ...(coreList.sales ?? [])]);
+for (const s of core) if (!catalogSkills.some(c => c.name === s)) throw Error('Skill del núcleo inexistente: ' + s);
 const skillRows = [];
-for (const name of skillNames) {
-  const text = await read(resolve(root, 'skills', name, 'SKILL.md'));
-  if (!text) continue;
-  const skillName = frontmatterField(text, 'name') || name;
-  const description = frontmatterField(text, 'description').slice(0, 1024);
-  const auto = assigned.has(name);
+for (const skill of catalogSkills) {
+  const {folder: name, name: skillName, description} = skill;
+  skill.manual ||= !core.has(skillName);
   const fm = ['---', `name: ${skillName}`, `description: ${JSON.stringify(description)}`];
-  if (!auto) fm.push('disable-model-invocation: true');
+  if (skill.manual) fm.push('disable-model-invocation: true');
   fm.push('---');
   outputs.push([`.claude/skills/${skillName}/SKILL.md`, `${fm.join('\n')}
 
@@ -122,7 +121,7 @@ Skill del catálogo Altiora${origin.has(name) ? ` (origen: ${origin.get(name)})`
 
 Petición: $ARGUMENTS
 `]);
-  skillRows.push({ name: skillName, folder: name, description, agents: assigned.get(name) ?? [], origin: origin.get(name) });
+  skillRows.push({ name: skillName, folder: name, description, agents: assigned.get(name) ?? [], origin: origin.get(name), auto: !skill.manual });
 }
 
 // --- Chat de cada agente (/chat-<rol>) -----------------------------------------------------
@@ -221,7 +220,7 @@ Mapa de agentes, chats, skills y repositorios disponibles en Claude Code y en el
 |---|---|
 | Ver el tablero y repartir un encargo | \`/equipo <encargo>\` |
 | Hablar con un agente concreto | \`/chat-<rol> <mensaje>\`, por ejemplo \`/chat-web-engineer T1018-ab12\` |
-| Usar una skill | \`/<skill> <petición>\`, o dejar que Claude la elija si está asignada a un agente |
+| Usar una skill | \`/<skill> <petición>\`, o dejar que Claude la elija por pertinencia |
 | Consultar o descargar un repositorio de referencia | \`/repos <necesidad>\` |
 
 Otras IAs (Codex, Gemini, ChatGPT): prompts en [team/agents/](team/agents/experience-director.md) y el mismo chat (\`npm run chat\`), ver [team/chat/README.md](team/chat/README.md).
@@ -234,11 +233,11 @@ ${byAgent.join('\n')}
 
 ## Skills (${skillRows.length})
 
-**Auto** = Claude puede cargarla sola (está asignada a un agente). El resto se usa con \`/nombre\`. Origen vacío = skill propia de Altiora.
+**Auto** = el adaptador permite invocación por el modelo; no prueba carga en una sesión. La asignación a agentes no restringe el descubrimiento. Origen vacío = sin fuente externa registrada; no certifica autoría.
 
 | Skill | Auto | Agentes | Origen | Para qué |
 |---|---|---|---|---|
-${skillRows.map(r => `| [${r.name}](skills/${r.folder}/SKILL.md) | ${r.agents.length ? 'sí' : '—'} | ${r.agents.join(', ') || '—'} | ${r.origin ?? ''} | ${short(r.description)} |`).join('\n')}
+${skillRows.map(r => `| [${r.name}](skills/${r.folder}/SKILL.md) | ${r.auto ? 'sí' : '—'} | ${r.agents.join(', ') || '—'} | ${r.origin ?? ''} | ${short(r.description)} |`).join('\n')}
 
 ## Repositorios de referencia (${catalog.repositories.length})
 
@@ -246,6 +245,22 @@ ${skillRows.map(r => `| [${r.name}](skills/${r.folder}/SKILL.md) | ${r.agents.le
 |---|---|---|---|
 ${repoRows.join('\n')}
 `]);
+
+// Local project budget only; preserve unrelated settings and environment entries.
+// Names/descriptions plus conservative formatting headroom; does not load skill bodies.
+const listingBudget = skillRows.reduce((sum, r) => sum + r.name.length + r.description.length + 256, 4096);
+const settingsText = await read(resolve(root, '.claude/settings.json'));
+const settings = settingsText ? JSON.parse(settingsText) : {};
+settings.env = {...settings.env, SLASH_COMMAND_TOOL_CHAR_BUDGET: String(listingBudget)};
+outputs.push(['.claude/settings.json', JSON.stringify(settings, null, 2) + '\n']);
+
+outputs.push(['references/discovery-manifest.json', JSON.stringify({schema_version: 1,
+  skills: skillRows.map(({name, folder, auto, agents}) => ({name, source: `skills/${folder}/SKILL.md`, model_invocable: auto, assigned_agents: agents})),
+  agents: agents.map(a => ({id: a.id, source: a.source ?? `team/roles/${a.id}.md`, claude: `.claude/agents/${a.id}.md`, antigravity: `.agents/agents/${a.id}.md`})),
+  convenience_commands: [...agents.map(a => `chat-${a.id}`), 'equipo', 'repos'],
+  listing_budget_characters: listingBudget,
+  runtime_discovery: 'NOT_RUN'
+}, null, 2) + '\n']);
 
 const expectedSkillDirs = new Set(outputs.filter(([p]) => p.startsWith('.claude/skills/')).map(([p]) => p.split('/')[2]));
 if (expectedSkillDirs.size !== outputs.filter(([p]) => p.startsWith('.claude/skills/')).length) throw new Error('Nombres de skill duplicados en .claude/skills');
@@ -267,4 +282,4 @@ for (const dir of await readdir(resolve(root, '.claude/skills')).catch(() => [])
   else await rm(resolve(root, '.claude/skills', dir), { recursive: true });
 }
 if (stale) { console.error('Ejecutar npm run agents:build.'); process.exit(1); }
-console.log(`${check ? 'OK' : 'Generados'}: ${agents.length} agentes y ${agents.length} chats, ${skillRows.length} skills en Claude Code (${skillRows.filter(r => r.agents.length).length} automáticas), /equipo, /repos e INDEX.md.`);
+console.log(`${check ? 'OK' : 'Generados'}: ${agents.length} agentes y ${agents.length} chats, ${skillRows.length} skills en Claude Code (${skillRows.filter(r => r.auto).length} automáticas), /equipo, /repos e INDEX.md.`);
