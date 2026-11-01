@@ -881,9 +881,9 @@
       "source": "skills/immersive-interaction-lab/SKILL.md",
       "model_invocable": true,
       "assigned_agents": [
-        "immersive-director",
-        "immersive-motion-engineer",
-        "immersive-reviewer"
+        "creative-director",
+        "web-engineer",
+        "qa-reviewer"
       ]
     },
     {
@@ -1920,24 +1920,6 @@
       "source": "team/local-sources/codex/altiora-review.toml",
       "claude": ".claude/agents/altiora-review.md",
       "antigravity": ".agents/agents/altiora-review.md"
-    },
-    {
-      "id": "immersive-director",
-      "source": "team/local-sources/claude/immersive-director.md",
-      "claude": ".claude/agents/immersive-director.md",
-      "antigravity": ".agents/agents/immersive-director.md"
-    },
-    {
-      "id": "immersive-motion-engineer",
-      "source": "team/local-sources/claude/immersive-motion-engineer.md",
-      "claude": ".claude/agents/immersive-motion-engineer.md",
-      "antigravity": ".agents/agents/immersive-motion-engineer.md"
-    },
-    {
-      "id": "immersive-reviewer",
-      "source": "team/local-sources/claude/immersive-reviewer.md",
-      "claude": ".claude/agents/immersive-reviewer.md",
-      "antigravity": ".agents/agents/immersive-reviewer.md"
     }
   ],
   "convenience_commands": [
@@ -1962,9 +1944,6 @@
     "chat-altiora-experience",
     "chat-altiora-research",
     "chat-altiora-review",
-    "chat-immersive-director",
-    "chat-immersive-motion-engineer",
-    "chat-immersive-reviewer",
     "equipo",
     "repos"
   ],

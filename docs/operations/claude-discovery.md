@@ -44,6 +44,8 @@ Con autorización del dueño, el listado automático se reduce a un **núcleo de
 
 El criterio de 2026-10-29 (no ocultar por falta de rol asignado) sigue siendo válido; lo que cambia es el criterio de visibilidad: **uso demostrado**, no asignación a un rol. Promover una skill = añadirla a `skill-core.json` y ejecutar `npm run agents:build`. Evidencia y método en la [auditoría](auditoria-infraestructura-agentes-2026-10-31.md). Antigravity no aplica esta distinción: sigue recibiendo las 263 skills.
 
+El mismo día se fusionaron los tres adaptadores `immersive-*` en `creative-director`, `web-engineer` y `qa-reviewer`, que reciben la skill `immersive-interaction-lab` y una sección «Interacción inmersiva» en su rol. Quedan 4 adaptadores locales (`altiora-*`) y 21 agentes. Los snapshots originales permanecen en `team/local-sources/` con sus hashes. La copia del laboratorio de `immersive-interaction-lab` aún nombra los roles antiguos porque es un snapshot exacto; los roles canónicos indican el reemplazo.
+
 ## Uso y validación en la instalación real
 
 Actualizar esta rama y abrir la RAÍZ del laboratorio en Claude Code. Ejecutar `npm run agents:build` y `npm run check`. Abrir una sesión nueva o recargar las personalizaciones admitidas por su versión. Consultar `/agents` para los roles, el menú `/` para skills/comandos, `/context` para el listado recibido por el modelo y `/doctor` para diagnóstico del presupuesto. No esperar ver 261 al contar solo comandos de chat ni sumar los agentes otra vez como subagentes.

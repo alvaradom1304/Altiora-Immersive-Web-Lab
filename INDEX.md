@@ -15,22 +15,22 @@ Mapa de agentes, chats, skills y repositorios disponibles en Claude Code y en el
 
 Otras IAs (Codex, Gemini, ChatGPT): prompts en [team/agents/](team/agents/experience-director.md) y el mismo chat (`npm run chat`), ver [team/chat/README.md](team/chat/README.md).
 
-## Agentes (24)
+## Agentes (21)
 
 | Agente | Chat | Milestones | Skills asignadas |
 |---|---|---|---|
 | [Director de experiencia](.claude/agents/experience-director.md) | `/chat-experience-director` | M0, M1, M2, M3, M4, M5, M6 | `altiora-agent-orchestrator`, `elite-web-experience-os`, `business-decision-gates`, `launch-readiness`, `quality-council`, `human-in-the-loop`, `writing-plans`, `verification-before-completion` |
 | [Estratega de negocio](.claude/agents/business-strategist.md) | `/chat-business-strategist` | M0 | `business-strategy`, `value-proposition-design`, `buyer-persona`, `unit-economics`, `pricing`, `market-research`, `financial-forecasting`, `offers` |
 | [Estratega de marca](.claude/agents/brand-strategist.md) | `/chat-brand-strategist` | M1 | `brand-strategy`, `brand-positioning`, `brand-voice`, `brand-personality`, `premium-branding`, `brand-guidelines` |
-| [Director creativo](.claude/agents/creative-director.md) | `/chat-creative-director` | M1 | `creative-direction`, `art-direction`, `cinematic-direction`, `storyboarding`, `photography-direction`, `creative-quality-assurance` |
+| [Director creativo](.claude/agents/creative-director.md) | `/chat-creative-director` | M1 | `creative-direction`, `art-direction`, `cinematic-direction`, `storyboarding`, `photography-direction`, `creative-quality-assurance`, `immersive-interaction-lab` |
 | [Director de Experiencia Audiovisual](.claude/agents/audiovisual-experience-director.md) | `/chat-audiovisual-experience-director` | M0, M1, M2, M3, M4, M5, M6 | `creative-direction`, `cinematic-direction`, `storyboarding`, `ai-video-direction`, `motion-design`, `creative-quality-assurance`, `verification-before-completion` |
 | [UX researcher](.claude/agents/ux-researcher.md) | `/chat-ux-researcher` | M0, M2, M6 | `ux-research`, `user-flow`, `customer-journey`, `information-architecture`, `conversion-ux`, `accessibility`, `web-design-guidelines` |
 | [Diseñador UI](.claude/agents/ui-designer.md) | `/chat-ui-designer` | M2 | `ui-direction`, `design-system`, `color-system`, `typography-direction`, `responsive-design`, `frontend-design`, `web-design-guidelines` |
 | [Productor visual](.claude/agents/visual-producer.md) | `/chat-visual-producer` | M3 | `product-photography-direction`, `ai-image-direction`, `ai-video-direction`, `visual-identity`, `web-performance` |
 | [Motion designer](.claude/agents/motion-designer.md) | `/chat-motion-designer` | M3 | `motion-design`, `gsap-animation`, `scroll-experience`, `cinematic-direction`, `threejs-experience` |
-| [Ingeniero web](.claude/agents/web-engineer.md) | `/chat-web-engineer` | M3, M4 | `nextjs-architecture`, `react-three-fiber`, `threejs-experience`, `vercel-react-best-practices`, `web-performance`, `frontend-security`, `secure-development`, `vercel-composition-patterns`, `systematic-debugging`, `webapp-testing` |
+| [Ingeniero web](.claude/agents/web-engineer.md) | `/chat-web-engineer` | M3, M4 | `nextjs-architecture`, `react-three-fiber`, `threejs-experience`, `vercel-react-best-practices`, `web-performance`, `frontend-security`, `secure-development`, `vercel-composition-patterns`, `systematic-debugging`, `webapp-testing`, `immersive-interaction-lab` |
 | [Content designer](.claude/agents/content-designer.md) | `/chat-content-designer` | M2 | `copywriting`, `content-strategy`, `brand-voice`, `seo`, `local-seo`, `emails`, `schema` |
-| [QA y accesibilidad](.claude/agents/qa-reviewer.md) | `/chat-qa-reviewer` | M4 | `web-quality-assurance`, `accessibility`, `altiora-quality-review`, `web-performance`, `security-testing`, `owasp-review`, `webapp-testing`, `web-design-guidelines`, `verification-before-completion` |
+| [QA y accesibilidad](.claude/agents/qa-reviewer.md) | `/chat-qa-reviewer` | M4 | `web-quality-assurance`, `accessibility`, `altiora-quality-review`, `web-performance`, `security-testing`, `owasp-review`, `webapp-testing`, `web-design-guidelines`, `verification-before-completion`, `immersive-interaction-lab` |
 | [Analista de conversión y fidelización](.claude/agents/growth-analyst.md) | `/chat-growth-analyst` | M6 | `marketing-analytics`, `conversion-analysis`, `conversion-rate-optimization`, `growth-experimentation`, `retention`, `ltv-optimization`, `analytics`, `ab-testing`, `referrals`, `events` |
 | [Director de crecimiento comercial](.claude/agents/commerce-growth-director.md) | `/chat-commerce-growth-director` | M0, M1, M6 | `business-social-audit`, `product-winner-scorecard`, `organic-social-distribution`, `whatsapp-lead-to-sale`, `growth-experiment-analysis`, `consumer-psychology`, `marketing-analytics` |
 | [Director de inteligencia de mercado](.claude/agents/market-intelligence-director.md) | `/chat-market-intelligence-director` | M0, M1 | `top10-video-research`, `product-winner-scorecard`, `creative-deconstruction-originality`, `marketing-psychology`, `market-research` |
@@ -40,9 +40,6 @@ Otras IAs (Codex, Gemini, ChatGPT): prompts en [team/agents/](team/agents/experi
 | [altiora-experience](.claude/agents/altiora-experience.md) | `/chat-altiora-experience` |  |  |
 | [altiora-research](.claude/agents/altiora-research.md) | `/chat-altiora-research` |  | `altiora-repository-research` |
 | [altiora-review](.claude/agents/altiora-review.md) | `/chat-altiora-review` |  | `altiora-quality-review` |
-| [immersive-director](.claude/agents/immersive-director.md) | `/chat-immersive-director` |  | `immersive-interaction-lab` |
-| [immersive-motion-engineer](.claude/agents/immersive-motion-engineer.md) | `/chat-immersive-motion-engineer` |  | `immersive-interaction-lab` |
-| [immersive-reviewer](.claude/agents/immersive-reviewer.md) | `/chat-immersive-reviewer` |  | `immersive-interaction-lab` |
 
 ## Skills (263)
 
@@ -179,7 +176,7 @@ Otras IAs (Codex, Gemini, ChatGPT): prompts en [team/agents/](team/agents/experi
 | [high-value-deliberation](skills/high-value-deliberation/SKILL.md) | — | — |  | Analizar preguntas, problemas y decisiones con perspectivas pertinentes, crítica concreta, evidencia verificable y una conclusión integra… |
 | [human-in-the-loop](skills/human-in-the-loop/SKILL.md) | — | experience-director |  | human-in-the-loop: AI & Automation. Usar para producir review_gates, escalation, fallback a partir de acciones críticas, roles, tiempos, … |
 | [immersive-commerce](skills/immersive-commerce/SKILL.md) | sí | — |  | Diseñar, implementar y optimizar experiencias web inmersivas orientadas a ventas, con branding premium, UX/UI, GSAP/WebGL/Three.js, rendi… |
-| [immersive-interaction-lab](skills/immersive-interaction-lab/SKILL.md) | sí | immersive-director, immersive-motion-engineer, immersive-reviewer |  | Diseña, implementa y audita interacción WebGL, cursor 3D y tipografía cinética inspirada en estudios experimentales como Buttermax, con f… |
+| [immersive-interaction-lab](skills/immersive-interaction-lab/SKILL.md) | sí | creative-director, web-engineer, qa-reviewer |  | Diseña, implementa y audita interacción WebGL, cursor 3D y tipografía cinética inspirada en estudios experimentales como Buttermax, con f… |
 | [immersive-web-design](skills/immersive-web-design/SKILL.md) | — | — |  | immersive-web-design: Premium Web Experience. Usar para producir immersive_concept, interaction_map, fallback a partir de narrativa, marc… |
 | [incident-response](skills/incident-response/SKILL.md) | — | — |  | incident-response: Cybersecurity. Usar para producir incident_timeline, containment_options, recovery_plan a partir de incidente, autorid… |
 | [industry-analysis](skills/industry-analysis/SKILL.md) | — | — |  | industry-analysis: Business Intelligence. Usar para producir industry_map, structural_forces, implications a partir de industria delimita… |

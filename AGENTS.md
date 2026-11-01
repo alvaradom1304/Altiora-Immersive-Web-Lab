@@ -56,7 +56,7 @@ Para cualquier trabajo de motion graphics, anuncios, Blender/3D, Adobe, animaci�
 La documentación y los repositorios de referencia **no** equivalen a librerías instaladas, licencias comerciales concedidas ni control remoto de Blender, Adobe o servicios de pago. Validar seguridad, derechos, compatibilidad, performance y presupuesto antes de ejecutar. Servidores MCP no auditados permanecen en HOLD.
 
 ## Equipo multi-IA
-- Los roles canónicos de team/registry.md y los siete adaptadores de team/local-agents.json tienen prompt en team/agents/<rol>.md (Claude Code los usa como subagentes en .claude/agents/). Se generan con npm run agents:build desde team/agents.json, team/local-agents.json y team/roles/; no editarlos a mano.
+- Los roles canónicos de team/registry.md y los adaptadores de team/local-agents.json tienen prompt en team/agents/<rol>.md (Claude Code los usa como subagentes en .claude/agents/). Se generan con npm run agents:build desde team/agents.json, team/local-agents.json y team/roles/; no editarlos a mano.
 - Repartir y coordinar el trabajo en el chat del equipo (team/chat/README.md): firmar como <ia>/<rol>, reclamar la tarea antes de editar, tocar solo sus archivos y cerrar con evidencia.
 
 ## Enrutamiento por intención para marketing / anuncios / branding

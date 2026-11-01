@@ -69,7 +69,8 @@
         "cinematic-direction",
         "storyboarding",
         "photography-direction",
-        "creative-quality-assurance"
+        "creative-quality-assurance",
+        "immersive-interaction-lab"
       ]
     },
     {
@@ -173,7 +174,8 @@
         "secure-development",
         "vercel-composition-patterns",
         "systematic-debugging",
-        "webapp-testing"
+        "webapp-testing",
+        "immersive-interaction-lab"
       ]
     },
     {
@@ -208,7 +210,8 @@
         "owasp-review",
         "webapp-testing",
         "web-design-guidelines",
-        "verification-before-completion"
+        "verification-before-completion",
+        "immersive-interaction-lab"
       ]
     },
     {
