@@ -1,6 +1,6 @@
 import os
 
-SKILLS_DIR = r"C:\Users\Usuario\OneDrive\Desktop\altiora\.agents\skills"
+SKILLS_DIR = r"C:\Users\Usuario\orca\workspaces\Altiora-Immersive-Web-Lab\altiora-enterprise-os\.agents\skills"
 
 # Diccionario con el contenido hiper-profesional (SOPs de Consultoría) para cada skill
 UPGRADES = {

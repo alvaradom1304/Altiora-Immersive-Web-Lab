@@ -1,6 +1,6 @@
 import os
 
-skills_dir = r"C:\Users\Usuario\OneDrive\Desktop\altiora\.agents\skills"
+skills_dir = r"C:\Users\Usuario\orca\workspaces\Altiora-Immersive-Web-Lab\altiora-enterprise-os\.agents\skills"
 
 for root, dirs, files in os.walk(skills_dir):
     for file in files:

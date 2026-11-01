@@ -1,0 +1,5 @@
+# Las huellas de los manifiestos de Altiora se calculan con finales LF.
+* text=auto eol=lf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf

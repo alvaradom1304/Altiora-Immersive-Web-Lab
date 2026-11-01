@@ -12,7 +12,7 @@ El piloto tiene código de catálogo/carrito y apertura directa de WhatsApp; la 
 
 ## Fuentes y rutas: comprueba el destino
 
-- Empresa: `C:/Users/Usuario/OneDrive/Desktop/altiora`.
+- Empresa: `C:/Users/Usuario/orca/workspaces/Altiora-Immersive-Web-Lab/altiora-enterprise-os`.
 - Desde esa raíz, consulta primero `CLAUDE.md`, `AGENTS.md`, `.altiora/project.json` y `.altiora/handoff.json`; después solo la sección pertinente de `docs/altiora-business/INICIO.md` o `docs/altiora-toolkit/ROUTING.md`.
 - Laboratorio activo de este encargo: `C:/Users/Usuario/Documents/Codex/2026-10-30/referenced-chatgpt-conversation-this-is-an/work/Altiora-Immersive-Web-Lab`.
 - Coordinación privada: `C:/Users/Usuario/Documents/Codex/2026-10-18/referenced-chatgpt-conversation-this-is-an-2/outputs/altiora-connection/shared`.
@@ -40,7 +40,7 @@ Actualiza el traspaso con decisiones, archivos y pruebas realmente hechas, prese
 
 ## Primera tarea de esta sesión · acotada y sin solapamiento
 
-Codex está manteniendo el prompt y la continuidad. **Tu responsabilidad ahora es revisar, sin editar**, `C:/Users/Usuario/OneDrive/Desktop/altiora/docs/altiora-business/CALCULADORA.html`. Verifica lo que permitan tus herramientas: carga, móvil/escritorio, teclado, estado vacío, ejemplo hipotético, cifras negativas y mantenimiento opcional. Los cálculos aislados ya pasaron; evita repetirlos si solo puedes revisar estáticamente. No instales navegadores, inicies servicios, envíes datos o cambies permisos para conseguir un PASS.
+Codex está manteniendo el prompt y la continuidad. **Tu responsabilidad ahora es revisar, sin editar**, `C:/Users/Usuario/orca/workspaces/Altiora-Immersive-Web-Lab/altiora-enterprise-os/docs/altiora-business/CALCULADORA.html`. Verifica lo que permitan tus herramientas: carga, móvil/escritorio, teclado, estado vacío, ejemplo hipotético, cifras negativas y mantenimiento opcional. Los cálculos aislados ya pasaron; evita repetirlos si solo puedes revisar estáticamente. No instales navegadores, inicies servicios, envíes datos o cambies permisos para conseguir un PASS.
 
 Si la UI no puede ejecutarse, marca la revisión visual como NOT_VERIFIED y entrega solo lo observado. No afirmes equivalencia entre inspección de HTML y prueba en navegador.
 

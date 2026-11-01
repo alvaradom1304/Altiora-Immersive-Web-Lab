@@ -55,6 +55,6 @@ Se contrata por separado, si el cliente lo necesita, sin condicionar la entrega 
 ## Evidencia usada
 
 - Skill aplicada: `C:/Users/Usuario/.codex/skills/high-ticket-offer/SKILL.md`.
-- `C:/Users/Usuario/OneDrive/Desktop/altiora/README.md`: capacidades declaradas y laboratorio piloto.
-- `C:/Users/Usuario/OneDrive/Desktop/altiora/CLIENTS_PORTFOLIO.md`: piloto en validación y pipeline con marcadores; no acredita pagos ni resultados comerciales.
+- `C:/Users/Usuario/orca/workspaces/Altiora-Immersive-Web-Lab/altiora-enterprise-os/README.md`: capacidades declaradas y laboratorio piloto.
+- `C:/Users/Usuario/orca/workspaces/Altiora-Immersive-Web-Lab/altiora-enterprise-os/CLIENTS_PORTFOLIO.md`: piloto en validación y pipeline con marcadores; no acredita pagos ni resultados comerciales.
 - No se hicieron afirmaciones actuales de tamaño, demanda o precios de mercado; no se precisó investigación externa para este borrador. Alcance, esfuerzo y umbrales del experimento son decisiones propuestas, no resultados observados.

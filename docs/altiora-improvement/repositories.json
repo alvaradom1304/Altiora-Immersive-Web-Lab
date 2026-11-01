@@ -9,7 +9,7 @@
       "use": "Patrón de perspectivas especializadas y síntesis final; ejecutor original secuencial ligado a Anthropic SDK o Claude CLI.",
       "status": "downloaded-reference-not-runtime",
       "commit": "17b7deeb5aa41d611cc81ae0c832e7a29eb1f736",
-      "local_path": "C:\\Users\\Usuario\\OneDrive\\Desktop\\altiora\\external\\debate-research\\debate-skill"
+      "local_path": "C:\\Users\\Usuario\\orca\\workspaces\\Altiora-Immersive-Web-Lab\\altiora-enterprise-os\\external\\debate-research\\debate-skill"
     },
     {
       "id": "Multi-Agents-Debate",
@@ -19,7 +19,7 @@
       "use": "Referencia de dos posturas enfrentadas y juez; código experimental con dependencias/API antiguas; no incorporar código a la aplicación sin revisar compatibilidad y licencia.",
       "status": "downloaded-reference-not-runtime",
       "commit": "e58d146033568ccf737d8031a93748597907d7d3",
-      "local_path": "C:\\Users\\Usuario\\OneDrive\\Desktop\\altiora\\external\\debate-research\\Multi-Agents-Debate"
+      "local_path": "C:\\Users\\Usuario\\orca\\workspaces\\Altiora-Immersive-Web-Lab\\altiora-enterprise-os\\external\\debate-research\\Multi-Agents-Debate"
     },
     {
       "id": "stablyai/orca",
