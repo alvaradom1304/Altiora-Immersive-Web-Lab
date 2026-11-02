@@ -88,6 +88,10 @@ La documentación y los repositorios de referencia **no** equivalen a librerías
 - No exponer credenciales, `.env`, llaves o grabaciones privadas a repositorios, analizadores externos o servidores MCP. Mínimo privilegio, auditoría de código/licencia y versiones fijadas. No prometer protección completa ni confundir tests del gate con ejecución del scanner.
 - Para herramientas audiovisuales revisadas, leer [selección de repositorios](docs/research/video-production-repositories-2026-10-30.md); adoptar capacidades puntuales dentro de `ai-video-direction` sin crear un superagente redundante.
 
+## Seguridad al añadir repositorios y skills de terceros
+- Antes de importar un skill, MCP o repositorio externo: revisar `docs/security/third-party-skill-gate.md` y `references/av-security-sources.json`, registrar licencia y commit, y ejecutar `npm run security:scan -- skills/<nombre>` si está instalado NVIDIA SkillSpector; revisión de dependencias y permisos por separado.
+- El scanner es una barrera adicional, no permiso para instalar/ejectuar automáticamente. Bloquear riesgos altos, cobertura incompleta y archivos no revisados. No elevar permisos, exponer credenciales, ejecutar hooks externos ni copiar contenidos sin validar.
+- Para audiovisual, seguir `docs/research/audiovisual-repos-2026-10-30.md`. Priorizar Remotion, FFmpeg, transcripción local y herramientas de corte solo cuando aporten valor medido; licencias comerciales a verificar.
 ## Handoff de After Effects (verificación obligatoria)
 Para trabajos de AE abrir [guía de integración](creative/visual-studio/after-effects/README.md) y comprobar acceso real con `npm run adobe:check` en el dispositivo ejecutor. No anunciar AE conectado, render completado ni integrar un MCP no auditado por existir el script `scripts/after-effects-bridge.mjs`. El Director selecciona un fallback si no hay acceso autorizado.
 
