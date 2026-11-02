@@ -219,7 +219,3 @@ analytical need:
     `SEARCH_INDEX_OPTIONS`, `VECTOR_INDEXES*`, `VECTOR_INDEX_COLUMNS`,
     `VECTOR_INDEX_OPTIONS`, `BI_CAPACITIES`, `BI_CAPACITY_CHANGES`, `ROUTINES*`,
     `ROUTINE_OPTIONS`, `PARAMETERS`).
-
-## Entregable
-
-Resultado estructurado y verificable según las especificaciones del contrato de la skill.

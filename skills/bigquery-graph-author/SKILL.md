@@ -177,7 +177,3 @@ return to the plan — never rerun or re-word around a "no".**
     is exactly why semantics ride in the first DDL. If the ask arrives after the
     build, open `references/semantic-enrichment.md` and follow its after-build
     caution.
-
-## Entregable
-
-Resultado estructurado y verificable según las especificaciones del contrato de la skill.

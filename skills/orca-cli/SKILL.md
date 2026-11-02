@@ -290,13 +290,13 @@ This guide covers worktrees, terminals, and handoffs on its own. At a gate below
 
 ---
 
-## Bundled references
+# Bundled references
 
 These references belong to the version-matched guide above. Read only the documents named by its action gates.
 
 <!-- bundled-reference: references/automations.md -->
 
-## Automations
+# Automations
 
 An automation is a scheduled Orca prompt run by a chosen provider against either a repo-created worktree or an existing workspace.
 
@@ -326,7 +326,7 @@ Use `--extra-agent-args="--model opus --effort high --add-dir docs"` to add argu
 
 <!-- bundled-reference: references/browser.md -->
 
-## Built-in browser commands
+# Built-in browser commands
 
 Use a snapshot-interact-re-snapshot loop:
 

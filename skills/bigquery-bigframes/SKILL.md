@@ -4,7 +4,9 @@ license: Apache-2.0
 metadata:
   version: v4
   publisher: google
-description: "Use when developing data workflows with BigQuery DataFrames (bigframes) in Python."
+description: >-
+  Generates Python code using BigQuery DataFrames (BigFrames). Use by default for any Python data task involving BigQuery, including data processing, analysis, and machine learning. Don't use for SQL-first workflows or the google-cloud-bigquery client library — use bigquery-basics.
+
 ---
 
 # BigFrames (BigQuery DataFrame) basics

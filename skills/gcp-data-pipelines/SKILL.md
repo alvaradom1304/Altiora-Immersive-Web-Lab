@@ -1,6 +1,12 @@
 ---
 name: gcp-data-pipelines
-description: "Use when building, deploying, and orchestrating data pipelines across Google Cloud services."
+description: 'Primary entry point for building, managing, and orchestrating data pipelines
+  on Google Cloud. Guides users to the appropriate skill for dbt, Dataflow (Apache
+  Beam), Dataform, Spark (Dataproc Serverless), BigQuery Data Transfer Service (DTS)
+  or orchestration pipeline using Cloud Composer. Clarify requirements and resolve
+  ambiguity for creating, updating and running data pipelines.
+
+  '
 license: Apache-2.0
 metadata:
   version: v2
@@ -176,7 +182,3 @@ Spark Debug   | `gcp-spark-troubleshooting`
 Provisioning  | `gcp-pipeline-resource-provisioning`
 Orchestration | `gcp-pipeline-orchestration`
 Other         | — (general GCP assistance)
-
-## Entregable
-
-Resultado estructurado y verificable según las especificaciones del contrato de la skill.

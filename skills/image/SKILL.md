@@ -266,16 +266,16 @@ Every image on your site affects page speed, which affects SEO and conversions.
 ### Quick Optimization Commands
 
 ```bash
-  # Convert to WebP (using cwebp)
+# Convert to WebP (using cwebp)
 cwebp -q 80 input.png -o output.webp
 
-  # Batch convert with ImageMagick
+# Batch convert with ImageMagick
 mogrify -format webp -quality 80 *.png
 
-  # Optimize JPEG (using jpegoptim)
+# Optimize JPEG (using jpegoptim)
 jpegoptim --max=80 --strip-all *.jpg
 
-  # Check image sizes on a page
+# Check image sizes on a page
 curl -s https://yoursite.com | grep -oP 'src="[^"]+\.(jpg|png|webp)"' | head -20
 ```
 

@@ -1,6 +1,4 @@
 ---
-metadata:
-  version: 1.0.0
 name: "altiora-quality-review"
 description: "Revisa cambios de Altiora contra el encargo, las funciones afectadas y su evidencia de prueba. Se usa para comprobar una entrega o una tarea de otro agente antes de integrarla."
 ---

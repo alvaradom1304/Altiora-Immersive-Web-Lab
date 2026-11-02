@@ -1,8 +1,6 @@
 ---
-metadata:
-  version: 1.0.0
 name: aem-stage-01-discovery
-description: "Usar para: Ejecuta la Fase 01 de AEM. Úsalo para auditar un nuevo cliente, extraer sus dolores de negocio reales y definir el alcance inicial antes de proponer soluciones."
+description: Ejecuta la Fase 01 de AEM. Úsalo para auditar un nuevo cliente, extraer sus dolores de negocio reales y definir el alcance inicial antes de proponer soluciones.
 ---
 
 # STAGE 01 - DISCOVERY (Instrucciones de Ejecución)

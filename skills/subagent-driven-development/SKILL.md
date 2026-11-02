@@ -1,6 +1,4 @@
 ---
-metadata:
-  version: 1.0.0
 name: subagent-driven-development
 description: "Ejecuta un plan de implementación delegando cada tarea independiente en un subagente nuevo, con revisión de especificación y de calidad entre tareas. Usar en la fase de construcción de un proyecto cuando el plan tiene tareas separables; altiora-project-director y altiora-agent-orchestrator lo aplican desde la sesión principal."
 ---

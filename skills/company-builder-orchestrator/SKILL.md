@@ -1,6 +1,4 @@
 ---
-metadata:
-  version: 1.0.0
 name: company-builder-orchestrator
 description: >-
   Usa esta skill como orquestador principal al recibir un nuevo cliente o requerimiento en Altiora OS.

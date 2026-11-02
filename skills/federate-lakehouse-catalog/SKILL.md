@@ -306,7 +306,3 @@ working and propose next steps to the user.
     -   Propose a business or analytical question to the user that would result
         in a meaningful query of their data (e.g., "Would you like me to write a
         query to find the top 5 purchasing customers from last month?").
-
-## Entregable
-
-Resultado estructurado y verificable según las especificaciones del contrato de la skill.

@@ -28,7 +28,7 @@ Use this skill when:
 -   You need to identify schema gaps, data type conflicts, or aggregation
     requirements.
 
----
+--------------------------------------------------------------------------------
 
 ## Required Input Variables
 
@@ -49,7 +49,7 @@ Before creating the plan, you must obtain or request:
     definitions, and foreign key bindings (`SOURCE` / `DESTINATION` key
     references), etc.
 
----
+--------------------------------------------------------------------------------
 
 ## The Schema Mapping Planning Procedure
 
@@ -190,7 +190,7 @@ album: {name: string, year: int, genre: string, tracks: array<string>}
 For each target table, document your column-to-column reasoning:
 
 ```markdown
-  # Mapping Plan: `album`
+# Mapping Plan: `album`
 * **Anchor Source Table**: `cd`
 * **Join Paths & Optimization**:
     * `cd` JOIN `band` ON `cd.artist = band.name`
@@ -207,7 +207,7 @@ For each target table, document your column-to-column reasoning:
 | `album.tracks` | `ARRAY_AGG(track.name)` | Aggregated | Aggregation Point: Collapses 1-to-many track IDs in `cd.numbers` into an array of track names |
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Critical Operational Rules
 

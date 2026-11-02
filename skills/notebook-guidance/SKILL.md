@@ -382,7 +382,7 @@ native BigQuery SQL execution and data export to BigFrames dataframes.
 **Example %%bqsql magic usage:**
 
 ```python
-  # Initialize BigFrames and load %%bqsql magics
+# Initialize BigFrames and load %%bqsql magics
 import bigframes
 import bigframes.pandas as bpd
 %load_ext bigframes

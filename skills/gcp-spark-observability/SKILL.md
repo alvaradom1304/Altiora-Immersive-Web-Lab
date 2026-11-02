@@ -77,7 +77,3 @@ Starter guide and `gcloud` lookup map for monitoring, inventorying, and assessin
 * **Cloud Monitoring & Logging:** `dataproc.googleapis.com/cluster/yarn/*`, `dataproc.googleapis.com/batch/spark/executors`, and Cloud Logging resource types `cloud_dataproc_{batch,session,cluster,job}`.
 
 See [gcloud Observability Reference](references/gcloud_observability_reference.md) for all commands and field paths.
-
-## Entregable
-
-Resultado estructurado y verificable según las especificaciones del contrato de la skill.

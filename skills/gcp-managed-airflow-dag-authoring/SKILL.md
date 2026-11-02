@@ -12,7 +12,7 @@ metadata:
 This skill guides you through authoring and validating Apache Airflow DAGs for
 Managed Service for Apache Airflow (MSAA; formerly Cloud Composer) environments.
 
----
+--------------------------------------------------------------------------------
 
 ## Phase 1: Context Discovery
 
@@ -66,7 +66,7 @@ Run the following commands to discover version constraints:
         --format="value(config.dagGcsPrefix)"
     ```
 
----
+--------------------------------------------------------------------------------
 
 ## Phase 2: DAG Authoring Best Practices
 
@@ -92,7 +92,7 @@ Run the following commands to discover version constraints:
 Reference @skill:gcp-managed-airflow-migrations to navigate adjusting the code to
 specific target Airflow version.
 
----
+--------------------------------------------------------------------------------
 
 ## Phase 3: Validation Process
 
@@ -175,7 +175,7 @@ severity>=ERROR
 textPayload:"<DAG_FILE_NAME>"
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Definition of Done
 

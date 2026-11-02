@@ -4,8 +4,6 @@ description: "Crea arte generativo con p5.js (aleatoriedad con semilla, campos d
 license: Complete terms in LICENSE.txt
 ---
 
-# Algorithmic Art
-
 Algorithmic philosophies are computational aesthetic movements that are then expressed through code. Output .md files (philosophy), .html files (interactive viewer), and .js files (generative algorithms).
 
 This happens in two steps:

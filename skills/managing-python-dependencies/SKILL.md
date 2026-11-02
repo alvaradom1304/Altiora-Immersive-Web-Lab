@@ -92,13 +92,13 @@ If no dependency manager is detected, use **venv + pip + requirements.txt** as
 the default:
 
 ```bash
-  # Initialize environment
+# Initialize environment
 python3 -m venv .venv
 
-  # Add dependencies
+# Add dependencies
 .venv/bin/pip install <package>
 
-  # Preserve state
+# Preserve state
 .venv/bin/pip freeze > requirements.txt
 ```
 
@@ -112,7 +112,3 @@ python3 -m venv .venv
 
 -   **NEVER** run `pip install` globally
 -   **NEVER** override an existing dependency manager with a different one
-
-## Entregable
-
-Resultado estructurado y verificable según las especificaciones del contrato de la skill.

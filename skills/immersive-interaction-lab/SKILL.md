@@ -1,6 +1,6 @@
 ---
 name: immersive-interaction-lab
-description: "Usar para: Diseña, implementa y audita interacción WebGL, cursor 3D y tipografía cinética inspirada en estudios experimentales como Buttermax, con fit check y degradación accesible. Úsala para estos efectos concretos; no para interfaces administrativas ordinarias."
+description: Diseña, implementa y audita interacción WebGL, cursor 3D y tipografía cinética inspirada en estudios experimentales como Buttermax, con fit check y degradación accesible. Úsala para estos efectos concretos; no para interfaces administrativas ordinarias.
 ---
 
 # Immersive interaction lab
@@ -45,7 +45,3 @@ Entregar fit check, mapa de interacción, código y comandos de ejecución, prue
 Para trabajo sustancial que cruce investigación, arte y código, el coordinador usa los roles instalados immersive-director, immersive-motion-engineer e immersive-reviewer cuando existan herramientas reales y autorización. Asignar objetivo, entradas, archivos de propiedad, dependencias y criterio de cierre. No solapar escrituras ni revertir trabajo ajeno. El director coordina; implementación y revisión se ejecutan separadamente cuando la revisión depende del código. Paralelizar solo tareas independientes. Para cambios pequeños, trabajar directo. Si no existe delegación, hacer las etapas secuencialmente y declararlo; un rol escrito no es un agente ejecutándose. No iniciar servicios, gastos ni publicación por cargar esta skill.
 
 Para documentación técnica actual consultar fuentes primarias: https://threejs.org/docs/ , https://gsap.com/docs/v3/ , https://r3f.docs.pmnd.rs/ , https://www.khronos.org/gltf/ , https://www.w3.org/TR/WCAG22/ . Para datos de Buttermax consultar la auditoría actual o inspeccionar de nuevo; esta skill no afirma su stack.
-
-## Entregable
-
-Resultado estructurado y verificable según las especificaciones del contrato de la skill.

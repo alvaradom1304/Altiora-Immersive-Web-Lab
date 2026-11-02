@@ -14,7 +14,9 @@ Create MCP (Model Context Protocol) servers that enable LLMs to interact with ex
 
 ---
 
-## 🚀 High-Level Process & Workflow
+# Process
+
+## 🚀 High-Level Workflow
 
 Creating a high-quality MCP server involves four main phases:
 
@@ -204,7 +206,9 @@ Create an XML file with this structure:
 
 ---
 
-## 📚 Reference Files & Documentation Library
+# Reference Files
+
+## 📚 Documentation Library
 
 Load these resources as needed during development:
 

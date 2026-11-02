@@ -220,7 +220,7 @@ Generate one markdown file per competitor, saved to a `competitor-profiles/` dir
 Each profile follows this structure:
 
 ```markdown
-## [Competitor Name] — Competitor Profile
+# [Competitor Name] — Competitor Profile
 
 **URL**: [website]
 **Generated**: [date]

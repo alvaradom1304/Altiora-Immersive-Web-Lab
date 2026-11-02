@@ -1,6 +1,6 @@
 ---
 name: gcp-managed-airflow-migrations
-description: "Use when needed: Provides guidance for migrating Apache Airflow DAGs in Managed Service for Apache Airflow (MSAA; formerly Cloud Composer). Covers migration to Airflow 2.11.1 (MSAA Gen 2 and 3) and Airflow 3 (MSAA Gen 3), including environment inspection, GCS download/upload and scanning patterns for breaking changes."
+description: Provides guidance for migrating Apache Airflow DAGs in Managed Service for Apache Airflow (MSAA; formerly Cloud Composer). Covers migration to Airflow 2.11.1 (MSAA Gen 2 and 3) and Airflow 3 (MSAA Gen 3), including environment inspection, GCS download/upload and scanning patterns for breaking changes.
 license: Apache-2.0
 metadata:
   version: v1
@@ -14,7 +14,7 @@ existing Managed Service for Apache Airflow (formerly Cloud Composer)
 environment (or available locally) to make them compatible with **Airflow
 2.11.1** (MSAA Gen 2 or 3) or **Airflow 3** (MSAA Gen 3).
 
----
+--------------------------------------------------------------------------------
 
 ## Phase 1: Discovery & Download
 
@@ -23,7 +23,7 @@ requested. Inspect the source environment to confirm source version only if
 explicitly requested. For detailed instructions about environment inspection and
 downloading files check references/environment-inspection.md.
 
----
+--------------------------------------------------------------------------------
 
 ## Phase 2: Target Version & Dependency Mapping
 
@@ -91,14 +91,14 @@ Take into account all applicable changes within Airflow 2 (e.g. when migrating
 from Airflow 2.10.2, apply changes needed to move to Airflow 2.11.1 and Airflow
 3 migration changes on top of that).
 
----
+--------------------------------------------------------------------------------
 
 ## Phase 3: Analysis & Remediation (Scanning Downloaded Files)
 
 Run the scan commands from the root of your local workspace
 (`./migration_workspace` unless indicated otherwise).
 
----
+--------------------------------------------------------------------------------
 
 ### 3.1 Airflow 2.11.1 Core & Dependency checks
 
@@ -149,7 +149,7 @@ migrating to Airflow 3).
 *   **Remediation:** Replace `Period` with `Interval`, and `period(...)` with
     `interval(...)`.
 
----
+--------------------------------------------------------------------------------
 
 ### 3.2 Path A: Airflow 2.11.1 Provider Package Scan
 
@@ -213,13 +213,13 @@ migrating to Airflow 3).
 *   **Scan Command (ADLS to GCS):** `grep -rn "ADLSToGCSOperator" ./dags`
     *   *Remediation:* Ensure `file_system_name` is provided.
 
----
+--------------------------------------------------------------------------------
 
 ### 3.3 Airflow 3 Migration checks
 
 Use instructions from references/airflow-3.md when migrating to Airflow 3.
 
----
+--------------------------------------------------------------------------------
 
 ## Phase 4: Deployment & Verification
 
@@ -322,7 +322,7 @@ log_id("airflow-scheduler")
 severity>=ERROR
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Appendix: Local Environment Verification
 

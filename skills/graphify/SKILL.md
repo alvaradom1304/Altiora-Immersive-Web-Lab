@@ -42,7 +42,3 @@ GRAPHIFY_BACKEND=none C:/Users/Usuario/.altiora-tools/graphify/Scripts/graphify 
 ## Entrega
 
 Responder con el formato de `team/ROUTING.md` §5: qué se consultó, nodos o rutas relevantes, archivos confirmados y límites (grafo desactualizado, comunidades sin nombre, documentos no indexados).
-
-## Entregable
-
-Resultado estructurado y verificable según las especificaciones del contrato de la skill.

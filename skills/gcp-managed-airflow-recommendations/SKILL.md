@@ -131,7 +131,3 @@ environment, follow this structured workflow:
     architecture.
 *   **Format**: Use Markdown to structure your report clearly. Use tables where
     appropriate for metrics summaries.
-
-## Entregable
-
-Resultado estructurado y verificable según las especificaciones del contrato de la skill.

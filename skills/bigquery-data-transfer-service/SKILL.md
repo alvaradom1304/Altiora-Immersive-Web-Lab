@@ -192,7 +192,3 @@ of the tasks.
 -   A manual transfer run has been triggered and monitored.
 -   The transfer run has completed successfully OR the user has provided
     "proceed guidance" for a long-running transfer.
-
-## Entregable
-
-Resultado estructurado y verificable según las especificaciones del contrato de la skill.

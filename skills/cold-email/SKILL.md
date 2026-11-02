@@ -214,7 +214,3 @@ Instantly's webhooks (reply received, lead interested, bounced, unsubscribed) ar
 - **revops**: For lead scoring, routing, pipeline management, and the outbound stage model
 - **sales-enablement**: For cold call scripts, voicemails, and deal-stage objections
 - **marketing-loops**: For running outbound on a schedule (signal sweeps, reply triage, domain health, sequence reviews)
-
-## Entregable
-
-Resultado estructurado y verificable según las especificaciones del contrato de la skill.

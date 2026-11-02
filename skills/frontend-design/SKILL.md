@@ -1,6 +1,4 @@
 ---
-metadata:
-  version: 1.0.0
 name: frontend-design
 description: Guidance for distinctive, intentional visual design and interactive UI craftsmanship when building new web experiences or reshaping existing ones. Helps with aesthetic direction, bespoke typography, choreographed motion, and avoiding generic AI-generated templates.
 ---
@@ -32,7 +30,3 @@ Approach every interface as the Design Director at an elite digital studio known
   - Asymmetric bento grids or tactile product cards with layered depth.
   - Subtle borders (`border-black/5` or warm stone borders), soft ambient shadows, and glassmorphic floating action bars (`backdrop-blur-md`) for persistent order summaries.
 - Ensure every interactive element works effortlessly on both mobile viewports (thumb-friendly bottom sheets/bars) and desktop screens.
-
-## Entregable
-
-Resultado estructurado y verificable según las especificaciones del contrato de la skill.

@@ -305,7 +305,7 @@ Add these machine-readable files to your site root:
 **`/pricing.md` or `/pricing.txt`** — Structured pricing data for AI agents
 
 ```markdown
-  # Pricing — [Your Product Name]
+# Pricing — [Your Product Name]
 
 ## Free
 - Price: $0/month
@@ -480,6 +480,15 @@ For tactical guidance on SaaS product pages, blog content, comparison/alternativ
 
 For implementation, see the [tools registry](https://github.com/coreyhaines31/marketingskills/blob/main/tools/REGISTRY.md).
 
+| Tool | Use For |
+|------|---------|
+| `semrush` | AI Overview tracking, keyword research, content gap analysis |
+| `ahrefs` | Backlink analysis, content explorer, AI Overview data |
+| `gsc` | Search Console performance data, query tracking |
+| `ga4` | Referral traffic from AI sources |
+
+---
+
 ## Related Skills
 
 - **seo-audit**: For traditional technical and on-page SEO audits; **link-building** for earning links and mentions on the third-party pages AI engines cite
@@ -489,7 +498,3 @@ For implementation, see the [tools registry](https://github.com/coreyhaines31/ma
 - **programmatic-seo**: For building SEO pages at scale
 - **copywriting**: For writing content that's both human-readable and AI-extractable
 - **lead-magnets**: For packaging an owned course or content library as an installable agent skill (different from public-site AI visibility)
-
-## Entregable
-
-Resultado estructurado y verificable según las especificaciones del contrato de la skill.

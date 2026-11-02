@@ -129,7 +129,3 @@ Events produce your highest-proof content — capture it deliberately:
 - **cold-email** — pre-event meeting-booking outreach
 - **revops** — routing, scoring, and source-tagging event leads
 - **attribution** — measuring multi-touch event influence honestly
-
-## Entregable
-
-Resultado estructurado y verificable según las especificaciones del contrato de la skill.

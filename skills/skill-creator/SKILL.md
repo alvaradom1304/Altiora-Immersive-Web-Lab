@@ -118,17 +118,12 @@ Prefer using the imperative form in instructions.
 
 **Defining output formats** - You can do it like this:
 ```markdown
-  # Report Title
-  Contexto y alcance del reporte.
-
-  ## Executive summary
-  Resumen ejecutivo con hallazgos clave.
-
-  ## Key findings
-  Puntos críticos observados.
-
-  ## Recommendations
-  Acciones sugeridas y hoja de ruta.
+## Report structure
+ALWAYS use this exact template:
+# [Title]
+## Executive summary
+## Key findings
+## Recommendations
 ```
 
 **Examples pattern** - It's useful to include examples. You can format them like this (but if "Input" and "Output" are in the examples you might want to deviate a little):

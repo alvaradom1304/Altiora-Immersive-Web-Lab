@@ -1,6 +1,4 @@
 ---
-metadata:
-  version: 1.0.0
 name: writing-skills
 description: "Crea o mejora skills con método de pruebas: escenario de presión sin la skill, redacción mínima, verificación con la skill y cierre de resquicios. Usar al crear, editar o validar skills y agentes de Altiora antes de darlos por buenos; para el empaquetado y la evaluación formal combinar con skill-creator."
 ---

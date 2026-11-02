@@ -1,6 +1,10 @@
 ---
 name: resolving-mcp-region-configs
-description: "Use when resolving and setting region configurations for MCP servers and cloud APIs."
+description: >-
+  Mandatory Step 0 pre-flight check for regional Google Cloud MCP servers (e.g. Dataproc) before using MCP tools or falling back to gcloud/bq CLI.
+  Use whenever interacting with Dataproc clusters, Spark batches, jobs, sessions, or regional GCP resources.
+  Fixes regional MCP servers whose endpoint URL still has an unreplaced $GCP_REGION / ${REGION} placeholder across Claude Code, Codex, and Antigravity.
+  Trigger: an expected mcp__*_{service}_* tool is missing entirely (not just failing), or a call to one fails/hangs on a malformed host. Check via ToolSearch/deferred-tools listing before falling back to gcloud/bq CLI. Asks the user for a region, patches the live MCP config file(s), and tells the user how to restart without losing session context.
 license: Apache-2.0
 metadata:
   version: v4
@@ -73,7 +77,3 @@ so the fix survives a reinstall):
     -   **Claude Code**: `claude --resume` (or `--continue`)
     -   **Codex**: `codex resume --last` (or `codex resume` for a picker)
     -   **Antigravity**: use its resume/history picker if available
-
-## Entregable
-
-Resultado estructurado y verificable según las especificaciones del contrato de la skill.

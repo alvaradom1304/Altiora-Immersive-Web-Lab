@@ -1,6 +1,4 @@
 ---
-metadata:
-  version: 1.0.0
 name: brainstorming
 description: "Convierte una idea en un diseño aprobado mediante diálogo: explora el contexto, pregunta de una en una, compara 2–3 enfoques y deja un documento de diseño antes de construir. Usar antes de implementar una funcionalidad, componente o cambio de comportamiento que no tenga diseño previo; después usar writing-plans."
 ---
@@ -296,7 +294,3 @@ question about a UI topic isn't automatically a visual question.
 
 If they accept, read `visual-companion.md` in this directory before
 starting the server.
-
-## Entregable
-
-Resultado estructurado y verificable según las especificaciones del contrato de la skill.

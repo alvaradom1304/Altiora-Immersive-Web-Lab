@@ -1,6 +1,4 @@
 ---
-metadata:
-  version: 1.0.0
 name: aem-learning-os
 description: Usa este skill para procesar nuevos conocimientos o herramientas, extraer frameworks y productizar capacidades (Learning OS & Productization).
 ---

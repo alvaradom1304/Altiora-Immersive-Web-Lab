@@ -178,7 +178,7 @@ The pattern is tool-agnostic: identify + merge exists in PostHog, Segment, Ampli
 Deliver an **attribution readout**, not a data dump:
 
 ```markdown
-  # Attribution Readout — [date]
+# Attribution Readout — [date]
 
 ## The question
 [What decision this informs — e.g. "where should next quarter's budget go?"]

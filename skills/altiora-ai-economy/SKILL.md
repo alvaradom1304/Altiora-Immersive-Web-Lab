@@ -1,6 +1,4 @@
 ---
-metadata:
-  version: 1.0.0
 name: "altiora-ai-economy"
 description: "Selecciona un flujo de IA para Altiora que reduzca coste y contexto repetido preservando la calidad final. Se usa al comparar proveedores gratuitos o locales, distribuir tareas entre modelos o preparar una conexión económica."
 ---
