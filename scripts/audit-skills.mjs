@@ -143,11 +143,19 @@ for (const name of names) {
 }
 const mean = list => list.length ? Math.round(list.reduce((s, r) => s + r.score, 0) / list.length * 10) / 10 : 0;
 const average = mean(results);
-// Las skills con SOURCE.md son de terceros: se actualizan desde su origen y no se reescriben a mano.
-for (const r of results) r.thirdParty = await exists(resolve(skillsDir, r.name, 'SOURCE.md'));
+// De origen externo: skills con SOURCE.md (terceros) o copias de solo lectura registradas en
+// team/local-sources/manifest.json (skills personales del dueño). Se actualizan desde su origen.
+let snapshots = new Set();
+try {
+  const manifest = JSON.parse(await readFile(resolve(root, 'team/local-sources/manifest.json'), 'utf8'));
+  snapshots = new Set(manifest.files.map(f => f.snapshot));
+} catch {}
+for (const r of results) {
+  r.thirdParty = snapshots.has(`skills/${r.name}/SKILL.md`) || await exists(resolve(skillsDir, r.name, 'SOURCE.md'));
+}
 const own = results.filter(r => !r.thirdParty);
 const third = results.filter(r => r.thirdParty);
-const split = `propias ${own.length}: media ${mean(own)} (${own.filter(r => r.score === 100).length} en 100); terceros ${third.length}: media ${mean(third)}`;
+const split = `propias ${own.length}: media ${mean(own)} (${own.filter(r => r.score === 100).length} en 100); origen externo ${third.length}: media ${mean(third)}`;
 const ruleCounts = Object.fromEntries(RULES.map(([id]) => [id, results.filter(r => r.failed.includes(id)).length]));
 
 if (write) {
@@ -164,7 +172,7 @@ if (write) {
     '# Informe de calidad de skills',
     '',
     `Generado el ${baseline.generated_on} con \`npm run skills:baseline\`. ${results.length} skills; media **${average}/100**.`,
-    `Por origen: ${split}. Las de terceros no se reescriben a mano; mejoran con casos de evaluación propios o actualizando desde su origen.`,
+    `Por origen: ${split}. Las de origen externo (terceros y copias de skills personales) no se reescriben a mano; mejoran con casos de evaluación propios o actualizando desde su origen.`,
     'Mide estructura y verificabilidad; no sustituye ejecutar los casos de evaluación. Proceso: [mejora continua de skills](../docs/workflows/skill-improvement.md).',
     '',
     '## Reglas incumplidas',
