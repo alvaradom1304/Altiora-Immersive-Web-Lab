@@ -1,0 +1,20 @@
+{
+  "skill_name": "aem-core-philosophy",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Un cliente de quesos artesanales quiere que empecemos ya con una web 3D inmersiva porque su competencia tiene una. ¿Encaja con nuestra forma de trabajar?",
+      "expected_output": "Ubica el proyecto antes de Understand/Discovery porque no hay entregables previos; tabla de los 7 principios donde Strategy before design, Diagnose before prescribe y Business outcomes before aesthetics salen No cumple y los que no tienen evidencia salen Sin datos; recomienda un Discovery corto (aem-stage-01-discovery) y explica el riesgo de construir sin causa raíz; no inventa cifras del cliente; termina con Próximo Paso."
+    },
+    {
+      "id": 2,
+      "prompt": "Revisa si vamos bien.",
+      "expected_output": "Detecta que la instrucción es vaga y hace como máximo 2 preguntas (qué proyecto o decisión y qué entregables existen); no rellena la tabla de principios con supuestos ni marca nada como Cumple sin evidencia."
+    },
+    {
+      "id": 3,
+      "prompt": "Hazme ya el FODA competitivo y el benchmarking de 3 competidores para La Central del Queso.",
+      "expected_output": "Reconoce que es la ejecución de una fase concreta (Research) y redirige a aem-stage-02-research, comprobando antes si existe Discovery; no produce el FODA desde esta skill."
+    }
+  ]
+}
