@@ -1,6 +1,6 @@
 ---
 name: company-builder-orchestrator
-description: "Usa esta skill como orquestador principal al recibir un nuevo cliente o requerimiento en Altiora OS. Determina escenarios de diagnóstico y delega el trabajo a dominios especializados (Crear, Mejorar, Escalar)."
+description: "Usa esta skill como orquestador principal al recibir un nuevo cliente o requerimiento en Altiora OS. Determina escenarios de diagnóstico y delega el trabajo a dominios especializados (Crear, Mejorar, Escalar). Usar cuando el pedido es abierto o no está claro qué skill corresponde. No usar si ya se sabe la fase o la skill concreta a ejecutar."
 disable-model-invocation: true
 ---
 

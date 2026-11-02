@@ -1,6 +1,6 @@
 ---
 name: meta-ads-growth
-description: "Diagnostica, planifica y evalúa campañas de Meta Ads para un negocio con oferta y datos reales; coordina creatividades, medición, pruebas y decisiones de inversión. No publica anuncios ni cambia presupuestos."
+description: "Diagnostica, planifica y evalúa campañas de Meta Ads para un negocio con oferta y datos reales; coordina creatividades, medición, pruebas y decisiones de inversión. Usar cuando se pida diagnóstico, plan, auditoría o lectura de resultados de campañas de Facebook o Instagram Ads con datos reales. No usar para redactar guiones o variantes de anuncio (meta-ads-creator). No publica anuncios ni cambia presupuestos."
 disable-model-invocation: true
 ---
 

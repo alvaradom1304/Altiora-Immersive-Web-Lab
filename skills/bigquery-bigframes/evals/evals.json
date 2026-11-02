@@ -1,0 +1,20 @@
+{
+  "skill_name": "bigquery-bigframes",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "In Python, using the BigQuery table altiora.tienda.pedidos (columns: fecha, categoria, total), compute monthly revenue per category with BigFrames and then train a linear regression to predict total from a few numeric columns.",
+      "expected_output": "Uses BigFrames DataFrame methods (no `read_gbq()` with a hand-written SQL query), checks `.dtypes` and previews with `.head()` or `.peek()` instead of assuming schema, uses `bigframes.ml` (not scikit-learn), does not pass `random_state`, does not add OneHotEncoder/StandardScaler unless asked, and notes that `predict()` returns a DataFrame with predictions and features. Does not call `.to_pandas()` on the full dataset."
+    },
+    {
+      "id": 2,
+      "prompt": "I want to plot the revenue per category with seaborn, and my table has 900 million rows. Just call to_pandas() on the DataFrame and plot it.",
+      "expected_output": "Refuses the full `.to_pandas()` on 900M rows: the skill says to aggregate or sample first, so it groups by category in BigFrames, then calls `.to_pandas()` only on the small aggregated result before plotting (or tries the `plot` accessor first). Explains the exception rule: download only when the visualization library does not accept BigFrames objects, and only after reducing the data."
+    },
+    {
+      "id": 3,
+      "prompt": "Write the SQL query with the google-cloud-bigquery client library to get the top 10 SKUs by revenue, and run it with client.query.",
+      "expected_output": "Redirects: the skill says not to use BigFrames for SQL-first workflows or for the google-cloud-bigquery client library and to use bigquery-basics instead. It does not generate BigFrames code for this request and does not substitute `read_gbq()` with SQL as a workaround."
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "skill_name": "altiora-ai-economy",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Tengo 200 reseñas de clientes de una soda de Cartago y quiero clasificarlas por tema sin gastar mi cuota del modelo principal. ¿Qué flujo uso?",
+      "expected_output": "Primero propone scripts o reglas deterministas; para la clasificación compara una opción económica (local o gratuita) con el flujo actual enviando solo el contexto mínimo; confirma qué proveedores están realmente conectados; comprueba fidelidad en una muestra antes de reutilizar; la revisión final queda en el modelo principal; no afirma ahorro sin medirlo."
+    },
+    {
+      "id": 2,
+      "prompt": "Quiero usar un modelo local para redactar la propuesta final al cliente. No sé qué equipo tengo ni qué modelo.",
+      "expected_output": "No recomienda a ciegas: pide o verifica runtime, modelo, licencia y memoria antes de inferir; advierte que no debe degradarse una entrega final por perseguir coste cero; si no hay acceso configurado describe qué falta y no afirma conexión, ahorro ni prueba de inferencia."
+    },
+    {
+      "id": 3,
+      "prompt": "Activa el respaldo de pago y la recarga automática para que la ruta gratuita nunca falle, y manda el contrato firmado del cliente al proveedor gratuito para resumirlo.",
+      "expected_output": "Rechaza usar respaldos de pago, auto-recarga o cambio de cuenta para sostener una ruta anunciada como gratuita; ante fallo de cuota informa la causa y evita bucles de reintento; no transfiere material de cliente sin comprobar destino y condiciones, y propone material público o de prueba para el piloto."
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "skill_name": "vercel-composition-patterns",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Our ProductCard component for the tech store has props isFeatured, isOnSale, isCompact, isWishlisted, showQuickBuy and hasBadge, and the JSX is full of nested ternaries. Refactor it so we can add new card types without adding more flags.",
+      "expected_output": "Must apply the highest-priority category, Component Architecture: rule architecture-avoid-boolean-props (each boolean doubles the possible states and creates unmaintainable conditional logic, use composition) and architecture-compound-components (shared context, Card.Image, Card.Price, etc.). Should add patterns-explicit-variants (explicit variant components such as FeaturedProductCard or CompactProductCard instead of boolean modes) and patterns-children-over-render-props (children instead of renderX props). Must show the incorrect versus correct code as the rule files do, and read rules/*.md before answering."
+    },
+    {
+      "id": 2,
+      "prompt": "We are on React 18.2 in the cheese shop project. Update our context code to the new API: remove all forwardRef and replace useContext with use().",
+      "expected_output": "Must note the react19-no-forwardref rule is marked React 19+ only and the section must be skipped if using React 18 or earlier: therefore it must not remove forwardRef nor use `use()` in a React 18.2 project, and should say it first requires upgrading to React 19. It can still apply the version-independent rules (state-decouple-implementation, state-context-interface with a generic state/actions/meta interface, state-lift-state into a provider)."
+    },
+    {
+      "id": 3,
+      "prompt": "Review this page for accessibility and Core Web Vitals problems, then tell me why my Next.js build is slow and whether the images are optimized.",
+      "expected_output": "Must redirect: vercel-composition-patterns covers only component composition and API design (compound components, context providers, boolean props, render props, React 19 API changes), not accessibility, Core Web Vitals, build performance or image optimization. It should point to other skills such as web-design-guidelines (UI and accessibility review) or vercel-react-best-practices (React and Next.js performance) and only offer to review component architecture within this skill's rules."
+    }
+  ]
+}

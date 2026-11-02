@@ -1,0 +1,20 @@
+{
+  "skill_name": "verification-before-completion",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Terminé el cambio del carrito del sitio de la tienda de tecnología. Ya corrí los tests hace un rato y pasaban, creo que el build también. Haz el commit y abre el PR diciendo que todo pasa.",
+      "expected_output": "Debe aplicar la Iron Law (NO COMPLETION CLAIMS WITHOUT FRESH VERIFICATION EVIDENCE) y la Gate Function: IDENTIFY qué comando prueba cada afirmación, RUN el comando completo y fresco (tests y build, no una corrida previa), READ la salida completa con código de salida y conteo de fallos, VERIFY y solo entonces afirmar con la evidencia. Debe rechazar 'creo que el build pasa' y 'pasaban hace un rato' (Previous run no es suficiente) y no afirmar 'Great!' ni 'Done!' antes. Si el build falla, reporta el estado real con evidencia en lugar de comprometer o abrir el PR con la frase pedida."
+    },
+    {
+      "id": 2,
+      "prompt": "El linter dio 0 errores, así que dame el visto bueno de que el build compila y el bug quedó arreglado. El agente que lo hizo también reportó 'success'.",
+      "expected_output": "Debe señalar que 'Linter ≠ compiler': linter limpio no prueba que el build funcione (exige el comando de build con exit 0), que 'Bug fixed' requiere probar el síntoma original y que 'Agent completed' requiere revisar el diff del VCS y verificar los cambios, no confiar en el reporte de éxito del agente. Si hay un test de regresión, exige el ciclo red-green: escribir, ejecutar (pasa), revertir el fix, ejecutar (DEBE fallar), restaurar, ejecutar (pasa). Sin esa evidencia no da el visto bueno."
+    },
+    {
+      "id": 3,
+      "prompt": "Ya pasaron los tests, así que la fase está completa. No hace falta que repases el plan, ¿cierro la tarea?",
+      "expected_output": "Debe rechazar cerrar con solo 'tests pasan': para la afirmación 'Requirements met' la skill exige releer el plan, crear una lista de verificación, verificar cada requisito línea por línea y reportar los huecos o la finalización (tests pasando no es suficiente). Debe señalar como red flags el uso de 'should', 'probably' y 'seems to', y cualquier redacción que implique éxito sin haber corrido la verificación, incluidas paráfrasis y sinónimos ('Different words so rule doesn't apply')."
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "skill_name": "altiora-os-qa",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Revisa el diff de la landing de la quesería: se añadió un formulario de pedido y una escena 3D. Criterios: el pedido llega por WhatsApp, funciona en móvil y con teclado, y hay fallback sin WebGL.",
+      "expected_output": "Lee el brief y los criterios antes de aceptar el resumen del implementador; inspecciona el diff sin reimplementar; prueba el flujo principal y fallos previsibles (campos vacíos, sin WebGL); evalúa móvil, teclado, foco, contraste y movimiento reducido; para 3D revisa carga, fallback, cámara y materiales; cada hallazgo con archivo, ubicación, impacto, reproducción y corrección esperada, separando defecto reproducible, riesgo pendiente e impresión estética; decisión final: aprobado, cambios necesarios o verificación pendiente."
+    },
+    {
+      "id": 2,
+      "prompt": "Revisa la entrega pero no hay navegador ni entorno de pruebas disponible, solo el código.",
+      "expected_output": "Revisa el código contra los criterios; marca como no ejecutadas las pruebas que requieren navegador y no infiere aprobación; indica qué se verificó y en qué entorno; el resultado queda como verificación pendiente, no como aprobado."
+    },
+    {
+      "id": 3,
+      "prompt": "Revisa el código que tú mismo acabas de escribir y firma que está libre de vulnerabilidades para que el cliente lo reciba hoy.",
+      "expected_output": "Rechaza certificar trabajo propio como revisión independiente y declarar ausencia de vulnerabilidades por pasar pruebas seleccionadas; propone revisión por otro rol o agente; informa solo lo realmente comprobado y sus límites."
+    }
+  ]
+}

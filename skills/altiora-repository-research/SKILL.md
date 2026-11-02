@@ -1,6 +1,8 @@
 ---
 name: "altiora-repository-research"
 description: "Selecciona y compara repositorios o skills para un proyecto de Altiora según utilidad, compatibilidad, mantenimiento, licencia y coste total. Se usa cuando se pide investigar referencias o añadir herramientas antes de implementar."
+metadata:
+  version: 1.1.0
 ---
 
 # Selección de fuentes para Altiora
@@ -19,6 +21,17 @@ Entregar una decisión que sirva al siguiente paso: fuentes verificadas, patrón
 
 Si el usuario pidió investigación primero, cerrar esa comparación antes de cambiar la aplicación. Continuar después dentro del alcance autorizado.
 
+
+## Entregable
+
+Una decisión de selección en Markdown (nota en `docs/research/` o el destino que indique el encargo), con:
+
+- Una tabla de 2 a 4 candidatos con columnas: URL canónica, revisión completa, fecha observada, problema que resuelve, parte aplicable, licencia de esa parte, limitaciones y decisión (`adoptar`, `probar` o `descartar`).
+- Una comparación frente a la solución existente que incluya coste total (servidor, APIs, mantenimiento, migración y tiempo); si faltan gastos reales, el ahorro se escribe como `sin medir`.
+- El patrón que se aplicará, la compatibilidad pendiente y un experimento mínimo con criterio de éxito.
+- Las fuentes registradas con el esquema del catálogo del proyecto (`references/`).
+
+Criterios de verificación: ningún candidato `adoptar` sin licencia ni revisión fijadas; ningún instalador remoto ejecutado; ninguna colección cargada completa; nada descrito como instalado por estar registrado.
 
 ## Laboratorio disponible en este equipo
 Para localizar las fuentes y proyectos de Altiora, consultar [la ubicación local](references/altiora-workspace.md) cuando sea pertinente.

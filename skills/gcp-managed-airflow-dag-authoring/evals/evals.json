@@ -1,0 +1,20 @@
+{
+  "skill_name": "gcp-managed-airflow-dag-authoring",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Write an Airflow DAG for our Managed Airflow environment `altiora-demo-env` in us-central1 that loads the daily orders CSV of a sample cheese shop from GCS into BigQuery at 6am. I have gcloud access and composer-dev installed locally.",
+      "expected_output": "Phase 1: discovers context before writing code, running `gcloud composer environments describe altiora-demo-env --location us-central1 --format=\"value(config.softwareConfig.imageVersion)\"` (and pypiPackages, dagGcsPrefix) to learn the Airflow version, and checks for `composer-dev`. Phase 2: DAG is idempotent, has no top-level code execution (no queries/API calls outside tasks), sets `catchup=False`, and uses Variables/Connections (e.g. `{{ var.value.my_var }}`) rather than hardcoded credentials; references gcp-managed-airflow-migrations for Airflow 2 vs 3 differences. Phase 3 validation: `ruff check`, copy to composer-dev dags directory and `composer-dev run-airflow-cmd <LOCAL_ENV> dags list-import-errors`; deploy to `gs://<TARGET_BUCKET>/dags/` only if authorized, then wait 1-2 minutes and run `dags list-import-errors` (pass = empty / 'No data found') and `dags list | grep <DAG_ID>`, plus the scheduler log query."
+    },
+    {
+      "id": 2,
+      "prompt": "Create an Airflow DAG for a daily report, but I have no access to the environment, I don't know the Airflow version, and I can't install anything locally. Just write the file.",
+      "expected_output": "Works in the offline mode of Phase 1.1: relies on user-provided details and asks for the Airflow/image version or states the assumption explicitly (and keeps code compatible across Airflow 2 and 3, pointing to gcp-managed-airflow-migrations). Follows the best practices (idempotent tasks, no top-level execution, `catchup=False`, Variables/Connections via Jinja). Since it cannot validate, it must say validation was NOT performed (no `ruff`, no `list-import-errors`) and not claim the DAG was verified; the Definition of Done items about local parsing and deployment are left pending."
+    },
+    {
+      "id": 3,
+      "prompt": "Write me a Python script that cleans a CSV of customer names with pandas and saves it to Excel. It isn't an Airflow thing, just a normal script.",
+      "expected_output": "Declines to use this skill: its description says 'Don't use when authoring Python code unrelated to Airflow DAGs'. Does not run the environment discovery (`gcloud composer environments describe`) or the Airflow validation steps; handles the script as ordinary Python work (or with another suitable skill) and does not add DAG-specific concerns such as `catchup=False`."
+    }
+  ]
+}

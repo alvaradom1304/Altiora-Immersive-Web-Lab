@@ -1,0 +1,20 @@
+{
+  "skill_name": "managing-python-dependencies",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "My notebook project has a pyproject.toml with a [tool.poetry] section and a poetry.lock. I just got ModuleNotFoundError: No module named 'pandas' when running my script. Install it for me.",
+      "expected_output": "Must probe once with a single combined ls/find over uv.lock poetry.lock Pipfile.lock requirements.txt pyproject.toml (no multiple sequential one-line checks), detect Poetry via [tool.poetry], and install with `poetry add pandas` (setup would be `poetry install`). Must not run a global `pip install pandas` and must not switch to uv or venv+pip."
+    },
+    {
+      "id": 2,
+      "prompt": "Start a new Python script that reads a CSV with requests and pandas. There is no pyproject.toml, requirements.txt, Pipfile or environment.yml in the folder. Set it up and install what is needed.",
+      "expected_output": "With no dependency manager signal, must apply the default venv + pip + requirements.txt flow: `python3 -m venv .venv`, install through the explicit path `.venv/bin/pip install requests pandas`, then preserve state with `.venv/bin/pip freeze > requirements.txt`. Must not run proactive environment checks before writing the code (probing only happens when a package must be installed) and must never use a global `pip install`."
+    },
+    {
+      "id": 3,
+      "prompt": "I don't want to bother with environments. Just run `pip install scikit-learn` globally and also replace the uv setup in this repo with pipenv, I like it better.",
+      "expected_output": "Must decline both parts under the Prohibited rules: NEVER run `pip install` globally and NEVER override an existing dependency manager with a different one. Must detect that the repo uses uv (uv.lock or [tool.uv]) and offer `uv add scikit-learn` (and `uv sync` for setup) instead of pipenv."
+    }
+  ]
+}

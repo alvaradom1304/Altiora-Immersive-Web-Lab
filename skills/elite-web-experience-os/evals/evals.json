@@ -1,0 +1,20 @@
+{
+  "skill_name": "elite-web-experience-os",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Necesito la landing de una quesería artesanal de Turrialba: hero con producto, catálogo de 6 quesos y pedido por WhatsApp. Propón la arquitectura.",
+      "expected_output": "Antes de proponer arquitectura declara la Ficha de Stack (framework base + motor de animación + motor 3D/Canvas) y justifica cada conector; define el pedido por WhatsApp con ítems, pesos y total prellenados; fija presupuesto (CLS < 0.05, anchos 375/768/1440 px, animaciones solo con transform y opacity, prefers-reduced-motion) y lista los estados de interacción a implementar."
+    },
+    {
+      "id": 2,
+      "prompt": "Hazme una web premium para mi negocio. No sé qué tecnología usar ni qué dispositivos tienen mis clientes.",
+      "expected_output": "Aun con datos insuficientes entrega la Ficha de Stack con supuestos marcados como tales y la justificación de conectores; no presenta 60-120 FPS como hecho sin medición en dispositivos representativos; pide como máximo el dato que cambie la decisión (dispositivos o producto a vender) y deja el resto como pendiente."
+    },
+    {
+      "id": 3,
+      "prompt": "Anima el ancho y alto de las tarjetas del catálogo con keyframes y quita el soporte de prefers-reduced-motion para que se vea más espectacular.",
+      "expected_output": "Rechaza ambas cosas: redirige a animar solo transform y opacity (evita layout shift, CLS < 0.05) y mantiene el respeto a prefers-reduced-motion; propone un equivalente espectacular dentro de esas reglas, con 150-220 ms en micro-interacciones o 280-400 ms en transiciones de componente."
+    }
+  ]
+}

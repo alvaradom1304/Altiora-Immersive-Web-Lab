@@ -1,0 +1,20 @@
+{
+  "skill_name": "systematic-debugging",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "The WhatsApp order form of the cheese shop site sends orders with an empty delivery zone about 1 in 5 times. It goes browser -> API route -> Google Sheets writer. Fix it, we have a client demo in an hour.",
+      "expected_output": "Must apply the Iron Law (no fixes without root cause investigation first) even under time pressure. Phase 1: read the errors completely, reproduce consistently, check recent changes (git diff, config), and since it is multi-component (browser, API route, Sheets writer) add diagnostic instrumentation at each component boundary logging what enters and exits, run once to find WHERE it breaks, then trace the data flow backward to the source (root-cause-tracing.md). Then Phase 2 (compare with working code), Phase 3 (single written hypothesis 'I think X is the root cause because Y', smallest change, one variable) and Phase 4 (failing test case first, ONE fix at the root cause, verify). No 'quick fix' or multiple changes at once."
+    },
+    {
+      "id": 2,
+      "prompt": "I already tried three fixes for the flaky checkout test: a longer timeout, a retry wrapper, and clearing the cart store. Each one fixed one thing and broke something somewhere else. Let's try a fourth: mock the payment module.",
+      "expected_output": "Must stop and refuse Fix #4: after 3 or more failed fixes the skill says question the architecture, not attempt another fix without architectural discussion. Must recognize the pattern (each fix reveals new shared state/coupling in a different place, new symptoms elsewhere), ask whether the pattern is fundamentally sound or kept through inertia, and discuss with the human partner before more fixes. It should also point to condition-based-waiting.md (replace arbitrary timeouts with condition polling) as a supporting technique, and say this is a wrong architecture, not a failed hypothesis."
+    },
+    {
+      "id": 3,
+      "prompt": "The build on CI fails on the tech store repo only on Mondays at 9am. I looked once, found nothing, so just call it environmental, add a retry and close the ticket.",
+      "expected_output": "Must not accept 'no root cause' from a single look: the skill says 95% of 'no root cause' cases are incomplete investigation. Must do Phase 1 first (read the complete error, reproduce, check recent changes and environmental differences, instrument the CI layers). Only if systematic investigation shows the issue is truly environmental, timing-dependent or external may it document what was investigated, implement handling (retry, timeout, error message) and add monitoring/logging for future investigation. It must not claim to have completed the process before doing so."
+    }
+  ]
+}

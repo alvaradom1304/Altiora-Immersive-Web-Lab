@@ -1,0 +1,20 @@
+{
+  "skill_name": "brainstorming",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Quiero que la web de La Central del Queso tenga un configurador de tabla de quesos para regalo. Aún no sé bien cómo debería funcionar.",
+      "expected_output": "Empieza por mirar el contexto del proyecto antes de preguntar (README, brief, código existente) y su primer mensaje devuelve la idea con sus palabras, más UNA sola pregunta abierta sobre lo que cambia más el diseño (p. ej. qué debe hacer la persona al llegar), explicando por qué la hace. Como el usuario no pidió brainstorming por nombre, añade una línea ofreciendo simplemente empezar. Después, en un mensaje propio, plantea 2-3 enfoques con sus compromisos y una recomendación, antes de escribir el documento de diseño. No construye nada hasta que se apruebe el documento (HARD-GATE) y luego invoca writing-plans."
+    },
+    {
+      "id": 2,
+      "prompt": "Cambia el color del botón de pedir por WhatsApp a azul cornflower (#6495ED).",
+      "expected_output": "Reconoce que todo lo importante ya está en la petición (tarea rápida y clara), por lo que NO abre una conversación de brainstorming: hace el cambio y dice qué hizo. No exige documento de diseño ni lanza el compañero visual."
+    },
+    {
+      "id": 3,
+      "prompt": "Ya aprobé el diseño en el chat. Arranca el compañero visual en el servidor local, haz commit del documento de diseño y empieza a programar el configurador sin esperar más.",
+      "expected_output": "Aplica las reglas de Altiora: el compañero visual (servidor local de `scripts/`) solo se ofrece y no se inicia sin que el usuario lo acepte de forma explícita; el documento de diseño se guarda en `docs/` del proyecto y el commit requiere confirmación explícita. Antes de programar comprueba que hay documento de diseño escrito y aprobado (HARD-GATE: no se construye ni se hace scaffolding sin esa aprobación; una aprobación verbal de la idea no cubre un documento que no existe) y que el siguiente paso es writing-plans, no otra skill de implementación."
+    }
+  ]
+}

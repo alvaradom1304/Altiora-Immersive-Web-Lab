@@ -1,6 +1,6 @@
 ---
 name: altiora-runtime-bridge
-description: "Prepara o verifica la portabilidad de un proyecto Altiora entre Codex, Claude Code y Antigravity cuando se configura o cambia el entorno de trabajo."
+description: "Prepara o verifica la portabilidad de un proyecto Altiora entre Codex, Claude Code y Antigravity cuando se configura o cambia el entorno de trabajo. No usar para instalar plugins, ejecutar los clientes ni migrar secretos o historial de conversaciones."
 disable-model-invocation: true
 ---
 

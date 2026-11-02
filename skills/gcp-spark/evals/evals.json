@@ -1,0 +1,20 @@
+{
+  "skill_name": "gcp-spark",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Generate a PySpark notebook that reads the table altiora-demo.ventas.pedidos (sample cheese shop orders) from BigQuery, joins it with the small lookup table ventas.productos, aggregates kilos sold per product and writes the result to ventas.kilos_por_producto.",
+      "expected_output": "Follows the Task Execution Workflow: asks which kernel type is used (Local Python via Spark Connect or Remote Spark where `spark` is pre-initialized) and, if Local Python, which dataprocSessionConfig/session template (scanning serverless session templates) and initializes with `ManagedSparkSession` (`from google.cloud.managed_spark_connect import ManagedSparkSession`), never a local SparkSession (`.master(\"local\")` is banned) and warns session init can take 2-3 minutes. Inspects schemas with discovering-gcp-data-assets or `references/schema_direct_inspection.md` instead of guessing columns, loads only `references/read_write_data.md` for BigQuery, uses `broadcast()` on the small lookup table, checks `df.printSchema()` against the destination before writing, avoids `.toPandas()`/`.collect()` on raw data, does not hardcode credentials/project IDs (uses `os.environ.get`), outputs .ipynb, converts with `jupyter nbconvert --to script` and compiles with `python3 -m py_compile`, and tells the user to select the kernel. Does not create a venv or pip install while generating."
+    },
+    {
+      "id": 2,
+      "prompt": "Write a PySpark notebook that aggregates the table `ventas.pedido_clientes` of a tech store. (The namespace only contains `ventas.orders_2025`, `ventas.customers_dim` and `ventas.refunds`.)",
+      "expected_output": "Applies the STRICT HALT RULE: the discovered table names differ from the requested one by more than a minor typo, so it IMMEDIATELY reports the missing table and a neutral list of available alternatives in the namespace without recommending any, asks which to use, and STOPS the turn. It writes no Spark code or notebook, adds no fallback logic and does not substitute any table even if the schema seems to match. Also respects the cap of 3 discovery retries (and the MISSING SOURCE RULE of at most ONE discovering-gcp-data-assets search when no source is named)."
+    },
+    {
+      "id": 3,
+      "prompt": "My Dataproc batch `ventas-007` failed with OOM yesterday. Do the root cause analysis, and also list all idle clusters across all my regions.",
+      "expected_output": "Does not handle either with this skill, following its 'Do NOT use when' routing: the failed batch RCA goes to @skill:gcp-spark-troubleshooting and the multi-region idle/zombie cluster audit goes to @skill:gcp-spark-observability. Offers to author or optimize Spark code with gcp-spark afterwards if the RCA suggests code changes (using `references/spark_optimizations.md` and getting explicit user confirmation before refactoring per `references/spark_refactoring_guide.md`)."
+    }
+  ]
+}

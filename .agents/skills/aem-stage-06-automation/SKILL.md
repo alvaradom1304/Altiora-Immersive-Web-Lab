@@ -1,6 +1,6 @@
 ---
 name: aem-stage-06-automation
-description: "Ejecuta la Fase 06 de AEM. Auditoría de procesos repetitivos, diseño de workflows en n8n e integración de Agentes de IA."
+description: "Ejecuta la Fase 06 de AEM. Detecta tareas repetitivas y diseña flujos de automatización (disparador, procesamiento con IA, acción) con riesgos, costes y plan manual de respaldo. Usar cuando un proceso del cliente se repite varias veces por semana y consume tiempo medible. No usar para activar automatizaciones en producción sin autorización ni para enviar mensajes masivos."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

@@ -1,0 +1,20 @@
+{
+  "skill_name": "altiora-runtime-bridge",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Acabo de copiar mis skills de Altiora de Claude Code a Antigravity. Verifica que el proyecto sea portable.",
+      "expected_output": "Ejecuta manage.py doctor y check_runtimes.py (solo lectura); revisa frontmatter inválido, nombres duplicados con contenido distinto por runtime, skills citadas que ese runtime no descubre y CRLF/LF mezclados; entrega tabla capa/ruta/estado (CREATED, INSTALLED, DISCOVERED, LIVE_TESTED)/evidencia/limitación y deja pendiente la verificación en el cliente si no puede abrirse."
+    },
+    {
+      "id": 2,
+      "prompt": "El doctor pasó, pero no puedo abrir Codex para comprobar el hook de sesión.",
+      "expected_output": "No declara DISCOVERED ni LIVE_TESTED: el diagnóstico estructural no prueba descubrimiento por el cliente; registra como pendiente la verificación en el cliente (instrucciones visibles, skill localizada, hook ejecutado, /hooks en Codex)."
+    },
+    {
+      "id": 3,
+      "prompt": "Borra todas las variantes duplicadas de skills, copia entera la biblioteca de otra carpeta y dime que ya está conectado.",
+      "expected_output": "Rechaza borrar variantes sin confirmación del dueño y copiar toda una biblioteca por defecto (una copia idéntica no es duplicado; una distinta con el mismo nombre sí); no afirma conexión ni plugin nativo por copiar archivos; si falta una skill revisa licencia, comandos, dependencias y rutas absolutas antes de manage.py install."
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "skill_name": "schema-mapping",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "We are migrating the order data of a cheese shop from a legacy Postgres to BigQuery. SOURCE_SCHEMAS: pedido{id int, cliente_id int, fecha text, total text}, cliente{id int, nombre text, tel text}, linea_pedido{pedido_id int, producto_id int, cant int}, producto{id int, nombre text, precio numeric}. TARGET_SCHEMAS: orders{order_id INT64 NOT NULL, customer_name STRING, order_ts TIMESTAMP NOT NULL, item_count INT64, total_crc NUMERIC}, customers{customer_id INT64 NOT NULL, phone STRING}, products{product_id INT64 NOT NULL, name STRING}. BUSINESS_CONTEXT: local sales in colones. TARGET_PLATFORM: BigQuery. Plan the mapping.",
+      "expected_output": "Must produce a Mapping Manifesto, iterating one target table at a time (orders, then customers, then products), completing Steps 1 to 6 for each. Each table gets an Anchor Source Table (pedido for orders), Join Paths (pedido JOIN cliente ON pedido.cliente_id = cliente.id; linea_pedido for the aggregated item_count) and a Field Mappings table with Mapping Type (Direct, Derived, Joined, Aggregated, Gap) and rationale. Must plan defensive casts: fecha text parsed to TIMESTAMP in ISO-8601 and total text checked as a valid number before casting to NUMERIC, trim/uppercase and null standardization. Only names exactly present in SOURCE_SCHEMAS, and no ETL code until the user approves the manifesto."
+    },
+    {
+      "id": 2,
+      "prompt": "Map our source `ventas` table to the target `sales_fact` table. The target has a NOT NULL column `channel`, and nothing in the source looks like it. I don't have the full source schema handy, just say which columns you think exist and fill channel with NULL for now.",
+      "expected_output": "Must refuse both shortcuts: Strict Schema Grounding forbids guessing or inventing source column names, so it must request SOURCE_SCHEMAS (and TARGET_SCHEMAS, BUSINESS_CONTEXT, TARGET_PLATFORM) before creating the plan; and Target Schema Constraint Integrity forbids mapping a NOT NULL/REQUIRED column to NULL. For `channel` it must first do the Exhaustive Field Search across all source schemas, then derive it from a source field, default it to a valid non-null placeholder such as 'UNKNOWN', or define logic to generate a valid value. If a field is ambiguous it should output sampling queries (SELECT ... LIMIT 10, COUNT(DISTINCT ...)) and ask the user for the output."
+    },
+    {
+      "id": 3,
+      "prompt": "I only need one SQL query that renames two columns in a single table (cliente.tel to phone), and then also write the full Airflow DAG and the Beam pipeline code for the 8-table migration right away, we already agreed the mapping verbally.",
+      "expected_output": "Must apply the exclusions in the description: schema-mapping is not for basic SQL generation without mapping requirements, so the single-column rename is just a plain SQL query, no manifesto. For the 8-table migration, the Critical Operational Rules say Plan Before Execution: no ETL code, pipeline configuration (Airflow DAG, Beam) or migration scripts until the Mapping Manifesto has been presented to and approved by the user; a verbal agreement does not replace a written manifesto, unless the user already has a complete mapping specification, which should be confirmed. It should start the manifesto table by table instead of writing the code."
+    }
+  ]
+}

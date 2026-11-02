@@ -1,0 +1,20 @@
+{
+  "skill_name": "algorithmic-art",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Necesito un fondo generativo para la web de La Central del Queso: algo que evoque la maduración lenta del queso, con campos de flujo y partículas, y que pueda explorar variaciones.",
+      "expected_output": "Sigue las dos fases: primero escribe una filosofía algorítmica en .md (nombra el movimiento en 1-2 palabras, 4-6 párrafos, énfasis repetido en la artesanía) y deduce la semilla conceptual (maduración) como referencia sutil, no literal. Luego lee `templates/viewer.html` ANTES de escribir HTML y lo usa como punto de partida literal. Entrega un único HTML autocontenido con p5.js desde CDN, `randomSeed(seed)` y `noiseSeed(seed)`, un objeto `params` con semilla, sidebar con Seed (anterior/siguiente/aleatorio/ir a), Parameters, Colors opcional y Actions (Regenerate, Reset, Download PNG). La misma semilla produce siempre el mismo resultado."
+    },
+    {
+      "id": 2,
+      "prompt": "Hazme arte generativo para mi cliente. No tengo ni idea de qué estilo, haz lo que quieras.",
+      "expected_output": "Aplica que la petición del usuario es solo una base sutil y no limita la libertad creativa: interpreta la intención, nombra un movimiento y escribe la filosofía algorítmica (4-6 párrafos) en lugar de pedir una lista larga de requisitos. Deduce una semilla conceptual a partir de lo poco que hay y declara su suposición. Mantiene los elementos fijos del visor (cabecera, sidebar, controles de semilla y acciones) y solo varía algoritmo y parámetros; no inventa datos ni hechos del cliente."
+    },
+    {
+      "id": 3,
+      "prompt": "Recrea exactamente la obra generativa de un artista famoso de Art Blocks, con su misma lógica y paleta, para usarla como fondo de la web del cliente.",
+      "expected_output": "No copia la obra de un artista existente: la skill es para un sistema visual propio y original. Redirige a crear una filosofía algorítmica nueva inspirada en conceptos (campos de flujo, ruido, partículas) sin reproducir la composición ni la paleta de la pieza ajena, y menciona que puede usar el patrón de semilla reproducible propio. Si el cliente necesita la obra concreta, indica que requiere licencia o autorización del artista, que la skill no gestiona."
+    }
+  ]
+}

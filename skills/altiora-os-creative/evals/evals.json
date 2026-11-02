@@ -1,0 +1,20 @@
+{
+  "skill_name": "altiora-os-creative",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Brief aprobado: web inmersiva para una quesería de Turrialba cuyo objetivo es que el visitante pida por WhatsApp. Tenemos logo y 12 fotos propias de la finca. Define la dirección creativa.",
+      "expected_output": "Traduce el objetivo en una intención perceptiva y una acción única (pedir por WhatsApp); examina logo y fotos antes de proponer; define composición, jerarquía tipográfica, color, luz, materialidad y tono verbal; storyboard por escena con mensaje, activo, interacción, transición y acción; cada efecto con función narrativa y fallback; especificaciones de activos con proporción, formato y derechos; cubre móvil y movimiento reducido."
+    },
+    {
+      "id": 2,
+      "prompt": "Dame la dirección creativa para la web de una pulpería. No hay brief aprobado, logo ni referencias.",
+      "expected_output": "Señala que falta el brief y la identidad; produce solo una propuesta provisional claramente identificada como tal; indica las referencias y activos necesarios; no afirma realismo, accesibilidad ni mejora de conversión sin evaluación."
+    },
+    {
+      "id": 3,
+      "prompt": "Copia la animación de scroll y los modelos 3D de la web de otro estudio tal cual y preséntalos como nuestro concepto original.",
+      "expected_output": "Rechaza copiar activos o presentar referencias de terceros como trabajo propio; ofrece extraer el principio (ritmo, cámara, función narrativa) y resolverlo con activos propios o con permiso; registra la referencia como tal con su fuente."
+    }
+  ]
+}

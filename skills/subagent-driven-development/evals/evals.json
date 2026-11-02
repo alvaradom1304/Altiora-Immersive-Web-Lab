@@ -1,0 +1,20 @@
+{
+  "skill_name": "subagent-driven-development",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Tengo el plan docs/plans/pedidos-whatsapp.md con 5 tareas independientes (formulario, validación de teléfono, resumen del pedido, mensaje a WhatsApp, pruebas) para el sitio de la quesería. Ejecútalo con subagentes.",
+      "expected_output": "Debe preparar el espacio aislado (worktree, nunca empezar en main/master sin consentimiento), ejecutar `bash scripts/sdd-workspace PLAN_FILE`, crear el ledger `progress.md` con primera línea `# SDD ledger — plan: <ruta>`, leer el plan una vez, crear un todo por tarea y correr el escaneo de conflictos de references/preflight.md antes de la Tarea 1. Por tarea: registrar BASE con `git rev-parse HEAD`, `bash scripts/task-brief PLAN_FILE N`, despachar un implementador nuevo (implementer-prompt.md) con modelo especificado explícitamente, y al recibir DONE generar `bash scripts/review-package PLAN_FILE BASE HEAD` y despachar el revisor de tarea (task-reviewer-prompt.md) exigiendo veredicto de especificación Y de calidad. Nunca implementadores en paralelo, sin pausar entre tareas, y al final la revisión de toda la rama (references/final-review.md)."
+    },
+    {
+      "id": 2,
+      "prompt": "Retomo la sesión después de una compactación: no recuerdo qué tareas del plan ya se hicieron. Vuelve a despachar todo desde la Tarea 1 para estar seguros.",
+      "expected_output": "Debe negarse a re-despachar la secuencia completa: la memoria de la conversación no sobrevive a la compactación y re-despachar tareas ya terminadas es el fallo más caro observado. Debe buscar el ledger en `<workspace>/progress.md` (ubicado con `scripts/sdd-workspace`), leer primero references/resuming.md que dice de quién es el ledger y dónde reanudar, y confiar en el ledger y en `git log` por encima de su recuerdo. Si el workspace se perdió por `git clean -fdx`, recuperar desde `git log`."
+    },
+    {
+      "id": 3,
+      "prompt": "Las tareas 2 y 3 del plan tocan los mismos archivos del carrito y están muy acopladas. Lanza dos implementadores a la vez para ir más rápido, y si el revisor marca algo, arréglalo tú mismo sin dispatch porque son cambios pequeños. Pregúntame después de cada tarea si sigo.",
+      "expected_output": "Debe rechazar varios puntos: tareas muy acopladas no son buen caso para esta skill (el diagrama manda a ejecución manual o ejecutar el plan en línea), nunca se despachan varios implementadores en paralelo por los conflictos, los arreglos del controlador contaminan el contexto y se saltan la revisión, por lo que debe reanudar al implementador en el fix loop (references/fix-loop.md, releer antes de cada ronda, cada ronda termina con re-revisión acotada) y no pausar para preguntar entre tareas (ejecución continua). Solo se detiene por operación irreversible, acción sensible de seguridad, efecto externo al worktree (merge, push a rama compartida, publicar) o un plan tan roto que todo camino es adivinar; las demás dudas se resuelven con `Ruling: <decisión> — <por qué> — <costo si falla>` en el ledger."
+    }
+  ]
+}

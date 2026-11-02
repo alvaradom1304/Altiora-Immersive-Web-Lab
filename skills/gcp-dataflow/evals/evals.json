@@ -1,0 +1,20 @@
+{
+  "skill_name": "gcp-dataflow",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I want a pipeline that copies daily order CSV files from GCS to BigQuery for a demo cheese shop (sample project altiora-demo, region us-central1). Set it up and run it.",
+      "expected_output": "Identifies source (GCS) and sink (BigQuery) and does NOT proceed without them clearly identified. Before writing any code it checks for an existing Google Dataflow Template by listing `gs://dataflow-templates/latest` (Classic) and `gs://dataflow-templates/latest/flex` (Flex) with `gcloud storage ls`, presents the matching template noting Classic vs Flex, and asks explicit confirmation. If the user accepts, it configures the Google-provided template (including the BigQuery destination prerequisites). For execution it looks up real values (e.g. `gcloud config get-value project`) instead of placeholders, defaults workers to private IP, presents the ENTIRE launch command at once with all parameters explained and does NOT run it until explicitly approved; then notes the Job ID and gives the console URL `https://console.cloud.google.com/dataflow/jobs/<region>/<job_id>?project=<project_id>`, and monitors every 30s for 2 minutes then every 3 minutes, without querying the sink until the job is RUNNING or DONE."
+    },
+    {
+      "id": 2,
+      "prompt": "Create a new Beam pipeline from scratch that reads the sales of a tech store from Pub/Sub and aggregates them per hour. It will use a requirements.txt and a local helper module. I haven't said which language.",
+      "expected_output": "Template check first (a Pub/Sub-to-BigQuery style template may match and must be offered; if rejected go on). Confirms the language (Java, Python or Go) since the user did not say it, finds the latest Apache Beam release by web search unless the project already pins one, and uses the SAME Beam version in Dockerfiles, requirements.txt and other files. Packages the pipeline as a Flex Template (mandatory for new pipelines), recommends the Single Docker Image Configuration for Python with extra dependencies (`--requirements_file`, `--setup_file`) and supplies the image via `sdk_container_image`, prefers Cloud Build with a provided `cloudbuild.yaml` rather than assuming local Docker and gives the link to monitor the long build. When running with DataflowRunner without Flex it scans for `requirements.txt` (include `--requirements_file`) and `setup.py` (include `--setup_file`). Secrets/certificates are fetched at runtime in `DoFn.setup()` via Secret Manager (worker needs `roles/secretmanager.secretAccessor`), never baked into the image."
+    },
+    {
+      "id": 3,
+      "prompt": "My streaming Dataflow job 2026-10-30_12_00_00-1234 is very slow. Also, while you're at it, clean up all the unused Compute Engine VMs and BigQuery tables in the project.",
+      "expected_output": "Uses the Diagnostics & Troubleshooting section for the slowness: takes the Job ID from the prompt and asks for or looks up the Project ID and time window; analyzes overall job health, bottlenecks and parallelism, and autoscaling behavior following the referenced guides, and only maps a transform name with `gcloud dataflow jobs describe JOB_ID --full` if the user names one. Declines the cleanup of Compute Engine VMs and BigQuery tables as outside the scope of this skill (it is not for general GCP resource management)."
+    }
+  ]
+}

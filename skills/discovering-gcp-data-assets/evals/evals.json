@@ -1,0 +1,20 @@
+{
+  "skill_name": "discovering-gcp-data-assets",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I'm helping a Costa Rican cheese shop (sample project id: queseria-demo-001) analyze online sales. I need the schema of the table that holds monthly cheese sales, but I only know it's somewhere in BigQuery and has a column called order_id. Find it and show me its columns and governance metadata.",
+      "expected_output": "Follows the 4-step flow: (1) no asset mentioned earlier in the conversation, so it searches; (2) the asset is not in bigquery-public-data, so it uses Dataplex instead of `bq ls`; (3) runs `gcloud dataplex entries search` (or the `search_entries` MCP tool) with `--project=queseria-demo-001` always supplied, using semantic search for the intent and/or a keyword query such as `column:order_id` with `system=bigquery` using `=` for exact matches and singular keywords, optionally scoped with `parent:projects/...`, and `--limit=50`; (4) takes the full `projects/...` entry name from the result and runs `gcloud dataplex context lookup --resources=\"<FULL_ENTRY_NAME>\"` (or the `lookup_context` MCP tool) to get schema and business context. Does not pass short IDs like `dataset.table` or `bigquery:` prefixes to `--resources`."
+    },
+    {
+      "id": 2,
+      "prompt": "Find the table with our customer loyalty data. Here is what I tried: I searched Dataplex three times with different keywords ('loyalty', 'customer loyalty', 'fidelizacion') and nothing came back. I don't remember the project, dataset or table name.",
+      "expected_output": "Applies the Variation Rule and Stop Rule: at most 3 variations of the search have already been tried, so it must NOT re-run identical or near-identical queries and must not start another Dataplex loop. It STOPs, states what was tried, and asks the user for the Dataplex full entry name (`projects/...`) if known, or the project ID, dataset ID or instance ID. May mention Fallback 2 (native tools such as `bq show` / `gcloud storage`) only if an ID becomes known, and notes the asset might not be indexed in the Universal Catalog (Discovery Scans). Does not invent a table name."
+    },
+    {
+      "id": 3,
+      "prompt": "Use this skill to find the sales tables in our AWS Redshift cluster and show me their schema and column policies.",
+      "expected_output": "Declines to use the skill as written: its 'Don't use when' rule says assets outside Google Cloud are out of scope, and Redshift is AWS. Does not run `gcloud dataplex entries search` or `lookup_context` for Redshift. Redirects the user to AWS-native tooling (or to a federation approach only if they want the data queried from GCP, e.g. the federate-lakehouse-catalog skill for AWS Glue-backed Iceberg data) and offers to continue if there is a Google Cloud asset involved."
+    }
+  ]
+}

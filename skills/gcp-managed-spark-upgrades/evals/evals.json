@@ -1,0 +1,20 @@
+{
+  "skill_name": "gcp-managed-spark-upgrades",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Upgrade Managed Spark Serverless batch `ventas-diario-001` in project altiora-demo, region us-central1 to runtime 2.3. Code location: gs://altiora-demo-code/jobs/daily_orders.py. Target GCS path: gs://altiora-demo-out/upgrade. Execute the full upgrade, verification, and handover workflow.",
+      "expected_output": "Classifies as Serverless PySpark (`pysparkBatch`, supported by the scope gate), discovers the source from the Batch ID per serverless_input_validations.md (source runtime, arguments, properties, subnet, service account; zero defaults: no values from local gcloud config, each value recorded with its source). Downloads code to `src_daily_orders_temp/` (app_id = `daily_orders`), never overwriting the source objects. Resolves the target with `uv run <skill_dir>/scripts/resolve_version.py --type=serverless --version=2.3` (single token `--flag=value`), maps source/target to Spark versions, scans with pyspark_analysis.md and runs baseline build checks. Applies compatibility-only changes (no business-logic edits, prefers code fixes over `spark.sql.legacy.*` flags, listing any flag used). Because the user asked for the full workflow, both approvals (code changes and verification) are covered, but it still presents the verification configuration; verification outputs go to `<target_path>/test-output_daily_orders_temp/`, temporary names `<name>_daily_orders_temp`, resources `upg-verify-<id>`. Handover: confirms production paths untouched via diff and writes `daily_orders_<source>_<target>_spark_upgrade_report.md` with secrets redacted, uploaded with the final code to the Target GCS path."
+    },
+    {
+      "id": 2,
+      "prompt": "Analyze this local PySpark file ./jobs/stock_sync.py for upgrading from Spark image 1.5 to 2.2. I don't have a job ID and please don't run any gcloud commands. I have not given a project or bucket.",
+      "expected_output": "Does not block the local work: since local source files, source version and target version are available, it performs the full local static compatibility analysis and local build checks and, if remediation was requested, edits the local file keeping production paths (rule: Job/Batch ID is never required for static analysis). Does not run gcloud. In the response it explicitly asks for each missing input without assuming defaults (Project ID, Region, Temporary GCS staging location, Target GCS path, Subnet, Custom image URI or `NO`), explains that the cluster source `1.5` needs the full `<major>.<minor>.<sub-minor>-<distro>` for exact component deltas while completing track-level analysis, and presents Step 2 verification on GCP as optional. An analysis-only request never turns into code changes or a verification run without approval."
+    },
+    {
+      "id": 3,
+      "prompt": "Upgrade my Spark SQL job (sparkSqlJob) `inventario_sql` to image 2.2 and also fix the Scala jar job `reporte_scala` while you are at it.",
+      "expected_output": "Applies the scope gate: only PySpark is Supported; Spark SQL (`sparkSqlJob`/`sparkSqlBatch`) and Scala/Java (`sparkJob`/`sparkBatch`) are 'Not yet supported'. Stops, tells the user which job types are currently supported, and does NOT change code, create clusters or submit jobs. Also notes the skill is not for writing new Spark code or troubleshooting failed jobs outside an upgrade (gcp-spark-troubleshooting), and does not claim data/result validation, which the skill does not support."
+    }
+  ]
+}

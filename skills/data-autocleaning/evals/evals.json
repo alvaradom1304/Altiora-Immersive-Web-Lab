@@ -1,0 +1,20 @@
+{
+  "skill_name": "data-autocleaning",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Copy the BigQuery table tienda.pedidos_raw (fecha as strings in mixed formats like 2024-03-05 and 05/03/2024, temperature in C and F, JSON column detalle) into tienda.pedidos_limpio. The region is us-central1.",
+      "expected_output": "Applies the skill because the source is BigQuery, even for a plain copy. Step 1: confirms eligibility, presents the `python3 scripts/dataplex_scanner.py --tables ... --location us-central1 --output-dir ...` command with Summary, Value Add and Scope and gets explicit approval before running, waits for the Dataplex profile, and fetches schema and samples of both tables with `bq`. The implementation_plan.md includes a Profiling Evidence section with the Job ID. Transformations use `COALESCE` with `SAFE.PARSE_*` for date formats, unit normalization to the most common unit, `SAFE.PARSE_JSON` (never JSON_EXTRACT_*), and match the destination schema. Quality review: temporary sample table (max 1M rows, 1-hour TTL), re-profile with Dataplex, compare against thresholds (>1% NULL increase), and document in walkthrough.md."
+    },
+    {
+      "id": 2,
+      "prompt": "The data lives in a multi-region US dataset, and I do not want to approve any Dataplex scan. Clean the table anyway.",
+      "expected_output": "Notes that Dataplex scan locations must be a specific region such as us-central1 (multi-regions like `us` are not supported). If the user denies scan approval, does not run the scanner and does not ask again; documents the denial reason in place of Job IDs in both the Profiling Evidence and Quality Review sections, and verifies manually with `bq` sample queries. Does not substitute ad-hoc profiling when approval was granted, and preserves case and only trims whitespace in strings and arrays."
+    },
+    {
+      "id": 3,
+      "prompt": "Apply the cleaning to the second step of the pipeline, the intermediate table that comes from a CSV on my laptop, and lowercase every text column while you are at it.",
+      "expected_output": "Checks eligibility first: the skill applies to the source node when it is BigQuery or GCS, not subsequent pipeline steps or a local CSV, so it states the ineligibility reason clearly if skipped. For any eligible source, does not lowercase text columns: case is preserved and `LOWER()`/`UPPER()` is only used when explicitly required by the destination schema; the user's request must be tied to a destination requirement. Reports that skipped cleaning requires a stated reason."
+    }
+  ]
+}

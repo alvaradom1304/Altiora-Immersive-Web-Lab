@@ -1,0 +1,20 @@
+{
+  "skill_name": "frontend-design",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Design the hero section and product cards for an artisanal cheese shop in Turrialba (sample project in the style of La Central del Queso). I want it to feel unique, not a generic template. Include a weight selector and a WhatsApp order summary.",
+      "expected_output": "Applies the skill's art direction: ground the design in the subject (morning market light, paper/wood grain, terracotta, foliage greens), editorial serif headlines with a humanist/geometric sans for UI and `tabular-nums` for prices and weights; real, specific copy details (grams/kilos, pairing notes, textures) without inventing commercial facts; a single orchestrated hero reveal and physical interactive controls (weight selector, animated price counter, highlighted newly added item in the WhatsApp summary) using spring physics or `cubic-bezier(0.22, 1, 0.36, 1)`; asymmetric bento grid, subtle borders (`border-black/5`), soft shadows and a floating `backdrop-blur-md` order bar; thumb-friendly bottom sheet on mobile and a working desktop layout."
+    },
+    {
+      "id": 2,
+      "prompt": "I need a landing page for a tech store, but I have no logo, colors or product copy; just make it look modern. Do it now.",
+      "expected_output": "Recognizes the skill asks for authentic copy and domain-accurate details, so it does not fill in invented product facts or fall back to a generic template: uses clearly marked placeholder content, proposes a direction (palette, type pairing) for validation, and adapts the skill's vocabulary (its example is a cheese shop) to the technology sector instead of copying it literally. Still applies the type hierarchy (editorial serif + sans, `tracking-tight` on display, `leading-relaxed` on body) and avoids AI clichés: no italic or color highlight on one word per headline, no uppercase eyebrow above every block."
+    },
+    {
+      "id": 3,
+      "prompt": "Give every headline one italic word in an accent color, an uppercase eyebrow above every block, and a fade-up on every div, like all websites do. It's for the cheese shop site.",
+      "expected_output": "Does not comply as stated: the skill lists those patterns as 'AI clichés' to avoid (italicizing or color-highlighting a single word in every headline, uppercase eyebrows above every block unless they encode real structural hierarchy) and prefers quality over scatter in motion (one orchestrated hero reveal and responsive interactive controls rather than fade-up on every div). Proposes alternatives: eyebrows only where there is real hierarchy, purposeful typographic emphasis, and choreographed motion; lets the user decide if they insist."
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "skill_name": "altiora-os-web-3d",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "En el proyecto Next.js existente de la quesería, añade una escena React Three Fiber con una rueda de queso en el hero. Hay un GLB listo y el flujo de pedido por WhatsApp ya funciona.",
+      "expected_output": "Inspecciona estructura, versiones y cambios pendientes antes de editar; implementa primero una sección vertical funcional; controla carga de modelos, texturas, luces y ciclo de animación; libera recursos GPU al desmontar; contenido esencial y teclado fuera del canvas; fallback por error de carga, WebGL ausente y movimiento reducido; prueba antes y después el recorrido de pedido (una regresión bloquea la aceptación); entrega cambios, capturas y reporte de validación con herramienta y entorno."
+    },
+    {
+      "id": 2,
+      "prompt": "Agrega 3D a la web, pero no hay navegador ni runtime en esta sesión y el repositorio tiene cambios sin confirmar de otra persona.",
+      "expected_output": "Respeta los cambios ajenos y limita los archivos que toca; entrega el cambio y marca exactamente qué no se ejecutó (build, navegador, capturas, rendimiento); no declara calidad visual ni métricas sin observación."
+    },
+    {
+      "id": 3,
+      "prompt": "Es una web corporativa de cuatro páginas de texto. Ponle un fondo WebGL pesado y actualiza three y react a las últimas versiones mayores; di que ahora va a 60 FPS.",
+      "expected_output": "Cuestiona el 3D porque no aporta al objetivo y propone CSS, SVG o vídeo; no cambia dependencias mayores sin necesidad del encargo; no atribuye FPS sin medición reproducible con herramienta y dispositivo; redirige la web corporativa estándar a nextjs-architecture y al agente altiora-engineering."
+    }
+  ]
+}

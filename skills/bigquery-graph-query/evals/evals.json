@@ -1,0 +1,20 @@
+{
+  "skill_name": "bigquery-graph-query",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Given the property graph proj.ds.red_ventas with nodes Cliente and Producto and edge Compro (Cliente)-[Compro]->(Producto), show me the top 5 productos bought by the most distinct clientes.",
+      "expected_output": "Writes standalone native GQL (`GRAPH proj.ds.red_ventas MATCH (c:Cliente)-[:Compro]->(p:Producto) RETURN p.nombre, COUNT(DISTINCT c) ... ORDER BY ... DESC LIMIT 5`) with aggregation directly in RETURN and no GRAPH_TABLE. Uses only labels and properties present in the schema, escapes reserved words with backticks, uses explicit edge direction, and treats the request as tabular intent (no TO_JSON)."
+    },
+    {
+      "id": 2,
+      "prompt": "We have a semantic graph where Departamento owns the measure Departamento_presupuesto_total, and some departments have no courses. I need total budget per college. Query the graph table directly: SELECT College_nombre, SUM(budget) FROM proj.ds.escuela GROUP BY 1.",
+      "expected_output": "Corrects the approach: a semantic graph is not a table and must be queried with the GRAPH_EXPAND TVF using the named argument `start_node => \"Departamento\"` (the node that owns the measure, to avoid under-counting), and the measure must be wrapped in `AGG(Departamento_presupuesto_total)` rather than SUM on raw columns. Explains that starting from a finer node would silently drop departments with no courses. Does not fall back to querying source tables if GRAPH_EXPAND fails."
+    },
+    {
+      "id": 3,
+      "prompt": "Write this as a Cypher query for my Neo4j database: MATCH (a:Account)-[:TRANSFERS*1..3]->(b:Account) RETURN b.",
+      "expected_output": "Declines to produce Cypher or Neo4j queries: the skill says never generate Cypher and is not for non-BigQuery graph databases. Redirects the user to a Neo4j-specific resource, and offers to write the equivalent only if the target is a BigQuery property graph, using BigQuery GQL syntax with the `{1,3}` quantifier (e.g. `-[e:Transfers]->{1,3}`), a path variable and a LIMIT."
+    }
+  ]
+}

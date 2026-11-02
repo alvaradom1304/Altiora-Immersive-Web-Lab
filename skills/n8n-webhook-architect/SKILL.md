@@ -1,6 +1,6 @@
 ---
 name: n8n-webhook-architect
-description: Diseña y documenta el flujo CRM Web → n8n → WhatsApp con validación, idempotencia, consentimiento, reintentos, observabilidad y plan de pruebas. No despliega ni envía mensajes reales sin autorización.
+description: Diseña y documenta el flujo CRM Web → n8n → WhatsApp con validación, idempotencia, consentimiento, reintentos, observabilidad y plan de pruebas. No despliega ni envía mensajes reales sin autorización. Usar cuando se diseñe o revise la captura de leads de un sitio hacia CRM y WhatsApp con n8n. No usar para desplegar a producción, guardar secretos en código ni escribir a quien no dio opt-in.
 ---
 
 # N8N-WEBHOOK-ARCHITECT

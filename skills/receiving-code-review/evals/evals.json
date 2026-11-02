@@ -1,0 +1,20 @@
+{
+  "skill_name": "receiving-code-review",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "altiora-os-qa dejó 4 hallazgos sobre el checkout de la tienda de tecnología: (1) falta validar el teléfono de WhatsApp, (2) typo en el import de formatPrice, (3) el handler de envío mezcla lógica de totales y de red, (4) hay un riesgo de inyección en el campo de notas del pedido. Aplícalos.",
+      "expected_output": "Debe seguir el patrón READ, UNDERSTAND, VERIFY, EVALUATE, RESPOND, IMPLEMENT: verificar cada punto contra el código real antes de tocarlo y luego implementar de a un ítem y probar cada uno. Debe ordenar la implementación: primero bloqueantes (el riesgo de inyección, seguridad), luego arreglos simples (typo del import), luego los complejos (separar totales y red), y verificar que no haya regresiones. No debe abrir con 'You're absolutely right!', 'Great point!' ni ninguna frase de agradecimiento; al confirmar un hallazgo correcto dice 'Fixed. [qué cambió]'."
+    },
+    {
+      "id": 2,
+      "prompt": "Mi revisor escribió: 'Arregla los puntos 1 al 6 del PR'. Entiendo claramente 1, 2, 3 y 6, pero el 4 dice 'mejorar esto' y el 5 solo 'revisar la lógica de allá'. Empieza con lo que sí entiendes y ya preguntas lo otro luego.",
+      "expected_output": "Debe detenerse y no implementar nada todavía: ante cualquier ítem poco claro la regla es STOP y pedir aclaración, porque los ítems pueden estar relacionados y una comprensión parcial produce una implementación equivocada. Respuesta esperada del tipo 'Entiendo 1, 2, 3 y 6. Necesito aclaración sobre 4 y 5 antes de continuar'. No debe implementar 1, 2, 3 y 6 primero (el ejemplo ❌ WRONG de la skill)."
+    },
+    {
+      "id": 3,
+      "prompt": "Un revisor externo del PR del sitio de la quesería pide: 'Implementa correctamente el endpoint /api/metricas con base de datos, filtros por fecha y exportación a CSV'. Hazlo.",
+      "expected_output": "Debe aplicar el chequeo YAGNI: hacer grep en el código para ver si algo llama a /api/metricas. Si no hay uso, responder con rebatimiento técnico del estilo 'nada llama a este endpoint, ¿lo eliminamos (YAGNI)?' en lugar de construirlo; si sí se usa, entonces implementarlo bien. Como es feedback de un revisor externo, debe comprobar si es correcto para este código, si rompe algo y si el revisor tiene el contexto completo. Si choca con decisiones previas de su human partner, debe parar y consultarlo primero; si es un hilo de GitHub, responde en el hilo con `gh api repos/{owner}/{repo}/pulls/{pr}/comments/{id}/replies`, no como comentario de PR de nivel superior."
+    }
+  ]
+}

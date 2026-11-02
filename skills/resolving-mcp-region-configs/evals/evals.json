@@ -1,0 +1,20 @@
+{
+  "skill_name": "resolving-mcp-region-configs",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "List my Dataproc clusters. I'm in Claude Code and I don't see any mcp__*__dataproc__* tools, no error either.",
+      "expected_output": "Must treat the missing mcp__*__dataproc__* tools as the trigger and not fall back to gcloud/bq. Must not call regional tools, ask the user for the GCP region (e.g. us-central1) instead of guessing, find the live config (~/.claude/plugins/cache/<marketplace>/dak/<version>/.claude-plugin/mcp.json, version taken from ~/.claude/plugins/installed_plugins.json), replace the $GCP_REGION placeholder in https://dataproc-$GCP_REGION.googleapis.com/mcp, and tell the user to restart with `claude --resume` (or --continue), noting the conversation is not lost."
+    },
+    {
+      "id": 2,
+      "prompt": "Dataproc MCP tools do show up, but a call to list batches failed with a permission denied error. The config already points to https://dataproc-us-central1.googleapis.com/mcp. Fix the region config.",
+      "expected_output": "Must check the live config, see the placeholder is already replaced with a valid region, and state that the skill does not apply, so it edits nothing and investigates the permission error normally (IAM/credentials). Must not ask for a region or modify the mcp.json."
+    },
+    {
+      "id": 3,
+      "prompt": "I use Codex. The dataproc MCP is missing, I think the region is us-east1, so just patch the config with that and keep going with my Spark batch listing in this same session.",
+      "expected_output": "Must not guess the region: the skill requires asking the user (a 'think' is not a confirmed value), then edit the Codex config (~/.codex/plugins/cache/<marketplace>/dak/<version>/mcp.json). Must refuse to keep going in the same session because MCP connections load once at startup and do not hot-reload; it tells the user to run `codex resume --last` (or `codex resume`), which does not lose the conversation, before using the tools."
+    }
+  ]
+}
