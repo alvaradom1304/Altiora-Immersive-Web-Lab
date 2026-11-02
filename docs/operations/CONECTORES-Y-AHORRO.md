@@ -33,4 +33,6 @@ Activar un conector no concede permiso para publicar, enviar ni gastar: cada acc
 5. **Graphify antes que grep masivo,** siempre con `GRAPHIFY_BACKEND=none` (skill `graphify`).
 6. **Plugins sin uso fuera.** Los que piden iniciar sesión y no se usan (Windsor.ai, Marketing, Adobe, SearchFit) listan skills largas en cada turno; desactívalos en la configuración de plugins.
 
+**Responsable:** el rol `ai-economist` (`team/roles/ai-economist.md`) aplica estas reglas y entrega el plan de economía de cada tarea grande. Medir una sesión: `npm run usage:report -- <transcript.jsonl>`.
+
 Medición de referencia (sesión del 2026-11-01, 576 turnos): 33 % historial releído, 27 % subagentes, 25 % instrucciones fijas (unos 150.000 tokens por turno con todos los conectores encendidos).
