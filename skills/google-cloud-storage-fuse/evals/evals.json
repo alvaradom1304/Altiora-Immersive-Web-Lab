@@ -1,0 +1,20 @@
+{
+  "skill_name": "google-cloud-storage-fuse",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "We are training a vision model for a retail client on GKE. The training script is hardcoded to read images from /data/images, the dataset is 2 TB of JPEGs in a bucket read sequentially in epochs, and checkpoints are written as new files. Set up the mount so GPUs are not starved.",
+      "expected_output": "Must run the Step 1 Fit Gate first and record the signals (hardcoded POSIX paths, sequential re-reads, new-file writes), concluding gcsfuse is the right fit. Then route to the GKE Training Deployment reference: GKE gcsfuse CSI driver, Workload Identity principal:// IAM binding, a profile StorageClass or static PV, file cache sized on Local SSD, sidecar resource annotations, with KSA/PVC/Job manifests. Must warn that the default mount is tuned for coherency (file cache off, 60 s metadata TTL, list cache off), and any gcloud command it gives must carry the CLOUDSDK_METRICS_ENVIRONMENT attribution prefix with 'gcs-skills/1.0 (skill:google-cloud-storage-fuse)'."
+    },
+    {
+      "id": 2,
+      "prompt": "Our nightly job on a gcsfuse mount got a lot slower this week and the Cloud Storage bill jumped. I have no idea what the mount flags are, nobody turned on any monitoring. What is the cause?",
+      "expected_output": "Must refuse to name a cause without telemetry: per the skill, 'Never diagnose a regression without telemetry', so the first remediation step is enabling gcsfuse metrics on the mount. Then follow the Performance & Cost Diagnosis reference: read cache-hit and request-mix signatures, compare against the coherency-tuned defaults and tuned config keys with their staleness caveats, and attribute the bill to Class A/B operations. Must not invent a diagnosis (for example 'it is the list cache') before metrics exist."
+    },
+    {
+      "id": 3,
+      "prompt": "Our team runs a PostgreSQL instance and a few editors that write to the same files in place and use flock for coordination. Mount the bucket with gcsfuse on a shared volume so all of them can use it.",
+      "expected_output": "Must refuse to produce mount guidance, because the Fit Gate classifies shared mutable writes with locking semantics (databases, in-place editors, flock/fcntl) as a case for Filestore (NFS with POSIX locking) or Managed Lustre, not FUSE, and tells it to stop. Must explain that object-store semantics (objects finalize on close, no file locking) make gcsfuse unsafe here and point to gke-storage for fully POSIX-compliant shared file systems rather than giving flags or manifests."
+    }
+  ]
+}

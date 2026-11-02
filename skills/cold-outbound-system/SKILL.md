@@ -1,6 +1,6 @@
 ---
 name: cold-outbound-system
-description: Investiga y prepara prospección B2B personalizada y verificable con fuentes públicas permitidas, produce borradores de correo y seguimientos sujetos a revisión humana. No automatiza scraping ni envía mensajes.
+description: Investiga y prepara prospección B2B personalizada y verificable con fuentes públicas permitidas, produce borradores de correo y seguimientos sujetos a revisión humana. No automatiza scraping ni envía mensajes. Usar cuando se pida encontrar prospectos B2B, priorizar cuentas o redactar correos fríos y seguimientos con señales públicas. No usar para contactar consumidores, extraer datos de LinkedIn de forma automatizada ni enviar mensajes.
 ---
 
 # COLD-OUTBOUND-SYSTEM

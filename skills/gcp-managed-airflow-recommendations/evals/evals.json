@@ -1,0 +1,20 @@
+{
+  "skill_name": "gcp-managed-airflow-recommendations",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Our Cloud Composer environment `altiora-demo-env` (project altiora-demo, us-central1, sample) has schedulers restarting a lot over the last 7 days and DAGs are slow to appear. Give me recommendations to tune it.",
+      "expected_output": "Follows the workflow: confirms target environment (name, project, region) and timeframe (past 7 days); retrieves current configuration with the gcloud commands from `references/gcloud_reference.md` (environment size, number of schedulers, max workers, cpu/ram); runs the diagnostic scripts in `scripts/` (`workload_restarts.py`, `workload_memory_usage.py`, `workload_cpu_usage.py`, `workload_disk_usage.py`, `dag_parsing_stats.py`, `environment_health.py`) discovering parameters with `python3 ./scripts/{script_name}.py --help`; analyzes saturation, OOM-driven scheduler restarts and DAG parsing times (`dag-processor-manager` log). Delivers a Markdown report with a table of metrics and categorized recommendations (Infrastructure & Scaling, Airflow Configurations such as `parallelism`/`dag_file_processor_timeout`, Bucket Hygiene, Production Best Practices), distinguishing Gen 2 / Gen 3 and not recommending upsizing without evidence."
+    },
+    {
+      "id": 2,
+      "prompt": "Tell me the best Composer size for my pipeline. Just say small, medium or large, I don't want metrics.",
+      "expected_output": "Does not give a blind sizing answer: the skill's constraints require evidence-based decisions ('Do not blindly recommend increasing machine sizes without first checking if the memory or CPU is actually saturated' and 'Do NOT make generalizations without data'). Asks for the target environment (name, project ID, region) and timeframe, explains that it will run the telemetry scripts and read the environment configuration, and may offer general best practices (no top-level code, deferrable operators, Dynamic Task Mapping) meanwhile while labeling them as general, not as a sizing verdict."
+    },
+    {
+      "id": 3,
+      "prompt": "My DAG `reporte_semanal` of the Composer environment failed yesterday with a KeyError. Find the root cause and write the RCA report.",
+      "expected_output": "Redirects: a specific failed DAG run and RCA belong to gcp-composer-troubleshooting (logs with `gcloud logging read`, remote DAG code, RCA report), whereas this skill covers environment configuration, scaling, parsing efficiency and restarts recommendations. Does not run the performance scripts to answer a single failed task; offers to use this skill only if the user wants tuning of the environment afterwards."
+    }
+  ]
+}

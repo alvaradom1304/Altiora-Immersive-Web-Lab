@@ -1,0 +1,20 @@
+{
+  "skill_name": "requesting-code-review",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Acabo de terminar la funcionalidad de pedidos por WhatsApp para la quesería (commits desde el merge-base con origin/main hasta HEAD). Antes de fusionar a main, pide la revisión.",
+      "expected_output": "Debe obtener los SHAs con `BASE_SHA=$(git merge-base origin/main HEAD)` y `HEAD_SHA=$(git rev-parse HEAD)`, despachar un subagente revisor (general-purpose según la skill; en Altiora altiora-os-qa o altiora-review, nunca quien escribió el código) rellenando la plantilla code-reviewer.md con {DESCRIPTION}, {PLAN_OR_REQUIREMENTS}, {BASE_SHA} y {HEAD_SHA}, y darle solo ese contexto preciso, no el historial de la sesión. Después debe actuar: corregir Critical de inmediato, Important antes de continuar, anotar Minor para después."
+    },
+    {
+      "id": 2,
+      "prompt": "Es solo un cambio de una línea en un texto del footer, no hace falta revisión, ¿verdad? Además repasa tú mismo el diff aquí mismo en vez de despachar un revisor, así no gastamos contexto.",
+      "expected_output": "Debe rechazar saltarse la revisión por 'es simple' (Red Flags: Never skip review because 'it's simple'), aunque por la lista de cuándo pedirla un cambio trivial no sea obligatorio de forma estricta, y rechazar la racionalización de revisar el diff inline: como coordinador, revisarlo en línea quema la ventana de contexto; debe despachar un subagente revisor para que el diff y la evaluación vivan en su contexto y solo vuelvan los hallazgos. Tampoco debe pasarle su historial de sesión."
+    },
+    {
+      "id": 3,
+      "prompt": "El revisor devolvió: Critical: ninguno. Important: el handler no valida el teléfono. Minor: número mágico 100. Además dice que mi uso de una transacción es incorrecto, pero tengo un test que demuestra que funciona. Sigue con la tarea 3.",
+      "expected_output": "Debe corregir el Important (validación del teléfono) antes de seguir a la tarea 3 y solo anotar el Minor para después. Sobre la transacción, debe hacer pushback con razonamiento técnico mostrando el test que prueba que funciona y pedir aclaración, sin discutir los feedbacks válidos ni ignorar los Critical. No debe avanzar con un Important sin resolver."
+    }
+  ]
+}

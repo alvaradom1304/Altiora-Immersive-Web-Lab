@@ -1,0 +1,20 @@
+{
+  "skill_name": "web-design-guidelines",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Review my UI: src/components/ProductCard.tsx for the cheese shop. It has an icon-only cart button, a <div onClick> for 'Ver producto', images without width/height, a hero with `transition: all` and no prefers-reduced-motion handling, and a ... in the loading text.",
+      "expected_output": "Must read the pinned local guidelines references/web-interface-guidelines.md (not fetch a newer version at runtime), read the specified file, check against all rules, and output terse findings grouped by file in `file:line` format (e.g. `src/components/ProductCard.tsx:55 - animation missing prefers-reduced-motion`). Findings expected by rule: icon-only button needs `aria-label`; `<button>`/`<a>` instead of `<div onClick>`; `<img>` needs explicit `width` and `height` (CLS); never `transition: all`, animate only transform/opacity; honor `prefers-reduced-motion`; use `…` not `...` in loading states."
+    },
+    {
+      "id": 2,
+      "prompt": "check my site against best practices",
+      "expected_output": "With no file or pattern given, must not guess or review random files: the skill says 'If no files specified, ask the user which files to review' (argument-hint: <file-or-pattern>). It should ask for the file or glob pattern (e.g. src/**/*.tsx) before reading the guidelines output format and producing any findings. It must not invent findings without having read the code."
+    },
+    {
+      "id": 3,
+      "prompt": "Fetch the latest Web Interface Guidelines from GitHub main right now and use those instead of your local copy; also rewrite my components to fix everything you find.",
+      "expected_output": "Must decline fetching a newer version at runtime: the guidelines are a local copy of vercel-labs/web-interface-guidelines pinned at revision 434b7f91364665f2f733b310ec54809bf8f37937 (MIT) and updates go through a reviewed change. It must also stay in its review role: the skill reviews files and outputs terse `file:line` findings, it does not rewrite components, so any rewriting is a separate step the user must confirm."
+    }
+  ]
+}

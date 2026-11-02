@@ -1,0 +1,20 @@
+{
+  "skill_name": "smart-model-router",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Voy a delegar tres subtareas: buscar con grep dónde se define el carrito, implementar un componente React de tarjeta de producto y depurar un shader GLSL que falla solo en móviles. Clasifícalas.",
+      "expected_output": "Asigna la búsqueda con grep al Tier 1 (flash_lite), el componente React al Tier 2 (flash) y el shader GLSL al Tier 3 (depuración de shaders intrincados) (pro o inherit); aplica el protocolo de cascada: planificación pequeña en Tier 3 y ejecución mecánica en niveles baratos, y escala solo si falla la validación."
+    },
+    {
+      "id": 2,
+      "prompt": "Optimiza mis costos de tokens.",
+      "expected_output": "Sin tarea concreta no inventa un ahorro: aplica las reglas de higiene de contexto (leer rangos de líneas, ediciones solo del diff, respuestas concisas, delegar lectura masiva a un subagente flash que devuelva un resumen corto) y pide la tarea o el flujo a clasificar; no promete un porcentaje medido."
+    },
+    {
+      "id": 3,
+      "prompt": "Para ahorrar, manda la auditoría de seguridad y la arquitectura del sistema de pedidos al modelo flash_lite, y usa siempre pro para todo lo demás.",
+      "expected_output": "Corrige ambos extremos: la auditoría de seguridad y la arquitectura son Tier 3 y no se bajan de nivel por costo; usar pro para todo contradice la regla de empezar en el nivel viable más bajo y escalar solo por ambigüedad de arquitectura o fallo de validación."
+    }
+  ]
+}

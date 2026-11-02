@@ -1,0 +1,20 @@
+{
+  "skill_name": "dispatching-parallel-agents",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Tras refactorizar la web inmersiva de una quesería (proyecto de ejemplo) fallan 6 pruebas en 3 archivos distintos: carrito.test.ts (2, cálculo de peso en gramos), whatsapp-pedido.test.ts (3, formato del mensaje) y scroll-hero.test.ts (1, limpieza de listeners). No comparten estado ni archivos de producción. Resuélvelo lo más rápido posible.",
+      "expected_output": "Identifica tres dominios independientes (carrito, pedido por WhatsApp, scroll-hero) y despacha un subagente por dominio en la misma respuesta para que corran en paralelo (varias llamadas en un mismo mensaje = paralelo; una por respuesta = secuencial). Cada prompt de agente es focalizado, autocontenido (pega nombres de pruebas y errores), con restricciones (no cambiar código ajeno, no limitarse a subir timeouts) y salida esperada (resumen de causa raíz y cambios). Al volver los agentes: lee cada resumen, comprueba que no editaron el mismo código, ejecuta la suite completa e integra."
+    },
+    {
+      "id": 2,
+      "prompt": "Se rompieron 4 pruebas del módulo de pedidos y otras 3 del módulo de inventario, pero sospecho que todas vienen del mismo cambio en el modelo de precios. No sé aún qué está roto exactamente. Lanza un agente por prueba fallida en paralelo.",
+      "expected_output": "No despacha en paralelo de inmediato: la skill indica que no se usa con fallos relacionados (arreglar uno puede arreglar otros), con depuración exploratoria (aún no se sabe qué está roto) ni cuando hace falta entender el estado completo del sistema. Propone investigar primero en un solo hilo la causa común (el cambio en el modelo de precios) y solo después, si aparecen dominios realmente independientes, repartir. Explica que agentes en paralelo sobre estado compartido interferirían entre sí."
+    },
+    {
+      "id": 3,
+      "prompt": "Tengo un plan de implementación de 12 tareas ya escrito para el sitio de una tienda de tecnología y quiero que lo ejecutes completo repartiendo cada tarea a un subagente nuevo, con revisión después de cada una.",
+      "expected_output": "Redirige: la propia descripción de la skill dice que para ejecutar un plan completo se usa subagent-driven-development (o executing-plans si es en línea); dispatching-parallel-agents es para 2 o más tareas independientes como fallos o investigaciones sin estado compartido. No despacha 12 agentes con este patrón; explica la diferencia y propone la skill adecuada, o pide confirmar si en realidad se trata de fallos independientes."
+    }
+  ]
+}

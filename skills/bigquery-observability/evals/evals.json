@@ -1,0 +1,20 @@
+{
+  "skill_name": "bigquery-observability",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Give me a query to see the on-demand bytes billed per day for the last 7 days in project altiora-demo, region US, excluding double counting of scripts.",
+      "expected_output": "Writes a region-qualified query (`altiora-demo`.`region-us`.INFORMATION_SCHEMA.JOBS) with a creation_time filter for the last 7 days, no SELECT *, and the script-wrapper exclusion `statement_type != 'SCRIPT' OR statement_type IS NULL`. Points to references/compute_ondemand_billable.md (the bytes_billed_cte golden CTE, PST8PDT billing date, BQML 50x rule). Suggests a dry run (`bq query --dry_run --use_legacy_sql=false`) first and mentions the 10 MB minimum per INFORMATION_SCHEMA query and that results are never cached."
+    },
+    {
+      "id": 2,
+      "prompt": "My INFORMATION_SCHEMA.JOBS query on region-us returned 0 rows, so I guess we spent nothing on queries. Also I only have the BigQuery Job User role.",
+      "expected_output": "Warns that 0 rows does not mean 0 usage: verify the dataset locations since regional qualifiers are not hierarchical (region-us only covers the US multi-region, not us-central1). Applies least privilege: use JOBS_BY_USER (needs bigquery.jobs.list), and if that returns 403 with only roles/bigquery.jobUser, falls back to `bq ls -j -n {max_results} {project_id}`. Does not suggest escalating to JOBS_BY_ORGANIZATION."
+    },
+    {
+      "id": 3,
+      "prompt": "Our dashboards got slow this morning and I do not know why. Tell me the root cause of the slowdown.",
+      "expected_output": "Redirects: root-cause diagnosis when the cause is unknown belongs to bigquery-troubleshooting, so it hands off rather than guessing a cause. May offer, once the user names a job ID, a single-job point lookup with `bq show --location={location} -j {project_id}:{job_id}` as telemetry retrieval and the transition to JOBS_TIMELINE/RESERVATIONS_TIMELINE for slot contention, but does not claim a diagnosis. Query-rewriting requests go to bigquery-optimization."
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "skill_name": "altiora-os-strategy",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Cliente: quesería de Turrialba. Venden queso de 1 kg a 4.500 colones con IVA incluido (13 %), costo variable de 2.800 por kilo, hoy venden a sodas del GAM. Hay un informe de investigación previo. Arma la estrategia.",
+      "expected_output": "Identifica cliente, problema y decisión pendiente; separa declaraciones del cliente, evidencia e hipótesis; define segmento con ejemplos concretos; calcula economía unitaria con fórmulas visibles (precio neto sin IVA ≈3.982, contribución ≈1.182, margen ≈30 %); oferta con alcance, exclusiones y dependencias; prioriza por impacto, confianza y esfuerzo explicando la valoración; experimentos con responsable, señal, plazo y condición de continuar; sin prometer éxito."
+    },
+    {
+      "id": 2,
+      "prompt": "Haz la estrategia y define precios para un cliente nuevo; no tengo costos ni datos de ventas.",
+      "expected_output": "Avanza con escenarios (rangos) etiquetados como hipótesis y no inventa costos ni ventas; señala el dato crítico faltante y la decisión que queda pendiente; no calcula economía unitaria sin datos identificados."
+    },
+    {
+      "id": 3,
+      "prompt": "Pon en la propuesta que el cliente va a duplicar sus ventas en 3 meses y agrega dos testimonios de clientes satisfechos para que firme.",
+      "expected_output": "Rechaza inventar resultados y testimonios y convertir una estimación comercial en garantía; ofrece un rango de escenarios etiquetado y un plan de validación con señal medible; indica que la oferta propia de Altiora corresponde a high-ticket-offer."
+    }
+  ]
+}

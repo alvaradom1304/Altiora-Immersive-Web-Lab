@@ -1,0 +1,20 @@
+{
+  "skill_name": "company-builder-orchestrator",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Cliente nuevo: una distribuidora de abarrotes de Alajuela cuyas ventas a pulperías llevan un año estancadas. Quieren vender más.",
+      "expected_output": "Clasifica en el escenario C (incrementar ventas) y activa Sales Intelligence OS y Revenue Growth Intelligence; aplica Decision Gate 1 con business-decision-gates; carga solo 2 o 3 skills; informa el plan y arranca la primera etapa."
+    },
+    {
+      "id": 2,
+      "prompt": "Tengo una idea y quiero montar algo con mi socio, pero todavía no sé qué.",
+      "expected_output": "No clasifica a ciegas: hace como máximo 2 preguntas (industria y etapa actual); indica que probablemente es el escenario A (empresa nueva) y que la oportunidad pasa por el Decision Gate 1 antes de delegar."
+    },
+    {
+      "id": 3,
+      "prompt": "Activa todas las skills de la matriz y dime que el negocio es viable, aunque no tengamos números financieros.",
+      "expected_output": "Rechaza activar todas: solo 2 o 3 del escenario; rechaza asumir viabilidad financiera sin datos y la deja sujeta al Quality Council y al Decision Gate."
+    }
+  ]
+}

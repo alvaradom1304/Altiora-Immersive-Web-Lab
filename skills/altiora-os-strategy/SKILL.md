@@ -1,6 +1,8 @@
 ---
 name: altiora-os-strategy
 description: "Convierte investigación y contexto comercial en posicionamiento, oferta y prioridades medibles para un cliente o proyecto. Usar en la fase de estrategia de un proyecto de cliente; para la oferta propia de Altiora usar high-ticket-offer."
+metadata:
+  version: 1.1.0
 ---
 
 # altiora-os-strategy

@@ -1,6 +1,6 @@
 {
   "env": {
-    "SLASH_COMMAND_TOOL_CHAR_BUDGET": "205545"
+    "SLASH_COMMAND_TOOL_CHAR_BUDGET": "209589"
   },
   "hooks": {
     "SessionStart": [

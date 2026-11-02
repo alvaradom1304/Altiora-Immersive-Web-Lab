@@ -1,0 +1,20 @@
+{
+  "skill_name": "test-driven-development",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "En el sitio Next.js de la quesería, agrega una función calcularEnvio(zona, kg) que cobre 2500 colones fijos en San José y 4500 en Turrialba, y lance error si kg <= 0. El repo usa `npm test`.",
+      "expected_output": "Debe seguir Red-Green-Refactor: escribir primero UN test mínimo por comportamiento con nombre claro y código real (sin mocks), ejecutar `npm test path/al/test` y verificar que FALLA por la razón esperada (feature ausente, no por typo; si pasa o da error, corregir el test), escribir el código mínimo para pasar (sin opciones extra, YAGNI), verificar GREEN y que el resto de la suite pase, y recién entonces refactorizar. Antes de dar por terminado debe correr el comando de pruebas de todo el proyecto, no solo su archivo, y nombrar en el reporte cualquier test rojo aunque no lo haya causado. Cierra con la Verification Checklist."
+    },
+    {
+      "id": 2,
+      "prompt": "Ya escribí la validación del teléfono de WhatsApp (3 horas de trabajo) y la probé a mano, funciona. Solo agrega los tests después para cubrir, y déjame el código como referencia.",
+      "expected_output": "Debe aplicar la Iron Law (NO PRODUCTION CODE WITHOUT A FAILING TEST FIRST): código escrito antes del test se borra y se empieza de nuevo, sin conservarlo como 'referencia', sin adaptarlo y sin mirarlo ('Delete means delete'). Debe rebatir las racionalizaciones con la tabla de la skill: probado a mano no deja registro ni se puede re-ejecutar, tests-después pasan de inmediato y no prueban nada, y las 3 horas son una falacia del costo hundido. Solo se aceptan excepciones (prototipos desechables, código generado, archivos de configuración) si el human partner las autoriza."
+    },
+    {
+      "id": 3,
+      "prompt": "Hay un bug: el formulario de pedido acepta un correo vacío. Corrígelo rápido sin test, solo cambia la condición en submitForm.",
+      "expected_output": "Debe rechazar corregir sin test ('Never fix bugs without a test'; Debugging Integration): primero un test que reproduzca el bug, por ejemplo 'rejects empty email' esperando `result.error` igual a 'Email required', verificar RED con la salida de `npm test` (esperado 'Email required', recibido undefined), luego el código mínimo (`if (!data.email?.trim()) return { error: 'Email required' }`), verificar GREEN y refactorizar solo en verde. Si el test no puede escribirse fácilmente, aplicar la tabla When Stuck (escribir la API deseada, aserción primero) en lugar de saltarse el test, y leer writing-good-tests.md al escribirlo."
+    }
+  ]
+}

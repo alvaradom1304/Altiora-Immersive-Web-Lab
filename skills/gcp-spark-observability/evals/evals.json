@@ -1,0 +1,20 @@
+{
+  "skill_name": "gcp-spark-observability",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "For project altiora-demo (sample), list which Managed Spark serverless batches failed in the last day in us-central1 and rank the top DCU-hour consumers. Also show if any cluster is sitting idle.",
+      "expected_output": "Uses gcloud with explicit `--limit` on every list and the documented filters: `gcloud dataproc batches list --region=us-central1 --filter=\"state=FAILED AND create_time>=\\\"<RFC3339>\\\"\" --sort-by=~createTime --limit=20` (snake_case `create_time`, not `createTime`), reads `stateMessage`; top consumers with `--sort-by=~runtimeInfo.approximateUsage.milliDcuSeconds --limit=20` converting DCU-Hours = milliDcuSeconds / 3,600,000 (and noting approximateUsage only exists after completion and DCU-hours are not dollars). Idle cluster check: `clusters list --filter=\"status.state=RUNNING\" --limit=100` and call it idle only if 0 active Jobs API jobs AND 0 running/pending YARN applications (`metrics.yarnMetrics`), reporting idle TTLs. Never cancels, kills or deletes anything without explicit confirmation."
+    },
+    {
+      "id": 2,
+      "prompt": "Why did my last Spark batch fail? I don't have the batch ID or the region.",
+      "expected_output": "Applies the handoff rule: since no batch_id or job_id is given, uses this skill first to find the latest failed batch ID, region and `stateMessage`/`status.details` (resolving region from the user, `gcloud config get-value dataproc/region` with `compute/region` fallback, or Cloud Asset Inventory for multi-region discovery with `--quiet`, never enabling APIs), then hands off to gcp-spark-troubleshooting for the root-cause analysis of that one workload. Does not do deep RCA itself and does not guess the region."
+    },
+    {
+      "id": 3,
+      "prompt": "Write me a new PySpark job for the daily sales of a cheese shop and also upgrade my existing batch to runtime 2.3. Optimize executor sizing for the slow batch `ventas-007`.",
+      "expected_output": "Does not do these with this skill, per its routing/'Don't use' rules: authoring new PySpark code goes to gcp-spark, upgrading Spark versions goes to gcp-managed-spark-upgrades, and optimizing or diagnosing a specific batch (executor sizing, runtime regression) goes to gcp-spark-troubleshooting. This skill is only for inventory/monitoring/cost/quotas/telemetry, so it may offer to first list top DCU consumers or regressed schedules and then hand off one workload at a time with its ID, region and runtimeConfig."
+    }
+  ]
+}

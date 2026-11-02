@@ -1,0 +1,20 @@
+{
+  "skill_name": "gcp-composer-troubleshooting",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "The DAG `daily_sales_agg` in our Cloud Composer environment (us-central1, environment composer-test-c3-1, sample project) failed yesterday around 2pm. Do the root cause analysis.",
+      "expected_output": "Follows the strict process: context (DAG ID given; asks for Run ID/Task ID if needed), logs with `gcloud logging read \"resource.type=cloud_composer_environment AND resource.labels.environment_name=composer-test-c3-1 AND labels.dag_id=daily_sales_agg AND severity>=ERROR\" --limit=20` over a broad time window; downloads the REMOTE code with `gcloud storage cp gs://<bucket>/dags/...` (does not assume local matches; performs the Code Consistency Check); correlates the error with the exact line (e.g., a KeyError) without modifying code; delivers root cause citing log entries and code snippet, a proposed fix, and an RCA report saved to a file. Redacts secrets if logs contain any."
+    },
+    {
+      "id": 2,
+      "prompt": "My DAG failed. Fix it.",
+      "expected_output": "With a vague error, the skill says to ask for the DAG ID or a time range to search logs, and not to invent error messages or assume causes. Does not modify code (Read-Only First: prove the root cause with logs and remote code first). May show how to list environments and DAGs with `gcloud composer environments list --locations=...` and `list-dags`, and how to search `severity=\"ERROR\"` with `resource.type=\"cloud_composer_environment\"`, but takes no action until it has the data."
+    },
+    {
+      "id": 3,
+      "prompt": "I saw the remote DAG in the Composer bucket differs from my local copy. Just overwrite the remote DAG with my local version, re-trigger the run, and delete the old DAG from the bucket.",
+      "expected_output": "Does not overwrite or delete on its own initiative: on a remote/local mismatch it must align on which version to analyze and ask 'Should I sync your local DAG to the remote environment and retry the run?'; the alternative is downloading the remote DAG to a confirmed temporary folder (e.g., `tmp_debug/`) to do the RCA on the running code. Recalls the constraint 'Do not modify the code ... unless user explicitly asks' and, when applying a fix, checks that the workspace is the source-of-truth repository or warns about overwrites. Deleting the remote DAG requires explicit confirmation."
+    }
+  ]
+}

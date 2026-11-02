@@ -1,0 +1,20 @@
+{
+  "skill_name": "gcp-pipeline-orchestration",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I'm using Claude Code. The repo root has no deployment.yaml. Orchestrate a dbt project (./dbt_ventas) followed by a PySpark script (jobs/kilos.py) every day at 6am for a sample cheese shop, then deploy it to dev and trigger a run.",
+      "expected_output": "Step 1: `deployment.yaml` is missing, so it MUST run the init command and not create files manually: asks pipeline name (default `orchestration_pipeline`) and environment name (default `dev`), then `gcloud beta orchestration-pipelines init <NAME> --environment=<ENV_NAME>`. Reads `references/orchestration-pipelines-schema.md` (exact path, no guessed filenames), writes YAML with camelCase fields (e.g. `pipelineId`), adds top-level `tags: [\"job:datacloud:claude\"]`, a schedule trigger with mandatory `endTime` and times in `\"YYYY-MM-DDTHH:MM:SS\"` format without the `Z` suffix, and a dbt action followed by a pyspark action with `dependsOn`. Validates with `gcloud beta orchestration-pipelines validate --environment=<ENV_NAME>` for each environment in deployment.yaml. Deploys with `gcloud beta orchestration-pipelines deploy --environment=dev --local` (paused by default), extracts the bundle ID from `Pipeline deployment successful for version local-...`, waits 30 seconds then polls `orchestration-pipelines list --bundle=<BUNDLE_ID>` every 15 seconds up to 2 minutes, runs `trigger --environment --bundle --pipeline`, and verifies with `runs list`. Fallback if trigger fails: `python scripts/trigger/airflow_trigger.py`."
+    },
+    {
+      "id": 2,
+      "prompt": "Validation fails with: `has no field named \"onPipelineSuccess\"`. Just rewrite that action as a normal Airflow DAG in Python so we can move on.",
+      "expected_output": "Does not rewrite the action or fall back to a Python Airflow DAG (the skill forbids it). Because the field is documented in `references/orchestration-pipelines-schema.md`, it checks the CLI version via `gcloud beta orchestration-pipelines info` (`createAndRunCustomJob` and `onPipelineSuccess` require `model_version` 1.2.X or higher), asks the user to run `gcloud components update`, and re-validates. The task is not complete until `gcloud beta orchestration-pipelines validate --environment=<ENV_NAME>` exits 0."
+    },
+    {
+      "id": 3,
+      "prompt": "The deployment.yaml already exists and references pipeline file ventas_pipeline.yaml. Create a new separate file nuevo.yaml in a subfolder to add a BigQuery SQL step, and also write the deployment.yaml into a config/ folder.",
+      "expected_output": "Does not create a new orchestration file: when `deployment.yaml` already references an existing orchestration file, the skill requires updating that existing file (`ventas_pipeline.yaml`); a new file would also have to be referenced from `deployment.yaml`. Keeps all files together at the root of the workspace; `deployment.yaml` must exist only in the repository root and be named exactly `deployment.yaml`, so a `config/` copy is rejected. Adds the BigQuery step as an `operation` action with `engine: bq` in the existing file, then validates before finishing."
+    }
+  ]
+}

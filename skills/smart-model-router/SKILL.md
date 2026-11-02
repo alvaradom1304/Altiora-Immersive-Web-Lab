@@ -1,6 +1,8 @@
 ---
 name: smart-model-router
-description: Intelligent AI model routing, token cost optimization, and multi-tier task delegation based on complexity (inspired by RouteLLM, FrugalGPT, and LiteLLM). Use when delegating subtasks, optimizing token budgets, or choosing between Flash-Lite, Flash, and Pro models.
+description: Intelligent AI model routing, token cost optimization, and multi-tier task delegation based on complexity (inspired by RouteLLM, FrugalGPT, and LiteLLM). Use when delegating subtasks, optimizing token budgets, or choosing between Flash-Lite, Flash, and Pro models. Do not use when the runtime offers no model choice or delegation, or to promise a specific saving without measuring it.
+metadata:
+  version: 1.1.0
 ---
 
 # Smart Model Router & Token Cost Optimizer
@@ -34,7 +36,7 @@ When the user requests multi-tier optimization or cost-aware execution, classify
 
 ## 3. Token Compression & Context Hygiene Rules
 
-Apply these rules at all times to slash input/output token burn by 50%–80%:
+Apply these rules at all times to reduce input/output token burn (the saving depends on the task; measure it before quoting a figure):
 
 - **Targeted Line Viewing**: Use `view_file` with explicit `StartLine` and `EndLine` instead of reading entire large files repeatedly.
 - **Diff-Only Edits**: Always use `replace_file_content` on the exact lines being changed—never rewrite full files unless creating a brand-new file.
@@ -48,5 +50,5 @@ Apply these rules at all times to slash input/output token burn by 50%–80%:
 When building AI features *inside* the user's application (e.g., an AI sales assistant, WhatsApp bot, or automated workflow):
 
 - **Classifier / Router Gate**: Use a tiny classifier or rule-based complexity scorer (prompt length, presence of code/math keywords, intent classification) to route incoming user queries:
-  - **Simple FAQs / Order status / Greetings (80% of traffic)** → Route to ultra-low-cost models (`gemini-2.5-flash-lite`, `gpt-4o-mini`, `claude-haiku`).
-  - **Complex custom quotes / Multi-item negotiation (20% of traffic)** → Route to reasoning models (`gemini-2.5-pro`, `claude-sonnet`).
+  - **Simple FAQs / Order status / Greetings (usually the bulk of traffic; measure the real share)** → Route to ultra-low-cost models (`gemini-2.5-flash-lite`, `gpt-4o-mini`, `claude-haiku`).
+  - **Complex custom quotes / Multi-item negotiation (the remainder)** → Route to reasoning models (`gemini-2.5-pro`, `claude-sonnet`).

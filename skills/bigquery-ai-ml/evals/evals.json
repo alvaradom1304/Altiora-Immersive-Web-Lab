@@ -1,0 +1,20 @@
+{
+  "skill_name": "bigquery-ai-ml",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I have a BigQuery table ventas.diarias(fecha DATE, sku STRING, unidades INT64) for an electronics store. Write a query that forecasts the next 30 days of units per SKU without training a custom model.",
+      "expected_output": "Reads references/ai_function_best_practices.md first, then uses AI.FORECAST (zero-shot TimesFM TVF, no CREATE MODEL) with the date column as timestamp_col, unidades as data_col, sku as id_cols and horizon 30. Does not propose ARIMA_PLUS or a CREATE MODEL step. Mentions reading references/ai_forecast.md for the exact signature."
+    },
+    {
+      "id": 2,
+      "prompt": "Sales for one product dropped sharply in mid-March and has stayed low since. Find out when it changed. I only have the daily series.",
+      "expected_output": "Chooses ML.DETECT_CHANGE_POINTS because the user describes a sustained regime shift (interval [begin_timestamp, end_timestamp]), and explains that AI.DETECT_ANOMALIES is for isolated point anomalies, not sustained shifts. Notes the data requirements (a timestamp column and a numeric series) and asks for or assumes the column names and states the assumption instead of inventing a schema."
+    },
+    {
+      "id": 3,
+      "prompt": "Create a new dataset, grant access to my teammate and list all the jobs that ran yesterday in BigQuery.",
+      "expected_output": "Declines to handle it with this skill: dataset, table and job management are explicitly out of scope ('Do not use for general BigQuery dataset, table, or job management requests'). Redirects to the appropriate BigQuery management or observability skill (e.g. bigquery-observability for job listing) and does not write AI.* or ML.* SQL for it."
+    }
+  ]
+}

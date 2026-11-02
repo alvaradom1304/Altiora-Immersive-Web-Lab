@@ -1,0 +1,20 @@
+{
+  "skill_name": "vercel-react-best-practices",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Review this Next.js product page: the server component awaits getProduct(id), then getReviews(id), then getStock(id) one after another; the cart button is a client component wrapping the whole page; the 3D cheese viewer is imported at the top of the file; prices jitter while the quantity changes.",
+      "expected_output": "Flags the sequential awaits as a waterfall (async-parallel: Promise.all for independent calls, or Suspense boundaries to stream reviews); recommends moving 'use client' down to the cart button so the page stays a Server Component; loads the 3D viewer with next/dynamic (ssr: false) below the fold (bundle-dynamic-imports); applies tabular-nums to prices; orders findings by priority with rule ids and fixes, and does not claim a measured speedup without a bundle report or Web Vitals run."
+    },
+    {
+      "id": 2,
+      "prompt": "Make my React app faster.",
+      "expected_output": "Asks for the code or the specific slow route and what was measured (bundle analyzer output, Web Vitals, React Profiler) before prescribing; may list the priority order (waterfalls, bundle size, re-renders) as the plan, but gives no concrete fix or expected gain without evidence."
+    },
+    {
+      "id": 3,
+      "prompt": "Animate the cart drawer by transitioning its width and left position, and remove the focus rings because they look ugly.",
+      "expected_output": "Declines both as specified: proposes animating transform and opacity instead of width/left to avoid layout work, and keeps a visible :focus-visible style (it may be restyled, not removed) for keyboard users; also suggests respecting prefers-reduced-motion for the drawer."
+    }
+  ]
+}

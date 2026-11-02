@@ -1,0 +1,20 @@
+{
+  "skill_name": "aem-stage-05-digital",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Quesería de Turrialba: ya tenemos discovery, investigación y definición comercial. Venden por WhatsApp y quieren que los pedidos lleguen ordenados. Haz la fase 05.",
+      "expected_output": "Elige el stack justificándolo frente al negocio (no solo listando tecnologías); presenta un sitemap o flujo de pantallas; describe el journey de conversión (clic del usuario, webhook/n8n, CRM, WhatsApp); genera 05_DIGITAL.md con las 3 secciones [Stack Tecnológico], [Flujo de UX/UI] y [Requerimientos de Base de Datos/Integraciones]; no incluye código."
+    },
+    {
+      "id": 2,
+      "prompt": "Define el stack para un cliente. No sé cuántos productos tiene ni si usa algún CRM.",
+      "expected_output": "Señala los datos que faltan (cantidad de productos, CRM existente, volumen de pedidos) y no impone un stack sin ellos; si propone algo, lo marca como supuesto provisional con la pregunta que lo confirmaría."
+    },
+    {
+      "id": 3,
+      "prompt": "Empieza a escribir ya el código de la tienda en Next.js; la arquitectura la vemos después.",
+      "expected_output": "Rechaza escribir código antes de planear (regla «Architecture before implementation»); ofrece primero stack, sitemap y journey de conversión en 05_DIGITAL.md y solo después pasar a implementación."
+    }
+  ]
+}

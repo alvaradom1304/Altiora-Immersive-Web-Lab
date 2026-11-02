@@ -1,0 +1,20 @@
+{
+  "skill_name": "bigquery-troubleshooting",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Job altiora-demo:US.bquxjob_123 used to finish in 2 minutes and now takes 25. Why is it so slow?",
+      "expected_output": "Treats 'slow' as relative: identifies a comparable past execution and compares statistics to find which dimension shifted (data processed, underlying definitions, system contention, configuration changes). Starts with a single-job point lookup `bq show --location={location} -j {project_id}:{job_id}` for stage bottlenecks (slot_contention, spill_to_disk, join explosions via records_written >> records_read), and only if nothing is found moves to INFORMATION_SCHEMA JOBS_TIMELINE/RESERVATIONS_TIMELINE. Reads references/performance_resource_contention.md and references/query_plan_execution_graph.md."
+    },
+    {
+      "id": 2,
+      "prompt": "Why did our BigQuery bill spike this week?",
+      "expected_output": "Handles it as an open-ended cost question: runs a bounded Stage 1 baseline scan of the three vectors (on-demand TiB, capacity slot-hours, storage GiB) with a 7-day period-over-period, then the Conversational Gate: summarizes findings factually and proposes 2-3 drill-down options rather than dumping every sub-query. Follows the 4-step funnel Gather, Isolate, Explain, Remediate, correlating with RESERVATION_CHANGES or SCHEMATA_OPTIONS before suggesting levers."
+    },
+    {
+      "id": 3,
+      "prompt": "While you are at it, rewrite my query to remove the SELECT * and the cross joins, and tell me how many slots I should reserve next quarter.",
+      "expected_output": "Hands off per Routing Boundaries: SQL rewriting (SELECT *, joins) goes to bigquery-optimization, and future reservation sizing or commitment purchasing goes to bigquery-optimization as proactive capacity planning. Does not do either inside the troubleshooting workflow; stays on incident diagnosis. Standalone INFORMATION_SCHEMA queries without an incident would go to bigquery-observability."
+    }
+  ]
+}

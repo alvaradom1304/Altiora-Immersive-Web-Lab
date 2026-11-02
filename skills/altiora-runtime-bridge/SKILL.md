@@ -1,6 +1,8 @@
 ---
 name: altiora-runtime-bridge
-description: Prepara o verifica la portabilidad de un proyecto Altiora entre Codex, Claude Code y Antigravity cuando se configura o cambia el entorno de trabajo.
+description: Prepara o verifica la portabilidad de un proyecto Altiora entre Codex, Claude Code y Antigravity cuando se configura o cambia el entorno de trabajo. No usar para instalar plugins, ejecutar los clientes ni migrar secretos o historial de conversaciones.
+metadata:
+  version: 1.1.0
 ---
 
 # Puente entre entornos
@@ -24,3 +26,14 @@ Entradas: raíz del proyecto, entorno destino y capacidad que se necesita. Salid
 Entregar una tabla con capa, ruta, estado (`CREATED`, `INSTALLED`, `DISCOVERED`, `LIVE_TESTED`), evidencia y limitación. Si hay incompatibilidad, conservar los archivos fuente, usar el procedimiento manual delimitado y explicar qué función falta. No confundir copiar un ZIP con instalar un plugin nativo.
 
 Para migrar trabajo activo, aplicar `altiora-session-handoff`; no mover secretos ni historial completo.
+
+## Entregable
+
+Un informe de portabilidad en Markdown (en el chat o en el archivo que indique el encargo) con:
+
+- Una tabla con columnas `capa | ruta | estado | evidencia | limitación`, una fila por capa comprobada (instrucciones, skills, roles, hooks). El estado es uno de `CREATED`, `INSTALLED`, `DISCOVERED` o `LIVE_TESTED`, y solo se sube de nivel con evidencia: la salida de `manage.py doctor` o de `check_runtimes.py` acredita como máximo `CREATED`/`INSTALLED`; `DISCOVERED` y `LIVE_TESTED` exigen haber abierto el cliente.
+- La lista de errores y avisos de `check_runtimes.py`, cada uno con el archivo afectado y su dueño; los avisos no se borran sin confirmación.
+- Las verificaciones en el cliente que quedan pendientes (instrucciones visibles, skill localizada, hook ejecutado, `/hooks` en Codex), declaradas como pendientes si no se pudo abrir el cliente.
+- Si falta una skill concreta: licencia, comandos, dependencias y rutas absolutas revisados antes de proponer `manage.py install`.
+
+El informe se da por válido si cada fila cita su comando o archivo de evidencia y ninguna capa figura como conectada solo por existir un archivo.

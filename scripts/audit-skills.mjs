@@ -29,17 +29,26 @@ function parseFrontmatter(text) {
   return { fields, body: text.slice(match[0].length) };
 }
 
-async function countEvalCases(dir) {
+async function readEvalCases(dir) {
   for (const file of ['references/evaluation-cases.json', 'evals/evals.json']) {
     const path = resolve(dir, file);
     if (!(await exists(path))) continue;
     try {
       const data = JSON.parse(await readFile(path, 'utf8'));
-      return (data.cases ?? data.evals ?? []).length;
-    } catch { return 0; }
+      const cases = data.cases ?? data.evals ?? [];
+      return Array.isArray(cases) ? cases : [];
+    } catch { return []; }
   }
-  return 0;
+  return [];
 }
+
+// Relleno de plantilla: un caso o párrafo que, quitando el nombre de la skill, aparece
+// idéntico en TEMPLATE_MIN skills o más no demuestra nada propio de esa skill y no puntúa.
+const TEMPLATE_MIN = 5;
+const signature = (value, name) => JSON.stringify(value).toLowerCase()
+  .replaceAll(name.toLowerCase(), '<skill>').replace(/\s+/g, ' ');
+const bodyParagraphs = body => body.replace(/^#{1,6}\s.*$/gm, '').split(/\n\s*\n/).map(p => p.trim())
+  .filter(p => p.length > 40 && !p.startsWith('|') && !p.startsWith('```'));
 
 // Cada regla: [id, puntos, descripción]. La suma es 100.
 const RULES = [
@@ -59,7 +68,7 @@ const RULES = [
   ['versioned', 5, 'Versión declarada'],
 ];
 
-async function auditSkill(name) {
+async function auditSkill(name, shared) {
   const dir = resolve(skillsDir, name);
   const text = (await readFile(resolve(dir, 'SKILL.md'), 'utf8')).replace(/\r\n/g, '\n');
   const fm = parseFrontmatter(text);
@@ -68,9 +77,14 @@ async function auditSkill(name) {
   const description = fm?.fields.description ?? '';
   const headings = lines.map((l, i) => ({ l, i, m: l.match(/^(#{1,6})\s+(.*)$/) })).filter(h => h.m);
   const h2 = headings.filter(h => h.m[1] === '##').map(h => h.m[2].trim());
-  const paragraphs = body.replace(/^#{1,6}\s.*$/gm, '').split(/\n\s*\n/).map(p => p.trim())
-    .filter(p => p.length > 40 && !p.startsWith('|') && !p.startsWith('```'));
-  const evalCases = await countEvalCases(dir);
+  const paragraphs = bodyParagraphs(body);
+  const isTemplate = value => (shared.get(signature(value, name)) ?? 0) >= TEMPLATE_MIN;
+  // Los casos genéricos compartidos (bordes, peticiones inválidas) son válidos junto a casos
+  // propios; un conjunto formado solo por plantillas no cuenta.
+  const cases = await readEvalCases(dir);
+  const templateCases = cases.filter(isTemplate).length;
+  const evalCases = templateCases === cases.length ? 0 : cases.length;
+  const ownBody = paragraphs.filter(isTemplate).reduce((rest, p) => rest.replace(p, ''), body);
   const hasContract = /^## Contrato/m.test(body) || await exists(resolve(dir, 'references/contract.json'));
 
   let brokenLinks = 0;
@@ -99,23 +113,49 @@ async function auditSkill(name) {
     'no-legacy-conflict': !(hasContract && /SOP Activo/.test(body)),
     'length': lines.length <= 500,
     'eval-cases': evalCases >= 3,
-    'output-defined': /output|entregable|resultado|deliverable/i.test(body),
+    'output-defined': /output|entregable|resultado|deliverable/i.test(ownBody),
     'local-links': brokenLinks === 0,
     'versioned': /versi[oó]n|version:/i.test(text),
   };
   const failed = RULES.filter(([id]) => !pass[id]).map(([id]) => id);
   const score = RULES.reduce((sum, [id, points]) => sum + (pass[id] ? points : 0), 0);
-  return { name, score, failed, evalCases, lines: lines.length };
+  return { name, score, failed, evalCases, templateCases, lines: lines.length };
 }
 
 const names = (await readdir(skillsDir, { withFileTypes: true }))
   .filter(e => e.isDirectory()).map(e => e.name).sort();
+
+// Primera pasada: en cuántas skills distintas aparece cada caso y cada párrafo normalizado.
+const shared = new Map();
+for (const name of names) {
+  const dir = resolve(skillsDir, name);
+  if (!(await exists(resolve(dir, 'SKILL.md')))) continue;
+  const text = (await readFile(resolve(dir, 'SKILL.md'), 'utf8')).replace(/\r\n/g, '\n');
+  const body = parseFrontmatter(text)?.body ?? text;
+  const seen = new Set([...(await readEvalCases(dir)), ...bodyParagraphs(body)].map(v => signature(v, name)));
+  for (const sig of seen) shared.set(sig, (shared.get(sig) ?? 0) + 1);
+}
+
 const results = [];
 for (const name of names) {
-  if (await exists(resolve(skillsDir, name, 'SKILL.md'))) results.push(await auditSkill(name));
+  if (await exists(resolve(skillsDir, name, 'SKILL.md'))) results.push(await auditSkill(name, shared));
   else results.push({ name, score: 0, failed: ['missing-skill-md'], evalCases: 0, lines: 0 });
 }
-const average = Math.round(results.reduce((s, r) => s + r.score, 0) / results.length * 10) / 10;
+const mean = list => list.length ? Math.round(list.reduce((s, r) => s + r.score, 0) / list.length * 10) / 10 : 0;
+const average = mean(results);
+// De origen externo: skills con SOURCE.md (terceros) o copias de solo lectura registradas en
+// team/local-sources/manifest.json (skills personales del dueño). Se actualizan desde su origen.
+let snapshots = new Set();
+try {
+  const manifest = JSON.parse(await readFile(resolve(root, 'team/local-sources/manifest.json'), 'utf8'));
+  snapshots = new Set(manifest.files.map(f => f.snapshot));
+} catch {}
+for (const r of results) {
+  r.thirdParty = snapshots.has(`skills/${r.name}/SKILL.md`) || await exists(resolve(skillsDir, r.name, 'SOURCE.md'));
+}
+const own = results.filter(r => !r.thirdParty);
+const third = results.filter(r => r.thirdParty);
+const split = `propias ${own.length}: media ${mean(own)} (${own.filter(r => r.score === 100).length} en 100); origen externo ${third.length}: media ${mean(third)}`;
 const ruleCounts = Object.fromEntries(RULES.map(([id]) => [id, results.filter(r => r.failed.includes(id)).length]));
 
 if (write) {
@@ -132,6 +172,7 @@ if (write) {
     '# Informe de calidad de skills',
     '',
     `Generado el ${baseline.generated_on} con \`npm run skills:baseline\`. ${results.length} skills; media **${average}/100**.`,
+    `Por origen: ${split}. Las de origen externo (terceros y copias de skills personales) no se reescriben a mano; mejoran con casos de evaluación propios o actualizando desde su origen.`,
     'Mide estructura y verificabilidad; no sustituye ejecutar los casos de evaluación. Proceso: [mejora continua de skills](../docs/workflows/skill-improvement.md).',
     '',
     '## Reglas incumplidas',
@@ -162,6 +203,7 @@ if (write) {
     ? results.filter(r => r.name in baseline.scores && r.score < baseline.scores[r.name])
     : [];
   console.log(`Skills: ${results.length}; media ${average}/100${baseline ? ` (línea base ${baseline.average})` : ' (sin línea base)'}.`);
+  console.log(`Por origen: ${split}.`);
   for (const [id, , desc] of RULES) if (ruleCounts[id]) console.log(`  ${String(ruleCounts[id]).padStart(3)} × ${desc}`);
   if (regressions.length) {
     for (const r of regressions) console.error(`REGRESIÓN ${r.name}: ${baseline.scores[r.name]} → ${r.score} (${r.failed.join(', ')})`);

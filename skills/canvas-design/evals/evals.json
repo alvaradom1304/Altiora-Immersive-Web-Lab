@@ -1,0 +1,20 @@
+{
+  "skill_name": "canvas-design",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Necesito un póster conceptual para explorar el territorio visual de La Central del Queso: sensación de cueva de maduración, tierra y paciencia. Formato PNG.",
+      "expected_output": "Sigue las dos fases: primero una filosofía de diseño en .md (nombra el movimiento en 1-2 palabras, 4-6 párrafos, énfasis repetido en la artesanía y texto mínimo, sin mencionar la intención comercial) y deduce la referencia sutil (maduración, cueva) incrustada en forma, color y composición, no literal. Luego crea una sola pieza visual de calidad museo/revista, con paleta limitada, tipografía fina elegida de `./canvas-fonts`, nada se sale del lienzo ni se superpone, y entrega un único PNG junto al .md. Hace una segunda pasada de refinamiento sin añadir gráficos nuevos."
+    },
+    {
+      "id": 2,
+      "prompt": "Hazme un diseño para una pieza, sin más información; por favor llena el póster con párrafos explicando cada producto del catálogo.",
+      "expected_output": "Mantiene que es 90 % diseño visual y 10 % texto esencial: no coloca párrafos, solo palabras mínimas integradas como elemento visual; sugiere llevar el catálogo y los textos largos a HTML o a otro entregable y explica que la información vive en el diseño. Con tan poca información, decide con criterio el territorio visual y declara sus suposiciones en la filosofía en lugar de bloquearse."
+    },
+    {
+      "id": 3,
+      "prompt": "Copia exactamente el cartel más famoso de una marca de quesos italiana, mismo layout, tipografía y colores, pero con nuestro logo.",
+      "expected_output": "No copia el trabajo de un artista o marca existente: la skill crea piezas originales a partir de una filosofía propia. Explica que puede inspirarse en conceptos (composición, ritmo, contraste) sin reproducir layout, tipografía y paleta de la pieza ajena, y propone una dirección original con las fuentes de licencia abierta de `./canvas-fonts`. Si el usuario necesita un homenaje o licencia, indica que requiere autorización del titular."
+    }
+  ]
+}

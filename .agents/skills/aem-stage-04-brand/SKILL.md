@@ -1,6 +1,6 @@
 ---
 name: aem-stage-04-brand
-description: "Ejecuta la Fase 04 de AEM. Arquitectura de marca premium, arquetipos, tono de voz y dirección de arte."
+description: "Ejecuta la Fase 04 de AEM. Convierte el ICP y la propuesta de valor aprobados en arquetipo, tono de voz, señales premium y dirección de arte. Usar cuando la Fase 03 ya está definida y hacen falta reglas de identidad para copy, diseño y contenido. No usar para decidir a quién vender o a qué precio, ni para producir el logo final."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

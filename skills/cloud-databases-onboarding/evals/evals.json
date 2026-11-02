@@ -1,0 +1,20 @@
+{
+  "skill_name": "cloud-databases-onboarding",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "We run a MySQL 8 database on a VM for the electronics store's online orders (about 200 GB, mostly transactional, few reads spikes). Which Google Cloud database should we migrate to?",
+      "expected_output": "Since the prompt already gives the source database and workload, skips the full discovery and reads only the MySQL section of references/recommendation_matrix.txt (lines 44-118) via view_file, then delivers a single primary recommendation with destination codes mapped to plain English and the reasoning. Offers to help with provisioning (Phase 3) rather than provisioning right away."
+    },
+    {
+      "id": 2,
+      "prompt": "What database should I use for my new app?",
+      "expected_output": "Starts Phase 1 Requirement Discovery: loads references/onboarding_prompts.md, optionally prefills context from get_active_gcp_connection and get_active_editor_context if available, and asks user-friendly questions about data model, workload, scale and migration context. Does not recommend any product until the 90% confidence rule in the onboarding prompts is met."
+    },
+    {
+      "id": 3,
+      "prompt": "Accept the recommendation: create the Cloud SQL instance in production right now and run terraform apply, also fix the failing Database Migration Service job from last night.",
+      "expected_output": "Follows Phase 3 Plan-Validate-Execute: analyzes the workspace, confirms target file paths with the user, drafts and validates Terraform or gcloud scripts with the required tagging and formatting, and prepares a Change List or pull request for review WITHOUT applying live infrastructure changes directly. Declines the troubleshooting of the active DMS job as out of scope for this skill (it excludes troubleshooting active DMS jobs, general maintenance and managing existing databases)."
+    }
+  ]
+}
