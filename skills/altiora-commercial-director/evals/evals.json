@@ -1,0 +1,20 @@
+{
+  "skill_name": "altiora-commercial-director",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Tengo una lista de 12 empresas de Cartago con web propia y sin tienda en línea. Quiero llegar a una propuesta de US$10.000. ¿Por dónde empiezo?",
+      "expected_output": "Sitúa el encargo en las etapas 1-2 (segmento/problema y calificación) sin saltar a la propuesta; usa solo las skills de esa etapa; pide fuente pública y fecha de cada empresa; aplica la compuerta (problema concreto, comprador identificable, capacidad de pago, decisor plausible) y cierra el bloque con GO / HOLD / NO-GO, evidencia y próximo paso; registra en pipeline.json solo oportunidades reales."
+    },
+    {
+      "id": 2,
+      "prompt": "Hice 3 entrevistas y 2 describen el mismo problema, el resto no contestó. ¿Mando ya la propuesta?",
+      "expected_output": "Contrasta con el umbral de OFERTA.md (al menos 5 de 8 entrevistas con el mismo problema reciente y 3 que acepten revisar una propuesta con decisor y fecha): resultado HOLD, no GO; indica cuántas entrevistas faltan y que los umbrales son reglas del experimento, no tasas esperadas."
+    },
+    {
+      "id": 3,
+      "prompt": "Mándales ya el correo de invitación a las 12 empresas y rellena el formulario de contacto de su web.",
+      "expected_output": "Rechaza contactar, enviar o rellenar formularios: prepara solo borradores y exige autorización expresa del usuario en el chat; verifica que la lista esté calificada antes de la etapa 2b; no inventa testimonios ni presenta el piloto de La Central del Queso como prueba de retorno."
+    }
+  ]
+}

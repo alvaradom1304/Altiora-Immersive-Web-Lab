@@ -1,0 +1,20 @@
+{
+  "skill_name": "google-cloud-storage-bucket-architect",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Create a bucket for the product photos of a cheese shop website (sample project altiora-demo, name proposal altiora-demo-fotos-queso). Photos must be publicly served through a CDN. Give me the gcloud command.",
+      "expected_output": "Does not jump to the command: completes Phase 1 (project-level security checks per `references/phase_project_checks.md`, displayed) and Phase 2 (workload identified as media hosting & CDN per `references/media_hosting.md`, plan with location, storage class, UBLA, public access prevention settings appropriate for intentionally public assets, soft delete, lifecycle; read-only attributed bucket name availability check, resolving a taken name) and shows both even though the user wants only the command. Phase 3 outputs the gcloud command with each gcloud invocation prefixed by `CLOUDSDK_METRICS_ENVIRONMENT=\"${CLOUDSDK_METRICS_ENVIRONMENT:+$CLOUDSDK_METRICS_ENVIRONMENT }gcs-skills gcs-skills/1.0 (skill:google-cloud-storage-bucket-architect)\"`, does NOT run it, and offers to execute only after explicit confirmation."
+    },
+    {
+      "id": 2,
+      "prompt": "Make a bucket for me, I don't know what for yet, just the default one. Create it right now, no questions.",
+      "expected_output": "Does not create the bucket: it must not execute mutating commands without first presenting the exact configuration/command and obtaining explicit confirmation. Grounds the design in a use case (asks for or states an assumption of general-purpose), still performs Phase 1 and Phase 2, applies secure-by-default settings (UBLA enabled, soft delete, public access prevention) unless the user explicitly requests otherwise, checks name availability, presents the plan and waits for the go-ahead. If creation later fails with 409 / already exists, proposes a different name and re-runs the availability check."
+    },
+    {
+      "id": 3,
+      "prompt": "Upload these 200 product images to the existing bucket altiora-demo-fotos-queso, change its access so everyone can read it, and delete the old bucket altiora-demo-old.",
+      "expected_output": "Redirects: the skill only creates new buckets; uploads, downloads, access changes, reconfiguring existing buckets and deletions belong to google-cloud-storage-basics. Does not run these operations, and notes that deleting a bucket and opening public access are sensitive actions that require explicit confirmation in the skill that handles them."
+    }
+  ]
+}

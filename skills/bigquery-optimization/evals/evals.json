@@ -1,0 +1,20 @@
+{
+  "skill_name": "bigquery-optimization",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "The table altiora_web.eventos (about 2 TB, unpartitioned, queried by fecha and usuario_id) is expensive to query. How should I partition and cluster it, and give me the DDL.",
+      "expected_output": "Reads references/table_partitioning_clustering.md and proposes a CTAS migration partitioned by the date column and clustered by usuario_id, with `require_partition_filter = true` and mention of the 10,000-partition limit. States project_id and region at the top (assuming `us` if unspecified and saying so), substitutes concrete values instead of {project_id} placeholders, and frames the benefit as 'optimizing your bill' or 'improving cost-efficiency' without promising cost reduction."
+    },
+    {
+      "id": 2,
+      "prompt": "Check TABLE_STORAGE for dataset ventas and tell me whether to switch to physical billing. It returned 0 rows.",
+      "expected_output": "Applies the Zero-Row Result Guard: does not produce an empty or zero-usage evaluation; stops and asks the user to confirm the dataset's regional location (region mismatch or no native tables). Reminds that TABLE_STORAGE queries use the regional view scoped with `WHERE table_schema = '{dataset_id}'` and that the compression-ratio threshold (e.g. >2:1 in US) depends on regional rates."
+    },
+    {
+      "id": 3,
+      "prompt": "Give me the bq command to switch my dataset to physical storage billing and buy a 1-year slot commitment right now.",
+      "expected_output": "Refuses to provide executable scripts that purchase commitments, alter edition bindings or mutate storage billing models (`bq update --storage_billing_model=...`). Instead guides the user to do these manually in the Cloud Console UI (e.g. the Slot Estimator steps for capacity planning), after giving the analysis. Also notes that raw usage reports go to bigquery-observability."
+    }
+  ]
+}

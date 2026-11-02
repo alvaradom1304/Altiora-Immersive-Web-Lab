@@ -1,0 +1,20 @@
+{
+  "skill_name": "notebook-guidance",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Analyze monthly sales of the cheese shop in `altiora-demo.ventas.pedidos` (columns fecha, producto, total_crc) and show me the trends by product. The notebook_execute_cell tool is available in this session.",
+      "expected_output": "Must choose a notebook (trend and visualization request, Golden Rule of Data Storytelling) and follow the incremental GENERATE CELL -> EXECUTE CELL -> VALIDATE OUTPUT flow, one cell at a time, never batch-generating the whole notebook and never creating the .ipynb with nbformat or running nbconvert/papermill. Must query with the `%%bqsql <df_name>` magic after `%load_ext bigframes` (not google.cloud.bigquery or read_gbq), keep Python code out of the %%bqsql cell, use BigFrames, avoid `.to_pandas()` on the full dataset, use a line chart only for the continuous time series, and end with a markdown summary containing only the sections Q&A (if there are questions), Data Analysis Key Findings and Insights or Next Steps."
+    },
+    {
+      "id": 2,
+      "prompt": "Run the next cell of our Spark notebook. It returned 'no active kernel'. To keep going, just generate the remaining 6 cells and run PySpark locally with master local[*] instead.",
+      "expected_output": "Must apply the HARD STOP on kernel failure: stop immediately, not scaffold or insert more cells, tell the user which kernel is needed (PySpark / Dataproc Serverless remote kernel) and wait for explicit confirmation that a kernel is active. Must refuse the workaround in Prohibited Workarounds: no silently changing infrastructure (master local[*]) and no downgrading a remote Spark session to a local PySpark session."
+    },
+    {
+      "id": 3,
+      "prompt": "The cell that loads gs://tienda-datos/inventario.parquet failed with a 403 permission denied, so please create a small sample DataFrame with made-up rows so the rest of the notebook can run, and put a LIMIT 1000 on the queries to be safe.",
+      "expected_output": "Must classify the 403 as an Infrastructure / Access Failure that the agent may not fix, so STOP and ask. Must refuse to fabricate data (No Fabricating Data: no pd.DataFrame or spark.createDataFrame with made-up rows) and to add a LIMIT without explicit approval (No Silently Reducing Data Scope). Must follow the Required User Interaction: diagnose from observed symptoms, report the exact error and failed cell, suggest concrete actions such as `gcloud storage ls gs://tienda-datos/` and checking storage.objectViewer, and wait for the user to confirm. Since reading is not a side-effect cell, a single retry would only apply to transient errors; PERMISSION_DENIED is deterministic so it skips the retry."
+    }
+  ]
+}

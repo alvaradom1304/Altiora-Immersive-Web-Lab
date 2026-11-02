@@ -1,6 +1,8 @@
 ---
 name: altiora-os-coordinate
 description: Coordinar entregas de Altiora entre investigación, estrategia, creación, desarrollo y revisión cuando el encargo requiere varias especialidades.
+metadata:
+  version: 1.1.0
 ---
 
 # altiora-os-coordinate

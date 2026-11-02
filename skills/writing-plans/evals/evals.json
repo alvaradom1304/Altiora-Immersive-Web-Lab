@@ -1,0 +1,20 @@
+{
+  "skill_name": "writing-plans",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I have a spec at docs/specs/pedidos-whatsapp.md for a WhatsApp order flow for a cheese shop site (form, phone validation with country code +506, order summary, wa.me message builder). Write the implementation plan before touching any code.",
+      "expected_output": "Must announce 'I'm using the writing-plans skill to create the implementation plan.' and save to docs/superpowers/plans/YYYY-MM-DD-<feature-name>.md. Must start with the required header: '# [Feature Name] Implementation Plan', the agentic-workers REQUIRED SUB-SKILL line, Goal, Architecture, Tech Stack, Spec path, Global Constraints (exact values from the spec such as +506) and Review Focus (the five uncovered failure modes). Must map the File Structure first, right-size tasks with an independently testable deliverable, and give each task Files (Create/Modify/Test), an Interfaces block (Consumes/Produces with exact signatures) and checkbox steps: write the failing test, run it expecting FAIL, implement the signature, run expecting PASS, commit. Code steps carry signatures, not full bodies."
+    },
+    {
+      "id": 2,
+      "prompt": "Finished writing the plan. It is 1,800 lines for a 120-line spec, mostly full code blocks, and some steps say 'handle edge cases' and 'add appropriate validation'. Task 3 calls clearLayers() but Task 7 calls clearFullLayers(). Hand it over for execution.",
+      "expected_output": "Must run the Self-Review before handoff: spec coverage (a task per requirement), step scan (every step lets the implementer write exactly one reasonable thing; 'handle edge cases', 'add appropriate validation' decide nothing and are gaps; bodies that the signature and tests already determine are a transcript), type consistency (fix the clearLayers() versus clearFullLayers() mismatch), Review Focus, and Proportion (a plan several times longer than the spec is a transcript, so replace bodies with signatures, test names and assertions). Fix inline without re-review, then do the Execution Handoff."
+    },
+    {
+      "id": 3,
+      "prompt": "The spec I gave you covers three unrelated things: (1) a payments integration with a card processor for checkout, (2) a redesign of the blog templates, and (3) a nightly inventory sync with the ERP. Write one plan for everything and start implementing task 1 right away.",
+      "expected_output": "Applies the Scope Check: a spec covering independent subsystems should be split, so it suggests separate plans, one per subsystem (payments, blog, inventory sync), each producing working, testable software on its own. It does not start implementing: the skill writes plans before touching code. The execution handoff (Subagent-driven vs Native) only applies once a plan has been written and saved; at that point it asks the user to choose a method."
+    }
+  ]
+}

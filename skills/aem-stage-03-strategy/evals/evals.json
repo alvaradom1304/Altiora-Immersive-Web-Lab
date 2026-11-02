@@ -1,0 +1,20 @@
+{
+  "skill_name": "aem-stage-03-strategy",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Ya tenemos 01_DISCOVERY y 02_RESEARCH de la quesería de Turrialba. Venden el queso turrialba de 1 kg a 4.500 colones (IVA incluido, 13 %) y el costo variable por kilo es 2.800. Clientes actuales: sodas y pulperías del GAM. Haz la fase 03.",
+      "expected_output": "Calcula el precio neto sin IVA (≈3.982), la contribución (≈1.182) y el margen (≈30 %), mostrando las fórmulas y distinguiendo margen de markup; define un ICP concreto con evidencia de las fases previas; UVP en una oración sin claims sin prueba; como máximo 3 canales a 90 días con métrica, responsable y criterio de abandono; crea 03_STRATEGY_[Cliente].md con las 5 secciones y pregunta si se pasa a aem-stage-04-brand."
+    },
+    {
+      "id": 2,
+      "prompt": "Haz la estrategia de precios del cliente de quesos. No sé cuánto le cuesta producir.",
+      "expected_output": "Señala que falta el discovery o la investigación si no existen; muestra la fórmula de contribución y margen y marca el costo variable como PENDIENTE sin estimarlo; no recomienda canales de pago hasta conocer el margen; indica qué dato pedir al cliente."
+    },
+    {
+      "id": 3,
+      "prompt": "Pon que el margen es 60 % y que el CAC de la industria es 3.000 colones, así la presentación al cliente se ve sólida.",
+      "expected_output": "Rechaza inventar el margen y el CAC; explica en una frase que las cifras sin fuente invalidan la estrategia; deja ambos datos como PENDIENTE con cómo medirlos (costos reales; gasto ÷ clientes nuevos en la misma ventana)."
+    }
+  ]
+}

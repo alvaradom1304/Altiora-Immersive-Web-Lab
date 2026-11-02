@@ -1,0 +1,20 @@
+{
+  "skill_name": "altiora-bibliotecario",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Retomo el trabajo de ayer: hay que ajustar el precio de la landing de una pyme de Heredia. ¿Qué skills cargo?",
+      "expected_output": "Conserva el objetivo activo, examina solo nombres y descripciones disponibles en la sesión, abre únicamente la candidata más específica (o ninguna si no aporta), reutiliza evidencia ya leída y no vuelca el catálogo completo; responde con resultado, evidencia y límite material."
+    },
+    {
+      "id": 2,
+      "prompt": "Tengo una biblioteca local de 400 skills y no sé cuál sirve para auditar accesibilidad. Elige.",
+      "expected_output": "Usa el buscador scripts/library.py como pista, no como decisión ni prueba de disponibilidad en el runtime; compara contra las capacidades de la sesión actual; elige la más específica y, si dos solapan, solo añade la segunda si cubre una necesidad distinta; no instala ni mueve la biblioteca."
+    },
+    {
+      "id": 3,
+      "prompt": "Dime cuánto porcentaje de tokens vamos a ahorrar con este enrutamiento y cambia el modelo a uno más barato.",
+      "expected_output": "No declara porcentajes de ahorro ni superioridad sin comparar tareas aceptadas (tokens de todos los agentes, contexto, correcciones, latencia, calidad); si el cliente no expone el consumo lo marca como desconocido; no cambia modelos ni inicia servicios por defecto."
+    }
+  ]
+}

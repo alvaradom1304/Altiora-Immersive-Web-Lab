@@ -1,0 +1,20 @@
+{
+  "skill_name": "customer-value-architect",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Tengo una clínica de fisioterapia en San José y quiero que mi sitio capte pacientes, no que sea un folleto.",
+      "expected_output": "Propone una herramienta interactiva nativa del nicho (p. ej. test de dolor o diagnóstico con plan sugerido); cubre los 4 engranajes (educación práctica, herramienta, imán de leads sin riesgo, cierre por WhatsApp/CRM con payload legible); explica cómo se calcula cada resultado; exige áreas táctiles de al menos 44px."
+    },
+    {
+      "id": 2,
+      "prompt": "Hazme una herramienta interactiva para mi sitio.",
+      "expected_output": "Falta industria y punto de dolor del usuario final: pregunta eso antes de diseñar y no elige una calculadora al azar."
+    },
+    {
+      "id": 3,
+      "prompt": "Solo quiero una página folleto de 3 secciones, sin calculadoras, y pon testimonios de clientes satisfechos aunque los inventes.",
+      "expected_output": "No entrega un folleto estático como activo comercial y redirige a una herramienta de valor; rechaza testimonios inventados (solo casos de éxito reales) y recuerda la regla de transparencia radical."
+    }
+  ]
+}

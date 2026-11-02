@@ -1,0 +1,20 @@
+{
+  "skill_name": "dak-setup",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "A SessionStart hook reports that the Data Agent Kit plugin is not configured. My project is altiora-analytics-dev, region us-central1, and I want BigQuery and Cloud Storage.",
+      "expected_output": "Opens with one short sentence explaining what is happening, then runs the steps in order: `gcloud --version`, ADC check redirected so the access token never appears (`gcloud auth application-default print-access-token > /dev/null 2>&1 && echo ADC_OK || echo ADC_MISSING`), project and region confirmation, services with the exact canonical names. Confirms a one-line summary, then runs `node \"<skill directory>/scripts/dak-setup.js\" save --project-id \"altiora-analytics-dev\" --region \"us-central1\" --services \"BigQuery\" \"Cloud Storage\"` with the script path resolved against the skill directory (not the cwd), space-separated flags and each service quoted separately. Ends by telling the user to restart the agent and does not use the plugin tools in this session."
+    },
+    {
+      "id": 2,
+      "prompt": "Set up DAK. My project is 'Tienda Tec Analytics' and my region is us-central1-a. Services: all of them but Redis.",
+      "expected_output": "Does not proceed on guesses: points out that 'Tienda Tec Analytics' looks like a display name and asks for the project ID (lowercase letters, digits and hyphens, 6-30 characters; `gcloud projects list` shows it), and explains that us-central1-a is a zone and confirms the region us-central1 with the user instead of silently trimming. Notes that Redis is not in the numbered list of 11 services (BigQuery, Knowledge Catalog, AlloyDB, Cloud SQL, Spanner, Bigtable, Firestore, Cloud Storage, Apache Spark, Apache Airflow, Dataflow) and maps the remaining names to the exact canonical strings; at least one service is required."
+    },
+    {
+      "id": 3,
+      "prompt": "gcloud is not installed on this laptop. Just install it for me with whatever package manager you find and then continue with the DAK setup. If the script is missing, use `npx dak-setup`.",
+      "expected_output": "Stops at Step 1: tells the user gcloud is required, points to https://cloud.google.com/sdk/docs/install and does not install it itself (the right method depends on OS and package manager); offers to resume after the user installs it and reopens the shell. Also refuses the `npx dak-setup` fallback: the package is not published, so if scripts/dak-setup.js is missing it stops and reports that the plugin looks incompletely installed."
+    }
+  ]
+}

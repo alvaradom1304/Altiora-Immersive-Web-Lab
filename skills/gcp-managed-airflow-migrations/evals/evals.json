@@ -1,0 +1,20 @@
+{
+  "skill_name": "gcp-managed-airflow-migrations",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I have a local folder ./dags with the DAGs of a demo cheese shop (sample data) running on Airflow 2.10.2. Adapt them to Airflow 2.11.1. They use BigQueryExecuteQueryOperator, SimpleHttpOperator, SSHHook(timeout=30) and pendulum.Period. Do not touch any environment; only the local files.",
+      "expected_output": "Works in ./migration_workspace/local files only, skipping the download/inspection and the deployment phases because they were not requested (Phase 1 and Phase 4 only 'if explicitly requested'). Runs the scan commands from the workspace root and applies the documented remediations: `grep -rn \"BigQueryExecuteQueryOperator\" ./dags` -> replace with `BigQueryInsertJobOperator` using a `configuration` dict; `SimpleHttpOperator` -> `HttpOperator`; `SSHHook` `timeout` -> `conn_timeout`; `pendulum.Period` -> `Interval` and `period(...)` -> `interval(...)`. Also scans Dataset( scheduling (DAGs must stay unpaused), HTML in doc_md (convert to Markdown or `AIRFLOW__WEBSERVER__ALLOW_RAW_HTML_DESCRIPTIONS=True`) and `as_teardown`. Does not upload to GCS."
+    },
+    {
+      "id": 2,
+      "prompt": "Migrate my DAGs to Airflow 3. They are in an environment called `ventas-prod` in us-central1 but I didn't say whether you can download them. Just migrate and deploy it all.",
+      "expected_output": "Does not download, inspect the environment or deploy on assumption: Phase 1 downloads DAG files and inspects the source version only if explicitly requested, and Phase 4 (get `dagGcsPrefix`, `gcloud storage cp -r ./dags/* gs://<target-bucket-name>/dags/`, `dags list`, `dags list-import-errors`) only when explicitly requested to deploy; the prompt is ambiguous about permission so it asks for confirmation of the source environment, the target environment and bucket before uploading. For Airflow 3 it uses references/airflow-3.md, takes into account the 2.11.1 intermediate dependency mapping, and verifies statically with `ruff check {target_dag_file} --select AIR30`, recommending installing ruff if missing. Notes the upload overwrites DAGs in production."
+    },
+    {
+      "id": 3,
+      "prompt": "Write a brand new DAG from scratch that sends a weekly sales email for a tech store and tell me best practices for idempotency.",
+      "expected_output": "Redirects: this skill is for adjusting existing DAGs to Airflow 2.11.1 or Airflow 3 (scanning patterns for breaking changes), not for authoring new DAGs. Points to gcp-managed-airflow-dag-authoring for writing a new DAG (the authoring skill itself references this migration skill for Airflow 2 vs 3 compatibility), and does not run the migration scans."
+    }
+  ]
+}

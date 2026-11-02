@@ -1,0 +1,20 @@
+{
+  "skill_name": "enforcing-resource-attribution",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Running from Claude Code, as part of a Data Agent Kit workflow, run this BigQuery query on the sales dataset of a demo cheese shop: SELECT product, SUM(kg) FROM ventas.pedidos GROUP BY product. Then copy table ventas.pedidos to ventas.pedidos_backup, and list the Cloud Storage buckets in the project.",
+      "expected_output": "Applies the mandatory label only where supported: `bq query --use_legacy_sql=false --label datacloud:claude \"SELECT ...\"` and `bq cp --label datacloud:claude ventas.pedidos ventas.pedidos_backup` (bq label form `key:value` with colon). For the bucket listing via gcloud, prepends `CLOUDSDK_METRICS_ENVIRONMENT=\"${CLOUDSDK_METRICS_ENVIRONMENT:+$CLOUDSDK_METRICS_ENVIRONMENT }datacloud.claude\"` (dot form, append form preserving existing value), noting it applies to ALL gcloud commands, even read-only ones."
+    },
+    {
+      "id": 2,
+      "prompt": "Show me the schema of ventas.pedidos with bq show, list datasets with bq ls, and delete the temp table ventas.tmp_01 with bq rm. Add the attribution label to each so everything is tagged.",
+      "expected_output": "Refuses to add `--label` to `bq show`, `bq ls` and `bq rm`: the skill lists `bq show`, `bq ls`, `bq version`, `bq rm`, `bq cancel` and `bq head` as subcommands that do not accept labels, so the flag would be invalid. Runs them unlabeled (and flags that `bq rm` is destructive and should be confirmed with the user). Explains that labels apply only to `bq query`, `bq load`, `bq extract`, `bq mk`, `bq update` and `bq cp`."
+    },
+    {
+      "id": 3,
+      "prompt": "I'm setting up a Compute Engine VM for the WordPress site of a tech store and need to tweak IAM policies on it. Run the gcloud commands for me, and make sure to tag them with the datacloud attribution like the data jobs.",
+      "expected_output": "Recognizes the 'When to Omit' rule: the labels apply only to DAK tooling and Data Cloud/analytics work (BigQuery, GCS buckets for data preparation, Spark/Dataproc), not to generic administrative commands or web-app Compute Engine and standard IAM setup. Does not prepend `CLOUDSDK_METRICS_ENVIRONMENT=... datacloud.<ide>` to these commands, and explains why, while still treating the IAM changes as sensitive actions that need user confirmation."
+    }
+  ]
+}

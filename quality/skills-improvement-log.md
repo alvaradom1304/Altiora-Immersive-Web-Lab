@@ -2,6 +2,25 @@
 
 Un bloque por ciclo, el más reciente arriba. Proceso: [mejora continua de skills](../docs/workflows/skill-improvement.md).
 
+## Ciclo 3 — 2026-11-01/02
+
+**Planificar.** Tras revertir un intento que llevó la media a un 100 artificial (casos de plantilla idénticos, secciones «Entregable» genéricas y prefijos «Usar para:» que rompieron el enrutamiento de «brand»), el dueño pidió llegar al 100 con mejoras reales. Primero se endureció la auditoría (#50): un caso o párrafo repetido en 5 skills o más no puntúa, y el informe separa propias y terceros. Objetivo: todas las skills propias a 100; las de terceros mejoran solo con casos propios, sin editar su `SKILL.md`.
+
+**Hacer.**
+- 43 skills propias: descripciones con cuándo usarla y cuándo no (sin añadir términos que compitan con las skills de marca), versión declarada, sección Entregable concreta y 3 casos propios (normal, borde o datos insuficientes, rechazo). Las 5 de menor puntuación (`altiora-session-handoff`, `aem-stage-03/04/06/07`) incluyen además reglas de decisión nuevas; el resto lo hicieron 4 agentes con lotes disjuntos y revisión del coordinador.
+- 68 skills de terceros: solo `evals/evals.json` propio, en el idioma de la skill. Sus `SKILL.md`, `SOURCE.md` y `references/` no se tocaron.
+- Correcciones de contenido detectadas en la revisión: `elite-web-experience-os` ya no promete «60–120 FPS estables» (objetivo medido, no promesa); `altiora-session-handoff` registra commits locales y stashes en `pending` (causa de trabajo perdido en el traspaso del 2026-11-01) y alinea la regla de varias tareas con el schema de una sola tarea; `aem-stage-07-growth` marca como proyección un LTV con ventana distinta del CAC; `aem-stage-06-automation` cubre el umbral exacto de 3 veces por semana y no repite preguntas ya respondidas.
+- `vercel-react-best-practices`: sin registro de procedencia; se trata como resumen local y se anota en `metadata.provenance`.
+
+**Verificar.**
+- Auditoría endurecida: propias **260/260 en 100**; terceros media 83,2 → 94,2; total 93,5 → 98,5. Sin regresiones.
+- Enrutamiento del Bibliotecario: 17/17 casos PASA, incluido «brand».
+- Casos ejecutados por evaluadores independientes (no los autores): ciclo 3 inicial, 4 PASA y 1 NO EJECUTABLE en solo lectura (se corrigieron los errores que señaló); muestra amplia de 12 skills: ver [eval-runs/2026-11-02](eval-runs/2026-11-02.md).
+- NO EJECUTADOS: el resto de los casos nuevos.
+
+**Actuar.** Línea base actualizada con `npm run skills:baseline`.
+Pendiente para terceros: varias fallan por reglas de su `SKILL.md` (un H1, versión, entregable). Se mejoran actualizando desde su origen o proponiendo el cambio al proyecto original, no editándolas aquí. Referencias de origen a skills que no existen en este repo (`google-cloud-storage-diagnostic`, `bigquery`): documentarlas o importarlas en un ciclo propio.
+
 ## Ciclo 2 — 2026-10-19
 
 **Planificar.** Ciclo semanal automático, máximo 5 skills. Primero el backlog: ejecutar casos pendientes del ciclo 1. Después, las de menor puntuación del informe: `webapp-testing` (70), `aem-core-philosophy`, `aem-stage-01-discovery`, `aem-stage-02-research` y `altiora-repository-research` (75).

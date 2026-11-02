@@ -1,0 +1,20 @@
+{
+  "skill_name": "federate-lakehouse-catalog",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I want to query from BigQuery the Iceberg tables of a client (fictional example: a tech store chain) that live in AWS Glue in region us-east-1, AWS account 123456789012. Use GCP project altiora-demo. Set up the federation.",
+      "expected_output": "Follows Flow B (AWS Glue): first gathers and confirms information (catalog = Glue, AWS region us-east-1, optimal GCP region us-east4 per the Region Pairing best practice, AWS account). Verifies the API with `gcloud services check biglake.googleapis.com` and asks permission before enabling it. Creates the AWS IAM role with a `PLACEHOLDER_VALUE` trust policy (sts:AssumeRoleWithWebIdentity, accounts.google.com), attaches a permissions policy with Resource ARNs scoped together with the user (no blind wildcards), creates the catalog with `gcloud alpha biglake iceberg catalogs create ... --catalog-type=federated --federated-catalog-type=glue --glue-warehouse=123456789012` (12-digit account ID, not an S3 URI) without an initial refresh schedule, extracts `biglake-service-account-id` to replace the `aud`/`sub` placeholders in the trust policy, then enables `--refresh-interval=300s` via `catalogs update`. Validates with `bq ls --location=us-east4` and queries in the catalog's region."
+    },
+    {
+      "id": 2,
+      "prompt": "Federate my Databricks Unity catalog to BigQuery. I don't have the service principal Client ID/Secret or the workspace URL yet, but create the Secret Manager secret in us-central1 and the catalog in us-east4 right now.",
+      "expected_output": "Runs no commands yet: Step 1 requires gathering and confirming all information (Databricks workspace URL, OAuth service principal credentials, Unity catalog name, region) before proceeding. Also flags the Regional Isolation rule: the Secret Manager secret and the Lakehouse catalog MUST be in exactly the same region, so us-central1 vs us-east4 is invalid; proposes a single region. Does not invent credentials. Explains the flow (credentials.json, regional Secret Manager endpoint override, `gcloud secrets create --location`, `--federated-catalog-type=unity`, and granting `roles/secretmanager.secretAccessor` to the catalog's service account)."
+    },
+    {
+      "id": 3,
+      "prompt": "Use this skill to run a SQL query directly in Databricks SQL and also restart the stuck Databricks cluster.",
+      "expected_output": "Declines both: the skill states 'Do NOT use for direct remote database SQL execution (e.g., Databricks SQL) or managing remote clusters and infrastructure (e.g., Databricks clusters, AWS Glue jobs)'. Clarifies that its purpose is federating the catalog so remote data can be queried from GCP engines (BigQuery, Spark) and offers that instead, pointing the user to Databricks tooling for the query and the cluster restart."
+    }
+  ]
+}

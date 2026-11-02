@@ -21,7 +21,9 @@ Convertir el objetivo de la pieza en una experiencia sonora coherente y verifica
 4. Conservar transitorios, consonantes y perspectiva. Una mejora de ruido que introduce voz metálica, bombeo o pérdida de intención se rechaza. Evaluar mono, estéreo, relación voz/música y la versión final codificada, además del master.
 5. Distinguir **sample peak/dBFS**, **true peak/dBTP** y **loudness/LUFS**. El helper no mide las dos últimas. Un conteo de muestras a escala completa no prueba clipping audible; correlación negativa no implica por sí sola una mezcla inválida. No inferir rango útil de loudness de anuncios muy cortos.
 
-## Entrega y criterio de cierre
+## Entregable
+
+Según el trabajo, el paquete contiene una carpeta con archivos nuevos (el original no se toca) y un informe de QA con los cinco estados `DESIGNED`, `PROCESSED`, `MEASURED`, `LISTENED` y `APPROVED`, cada uno con archivo y evidencia, o marcado pendiente. Cierre válido: ningún estado se declara sin su evidencia real y la escucha queda pendiente si el runtime no puede oír la señal.
 
 Entregar según el trabajo: tratamiento sonoro/cue sheet, cadena y ajustes justificados, sesión o fuentes editables cuando existan, stems alineados desde el mismo origen, master y versiones de distribución, manifiesto de procedencia/derechos y evidencia de QA. Usar [contrato de handoff](references/handoff.example.json) solo cuando haya varios archivos o IAs.
 

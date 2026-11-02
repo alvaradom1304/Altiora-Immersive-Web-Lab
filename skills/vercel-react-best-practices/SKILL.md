@@ -1,6 +1,9 @@
 ---
 name: vercel-react-best-practices
 description: React and Next.js performance optimization and UI engineering guidelines from Vercel Engineering. Use when writing, reviewing, or refactoring React/Next.js code to ensure optimal performance, zero waterfalls, bundle efficiency, and tactile web interfaces.
+metadata:
+  version: 1.1.0
+  provenance: Local summary of Vercel Engineering guidance, imported with the 2026-10-18 catalog; upstream revision not recorded.
 ---
 
 # Vercel React & Web Interface Best Practices
@@ -44,3 +47,7 @@ Comprehensive performance optimization and web interface engineering guide for R
 - **Isolate Client State**: Keep `'use client'` boundaries as low in the component tree as possible so static sections remain Server Components.
 - **Derived State**: Compute derived totals, filtered lists, and formatted prices during render rather than syncing them with `useEffect`.
 - **Stable Callbacks & Animations**: Use GPU-accelerated properties (`transform`, `opacity`) for all animations and transitions; avoid animating layout properties (`width`, `height`, `top`, `left`).
+
+## Deliverable
+
+For a review: a findings list ordered by the priorities above, each with the rule id (e.g. `async-parallel`), file and line, the concrete fix and its expected effect, plus what was measured (bundle report, Lighthouse/Web Vitals run) versus inferred. For new code: the change itself, with a note on which rules it applies and how it was verified. Never report a performance gain that was not measured.

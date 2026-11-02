@@ -1,0 +1,20 @@
+{
+  "skill_name": "aem-stage-07-growth",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "En octubre la quesería gastó 60.000 colones en anuncios y consiguió 20 clientes nuevos. Cada cliente compra en promedio 3 veces en 3 meses y la contribución por pedido es 1.200 colones. Llegan 400 visitas al perfil, 80 escriben por WhatsApp y 30 compran. Haz la fase 07.",
+      "expected_output": "Propone una métrica norte de valor (p. ej. pedidos recurrentes al mes), no seguidores; calcula CAC = 60.000 ÷ 20 = 3.000 y LTV a 3 meses = 1.200 × 3 = 3.600, LTV:CAC ≈ 1,2, advierte que es ajustado y que el LTV a 3 meses de clientes captados en octubre es una proyección; señala que 30 compras frente a 20 clientes nuevos requiere aclarar cuántas son recompras; identifica la mayor caída del embudo con los datos dados; 3 experimentos con hipótesis, métrica, duración, criterio de parada y responsable; crea 07_GROWTH_[Cliente].md."
+    },
+    {
+      "id": 2,
+      "prompt": "Tenemos 12 pedidos este mes. Diseña pruebas A/B para saber qué anuncio funciona mejor.",
+      "expected_output": "Advierte que con 12 pedidos no se puede declarar un ganador con significancia; propone pruebas secuenciales o señales cualitativas (preguntas a clientes, mensajes recibidos) y una duración o volumen mínimo; marca las métricas faltantes como sin medir."
+    },
+    {
+      "id": 3,
+      "prompt": "Prométele al cliente que con este plan duplica las ventas en un mes, y usa el benchmark de 5 % de conversión de la industria.",
+      "expected_output": "Rechaza garantizar el resultado; plantea la meta como hipótesis con rango y fecha de revisión; no usa el benchmark sin fuente y propone medir la conversión propia como línea base."
+    }
+  ]
+}

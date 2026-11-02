@@ -1,0 +1,20 @@
+{
+  "skill_name": "building-data-apps",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Build a dashboard for the electronics store that reads sales from BigQuery table tienda.ventas and shows revenue by month, top products and a table of recent orders. We have no existing code yet and the team is web developers.",
+      "expected_output": "Step 0 framework selection: checks for an existing stack first, then chooses React + Vite (web developers, production-grade, custom branding) and justifies it in an implementation plan before coding. Follows references/shared_design_system.md (minimal chrome, zinc palette, card layouts, DM Sans for content and JetBrains Mono for data) and references/react_framework.md (Tailwind, ECharts, KPI cards, tables). Proactively asks whether to include the Gemini-powered chat interface. Includes the acceptance checklist (hover transitions, MMM dd, yyyy dates, z-index, loading/disabled states, responsive, error handling, dark mode) and verifies with browser testing before saying it is done."
+    },
+    {
+      "id": 2,
+      "prompt": "Yes, add the Gemini chat so managers can ask questions about the data. Go ahead and implement it.",
+      "expected_output": "Treats the chat interface as a significant change: does not assume implicit approval. Reads references/chat_integration.md, updates the implementation plan (if one exists) and requires the user's explicit approval of the updated plan, verifies prerequisites (Gemini Data Analytics API enabled and data in BigQuery), and adapts examples/react_chat_panel.jsx plus either examples/fastapi_chat.py or examples/express_chat.ts."
+    },
+    {
+      "id": 3,
+      "prompt": "Write me a Node.js backend-only service that exposes a REST API for orders, and a command-line script that exports them to CSV. No UI.",
+      "expected_output": "Declines to use this skill: it applies to data-centric frontends/dashboards over GCP data, and its exclusions list backend-only services and simple CLI scripts. Says so and handles the request outside the skill (or hands it to a general implementation path) without choosing React or Streamlit or producing a dashboard."
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "skill_name": "vercel-react-view-transitions",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "En el catálogo Next.js (App Router) de la quesería, quiero que al tocar la foto de un queso en la lista la imagen se agrande hacia la página de detalle, y que el detalle entre con un deslizamiento hacia la derecha. Impleméntalo sin librerías de animación.",
+      "expected_output": "Debe seguir references/implementation.md paso a paso empezando por la auditoría. Elemento compartido con `<ViewTransition name={`item-image-${id}`} share=\"morph\">` en ambas vistas con nombre único por id, anidado dentro de un `<ViewTransition key={item.id}>` de identidad de lista. Para el deslizamiento direccional debe usar tipos con `addTransitionType('nav-forward')` dentro de `startTransition` o `transitionTypes` en `next/link`, con `enter`/`exit` por tipo y `default: 'none'`, y no usar un fade-out en páginas con morph compartido. No debe instalar `react@canary` (App Router ya lo incluye) ni llamar `startViewTransition` a mano. Debe añadir el CSS de movimiento reducido de references/css-recipes.md."
+    },
+    {
+      "id": 2,
+      "prompt": "Ya puse <ViewTransition enter=\"fade-in\" exit=\"fade-out\"> dentro de un <div> en mi panel de carrito y no anima nunca; además uso setState normal para abrir el panel y router.back() para volver con la animación direccional. ¿Por qué no funciona?",
+      "expected_output": "Debe diagnosticar con las reglas de la skill: (1) Critical Placement Rule, el `<ViewTransition>` debe aparecer antes de cualquier nodo DOM, y un `<div>` que lo envuelve suprime enter/exit; (2) solo `startTransition`, `useDeferredValue` o `Suspense` activan las VTs, un `setState` normal no anima; (3) `router.back()` y el botón atrás del navegador no llevan tipos de transición, por lo que las animaciones por tipo resuelven a su `default` y no se reproducen, y para animaciones tipadas hay que usar `router.push()` con URL explícita. Puede remitir a references/troubleshooting.md."
+    },
+    {
+      "id": 3,
+      "prompt": "Quiero una escena 3D con cámara que recorre la finca hasta el queso, con partículas y shaders, y que además el menú móvil y la sección de la historia tengan transiciones animadas en cada tab usando deslizamientos direccionales.",
+      "expected_output": "Debe redirigir la parte 3D: según la descripción de la skill, para escenas 3D se usa altiora-os-web-3d, no View Transitions. Para el resto debe aplicar 'When to Animate': solo se anima si comunica relación espacial o continuidad, y la navegación lateral entre tabs no debe usar deslizamientos direccionales porque falsamente implica profundidad; usar un `<ViewTransition>` simple (fade) o `default=\"none\"`. Los deslizamientos direccionales se reservan para navegación jerárquica (lista a detalle) y secuencias ordenadas. Debe respetar el movimiento reducido."
+    }
+  ]
+}

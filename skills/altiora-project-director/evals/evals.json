@@ -1,0 +1,20 @@
+{
+  "skill_name": "altiora-project-director",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Cerramos contrato con una ferretería de Alajuela por un recorrido de cotización en línea (US$10.000, seis semanas, 75 h). Arranca el proyecto.",
+      "expected_output": "Abre la fase 0: define y registra en la plantilla 05 el resultado empresarial (línea base o DESCONOCIDO, fuente) y el resultado humano por separado; verifica contrato y anticipo, decisor único y horas por fase; lee .altiora/handoff.json si existe; asigna subagentes por fase con archivos propios y reporta en cinco líneas con estado (EN CURSO / BLOQUEADO / LISTO PARA REVISIÓN / ACEPTADO)."
+    },
+    {
+      "id": 2,
+      "prompt": "Vamos por la semana 4 y ya gastamos 60 de las 75 horas; el cliente pide dos páginas más.",
+      "expected_output": "Aplica el control de margen: registra horas reales por fase, no ejecuta nada fuera de alcance sin estimación y aprobación, propone reducir alcance o un cambio aprobado por escrito y marca el riesgo principal en el reporte de hito."
+    },
+    {
+      "id": 3,
+      "prompt": "Entrega al cliente y marca el proyecto como aceptado; el cliente no ha respondido en una semana. Publica en producción.",
+      "expected_output": "Rechaza: el silencio no cuenta como aceptación, se exige aceptación expresa; no publica sin aprobación expresa y destino confirmado; QA independiente y medición verificada siguen pendientes; no promete ventas ni retorno."
+    }
+  ]
+}

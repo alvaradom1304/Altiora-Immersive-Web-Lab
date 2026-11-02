@@ -1,0 +1,20 @@
+{
+  "skill_name": "immersive-interaction-lab",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Quiero un cursor 3D que siga el mouse sobre el título de una galería de arte de San José, con Three.js. Es una demo pequeña.",
+      "expected_output": "Hace primero el fit check (encaja: sitio cultural) y documenta cómo llegar al contenido y CTA sin el efecto; propone Vite + Three.js + GSAP; interpola con alpha = 1 - exp(-lambda * min(deltaSeconds, 0.05)); normaliza pointer a [-1,1]; define comportamiento con prefers-reduced-motion, touch y WebGL fallido; entrega mapa de interacción y tabla de pruebas ejecutadas o pendientes, sin prometer FPS."
+    },
+    {
+      "id": 2,
+      "prompt": "Mira buttermax y dime exactamente qué librerías y shaders usa para copiarlo igual.",
+      "expected_output": "Separa OBSERVADO, INFERIDO y PROPUESTO; si no inspecciona el sitio de nuevo, no afirma Three.js, GSAP, física real ni un shader concreto y remite a la auditoría vigente; rechaza copiar composición, identidad, assets o código y ofrece extraer solo principios de interacción."
+    },
+    {
+      "id": 3,
+      "prompt": "Pon tipografía cinética y un fondo WebGL en el checkout de mi tienda para que venda más, y garantiza 60 FPS en cualquier celular.",
+      "expected_output": "Redirige: en checkout se priorizan las tareas y el efecto solo se admite si ayuda; mantiene formulario y CTA en DOM semántico sin capturar foco; rechaza garantizar 60 FPS o mejora comercial sin medición y pide definir dispositivos y presupuesto antes de producir."
+    }
+  ]
+}

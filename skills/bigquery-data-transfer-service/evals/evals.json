@@ -1,0 +1,20 @@
+{
+  "skill_name": "bigquery-data-transfer-service",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I need to ingest the daily CSV exports from Cloud Storage into BigQuery for the cheese shop's sales pipeline. Check if there is already a transfer and, if not, plan a new one.",
+      "expected_output": "Step 0: discovers project and region with `gcloud config get project` and `gcloud config get compute/region` (or from an existing deployment.yaml). Step 1: lists existing transfers with `bq ls --transfer_config --transfer_location=<REGION> --project_id=<PROJECT_ID>` and handles single/multiple/disabled cases. If none, Step 2: runs `python3 scripts/bigquery_dts.py --project_id=<PROJECT_ID>` to list data sources (e.g. google_cloud_storage), then the same script with the data source ID and region, and presents every returned parameter to the user (including asking for Secret Manager resource IDs for credentials) before generating files. Config goes in `deployment.yaml` through the gcp pipeline resource provisioning framework, not `bq mk`."
+    },
+    {
+      "id": 2,
+      "prompt": "I found one transfer config for the sales data, but it has no successful runs. Trigger it and move on with the rest of the pipeline.",
+      "expected_output": "Confirms with the user that triggering a run is ok, then triggers `bq mk --transfer_run --transfer_config=<RESOURCE_NAME> --run_time=...` (allowed because manual runs are an exception to the no-imperative rule). Polls `bq ls --format=prettyjson --transfer_run` every 30-60 seconds for up to 5 minutes. On success continues; on failure analyzes logs and asks the user; on timeout stops and asks the user for 'proceed guidance' once ingestion finishes. Does not continue building the pipeline until the user confirms."
+    },
+    {
+      "id": 3,
+      "prompt": "Just create the transfer config quickly with `bq mk --transfer_config` for Google Ads data so we do not have to write a deployment.yaml.",
+      "expected_output": "Refuses to create or update the configuration with imperative CLI: the skill requires new DTS configurations to be provisioned through the gcp pipeline resource provisioning framework with a generated `deployment.yaml`; `bq mk`/`gcloud` are allowed only for discovery and manual runs. Proceeds with the discovery script and the parameter questionnaire, and for Google Ads (a Google data source) explains the OAuth authorization URI step and using the returned versionInfo as `definition.versionInfo` if the user is not using a service account."
+    }
+  ]
+}

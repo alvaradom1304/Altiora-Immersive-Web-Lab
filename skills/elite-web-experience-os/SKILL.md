@@ -41,5 +41,8 @@ Integrated system combining Art Direction, Motion Design, Conversion Growth, and
 - **C. Conectores de Movimiento, Físicas e Interacción**: GSAP + ScrollTrigger, Lenis (`@studio-freight/react-lenis`), Framer Motion, Interactive Image Comparison Slider (`clip-path` SVG/CSS o GLSL), Matter.js (físicas 2D).
 - **D. Regla Obligatoria en Cada Solicitud**:
   1. **Declarar la "Ficha de Stack"**: Especificar siempre el trío tecnológico (**Framework base + Motor de animación + Motor 3D/Canvas**) antes de proponer arquitectura o código.
-  2. **Justificar los conectores elegidos**: Explicar cómo reducen la latencia, aseguran **60–120 FPS estables** y elevan la percepción de valor.
+  2. **Justificar los conectores elegidos**: Explicar cómo reducen la latencia, cómo apuntan a una fluidez de 60 FPS o más (objetivo que se mide en el dispositivo de referencia, nunca una promesa) y cómo elevan la percepción de valor.
 
+## Entregable
+
+Un documento Markdown de propuesta o auditoría con: (1) la **Ficha de Stack** (framework base + motor de animación + motor 3D/Canvas) declarada antes de cualquier arquitectura o código; (2) la justificación de cada conector elegido; (3) el presupuesto de rendimiento aplicado (CLS < 0.05, anchos 375/768/1440 px, solo `transform` y `opacity`, `prefers-reduced-motion` respetado); (4) la lista de estados de interacción implementados o pendientes (`default`, `hover`, `focus-visible`, `active`, `disabled`, `empty`); (5) el camino de compra (p. ej. mensaje de WhatsApp prellenado). Se verifica marcando cada ítem como cumplido, pendiente o no probado; no se afirman FPS sin medición.

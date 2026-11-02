@@ -42,3 +42,4 @@ Las skills con `SOURCE.md` vienen de otro repositorio (registro en `references/s
 - Nunca bajar la línea base para que pase la auditoría.
 - Una skill no pasa de EXPERIMENTAL por cumplir la rúbrica: necesita casos ejecutados y revisión documentada.
 - No inventar fuentes, cifras ni casos de clientes en las skills ni en sus evaluaciones.
+- No puntúa el relleno: un caso de evaluación o un párrafo que, quitando el nombre de la skill, se repite idéntico en 5 skills o más se considera plantilla. Un conjunto de casos formado solo por plantillas cuenta como cero, y el entregable debe definirse con texto propio. No generar skills, casos ni secciones con scripts para subir la puntuación.

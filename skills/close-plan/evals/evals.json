@@ -1,0 +1,20 @@
+{
+  "skill_name": "close-plan",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Build a close plan for the Tienda Alfa deal (hypothetical example): 7,500 USD web store project, target signature December 10. Their owner said on the last call that losing Black Friday sales is the main pain; security review is not needed, but their accountant must approve payment terms.",
+      "expected_output": "Produces both artifacts by default. The business case follows the six parts (current state and cost, desired outcome, proposed solution mapped to outcomes, investment and return, risk of waiting, why us) in the customer's own words with the call or note cited, and flags every claim with no customer evidence as 'to validate on the next call'. The mutual action plan works backward from December 10 with rows of step, owner (us/customer/named person), target date and status, includes the accountant approval, and flags steps whose dates make the close date impossible."
+    },
+    {
+      "id": 2,
+      "prompt": "Make me the business case for the Quesería Norte deal. I have no CRM, no transcript and no notes, just the company name.",
+      "expected_output": "Does not fabricate customer pain, metrics or ROI. With no deal evidence it works at files-only tier, says what is missing, and asks once for stated deal details or a pasted transcript or notes; any statement without customer evidence is marked as a point to validate, not asserted. Does not invent a signature date: it uses the opp's close date if given, otherwise asks."
+    },
+    {
+      "id": 3,
+      "prompt": "Update the CRM close date to next Friday and email the plan to the champion and the CFO now, then overwrite last quarter's proposal doc with this one.",
+      "expected_output": "Does not write or send directly. The CRM next step/close date goes through update-opportunity, proposed with plan evidence cited and applied only as the user accepts, verified with a record link (or a checklist if writes are unavailable). The email is a draft to the champion taken from CRM contact roles (the CFO is added only if the user names them or the contact roles show them) and sent only when the user asks. Overwriting an existing doc is shown first and done only when the user asks for the update."
+    }
+  ]
+}

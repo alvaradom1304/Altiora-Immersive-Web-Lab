@@ -1,6 +1,8 @@
 ---
 name: aem-learning-os
 description: Usa este skill para procesar nuevos conocimientos o herramientas, extraer frameworks y productizar capacidades (Learning OS & Productization).
+metadata:
+  version: 1.1.0
 ---
 
 # AEM-LEARNING-OS (Executive Protocol)

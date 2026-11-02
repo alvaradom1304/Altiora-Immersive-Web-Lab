@@ -1,0 +1,20 @@
+{
+  "skill_name": "writing-skills",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Quiero crear una skill nueva de Altiora que obligue a los agentes a citar la fuente de cada dato de un cliente (por ejemplo la quesería) antes de usarlo en un copy. Ya sé cómo redactarla, escríbela directamente.",
+      "expected_output": "Debe aplicar la Iron Law (NO SKILL WITHOUT A FAILING TEST FIRST): no escribir la skill antes de la fase RED. Primero crear escenarios de presión (3 o más presiones combinadas para skills de disciplina: tiempo, costo hundido, autoridad, agotamiento), correrlos con subagentes SIN la skill y documentar textualmente el comportamiento base y las racionalizaciones; después GREEN (redacción mínima dirigida a esas violaciones, verificando con la skill) y REFACTOR (cerrar resquicios, tabla de racionalizaciones y lista de red flags según references/bulletproofing.md). La descripción debe empezar por 'Use when...' (triggers y síntomas, sin resumir el flujo de trabajo), en tercera persona, máx. 1024 caracteres, y el nombre solo con letras, números y guiones."
+    },
+    {
+      "id": 2,
+      "prompt": "Mi skill de resúmenes produce informes inflados que repiten el brief y entierran el veredicto. Añade más prohibiciones del tipo 'no repitas el brief' y 'nunca narres' y agrega la excepción 'salvo que sea importante'.",
+      "expected_output": "Debe aplicar 'Match the Form to the Failure': el fallo es de forma de salida (cumple, pero con la forma equivocada), así que la forma correcta es una receta o contrato positivo que diga qué ES la salida (sus partes, en orden), no una lista de prohibiciones, que bajo incentivos opuestos se negocian y producen más contenido no deseado. Además, sin cláusulas de matiz ('salvo que sea importante' reabre la negociación; una excepción real se expresa como condicional sobre un predicado observable) y las cláusulas de exención no acotan. Debe recomendar micro-probar el texto con un control sin guía, 5 o más repeticiones, leyendo manualmente cada coincidencia marcada, y que la varianza es una métrica."
+    },
+    {
+      "id": 3,
+      "prompt": "Conviérteme en skill la convención de nombres de los archivos del repo del cliente tienda de tecnología, y de paso la regla de que los nombres de archivo deben ser kebab-case, que ya se puede validar con una regex.",
+      "expected_output": "Debe aplicar 'Don't create for': las convenciones específicas de un proyecto van en su archivo de instrucciones (CLAUDE.md/AGENTS.md), no en una skill, y las restricciones mecánicas que se pueden hacer cumplir con regex o validación se automatizan (un linter o chequeo), reservando la documentación para juicios. Una skill es una guía de técnica reutilizable entre proyectos, no una narrativa de cómo se resolvió algo una vez ni una solución de una sola vez. Para el empaquetado y la evaluación formal combinar con skill-creator solo si finalmente se justifica crear una skill."
+    }
+  ]
+}

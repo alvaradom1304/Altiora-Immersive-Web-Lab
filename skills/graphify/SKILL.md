@@ -39,6 +39,6 @@ GRAPHIFY_BACKEND=none C:/Users/Usuario/.altiora-tools/graphify/Scripts/graphify 
 
 `.graphifyignore` en la raíz del repo excluye copias históricas y material de terceros para reducir ruido.
 
-## Entrega
+## Entregable
 
-Responder con el formato de `team/ROUTING.md` §5: qué se consultó, nodos o rutas relevantes, archivos confirmados y límites (grafo desactualizado, comunidades sin nombre, documentos no indexados).
+Una respuesta con el formato de `team/ROUTING.md` §5 que contiene: (1) la consulta ejecutada (`query`, `path` o `explain`) con `GRAPHIFY_BACKEND=none`; (2) los nodos o rutas relevantes devueltos; (3) los archivos confirmados leyendo el archivo real, con ruta y línea; (4) la frescura del grafo (commit de `GRAPH_REPORT.md` frente a `git rev-parse HEAD`); (5) los límites (grafo desactualizado, comunidades sin nombre, documentos no indexados). Una afirmación sin archivo confirmado se marca como no verificada.

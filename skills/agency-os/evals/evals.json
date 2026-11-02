@@ -1,0 +1,20 @@
+{
+  "skill_name": "agency-os",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Quiero iniciar con Agency OS un proyecto para un taller mecánico de Heredia que quiere más clientes. Tengo un brief de media página.",
+      "expected_output": "Trata el caso como proyecto nuevo con profundidad completa; presenta un estado inicial breve (qué se sabe, qué falta, fase de entrada Discovery, siguiente acción); pregunta solo lo que cambia una decisión; separa hechos, declaraciones del cliente e hipótesis; no inventa métricas ni presenta estrategia final sin evidencia."
+    },
+    {
+      "id": 2,
+      "prompt": "Retomemos el proyecto de la quesería: Discovery y Research ya están validados, quiero pasar a Strategy.",
+      "expected_output": "No reconstruye ni repite Discovery ni Research; recupera primero la documentación vigente (consulta las fuentes conectadas antes de pedir que se la reconstruya); entra en la fase Strategy con profundidad enfocada y deja trazabilidad objetivo -> evidencia -> decisión."
+    },
+    {
+      "id": 3,
+      "prompt": "Anota que el cliente aprobó el roadmap; no ha respondido pero seguro está de acuerdo.",
+      "expected_output": "Rechaza registrar una aprobación por silencio; marca la decisión como pendiente con responsable, registra el bloqueo y avanza solo en tareas independientes."
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "skill_name": "ml-best-practices",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I have a CSV of 12,000 customers of an online electronics shop with columns age, city, orders_last_year, avg_ticket, last_purchase_date. Segment them into groups so marketing can target them. Build the analysis notebook.",
+      "expected_output": "Must apply the Clustering plan: understand the schema, visualize the features, transform last_purchase_date into a timestamp, check for pre-encoded features before encoding, one hot encoder for nominal city, ordinal encoder for ordinal data, standardize numerical features, run clustering over a range of k collecting the silhouette score and choose k by it, project to two dimensions with PCA and scatterplot with cluster labels as hue (and again with a discrete feature as hue), describe each cluster in text, and end with a conclusion markdown cell. Every code cell must be followed by a markdown cell analyzing the results."
+    },
+    {
+      "id": 2,
+      "prompt": "Predict whether a customer will churn. The target column 'churned' is empty for about 15% of rows, there are rows with age = -3, and some columns have NULLs. Standardize everything first and then split train/test so the pipeline is simple.",
+      "expected_output": "Must apply the Classification plan and reject the requested order: the Essential ML Practices require Strict Featurization Ordering, i.e. split into training and test data BEFORE fitting scaling or encoding pipelines, fitting them on the training data. Must count and inspect rows that make no sense (age = -3) and rows without a target value and drop them if reasonable, create missing-indicator features if meaningful, analyze NULL frequency and explain whether to keep, drop or impute, train multiple models, regularize if overfit, evaluate with confusion matrices and finish with a conclusion markdown cell."
+    },
+    {
+      "id": 3,
+      "prompt": "Write me the BigQuery SQL to train a logistic regression with CREATE MODEL on my sales table and give me the syntax for ML.EVALUATE.",
+      "expected_output": "Must apply the SQL/BigQuery ML HANDOFF: use ml-best-practices only to dictate the analysis steps (markdown analysis cells, visualization logic, the Comparing ML Models or Classification plan, split before featurization) but defer to the `bigquery` skill for all SQL syntax. Must not write the CREATE MODEL or ML.EVALUATE syntax from this skill's own rules."
+    }
+  ]
+}

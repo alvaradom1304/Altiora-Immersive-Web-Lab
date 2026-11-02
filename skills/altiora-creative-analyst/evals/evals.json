@@ -1,0 +1,20 @@
+{
+  "skill_name": "altiora-creative-analyst",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Una quesería artesanal de Turrialba vende en sodas y por WhatsApp; tengo fotos del proceso y dos reseñas públicas. Prepara el brief creativo diferencial.",
+      "expected_output": "Sigue el método: lista verdades del cliente con fuente, la tensión del consumidor con sus palabras reales (o HIPÓTESIS si no hay datos), tabla de códigos de la categoría con qué respetar y qué romper, 3 insights con el filtro del competidor y elige uno; entrega idea central en una frase que no sea eslogan, territorio verbal/visual/sonoro/interactivo, un momento firma por canal contratado con horas dentro de las 75 h, riesgos y puntuación con la rúbrica."
+    },
+    {
+      "id": 2,
+      "prompt": "Haz el brief creativo de un cliente nuevo; solo sé que vende «productos naturales».",
+      "expected_output": "No inventa historia ni verdades: anota lo que falta (ficha de encaje 01, brief de experiencia 05, materiales), marca los insights como HIPÓTESIS y propone qué recoger (entrevista, visita, reseñas) antes de producir; si la rúbrica da menos de 3 en especificidad o verdad, ordena rehacer."
+    },
+    {
+      "id": 3,
+      "prompt": "Dame el logo, el video y la música final del proyecto, con un estilo idéntico al de un estudio famoso, y contrata la voz.",
+      "expected_output": "Rechaza producir las piezas finales (la skill solo entrega el brief), rechaza copiar el estilo reconocible de un estudio y rechaza contratar voces, música o licencias sin autorización; redirige a altiora-os-creative, audio-production e image/video según el canal."
+    }
+  ]
+}

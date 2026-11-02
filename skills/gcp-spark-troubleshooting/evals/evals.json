@@ -1,0 +1,20 @@
+{
+  "skill_name": "gcp-spark-troubleshooting",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Troubleshoot Dataproc Serverless batch `ventas-007` in project altiora-demo (sample), region us-central1. It failed at the aggregation of orders for a demo cheese shop.",
+      "expected_output": "Runs Step 0 first as a gate: `gcloud auth list` (active account), `gcloud config get-value project` (or the explicit project), Python 3.8+ as `python3`, and probes optional tools without blocking; stops with `gcloud auth login` if not authenticated. Classifies with `gcloud dataproc batches describe`, then follows the Serverless evidence flow and gathers all three sources before concluding: logs (`stateMessage`, Cloud Logging `resource.type=\"cloud_dataproc_batch\"`, falling back to the driver output at `<runtimeInfo.outputUri>.000000000` via `scripts/spark_gcs_log_reader.py`), Spark application data via `scripts/spark_applications.py --action=summary` then `--action=stages` plus `scripts/spark_stage_diagnostics.py` (does not depend on a History Server, event log or Cloud Logging, so their absence never proves data is unavailable), and code via `scripts/spark_code_inspector.py` on `pysparkBatch.mainPythonFileUri`. Identifies the failure pattern from the scenarios catalog (e.g., driver OOM from `collect()`/`toPandas()`, exit code 137 executor OOM, data skew with max task > 5x median), keeps it read-only first (no code changes before proving the root cause), redacts secrets and states empty logs explicitly instead of inventing a cause."
+    },
+    {
+      "id": 2,
+      "prompt": "Summarize this log: gs://altiora-demo-logs/jobs/driver-output.000000000 (it is about 3 GB). Write a quick Python script or notebook that downloads it and greps for ERROR, or submit a small Dataproc job to process it.",
+      "expected_output": "Refuses the proposed approaches per the CRITICAL RULES: NEVER create notebooks or Python scripts to read/parse logs, NEVER submit Dataproc jobs or batches to process log files, and NEVER download or buffer multi-gigabyte logs. Instead it immediately uses the streaming reader `scripts/spark_gcs_log_reader.py`, first `--uri=\"gs://...\" --action=info` to confirm the target is reachable and get the size (over 20 MB requires the streaming tool), then `--action=tail` / search as needed. Uses `scripts/spark_code_inspector.py` only for source/build artifacts (.py, .jar, .zip, .class), never for logs, since truncation would hide the tail where the failure is."
+    },
+    {
+      "id": 3,
+      "prompt": "Show me the Java code inside gs://altiora-demo-code/jobs/reporte.jar by running gcloud storage cat on it, and then rewrite the job to fix the slowness without checking the logs first.",
+      "expected_output": "Refuses `gcloud storage cat`/`cat` on a `.jar` (binary, unreadable): it must use `scripts/spark_code_inspector.py`, which disassembles the bytecode into readable JVM assembly. Also refuses to modify code before proving the root cause (Read-Only First): it gathers logs and Spark application data (`spark_applications.py` for serverless, or the event log summary via `scripts/spark_gcs_log_reader.py --action=summarize_events` for cluster jobs) and only then proposes a fix. Does not hallucinate causes when evidence is missing."
+    }
+  ]
+}

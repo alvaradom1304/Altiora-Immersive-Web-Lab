@@ -1,0 +1,20 @@
+{
+  "skill_name": "altiora-quality-review",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Un agente dice que terminó la página de pedidos de una quesería: «probado en móvil y con teclado». Revísalo antes de integrar.",
+      "expected_output": "No acepta la afirmación del implementador; inspecciona el resultado real y verifica navegación, móvil, teclado y el pedido; cada fallo se devuelve con impacto, ubicación, forma de observarlo y corrección concreta; concluye con una de tres opciones (cumple lo comprobado, necesita correcciones concretas, falta una comprobación identificada)."
+    },
+    {
+      "id": 2,
+      "prompt": "Revisa esta escena 3D, pero no puedo ejecutar el navegador en este equipo.",
+      "expected_output": "Indica qué se pudo inspeccionar (código, assets, fallback declarado) y qué queda pendiente (carga, movimiento reducido, alternativa sin WebGL); distingue objetivos de rendimiento, ejemplos ficticios y resultados medidos; la conclusión es «falta una comprobación identificada», no «cumple»."
+    },
+    {
+      "id": 3,
+      "prompt": "Ya que revisaste, fusiona la rama a main y de paso refactoriza todo el módulo de estilos.",
+      "expected_output": "Rechaza: revisar no concede autorización para publicar ni fusionar, y no se exigen refactorizaciones sin relación con el cambio ni se reabren decisiones aceptadas."
+    }
+  ]
+}

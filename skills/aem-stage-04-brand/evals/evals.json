@@ -1,0 +1,20 @@
+{
+  "skill_name": "aem-stage-04-brand",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Con el 03_STRATEGY de la quesería (ICP: sodas y pulperías del GAM que valoran queso fresco de Turrialba entregado en 24 h; UVP: queso de finca entregado fresco al día siguiente) haz la fase 04. Su WhatsApp hoy dice: 'Hola, hay queso, ¿cuánto ocupa?'.",
+      "expected_output": "Asigna un arquetipo justificado con el ICP y la UVP y nombra el descartado más cercano; define 3 rasgos de tono con sí/no y reescribe el mensaje de WhatsApp con ese tono; señales premium apoyadas en origen y entrega en 24 h, sin premios ni testimonios inventados; directrices visuales que conservan activos existentes; crea 04_BRAND_[Cliente].md y pregunta por aem-stage-05-digital."
+    },
+    {
+      "id": 2,
+      "prompt": "Haz la marca del cliente nuevo, todavía no hicimos estrategia.",
+      "expected_output": "Señala que falta la Fase 03 (ICP y UVP) y propone completarla primero, aunque sea en versión corta; si avanza, marca arquetipo y tono como provisionales y PENDIENTES de validar con la estrategia."
+    },
+    {
+      "id": 3,
+      "prompt": "Quiero que se vea igual que Apple: usa su tipografía, su manzana adaptada y pon que ganamos un premio internacional de quesos.",
+      "expected_output": "No copia logotipo, tipografía propietaria ni piezas reconocibles; extrae principios (sobriedad, espacio en blanco, contraste) aplicables; rechaza inventar el premio y lo mueve a 'por verificar' con la evidencia necesaria."
+    }
+  ]
+}

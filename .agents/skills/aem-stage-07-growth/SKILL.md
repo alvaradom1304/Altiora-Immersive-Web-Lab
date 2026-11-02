@@ -1,6 +1,6 @@
 ---
 name: aem-stage-07-growth
-description: "Ejecuta la Fase 07 de AEM. Estrategias de retención, optimización LTV:CAC, y experimentación de crecimiento (Growth Hacking)."
+description: "Ejecuta la Fase 07 de AEM. Define la métrica norte, analiza el embudo AARRR, calcula LTV:CAC y prioriza un backlog de experimentos de crecimiento. Usar cuando hay al menos un canal activo con datos de varias semanas y se busca crecer de forma medible. No usar sin datos del embudo (primero medir) ni para prometer resultados."
 ---
 
 <!-- Generado con npm run antigravity:build. No editar manualmente. -->

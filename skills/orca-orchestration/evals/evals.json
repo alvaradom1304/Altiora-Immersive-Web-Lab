@@ -1,0 +1,20 @@
+{
+  "skill_name": "orca-orchestration",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Supervise this: split the cheese shop's web update into two workers, one for the product catalog page and one for the WhatsApp order form. Use Codex for the first and Claude for the second, wait for both results and report back to me.",
+      "expected_output": "Must classify itself as Coordinator (user asked to supervise and wait for results) and use the canonical supervised loop: `orca status --json`, `orca orchestration run-create --objective ... --json`, start the whole independent wave with `worker-start --spec \"...\" --worktree current --agent codex` and `--agent claude` before waiting, then `orca orchestration check --wait --types \"worker_done,escalation,question\" --timeout-ms 900000 --json`. Each Task spec must name Target, Change, Constraints, Ownership and Observable acceptance. After each worker_done it must reply to questions, then reuse, retain (`worker-retain`) or `worker-release` each settled worker before the ack, and not end the turn until `worker-list --run <run_id> --terminal-state reclaimable --json` returns none. The final report names per Task its outcome, evidence and blockers."
+    },
+    {
+      "id": 2,
+      "prompt": "I have been waiting on a worker for a long time. The last three `check --wait` calls came back empty and worker-show says agentWait is null. Stop the worker and launch a replacement editor on the same task now.",
+      "expected_output": "Must say a timeout or empty result is a checkpoint, not failure, and that `unverifiable` (including agentWait null) is absence, which never authorizes stop, abandon, retry or release. After three consecutive empty waits it must enumerate with `orca orchestration worker-list --include-remote --json` and act on `projection.attention` and the literal `projection.nextAction` argv (a `none` nextAction means keep waiting with `check --wait`). It may only choose `worker-stop` or `worker-abandon` after positive proof the agent stopped (`exited` liveness, process exit observed, or a final agent turn with no worker_done), then load references/recovery-and-cleanup.md. Must not launch a duplicate editor without that proof; contact loss is not process death."
+    },
+    {
+      "id": 3,
+      "prompt": "Hand this off to another agent in a new worktree and create a task row and dispatch with --inject so we can track it in Orca. Then keep checking until it's done.",
+      "expected_output": "Must recognize the conflict: a plain handoff (give this to another agent / another worktree) belongs to `orca-cli`, which creates no Run, Task or Dispatch and does not monitor completion; `task-create` and `dispatch --inject` are not for full handoffs. Because the user also asks to track and keep checking, it must clarify or pick the supervised route: Coordinator with `run-create` and `worker-start --spec`, since `dispatch --inject` leaves an operator-created process unsupervised and is only for an expressiveness gap. Must not combine both models silently, must not start a non-Orca subagent tool when Orca provenance was requested, and must use the same executable it used for `skills get` for the whole run."
+    }
+  ]
+}

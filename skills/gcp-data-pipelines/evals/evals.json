@@ -1,0 +1,20 @@
+{
+  "skill_name": "gcp-data-pipelines",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "In this repo there is a `dbt_project.yml` with models for the sales mart of a demo cheese shop. Add a new model that aggregates weekly kilos sold per product.",
+      "expected_output": "Step 1 first: scans the workspace for pipeline indicators and finds `dbt_project.yml` (unambiguous dbt indicator). Because the request clearly fits it, it proceeds directly by activating the `dbt-bigquery` skill and does NOT re-ask for confirmation or present the tool options table of Step 2. Does not assume knowledge from other workspaces."
+    },
+    {
+      "id": 2,
+      "prompt": "I want to build a data pipeline for a tech store on Google Cloud. The workspace is empty and I haven't decided anything.",
+      "expected_output": "No pipeline indicators found and no tool hints, so it goes to Step 2 and presents the options with a brief summary: BigQuery DTS (`bigquery-data-transfer-service`), dbt (`dbt-bigquery`), Dataflow (`gcp-dataflow`), Dataform (`dataform-bigquery`), Spark on Dataproc Serverless (`gcp-spark`), Other, plus Deployment & Orchestration options (Cloud Composer via `gcp-pipeline-orchestration`, Provisioning via `gcp-pipeline-resource-provisioning`). Briefly highlights the likely fit from any hints, then Step 3: STOPS and waits for the user to select; does not start implementing."
+    },
+    {
+      "id": 3,
+      "prompt": "Run the pipeline. (The workspace has a `dbt_project.yml`, a PySpark notebook with `import pyspark`, and several loose .py scripts.)",
+      "expected_output": "Applies 'Clarifying Run Requests' in two steps: (1) Scope: multiple components detected (dbt and Spark), so asks 'Do you want to run all detected components, or a specific one like dbt or Spark?'; (2) Method: if no orchestration file (`deployment.yaml` / `*-pipeline.yaml`) exists, asks whether to Run Directly (`dbt run`, `gcloud dataproc jobs submit`) or Orchestrate & Deploy via Cloud Composer (`gcp-pipeline-orchestration`). Also confirms with the user what the loose `.py` scripts are, since a `.py` file is not necessarily Spark and may be Airflow. Executes nothing until answered."
+    }
+  ]
+}

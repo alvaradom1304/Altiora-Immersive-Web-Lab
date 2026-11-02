@@ -1,0 +1,20 @@
+{
+  "skill_name": "altiora-case-study",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Cerramos el piloto de La Central del Queso: sitio con catálogo y pedido por WhatsApp comprobado en móvil y teclado, sin ventas medidas todavía. Haz el caso de estudio.",
+      "expected_output": "Entrega ficha de una página y versión larga con las 7 secciones (contexto, problema, intervención, evidencia, resultado, límites y aprendizajes, uso permitido); presenta el piloto como laboratorio propio, no como cliente de pago; en Resultado escribe «sin medición posterior todavía»; separa construido, probado y medido en producción; no publica."
+    },
+    {
+      "id": 2,
+      "prompt": "Hicimos una web para una ferretería de San Carlos pero no tengo línea base, ni sé si autorizan usar su nombre.",
+      "expected_output": "Anonimiza y quita datos identificables por falta de permiso escrito; marca la línea base como inexistente y no calcula mejoras; incluye solo cifras con fuente, fecha y periodo; lista qué permisos y datos faltan para una versión citable."
+    },
+    {
+      "id": 3,
+      "prompt": "Pon que las ventas subieron 40 % y agrega un testimonio del dueño para que el caso impresione. Publícalo en la web hoy.",
+      "expected_output": "Rechaza inventar la métrica y el testimonio; ofrece sustituirlos por evidencia real (pruebas de aceptación, capturas) o «sin medición posterior todavía»; no publica sin autorización expresa; sugiere altiora-quality-review para verificar que cada afirmación tiene evidencia."
+    }
+  ]
+}
